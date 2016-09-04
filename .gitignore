@@ -45,11 +45,10 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
-TestUtil/bin/jarlist.cache
-TestUtil/bin/classes/com/example/testutil/R$styleable.class
 *.cache
-TestUtil/bin/classes/com/example/testutil/R$styleable.class
-TestUtil/bin/jarlist.cache
-TestUtil/project.properties
-Util/bin/jarlist.cache
-Util/gen/com/xuexiang/BuildConfig.java
+.gitignore 
+*.class
+Util/bin
+Util/gen
+TestUtil/bin
+TestUtil/gen
