@@ -25,11 +25,7 @@ import android.widget.ImageView;
 import com.xuexiang.util.file.FileUtils;
 import com.xuexiang.util.file.LocalFileUtil;
 
-/**
- * 
- * @author ving
- *
- */
+
 public class BitmapTools {
 	// ±£´æ bitmap µ½SD¿¨F
 	public static boolean saveBitmapToSDCard(Bitmap bitmap, String filePath,

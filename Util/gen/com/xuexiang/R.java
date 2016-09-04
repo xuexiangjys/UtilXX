@@ -1969,7 +1969,7 @@ containing a value of this type.
         public static int button_cancel=0x7f05003b;
         public static int buttonflat=0x7f05004d;
         public static int center=0x7f050006;
-        public static int centerIV=0x7f050096;
+        public static int centerIV=0x7f050097;
         public static int child_text=0x7f05005a;
         public static int circle=0x7f050001;
         public static int circularProgressView=0x7f050032;
@@ -1988,10 +1988,10 @@ containing a value of this type.
         public static int edwin_LoopViewPager=0x7f050092;
         public static int empty=0x7f050007;
         public static int expandable_button=0x7f050070;
-        public static int firstIV=0x7f050095;
-        public static int fiveIV=0x7f050098;
+        public static int firstIV=0x7f050096;
+        public static int fiveIV=0x7f050099;
         public static int float_id=0x7f05008e;
-        public static int fourIV=0x7f050099;
+        public static int fourIV=0x7f05009a;
         public static int full_mask=0x7f05006b;
         public static int green=0x7f050029;
         public static int gridview=0x7f050060;
@@ -2007,6 +2007,7 @@ containing a value of this type.
         public static int hidden_panel=0x7f05007a;
         public static int icon=0x7f050042;
         public static int icon_button=0x7f050072;
+        public static int image=0x7f050094;
         public static int image_icon=0x7f05008b;
         public static int img_icon=0x7f050065;
         public static int indication=0x7f05006d;
@@ -2059,13 +2060,13 @@ containing a value of this type.
         public static int rootSelector=0x7f050025;
         public static int roundProgressBar=0x7f05004a;
         public static int scroller=0x7f05007f;
-        public static int secondIV=0x7f050097;
-        public static int secondlyFirstIV=0x7f05009a;
-        public static int secondlySecondIV=0x7f05009b;
+        public static int secondIV=0x7f050098;
+        public static int secondlyFirstIV=0x7f05009b;
+        public static int secondlySecondIV=0x7f05009c;
         public static int shapeLoadingView=0x7f05006f;
-        public static int shape_bacground=0x7f05009c;
+        public static int shape_bacground=0x7f05009d;
         public static int snackbar=0x7f05004c;
-        public static int tabBackView=0x7f050094;
+        public static int tabBackView=0x7f050095;
         public static int text=0x7f05004e;
         public static int textView=0x7f050051;
         public static int text_view=0x7f05002c;
@@ -2179,7 +2180,8 @@ containing a value of this type.
         public static int share_item=0x7f030038;
         public static int top_menu_bar=0x7f030039;
         public static int view_loop_viewpager=0x7f03003a;
-        public static int widget_tabbar=0x7f03003b;
+        public static int viewpager_roll_item=0x7f03003b;
+        public static int widget_tabbar=0x7f03003c;
     }
     public static final class string {
         public static int app_name=0x7f090000;
@@ -2309,7 +2311,7 @@ containing a value of this type.
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name android:actionSheetBackground
+          @attr name com.xuexiang:actionSheetBackground
         */
         public static final int ActionSheet_actionSheetBackground = 0;
         /**
@@ -2322,7 +2324,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-          @attr name android:actionSheetPadding
+          @attr name com.xuexiang:actionSheetPadding
         */
         public static final int ActionSheet_actionSheetPadding = 8;
         /**
@@ -2335,7 +2337,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-          @attr name android:actionSheetTextSize
+          @attr name com.xuexiang:actionSheetTextSize
         */
         public static final int ActionSheet_actionSheetTextSize = 11;
         /**
@@ -2347,7 +2349,7 @@ in (inches), mm (millimeters).
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name android:cancelButtonBackground
+          @attr name com.xuexiang:cancelButtonBackground
         */
         public static final int ActionSheet_cancelButtonBackground = 1;
         /**
@@ -2360,7 +2362,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-          @attr name android:cancelButtonMarginTop
+          @attr name com.xuexiang:cancelButtonMarginTop
         */
         public static final int ActionSheet_cancelButtonMarginTop = 10;
         /**
@@ -2372,7 +2374,7 @@ in (inches), mm (millimeters).
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name android:cancelButtonTextColor
+          @attr name com.xuexiang:cancelButtonTextColor
         */
         public static final int ActionSheet_cancelButtonTextColor = 6;
         /**
@@ -2384,7 +2386,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name android:otherButtonBottomBackground
+          @attr name com.xuexiang:otherButtonBottomBackground
         */
         public static final int ActionSheet_otherButtonBottomBackground = 4;
         /**
@@ -2396,7 +2398,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name android:otherButtonMiddleBackground
+          @attr name com.xuexiang:otherButtonMiddleBackground
         */
         public static final int ActionSheet_otherButtonMiddleBackground = 3;
         /**
@@ -2408,7 +2410,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name android:otherButtonSingleBackground
+          @attr name com.xuexiang:otherButtonSingleBackground
         */
         public static final int ActionSheet_otherButtonSingleBackground = 5;
         /**
@@ -2421,7 +2423,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-          @attr name android:otherButtonSpacing
+          @attr name com.xuexiang:otherButtonSpacing
         */
         public static final int ActionSheet_otherButtonSpacing = 9;
         /**
@@ -2433,7 +2435,7 @@ in (inches), mm (millimeters).
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name android:otherButtonTextColor
+          @attr name com.xuexiang:otherButtonTextColor
         */
         public static final int ActionSheet_otherButtonTextColor = 7;
         /**
@@ -2445,7 +2447,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name android:otherButtonTopBackground
+          @attr name com.xuexiang:otherButtonTopBackground
         */
         public static final int ActionSheet_otherButtonTopBackground = 2;
         /** Attributes that can be used with a ActionSheets.
@@ -2468,7 +2470,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android:actionSheetStyle
+          @attr name com.xuexiang:actionSheetStyle
         */
         public static final int ActionSheets_actionSheetStyle = 0;
         /** Attributes that can be used with a CircleImageView.
@@ -2498,7 +2500,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:border_color
+          @attr name com.xuexiang:border_color
         */
         public static final int CircleImageView_border_color = 1;
         /**
@@ -2514,7 +2516,7 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:border_width
+          @attr name com.xuexiang:border_width
         */
         public static final int CircleImageView_border_width = 0;
         /** Attributes that can be used with a CircularProgressView.
@@ -2550,7 +2552,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:angleAnimationDurationMillis
+          @attr name com.xuexiang:angleAnimationDurationMillis
         */
         public static final int CircularProgressView_angleAnimationDurationMillis = 3;
         /**
@@ -2566,7 +2568,7 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:borderWidth
+          @attr name com.xuexiang:borderWidth
         */
         public static final int CircularProgressView_borderWidth = 0;
         /**
@@ -2576,7 +2578,7 @@ containing a value of this type.
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android:colorSequence
+          @attr name com.xuexiang:colorSequence
         */
         public static final int CircularProgressView_colorSequence = 1;
         /**
@@ -2590,7 +2592,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:minSweepAngle
+          @attr name com.xuexiang:minSweepAngle
         */
         public static final int CircularProgressView_minSweepAngle = 4;
         /**
@@ -2604,7 +2606,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:sweepAnimationDurationMillis
+          @attr name com.xuexiang:sweepAnimationDurationMillis
         */
         public static final int CircularProgressView_sweepAnimationDurationMillis = 2;
         /** Attributes that can be used with a CustomAttributes.
@@ -2666,7 +2668,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name android:animate
+          @attr name com.xuexiang:animate
         */
         public static final int CustomAttributes_animate = 13;
         /**
@@ -2682,7 +2684,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name android:check
+          @attr name com.xuexiang:check
         */
         public static final int CustomAttributes_check = 8;
         /**
@@ -2698,7 +2700,7 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:checkBoxSize
+          @attr name com.xuexiang:checkBoxSize
         */
         public static final int CustomAttributes_checkBoxSize = 9;
         /**
@@ -2714,7 +2716,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name android:clickAfterRipple
+          @attr name com.xuexiang:clickAfterRipple
         */
         public static final int CustomAttributes_clickAfterRipple = 15;
         /**
@@ -2730,7 +2732,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name android:iconDrawable
+          @attr name com.xuexiang:iconDrawable
         */
         public static final int CustomAttributes_iconDrawable = 11;
         /**
@@ -2748,7 +2750,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name android:iconSize
+          @attr name com.xuexiang:iconSize
         */
         public static final int CustomAttributes_iconSize = 12;
         /**
@@ -2764,7 +2766,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name android:progress
+          @attr name com.xuexiang:progress
         */
         public static final int CustomAttributes_progress = 6;
         /**
@@ -2780,7 +2782,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name android:progress_max
+          @attr name com.xuexiang:progress_max
         */
         public static final int CustomAttributes_progress_max = 3;
         /**
@@ -2796,7 +2798,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name android:progress_min
+          @attr name com.xuexiang:progress_min
         */
         public static final int CustomAttributes_progress_min = 4;
         /**
@@ -2812,7 +2814,7 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:ringWidth
+          @attr name com.xuexiang:ringWidth
         */
         public static final int CustomAttributes_ringWidth = 7;
         /**
@@ -2828,7 +2830,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name android:rippleBorderRadius
+          @attr name com.xuexiang:rippleBorderRadius
         */
         public static final int CustomAttributes_rippleBorderRadius = 14;
         /**
@@ -2842,7 +2844,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
           <p>This is a private symbol.
-          @attr name android:rippleColor
+          @attr name com.xuexiang:rippleColor
         */
         public static final int CustomAttributes_rippleColor = 0;
         /**
@@ -2858,7 +2860,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name android:rippleSpeed
+          @attr name com.xuexiang:rippleSpeed
         */
         public static final int CustomAttributes_rippleSpeed = 1;
         /**
@@ -2874,7 +2876,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name android:showNumberIndicator
+          @attr name com.xuexiang:showNumberIndicator
         */
         public static final int CustomAttributes_showNumberIndicator = 2;
         /**
@@ -2890,7 +2892,7 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:thumbSize
+          @attr name com.xuexiang:thumbSize
         */
         public static final int CustomAttributes_thumbSize = 10;
         /**
@@ -2906,7 +2908,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name android:value
+          @attr name com.xuexiang:value
         */
         public static final int CustomAttributes_value = 5;
         /** Attributes that can be used with a FluidLayout.
@@ -2937,7 +2939,7 @@ containing a value of this type.
 <tr><td><code>bottom</code></td><td>0x50</td><td></td></tr>
 <tr><td><code>center</code></td><td>0x11</td><td></td></tr>
 </table>
-          @attr name android:gravity
+          @attr name com.xuexiang:gravity
         */
         public static final int FluidLayout_gravity = 0;
         /** Attributes that can be used with a FluidLayout_Layout.
@@ -2968,7 +2970,7 @@ containing a value of this type.
 <tr><td><code>bottom</code></td><td>0x50</td><td></td></tr>
 <tr><td><code>center</code></td><td>0x11</td><td></td></tr>
 </table>
-          @attr name android:layout_gravity
+          @attr name com.xuexiang:layout_gravity
         */
         public static final int FluidLayout_Layout_layout_gravity = 0;
         /** Attributes that can be used with a LoadingAnimatorView.
@@ -2997,7 +2999,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:loadingAnimatorPicture
+          @attr name com.xuexiang:loadingAnimatorPicture
         */
         public static final int LoadingAnimatorView_loadingAnimatorPicture = 1;
         /**
@@ -3011,7 +3013,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:loadingAnimatorText
+          @attr name com.xuexiang:loadingAnimatorText
         */
         public static final int LoadingAnimatorView_loadingAnimatorText = 0;
         /** Attributes that can be used with a LoadingView.
@@ -3040,7 +3042,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:loadingText
+          @attr name com.xuexiang:loadingText
         */
         public static final int LoadingView_loadingText = 0;
         /**
@@ -3050,7 +3052,7 @@ containing a value of this type.
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android:loadingTextAppearance
+          @attr name com.xuexiang:loadingTextAppearance
         */
         public static final int LoadingView_loadingTextAppearance = 1;
         /** Attributes that can be used with a LoopViewPager.
@@ -3081,7 +3083,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:loop_duration
+          @attr name com.xuexiang:loop_duration
         */
         public static final int LoopViewPager_loop_duration = 1;
         /**
@@ -3095,7 +3097,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:loop_ms
+          @attr name com.xuexiang:loop_ms
         */
         public static final int LoopViewPager_loop_ms = 0;
         /**
@@ -3113,7 +3115,7 @@ containing a value of this type.
 <tr><td><code>depth</code></td><td>1</td><td></td></tr>
 <tr><td><code>zoom</code></td><td>2</td><td></td></tr>
 </table>
-          @attr name android:loop_style
+          @attr name com.xuexiang:loop_style
         */
         public static final int LoopViewPager_loop_style = 2;
         /** Attributes that can be used with a MagicButton.
@@ -3158,7 +3160,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:button_icon
+          @attr name com.xuexiang:button_icon
         */
         public static final int MagicButton_button_icon = 4;
         /**
@@ -3174,7 +3176,7 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:button_icon_height
+          @attr name com.xuexiang:button_icon_height
         */
         public static final int MagicButton_button_icon_height = 6;
         /**
@@ -3190,7 +3192,7 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:button_icon_width
+          @attr name com.xuexiang:button_icon_width
         */
         public static final int MagicButton_button_icon_width = 5;
         /**
@@ -3205,7 +3207,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:expandable_area_color
+          @attr name com.xuexiang:expandable_area_color
         */
         public static final int MagicButton_expandable_area_color = 1;
         /**
@@ -3219,7 +3221,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:hide_text
+          @attr name com.xuexiang:hide_text
         */
         public static final int MagicButton_hide_text = 0;
         /**
@@ -3234,7 +3236,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:hide_text_color
+          @attr name com.xuexiang:hide_text_color
         */
         public static final int MagicButton_hide_text_color = 8;
         /**
@@ -3250,7 +3252,7 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:hide_text_size
+          @attr name com.xuexiang:hide_text_size
         */
         public static final int MagicButton_hide_text_size = 7;
         /**
@@ -3265,7 +3267,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:icon_button_color
+          @attr name com.xuexiang:icon_button_color
         */
         public static final int MagicButton_icon_button_color = 2;
         /**
@@ -3281,7 +3283,7 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:magic_button_size
+          @attr name com.xuexiang:magic_button_size
         */
         public static final int MagicButton_magic_button_size = 3;
         /** Attributes that can be used with a MultipleSelectionButton.
@@ -3328,7 +3330,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:ascv_defaultSelection
+          @attr name com.xuexiang:ascv_defaultSelection
         */
         public static final int MultipleSelectionButton_ascv_defaultSelection = 8;
         /**
@@ -3342,7 +3344,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:ascv_equalWidth
+          @attr name com.xuexiang:ascv_equalWidth
         */
         public static final int MultipleSelectionButton_ascv_equalWidth = 6;
         /**
@@ -3356,7 +3358,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:ascv_identifier
+          @attr name com.xuexiang:ascv_identifier
         */
         public static final int MultipleSelectionButton_ascv_identifier = 9;
         /**
@@ -3366,7 +3368,7 @@ containing a value of this type.
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android:ascv_items
+          @attr name com.xuexiang:ascv_items
         */
         public static final int MultipleSelectionButton_ascv_items = 4;
         /**
@@ -3376,7 +3378,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android:ascv_selectedColor
+          @attr name com.xuexiang:ascv_selectedColor
         */
         public static final int MultipleSelectionButton_ascv_selectedColor = 2;
         /**
@@ -3386,7 +3388,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android:ascv_selectedTextColor
+          @attr name com.xuexiang:ascv_selectedTextColor
         */
         public static final int MultipleSelectionButton_ascv_selectedTextColor = 3;
         /**
@@ -3400,7 +3402,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:ascv_stretch
+          @attr name com.xuexiang:ascv_stretch
         */
         public static final int MultipleSelectionButton_ascv_stretch = 7;
         /**
@@ -3410,7 +3412,7 @@ containing a value of this type.
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android:ascv_unselectedColor
+          @attr name com.xuexiang:ascv_unselectedColor
         */
         public static final int MultipleSelectionButton_ascv_unselectedColor = 1;
         /**
@@ -3420,7 +3422,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android:ascv_unselectedTextColor
+          @attr name com.xuexiang:ascv_unselectedTextColor
         */
         public static final int MultipleSelectionButton_ascv_unselectedTextColor = 0;
         /**
@@ -3430,7 +3432,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android:ascv_values
+          @attr name com.xuexiang:ascv_values
         */
         public static final int MultipleSelectionButton_ascv_values = 5;
         /** Attributes that can be used with a MyHoriztalProgressBar.
@@ -3471,7 +3473,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:progressbar_reach_color
+          @attr name com.xuexiang:progressbar_reach_color
         */
         public static final int MyHoriztalProgressBar_progressbar_reach_color = 0;
         /**
@@ -3487,7 +3489,7 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:progressbar_reach_height
+          @attr name com.xuexiang:progressbar_reach_height
         */
         public static final int MyHoriztalProgressBar_progressbar_reach_height = 2;
         /**
@@ -3502,7 +3504,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:progressbar_text_color
+          @attr name com.xuexiang:progressbar_text_color
         */
         public static final int MyHoriztalProgressBar_progressbar_text_color = 4;
         /**
@@ -3518,7 +3520,7 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:progressbar_text_offset
+          @attr name com.xuexiang:progressbar_text_offset
         */
         public static final int MyHoriztalProgressBar_progressbar_text_offset = 6;
         /**
@@ -3534,7 +3536,7 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:progressbar_text_size
+          @attr name com.xuexiang:progressbar_text_size
         */
         public static final int MyHoriztalProgressBar_progressbar_text_size = 5;
         /**
@@ -3549,7 +3551,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:progressbar_unreach_color
+          @attr name com.xuexiang:progressbar_unreach_color
         */
         public static final int MyHoriztalProgressBar_progressbar_unreach_color = 1;
         /**
@@ -3565,7 +3567,7 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:progressbar_unreach_height
+          @attr name com.xuexiang:progressbar_unreach_height
         */
         public static final int MyHoriztalProgressBar_progressbar_unreach_height = 3;
         /** Attributes that can be used with a MyHoriztalProgressBar2.
@@ -3600,7 +3602,7 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:progressbar_height
+          @attr name com.xuexiang:progressbar_height
         */
         public static final int MyHoriztalProgressBar2_progressbar_height = 2;
         /**
@@ -3616,7 +3618,7 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:radius
+          @attr name com.xuexiang:radius
         */
         public static final int MyHoriztalProgressBar2_radius = 3;
         /**
@@ -3631,7 +3633,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:reach_color
+          @attr name com.xuexiang:reach_color
         */
         public static final int MyHoriztalProgressBar2_reach_color = 0;
         /**
@@ -3646,7 +3648,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:unreach_color
+          @attr name com.xuexiang:unreach_color
         */
         public static final int MyHoriztalProgressBar2_unreach_color = 1;
         /** Attributes that can be used with a MyRoundProgressBar.
@@ -3675,7 +3677,7 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:progressbar_radius
+          @attr name com.xuexiang:progressbar_radius
         */
         public static final int MyRoundProgressBar_progressbar_radius = 0;
         /** Attributes that can be used with a PatternView.
@@ -3716,7 +3718,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name android:circleColor
+          @attr name com.xuexiang:circleColor
         */
         public static final int PatternView_circleColor = 1;
         /**
@@ -3733,7 +3735,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name android:dotColor
+          @attr name com.xuexiang:dotColor
         */
         public static final int PatternView_dotColor = 2;
         /**
@@ -3749,7 +3751,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name android:gridColumns
+          @attr name com.xuexiang:gridColumns
         */
         public static final int PatternView_gridColumns = 4;
         /**
@@ -3765,7 +3767,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name android:gridRows
+          @attr name com.xuexiang:gridRows
         */
         public static final int PatternView_gridRows = 3;
         /**
@@ -3783,7 +3785,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name android:maxSize
+          @attr name com.xuexiang:maxSize
         */
         public static final int PatternView_maxSize = 0;
         /**
@@ -3800,7 +3802,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name android:pathColor
+          @attr name com.xuexiang:pathColor
         */
         public static final int PatternView_pathColor = 5;
         /** Attributes that can be used with a PickerUI.
@@ -3853,7 +3855,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name android:autoDismiss
+          @attr name com.xuexiang:autoDismiss
         */
         public static final int PickerUI_autoDismiss = 2;
         /**
@@ -3870,7 +3872,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name android:backgroundColor
+          @attr name com.xuexiang:backgroundColor
         */
         public static final int PickerUI_backgroundColor = 0;
         /**
@@ -3886,7 +3888,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name android:blur
+          @attr name com.xuexiang:blur
         */
         public static final int PickerUI_blur = 7;
         /**
@@ -3901,7 +3903,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:blur_FilterColor
+          @attr name com.xuexiang:blur_FilterColor
         */
         public static final int PickerUI_blur_FilterColor = 9;
         /**
@@ -3915,7 +3917,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:blur_downScaleFactor
+          @attr name com.xuexiang:blur_downScaleFactor
         */
         public static final int PickerUI_blur_downScaleFactor = 8;
         /**
@@ -3929,7 +3931,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:blur_radius
+          @attr name com.xuexiang:blur_radius
         */
         public static final int PickerUI_blur_radius = 10;
         /**
@@ -3943,7 +3945,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:blur_use_renderscript
+          @attr name com.xuexiang:blur_use_renderscript
         */
         public static final int PickerUI_blur_use_renderscript = 11;
         /**
@@ -3953,7 +3955,7 @@ containing a value of this type.
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android:entries
+          @attr name com.xuexiang:entries
         */
         public static final int PickerUI_entries = 4;
         /**
@@ -3967,7 +3969,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:itemsClickables
+          @attr name com.xuexiang:itemsClickables
         */
         public static final int PickerUI_itemsClickables = 3;
         /**
@@ -3982,7 +3984,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:linesCenterColor
+          @attr name com.xuexiang:linesCenterColor
         */
         public static final int PickerUI_linesCenterColor = 1;
         /**
@@ -3999,7 +4001,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name android:textCenterColor
+          @attr name com.xuexiang:textCenterColor
         */
         public static final int PickerUI_textCenterColor = 5;
         /**
@@ -4014,7 +4016,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:textNoCenterColor
+          @attr name com.xuexiang:textNoCenterColor
         */
         public static final int PickerUI_textNoCenterColor = 6;
         /** Attributes that can be used with a RoundProgressBar.
@@ -4056,7 +4058,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:max
+          @attr name com.xuexiang:max
         */
         public static final int RoundProgressBar_max = 5;
         /**
@@ -4071,7 +4073,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:roundColor
+          @attr name com.xuexiang:roundColor
         */
         public static final int RoundProgressBar_roundColor = 0;
         /**
@@ -4086,7 +4088,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:roundProgressColor
+          @attr name com.xuexiang:roundProgressColor
         */
         public static final int RoundProgressBar_roundProgressColor = 1;
         /**
@@ -4102,7 +4104,7 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:roundWidth
+          @attr name com.xuexiang:roundWidth
         */
         public static final int RoundProgressBar_roundWidth = 2;
         /**
@@ -4119,7 +4121,7 @@ containing a value of this type.
 <tr><td><code>STROKE</code></td><td>0</td><td></td></tr>
 <tr><td><code>FILL</code></td><td>1</td><td></td></tr>
 </table>
-          @attr name android:style
+          @attr name com.xuexiang:style
         */
         public static final int RoundProgressBar_style = 7;
         /**
@@ -4134,7 +4136,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:textColor
+          @attr name com.xuexiang:textColor
         */
         public static final int RoundProgressBar_textColor = 3;
         /**
@@ -4148,7 +4150,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:textIsDisplayable
+          @attr name com.xuexiang:textIsDisplayable
         */
         public static final int RoundProgressBar_textIsDisplayable = 6;
         /**
@@ -4164,7 +4166,7 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:textSize
+          @attr name com.xuexiang:textSize
         */
         public static final int RoundProgressBar_textSize = 4;
         /** Attributes that can be used with a ShoppingView.
@@ -4198,7 +4200,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:sv_bg_color
+          @attr name com.xuexiang:sv_bg_color
         */
         public static final int ShoppingView_sv_bg_color = 0;
         /**
@@ -4212,7 +4214,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:sv_duration
+          @attr name com.xuexiang:sv_duration
         */
         public static final int ShoppingView_sv_duration = 3;
         /**
@@ -4226,7 +4228,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:sv_text
+          @attr name com.xuexiang:sv_text
         */
         public static final int ShoppingView_sv_text = 1;
         /**
@@ -4242,7 +4244,7 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:sv_text_size
+          @attr name com.xuexiang:sv_text_size
         */
         public static final int ShoppingView_sv_text_size = 2;
         /** Attributes that can be used with a SmoothCheckBox.
@@ -4281,7 +4283,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:color_checked
+          @attr name com.xuexiang:color_checked
         */
         public static final int SmoothCheckBox_color_checked = 3;
         /**
@@ -4296,7 +4298,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:color_tick
+          @attr name com.xuexiang:color_tick
         */
         public static final int SmoothCheckBox_color_tick = 2;
         /**
@@ -4311,7 +4313,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:color_unchecked
+          @attr name com.xuexiang:color_unchecked
         */
         public static final int SmoothCheckBox_color_unchecked = 4;
         /**
@@ -4326,7 +4328,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:color_unchecked_stroke
+          @attr name com.xuexiang:color_unchecked_stroke
         */
         public static final int SmoothCheckBox_color_unchecked_stroke = 5;
         /**
@@ -4340,7 +4342,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:duration
+          @attr name com.xuexiang:duration
         */
         public static final int SmoothCheckBox_duration = 0;
         /**
@@ -4356,7 +4358,7 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:stroke_width
+          @attr name com.xuexiang:stroke_width
         */
         public static final int SmoothCheckBox_stroke_width = 1;
         /** Attributes that can be used with a SpotsDialog.
@@ -4387,7 +4389,7 @@ containing a value of this type.
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name android:DialogSpotColor
+          @attr name com.xuexiang:DialogSpotColor
         */
         public static final int SpotsDialog_DialogSpotColor = 2;
         /**
@@ -4401,7 +4403,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:DialogSpotCount
+          @attr name com.xuexiang:DialogSpotCount
         */
         public static final int SpotsDialog_DialogSpotCount = 3;
         /**
@@ -4411,7 +4413,7 @@ containing a value of this type.
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android:DialogTitleAppearance
+          @attr name com.xuexiang:DialogTitleAppearance
         */
         public static final int SpotsDialog_DialogTitleAppearance = 0;
         /**
@@ -4422,7 +4424,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
-          @attr name android:DialogTitleText
+          @attr name com.xuexiang:DialogTitleText
         */
         public static final int SpotsDialog_DialogTitleText = 1;
         /**  swipe listview 
@@ -4472,7 +4474,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <tr><td><code>reveal</code></td><td>0</td><td></td></tr>
 <tr><td><code>dismiss</code></td><td>1</td><td></td></tr>
 </table>
-          @attr name android:swipeActionLeft
+          @attr name com.xuexiang:swipeActionLeft
         */
         public static final int SwipeListView_swipeActionLeft = 8;
         /**
@@ -4489,7 +4491,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <tr><td><code>reveal</code></td><td>0</td><td></td></tr>
 <tr><td><code>dismiss</code></td><td>1</td><td></td></tr>
 </table>
-          @attr name android:swipeActionRight
+          @attr name com.xuexiang:swipeActionRight
         */
         public static final int SwipeListView_swipeActionRight = 9;
         /**
@@ -4503,7 +4505,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:swipeAnimationTime
+          @attr name com.xuexiang:swipeAnimationTime
         */
         public static final int SwipeListView_swipeAnimationTime = 1;
         /**
@@ -4513,7 +4515,7 @@ containing a value of this type.
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android:swipeBackView
+          @attr name com.xuexiang:swipeBackView
         */
         public static final int SwipeListView_swipeBackView = 6;
         /**
@@ -4527,7 +4529,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:swipeCloseAllItemsWhenMoveList
+          @attr name com.xuexiang:swipeCloseAllItemsWhenMoveList
         */
         public static final int SwipeListView_swipeCloseAllItemsWhenMoveList = 4;
         /**
@@ -4537,7 +4539,7 @@ containing a value of this type.
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android:swipeFrontView
+          @attr name com.xuexiang:swipeFrontView
         */
         public static final int SwipeListView_swipeFrontView = 5;
         /**
@@ -4556,7 +4558,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <tr><td><code>right</code></td><td>2</td><td></td></tr>
 <tr><td><code>left</code></td><td>3</td><td></td></tr>
 </table>
-          @attr name android:swipeMode
+          @attr name com.xuexiang:swipeMode
         */
         public static final int SwipeListView_swipeMode = 7;
         /**
@@ -4572,7 +4574,7 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:swipeOffsetLeft
+          @attr name com.xuexiang:swipeOffsetLeft
         */
         public static final int SwipeListView_swipeOffsetLeft = 2;
         /**
@@ -4588,7 +4590,7 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:swipeOffsetRight
+          @attr name com.xuexiang:swipeOffsetRight
         */
         public static final int SwipeListView_swipeOffsetRight = 3;
         /**
@@ -4602,7 +4604,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:swipeOpenOnLongPress
+          @attr name com.xuexiang:swipeOpenOnLongPress
         */
         public static final int SwipeListView_swipeOpenOnLongPress = 0;
         /** Attributes that can be used with a customTextView.
@@ -4647,7 +4649,7 @@ containing a value of this type.
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android:textDrawable
+          @attr name com.xuexiang:textDrawable
         */
         public static final int customTextView_textDrawable = 8;
         /**
@@ -4663,7 +4665,7 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:textLeftBottomRadius
+          @attr name com.xuexiang:textLeftBottomRadius
         */
         public static final int customTextView_textLeftBottomRadius = 4;
         /**
@@ -4679,7 +4681,7 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:textLeftTopRadius
+          @attr name com.xuexiang:textLeftTopRadius
         */
         public static final int customTextView_textLeftTopRadius = 3;
         /**
@@ -4694,7 +4696,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:textNormalTextColor
+          @attr name com.xuexiang:textNormalTextColor
         */
         public static final int customTextView_textNormalTextColor = 9;
         /**
@@ -4710,7 +4712,7 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:textRadius
+          @attr name com.xuexiang:textRadius
         */
         public static final int customTextView_textRadius = 2;
         /**
@@ -4726,7 +4728,7 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:textRightBottomRadius
+          @attr name com.xuexiang:textRightBottomRadius
         */
         public static final int customTextView_textRightBottomRadius = 6;
         /**
@@ -4742,7 +4744,7 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:textRightTopRadius
+          @attr name com.xuexiang:textRightTopRadius
         */
         public static final int customTextView_textRightTopRadius = 5;
         /**
@@ -4757,7 +4759,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:textSelectedTextColor
+          @attr name com.xuexiang:textSelectedTextColor
         */
         public static final int customTextView_textSelectedTextColor = 10;
         /**
@@ -4772,7 +4774,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:textSolidColor
+          @attr name com.xuexiang:textSolidColor
         */
         public static final int customTextView_textSolidColor = 0;
         /**
@@ -4787,7 +4789,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:textStrokeColor
+          @attr name com.xuexiang:textStrokeColor
         */
         public static final int customTextView_textStrokeColor = 1;
         /**
@@ -4803,7 +4805,7 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:textStrokeWidth
+          @attr name com.xuexiang:textStrokeWidth
         */
         public static final int customTextView_textStrokeWidth = 7;
         /** Attributes that can be used with a monindicator.
@@ -4836,7 +4838,7 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:circleRadius
+          @attr name com.xuexiang:circleRadius
         */
         public static final int monindicator_circleRadius = 0;
         /**
@@ -4852,7 +4854,7 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:circleSpacing
+          @attr name com.xuexiang:circleSpacing
         */
         public static final int monindicator_circleSpacing = 1;
         /**
@@ -4866,7 +4868,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:cycle
+          @attr name com.xuexiang:cycle
         */
         public static final int monindicator_cycle = 2;
         /** Attributes that can be used with a pull.
@@ -4894,7 +4896,7 @@ containing a value of this type.
           <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be an integer value, such as "<code>100</code>".
-          @attr name android:header
+          @attr name com.xuexiang:header
         */
         public static final int pull_header = 0;
         /**
@@ -4907,7 +4909,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-          @attr name android:maxHeaderHeight
+          @attr name com.xuexiang:maxHeaderHeight
         */
         public static final int pull_maxHeaderHeight = 1;
         /**
@@ -4920,7 +4922,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
-          @attr name android:minHeaderHeight
+          @attr name com.xuexiang:minHeaderHeight
         */
         public static final int pull_minHeaderHeight = 2;
         /** Attributes that can be used with a slideswitch.
@@ -4951,7 +4953,7 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:isOpen
+          @attr name com.xuexiang:isOpen
         */
         public static final int slideswitch_isOpen = 1;
         /**
@@ -4968,7 +4970,7 @@ containing a value of this type.
 <tr><td><code>rect</code></td><td>1</td><td></td></tr>
 <tr><td><code>circle</code></td><td>2</td><td></td></tr>
 </table>
-          @attr name android:shape
+          @attr name com.xuexiang:shape
         */
         public static final int slideswitch_shape = 2;
         /**
@@ -4983,7 +4985,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:themeColor
+          @attr name com.xuexiang:themeColor
         */
         public static final int slideswitch_themeColor = 0;
     };

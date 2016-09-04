@@ -8,9 +8,67 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
        
-    <com.xuexiang.view.ImageCycleView
-        android:id="@+id/imagecycleview"
+    <ScrollView
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:scrollbars="none">
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="300dp"/>
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp">
+        
+		    <com.xuexiang.view.ImageCycleView
+		        android:id="@+id/imagecycleview"
+		        android:layout_width="match_parent"
+		        android:layout_height="185dp"/>
+		    
+		    <RelativeLayout 
+			    android:layout_width="match_parent"  
+			    android:layout_height="185dp" >  
+		  
+			    <!-- 放置轮播图片位置 -->   
+			    <LinearLayout  
+			        android:id="@+id/top_news_viewpager"  
+			        android:layout_width="fill_parent"  
+			        android:layout_height="185dp"  
+			        android:orientation="horizontal" />  
+			  
+			    <LinearLayout  
+			        android:layout_width="fill_parent"  
+			        android:layout_height="30dp"  
+			        android:layout_alignParentBottom="true"  
+			        android:background="#88000000"  
+			        android:gravity="center_vertical"  
+			        android:orientation="horizontal" >  
+			  
+			        <!-- 放置图片标题的位置 -->  
+			        <TextView  
+			            android:id="@+id/top_news_title"  
+			            android:layout_width="0dp"  
+			            android:layout_height="wrap_content"  
+			            android:layout_marginLeft="5dp"  
+			            android:layout_marginRight="8dp"  
+			            android:layout_weight="1"  
+			            android:singleLine="true"  
+			            android:text="图片标题"  
+			            android:textColor="#F6F6F6" />  
+			        <!-- 放置图片中选中点的位置 -->  
+			  
+			        <LinearLayout  
+			            android:id="@+id/dots_ll"  
+			            android:layout_width="wrap_content"  
+			            android:layout_height="wrap_content"  
+			            android:layout_marginRight="5dp"  
+			            android:gravity="center"  
+			            android:orientation="horizontal" />  
+			    </LinearLayout>  
+			  
+			</RelativeLayout> 
+			
+		    
+		    
+    </LinearLayout>
+  </ScrollView>
 
 </LinearLayout>
