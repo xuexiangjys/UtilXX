@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <include layout="@layout/top_menu_bar" />
+    
+   <ScrollView
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:scrollbars="none">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp">
+	    
+	    <TextView
+	        android:layout_width="match_parent"
+	        android:layout_marginBottom="15dip"
+	        android:layout_height="wrap_content"
+	        android:text="Added by XML (w/o stretch):" />
+	
+	    <com.xuexiang.view.AndroidSegmentedControlView
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        app:ascv_defaultSelection="2"
+	        app:ascv_unselectedTextColor="@color/test_attr_unselected_text_color"
+	        app:ascv_selectedTextColor="@color/test_attr_selected_text_color"
+	        app:ascv_selectedColor="@color/test_attr_selected_color"
+	        app:ascv_unselectedColor="@color/test_attr_unselected_color"
+	        app:ascv_items="@array/three_state_option" />
+	
+	    <TextView
+	        android:layout_width="match_parent"
+	        android:layout_marginBottom="15dip"
+	        android:layout_marginTop="15dip"
+	        android:layout_height="wrap_content"
+	        android:text="Added by XML (w/ stretch):" />
+	
+	    <com.xuexiang.view.AndroidSegmentedControlView
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        app:ascv_defaultSelection="2"
+	        app:ascv_unselectedTextColor="@color/test_attr_unselected_text_color"
+	        app:ascv_selectedTextColor="@color/test_attr_selected_text_color"
+	        app:ascv_selectedColor="@color/test_attr_selected_color"
+	        app:ascv_unselectedColor="@color/test_attr_unselected_color"
+	        app:ascv_stretch="true"
+	        app:ascv_items="@array/three_state_option" />
+	
+	    <TextView
+	        android:layout_width="match_parent"
+	        android:layout_marginTop="15dip"
+	        android:layout_marginBottom="15dip"
+	        android:layout_height="wrap_content"
+	        android:text="Added by Code:" />
+	
+	
+	    <LinearLayout
+	        android:orientation="vertical"
+	        android:id="@+id/ascv_sample_holder"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content">
+	
+	    </LinearLayout>
+	    
+	    <TextView
+	        android:layout_width="match_parent"
+	        android:layout_marginTop="15dip"
+	        android:layout_marginBottom="15dip"
+	        android:layout_height="wrap_content"
+	        android:text="SlideSwitch:" />
+	    
+	    <com.xuexiang.view.SlideSwitch
+	            android:id="@+id/switch_notification"
+	            android:layout_width="58dp"
+	            android:layout_height="28dp"
+	            android:layout_marginRight="10dp"
+	            app:isOpen="true"
+	            app:shape="circle"
+	            app:themeColor="#ff8733" />
+	    
+	    <TextView
+	        android:layout_width="match_parent"
+	        android:layout_marginTop="15dip"
+	        android:layout_marginBottom="15dip"
+	        android:layout_height="wrap_content"
+	        android:text="SmoothCheckBox:" />
+	
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:gravity="center" >
+	        
+	        <com.xuexiang.view.SmoothCheckBox
+		        android:id="@+id/scb"
+		        android:layout_width="40dp"
+		        android:layout_height="40dp"
+		        android:layout_margin="5dp"
+		        app:color_checked="#FF4081" />
+		
+		    <com.xuexiang.view.SmoothCheckBox
+		        android:layout_width="40dp"
+		        android:layout_height="40dp"
+		        android:layout_margin="5dp"
+		        app:color_checked="#447eeb" />
+		
+		    <com.xuexiang.view.SmoothCheckBox
+		        android:layout_width="40dp"
+		        android:layout_height="40dp"
+		        android:layout_margin="5dp"
+		        app:color_checked="#149A45" />
+		
+		    <com.xuexiang.view.SmoothCheckBox
+		        android:layout_width="40dp"
+		        android:layout_height="40dp"
+		        android:layout_margin="5dp" />
+	        
+	    </LinearLayout>
+	    
+	     <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="10dp"
+	        android:gravity="center" >
+	        
+	        <com.xuexiang.view.ShoppingView
+		        android:id="@+id/sv_1"
+		        android:layout_width="wrap_content"
+		        android:layout_margin="5dp"
+		        android:layout_height="wrap_content" />
+	
+		    <com.xuexiang.view.ShoppingView
+		        android:id="@+id/sv_2"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_margin="5dp"
+		        app:sv_bg_color="#CD5555"
+		        app:sv_text="点击购买" />
+		
+		    <com.xuexiang.view.ShoppingView
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_margin="5dp"
+		        app:sv_bg_color="#EED8AE"
+		        app:sv_duration="800"
+		        app:sv_text="SHOPPING"
+		        app:sv_text_size="22sp" />
+		
+		    <com.xuexiang.view.ShoppingView
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_margin="5dp"	        
+		        app:sv_bg_color="#D8BFD8"
+		        app:sv_duration="100"
+		        app:sv_text="TF-BOYS"
+		        app:sv_text_size="18sp" />
+	        
+	    </LinearLayout>
+		    
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="10dp">
+	        
+		    <Button
+				android:text="Position"
+				android:id="@+id/position_target"
+				android:layout_width="fill_parent"
+				android:layout_weight="1"
+				android:layout_height="wrap_content"/>
+			
+			<Button
+				android:text="Size/Colour"
+				android:id="@+id/colour_target"
+				android:layout_weight="1"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"/>
+				
+			<Button
+				android:text="Animate (default)"
+				android:id="@+id/anim1_target"
+				android:layout_weight="1"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"/>
+				
+			<Button
+				android:text="Animate (custom)"
+				android:id="@+id/anim2_target"
+				android:layout_weight="1"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"/>			
+	        
+	    </LinearLayout>
+	    
+	     <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="10dp" >
+	        
+		    <Button
+				android:text="Custom background drawable"
+				android:id="@+id/custom_target"
+				android:layout_weight="1"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"/>
+				
+			<Button
+				android:text="Clickable"
+				android:id="@+id/click_target"
+				android:layout_weight="1"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"/>
+				
+			<Button
+				android:text="Increment"
+				android:id="@+id/increment_target"
+				android:layout_weight="1"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"/>	
+	        
+	    </LinearLayout>
+	    
+       <com.xuexiang.view.ClearEditText
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_margin="5dp"/>
+       
+       
+      <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="10dp" >
+	        
+		 <com.xuexiang.view.margicbutton.MagicButton
+	       android:id="@+id/magic_button_github"
+	       android:layout_width="wrap_content"
+	       android:layout_height="wrap_content"
+	       android:layout_marginLeft="100dp"
+	       app:magic_button_size="50dp"
+	       app:button_icon="@drawable/github"
+	       app:button_icon_width="25dp"
+	       app:button_icon_height="25dp"
+	       app:hide_text="Github"
+	       app:icon_button_color="#464646"
+	       app:expandable_area_color="#1c1e21"/>
+	
+	    <com.xuexiang.view.margicbutton.MagicButton
+	        android:id="@+id/magic_button_facebook"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="100dp"
+	        app:magic_button_size="50dp"
+	        app:button_icon="@drawable/fb_white"
+	        app:button_icon_width="25dp"
+	        app:button_icon_height="25dp"
+	        app:hide_text="Facebook"
+	        app:icon_button_color="#365899"
+	        app:expandable_area_color="#203763"/>
+	
+	    <com.xuexiang.view.margicbutton.MagicButton
+	        android:id="@+id/magic_button_twitter"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="100dp"
+	        app:magic_button_size="50dp"
+	        app:button_icon="@drawable/twitter"
+	        app:button_icon_width="25dp"
+	        app:button_icon_height="25dp"
+	        app:hide_text="Twitter"
+	        app:icon_button_color="#ced0d4"
+	        app:expandable_area_color="#2f83de"/>
+		        
+    </LinearLayout>
+    
+
+	  </LinearLayout>
+   </ScrollView>
+</LinearLayout>

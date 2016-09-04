@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    <include layout="@layout/top_menu_bar" />
+    
+    <ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="45dp"
+       android:scrollbars="none">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp">
+        
+	    <Button
+	        android:id="@+id/btn_customview"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:onClick="onClick"
+	        android:text="CustomView Demo" />
+	    
+	    <Button
+	        android:id="@+id/btn_materialdesign"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:onClick="onClick"
+	        android:text="MaterialDesign Demo" />
+	
+	    <Button
+	        android:id="@+id/btn_actionsheet"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:onClick="onClick"
+	        android:text="ActionSheet Demo" />
+	
+	    <Button
+	        android:id="@+id/btn_gesturepassword"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:onClick="onClick"
+	        android:text="GesturePassword Demo" />
+	    
+	    <Button
+	        android:id="@+id/btn_PatternView"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:onClick="onClick"
+	        android:text="PatternView Demo" />
+	    
+	    <Button
+	        android:id="@+id/btn_loadingdialog"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:onClick="onClick"
+	        android:text="Loading Dialog Demo" />
+	    
+	    <Button
+	        android:id="@+id/btn_titleBar"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:onClick="onClick"
+	        android:text="TitleBar Demo" />
+	    
+	    <Button
+	        android:id="@+id/btn_niftydialog"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:onClick="onClick"
+	        android:text="NiftyDialog Demo" />
+	    
+	    <Button
+	        android:id="@+id/btn_flagtextview"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:onClick="onClick"
+	        android:text="FlagTextView Demo" />
+	    
+	    <Button
+	        android:id="@+id/btn_headerlayout"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:onClick="onClick"
+	        android:text="HeaderLayout Demo" />
+	    
+	    <Button
+	        android:id="@+id/btn_residemenu"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:onClick="onClick"
+	        android:text="ResideMenu Demo" />
+	    
+	    <Button
+	        android:id="@+id/btn_pickerui"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:onClick="onClick"
+	        android:text="PickerIU Demo" />
+	    
+	    <Button
+	        android:id="@+id/btn_pulllayout"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:onClick="onClick"
+	        android:text="PullLayout Demo" />
+	    
+	    <Button
+	        android:id="@+id/btn_dropdownmenu"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:onClick="onClick"
+	        android:text="DropDownMenu Demo" />
+	    
+	    <Button
+	        android:id="@+id/btn_swipemenu"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:onClick="onClick"
+	        android:text="SwipeMenu Demo" />
+	    
+	    <Button
+	        android:id="@+id/btn_tabbar"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:onClick="onClick"
+	        android:text="TabBar Demo" />
+	    
+	    <Button
+	        android:id="@+id/btn_expandableview"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:onClick="onClick"
+	        android:text="ExpandableView Demo" />
+	    
+	    <Button
+	        android:id="@+id/btn_viewpaperadv"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:onClick="onClick"
+	        android:text="ViewpaperAdv Demo" />
+	    
+	    <Button
+	        android:id="@+id/btn_imagecycleview"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:onClick="onClick"
+	        android:text="ImageCycleView Demo" />
+	    	     
+	    <Button
+	        android:id="@+id/btn_progressbutton"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:onClick="onClick"
+	        android:text="ProgressButton Demo" />
+	    
+	    <Button
+	        android:id="@+id/btn_customprogressbar"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:onClick="onClick"
+	        android:text="CustomProgressBar Demo" />
+	    
+	    <Button
+	        android:id="@+id/btn_customtextView"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:onClick="onClick"
+	        android:text="CustomTextView Demo" />
+	    
+	     <Button
+	        android:id="@+id/btn_passwordinput"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:onClick="onClick"
+	        android:text="PassWordInput Demo" />
+    
+	     <Button
+	        android:id="@+id/btn_timeline"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:onClick="onClick"
+	        android:text="TimeLine Demo" />
+	     
+	     <Button
+	        android:id="@+id/btn_guidview"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:onClick="onClick"
+	        android:text="GuidView Demo" />
+	     
+	     <Button
+	        android:id="@+id/btn_swipelistview"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:onClick="onClick"
+	        android:text="SwipeListView Demo" />
+	     
+	     <Button
+	        android:id="@+id/btn_swipedismisslistview"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:onClick="onClick"
+	        android:text="SwipeDismissListView Demo" />	     
+	     
+	     <Button
+	        android:id="@+id/btn_viewPaperandgridview"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:onClick="onClick"
+	        android:text="ViewPaperAndGridView Demo" />
+	     
+	     <Button
+	        android:id="@+id/btn_draggridView"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:onClick="onClick"
+	        android:text="DragGridView Demo" />
+	     
+	   <Button
+	        android:id="@+id/btn_flowtaglayout"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:onClick="onClick"
+	        android:text="FlowTagLayout Demo" />
+	       
+     </LinearLayout>
+    </ScrollView>
+    
+     <com.xuexiang.view.materialdesign.view.ButtonFloat
+            android:id="@+id/buttonfloat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="24dp"
+            android:layout_marginBottom="24dp"
+            android:background="#1E88E5"
+            app:animate="false"
+            app:iconDrawable="@drawable/ic_action_new" />
+     
+</RelativeLayout>

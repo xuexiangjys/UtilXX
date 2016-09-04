@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+   >
+    
+    <com.xuexiang.view.TitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp" 
+        android:orientation="vertical" >
+        
+        <com.xuexiang.view.CustomTextView
+        android:id="@+id/tv_1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="圆角TextView"
+        android:textColor="@color/bg_White"
+        android:textSize="16sp"
+        android:gravity="center"
+        app:textSolidColor="#303F9F"
+        app:textRadius="10dp"
+        />
+
+    <com.xuexiang.view.CustomTextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="左上左下圆角TextView!"
+        android:textColor="@color/bg_White"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        app:textSolidColor="#303F9F"
+        app:textLeftTopRadius="10dp"
+        app:textLeftBottomRadius="10dp"
+        />
+
+    <com.xuexiang.view.CustomTextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="圆角TextView"
+        android:textColor="@color/bg_White"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        app:textSolidColor="#303F9F"
+        app:textRadius="10dp"
+        app:textStrokeColor="#ff4081"
+        app:textStrokeWidth="2dp"
+        />
+
+    <com.xuexiang.view.CustomTextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="45弧度按下改变文字颜色TextView"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        app:textRadius="45dp"
+        app:textSolidColor="#303F9F"
+        app:textNormalTextColor="@color/red"
+        app:textSelectedTextColor="@color/lime"
+        app:textStrokeWidth="2dp"
+        />
+
+    <com.xuexiang.view.CustomTextView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:text="左上左下圆角TextView!"
+        android:textColor="@color/bg_White"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        app:textSolidColor="#303F9F"
+        app:textRadius="45dp"
+        app:textDrawable="@drawable/ic_launcher"
+        />
+        
+        
+    </LinearLayout>
+
+    
+
+</LinearLayout>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="4dp"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="消息界面"
+        android:textColor="@color/color_theme"
+        android:textSize="50sp" />
+
+     <TextView
+        android:id="@+id/tv_event"
+        android:layout_marginTop="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/color_theme"
+        android:textSize="20sp" />
+
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:gravity="center" >
+
+         <Button
+             android:id="@+id/btn_msg1"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="消息1" />
+
+         <Button
+             android:id="@+id/btn_msg2"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="消息2" />
+         
+     </LinearLayout>
+     
+      <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:gravity="center" >
+
+         <Button
+             android:id="@+id/btn_Tagmsg1"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="Tag消息1" />
+
+         <Button
+             android:id="@+id/btn_Tagmsg2"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="Tag消息2" />
+         
+     </LinearLayout>
+     
+      <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:gravity="center" >
+
+         <Button
+             android:id="@+id/btn_eventbus1"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="EventBus消息1" />
+
+         <Button
+             android:id="@+id/btn_eventbus2"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="EventBus消息2" />
+         
+     </LinearLayout>
+
+</LinearLayout>

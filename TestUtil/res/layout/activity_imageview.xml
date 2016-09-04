@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" xmlns:app1="http://schemas.android.com/apk/res/com.example.testutil">
+     <com.xuexiang.view.TitleBar
+      android:id="@+id/title_bar"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"/>
+     
+     <ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:scrollbars="none">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="5dp">
+     <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:textSize="15sp"
+         android:text="圆形图片" />
+     
+     
+      <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content" 
+         android:gravity="center">
+         <ImageView 
+	         android:id="@+id/round1"
+	         android:layout_width="wrap_content"
+	         android:layout_height="wrap_content"/>
+     
+	     <com.xuexiang.view.imageview.CircleImageView
+	         android:id="@+id/round2"
+	         android:layout_marginLeft="20dp"
+	         android:layout_width="wrap_content"
+	         android:layout_height="wrap_content"
+	         app:border_color="@color/darkgray"
+	         app:border_width="5dp" />
+     </LinearLayout>
+     
+       <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:textSize="15sp"
+         android:text="图片合并" />
+       
+       <ImageView 
+	         android:id="@+id/iv_Combine"
+	         android:layout_width="wrap_content"
+	         android:layout_height="wrap_content"/>
+       
+        <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:textSize="15sp"
+         android:text="滤镜" />
+        
+        <SeekBar 
+	        android:id="@+id/seekbar"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"/>
+        
+         <ImageView 
+	         android:id="@+id/blurImageView"
+	         android:layout_width="wrap_content"
+	         android:layout_height="wrap_content"/>
+             
+      </LinearLayout>
+   </ScrollView>
+</LinearLayout>

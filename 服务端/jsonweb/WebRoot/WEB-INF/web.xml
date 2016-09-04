@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+  <servlet>
+    <servlet-name>SendStudentInfoServlet</servlet-name>
+    <servlet-class>servlet.SendStudentInfoServlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>SaveStudentInfoServlet</servlet-name>
+    <servlet-class>servlet.SaveStudentInfoServlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+		<servlet-name>UploadVoiceServlet</servlet-name>
+		<servlet-class>servlet.UploadVoiceServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>DownloadFile</servlet-name>
+		<servlet-class>servlet.DownloadFile</servlet-class>
+
+	</servlet>
+  <servlet>
+    <servlet-name>Register</servlet-name>
+    <servlet-class>servlet.Register</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Login</servlet-name>
+    <servlet-class>servlet.Login</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DeleteStudent</servlet-name>
+    <servlet-class>servlet.DeleteStudent</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>EditStudent</servlet-name>
+    <servlet-class>servlet.EditStudent</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>taoBaoQuery</servlet-name>
+    <servlet-class>servlet.taoBaoQuery</servlet-class>
+  </servlet>
+
+
+
+
+
+    
+  <servlet-mapping>
+    <servlet-name>SendStudentInfoServlet</servlet-name>
+    <url-pattern>/SendStudentInfoServlet</url-pattern>
+  </servlet-mapping> 
+  
+  <servlet-mapping>
+    <servlet-name>SaveStudentInfoServlet</servlet-name>
+    <url-pattern>/SaveStudentInfoServlet</url-pattern>
+  </servlet-mapping> 
+  
+ 
+	<servlet-mapping>
+		<servlet-name>UploadVoiceServlet</servlet-name>
+		<url-pattern>/UploadVoiceServlet</url-pattern>
+	</servlet-mapping>
+
+
+	
+	<servlet-mapping>
+		<servlet-name>DownloadFile</servlet-name>
+		<url-pattern>/DownloadFile</url-pattern>
+	</servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Register</servlet-name>
+    <url-pattern>/Register</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Login</servlet-name>
+    <url-pattern>/Login</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteStudent</servlet-name>
+    <url-pattern>/DeleteStudent</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EditStudent</servlet-name>
+    <url-pattern>/EditStudent</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>taoBaoQuery</servlet-name>
+    <url-pattern>/taoBaoQuery</url-pattern>
+  </servlet-mapping>
+ 
+	
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>

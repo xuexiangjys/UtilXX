@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+     <com.xuexiang.view.TitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+     
+      <ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:scrollbars="none">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="日志助手开关：" />
+            
+            <com.xuexiang.view.SlideSwitch
+	            android:id="@+id/switch_loghelper"
+	            android:layout_width="58dp"
+	            android:layout_height="28dp"
+	            android:layout_marginLeft="10dp"
+	            app:isOpen="false"
+	            app:shape="circle"
+	            app:themeColor="#ff8733" />
+        </LinearLayout>
+                
+	    <Button
+	        android:id="@+id/btn_commonloginfo"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:onClick="onClick"
+	        android:text="Common LogInfo" />
+	    
+	     <Button
+	        android:id="@+id/btn_errorloginfo"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:onClick="onClick"
+	        android:text="Error LogInfo" />
+	     
+	     <Button
+	        android:id="@+id/btn_crashloginfo"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:onClick="onClick"
+	        android:text="Crash LogInfo" />
+	    	
+	  
+    
+     </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

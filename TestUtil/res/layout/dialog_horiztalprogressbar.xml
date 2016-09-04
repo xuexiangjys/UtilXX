@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dialoglayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:paddingBottom="36dp"
+    android:paddingLeft="52dp"
+    android:paddingRight="52dp"
+    android:paddingTop="36dp" 
+    android:gravity="center"
+    android:orientation="vertical" >
+    
+    <com.xuexiang.view.customprogressbar.MyHoriztalProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:progress="70"
+        app:progressbar_reach_color="#4cdcdc"
+        app:progressbar_reach_height="12dp"
+        app:progressbar_text_color="#4cdcdc"
+        app:progressbar_unreach_color="#aadddd"
+        app:progressbar_unreach_height="10dp" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="正在加载中..."
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+</LinearLayout>

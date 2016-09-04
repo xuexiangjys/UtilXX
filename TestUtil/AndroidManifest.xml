@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.testutil"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="21" />
+
+     <!-- 工具库中有些工具类需要这些权限 可根据应用需求进行删减 -->
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <!-- 获取UUID用到 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    
+    <!-- for log. -->
+    <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER" />
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    
+    <!--允许访问振动设备 -->
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <!--允许一个程序接收到ACTION_BOOT_COMPLETED广播在系统完成启动 -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+
+    <application
+            android:name="com.xuexiang.app.BaseApplication"
+            android:allowBackup="true"
+            android:icon="@drawable/ic_launcher"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme">
+        <!-- 工具库中不需要下列测试Activity -->
+        <activity
+                android:name="com.example.testutil.MainActivity"
+                android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.testutil.CommonActivity"/>
+        <activity android:name="com.example.testutil.common.ImageViewActivity"/>
+        
+        <activity android:name="com.example.testutil.DataActivity"/>
+        <activity android:name="com.example.testutil.data.AhibernateActivity"/>
+        <activity android:name="com.example.testutil.data.PatientActivity"/>
+        <activity android:name="com.example.testutil.data.UserActivity"/>
+        <activity android:name="com.example.testutil.data.OrmliteActivity"/>
+        <activity android:name="com.example.testutil.data.DefaultDataBaseActivity"/>
+        <activity android:name="com.example.testutil.data.CustomDataBaseActivity"/>
+        <activity android:name="com.example.testutil.data.AutoDataBaseActivity"/>
+        
+        <activity android:name="com.example.testutil.AdapterListviewActivity"/>
+        <activity android:name="com.example.testutil.adapter.MultiAdapterActivity"/>
+        <activity android:name="com.example.testutil.adapter.SimpleAdapterActivity"/>
+        
+        <activity android:name="com.example.testutil.ServiceActivity"/>
+        <activity android:name="com.example.testutil.service.FloatServiceActivity"/>
+        
+        <activity android:name="com.example.testutil.FileActivity"/>
+        <activity android:name="com.example.testutil.NetActivity"/>
+        <activity android:name="com.example.testutil.net.VolleyHttpActivity"/>
+        <activity android:name="com.example.testutil.net.AsyncHttpActivity"/>
+        <activity android:name="com.example.testutil.net.OkHttpActivity"/>
+        <activity android:name="com.example.testutil.net.FileUpLoadAndDownLoadActivity"/>
+        
+        <activity android:name="com.example.testutil.ResourceActivity"/>
+        
+        <activity android:name="com.example.testutil.SystemActivity"/>
+        <activity android:name="com.example.testutil.system.LogHelperActivity"/>
+        
+        <activity android:name="com.example.testutil.ViewActivity"/>
+        <activity android:name="com.example.testutil.view.CustomViewActivity"/>
+        <activity android:name="com.example.testutil.view.MaterialDesignActivity"/>
+        <activity android:name="com.example.testutil.view.materialdesign.ButtonsActivity"/>
+        <activity android:name="com.example.testutil.view.materialdesign.ProgressActivity"/>
+        <activity android:name="com.example.testutil.view.materialdesign.SwitchActivity"/>
+        <activity android:name="com.example.testutil.view.materialdesign.WidgetActivity"/>       
+        <activity android:name="com.example.testutil.view.ActionSheetActivity"/>
+        <activity android:name="com.example.testutil.view.GesturePasswordMainActivity"/>
+        <activity android:name="com.example.testutil.view.GesturePasswordWelComeActivity"/>
+        <activity android:name="com.example.testutil.view.ChangePasswordActivity"/>
+        <activity android:name="com.example.testutil.view.PatternViewActivity"/>
+        <activity android:name="com.example.testutil.view.LoadingDialogActivity"/>
+        <activity android:name="com.example.testutil.view.TitleBarActivity"/>
+        <activity android:name="com.example.testutil.view.NiftyDialogActivity"/>
+        <activity android:name="com.example.testutil.view.FlagTextViewActivity"/>
+        <activity android:name="com.example.testutil.view.HeaderLayoutActivity"/>
+        <activity android:name="com.example.testutil.view.residemenu.ResideMenuMainFragmentPagerActivity"/>
+        <activity android:name="com.example.testutil.view.residemenu.ClickActivity"/>
+        <activity android:name="com.example.testutil.view.PickerUIActivity"/>      
+        <activity android:name="com.example.testutil.view.PullLayoutActivity"/>
+        <activity android:name="com.example.testutil.view.pulllayout.ZoomLayoutActivity"/>
+        <activity android:name="com.example.testutil.view.pulllayout.ZoomListActivity"/>
+        <activity android:name="com.example.testutil.view.DropDownMenuActivity"/>
+        <activity android:name="com.example.testutil.view.SwipeMenuActivity"/>
+        <activity android:name="com.example.testutil.view.swipemenu.DifferentMenuActivity"/>
+        <activity android:name="com.example.testutil.view.swipemenu.SimpleActivity"/>
+        <activity android:name="com.example.testutil.view.TabBarActivity"/>
+        <activity android:name="com.example.testutil.view.ExpandableViewActivity"/>
+        <activity android:name="com.example.testutil.view.expandableview.ExpandableGridViewActivity"/>
+        <activity android:name="com.example.testutil.view.expandableview.ExpandableListViewActivity"/>
+        <activity android:name="com.example.testutil.view.expandableview.ListListActivity"/>
+        <activity android:name="com.example.testutil.view.expandableview.ScrollGridActivity"/>
+        <activity android:name="com.example.testutil.view.ViewpaperAdvActivity"/>
+        <activity android:name="com.example.testutil.view.ImageCycleViewActivity"/>      
+        <activity android:name="com.example.testutil.view.ProgressButtonActivity"/>
+        <activity android:name="com.example.testutil.view.CustomProgressBarActivity"/>
+        <activity android:name="com.example.testutil.view.CustomTextViewActivity"/>
+        <activity android:name="com.example.testutil.view.PassWordInputActivity"/>
+        <activity android:name="com.example.testutil.view.TimeLineActivity"/>
+        <activity android:name="com.example.testutil.view.GuidViewActivity"/>
+        <activity android:name="com.example.testutil.view.SwipeDismissListViewActivity"/>
+        <activity android:name="com.example.testutil.view.SwipeListViewActivity"/>
+        <activity android:name="com.example.testutil.view.swipelistview.ListViewItemShowActivity"/>
+        <activity android:name="com.example.testutil.view.ViewPaperAndGridViewActivity"/>
+        <activity android:name="com.example.testutil.view.DragGridViewActivity"/>
+        <activity android:name="com.example.testutil.view.FlowTagLayoutActivity"/>
+        
+        <service android:name="com.xuexiang.service.FloatViewService"/>
+
+        <!-- 注册自定义静态广播接收器 开机启动工具类需要此配置 -->
+        <receiver android:name="com.xuexiang.app.StartAppReceiver" />
+    </application>
+
+
+</manifest>

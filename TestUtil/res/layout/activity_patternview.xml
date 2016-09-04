@@ -1,0 +1,20 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:patternview="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <com.xuexiang.view.PatternView
+        android:id="@+id/patternView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="118dp"
+        patternview:circleColor="@color/tomato"
+        patternview:dotColor="@android:color/black"
+        patternview:gridColumns="4"
+        patternview:gridRows="4"
+        patternview:pathColor="@color/moccasin" />
+
+</RelativeLayout>

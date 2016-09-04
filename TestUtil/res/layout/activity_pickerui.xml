@@ -1,0 +1,96 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+     <com.xuexiang.view.TitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+     
+    <Button
+        android:id="@+id/bt_slide"
+        android:text="@string/slide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        android:layout_marginTop="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"/>
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="15dp"
+        android:layout_below="@+id/bt_slide"
+        android:weightSum="2"
+        android:id="@+id/linearLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/random_color"
+                android:id="@+id/cb_random_color"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/items_clickables"
+                android:id="@+id/cb_items_clickables"
+                android:checked="true"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/use_blur"
+                android:id="@+id/cb_use_blur"
+                android:checked="false"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/auto_dismiss"
+                android:id="@+id/cb_auto_dismiss"
+                android:checked="true"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <com.xuexiang.view.uipicker.picker.PickerUI
+        android:id="@+id/picker_ui_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:backgroundColor="#4cffa5"
+        app:linesCenterColor="#3941ff"
+        app:autoDismiss="true"
+        app:itemsClickables="true"
+        app:entries="@array/months"
+        app:textCenterColor="#000000"
+        app:textNoCenterColor="#737373"
+        app:blur="true"
+        app:blur_downScaleFactor="@integer/blur_downscale_min"
+        app:blur_FilterColor="#ff5e48"
+        app:blur_radius="@integer/blur_radius_min"
+        app:blur_use_renderscript="true"/>
+
+</RelativeLayout>

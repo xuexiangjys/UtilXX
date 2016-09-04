@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+     <RelativeLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:background="#303F9F" >
+         
+         <ImageButton
+	        android:id="@+id/ib_logo"
+	        android:layout_width="48dp"
+	        android:layout_height="48dp"
+	        android:background="@color/transparent"
+	        android:src="@drawable/ic_launcher"/>
+         
+          <TextView
+	        android:id="@+id/tv_title"
+	        android:layout_width="match_parent"
+	        android:layout_height="48dp"
+	        android:gravity="center"
+	        android:layout_toRightOf="@+id/ib_logo"
+	        android:layout_toLeftOf="@+id/ib_menu"
+	        android:textColor="@color/white"
+	        android:text="GuideView Demo"/>
+
+	    <ImageButton
+	        android:id="@+id/ib_menu"
+	        android:layout_width="48dp"
+	        android:layout_height="48dp"
+	        android:background="@color/transparent"
+	        android:layout_alignParentRight="true"
+	        android:src="@drawable/ic_menu_moreoverflow"/>
+         
+     </RelativeLayout>
+
+     <Button
+         android:id="@+id/btn_test"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentEnd="true"
+         android:layout_marginTop="58dp"
+         android:text="引导1" />
+
+	    <Button
+	        android:id="@+id/btn_test2"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="引导2"
+	        android:layout_marginTop="58dp"
+	        android:layout_alignParentEnd="true" />
+
+   
+
+</LinearLayout>

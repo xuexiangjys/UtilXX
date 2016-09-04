@@ -1,0 +1,37 @@
+<resources>
+
+    <string name="app_name">Util</string>
+
+    <string-array name="three_state_option">
+        <item>Option 1</item>
+        <item>Option 2</item>
+        <item>Option 3</item>
+    </string-array>
+    
+    <array name="circular_default_color_sequence">
+        <item>@color/circular_red</item>
+        <item>@color/circular_blue</item>
+        <item>@color/circular_yellow</item>
+        <item>@color/circular_green</item>
+    </array>
+    
+    <integer name="circular_default_sweepAnimationDuration">900</integer>
+    <integer name="circular_default_angleAnimationDurationMillis">2000</integer>
+    <integer name="circular_default_miniSweepAngle">30</integer>
+    
+    <!-- 版本更新 -->
+    <string name="confirm_title">提示</string>
+    <string name="ensure">确定</string>
+    <string name="cancel">取消</string>
+    <string name="system_exit">退出</string>
+    <string name="system_cancel">取消</string>
+    <string name="system_sure">确定</string>
+    <string name="hide">隐藏</string>
+    <string name="content_description_icon">icon</string>
+    <string name="refresh">刷新</string>
+    <string name="processing">加载中</string>
+    <string name="download">下载</string>
+    <string name="download_fail">下载安装包失败</string>
+    <string name="software_update">软件版本更新</string>
+    <string name="download_success">新版本软件下载成功</string>
+</resources>

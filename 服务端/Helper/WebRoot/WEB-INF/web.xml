@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+  <servlet>
+    <servlet-name>User</servlet-name>
+    <servlet-class>servlet.User</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UploadHeadPhoto</servlet-name>
+    <servlet-class>servlet.UploadHeadPhoto</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UserAddress</servlet-name>
+    <servlet-class>servlet.UserAddress</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>PushService</servlet-name>
+    <servlet-class>servlet.PushService</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>PushMessageService</servlet-name>
+    <servlet-class>servlet.PushMessageService</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AppUpdate</servlet-name>
+    <servlet-class>servlet.AppUpdate</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>FeedBack</servlet-name>
+    <servlet-class>servlet.FeedBack</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>QiangYuEdit</servlet-name>
+    <servlet-class>servlet.QiangYuEdit</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UpLoadPicture</servlet-name>
+    <servlet-class>servlet.UpLoadPicture</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>CommentService</servlet-name>
+    <servlet-class>servlet.CommentService</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>BankCardService</servlet-name>
+    <servlet-class>servlet.BankCardService</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>VisitService</servlet-name>
+    <servlet-class>servlet.VisitService</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>IdentificationService</servlet-name>
+    <servlet-class>servlet.IdentificationService</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UpLoadVisitServicePicture</servlet-name>
+    <servlet-class>servlet.UpLoadVisitServicePicture</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Repair</servlet-name>
+    <servlet-class>servlet.Repair</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UpLoadRepairPicture</servlet-name>
+    <servlet-class>servlet.UpLoadRepairPicture</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>FoodShopService</servlet-name>
+    <servlet-class>servlet.FoodShopService</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>FoodService</servlet-name>
+    <servlet-class>servlet.FoodService</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>User</servlet-name>
+    <url-pattern>/User</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UploadHeadPhoto</servlet-name>
+    <url-pattern>/UploadHeadPhoto</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UserAddress</servlet-name>
+    <url-pattern>/UserAddress</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>PushService</servlet-name>
+    <url-pattern>/PushService</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>PushMessageService</servlet-name>
+    <url-pattern>/PushMessageService</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AppUpdate</servlet-name>
+    <url-pattern>/AppUpdate</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>FeedBack</servlet-name>
+    <url-pattern>/FeedBack</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>QiangYuEdit</servlet-name>
+    <url-pattern>/QiangYuEdit</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpLoadPicture</servlet-name>
+    <url-pattern>/UpLoadPicture</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CommentService</servlet-name>
+    <url-pattern>/CommentService</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BankCardService</servlet-name>
+    <url-pattern>/BankCardService</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>VisitService</servlet-name>
+    <url-pattern>/VisitService</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>IdentificationService</servlet-name>
+    <url-pattern>/IdentificationService</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpLoadVisitServicePicture</servlet-name>
+    <url-pattern>/UpLoadVisitServicePicture</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Repair</servlet-name>
+    <url-pattern>/Repair</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpLoadRepairPicture</servlet-name>
+    <url-pattern>/UpLoadRepairPicture</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>FoodShopService</servlet-name>
+    <url-pattern>/FoodShopService</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>FoodService</servlet-name>
+    <url-pattern>/FoodService</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
