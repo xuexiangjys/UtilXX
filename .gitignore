@@ -48,7 +48,7 @@ Temporary Items
 *.cache
 .gitignore 
 *.class
-Util/bin
-Util/gen
-TestUtil/bin
-TestUtil/gen
+Util/bin/
+Util/gen/
+TestUtil/bin/
+TestUtil/gen/
