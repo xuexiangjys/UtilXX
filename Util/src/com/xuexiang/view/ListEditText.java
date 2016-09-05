@@ -33,7 +33,7 @@ import android.widget.EditText;
  *
  * Besides the displayed value, this view has an additional internal value which can be accessed via `getValue`
  *
- * Just add this view to your XML layout definition as you would do with a normal `EditText`, but reference `im.delight.android.commons.ListEditText` instead of `EditText`
+ * Just add this view to your XML layout definition as you would do with a normal `EditText`, but reference `com.xuexiang.view.ListEditText` instead of `EditText`
  *
  * In your `android.app.Activity` instance's `onCreate` method, you must get a reference to this view and call `init` on it
  *

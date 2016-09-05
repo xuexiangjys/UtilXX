@@ -13,6 +13,7 @@ import com.xuexiang.app.BaseActivity;
 import com.xuexiang.view.AndroidSegmentedControlView;
 import com.xuexiang.view.AndroidSegmentedControlView.OnSelectionChangedListener;
 import com.xuexiang.view.BadgeView;
+import com.xuexiang.view.ListEditText;
 import com.xuexiang.view.ShoppingView;
 import com.xuexiang.view.SlideSwitch;
 import com.xuexiang.view.SlideSwitch.SlideListener;
@@ -28,6 +29,7 @@ import com.xuexiang.view.margicbutton.MagicButton;
 public class CustomViewActivity extends BaseActivity {
 	private Button btnPosition, btnColour, btnAnim1, btnAnim2, btnCustom, btnClick, btnTab, btnIncrement;
 	private BadgeView badge1, badge2, badge3, badge4, badge5, badge6, badge7, badge8;
+	private ListEditText mListEditText;
 	@Override
     public void onCreateActivity() {
 		setContentView(R.layout.activity_customview);
@@ -49,6 +51,8 @@ public class CustomViewActivity extends BaseActivity {
 		initViewBadge();
 		
 		initMargicButton();
+		
+		initListEditText();
 	}
 
 	private void initAndroidSegmentedControlView() {
@@ -247,6 +251,13 @@ public class CustomViewActivity extends BaseActivity {
 				mToastUtil.showToast("点击了Github！");
 			}
 		});
+	}
+    
+    private void initListEditText() {
+    	mListEditText = (ListEditText) findViewById(R.id.listedittext);
+    	String[] mValuesHuman = {"1", "2", "3"};  //用于显示的值
+    	String[] mValuesMachine = {"a", "b", "c"};  //最终点击后对应的值
+    	mListEditText.init(mContext, mValuesHuman, mValuesMachine, R.string.ListEditText_title, R.string.ListEditText_cancel, true);
 	}
 
 
