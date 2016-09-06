@@ -4,12 +4,15 @@ import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 
 /**  
+ * 被观察者
  * 创建时间：2016-6-5 上午1:03:27   
  * @author xuexiang
  **/
 public class BaseSubject implements ISubject {
 	
-	//存放数据观察者集合
+    /**
+     * 存放数据观察者集合
+     */
     private ArrayList<WeakReference<IObserver>> mObservers = new ArrayList<WeakReference<IObserver>>();
 
 	@Override

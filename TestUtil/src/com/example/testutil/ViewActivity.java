@@ -5,6 +5,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 
 import com.example.testutil.view.ActionSheetActivity;
+import com.example.testutil.view.CircularFloatingActionMenuActivity;
 import com.example.testutil.view.CustomProgressBarActivity;
 import com.example.testutil.view.CustomTextViewActivity;
 import com.example.testutil.view.CustomViewActivity;
@@ -222,6 +223,11 @@ public class ViewActivity extends BaseActivity implements OnClickListener{
 		case R.id.btn_flowtaglayout:
 			mToastUtil.showToast("点击了FlowTagLayoutActivity");
         	intent.setClass(this, FlowTagLayoutActivity.class);
+            startActivity(intent);			
+			break;				
+		case R.id.btn_circularfloatingactionmenu:
+			mToastUtil.showToast("点击了CircularFloatingActionMenuActivity");
+        	intent.setClass(this, CircularFloatingActionMenuActivity.class);
             startActivity(intent);			
 			break;	
 

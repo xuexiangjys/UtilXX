@@ -91,6 +91,7 @@ public class LogHelperActivity extends BaseActivity implements OnClickListener{
 			} catch (Exception e) {
 				LogHelper.saveExceptionStackInfo(e);
 			}	
+//			LogHelper.saveExceptionStackInfo(new Throwable("¥ÌŒÛ–≈œ¢"));
 			break;
 		case R.id.btn_crashloginfo:
 			Button button = (Button)findViewById(R.id.textView1);

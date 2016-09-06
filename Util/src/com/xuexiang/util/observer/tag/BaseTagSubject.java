@@ -42,7 +42,7 @@ public class BaseTagSubject implements ITagSubject {
 				}
 			  }				
 			} else {
-				mObservers.remove(obs);
+				it.remove();
 			}
 		}
 	}

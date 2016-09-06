@@ -9,13 +9,13 @@ package com.xuexiang.util.observer.normal;
 public interface ISubject {
 	/**
 	 * 增加观察者
-	 * @param observer 实现ITagObserver接口的对象
+	 * @param observer 实现IObserver接口的对象
 	 */
 	public void register(IObserver observer);
 	
 	/**
 	 * 删除观察者
-	 * @param observer 实现ITagObserver接口的对象
+	 * @param observer 实现IObserver接口的对象
 	 */
 	public void unregister(IObserver observer);
 

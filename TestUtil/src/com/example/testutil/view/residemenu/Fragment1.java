@@ -35,7 +35,7 @@ public class Fragment1 extends Fragment implements OnClickListener,IObserver,ITa
 		
 		List<String> eventTagList = new ArrayList<String>();
 		eventTagList.add("Event1");
-		TagEventManager.getTagSubject("msg1").register(this,eventTagList);
+		TagEventManager.getTagSubject("msg1").register(this, eventTagList);
 		
 		EventBus.getDefault().register(this);
 	}

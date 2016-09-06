@@ -128,9 +128,19 @@
         <activity android:name="com.example.testutil.view.ViewPaperAndGridViewActivity"/>
         <activity android:name="com.example.testutil.view.DragGridViewActivity"/>
         <activity android:name="com.example.testutil.view.FlowTagLayoutActivity"/>
+        <activity android:name="com.example.testutil.view.CircularFloatingActionMenuActivity"/>
+        <activity android:name="com.example.testutil.view.circularfloatingactionmenu.MenuWithFABActivity"/>
+        <activity android:name="com.example.testutil.view.circularfloatingactionmenu.MenuWithCustomActionButtonActivity"/>
+        <activity android:name="com.example.testutil.view.circularfloatingactionmenu.MenuWithCustomAnimationActivity"/>
+        <activity android:name="com.example.testutil.view.circularfloatingactionmenu.MenuInScrollViewActivity"/>
+        <activity android:name="com.example.testutil.view.circularfloatingactionmenu.SystemOverlayMenuActivity"/>
         
         <service android:name="com.xuexiang.service.FloatViewService"/>
-
+        <service
+            android:name="com.example.testutil.view.circularfloatingactionmenu.SystemOverlayMenuService"
+            android:enabled="true"
+            android:exported="true" >
+        </service>
         <!-- 注册自定义静态广播接收器 开机启动工具类需要此配置 -->
         <receiver android:name="com.xuexiang.app.StartAppReceiver" />
     </application>
