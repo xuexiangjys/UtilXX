@@ -48,7 +48,6 @@ public class LocalFileUtil {
 	/* 下载文件的路径 */
 	public static final String DOWNLOAD_PATH = LOCAL_DATA_PATH + "download/";
 	
-	
 	public static boolean existsSDCard() {
 		if (Environment.getExternalStorageState().equals(android.os.Environment.MEDIA_MOUNTED)) {// 如果SD卡存在
 			return true;
@@ -89,12 +88,10 @@ public class LocalFileUtil {
 	 * @return
 	 */
 	public static byte[] getByteForFile(File inFile) throws IOException{
-		FileInputStream in= new FileInputStream(inFile);
+		FileInputStream in = new FileInputStream(inFile);
 		byte[] buf = new byte[in.available()];
 		in.read(buf);
-
 		in.close();
-
 		return buf;
 	}
 
@@ -107,11 +104,10 @@ public class LocalFileUtil {
 	 *            要保存的字符串
 	 * @return
 	 */
-	public static boolean downFile(File fileName, String str) {
+	public static boolean writeFile(File fileName, String str) {
 		if (!fileName.getParentFile().exists()) {
 			fileName.getParentFile().mkdirs();
 		}
-
 		boolean res = true;
 		byte[] content = str.getBytes();
 		try {
@@ -122,20 +118,17 @@ public class LocalFileUtil {
 			res = false;
 			e.printStackTrace();
 		}
-
 		return res;
 	}
 
 	public static boolean exisFile(File file) {
 		boolean exis = true;
 		if (!file.exists()) {// 如果本地文件不存在，则下载
-
 			if (!file.getParentFile().exists()) {
 				file.getParentFile().mkdir();
 			}
 			exis = false;
 		}
-
 		return exis;
 	}
 
@@ -145,14 +138,12 @@ public class LocalFileUtil {
 	 * @param file
 	 * @param cmd 条件
 	 */
-	public static boolean deleteFile(String path,String cmd){
-		boolean res=false;
-		
-		File file=new File(path,cmd);
-		if(file.exists()){
-			res=file.delete();
+	public static boolean deleteFile(String path, String cmd){
+		boolean res = false;
+		File file = new File(path, cmd);
+		if (file.exists()) {
+			res = file.delete();
 		}
-		
 		return res;
 	}
 	
@@ -161,17 +152,15 @@ public class LocalFileUtil {
 	 * @param file
 	 * @return
 	 */
-	public static void deleteFile(File file){
-		
-		if(file.exists()){
-			if(file.listFiles()!=null){
-				for(File f:file.listFiles()){
+	public static void deleteFile(File file) {
+		if (file.exists()) {
+			if (file.listFiles() != null) {
+				for (File f:file.listFiles()) {
 					f.delete();
 				}
 			}
 			file.delete();
 		}
-		
 	}
 	
 	/**
@@ -179,20 +168,19 @@ public class LocalFileUtil {
 	 * @param path
 	 */
 	public static void deleteDirectory(String path){
-		File dir=new File(path);
-		if(dir.exists()){
-			if(dir.listFiles()!=null){
-				for(File f:dir.listFiles()){
-					if(f.isDirectory()){
+		File dir = new File(path);
+		if (dir.exists()) {
+			if (dir.listFiles() != null) {
+				for(File f:dir.listFiles()) {
+					if (f.isDirectory()) {
 						deleteFile(f);
-					}else if(f.isFile())
+					} else if (f.isFile()) {
 						f.delete();
+					}
 				}
 			}
-			
 			dir.delete();
 		}
-		
 	}
 	
 
@@ -203,9 +191,8 @@ public class LocalFileUtil {
 	 * @return
 	 */
 	public static String getSingleFileData(String path){
-		File fil=new File(path); 
-		String json=getLocalDataByFile(fil);
-		
+		File file = new File(path); 
+		String json = getLocalDataByFile(file);
 		return json;
 	}
 	
@@ -215,27 +202,23 @@ public class LocalFileUtil {
 	 * @return
 	 */
 	public static String encodeToString(File file){
-		StringBuffer sb=new StringBuffer();
-		if(file.exists()){
-			FileInputStream is=null;
-			byte[] buffer=new byte[1024];
+		StringBuffer sb = new StringBuffer();
+		if (file.exists()) {
+			FileInputStream is = null;
+			byte[] buffer = new byte[1024];
 			try {
-				is=new FileInputStream(file);
-				int c=0;
-				while((c=is.read(buffer))!=-1){
+				is = new FileInputStream(file);
+				int c = 0;
+				while((c = is.read(buffer)) != -1) {
 					sb.append(Base64.encodeToString(buffer, 0, c, Base64.DEFAULT));
 				}
-				
 				is.close();
 			} catch (FileNotFoundException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}
-		
 		return sb.toString();
 	}
 	
@@ -244,16 +227,15 @@ public class LocalFileUtil {
 	 * 获取一个目录中最长时间没有被改动的文件
 	 * @param file
 	 */
-	public static File findOldFile(File file){
+	public static File findOldFile(File file) {
 		File oldFile = file.listFiles()[0];
 		long modifiedTime = file.listFiles()[0].lastModified();
-		for(File f:file.listFiles()){//找出修改时间最小的文件
+		for (File f:file.listFiles()) {//找出修改时间最小的文件
 			if(f.lastModified() < modifiedTime){
-				oldFile=f;
+				oldFile = f;
 			}
-			modifiedTime=f.lastModified();
+			modifiedTime = f.lastModified();
 		}
-		
 		return oldFile;
 	}
 	
@@ -262,8 +244,8 @@ public class LocalFileUtil {
 	 * @param dir
 	 */
 	public static void deleteFileList(File dir){
-		if(dir.exists()&&dir.listFiles().length>0){
-			for(File f:dir.listFiles()){
+		if (dir.exists() && dir.listFiles().length > 0) {
+			for (File f:dir.listFiles()) {
 				f.delete();
 			}
 		}
@@ -298,16 +280,14 @@ public class LocalFileUtil {
 			e.printStackTrace();
 		} catch (IOException e) {
 			e.printStackTrace();
-		}finally{
+		} finally {
 			try {
 				if(out != null)
 					out.close();
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
-				
 		}
-		
 		return result;
 	}
 	
@@ -321,21 +301,15 @@ public class LocalFileUtil {
 		BufferedReader reader = null;
 		StringBuffer sb = new StringBuffer();
 		try {
-
 			reader = new BufferedReader(new InputStreamReader(inputStream, "GBK"));
-			
 			String s ="";
 			while((s = reader.readLine()) != null){
 				sb.append(s + "\r\n");
 			}
-			
-
 			inputStream.close();
 			reader.close();
-
 		} catch (IOException e) {
 		}
-
 		return sb.toString();
 	}
 }
