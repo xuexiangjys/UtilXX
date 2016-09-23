@@ -19,8 +19,6 @@ import android.util.Log;
 
 /**
  * This class can replace android.util.Log.
- *
- * @author jingle1267@163.com
  * @description And you can turn off the log by set DEBUG_LEVEL = Log.ASSERT.
  */
 public final class LogUtils {
@@ -35,13 +33,21 @@ public final class LogUtils {
     /**
      * Master switch.To catch error info you need set this value below Log.WARN
      */
-    public static final int DEBUG_LEVEL = 0;
+    public static int DEBUG_LEVEL = 0;
 
     /**
      * 'System.out' switch.When it is true, you can see the 'System.out' log.
      * Otherwise, you cannot.
      */
-    public static final boolean DEBUG_SYSOUT = false;
+    public static boolean DEBUG_SYSOUT = false;
+    
+    public static void setDebugLevel(int level) {
+    	DEBUG_LEVEL = level;
+    }
+    
+    public static void setIsDebugSysout(boolean isDebugSysout) {
+    	DEBUG_SYSOUT = isDebugSysout;
+    }
 
     /**
      * Send a {@link android.util.Log#VERBOSE} log message.

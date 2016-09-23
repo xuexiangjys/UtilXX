@@ -29,8 +29,8 @@ public class BaseTagSubject implements ITagSubject {
 
 	@Override
 	public void notify(Event event) {
-		  Iterator<Map.Entry<WeakReference<ITagObserver>, List<String>>> it = mObservers.entrySet().iterator();
-		  while (it.hasNext()) {
+	   Iterator<Map.Entry<WeakReference<ITagObserver>, List<String>>> it = mObservers.entrySet().iterator();
+	   while (it.hasNext()) {
 		   Map.Entry<WeakReference<ITagObserver>, List<String>> entry = it.next();
 		   WeakReference<ITagObserver> weak = entry.getKey();
 		   List<String> eventTagList = entry.getValue();

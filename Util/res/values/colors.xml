@@ -380,6 +380,8 @@
     <color name="shadow">#25808080</color>
     <color name="dialog_bg">#f5f5f5</color>
     
+    <color name="shadow_guidview">#cc222222</color>
+    
     <color name="spots_dialog_color">@android:color/holo_blue_dark</color>
     
     <color name="circular_red">#F90101</color>
