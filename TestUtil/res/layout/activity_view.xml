@@ -233,6 +233,20 @@
 	        android:layout_height="wrap_content"
 	        android:onClick="onClick"
 	        android:text="CircularFloatingActionMenu Demo" />
+	   
+	   <Button
+	        android:id="@+id/btn_rangesliderview"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:onClick="onClick"
+	        android:text="RangeSliderView Demo" />
+	   
+	   <Button
+	        android:id="@+id/btn_snakbar"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:onClick="onClick"
+	        android:text="Snakbar Demo" />
 	       
      </LinearLayout>
     </ScrollView>

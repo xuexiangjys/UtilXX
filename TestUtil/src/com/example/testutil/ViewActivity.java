@@ -26,6 +26,8 @@ import com.example.testutil.view.PatternViewActivity;
 import com.example.testutil.view.PickerUIActivity;
 import com.example.testutil.view.ProgressButtonActivity;
 import com.example.testutil.view.PullLayoutActivity;
+import com.example.testutil.view.RangeSliderViewActivity;
+import com.example.testutil.view.SnakbarActivity;
 import com.example.testutil.view.SwipeDismissListViewActivity;
 import com.example.testutil.view.SwipeListViewActivity;
 import com.example.testutil.view.SwipeMenuActivity;
@@ -229,7 +231,17 @@ public class ViewActivity extends BaseActivity implements OnClickListener{
 			mToastUtil.showToast("点击了CircularFloatingActionMenuActivity");
         	intent.setClass(this, CircularFloatingActionMenuActivity.class);
             startActivity(intent);			
-			break;	
+			break;
+		case R.id.btn_rangesliderview:
+			mToastUtil.showToast("点击了RangeSliderViewActivity");
+        	intent.setClass(this, RangeSliderViewActivity.class);
+            startActivity(intent);			
+			break;
+		case R.id.btn_snakbar:
+			mToastUtil.showToast("点击了SnakbarActivity");
+        	intent.setClass(this, SnakbarActivity.class);
+            startActivity(intent);			
+			break;
 
 		default:
 			break;

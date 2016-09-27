@@ -12,24 +12,24 @@
   ~ please contact The MITRE Corporation, Contracts Office,7515 Colshire Drive,
   ~ McLean, VA  22102-7539, (703) 983-6000.
   ~
-  ~ Approved for Public Release; Distribution Unlimited. Case Number 14-4045
-  -->
+  ~ Approved for Public Release; Distribution Unlimited. Case Number 14-4045
+-->
 
 <resources>
-     <declare-styleable name="MultipleSelectionButton">
-        <attr name="ascv_unselectedTextColor" format="reference"/>
-        <attr name="ascv_unselectedColor" format="reference"/>
-        <attr name="ascv_selectedColor" format="reference"/>
-        <attr name="ascv_selectedTextColor" format="reference"/>
-        <attr name="ascv_items" format="reference"/>
-        <attr name="ascv_values" format="reference"/>
-        <attr name="ascv_equalWidth" format="boolean"/>
-        <attr name="ascv_stretch" format="boolean"/>
-        <attr name="ascv_defaultSelection" format="integer"/>
-        <attr name="ascv_identifier" format="string"/>
+
+    <declare-styleable name="MultipleSelectionButton">
+        <attr name="ascv_unselectedTextColor" format="reference" />
+        <attr name="ascv_unselectedColor" format="reference" />
+        <attr name="ascv_selectedColor" format="reference" />
+        <attr name="ascv_selectedTextColor" format="reference" />
+        <attr name="ascv_items" format="reference" />
+        <attr name="ascv_values" format="reference" />
+        <attr name="ascv_equalWidth" format="boolean" />
+        <attr name="ascv_stretch" format="boolean" />
+        <attr name="ascv_defaultSelection" format="integer" />
+        <attr name="ascv_identifier" format="string" />
     </declare-styleable>
-    
-     <declare-styleable name="slideswitch">
+    <declare-styleable name="slideswitch">
         <attr name="themeColor" format="color" />
         <attr name="isOpen" format="boolean" />
         <attr name="shape">
@@ -37,7 +37,6 @@
             <enum name="circle" value="2" />
         </attr>
     </declare-styleable>
-    
     <declare-styleable name="ActionSheets">
         <attr name="actionSheetStyle" format="reference" />
     </declare-styleable>
@@ -55,54 +54,44 @@
         <attr name="cancelButtonMarginTop" format="dimension|reference" />
         <attr name="actionSheetTextSize" format="dimension|reference" />
     </declare-styleable>
-    
-    
     <declare-styleable name="PatternView">
+
         <!-- This is the maximum size the view will take in wrap_content mode. -->
-        <attr name="maxSize" format="dimension"/>
+        <attr name="maxSize" format="dimension" />
         <!-- The color of the circle. -->
-        <attr name="circleColor" format="color"/>
+        <attr name="circleColor" format="color" />
         <!-- The color of the dot. -->
-        <attr name="dotColor" format="color"/>
+        <attr name="dotColor" format="color" />
         <!-- Number of rows in the matrix. -->
-        <attr name="gridRows" format="integer"/>
+        <attr name="gridRows" format="integer" />
         <!-- Number of columns in the matrix. -->
-        <attr name="gridColumns" format="integer"/>
+        <attr name="gridColumns" format="integer" />
         <!-- The color of the path between the cells. -->
-        <attr name="pathColor" format="color"/>
+        <attr name="pathColor" format="color" />
     </declare-styleable>
-    
-      <declare-styleable name="CircleImageView">
+    <declare-styleable name="CircleImageView">
         <attr name="border_width" format="dimension" />
         <attr name="border_color" format="color" />
     </declare-styleable>
-     
-      
     <declare-styleable name="LoadingView">
-
-        <attr name="loadingText" format="string"/>
-        <attr name="loadingTextAppearance" format="reference"/>
+        <attr name="loadingText" format="string" />
+        <attr name="loadingTextAppearance" format="reference" />
     </declare-styleable>
-    
-     <declare-styleable name="LoadingAnimatorView">
-
-        <attr name="loadingAnimatorText" format="string"/>
-        <attr name="loadingAnimatorPicture" format="integer"/>
+    <declare-styleable name="LoadingAnimatorView">
+        <attr name="loadingAnimatorText" format="string" />
+        <attr name="loadingAnimatorPicture" format="integer" />
     </declare-styleable>
-    
     <declare-styleable name="SpotsDialog">
         <attr name="DialogTitleAppearance" format="reference" />
         <attr name="DialogTitleText" format="reference|string" />
-        <attr name="DialogSpotColor" format="reference|color"/>
-        <attr name="DialogSpotCount" format="integer"/>
+        <attr name="DialogSpotColor" format="reference|color" />
+        <attr name="DialogSpotCount" format="integer" />
     </declare-styleable>
-        
     <declare-styleable name="monindicator">
         <attr name="circleRadius" format="dimension" />
         <attr name="circleSpacing" format="dimension" />
         <attr name="cycle" format="integer" />
     </declare-styleable>
-    
     <declare-styleable name="CircularProgressView">
         <attr name="borderWidth" format="dimension" />
         <attr name="colorSequence" format="reference" />
@@ -110,38 +99,34 @@
         <attr name="angleAnimationDurationMillis" format="integer" />
         <attr name="minSweepAngle" format="integer" />
     </declare-styleable>
-    
-    <declare-styleable name="RoundProgressBar">  
-        <attr name="roundColor" format="color"/>
-        <attr name="roundProgressColor" format="color"/>
+    <declare-styleable name="RoundProgressBar">
+        <attr name="roundColor" format="color" />
+        <attr name="roundProgressColor" format="color" />
         <attr name="roundWidth" format="dimension"></attr>
-        <attr name="textColor" format="color" />  
-        <attr name="textSize" format="dimension" /> 
-        <attr name="max" format="integer"></attr> 
+        <attr name="textColor" format="color" />
+        <attr name="textSize" format="dimension" />
+        <attr name="max" format="integer"></attr>
         <attr name="textIsDisplayable" format="boolean"></attr>
         <attr name="style">
             <enum name="STROKE" value="0"></enum>
             <enum name="FILL" value="1"></enum>
         </attr>
-    </declare-styleable> 
-    
-    <declare-styleable name="SmoothCheckBox">
-        <attr name="duration" format="integer"/>
-        <attr name="stroke_width" format="dimension"/>
-        <attr name="color_tick" format="color"/>
-        <attr name="color_checked" format="color"/>
-        <attr name="color_unchecked" format="color"/>
-        <attr name="color_unchecked_stroke" format="color"/>
     </declare-styleable>
-    
-      <declare-styleable name="FluidLayout">
-        <attr name="gravity" >
+    <declare-styleable name="SmoothCheckBox">
+        <attr name="duration" format="integer" />
+        <attr name="stroke_width" format="dimension" />
+        <attr name="color_tick" format="color" />
+        <attr name="color_checked" format="color" />
+        <attr name="color_unchecked" format="color" />
+        <attr name="color_unchecked_stroke" format="color" />
+    </declare-styleable>
+    <declare-styleable name="FluidLayout">
+        <attr name="gravity">
             <flag name="top" value="0x30" />
             <flag name="bottom" value="0x50" />
             <flag name="center" value="0x11" />
         </attr>
     </declare-styleable>
-
     <declare-styleable name="FluidLayout_Layout">
         <attr name="layout_gravity">
             <flag name="top" value="0x30" />
@@ -149,47 +134,43 @@
             <flag name="center" value="0x11" />
         </attr>
     </declare-styleable>
-    
     <declare-styleable name="PickerUI">
+
         <!-- to use in PickerUI in the panel -->
-        <attr name="backgroundColor"    format="color"/>
-        <attr name="linesCenterColor"   format="color"/>
+        <attr name="backgroundColor" format="color" />
+        <attr name="linesCenterColor" format="color" />
 
         <!-- to use in PickerUIListView -->
-        <attr name="autoDismiss"        format="boolean"/>
-        <attr name="itemsClickables"    format="boolean"/>
-        <attr name="entries"            format="reference"/>
+        <attr name="autoDismiss" format="boolean" />
+        <attr name="itemsClickables" format="boolean" />
+        <attr name="entries" format="reference" />
 
         <!-- to use in PickerUI in the PickerUIListView by PickerUIAdapter -->
-        <attr name="textCenterColor"    format="color"/>
-        <attr name="textNoCenterColor"  format="color"/>
+        <attr name="textCenterColor" format="color" />
+        <attr name="textNoCenterColor" format="color" />
 
         <!-- Blur Attributes -->
-        <attr name="blur"                   format="boolean"/>
-        <attr name="blur_downScaleFactor"   format="float"/>
-        <attr name="blur_FilterColor"       format="color"/>
-        <attr name="blur_radius"            format="integer"/>
-        <attr name="blur_use_renderscript"  format="boolean"/>
-
+        <attr name="blur" format="boolean" />
+        <attr name="blur_downScaleFactor" format="float" />
+        <attr name="blur_FilterColor" format="color" />
+        <attr name="blur_radius" format="integer" />
+        <attr name="blur_use_renderscript" format="boolean" />
     </declare-styleable>
-    
-	<declare-styleable name="pull">
-		<attr name="header" format="reference|integer" />
-		<attr name="maxHeaderHeight" format="reference|dimension" />
-		<attr name="minHeaderHeight" format="reference|dimension" />
-	</declare-styleable>
-	
-	<declare-styleable name="LoopViewPager">
+    <declare-styleable name="pull">
+        <attr name="header" format="reference|integer" />
+        <attr name="maxHeaderHeight" format="reference|dimension" />
+        <attr name="minHeaderHeight" format="reference|dimension" />
+    </declare-styleable>
+    <declare-styleable name="LoopViewPager">
         <attr name="loop_ms" format="integer" />
         <attr name="loop_duration" format="integer" />
         <attr name="loop_style" format="enum">
-            <enum name="empty" value="-1"/>
-            <enum name="depth" value="1"/>
-            <enum name="zoom" value="2"/>
+            <enum name="empty" value="-1" />
+            <enum name="depth" value="1" />
+            <enum name="zoom" value="2" />
         </attr>
     </declare-styleable>
-    
-	 <declare-styleable name="MyHoriztalProgressBar">
+    <declare-styleable name="MyHoriztalProgressBar">
         <attr name="progressbar_reach_color" format="color" />
         <attr name="progressbar_unreach_color" format="color" />
         <attr name="progressbar_reach_height" format="dimension" />
@@ -207,8 +188,7 @@
         <attr name="progressbar_height" format="dimension" />
         <attr name="radius" format="dimension" />
     </declare-styleable>
-        
-     <declare-styleable name="customTextView">
+    <declare-styleable name="customTextView">
         <attr name="textSolidColor" format="color" />
         <attr name="textStrokeColor" format="color" />
         <attr name="textRadius" format="dimension" />
@@ -221,7 +201,7 @@
         <attr name="textNormalTextColor" format="color" />
         <attr name="textSelectedTextColor" format="color" />
     </declare-styleable>
-    
+
     <!-- swipe listview -->
     <declare-styleable name="SwipeListView">
         <attr name="swipeOpenOnLongPress" format="boolean" />
@@ -246,15 +226,13 @@
             <enum name="dismiss" value="1" />
         </attr>
     </declare-styleable>
-    
     <declare-styleable name="ShoppingView">
         <attr name="sv_bg_color" format="color" />
         <attr name="sv_text" format="string" />
         <attr name="sv_text_size" format="dimension" />
         <attr name="sv_duration" format="integer" />
     </declare-styleable>
-    
-   <declare-styleable name="CustomAttributes">
+    <declare-styleable name="CustomAttributes">
 
         <!-- Color of ripple animation -->
         <attr name="rippleColor" format="color|reference" />
@@ -286,16 +264,24 @@
         <!-- if true, delays calls to OnClickListeners until ripple effect ends -->
         <attr name="clickAfterRipple" format="boolean" />
     </declare-styleable>
-      
-   <declare-styleable name="MagicButton">
+    <declare-styleable name="MagicButton">
         <attr name="hide_text" format="string" />
         <attr name="expandable_area_color" format="color" />
         <attr name="icon_button_color" format="color" />
-        <attr name="magic_button_size" format="dimension"/>
+        <attr name="magic_button_size" format="dimension" />
         <attr name="button_icon" format="integer" />
         <attr name="button_icon_width" format="dimension" />
         <attr name="button_icon_height" format="dimension" />
         <attr name="hide_text_size" format="dimension" />
         <attr name="hide_text_color" format="color" />
     </declare-styleable>
+    <declare-styleable name="RangeSliderView">
+        <attr name="rangeCount" format="integer" />
+        <attr name="filledColor" format="color" />
+        <attr name="emptyColor" format="color" />
+        <attr name="barHeightPercent" format="float" />
+        <attr name="slotRadiusPercent" format="float" />
+        <attr name="sliderRadiusPercent" format="float" />
+    </declare-styleable>
+
 </resources>

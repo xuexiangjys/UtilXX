@@ -134,6 +134,8 @@
         <activity android:name="com.example.testutil.view.circularfloatingactionmenu.MenuWithCustomAnimationActivity"/>
         <activity android:name="com.example.testutil.view.circularfloatingactionmenu.MenuInScrollViewActivity"/>
         <activity android:name="com.example.testutil.view.circularfloatingactionmenu.SystemOverlayMenuActivity"/>
+        <activity android:name="com.example.testutil.view.RangeSliderViewActivity"/>
+        <activity android:name="com.example.testutil.view.SnakbarActivity"/>
         
         <service android:name="com.xuexiang.service.FloatViewService"/>
         <service

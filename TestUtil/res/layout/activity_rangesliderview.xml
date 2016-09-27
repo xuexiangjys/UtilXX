@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+     <com.xuexiang.view.TitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+     
+      <com.xuexiang.view.rangesliderview.RangeSliderView
+        android:id="@+id/rsv_small"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="50dp"
+        app:filledColor="#1A5F77" />
+
+    <com.xuexiang.view.rangesliderview.RangeSliderView
+        android:id="@+id/rsv_large"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="50dp"
+        app:filledColor="#FF6600"
+        app:rangeCount="10" />
+
+    <com.xuexiang.view.rangesliderview.RangeSliderView
+        android:id="@+id/rsv_custom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="50dp"
+        app:barHeightPercent="0.1"
+        app:emptyColor="#a8aeb8"
+        app:filledColor="#00cbff"
+        app:rangeCount="5" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal" >
+
+        <com.xuexiang.view.rangesliderview.RangeSliderView
+            android:id="@+id/rsv_another"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_weight="1"
+            app:barHeightPercent="0.1"
+            app:emptyColor="#a8aeb8"
+            app:filledColor="#FF0000"
+            app:rangeCount="5" />
+
+        <Button
+            android:id="@+id/Range_Slider"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:text="Range Slider"
+            android:textColor="#000000" />
+    </LinearLayout>
+
+    <com.xuexiang.view.rangesliderview.RangeSliderView
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        app:barHeightPercent="0.1"
+        app:emptyColor="#a8aeb8"
+        app:filledColor="#00FF00"
+        app:rangeCount="5" />
+     
+
+</LinearLayout>

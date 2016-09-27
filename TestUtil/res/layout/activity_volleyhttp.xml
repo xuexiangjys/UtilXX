@@ -3,238 +3,233 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
-    
-   <com.xuexiang.view.TitleBar
-      android:id="@+id/title_bar"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"/>
-    <ScrollView
-	    android:layout_width="match_parent"
-	    android:layout_height="wrap_content"
-	    android:scrollbars="none">
-	    <LinearLayout
-	        android:layout_width="match_parent"
-	        android:layout_height="wrap_content"
-	        android:orientation="vertical"
-	        android:padding="5dp">   
-	
-	     <LinearLayout
-	         android:layout_width="match_parent"
-	         android:layout_height="wrap_content" >
-	                  
-	         <Button
-		        android:id="@+id/btn_classget"
-		        android:layout_width="wrap_content"
-		        android:layout_height="wrap_content"
-		        android:layout_weight="1"
-		        android:onClick="onClick"
-		        android:text="classget" />
-	          
-	         <Button
-		        android:id="@+id/btn_classpost"
-		        android:layout_width="wrap_content"
-		        android:layout_height="wrap_content"
-		        android:layout_weight="1"
-		        android:onClick="onClick"
-		        android:text="classpost" />
-		         
-	     </LinearLayout>
-	     
-	     <LinearLayout
-	         android:layout_width="match_parent"
-	         android:layout_height="wrap_content" >
-	                  
-	         <Button
-		        android:id="@+id/btn_stringget"
-		        android:layout_width="wrap_content"
-		        android:layout_height="wrap_content"
-		        android:layout_weight="1"
-		        android:onClick="onClick"
-		        android:text="stringget" />
-	          
-	         <Button
-		        android:id="@+id/btn_stringpost"
-		        android:layout_width="wrap_content"
-		        android:layout_height="wrap_content"
-		        android:layout_weight="1"
-		        android:onClick="onClick"
-		        android:text="stringpost" />
-		         
-	     </LinearLayout>
-	     
-	     <LinearLayout
-	         android:layout_width="match_parent"
-	         android:layout_height="wrap_content" >
-	                  
-	         <Button
-		        android:id="@+id/btn_JSONObjectget"
-		        android:layout_width="wrap_content"
-		        android:layout_height="wrap_content"
-		        android:layout_weight="1"
-		        android:onClick="onClick"
-		        android:text="JSONObjectget" />
-	          
-	         <Button
-		        android:id="@+id/btn_JSONObjectpost"
-		        android:layout_width="wrap_content"
-		        android:layout_height="wrap_content"
-		        android:layout_weight="1"
-		        android:onClick="onClick"
-		        android:text="JSONObjectpost" />
-		         
-	     </LinearLayout>
-	
-	   
-	     <LinearLayout
-	         android:layout_width="match_parent"
-	         android:layout_height="wrap_content" >
-	                  
-	           <Button
-			        android:id="@+id/VolleyImageView"
-			        android:layout_width="wrap_content"
-			        android:layout_height="wrap_content"
-			        android:layout_weight="1"
-			        android:onClick="onClick"
-			        android:text="Volley" />
-	           <Button
-			        android:id="@+id/FinalImage"
-			        android:layout_width="wrap_content"
-			        android:layout_height="wrap_content"
-			        android:layout_weight="1"
-			        android:onClick="onClick"
-			        android:text="FinalImage" />
-	           
-	            <Button
-			        android:id="@+id/ImageViewTest"
-			        android:layout_width="wrap_content"
-			        android:layout_height="wrap_content"
-			        android:layout_weight="1"
-			        android:onClick="onClick"
-			        android:text="ImageViewTest" />
-		         
-	     </LinearLayout>
-	     
-	     <LinearLayout
-	         android:layout_width="match_parent"
-	         android:layout_height="wrap_content" >
-	                  
-	         <Button
-	             android:id="@+id/btn_getWeatherData"
-	             android:layout_width="wrap_content"
-	             android:layout_height="wrap_content"
-	             android:layout_weight="1"
-	             android:onClick="onClick"
-	             android:text="getWeatherData" />
-	         
-	         <Button
-	             android:id="@+id/btn_customrequest"
-	             android:layout_width="wrap_content"
-	             android:layout_height="wrap_content"
-	             android:layout_weight="1"
-	             android:onClick="onClick"
-	             android:text="CustomRequest" />
-		         
-	     </LinearLayout>
-	     	     
-	    <EditText
-	        android:id="@+id/filePath"
-	        android:layout_width="fill_parent"
-	        android:layout_height="100dp" 
-	        android:hint="上传文件路径"/>
 
-	    <LinearLayout
-	        android:layout_width="match_parent"
-	        android:layout_height="wrap_content"
-	        android:gravity="center"
-	        android:orientation="horizontal" >
-	
-	         <Button
-	            android:id="@+id/selectfile"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:layout_weight="1"
-	            android:onClick="onClick"
-	            android:text="选择文件" />
-	         
-	        <Button
-	            android:id="@+id/uploadfile"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:layout_weight="1"
-	            android:onClick="onClick"
-	            android:text="多文件上传" />
-	       
-	    </LinearLayout>
-	    
-	
-	     <LinearLayout
-	         android:layout_width="match_parent"
-	         android:layout_height="wrap_content"
-	         android:gravity="center_vertical" >
-	
-	         <TextView
-	             android:layout_width="wrap_content"
-	             android:layout_height="wrap_content"
-	             android:text="ImageView" />
-	         
-	          <ImageView
-		        android:id="@+id/imageView1"
-		        android:layout_width="wrap_content"
-		        android:layout_height="wrap_content"
-		        android:src="@drawable/ic_launcher" />
-	     </LinearLayout>
-	
-	   <LinearLayout
-	         android:layout_width="match_parent"
-	         android:layout_height="wrap_content"
-	         android:gravity="center_vertical" >
-	
-	         <TextView
-	             android:layout_width="wrap_content"
-	             android:layout_height="wrap_content"
-	             android:text="NetworkImageView" />
-	         
-	         <com.android.volley.toolbox.NetworkImageView
-		         android:id="@+id/network_image_view"
-		         android:layout_width="wrap_content"
-		         android:layout_height="wrap_content"
-		         android:src="@drawable/ic_launcher" />
-	    </LinearLayout>
-	   
-	     <LinearLayout
-	        android:layout_width="match_parent"
-	        android:layout_height="match_parent"
-	        android:layout_margin="10dp"
-	        android:orientation="vertical" >
-	
-	        <LinearLayout
-	            android:layout_width="match_parent"
-	            android:layout_height="wrap_content"
-	            android:layout_margin="5dp"
-	            android:orientation="vertical" >
-	
-	            <View
-	                android:layout_width="match_parent"
-	                android:layout_height="1dp"
-	                android:background="#dddddd" />
-	
-	            <ScrollView
-	                android:layout_width="match_parent"
-	                android:layout_height="match_parent"
-	                android:fadingEdge="vertical"
-	                android:scrollbars="vertical" >
-	
-	                <TextView
-	                    android:id="@+id/content"
-	                    android:layout_width="match_parent"
-	                    android:layout_height="wrap_content"
-	                    android:layout_marginTop="5dp"
-	                    android:scrollbars="vertical"
-	                    android:singleLine="false" />
-	            </ScrollView>
-	        </LinearLayout>
-	    </LinearLayout>
-	  </LinearLayout>
-   </ScrollView>
+    <com.xuexiang.view.TitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <Button
+                    android:id="@+id/btn_classget"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClick"
+                    android:text="classget" />
+
+                <Button
+                    android:id="@+id/btn_classpost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClick"
+                    android:text="classpost" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <Button
+                    android:id="@+id/btn_stringget"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClick"
+                    android:text="stringget" />
+
+                <Button
+                    android:id="@+id/btn_stringpost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClick"
+                    android:text="stringpost" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <Button
+                    android:id="@+id/btn_JSONObjectget"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClick"
+                    android:text="JSONObjectget" />
+
+                <Button
+                    android:id="@+id/btn_JSONObjectpost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClick"
+                    android:text="JSONObjectpost" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <Button
+                    android:id="@+id/VolleyImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClick"
+                    android:text="Volley" />
+
+                <Button
+                    android:id="@+id/FinalImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClick"
+                    android:text="FinalImage" />
+
+                <Button
+                    android:id="@+id/ImageViewTest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClick"
+                    android:text="ImageViewTest" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <Button
+                    android:id="@+id/btn_getWeatherData"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClick"
+                    android:text="getWeatherData" />
+
+                <Button
+                    android:id="@+id/btn_customrequest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClick"
+                    android:text="CustomRequest" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/filePath"
+                android:layout_width="fill_parent"
+                android:layout_height="100dp"
+                android:hint="上传文件路径" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/selectfile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClick"
+                    android:text="选择文件" />
+
+                <Button
+                    android:id="@+id/uploadfile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClick"
+                    android:text="多文件上传" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ImageView" />
+
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_launcher" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NetworkImageView" />
+
+                <com.android.volley.toolbox.NetworkImageView
+                    android:id="@+id/network_image_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_launcher" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="vertical" >
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#dddddd" />
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fadingEdge="vertical"
+                        android:scrollbars="vertical" >
+
+                        <TextView
+                            android:id="@+id/content"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:scrollbars="vertical"
+                            android:singleLine="false" />
+                    </ScrollView>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>

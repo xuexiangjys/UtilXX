@@ -23,7 +23,7 @@ import android.content.Intent.ShortcutIconResource;
 import android.database.Cursor;
 import android.net.Uri;
 
-import com.xuexiang.R;
+import com.xuexiang.util.resource.RUtils;
 
 /**
  * 创建删除快捷图标
@@ -55,7 +55,7 @@ public final class ShortCutUtils {
                 + "/favorites?notify=true");
         Cursor c = cr.query(CONTENT_URI,
                 new String[]{"title", "iconResource"}, "title=?",
-                new String[]{activity.getString(R.string.app_name).trim()},
+                new String[]{activity.getString(RUtils.getString(activity, "app_name")).trim()},
                 null);
         if (c != null && c.getCount() > 0) {
             isInstallShortcut = true;
@@ -73,14 +73,14 @@ public final class ShortCutUtils {
                 "com.android.launcher.action.INSTALL_SHORTCUT");
         // 快捷方式的名称
         shortcut.putExtra(Intent.EXTRA_SHORTCUT_NAME,
-                activity.getString(R.string.app_name));
+                activity.getString(RUtils.getString(activity, "app_name")));
         shortcut.putExtra("duplicate", false); // 不允许重复创建
         Intent shortcutIntent = new Intent(Intent.ACTION_MAIN);
         shortcutIntent.setClassName(activity, activity.getClass().getName());
         shortcut.putExtra(Intent.EXTRA_SHORTCUT_INTENT, shortcutIntent);
         // 快捷方式的图标
         ShortcutIconResource iconRes = Intent.ShortcutIconResource.fromContext(
-                activity, R.drawable.ic_launcher);
+                activity, RUtils.getDrawable(activity, "ic_launcher"));
         shortcut.putExtra(Intent.EXTRA_SHORTCUT_ICON_RESOURCE, iconRes);
 
         activity.sendBroadcast(shortcut);
@@ -96,7 +96,7 @@ public final class ShortCutUtils {
                 "com.android.launcher.action.UNINSTALL_SHORTCUT");
         // 快捷方式的名称
         shortcut.putExtra(Intent.EXTRA_SHORTCUT_NAME,
-                activity.getString(R.string.app_name));
+                activity.getString(RUtils.getString(activity, "app_name")));
         String appClass = activity.getPackageName() + "."
                 + activity.getLocalClassName();
         ComponentName comp = new ComponentName(activity.getPackageName(),

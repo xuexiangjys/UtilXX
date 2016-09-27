@@ -4,7 +4,6 @@ import java.util.ArrayList;
 
 import android.app.ActionBar.LayoutParams;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -12,7 +11,6 @@ import android.widget.TextView;
 import com.example.testutil.R;
 import com.xuexiang.app.BaseActivity;
 import com.xuexiang.util.net.NetImageUtil;
-import com.xuexiang.util.resource.ResourceUtils;
 import com.xuexiang.view.ImageCycleView;
 import com.xuexiang.view.ImageCycleView.ImageCycleViewListener;
 import com.xuexiang.view.RollViewPager;
