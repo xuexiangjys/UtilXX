@@ -113,12 +113,12 @@ public final class AppUtils {
      */
     public static String getAppName(Context context,int pID) {
         String processName = "";
-        ActivityManager am = (ActivityManager) context.getSystemService(context.ACTIVITY_SERVICE);
-        List l = am.getRunningAppProcesses();
-        Iterator i = l.iterator();
+        ActivityManager am = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
+        List<RunningAppProcessInfo> processInfoList = am.getRunningAppProcesses();
+        Iterator<RunningAppProcessInfo> iterator = processInfoList.iterator();
         PackageManager pm = context.getPackageManager();
-        while(i.hasNext()) {
-              ActivityManager.RunningAppProcessInfo info = (ActivityManager.RunningAppProcessInfo)(i.next());
+        while(iterator.hasNext()) {
+              ActivityManager.RunningAppProcessInfo info = (ActivityManager.RunningAppProcessInfo)(iterator.next());
               try { 
                   if(info.pid == pID) {
                       CharSequence c = pm.getApplicationLabel(pm.getApplicationInfo(info.processName, PackageManager.GET_META_DATA));
@@ -300,6 +300,35 @@ public final class AppUtils {
             }
         }
         return false;
+    }
+    
+    /**
+     * whether application is Running
+     * <ul>
+     * <li>need use permission android.permission.GET_TASKS in Manifest.xml</li>
+     * </ul>
+     *
+     * @param context 上下文
+     * @return if application is running return true, otherwise return
+     * false
+     */
+    public static boolean isApplicationRunning(Context context) {
+    	boolean isAppRunning = false;
+        ActivityManager am = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
+        List<RunningTaskInfo> taskList = am.getRunningTasks(Integer.MAX_VALUE);
+        if (taskList != null && !taskList.isEmpty()) {
+        	for (RunningTaskInfo runningTaskInfo : taskList) {
+        		ComponentName topActivity = runningTaskInfo.topActivity;
+        		ComponentName baseActivity = runningTaskInfo.baseActivity;
+        		 if (topActivity != null && baseActivity != null) {
+        			 if (topActivity.getPackageName().equals(context.getPackageName()) && baseActivity.getPackageName().equals(context.getPackageName())) {
+        				 isAppRunning = true;
+        				 break;
+        			 }
+                 }
+			}
+        }
+        return isAppRunning;
     }
 
     /**

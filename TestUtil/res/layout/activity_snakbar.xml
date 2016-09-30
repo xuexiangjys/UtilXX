@@ -3,10 +3,31 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
-    
+
     <com.xuexiang.view.TitleBar
-      android:id="@+id/title_bar"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"/>
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/sample_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClick"
+        android:text="sample Message" />
+    
+    <Button
+        android:id="@+id/message_click"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClick"
+        android:text="Message Click" />
+    
+    <Button
+        android:id="@+id/actionIcon_click"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClick"
+        android:text="ActionIcon Click" />
 
 </LinearLayout>

@@ -8,13 +8,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
       
-    <com.xuexiang.view.SwipeDismissListView
+    <com.xuexiang.view.swipelistview.SwipeDismissListView
         android:id="@+id/swipeDismissListView"  
         android:layout_below="@+id/title_bar"
         android:layout_width="match_parent"  
         android:layout_height="match_parent" 
         android:listSelector="@android:color/transparent"
         android:cacheColorHint="@android:color/transparent">  
-    </com.xuexiang.view.SwipeDismissListView>
+    </com.xuexiang.view.swipelistview.SwipeDismissListView>
   
 </RelativeLayout>  

@@ -22,6 +22,8 @@ import java.util.Date;
 
 import android.text.TextUtils;
 
+import com.xuexiang.util.common.StringUtils;
+
 /**
  * 日期工具类
  *
@@ -73,9 +75,53 @@ public final class DateUtils {
             e.printStackTrace();
         }
         return date;
-
     }
-
+    
+    /**
+     * 日期格式转化   oldFormat --->  newFormat
+     * @param dateStr
+     * @param oldFormat 旧格式
+     * @param newFormat 新格式
+     * @return
+     */
+    public static String dateFormatChange(String dateStr, SimpleDateFormat oldFormat, SimpleDateFormat newFormat) {
+        if (TextUtils.isEmpty(dateStr)) {
+        	return StringUtils.EMPTY;
+        }
+        Date date = null;
+        try {
+            date = oldFormat.parse(dateStr);
+        } catch (ParseException e) {
+            e.printStackTrace();
+            return dateStr;
+        }
+        return newFormat.format(date);
+    }
+    
+    /**
+     * 日期格式转化   oldFormatType --->  newFormatType
+     * @param dateStr
+     * @param oldFormatType 旧格式
+     * @param newFormatType 新格式
+     * @return
+     */
+    public static String dateFormatChange(String dateStr, String oldFormatType, String newFormatType) {
+        if (TextUtils.isEmpty(dateStr)) {
+        	return StringUtils.EMPTY;
+        }
+        Date date = parseDate(dateStr, oldFormatType);
+        if (date != null) {
+        	String newDateString = formatDate(date, newFormatType);
+        	if (TextUtils.isEmpty(newDateString)) {
+        		return dateStr;      //转化失败
+        	} else {
+        		return newDateString;  //转化成功
+        	}
+        } else {
+        	return dateStr;      //转化失败
+        }
+    }
+    
     /**
      * 得到年
      *

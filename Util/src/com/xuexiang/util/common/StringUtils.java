@@ -29,6 +29,7 @@ import android.text.TextUtils;
  */
 public final class StringUtils{
 
+	public static String EMPTY = "";
     /**
      * Don't let anyone instantiate this class.
      */

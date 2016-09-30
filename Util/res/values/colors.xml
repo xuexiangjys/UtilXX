@@ -435,4 +435,7 @@
     <color name="sb__dim_white">#20FFFFFF</color>
     <color name="sb__button_text_color">#FB6541</color>
     
+    <color name="trans_black_54">#8A000000</color>  <!-- 54% trans -->
+    <color name="trans_white_80">#CCffffff</color> <!-- 80% trans -->
+    
 </resources>

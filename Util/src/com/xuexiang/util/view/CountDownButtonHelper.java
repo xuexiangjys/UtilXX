@@ -104,8 +104,6 @@ public class CountDownButtonHelper {
 //			MyApplication.map.put(MyApplication.TIME, curtime);
 //			MyApplication.map.put(MyApplication.CTIME, System.currentTimeMillis());
 			clearTimer();
-//			Log.e("xuexiang", "onDestroy");
-//			Log.e("xuexiang", MyApplication.map + "");
 		}
 	}
 	
