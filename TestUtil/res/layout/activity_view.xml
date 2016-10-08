@@ -268,7 +268,20 @@
 	        android:layout_height="wrap_content"
 	        android:onClick="onClick"
 	        android:text="FloatingActionMenu Demo" />
+	   
+	   <Button
+	        android:id="@+id/btn_avloadingindicatorview"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:onClick="onClick"
+	        android:text="AVLoadingIndicatorView Demo" />
 	       
+	   <Button
+	        android:id="@+id/btn_multiplestatusview"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:onClick="onClick"
+	        android:text="MultipleStatusView Demo" />
      </LinearLayout>
     </ScrollView>
     

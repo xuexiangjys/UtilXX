@@ -139,6 +139,9 @@
         <activity android:name="com.example.testutil.view.FlipShareViewActivity"/>
         <activity android:name="com.example.testutil.view.SatelliteMenuActivity"/>
         <activity android:name="com.example.testutil.view.FloatingActionMenuActivity"/>
+        <activity android:name="com.example.testutil.view.avloadingindicatorview.AVLoadingIndicatorViewActivity"/>
+        <activity android:name="com.example.testutil.view.avloadingindicatorview.IndicatorActivity"/>
+        <activity android:name="com.example.testutil.view.MultipleStatusViewActivity"/>
         
         <service android:name="com.xuexiang.service.FloatViewService"/>
         <service

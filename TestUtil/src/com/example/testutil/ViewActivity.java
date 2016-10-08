@@ -14,6 +14,7 @@ import com.example.testutil.view.DropDownMenuActivity;
 import com.example.testutil.view.ExpandableViewActivity;
 import com.example.testutil.view.FlagTextViewActivity;
 import com.example.testutil.view.FlipShareViewActivity;
+import com.example.testutil.view.FloatingActionMenuActivity;
 import com.example.testutil.view.FlowTagLayoutActivity;
 import com.example.testutil.view.GesturePasswordWelComeActivity;
 import com.example.testutil.view.GuidViewActivity;
@@ -21,7 +22,7 @@ import com.example.testutil.view.HeaderLayoutActivity;
 import com.example.testutil.view.ImageCycleViewActivity;
 import com.example.testutil.view.LoadingDialogActivity;
 import com.example.testutil.view.MaterialDesignActivity;
-import com.example.testutil.view.FloatingActionMenuActivity;
+import com.example.testutil.view.MultipleStatusViewActivity;
 import com.example.testutil.view.NiftyDialogActivity;
 import com.example.testutil.view.PassWordInputActivity;
 import com.example.testutil.view.PatternViewActivity;
@@ -39,6 +40,7 @@ import com.example.testutil.view.TimeLineActivity;
 import com.example.testutil.view.TitleBarActivity;
 import com.example.testutil.view.ViewPaperAndGridViewActivity;
 import com.example.testutil.view.ViewpaperAdvActivity;
+import com.example.testutil.view.avloadingindicatorview.AVLoadingIndicatorViewActivity;
 import com.example.testutil.view.residemenu.ResideMenuMainFragmentPagerActivity;
 import com.xuexiang.app.BaseActivity;
 import com.xuexiang.util.view.Colors;
@@ -258,6 +260,16 @@ public class ViewActivity extends BaseActivity implements OnClickListener{
 		case R.id.btn_floatingactionmenu:
 			mToastUtil.showToast("点击了FloatingActionMenuActivity");
         	intent.setClass(this, FloatingActionMenuActivity.class);
+            startActivity(intent);			
+			break;
+		case R.id.btn_avloadingindicatorview:
+			mToastUtil.showToast("点击了AVLoadingIndicatorViewActivity");
+        	intent.setClass(this, AVLoadingIndicatorViewActivity.class);
+            startActivity(intent);			
+			break;
+		case R.id.btn_multiplestatusview:
+			mToastUtil.showToast("点击了MultipleStatusViewActivity");
+        	intent.setClass(this, MultipleStatusViewActivity.class);
             startActivity(intent);			
 			break;
 

@@ -2,13 +2,13 @@
 
     <!--
         Base application theme, dependent on API level. This theme is replaced
-        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
     -->
     <style name="AppBaseTheme" parent="android:Theme.Light">
         <!--
             Theme customizations available in newer API levels can go in
             res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
+            backward-compatibility can go here.
         -->
     </style>
 
@@ -16,16 +16,16 @@
     <style name="AppTheme" parent="AppBaseTheme">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
-       
+
     <style name="text_Title_style">
-		<item name="android:textSize">22sp</item>
-		<item name="android:textColor">#374659</item>
-		<item name="android:gravity">center_vertical</item>
-		<item name="android:fromAlpha">0.0</item>
-		<item name="android:toAlpha">0.0</item>
-		<item name="android:typeface">serif</item>
-	</style>
-	
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">#374659</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:fromAlpha">0.0</item>
+        <item name="android:toAlpha">0.0</item>
+        <item name="android:typeface">serif</item>
+    </style>
+
     <style name="custom_dialog" parent="@android:style/Theme.Dialog">
         <item name="android:windowFrame">@null</item>
         <!-- Dialog的windowFrame框为无 -->
@@ -42,25 +42,31 @@
         <!-- 屏幕背景是否变暗 -->
         <item name="android:backgroundDimAmount">0.6</item>
     </style>
-    
+
     <!-- 自定义dialog的样式 -->
     <style name="CustomDialog">
-        <item name="android:windowFrame">@null</item><!--边框-->
-        <item name="android:windowIsFloating">true</item><!--是否浮现在activity之上-->
-        <item name="android:windowIsTranslucent">false</item><!--半透明-->
-        <item name="android:windowNoTitle">true</item><!--无标题-->
-        <item name="android:windowBackground">@drawable/dialog_custom_bg</item><!--背景透明-->
-        <item name="android:backgroundDimEnabled">false</item><!--模糊-->
+        <item name="android:windowFrame">@null</item>
+ <!-- 边框 -->
+        <item name="android:windowIsFloating">true</item>
+ <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsTranslucent">false</item>
+ <!-- 半透明 -->
+        <item name="android:windowNoTitle">true</item>
+ <!-- 无标题 -->
+        <item name="android:windowBackground">@drawable/dialog_custom_bg</item>
+ <!-- 背景透明 -->
+        <item name="android:backgroundDimEnabled">false</item>
+ <!-- 模糊 -->
         <item name="android:backgroundDimAmount">0.6</item>
     </style>
-    
-     <style name="SpotsDialogDefault" parent="android:Theme.DeviceDefault.Light.Dialog">
+
+    <style name="SpotsDialogDefault" parent="android:Theme.DeviceDefault.Light.Dialog">
         <item name="DialogTitleAppearance">@android:style/TextAppearance.Medium</item>
         <item name="DialogTitleText">数据加载中…</item>
         <item name="DialogSpotCount">5</item>
     </style>
-    
-      <style name="my_btn">
+
+    <style name="my_btn">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:background">#c0392b</item>
@@ -70,8 +76,8 @@
         <item name="android:onClick">dialogShow</item>
         <item name="android:textSize">20sp</item>
     </style>
-    
-      <style name="DialogWindowTitle">
+
+    <style name="DialogWindowTitle">
         <item name="android:textSize">22sp</item>
         <item name="android:textColor">@color/text_color</item>
     </style>
@@ -86,9 +92,11 @@
         <item name="android:backgroundDimEnabled">false</item>
         <item name="android:backgroundDimAmount">0.4</item>
     </style>
+
     <style name="dialog_untran" parent="dialog_tran">
         <item name="android:backgroundDimEnabled">true</item>
     </style>
+
     <style name="dialog_btn">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">wrap_content</item>
@@ -99,9 +107,7 @@
         <item name="android:textColor">#ffffff</item>
         <item name="android:gravity">center</item>
     </style>
-    
-    
-    
+
     <style name="PickerUI.Center.Item" parent="@android:style/Widget.TextView">
         <item name="android:textColor">@color/text_center_pickerui</item>
         <item name="android:textStyle">bold</item>
@@ -139,60 +145,60 @@
         <item name="android:background">@color/lines_panel_pickerui</item>
         <item name="android:alpha">0.7</item>
     </style>
-    
-      <!-- PopUpMenu -->
+
+    <!-- PopUpMenu -->
     <style name="Animations" />
-    
+
     <style name="Animations.PopDownMenu" />
-	
-	<style name="Animations.PopDownMenu.Center">
-		<item name="@android:windowEnterAnimation">@anim/grow_from_top</item>
-		<item name="@android:windowExitAnimation">@anim/shrink_from_bottom</item>
-	</style>
-	
-	<style name="Animations.PopDownMenu.Center2">
-		<item name="@android:windowEnterAnimation">@anim/grow_from_bottom</item>
-		<item name="@android:windowExitAnimation">@anim/shrink_from_top</item>
-	</style>
-	
-	<style name="Animations.PopDownMenu.Left">
-		<item name="@android:windowEnterAnimation">@anim/grow_from_topleft_to_bottomright</item>
-		<item name="@android:windowExitAnimation">@anim/shrink_from_bottomright_to_topleft</item>
-	</style>
-	
-	<style name="Animations.PopDownMenu.Right">
-		<item name="@android:windowEnterAnimation">@anim/grow_from_topright_to_bottomleft</item>
-		<item name="@android:windowExitAnimation">@anim/shrink_from_bottomleft_to_topright</item>
-	</style>
-	
-	<style name="Animations.PopDownMenu.Reflect">
-		<item name="@android:windowEnterAnimation">@anim/pump_top</item>
-		<item name="@android:windowExitAnimation">@anim/disappear</item>
-	</style>
-    	
-	<style name="Animations.PopUpMenu" />
-	
-	<style name="Animations.PopUpMenu.Center">
-		<item name="@android:windowEnterAnimation">@anim/grow_from_bottom</item>
-		<item name="@android:windowExitAnimation">@anim/shrink_from_top</item>
-	</style>
-	
-	<style name="Animations.PopUpMenu.Left">
-		<item name="@android:windowEnterAnimation">@anim/grow_from_bottomleft_to_topright</item>
-		<item name="@android:windowExitAnimation">@anim/shrink_from_topright_to_bottomleft</item>
-	</style>
-	
-	<style name="Animations.PopUpMenu.Right">
-		<item name="@android:windowEnterAnimation">@anim/grow_from_bottomright_to_topleft</item>
-		<item name="@android:windowExitAnimation">@anim/shrink_from_topleft_to_bottomright</item>
-	</style>
-	
-	<style name="Animations.PopUpMenu.Reflect">
-		<item name="@android:windowEnterAnimation">@anim/pump_bottom</item>
-		<item name="@android:windowExitAnimation">@anim/disappear</item>
-	</style>
-	
-	<style name="SnackBar_SnackBar">
+
+    <style name="Animations.PopDownMenu.Center">
+        <item name="@android:windowEnterAnimation">@anim/grow_from_top</item>
+        <item name="@android:windowExitAnimation">@anim/shrink_from_bottom</item>
+    </style>
+
+    <style name="Animations.PopDownMenu.Center2">
+        <item name="@android:windowEnterAnimation">@anim/grow_from_bottom</item>
+        <item name="@android:windowExitAnimation">@anim/shrink_from_top</item>
+    </style>
+
+    <style name="Animations.PopDownMenu.Left">
+        <item name="@android:windowEnterAnimation">@anim/grow_from_topleft_to_bottomright</item>
+        <item name="@android:windowExitAnimation">@anim/shrink_from_bottomright_to_topleft</item>
+    </style>
+
+    <style name="Animations.PopDownMenu.Right">
+        <item name="@android:windowEnterAnimation">@anim/grow_from_topright_to_bottomleft</item>
+        <item name="@android:windowExitAnimation">@anim/shrink_from_bottomleft_to_topright</item>
+    </style>
+
+    <style name="Animations.PopDownMenu.Reflect">
+        <item name="@android:windowEnterAnimation">@anim/pump_top</item>
+        <item name="@android:windowExitAnimation">@anim/disappear</item>
+    </style>
+
+    <style name="Animations.PopUpMenu" />
+
+    <style name="Animations.PopUpMenu.Center">
+        <item name="@android:windowEnterAnimation">@anim/grow_from_bottom</item>
+        <item name="@android:windowExitAnimation">@anim/shrink_from_top</item>
+    </style>
+
+    <style name="Animations.PopUpMenu.Left">
+        <item name="@android:windowEnterAnimation">@anim/grow_from_bottomleft_to_topright</item>
+        <item name="@android:windowExitAnimation">@anim/shrink_from_topright_to_bottomleft</item>
+    </style>
+
+    <style name="Animations.PopUpMenu.Right">
+        <item name="@android:windowEnterAnimation">@anim/grow_from_bottomright_to_topleft</item>
+        <item name="@android:windowExitAnimation">@anim/shrink_from_topleft_to_bottomright</item>
+    </style>
+
+    <style name="Animations.PopUpMenu.Reflect">
+        <item name="@android:windowEnterAnimation">@anim/pump_bottom</item>
+        <item name="@android:windowExitAnimation">@anim/disappear</item>
+    </style>
+
+    <style name="SnackBar_SnackBar">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_gravity">bottom</item>
@@ -203,7 +209,6 @@
         <item name="android:clickable">true</item>
         <item name="android:layout_alignParentBottom">true</item>
     </style>
-
 
     <style name="SnackBar_Container">
         <item name="android:layout_width">fill_parent</item>
@@ -239,6 +244,39 @@
         <item name="android:textAllCaps">true</item>
         <item name="android:layout_gravity">center_vertical</item>
     </style>
+
+    <style name="AVLoadingIndicatorView">
+        <item name="minWidth">48dip</item>
+        <item name="maxWidth">48dip</item>
+        <item name="minHeight">48dip</item>
+        <item name="maxHeight">48dip</item>
+        <item name="indicatorName">BallPulseIndicator</item>
+    </style>
+
+    <style name="AVLoadingIndicatorView.Large">
+        <item name="minWidth">76dip</item>
+        <item name="maxWidth">76dip</item>
+        <item name="minHeight">76dip</item>
+        <item name="maxHeight">76dip</item>
+        <item name="indicatorName">BallPulseIndicator</item>
+    </style>
+
+    <style name="AVLoadingIndicatorView.Small">
+        <item name="minWidth">24dip</item>
+        <item name="maxWidth">24dip</item>
+        <item name="minHeight">24dip</item>
+        <item name="maxHeight">24dip</item>
+        <item name="indicatorName">BallPulseIndicator</item>
+    </style>
     
+    <style name="MultipleStatusView"/>
+    <style name="MultipleStatusView.Content">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:layout_margin">8dp</item>
+        <item name="android:textColor">#a9b7b7</item>
+        <item name="android:textSize">16sp</item>
+    </style>
 
 </resources>
