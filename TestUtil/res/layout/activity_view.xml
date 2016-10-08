@@ -247,6 +247,27 @@
 	        android:layout_height="wrap_content"
 	        android:onClick="onClick"
 	        android:text="Snakbar Demo" />
+	   
+	   <Button
+	        android:id="@+id/btn_flipshareview"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:onClick="onClick"
+	        android:text="FlipShareView Demo" />
+	   
+	   <Button
+	        android:id="@+id/btn_satellitemenu"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:onClick="onClick"
+	        android:text="SatelliteMenu Demo" />
+	   
+	   <Button
+	        android:id="@+id/btn_floatingactionmenu"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:onClick="onClick"
+	        android:text="FloatingActionMenu Demo" />
 	       
      </LinearLayout>
     </ScrollView>

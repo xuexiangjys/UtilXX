@@ -13,6 +13,7 @@ import com.example.testutil.view.DragGridViewActivity;
 import com.example.testutil.view.DropDownMenuActivity;
 import com.example.testutil.view.ExpandableViewActivity;
 import com.example.testutil.view.FlagTextViewActivity;
+import com.example.testutil.view.FlipShareViewActivity;
 import com.example.testutil.view.FlowTagLayoutActivity;
 import com.example.testutil.view.GesturePasswordWelComeActivity;
 import com.example.testutil.view.GuidViewActivity;
@@ -20,6 +21,7 @@ import com.example.testutil.view.HeaderLayoutActivity;
 import com.example.testutil.view.ImageCycleViewActivity;
 import com.example.testutil.view.LoadingDialogActivity;
 import com.example.testutil.view.MaterialDesignActivity;
+import com.example.testutil.view.FloatingActionMenuActivity;
 import com.example.testutil.view.NiftyDialogActivity;
 import com.example.testutil.view.PassWordInputActivity;
 import com.example.testutil.view.PatternViewActivity;
@@ -27,6 +29,7 @@ import com.example.testutil.view.PickerUIActivity;
 import com.example.testutil.view.ProgressButtonActivity;
 import com.example.testutil.view.PullLayoutActivity;
 import com.example.testutil.view.RangeSliderViewActivity;
+import com.example.testutil.view.SatelliteMenuActivity;
 import com.example.testutil.view.SnakbarActivity;
 import com.example.testutil.view.SwipeDismissListViewActivity;
 import com.example.testutil.view.SwipeListViewActivity;
@@ -240,6 +243,21 @@ public class ViewActivity extends BaseActivity implements OnClickListener{
 		case R.id.btn_snakbar:
 			mToastUtil.showToast("点击了SnakbarActivity");
         	intent.setClass(this, SnakbarActivity.class);
+            startActivity(intent);			
+			break;
+		case R.id.btn_flipshareview:
+			mToastUtil.showToast("点击了FlipShareViewActivity");
+        	intent.setClass(this, FlipShareViewActivity.class);
+            startActivity(intent);			
+			break;
+		case R.id.btn_satellitemenu:
+			mToastUtil.showToast("点击了SatelliteMenuActivity");
+        	intent.setClass(this, SatelliteMenuActivity.class);
+            startActivity(intent);			
+			break;
+		case R.id.btn_floatingactionmenu:
+			mToastUtil.showToast("点击了FloatingActionMenuActivity");
+        	intent.setClass(this, FloatingActionMenuActivity.class);
             startActivity(intent);			
 			break;
 

@@ -2,6 +2,7 @@ package com.example.testutil.view;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
+import android.os.Handler;
 import android.view.View;
 import android.view.View.OnClickListener;
 
@@ -64,6 +65,7 @@ public class LoadingDialogActivity extends BaseActivity implements OnClickListen
 		
 		mShapeLoadingDialog = new ShapeLoadingDialog(this, "加载中..");
 		//mShapeLoadingDialog.setLoadingText("加载中..");
+		mHandler = new Handler();
 	}
 
 	@Override
@@ -164,6 +166,13 @@ public class LoadingDialogActivity extends BaseActivity implements OnClickListen
 		case R.id.btn_SpotsDialog:
 			mAlertDialog = new SpotsDialog(this,"数据正在疯狂加载中！");
 			mAlertDialog.show();
+			mHandler.postDelayed(new Runnable() {
+				
+				@Override
+				public void run() {
+					mAlertDialog.dismiss();
+				}
+			}, 5000);
 			break;
 			
 		case R.id.btn_MonIndicatorDialog:
@@ -171,11 +180,25 @@ public class LoadingDialogActivity extends BaseActivity implements OnClickListen
 //			mAlertDialog = new MonIndicatorDialog(this, "正在疯狂加载中！");
 			mAlertDialog = new MonIndicatorDialog(this, "正在疯狂加载中！", new int[]{Colors.BLACK, Colors.GOLD, Colors.GREEN_LIGHT, Colors.YELLOW, Colors.RED_DARK});
 			mAlertDialog.show();
+            mHandler.postDelayed(new Runnable() {
+				
+				@Override
+				public void run() {
+					mAlertDialog.dismiss();
+				}
+			}, 5000);
 			break;
 		case R.id.btn_CircularProgressDialog:
 			mAlertDialog = new CircularProgressDialog(this);
 //			mAlertDialog = new CircularProgressDialog(this, "正在疯狂加载中！");
 			mAlertDialog.show();
+            mHandler.postDelayed(new Runnable() {
+				
+				@Override
+				public void run() {
+					mAlertDialog.dismiss();
+				}
+			}, 5000);
 			break;
 		case R.id.btn_RoundProgressBarDialog:
 			mRoundProgressBarDialog = new RoundProgressBarDialog(this);
@@ -224,7 +247,7 @@ public class LoadingDialogActivity extends BaseActivity implements OnClickListen
 			mAlertDialog = new CustomDialog(this);
 			mAlertDialog.show();
 			
-			if(mAlertDialog instanceof CustomDialog) {
+			if (mAlertDialog instanceof CustomDialog) {
 				((CustomDialog) mAlertDialog).setCanceledByBackEvent(true);	     
 //		        ((CustomDialog) mAlertDialog).setLoadingText("我正在疯狂加载...");
 			}		   

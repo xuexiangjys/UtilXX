@@ -136,6 +136,9 @@
         <activity android:name="com.example.testutil.view.circularfloatingactionmenu.SystemOverlayMenuActivity"/>
         <activity android:name="com.example.testutil.view.RangeSliderViewActivity"/>
         <activity android:name="com.example.testutil.view.SnakbarActivity"/>
+        <activity android:name="com.example.testutil.view.FlipShareViewActivity"/>
+        <activity android:name="com.example.testutil.view.SatelliteMenuActivity"/>
+        <activity android:name="com.example.testutil.view.FloatingActionMenuActivity"/>
         
         <service android:name="com.xuexiang.service.FloatViewService"/>
         <service

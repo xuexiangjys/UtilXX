@@ -4,28 +4,26 @@
     <string name="app_name">TestUtil</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-    
     <string name="ListEditText_title">Title</string>
     <string name="ListEditText_cancel">Cancel</string>
 
-    
     <string-array name="three_state_option">
         <item>Option 1</item>
         <item>Option 2</item>
         <item>Option 3</item>
     </string-array>
-    
+
     <array name="circular_default_color_sequence">
         <item>@color/circular_red</item>
         <item>@color/circular_blue</item>
         <item>@color/circular_yellow</item>
         <item>@color/circular_green</item>
     </array>
-    
+
     <integer name="circular_default_sweepAnimationDuration">900</integer>
     <integer name="circular_default_angleAnimationDurationMillis">2000</integer>
     <integer name="circular_default_miniSweepAngle">30</integer>
-    
+
     <string name="slide_up">Slide up</string>
     <string name="slide">Slide</string>
     <string name="slide_down">Slide down</string>
@@ -35,8 +33,8 @@
     <string name="auto_dismiss">Auto dismiss</string>
     <string name="blur_radius">Blur Radius</string>
     <string name="blur_downscale">Blur Downscale</string>
-    
-     <!-- 版本更新 -->
+
+    <!-- 版本更新 -->
     <string name="confirm_title">提示</string>
     <string name="ensure">确定</string>
     <string name="cancel">取消</string>
@@ -51,12 +49,9 @@
     <string name="download_fail">下载安装包失败</string>
     <string name="software_update">软件版本更新</string>
     <string name="download_success">新版本软件下载成功</string>
-     
-     <string name="describe">
-            edwin:loop_style=\"empty\"\n2.0版本大升级!!!\n无限轮播,默认4秒一次\n持续更新...\n请提出你宝贵大意见!\nedwin_wu05@126.com
-    </string>
-    
-     <array name="months">
+    <string name="describe">            edwin:loop_style=\"empty\"\n2.0版本大升级!!!\n无限轮播,默认4秒一次\n持续更新...\n请提出你宝贵大意见!\nedwin_wu05@126.com</string>
+
+    <array name="months">
         <item>@string/january</item>
         <item>@string/february</item>
         <item>@string/march</item>
@@ -70,7 +65,7 @@
         <item>@string/november</item>
         <item>@string/december</item>
     </array>
-    
+
     <string name="january">January</string>
     <string name="february">February</string>
     <string name="march">March</string>
@@ -83,8 +78,8 @@
     <string name="october">October</string>
     <string name="november">November</string>
     <string name="december">December</string>
-    
-     <string-array name="countries_array">
+
+    <string-array name="countries_array">
         <item>Afghanistan</item>
         <item>Albania</item>
         <item>Algeria</item>
@@ -327,8 +322,7 @@
         <item>Zambia</item>
         <item>Zimbabwe</item>
     </string-array>
-    
-     <string-array name="jazzy_effects_ch">
+    <string-array name="jazzy_effects_ch">
         <item>小A</item>
         <item>小B</item>
         <item>小C</item>
@@ -351,5 +345,14 @@
         <item>小Z</item>
         <item>小WW</item>
     </string-array>
+
+    <string name="empty"></string>
     
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur magna tortor, semper eu feugiat eu, vehicula vitae lacus.</string>
+    <string name="recyclerview_fab_example">RecyclerView FAB example</string>
+    <string name="floating_action_menu">Floating Action Menu</string>
+    <string name="lorem_ipsum_large">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed ultricies risus. Integer nisi orci, lacinia sit amet mi in, mollis scelerisque purus. Nunc risus ligula, maximus eu orci a, facilisis dictum velit. Proin nec laoreet magna. Nulla ut sagittis lorem. Morbi id enim fermentum, semper diam et, tempus leo. Aliquam vel congue orci. Suspendisse potenti. Curabitur finibus diam augue, vel bibendum sapien ultrices non.</string>
+    <string name="navigation_drawer_open">Navigation open</string>
+    <string name="navigation_drawer_close">Navigation close</string>
+
 </resources>

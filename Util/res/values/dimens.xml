@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <dimen name="spot_size">6dp</dimen>
     <dimen name="title_margin">10dp</dimen>
     <dimen name="progress_margin">24dp</dimen>
     <dimen name="progress_width">250dp</dimen>
-    
     <dimen name="circular_default_border_width">4dp</dimen>
     <dimen name="dialog_padding">25dp</dimen>
-    
-    <!-- PickerUI items dimens-->
+
+    <!-- PickerUI items dimens -->
     <dimen name="height_normal_item_pickerui">40dp</dimen>
     <dimen name="textsize_center_pickerui_item">25dp</dimen>
     <dimen name="textsize_near_center_pickerui_item">17dp</dimen>
@@ -22,17 +22,22 @@
 
     <!-- PickerUI panel dimens -->
     <dimen name="height_hidden_panel_pickerui">200dp</dimen>
-    
-    <!-- circularfloatingactionmenu dimens-->
+
+    <!-- circularfloatingactionmenu dimens -->
     <dimen name="action_button_size">72dp</dimen>
     <dimen name="action_button_content_margin">16dp</dimen>
     <dimen name="action_button_margin">12dp</dimen>
     <dimen name="action_menu_radius">96dp</dimen>
-     <!-- SnackBar dimens-->
+    <!-- SnackBar dimens -->
     <dimen name="horizontal_margin">24dp</dimen>
     <dimen name="vertical_margin_top">16dp</dimen>
     <dimen name="vertical_margin_bottom">16dp</dimen>
-
     <dimen name="sub_action_button_size">36dp</dimen>
     <dimen name="sub_action_button_content_margin">6dp</dimen>
+     <!-- FloatingActionButton dimens -->
+    <dimen name="fab_size_normal">56dp</dimen>
+    <dimen name="fab_size_mini">40dp</dimen>
+    <dimen name="labels_text_size">14sp</dimen>
+    <item name="fab_label" type="id"/>
+
 </resources>

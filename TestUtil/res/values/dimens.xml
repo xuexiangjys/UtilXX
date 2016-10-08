@@ -59,4 +59,9 @@
     <dimen name="vertical_margin_top">16dp</dimen>
     <dimen name="vertical_margin_bottom">16dp</dimen>
 
+    <!-- FloatingActionButton dimens -->
+    <dimen name="fab_size_normal">56dp</dimen>
+    <dimen name="fab_size_mini">40dp</dimen>
+    <dimen name="labels_text_size">14sp</dimen>
+    <item name="fab_label" type="id"/>
 </resources>

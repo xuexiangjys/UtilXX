@@ -441,4 +441,9 @@
     
     <color name="trans_black_54">#8A000000</color>  <!-- 54% trans -->
     <color name="trans_white_80">#CCffffff</color> <!-- 80% trans -->
+    
+    <color name="app_primary">#1976D2</color>
+    <color name="app_primary_dark">#1565C0</color>
+    <color name="light_grey">#EEEEEE</color>
+    <color name="white_transparent">#99FFFFFF</color>
 </resources>

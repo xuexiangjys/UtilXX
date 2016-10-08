@@ -34,4 +34,6 @@
     <string name="download_fail">下载安装包失败</string>
     <string name="software_update">软件版本更新</string>
     <string name="download_success">新版本软件下载成功</string>
+    
+    <string name="empty"></string>
 </resources>

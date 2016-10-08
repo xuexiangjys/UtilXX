@@ -259,6 +259,16 @@ public final class RUtils {
             return null;
         }
     }
+    
+    /**
+     * 获取自定义属性
+     *
+     * @param context       上下文
+     * @param attributeName 属性名称
+     */
+    public static int getStyleableAttribute(Context context, String attributeName) {
+        return MResource.getIdByName(context, "styleable", attributeName);
+    }
 
     /**
      * 获取自定义属性
