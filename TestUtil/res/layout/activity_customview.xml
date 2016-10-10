@@ -87,6 +87,46 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="15dip"
                 android:layout_marginTop="15dip"
+                android:text="ToggleButton:" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center" >
+
+                <com.xuexiang.view.ToggleButton
+                    android:layout_width="54dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="5dp" />
+
+                <com.xuexiang.view.ToggleButton
+                    android:layout_width="54dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="5dp"
+                    app:tbBorderWidth="2dp"
+                    app:tbOffBorderColor="#000"
+                    app:tbOffColor="#ddd"
+                    app:tbOnColor="#f00"
+                    app:tbSpotColor="#00f" />
+
+                <com.xuexiang.view.ToggleButton
+                    android:id="@+id/switch_togglebutton"
+                    android:layout_width="90dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp" />
+
+                <com.xuexiang.view.ToggleButton
+                    android:layout_width="54dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="5dp"
+                    app:tbAsDefaultOn="true" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dip"
+                android:layout_marginTop="15dip"
                 android:text="SmoothCheckBox:" />
 
             <LinearLayout
@@ -287,7 +327,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:orientation="horizontal"
-                    android:padding="10dp" >
+                    android:padding="3dp" >
 
                     <com.xuexiang.view.ThumbUpView
                         android:id="@+id/tpv1"
@@ -308,7 +348,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:orientation="horizontal"
-                    android:padding="10dp" >
+                    android:padding="3dp" >
 
                     <com.xuexiang.view.ThumbUpView
                         android:id="@+id/tpv2"
@@ -333,7 +373,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:orientation="horizontal"
-                    android:padding="10dp" >
+                    android:padding="3dp" >
 
                     <com.xuexiang.view.ThumbUpView
                         android:id="@+id/tpv3"
@@ -362,6 +402,54 @@
                     android:layout_height="wrap_content"
                     android:onClick="unlike"
                     android:text="unlike" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="10dp" >
+
+                    <com.xuexiang.view.StarBarView
+                        android:id="@+id/sbv_starbar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        app:space_width="1dp"
+                        app:star_height="25dp"
+                        app:star_hollow="@drawable/ic_star_yellow_normal"
+                        app:star_isIndicator="false"
+                        app:star_max="5"
+                        app:star_orientation="horizontal"
+                        app:star_rating="2"
+                        app:star_solid="@drawable/ic_star_yellow_selected"
+                        app:star_width="25dp" />
+
+                   
+                    
+                     <Button
+	                    android:id="@+id/btn_getStarNum"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_marginLeft="10dp"
+	                    android:text="获取星级数" />
+                     
+                     <com.xuexiang.view.StarBarView
+                        android:id="@+id/starBarView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginLeft="30dp"
+                        app:space_width="1dp"
+                        app:star_height="25dp"
+                        app:star_hollow="@drawable/ic_star_yellow_normal"
+                        app:star_isIndicator="false"
+                        app:star_max="5"
+                        app:star_orientation="vertical"
+                        app:star_rating="2"
+                        app:star_solid="@drawable/ic_star_yellow_selected"
+                        app:star_width="25dp" />
+                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

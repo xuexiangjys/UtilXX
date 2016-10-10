@@ -19,7 +19,10 @@ import com.xuexiang.view.ShoppingView;
 import com.xuexiang.view.SlideSwitch;
 import com.xuexiang.view.SlideSwitch.SlideListener;
 import com.xuexiang.view.SmoothCheckBox;
+import com.xuexiang.view.StarBarView;
 import com.xuexiang.view.ThumbUpView;
+import com.xuexiang.view.ToggleButton;
+import com.xuexiang.view.ToggleButton.OnToggleChanged;
 import com.xuexiang.view.margicbutton.MagicButton;
 
 /**
@@ -35,6 +38,8 @@ public class CustomViewActivity extends BaseActivity {
 	private ListEditText mListEditText;
 	private ThumbUpView tpv1, tpv2, tpv3;
 	private TextView tv1, tv2, tv3;
+	
+	private StarBarView sbv_starbar;
 
 	@Override
 	public void onCreateActivity() {
@@ -50,6 +55,8 @@ public class CustomViewActivity extends BaseActivity {
 
 		initSlideSwitch();
 
+		initTogglebutton();
+		
 		initSmoothCheckBox();
 
 		initShoppingView();
@@ -61,6 +68,8 @@ public class CustomViewActivity extends BaseActivity {
 		initListEditText();
 		
 		initThumbUpView();
+		
+		initStarBarView();
 	}
 
 	private void initAndroidSegmentedControlView() {
@@ -121,6 +130,21 @@ public class CustomViewActivity extends BaseActivity {
 			}
 		});
 
+	}
+	
+	private void initTogglebutton() {
+		ToggleButton switch_togglebutton = (ToggleButton) findViewById(R.id.switch_togglebutton);
+		switch_togglebutton.setOnToggleChanged(new OnToggleChanged() {
+			
+			@Override
+			public void onToggle(boolean isOpen) {
+				if (isOpen) {
+					Toast("消息推送：开");
+				} else {
+					Toast("消息推送：关");
+				}
+			}
+		});
 	}
 
 	private void initSmoothCheckBox() {
@@ -341,6 +365,19 @@ public class CustomViewActivity extends BaseActivity {
 		tpv1.UnLike();
 		tpv2.UnLike();
 		tpv3.UnLike();
+	}
+	
+	private void initStarBarView() {
+		sbv_starbar = (StarBarView) findViewById(R.id.sbv_starbar);
+		sbv_starbar.setStarRating(3.4f);
+		sbv_starbar.setStarMaxNumber(5);
+		Button btn_getStarNum = (Button) findViewById(R.id.btn_getStarNum);
+		btn_getStarNum.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Toast("星级数：" + sbv_starbar.getStarRating());
+			}
+		});
 	}
 
 }

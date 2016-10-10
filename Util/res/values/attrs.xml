@@ -12,7 +12,7 @@
   ~ please contact The MITRE Corporation, Contracts Office,7515 Colshire Drive,
   ~ McLean, VA  22102-7539, (703) 983-6000.
   ~
-  ~ Approved for Public Release; Distribution Unlimited. Case Number 14-4045
+  ~ Approved for Public Release; Distribution Unlimited. Case Number 14-4045
 -->
 
 <resources>
@@ -391,6 +391,43 @@
         <attr name="emptyView" format="reference" />
         <attr name="noNetworkView" format="reference" />
         <attr name="contentView" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="StepsViewIndicator">
+        <attr name="numOfSteps" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="ToggleButton">
+        <attr name="tbBorderWidth" format="dimension" />
+        <attr name="tbOffBorderColor" format="reference|color" />
+        <attr name="tbOffColor" format="reference|color" />
+        <attr name="tbOnColor" format="reference|color" />
+        <attr name="tbSpotColor" format="reference|color" />
+        <attr name="tbAnimate" format="reference|boolean" />
+        <attr name="tbAsDefaultOn" format="reference|boolean" />
+    </declare-styleable>
+    
+     <!--星星控件属性-->
+    <declare-styleable name="StarBarView">
+        <!--设置星星间的间隔-->
+        <attr name="space_width" format="dimension" />
+        <!--星星间宽度-->
+        <attr name="star_width" format="dimension" />
+        <!--星星间高度-->
+        <attr name="star_height" format="dimension" />
+        <!--最大数量-->
+        <attr name="star_max" format="integer" />
+        <!--选中数量-->
+        <attr name="star_rating" format="float" />
+        <!--未选中图片-->
+        <attr name="star_hollow" format="reference" />
+        <!--选中图片-->
+        <attr name="star_solid" format="reference" />
+        <!--是否可以滑动改变选中数量-->
+        <attr name="star_isIndicator" format="boolean" />
+        <!--排列方向-->
+        <attr name="star_orientation" format="enum">
+            <enum name="vertical" value="1" />
+            <enum name="horizontal" value="0" />
+        </attr>
     </declare-styleable>
 
 </resources>

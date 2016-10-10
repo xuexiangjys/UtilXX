@@ -282,6 +282,28 @@
 	        android:layout_height="wrap_content"
 	        android:onClick="onClick"
 	        android:text="MultipleStatusView Demo" />
+	   
+	   <Button
+	        android:id="@+id/btn_niftynotification"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:onClick="onClick"
+	        android:text="NiftyNotification Demo" />
+	   
+	   <Button
+	        android:id="@+id/btn_stepsview"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:onClick="onClick"
+	        android:text="StepsView Demo" />
+	   
+	   <Button
+	        android:id="@+id/btn_systembartint"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:onClick="onClick"
+	        android:text="SystemBarTint Demo" />
+	   
      </LinearLayout>
     </ScrollView>
     

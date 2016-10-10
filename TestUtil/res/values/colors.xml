@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-     <color name="lightwhite">#ddd</color>
+    <color name="lightwhite">#ddd</color>
     <!-- 白色 -->
     <color name="bg_White">#FFFFFF</color>
     <!-- 黑色 -->
@@ -21,11 +21,8 @@
     <!-- 灰色 -->
     <color name="tv_Gray">#CCCCCC</color>
     <color name="layoutButton2">#d5d4d4</color>
-    
     <color name="color_theme">#489cfa</color>
-    
     <color name="text_press">#9d9c9c</color>
-    
     <color name="white">#FFFFFF</color>
     <!-- 白色 -->
     <color name="ivory">#FFFFF0</color>
@@ -346,59 +343,46 @@
     <color name="viewfinder_mask">#60000000</color>
     <color name="header">#58567D</color>
     <color name="grgray">#686868</color>
-    
-    
-      <!-- 统一的顶部颜色 -->
+
+    <!-- 统一的顶部颜色 -->
     <color name="header_bg">#E6650F</color>
     <color name="header_pressed_bg">#D15A0F</color>
-    
+
     <!-- 确认、登录按钮背景色 -->
     <color name="suer_butn">#e97730</color>
     <color name="suer_butn_pressed">#e6650f</color>
-
     <color name="choose_eara_item_press_color">#f4f4f4</color>
-    
-     
     <color name="theme_color">#D95555</color>
     <color name="second_color">#888888</color>
-    
-     <!-- 浅色边框颜色 -->
-    <color name="light_line_color">#e5e5e5</color>
 
+    <!-- 浅色边框颜色 -->
+    <color name="light_line_color">#e5e5e5</color>
     <color name="default_ascv_selected_color">#0099CC</color>
     <color name="default_ascv_unselected_color">#FFFFFF</color>
-    
     <color name="test_attr_unselected_text_color">#0066CC</color>
     <color name="test_attr_selected_text_color">#FFFFFF</color>
     <color name="test_attr_selected_color">#0066CC</color>
     <color name="test_attr_unselected_color">#FFFFFF</color>
-    
     <color name="triangle">#aa72d572</color>
     <color name="circle">#aa738ffe</color>
     <color name="rect">#aae84e40</color>
     <color name="view_bg">#00000000</color>
     <color name="shadow">#25808080</color>
     <color name="dialog_bg">#f5f5f5</color>
-    
     <color name="shadow_guidview">#cc222222</color>
-    
     <color name="spots_dialog_color">@android:color/holo_blue_dark</color>
-     
     <color name="circular_red">#F90101</color>
     <color name="circular_blue">#0266C8</color>
     <color name="circular_yellow">#F2B50F</color>
     <color name="circular_green">#00933B</color>
-    
     <color name="text_color">#FFFFFF</color>
     <color name="divider_color">#11000000</color>
     <color name="msg_color">#FFFFFFFF</color>
     <color name="dialog_background">#ffe74c3c</color>
     <color name="btn_press_color">#66000000</color>
     <color name="btn_unpress_color">#22000000</color>
-    
     <color name="select_item_press">#F7F7F7</color>
     <color name="item_title_color">#5A5A5A</color>
-   
     <color name="background_picker">#ff579fff</color>
     <!-- PickerUI lines colors -->
     <color name="lines_panel_pickerui">#aaaaaa</color>
@@ -409,6 +393,7 @@
     <!-- PickerUI items colors -->
     <color name="text_center_pickerui">#ff000000</color>
     <color name="text_no_center_pickerui">#aaa</color>
+
     <drawable name="list_item_selected">#aaaaaa</drawable>
 
     <!-- PickerUI shadow colors -->
@@ -417,37 +402,36 @@
     <color name="grey3">#20CCCCCC</color>
     <color name="grey4">#30CCCCCC</color>
     <color name="grey5">#50747474</color>
-    
     <color name="font_black_content">#222222</color>
     <color name="stand_bg">#fff6f6f6</color>
     <color name="divide">#ffe4e4e4</color>
     <color name="white_pressed">#ffd5d5d5</color>
     <color name="font_black_6">#ff666666</color>
     <color name="font_gray">#999999</color>
-    
     <color name="background_color">#FF5E5B94</color>
     <color name="tabbar_main">#FF4AD5BC</color>
     <color name="tabbar_secondly">#FF54B4B4</color>
-    
-    <color name="QuickAction_press" >#FFFDF5E6</color>
-    <color name="QuickAction_focused" >#FFFAEBD7</color>
-    
+    <color name="QuickAction_press">#FFFDF5E6</color>
+    <color name="QuickAction_focused">#FFFAEBD7</color>
     <color name="thumbColor">#66aaaaaa</color>
-    
     <color name="sb_snack_bkgnd">#323232</color>
     <color name="sb__transparent">#00000000</color>
     <color name="sb__dim_white">#20FFFFFF</color>
     <color name="sb__button_text_color">#FB6541</color>
-    
-    <color name="trans_black_54">#8A000000</color>  <!-- 54% trans -->
-    <color name="trans_white_80">#CCffffff</color> <!-- 80% trans -->
-    
+    <color name="trans_black_54">#8A000000</color>
+ <!-- 54% trans -->
+    <color name="trans_white_80">#CCffffff</color>
+ <!-- 80% trans -->
+
     <color name="app_primary">#1976D2</color>
     <color name="app_primary_dark">#1565C0</color>
     <color name="light_grey">#EEEEEE</color>
     <color name="white_transparent">#99FFFFFF</color>
-    
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="bluegrey800">#37474f</color>
+    
+    <color name="statusbar_bg">#FF006080</color>
+
 </resources>

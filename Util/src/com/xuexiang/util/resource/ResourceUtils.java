@@ -58,7 +58,7 @@ public final class ResourceUtils {
      * @param fileName The name of the asset to open. This name can be hierarchical.
      * @return
      */
-    public static String geFileFromAssets(Context context, String fileName, boolean isNeedAddLine) {
+    public static String getFileFromAssets(Context context, String fileName, boolean isNeedAddLine) {
         if (context == null || TextUtils.isEmpty(fileName)) {
             return null;
         }

@@ -24,6 +24,7 @@ import com.example.testutil.view.LoadingDialogActivity;
 import com.example.testutil.view.MaterialDesignActivity;
 import com.example.testutil.view.MultipleStatusViewActivity;
 import com.example.testutil.view.NiftyDialogActivity;
+import com.example.testutil.view.NiftyNotificationActivity;
 import com.example.testutil.view.PassWordInputActivity;
 import com.example.testutil.view.PatternViewActivity;
 import com.example.testutil.view.PickerUIActivity;
@@ -32,6 +33,7 @@ import com.example.testutil.view.PullLayoutActivity;
 import com.example.testutil.view.RangeSliderViewActivity;
 import com.example.testutil.view.SatelliteMenuActivity;
 import com.example.testutil.view.SnakbarActivity;
+import com.example.testutil.view.StepsViewActivity;
 import com.example.testutil.view.SwipeDismissListViewActivity;
 import com.example.testutil.view.SwipeListViewActivity;
 import com.example.testutil.view.SwipeMenuActivity;
@@ -42,6 +44,7 @@ import com.example.testutil.view.ViewPaperAndGridViewActivity;
 import com.example.testutil.view.ViewpaperAdvActivity;
 import com.example.testutil.view.avloadingindicatorview.AVLoadingIndicatorViewActivity;
 import com.example.testutil.view.residemenu.ResideMenuMainFragmentPagerActivity;
+import com.example.testutil.view.systembartint.SystemBarTintManagerActivity;
 import com.xuexiang.app.BaseActivity;
 import com.xuexiang.util.view.Colors;
 import com.xuexiang.view.materialdesign.view.ButtonFloat;
@@ -272,6 +275,22 @@ public class ViewActivity extends BaseActivity implements OnClickListener{
         	intent.setClass(this, MultipleStatusViewActivity.class);
             startActivity(intent);			
 			break;
+		case R.id.btn_niftynotification:
+			mToastUtil.showToast("点击了NiftyNotificationActivity");
+        	intent.setClass(this, NiftyNotificationActivity.class);
+            startActivity(intent);			
+			break;
+		case R.id.btn_stepsview:
+			mToastUtil.showToast("点击了StepsViewActivity");
+        	intent.setClass(this, StepsViewActivity.class);
+            startActivity(intent);			
+			break;
+		case R.id.btn_systembartint:
+			mToastUtil.showToast("点击了SystemBarTintManagerActivity");
+        	intent.setClass(this, SystemBarTintManagerActivity.class);
+            startActivity(intent);			
+			break;
+
 
 		default:
 			break;
