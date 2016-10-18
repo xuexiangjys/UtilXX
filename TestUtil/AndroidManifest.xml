@@ -148,6 +148,51 @@
         <activity android:name="com.example.testutil.view.systembartint.ColorActivity"/>
         <activity android:name="com.example.testutil.view.systembartint.DefaultActivity"/>
         <activity android:name="com.example.testutil.view.systembartint.MatchActionBarActivity"/>
+        <activity android:name="com.example.testutil.view.fadingactionbar.FadingActionbarHomeActivity"/>
+        <!-- 设置actionbar的图标和文字，设置透明风格 -->
+        <activity
+            android:name="com.example.testutil.view.fadingactionbar.FadingActionbarScrollViewActivity"
+            android:icon="@drawable/ic_location_map"
+            android:label="@string/new_york_city"
+            android:theme="@style/AppTheme.TranslucentActionBar" />
+        <activity
+            android:name="com.example.testutil.view.fadingactionbar.FadingActionbarListViewActivity"
+            android:icon="@drawable/ic_location_map"
+            android:label="@string/new_york_city"
+            android:theme="@style/AppTheme.TranslucentActionBar" />
+        <activity
+            android:name="com.example.testutil.view.fadingactionbar.FadingActionbarLightBackgroundActivity"
+            android:icon="@drawable/ic_location_map"
+            android:label="@string/new_york_city"
+            android:theme="@style/AppTheme.TranslucentActionBar" />
+        <activity
+            android:name="com.example.testutil.view.fadingactionbar.FadingActionbarLightActionBarActivity"
+            android:icon="@drawable/ic_location_map_dark"
+            android:label="@string/new_york_city"
+            android:theme="@style/AppTheme.Light.TranslucentActionBar" />
+        <activity
+            android:name="com.example.testutil.view.fadingactionbar.FadingActionbarSampleFragmentActivity"
+            android:icon="@drawable/ic_location_map_dark"
+            android:label="@string/new_york_city"
+            android:theme="@style/AppTheme.Light.TranslucentActionBar" />
+        <activity
+            android:name="com.example.testutil.view.fadingactionbar.FadingActionbarNoParallaxActivity"
+            android:icon="@drawable/ic_location_map"
+            android:label="@string/new_york_city"
+            android:theme="@style/AppTheme.TranslucentActionBar" />
+        <activity
+            android:name="com.example.testutil.view.fadingactionbar.FadingActionbarHeaderOverlayActivity"
+            android:icon="@drawable/ic_location_map"
+            android:label="@string/new_york_city"
+            android:theme="@style/AppTheme.TranslucentActionBar" />
+        <activity
+            android:name="com.example.testutil.view.fadingactionbar.FadingActionbarWebViewActivity"
+            android:icon="@drawable/ic_location_map"
+            android:label="@string/new_york_city"
+            android:theme="@style/AppTheme.TranslucentActionBar"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.example.testutil.view.ioniconview.IonIconViewActivity"/>
+        
         
         <service android:name="com.xuexiang.service.FloatViewService"/>
         <service

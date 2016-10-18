@@ -304,6 +304,20 @@
 	        android:onClick="onClick"
 	        android:text="SystemBarTint Demo" />
 	   
+	   <Button
+	        android:id="@+id/btn_fadingactionbar"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:onClick="onClick"
+	        android:text="FadingActionbar Demo" />
+	   
+	   <Button
+	        android:id="@+id/btn_ioniconview"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:onClick="onClick"
+	        android:text="IonIconView Demo" />
+	   
      </LinearLayout>
     </ScrollView>
     

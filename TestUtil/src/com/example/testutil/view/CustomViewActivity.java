@@ -23,6 +23,8 @@ import com.xuexiang.view.StarBarView;
 import com.xuexiang.view.ThumbUpView;
 import com.xuexiang.view.ToggleButton;
 import com.xuexiang.view.ToggleButton.OnToggleChanged;
+import com.xuexiang.view.LikeButton.LikeButton;
+import com.xuexiang.view.LikeButton.OnLikeListener;
 import com.xuexiang.view.margicbutton.MagicButton;
 
 /**
@@ -30,7 +32,7 @@ import com.xuexiang.view.margicbutton.MagicButton;
  * 
  * @author xuexiang 文件名称：AndroidSegmentedControlViewActivity.java
  **/
-public class CustomViewActivity extends BaseActivity {
+public class CustomViewActivity extends BaseActivity implements OnLikeListener{
 	private Button btnPosition, btnColour, btnAnim1, btnAnim2, btnCustom,
 			btnClick, btnTab, btnIncrement;
 	private BadgeView badge1, badge2, badge3, badge4, badge5, badge6, badge7,
@@ -70,6 +72,8 @@ public class CustomViewActivity extends BaseActivity {
 		initThumbUpView();
 		
 		initStarBarView();
+		
+		initLikeButton();
 	}
 
 	private void initAndroidSegmentedControlView() {
@@ -299,8 +303,7 @@ public class CustomViewActivity extends BaseActivity {
 		mListEditText = (ListEditText) findViewById(R.id.listedittext);
 		String[] mValuesHuman = { "1", "2", "3" }; // 用于显示的值
 		String[] mValuesMachine = { "a", "b", "c" }; // 最终点击后对应的值
-		mListEditText
-				.init(mContext, mValuesHuman, mValuesMachine,
+		mListEditText.init(mContext, mValuesHuman, mValuesMachine,
 						R.string.ListEditText_title,
 						R.string.ListEditText_cancel, true);
 	}
@@ -379,5 +382,28 @@ public class CustomViewActivity extends BaseActivity {
 			}
 		});
 	}
+	
+    private void initLikeButton() {
+    	LikeButton starButton = (LikeButton) findViewById(R.id.star_button);
+    	LikeButton likeButton = (LikeButton) findViewById(R.id.heart_button);
+    	LikeButton smileButton = (LikeButton) findViewById(R.id.smile_button);
+    	LikeButton thumbButton = (LikeButton) findViewById(R.id.thumb_button);
+        starButton.setOnLikeListener(this);
+        likeButton.setOnLikeListener(this);
+        smileButton.setOnLikeListener(this);
+        thumbButton.setOnLikeListener(this);
+
+        thumbButton.setLiked(true);
+	}
+
+    @Override
+    public void liked(LikeButton likeButton) {
+        Toast("Liked!");
+    }
+
+    @Override
+    public void unLiked(LikeButton likeButton) {
+    	Toast("Disliked!");
+    }
 
 }

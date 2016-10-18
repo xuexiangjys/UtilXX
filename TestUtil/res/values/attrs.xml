@@ -12,7 +12,7 @@
   ~ please contact The MITRE Corporation, Contracts Office,7515 Colshire Drive,
   ~ McLean, VA  22102-7539, (703) 983-6000.
   ~
-  ~ Approved for Public Release; Distribution Unlimited. Case Number 14-4045
+  ~ Approved for Public Release; Distribution Unlimited. Case Number 14-4045
 -->
 
 <resources>
@@ -407,6 +407,7 @@
 
     <!-- 星星控件属性 -->
     <declare-styleable name="StarBarView">
+
         <!-- 设置星星间的间隔 -->
         <attr name="space_width" format="dimension" />
         <!-- 星星间宽度 -->
@@ -428,6 +429,23 @@
             <enum name="vertical" value="1" />
             <enum name="horizontal" value="0" />
         </attr>
+    </declare-styleable>
+    <declare-styleable name="LikeButton">
+        <attr name="icon_type" format="string" />
+        <attr name="icon_size" format="dimension|reference" />
+        <attr name="like_drawable" format="reference" />
+        <attr name="unlike_drawable" format="reference" />
+        <attr name="dots_primary_color" format="color|reference" />
+        <attr name="dots_secondary_color" format="color|reference" />
+        <attr name="circle_start_color" format="color|reference" />
+        <attr name="circle_end_color" format="color|reference" />
+        <attr name="liked" format="boolean" />
+        <attr name="is_enabled" format="boolean" />
+        <attr name="anim_scale_factor" format="float" />
+    </declare-styleable>
+    
+    <declare-styleable name="icon">
+        <attr name="name" format="string" />
     </declare-styleable>
 
 </resources>

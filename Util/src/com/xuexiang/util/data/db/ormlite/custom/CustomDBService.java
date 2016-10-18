@@ -179,6 +179,14 @@ public class CustomDBService<T> {
 	}
 	
 	/**
+	 * 根据条件模糊查询(一个条件)
+	 * 返回一个对象集合
+	 */
+	public List<T> indistinctQueryForColumn(String columnName, Object value) throws SQLException {
+		return mDao.queryBuilder().where().like(columnName, "%" + value + "%").query();
+	}
+	
+	/**
 	 * 根据条件查询(二个条件)
 	 * 返回一个对象集合
 	 */

@@ -69,7 +69,7 @@ public class ResourceActivity extends BaseActivity implements OnClickListener{
 			break;
 			
 		case R.id.btn_getfilestring:
-			contenttv.setText(ResourceUtils.geFileFromAssets(mContext, "user.txt", true));
+			contenttv.setText(ResourceUtils.getFileFromAssets(mContext, "user.txt", true));
 			break;	
 
 		default:
