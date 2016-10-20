@@ -38,6 +38,7 @@
         android:gravity="center"
         android:layout_marginTop="10dp"
         app:textSolidColor="#303F9F"
+        app:textSelectedSolidColor="@color/red"
         app:textLeftTopRadius="10dp"
         app:textLeftBottomRadius="10dp"
         />
@@ -51,6 +52,7 @@
         android:gravity="center"
         android:layout_marginTop="10dp"
         app:textSolidColor="#303F9F"
+        app:textSelectedSolidColor="@color/red"
         app:textRadius="10dp"
         app:textStrokeColor="#ff4081"
         app:textStrokeWidth="2dp"
@@ -65,6 +67,7 @@
         android:layout_marginTop="10dp"
         app:textRadius="45dp"
         app:textSolidColor="#303F9F"
+        app:textSelectedSolidColor="@color/red"
         app:textNormalTextColor="@color/red"
         app:textSelectedTextColor="@color/lime"
         app:textStrokeWidth="2dp"
@@ -80,6 +83,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
         app:textSolidColor="#303F9F"
+        app:textSelectedSolidColor="@color/red"
         app:textRadius="45dp"
         app:textDrawable="@drawable/ic_launcher"
         />

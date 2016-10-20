@@ -45,7 +45,8 @@ public class CustomTextView extends TextView {
     private void setAttributeSet(Context context, AttributeSet attrs) {
 
         TypedArray a = context.obtainStyledAttributes(attrs, RUtils.getStyleable(context, "customTextView"));
-        int solid = a.getColor(MResource.getIdByName(context, "styleable", "customTextView_textSolidColor"), Color.TRANSPARENT);
+        int normalSolidColor = a.getColor(MResource.getIdByName(context, "styleable", "customTextView_textSolidColor"), Color.TRANSPARENT);
+        int selectedSolidColor = a.getColor(MResource.getIdByName(context, "styleable", "customTextView_textSelectedSolidColor"), Color.TRANSPARENT);
         int strokeColor = a.getColor(MResource.getIdByName(context, "styleable", "customTextView_textStrokeColor"), Color.TRANSPARENT);
         int radius = a.getDimensionPixelSize(MResource.getIdByName(context, "styleable", "customTextView_textRadius"), 0);
         int leftTopRadius = a.getDimensionPixelSize(MResource.getIdByName(context, "styleable", "customTextView_textLeftTopRadius"), 0);
@@ -62,8 +63,19 @@ public class CustomTextView extends TextView {
 
         drawable = new GradientDrawable();
         drawable.setStroke(strokeWidth, strokeColor);
-        drawable.setColor(solid);
-
+        
+        if (normalSolidColor != 0 && selectedSolidColor != 0) {
+            //设置state_selected状态时，和正常状态时文字的颜色
+            int[][] states = new int[3][1];
+            states[0] = new int[]{android.R.attr.state_selected};
+            states[1] = new int[]{android.R.attr.state_pressed};
+            states[2] = new int[]{};
+            ColorStateList textColorSelect = new ColorStateList(states, new int[]{selectedSolidColor, selectedSolidColor, normalSolidColor});
+            drawable.setColor(textColorSelect);
+        } else if (normalSolidColor != 0 ) {
+        	drawable.setColor(normalSolidColor);
+        }
+        
         if (radius > 0) {
             drawable.setCornerRadius(radius);
         } else if (leftTopRadius > 0 || leftBottomRadius > 0 || rightTopRadius > 0 || rightBottomRadius > 0) {
@@ -87,15 +99,18 @@ public class CustomTextView extends TextView {
 
         if (normalTextColor != 0 && selectedTextColor != 0) {
             //设置state_selected状态时，和正常状态时文字的颜色
-            setClickable(true);
             int[][] states = new int[3][1];
             states[0] = new int[]{android.R.attr.state_selected};
             states[1] = new int[]{android.R.attr.state_pressed};
             states[2] = new int[]{};
             ColorStateList textColorSelect = new ColorStateList(states, new int[]{selectedTextColor, selectedTextColor, normalTextColor});
             setTextColor(textColorSelect);
-        }else{
-            setClickable(false);
+        } 
+        
+        if (selectedTextColor != 0 || selectedSolidColor != 0) {
+        	setClickable(true);
+        } else {
+        	setClickable(false);
         }
     }
 
@@ -176,6 +191,27 @@ public class CustomTextView extends TextView {
             setClickable(false);
         }
 
+    }
+    
+    /**
+     * 设置textView选中状态颜色
+     *
+     * @param normalTextColor     正常状态颜色
+     * @param selectedTextColor   按下状态颜色
+     */
+    public void setSelectedSolidColor(int normalSolidColor,int selectedSolidColor) {
+    	if (normalSolidColor != 0 && selectedSolidColor != 0) {
+            //设置state_selected状态时，和正常状态时文字的颜色
+            setClickable(true);
+            int[][] states = new int[3][1];
+            states[0] = new int[]{android.R.attr.state_selected};
+            states[1] = new int[]{android.R.attr.state_pressed};
+            states[2] = new int[]{};
+            ColorStateList textColorSelect = new ColorStateList(states, new int[]{selectedSolidColor, selectedSolidColor, normalSolidColor});
+            drawable.setColor(textColorSelect);
+        } else {
+            setClickable(false);
+        }
     }
 
 }

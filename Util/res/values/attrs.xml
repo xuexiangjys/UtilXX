@@ -190,6 +190,7 @@
     </declare-styleable>
     <declare-styleable name="customTextView">
         <attr name="textSolidColor" format="color" />
+        <attr name="textSelectedSolidColor" format="color" />
         <attr name="textStrokeColor" format="color" />
         <attr name="textRadius" format="dimension" />
         <attr name="textLeftTopRadius" format="dimension" />

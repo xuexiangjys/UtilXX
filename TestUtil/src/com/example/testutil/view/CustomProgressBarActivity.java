@@ -3,8 +3,14 @@ package com.example.testutil.view;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.Toast;
+
 import com.example.testutil.R;
 import com.xuexiang.app.BaseActivity;
+import com.xuexiang.view.LoadingButton;
 import com.xuexiang.view.customprogressbar.MyHoriztalProgressBar;
 import com.xuexiang.view.customprogressbar.MyHoriztalProgressBar2;
 import com.xuexiang.view.customprogressbar.MyRoundProgressBar;
@@ -21,6 +27,9 @@ public class CustomProgressBarActivity extends BaseActivity {
     private MyRoundProgressBar progressBar4, progressBar5;
     private MyRoundProgressBar2 progressBar6;
     private MyHoriztalProgressBar2 progressBar7;
+    
+    private Button mStartBtn;
+    private LoadingButton mDefaultLButton;
 
 	@Override
 	public void onCreateActivity() {
@@ -29,6 +38,26 @@ public class CustomProgressBarActivity extends BaseActivity {
 		initTitleBar(TAG);
 		
 		initView();
+		
+		initLoadingButton();
+	}
+
+	private void initLoadingButton() {
+		mDefaultLButton = (LoadingButton) findViewById(R.id.lbtn_default);	
+		mDefaultLButton.setCallback(new LoadingButton.Callback() {
+            @Override
+            public void complete() {
+                Toast("下载完成,可以在这里写完成的回调方法");
+            }
+        });
+		 
+	    mStartBtn = (Button) findViewById(R.id.btn_start);	
+		mStartBtn.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				mDefaultLButton.setTargetProgress(360);
+			}
+		});
 	}
 
 	private void initView() {

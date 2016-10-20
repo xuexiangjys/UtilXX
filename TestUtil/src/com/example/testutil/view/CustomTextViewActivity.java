@@ -28,6 +28,7 @@ public class CustomTextViewActivity extends BaseActivity {
         mTextView1.setRadius(radius,radius,radius,radius);
         mTextView1.setSelectedTextColor(Colors.YELLOW, Colors.GREEN);
         mTextView1.setStrokeColorAndWidth(DisplayUtils.dip2px(mContext, 2), Colors.BLUE);
+        mTextView1.setSelectedSolidColor(Colors.ORANGE_DARK, Colors.BLUE_DARK);
 	}
 
 }

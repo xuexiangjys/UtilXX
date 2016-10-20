@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#2E3741"
     android:orientation="vertical">
 
     <com.xuexiang.view.TitleBar
@@ -77,4 +78,16 @@
        android:layout_width="200dp"
        android:layout_height="wrap_content"
        android:progress="30"/>
+   
+    <com.xuexiang.view.LoadingButton
+        android:id="@+id/lbtn_default"
+        android:layout_width="100dp"
+        android:layout_height="100dp"/>
+
+    <Button 
+        android:id="@+id/btn_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="增加进度"/>
+   
 </LinearLayout>
