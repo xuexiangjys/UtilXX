@@ -66,4 +66,17 @@
     <item name="fab_label" type="id"/>
     
     <dimen name="custom_avloading_height">64dp</dimen>
+    
+    <dimen name="mb_corner_radius_2">2dp</dimen>
+    <dimen name="mb_corner_radius_4">4dp</dimen>
+    <dimen name="mb_width_100">100dp</dimen>
+    <dimen name="mb_width_120">120dp</dimen>
+    <dimen name="mb_width_200">200dp</dimen>
+    <dimen name="mb_height_56">56dp</dimen>
+    <dimen name="mb_height_8">8dp</dimen>
+    <dimen name="mb_height_4">4dp</dimen>
+    
+    <dimen name="alert_width">290dp</dimen>
+    <dimen name="common_circle_width">3dp</dimen>
+    <dimen name="progress_circle_radius">34dp</dimen>
 </resources>

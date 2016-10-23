@@ -22,6 +22,7 @@ import com.example.testutil.view.HeaderLayoutActivity;
 import com.example.testutil.view.ImageCycleViewActivity;
 import com.example.testutil.view.LoadingDialogActivity;
 import com.example.testutil.view.MaterialDesignActivity;
+import com.example.testutil.view.MaterialishProgressActivity;
 import com.example.testutil.view.MultipleStatusViewActivity;
 import com.example.testutil.view.NiftyDialogActivity;
 import com.example.testutil.view.NiftyNotificationActivity;
@@ -34,6 +35,7 @@ import com.example.testutil.view.RangeSliderViewActivity;
 import com.example.testutil.view.SatelliteMenuActivity;
 import com.example.testutil.view.SnakbarActivity;
 import com.example.testutil.view.StepsViewActivity;
+import com.example.testutil.view.SweetAlertActivity;
 import com.example.testutil.view.SwipeDismissListViewActivity;
 import com.example.testutil.view.SwipeListViewActivity;
 import com.example.testutil.view.SwipeMenuActivity;
@@ -45,6 +47,7 @@ import com.example.testutil.view.ViewpaperAdvActivity;
 import com.example.testutil.view.avloadingindicatorview.AVLoadingIndicatorViewActivity;
 import com.example.testutil.view.fadingactionbar.FadingActionbarHomeActivity;
 import com.example.testutil.view.ioniconview.IonIconViewActivity;
+import com.example.testutil.view.morphingbutton.MorphingButtonActivity;
 import com.example.testutil.view.residemenu.ResideMenuMainFragmentPagerActivity;
 import com.example.testutil.view.systembartint.SystemBarTintManagerActivity;
 import com.xuexiang.app.BaseActivity;
@@ -300,6 +303,21 @@ public class ViewActivity extends BaseActivity implements OnClickListener{
 		case R.id.btn_ioniconview:
 			mToastUtil.showToast("点击了IonIconViewActivity");
         	intent.setClass(this, IonIconViewActivity.class);
+            startActivity(intent);			
+			break;
+		case R.id.btn_morphingbutton:
+			mToastUtil.showToast("点击了MorphingButtonActivity");
+        	intent.setClass(this, MorphingButtonActivity.class);
+            startActivity(intent);			
+			break;
+		case R.id.btn_materialishprogress:
+			mToastUtil.showToast("点击了MaterialishProgressActivity");
+        	intent.setClass(this, MaterialishProgressActivity.class);
+            startActivity(intent);			
+			break;
+		case R.id.btn_sweetalert:
+			mToastUtil.showToast("点击了SweetAlertActivity");
+        	intent.setClass(this, SweetAlertActivity.class);
             startActivity(intent);			
 			break;
 
