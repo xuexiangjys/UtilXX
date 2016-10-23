@@ -39,5 +39,7 @@
     <dimen name="fab_size_mini">40dp</dimen>
     <dimen name="labels_text_size">14sp</dimen>
     <item name="fab_label" type="id"/>
+    
+    <dimen name="mb_corner_radius_2">2dp</dimen>
 
 </resources>

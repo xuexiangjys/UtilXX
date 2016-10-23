@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        >
+
+        <com.beardedhen.androidbootstrap.BootstrapButton
+            android:id="@+id/github_btn"
+            style="@style/home_button"
+            app:bootstrapBrand="danger"
+            app:bootstrapSize="xl"
+            app:bootstrapText="{fa-github} Fork me on Github {fa-heart}"
+            app:showOutline="false"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            />
+
+        <com.beardedhen.androidbootstrap.BootstrapButton
+            android:id="@+id/example_bootstrap_button"
+            style="@style/home_button"
+            android:text="BootstrapButton"
+            />
+
+        <com.beardedhen.androidbootstrap.BootstrapButton
+            android:id="@+id/example_bootstrap_btn_group"
+            style="@style/home_button"
+            android:text="BootstrapButtonGroup"
+            />
+
+        <com.beardedhen.androidbootstrap.BootstrapButton
+            android:id="@+id/example_fontawesometext"
+            style="@style/home_button"
+            android:text="AwesomeTextView"
+            />
+
+        <com.beardedhen.androidbootstrap.BootstrapButton
+            android:id="@+id/example_bootstrap_label"
+            style="@style/home_button"
+            android:text="BootstrapLabel"
+            />
+
+        <com.beardedhen.androidbootstrap.BootstrapButton
+            android:id="@+id/example_bootstrap_progress"
+            style="@style/home_button"
+            android:text="BootstrapProgressBar"
+            />
+
+        <com.beardedhen.androidbootstrap.BootstrapButton
+            android:id="@+id/example_bootstrap_progress_group"
+            style="@style/home_button"
+            android:text="BootstrapProgressBarGroup"
+            />
+
+        <com.beardedhen.androidbootstrap.BootstrapButton
+            android:id="@+id/example_bootstrap_cricle_thumbnail"
+            style="@style/home_button"
+            android:text="BootstrapCircleThumbnail"
+            />
+
+        <com.beardedhen.androidbootstrap.BootstrapButton
+            android:id="@+id/example_bootstrap_thumbnail"
+            style="@style/home_button"
+            android:text="BootstrapThumbnail"
+            />
+
+        <com.beardedhen.androidbootstrap.BootstrapButton
+            android:id="@+id/example_bootstrap_edit_text"
+            style="@style/home_button"
+            android:text="BootstrapEditText"
+            />
+
+        <com.beardedhen.androidbootstrap.BootstrapButton
+            android:id="@+id/example_bootstrap_well"
+            style="@style/home_button"
+            android:text="BootstrapWell"
+            />
+
+        <com.beardedhen.androidbootstrap.BootstrapButton
+            android:id="@+id/example_bootstrap_dropdown"
+            style="@style/home_button"
+            android:text="BootstrapDropdown"
+            />
+
+        <com.beardedhen.androidbootstrap.BootstrapButton
+            android:id="@+id/example_bootstrap_alert"
+            style="@style/home_button"
+            android:text="BootstrapAlert"
+            />
+
+        <com.beardedhen.androidbootstrap.BootstrapButton
+            android:id="@+id/example_bootstrap_badge"
+            style="@style/home_button"
+            android:text="BootstrapBadge"
+            />
+    </LinearLayout>
+</ScrollView>

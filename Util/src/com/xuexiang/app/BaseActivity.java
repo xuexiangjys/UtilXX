@@ -5,8 +5,13 @@ import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.annotation.ColorRes;
+import android.support.annotation.DimenRes;
+import android.support.annotation.DrawableRes;
+import android.support.annotation.IntegerRes;
 import android.support.v4.app.FragmentActivity;
 import android.text.TextUtils;
 import android.util.Log;
@@ -22,6 +27,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.xuexiang.util.app.ActivityManager;
+import com.xuexiang.util.app.ActivityUtil;
+import com.xuexiang.util.app.ActivityUtil.StartAnim;
 import com.xuexiang.util.common.ToastUtil;
 import com.xuexiang.util.data.sharedPreferences.SettingSharePreferenceUtil;
 import com.xuexiang.util.data.sharedPreferences.UserSharePreferenceUtil;
@@ -214,5 +221,36 @@ public abstract class BaseActivity extends FragmentActivity {
 		mActivityManager.exitBy2Click(mContext);
 	}
 	
+	public float dimen(@DimenRes int resId) {
+        return getResources().getDimension(resId);
+    }
+
+    public int color(@ColorRes int resId) {
+        return getResources().getColor(resId);
+    }
+
+    public int integer(@IntegerRes int resId) {
+        return getResources().getInteger(resId);
+    }
+    
+    public Drawable drawable(@DrawableRes int resId) {
+        return getResources().getDrawable(resId);
+    }
+    
+    public void startActivity(Class<?> cls) {
+    	ActivityUtil.startActivity(mContext, cls);
+	}
+    
+    public void startActivity(Class<?> cls, Bundle bundle) {
+    	ActivityUtil.startActivity(mContext, cls, bundle);
+	}
+    
+    public void startActivity(Class<?> cls,  Bundle bundle, StartAnim startAnim) {
+    	ActivityUtil.startActivity(mContext, cls, bundle, startAnim);
+    }
+    
+    public void startActivity(Class<?> cls, StartAnim startAnim) {
+    	ActivityUtil.startActivity(mContext, cls, startAnim);
+    }
 
 }

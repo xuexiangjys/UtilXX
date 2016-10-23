@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+    >
+
+    <com.beardedhen.androidbootstrap.BootstrapAlert
+        android:id="@+id/dynamic_alert"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:bootstrapBrand="success"
+        app:dismissible="true"
+        app:messageText="You successfully read this important alert message."
+        app:strongText="Well done!"
+        />
+
+    <com.beardedhen.androidbootstrap.BootstrapAlert
+        android:id="@+id/static_alert_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:bootstrapBrand="info"
+        app:dismissible="true"
+        app:messageText="This alert needs your attention, but it's not super important."
+        app:strongText="Heads up! "
+        />
+
+    <com.beardedhen.androidbootstrap.BootstrapAlert
+        android:id="@+id/static_alert_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:bootstrapBrand="warning"
+        app:dismissible="true"
+        app:messageText="Better check yourself, you're not looking too good."
+        app:strongText="Warning!"
+        />
+
+    <com.beardedhen.androidbootstrap.BootstrapAlert
+        android:id="@+id/static_alert_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:bootstrapBrand="primary"
+        app:dismissible="true"
+        app:messageText="This is a short alert."
+        app:strongText="Great!"
+        />
+
+    <com.beardedhen.androidbootstrap.BootstrapAlert
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:bootstrapBrand="danger"
+        app:dismissible="false"
+        app:messageText="Change a few things up and try submitting again."
+        app:strongText="Oh snap!"
+        />
+
+    <Button
+        android:id="@+id/interactive_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Hide/Show alert"
+        />
+</LinearLayout>

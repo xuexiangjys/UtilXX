@@ -378,5 +378,8 @@
     <string name="activity_title_header_overlay">Header Overlay Example</string>
     <string name="choose_city">Choose a city</string>
     <string name="activity_title_webview">WebView sample</string>
+    
+    <integer name="mb_animation">500</integer>
+    <string name="mb_button">Button</string>
 
 </resources>
