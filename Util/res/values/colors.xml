@@ -438,8 +438,4 @@
     <color name="trans_black_54">#8A000000</color>  <!-- 54% trans -->
     <color name="trans_white_80">#CCffffff</color> <!-- 80% trans -->
     
-    <color name="mb_gray">#ffdedede</color>
-    <color name="mb_blue">#ff0099cc</color>
-    <color name="mb_blue_dark">#ff00719b</color>
-    
 </resources>

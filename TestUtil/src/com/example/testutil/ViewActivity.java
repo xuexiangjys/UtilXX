@@ -45,7 +45,6 @@ import com.example.testutil.view.ViewpaperAdvActivity;
 import com.example.testutil.view.avloadingindicatorview.AVLoadingIndicatorViewActivity;
 import com.example.testutil.view.fadingactionbar.FadingActionbarHomeActivity;
 import com.example.testutil.view.ioniconview.IonIconViewActivity;
-import com.example.testutil.view.morphingbutton.MorphingButtonActivity;
 import com.example.testutil.view.residemenu.ResideMenuMainFragmentPagerActivity;
 import com.example.testutil.view.systembartint.SystemBarTintManagerActivity;
 import com.xuexiang.app.BaseActivity;
@@ -301,11 +300,6 @@ public class ViewActivity extends BaseActivity implements OnClickListener{
 		case R.id.btn_ioniconview:
 			mToastUtil.showToast("点击了IonIconViewActivity");
         	intent.setClass(this, IonIconViewActivity.class);
-            startActivity(intent);			
-			break;
-		case R.id.btn_morphingbutton:
-			mToastUtil.showToast("点击了MorphingButtonActivity");
-        	intent.setClass(this, MorphingButtonActivity.class);
             startActivity(intent);			
 			break;
 

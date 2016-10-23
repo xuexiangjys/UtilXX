@@ -192,11 +192,7 @@
             android:theme="@style/AppTheme.TranslucentActionBar"
             android:screenOrientation="portrait" />
         <activity android:name="com.example.testutil.view.ioniconview.IonIconViewActivity"/>
-        <activity android:name="com.example.testutil.view.morphingbutton.MorphingButtonActivity"/>
-        <activity android:name="com.example.testutil.view.morphingbutton.MorphingButtonIconActivity"/>
-        <activity android:name="com.example.testutil.view.morphingbutton.MorphingButtonTextActivity"/>
-        <activity android:name="com.example.testutil.view.morphingbutton.ProgressButtonDeterminateActivity"/>
-        <activity android:name="com.example.testutil.view.morphingbutton.ProgressButtonIndeterminateActivity"/>
+        
         
         <service android:name="com.xuexiang.service.FloatViewService"/>
         <service

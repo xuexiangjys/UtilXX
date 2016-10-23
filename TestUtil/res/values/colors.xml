@@ -433,18 +433,5 @@
     <color name="bluegrey800">#37474f</color>
     
     <color name="statusbar_bg">#FF006080</color>
-    
-    <color name="mb_gray">#ffdedede</color>
-    <color name="mb_blue">#ff0099cc</color>
-    <color name="mb_blue_dark">#ff00719b</color>
-    <color name="mb_purple">#ffaa66cc</color>
-    <color name="mb_purple_dark">#ff8855aa</color>
-    <color name="mb_green_dark">#ff6d9b00</color>
-    <color name="mb_red_dark">#ffcd3a3a</color>
-    
-    <color name="holo_blue_bright">#ff00ddff</color>
-    <color name="holo_green_light">#ff99cc00</color>
-    <color name="holo_orange_light">#ffffbb33</color>
-    <color name="holo_red_light">#ffff4444</color>
 
 </resources>

@@ -64,7 +64,7 @@ public class ActivityUtil {
 	 * @param enterAnim
 	 * @param exitAnim
 	 */
-	public static void startActivity(Context context, Class<?> cls, int enterAnim, int exitAnim, Bundle bundle) {
+	public static void startActivity(Context context,Class<?> cls, int enterAnim, int exitAnim, Bundle bundle) {
 		Activity activity = (Activity)context;
 		Intent intent = new Intent();
 		intent.setClass(activity, cls);
