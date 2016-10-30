@@ -79,4 +79,20 @@
     <dimen name="alert_width">290dp</dimen>
     <dimen name="common_circle_width">3dp</dimen>
     <dimen name="progress_circle_radius">34dp</dimen>
+    
+    <dimen name="ms__padding_left">24dp</dimen>
+	<dimen name="ms__padding_top">12dp</dimen>
+	<dimen name="ms__item_height">48dp</dimen>
+	<dimen name="ms__popup_padding_left">24dp</dimen>
+	<dimen name="ms__popup_padding_top">12dp</dimen>
+	
+	<dimen name="percent_text_size_default">8sp</dimen>
+    <dimen name="percent_text_size_small">4sp</dimen>
+    <dimen name="percent_text_size_large">12sp</dimen>
+    <dimen name="percent_text_size">22sp</dimen>
+    <dimen name="round_width_default">6dp</dimen>
+    <dimen name="rect_round_default">1dp</dimen>
+    <dimen name="horizontal_corner">10dp</dimen>
+    
+    <dimen name="normalsize">5dp</dimen>
 </resources>

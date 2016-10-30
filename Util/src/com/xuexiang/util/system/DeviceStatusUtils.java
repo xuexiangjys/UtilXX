@@ -20,6 +20,7 @@ import android.app.Activity;
 import android.bluetooth.BluetoothAdapter;
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.media.AudioManager;
 import android.os.Build;
 import android.provider.Settings;
@@ -377,5 +378,25 @@ public class DeviceStatusUtils {
 	// super(message);
 	// }
 	// }
+	
+	private static final String STATUS_BAR_HEIGHT_RES_NAME = "status_bar_height";
+	
+	/**
+     * 计算状态栏高度高度
+     * getStatusBarHeight
+     * @return
+     */
+    public static int getStatusBarHeight() {
+        return getInternalDimensionSize(Resources.getSystem(), STATUS_BAR_HEIGHT_RES_NAME);
+    }
+
+    private static int getInternalDimensionSize(Resources res, String key) {
+        int result = 0;
+        int resourceId = res.getIdentifier(key, "dimen", "android");
+        if (resourceId > 0) {
+            result = res.getDimensionPixelSize(resourceId);
+        }
+        return result;
+    }
 
 }

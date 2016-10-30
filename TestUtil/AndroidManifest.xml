@@ -7,6 +7,57 @@
     <uses-sdk
         android:minSdkVersion="14"
         android:targetSdkVersion="21" />
+    
+     <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.bluetooth"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.location"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.location.gps"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.location.network"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.microphone"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.wifi"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="false" />
+    
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.tencent.mm.location.permission.SEND_VIEW" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.GET_PACKAGE_SIZE" />
 
      <!-- 工具库中有些工具类需要这些权限 可根据应用需求进行删减 -->
     <uses-permission android:name="android.permission.GET_TASKS"/>
@@ -122,6 +173,7 @@
         <activity android:name="com.example.testutil.view.PassWordInputActivity"/>
         <activity android:name="com.example.testutil.view.TimeLineActivity"/>
         <activity android:name="com.example.testutil.view.GuidViewActivity"/>
+        <activity android:name="com.example.testutil.view.UserGuideViewActivity"/>
         <activity android:name="com.example.testutil.view.SwipeDismissListViewActivity"/>
         <activity android:name="com.example.testutil.view.SwipeListViewActivity"/>
         <activity android:name="com.example.testutil.view.swipelistview.ListViewItemShowActivity"/>
@@ -199,7 +251,8 @@
         <activity android:name="com.example.testutil.view.morphingbutton.ProgressButtonIndeterminateActivity"/>
         <activity android:name="com.example.testutil.view.MaterialishProgressActivity"/>
         <activity android:name="com.example.testutil.view.SweetAlertActivity"/>
-        
+        <activity android:name="com.example.testutil.resource.PlugLoadActivity"/>
+        <activity android:name="androidx.pluginmgr.DynamicActivity" />
         
         
         <service android:name="com.xuexiang.service.FloatViewService"/>

@@ -12,6 +12,7 @@ import android.content.Context;
 import android.os.Handler;
 import android.os.Looper;
 import android.text.TextUtils;
+import androidx.pluginmgr.PluginManager;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.OkHttpStack;
@@ -54,6 +55,7 @@ public class BaseApplication extends Application {
 	public void onCreate() {
 		super.onCreate();
 		mContext = this;
+		PluginManager.init(this); //插件管理类
 		// Volley+Okhttp
 		mRequestQueue = Volley.newRequestQueue(getApplicationContext(),
 				new OkHttpStack(new OkHttpClient()));

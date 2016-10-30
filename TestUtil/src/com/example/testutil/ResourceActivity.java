@@ -5,6 +5,7 @@ import android.view.View.OnClickListener;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.testutil.resource.PlugLoadActivity;
 import com.xuexiang.app.BaseActivity;
 import com.xuexiang.util.app.PackageUtils;
 import com.xuexiang.util.file.FileUtils;
@@ -67,6 +68,11 @@ public class ResourceActivity extends BaseActivity implements OnClickListener{
 		case R.id.btn_system_intall_apk:
 			PackageUtils.intallAPKFromAssetBySystem(mContext, "com.way.ftp", "FTP服务器", "FTP.apk");
 			break;
+			
+		case R.id.btn_plugload:
+			mToastUtil.showToast("点击了PlugLoadActivity");
+			startActivity(PlugLoadActivity.class);
+			break;	
 			
 		case R.id.btn_getfilestring:
 			contenttv.setText(ResourceUtils.getFileFromAssets(mContext, "user.txt", true));

@@ -8,6 +8,7 @@ import android.view.animation.TranslateAnimation;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.testutil.R;
 import com.xuexiang.app.BaseActivity;
@@ -26,6 +27,7 @@ import com.xuexiang.view.ToggleButton.OnToggleChanged;
 import com.xuexiang.view.LikeButton.LikeButton;
 import com.xuexiang.view.LikeButton.OnLikeListener;
 import com.xuexiang.view.margicbutton.MagicButton;
+import com.xuexiang.view.materialspinner.MaterialSpinner;
 
 /**
  * 创建时间：2016-5-29 下午6:37:39 项目名称：TestUtil
@@ -42,6 +44,10 @@ public class CustomViewActivity extends BaseActivity implements OnLikeListener{
 	private TextView tv1, tv2, tv3;
 	
 	private StarBarView sbv_starbar;
+	private static final String[] ANDROID_VERSIONS = {
+	      "Cupcake", "Donut", "Eclair", "Froyo", "Gingerbread", "Honeycomb", "Ice Cream Sandwich", "Jelly Bean", "KitKat",
+	      "Lollipop", "Marshmallow"
+	};
 
 	@Override
 	public void onCreateActivity() {
@@ -74,6 +80,8 @@ public class CustomViewActivity extends BaseActivity implements OnLikeListener{
 		initStarBarView();
 		
 		initLikeButton();
+		
+		initMaterialSpinner();
 	}
 
 	private void initAndroidSegmentedControlView() {
@@ -405,5 +413,22 @@ public class CustomViewActivity extends BaseActivity implements OnLikeListener{
     public void unLiked(LikeButton likeButton) {
     	Toast("Disliked!");
     }
+    
+    private void initMaterialSpinner() {
+	    MaterialSpinner spinner = (MaterialSpinner) findViewById(R.id.spinner);
+	    spinner.setItems(ANDROID_VERSIONS);
+	    spinner.setOnItemSelectedListener(new MaterialSpinner.OnItemSelectedListener<String>() {
+
+	      @Override public void onItemSelected(MaterialSpinner view, int position, long id, String item) {
+	        Toast("Clicked " + item);
+	      }
+	    });
+	    spinner.setOnNothingSelectedListener(new MaterialSpinner.OnNothingSelectedListener() {
+
+	      @Override public void onNothingSelected(MaterialSpinner spinner) {
+	    	  Toast("Nothing selected");
+	      }
+	    });
+	}
 
 }

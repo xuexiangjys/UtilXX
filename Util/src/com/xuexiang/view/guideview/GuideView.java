@@ -1,4 +1,4 @@
-package com.xuexiang.view;
+package com.xuexiang.view.guideview;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;

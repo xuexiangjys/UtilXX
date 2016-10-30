@@ -48,6 +48,7 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.pm.Signature;
+import android.content.res.Resources;
 import android.net.Uri;
 import android.telephony.TelephonyManager;
 import android.text.TextUtils;
@@ -600,6 +601,26 @@ public final class AppUtils {
             }
         }
         return false;
+    }
+    
+    private static final String STATUS_BAR_HEIGHT_RES_NAME = "status_bar_height";
+	
+	/**
+     * 计算状态栏高度高度
+     * getStatusBarHeight
+     * @return
+     */
+    public static int getStatusBarHeight() {
+        return getInternalDimensionSize(Resources.getSystem(), STATUS_BAR_HEIGHT_RES_NAME);
+    }
+
+    private static int getInternalDimensionSize(Resources res, String key) {
+        int result = 0;
+        int resourceId = res.getIdentifier(key, "dimen", "android");
+        if (resourceId > 0) {
+            result = res.getDimensionPixelSize(resourceId);
+        }
+        return result;
     }
 
 }

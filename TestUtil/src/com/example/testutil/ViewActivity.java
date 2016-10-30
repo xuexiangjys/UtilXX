@@ -42,6 +42,7 @@ import com.example.testutil.view.SwipeMenuActivity;
 import com.example.testutil.view.TabBarActivity;
 import com.example.testutil.view.TimeLineActivity;
 import com.example.testutil.view.TitleBarActivity;
+import com.example.testutil.view.UserGuideViewActivity;
 import com.example.testutil.view.ViewPaperAndGridViewActivity;
 import com.example.testutil.view.ViewpaperAdvActivity;
 import com.example.testutil.view.avloadingindicatorview.AVLoadingIndicatorViewActivity;
@@ -213,6 +214,11 @@ public class ViewActivity extends BaseActivity implements OnClickListener{
 		case R.id.btn_guidview:
 			mToastUtil.showToast("点击了GuidViewActivity");
         	intent.setClass(this, GuidViewActivity.class);
+            startActivity(intent);			
+			break;	
+		case R.id.btn_userguidview:
+			mToastUtil.showToast("点击了UserGuideViewActivity");
+        	intent.setClass(this, UserGuideViewActivity.class);
             startActivity(intent);			
 			break;	
 		case R.id.btn_swipelistview:

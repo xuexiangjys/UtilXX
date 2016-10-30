@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 import com.example.testutil.R;
 import com.xuexiang.app.BaseActivity;
-import com.xuexiang.view.GuideView;
+import com.xuexiang.view.guideview.GuideView;
 
 /**  
  * 创建时间：2016-7-27 上午8:38:14  

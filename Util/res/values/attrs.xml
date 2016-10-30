@@ -12,7 +12,7 @@
   ~ please contact The MITRE Corporation, Contracts Office,7515 Colshire Drive,
   ~ McLean, VA  22102-7539, (703) 983-6000.
   ~
-  ~ Approved for Public Release; Distribution Unlimited. Case Number 14-4045
+  ~ Approved for Public Release; Distribution Unlimited. Case Number 14-4045
 -->
 
 <resources>
@@ -405,50 +405,48 @@
         <attr name="tbAnimate" format="reference|boolean" />
         <attr name="tbAsDefaultOn" format="reference|boolean" />
     </declare-styleable>
-    
-     <!--星星控件属性-->
+
+    <!-- 星星控件属性 -->
     <declare-styleable name="StarBarView">
-        <!--设置星星间的间隔-->
+
+        <!-- 设置星星间的间隔 -->
         <attr name="space_width" format="dimension" />
-        <!--星星间宽度-->
+        <!-- 星星间宽度 -->
         <attr name="star_width" format="dimension" />
-        <!--星星间高度-->
+        <!-- 星星间高度 -->
         <attr name="star_height" format="dimension" />
-        <!--最大数量-->
+        <!-- 最大数量 -->
         <attr name="star_max" format="integer" />
-        <!--选中数量-->
+        <!-- 选中数量 -->
         <attr name="star_rating" format="float" />
-        <!--未选中图片-->
+        <!-- 未选中图片 -->
         <attr name="star_hollow" format="reference" />
-        <!--选中图片-->
+        <!-- 选中图片 -->
         <attr name="star_solid" format="reference" />
-        <!--是否可以滑动改变选中数量-->
+        <!-- 是否可以滑动改变选中数量 -->
         <attr name="star_isIndicator" format="boolean" />
-        <!--排列方向-->
+        <!-- 排列方向 -->
         <attr name="star_orientation" format="enum">
             <enum name="vertical" value="1" />
             <enum name="horizontal" value="0" />
         </attr>
     </declare-styleable>
-    
     <declare-styleable name="LikeButton">
         <attr name="icon_type" format="string" />
-        <attr name="icon_size" format="dimension|reference"/>
+        <attr name="icon_size" format="dimension|reference" />
         <attr name="like_drawable" format="reference" />
         <attr name="unlike_drawable" format="reference" />
         <attr name="dots_primary_color" format="color|reference" />
         <attr name="dots_secondary_color" format="color|reference" />
         <attr name="circle_start_color" format="color|reference" />
         <attr name="circle_end_color" format="color|reference" />
-        <attr name="liked" format="boolean"/>
-        <attr name="is_enabled" format="boolean"/>
-        <attr name="anim_scale_factor" format="float"/>
+        <attr name="liked" format="boolean" />
+        <attr name="is_enabled" format="boolean" />
+        <attr name="anim_scale_factor" format="float" />
     </declare-styleable>
-
     <declare-styleable name="icon">
         <attr name="name" format="string" />
     </declare-styleable>
-    
     <declare-styleable name="ProgressWheel">
         <attr name="matProg_progressIndeterminate" format="boolean" />
         <attr name="matProg_barColor" format="color" />
@@ -461,16 +459,80 @@
         <attr name="matProg_barWidth" format="dimension" />
         <attr name="matProg_linearProgress" format="boolean" />
     </declare-styleable>
-    
     <declare-styleable name="Rotate3dAnimation">
         <attr name="rollType" format="enum">
-            <enum name="x" value="0"/>
-            <enum name="y" value="1"/>
-            <enum name="z" value="2"/>
+            <enum name="x" value="0" />
+            <enum name="y" value="1" />
+            <enum name="z" value="2" />
         </attr>
         <attr name="fromDeg" format="float" />
         <attr name="toDeg" format="float" />
-        <attr name="pivotX" format="fraction"/>
+        <attr name="pivotX" format="fraction" />
         <attr name="pivotY" format="fraction" />
     </declare-styleable>
+    <declare-styleable name="MaterialSpinner">
+        <attr name="ms_arrow_tint" format="color" />
+        <attr name="ms_hide_arrow" format="boolean" />
+        <attr name="ms_background_color" format="color" />
+        <attr name="ms_text_color" format="color" />
+        <attr name="ms_dropdown_max_height" format="dimension" />
+        <attr name="ms_dropdown_height" format="dimension">
+            <enum name="fill_parent" value="-1" />
+            <enum name="match_parent" value="-1" />
+            <enum name="wrap_content" value="-2" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="cbprogressbar">
+
+        <!-- 进度百分比文字大小 -->
+        <attr name="percent_text_size" format="dimension" />
+        <!-- 矩形进度条 是空心样式还是实心样式 -->
+        <attr name="isHorizonStroke" format="boolean" />
+        <!-- 进度百分比文字颜色 -->
+        <attr name="percent_text_color" format="color|integer" />
+        <!-- 进度条背景颜色 -->
+        <attr name="progressBarBgColor" format="color|integer" />
+        <!-- 进度颜色 -->
+        <attr name="progressColor" format="color|integer" />
+        <!-- 扇形进度条颜色 -->
+        <attr name="sectorColor" format="color|integer" />
+        <!-- 扇形背景颜色 -->
+        <attr name="unSweepColor" format="color|integer" />
+        <!-- 进度条样式圆形还是矩形 -->
+        <attr name="orientation" format="integer">
+            <enum name="horizontal" value="0" />
+            <enum name="circle" value="1" />
+            <enum name="sector" value="2" />
+        </attr>
+        <!-- 圆形进度条边框大小 -->
+        <attr name="stroke_size" format="dimension" />
+        <!-- 矩形进度条 四周圆角大小 -->
+        <attr name="rect_round" format="dimension" />
+        <!-- 进度文字是否显示百分号 -->
+        <attr name="showPercentSign" format="boolean" />
+    </declare-styleable>
+    
+    <declare-styleable name="UserGuideView">
+        <attr name="HighlightViewStyle" format="enum">
+            <enum name="rect" value="0" />
+            <enum name="circle" value="1" />
+            <enum name="oval" value="2" />
+        </attr>
+        <attr name="MaskBlurStyle" format="enum">
+            <enum name="solid" value="0" />
+            <enum name="normal" value="1" />
+        </attr>
+        <attr name="tipView" format="reference" />
+        <attr name="maskColor" format="reference|color" />
+    </declare-styleable>
+    
+    <declare-styleable name="CommonItem">
+        <attr name="img_item" format="reference" />
+        <attr name="text_item" format="reference" />
+        <attr name="textsize_item" format="reference" />
+        <attr name="textcolor_item" format="reference" />
+        <attr name="background_item" format="reference" />
+        <attr name="arrow_item" format="reference" />
+   </declare-styleable>
+
 </resources>

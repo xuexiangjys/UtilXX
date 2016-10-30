@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/lightyellow"
     android:orientation="vertical" >
 
     <include layout="@layout/top_menu_bar" />
@@ -315,6 +316,13 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp" />
 
+           <com.xuexiang.view.materialspinner.MaterialSpinner
+		        android:id="@+id/spinner"
+		        app:ms_dropdown_max_height="350dp"
+		        app:ms_dropdown_height="wrap_content"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"/>
+             
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -506,6 +514,28 @@
                     app:like_drawable="@drawable/ic_android_green_500_24dp"
                     app:unlike_drawable="@drawable/ic_android_grey_500_24dp" />
             </LinearLayout>
+            
+            
+             <com.xuexiang.view.CommonItem
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        app:arrow_item="@drawable/arrow_right"
+		        app:background_item="@color/tv_White"
+		        app:img_item="@drawable/setting_blue"
+		        app:text_item="@string/setting"
+		        app:textcolor_item="@color/tv_Black"
+		        app:textsize_item="@dimen/normalsize" />
+		
+		    <com.xuexiang.view.CommonItem
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_marginTop="10dp"
+		        app:arrow_item="@drawable/arrow_right"
+		        app:background_item="@color/tv_White"
+		        app:img_item="@drawable/biaoqing"
+		        app:text_item="@string/emoj"
+		        app:textcolor_item="@color/tv_Black"
+		        app:textsize_item="@dimen/normalsize" />
         </LinearLayout>
     </ScrollView>
 
