@@ -1,8 +1,8 @@
 eclipse.preferences.version=1
 encoding//src/com/xuexiang/util/app/AbAppUtil.java=UTF-8
 encoding//src/com/xuexiang/util/app/AppUtils.java=UTF-8
-encoding//src/com/xuexiang/util/common/Base64Util.java=UTF-8
 encoding//src/com/xuexiang/util/common/StrUtil.java=UTF-8
+encoding//src/com/xuexiang/util/data/SQLHelper.java=GBK
 encoding//src/com/xuexiang/util/data/db/ormlite/auto/AutoDatabaseHelper.java=UTF-8
 encoding//src/com/xuexiang/util/file/AssetDatabaseOpenHelper.java=UTF-8
 encoding//src/com/xuexiang/util/net/asynchttp/HttpFileRequest.java=UTF-8
@@ -11,6 +11,7 @@ encoding//src/com/xuexiang/util/net/okhttp/utils/ImageUtils.java=GBK
 encoding//src/com/xuexiang/util/net/uploadfile/CustomMultipartEntity.java=UTF-8
 encoding//src/com/xuexiang/util/net/uploadfile/FileUpload.java=UTF-8
 encoding//src/com/xuexiang/util/net/uploadfile/HttpClientUtil.java=UTF-8
+encoding//src/com/xuexiang/util/security/Base64Util.java=UTF-8
 encoding//src/com/xuexiang/util/system/AbLogUtil.java=UTF-8
 encoding//src/com/xuexiang/util/view/AbViewUtil.java=UTF-8
 encoding//src/com/xuexiang/util/view/AnimationUtils.java=UTF-8
