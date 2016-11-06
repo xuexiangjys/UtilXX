@@ -8,13 +8,13 @@ import android.view.animation.TranslateAnimation;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.testutil.R;
 import com.xuexiang.app.BaseActivity;
 import com.xuexiang.view.AndroidSegmentedControlView;
 import com.xuexiang.view.AndroidSegmentedControlView.OnSelectionChangedListener;
 import com.xuexiang.view.BadgeView;
+import com.xuexiang.view.CompareIndicator;
 import com.xuexiang.view.ListEditText;
 import com.xuexiang.view.ShoppingView;
 import com.xuexiang.view.SlideSwitch;
@@ -26,6 +26,7 @@ import com.xuexiang.view.ToggleButton;
 import com.xuexiang.view.ToggleButton.OnToggleChanged;
 import com.xuexiang.view.LikeButton.LikeButton;
 import com.xuexiang.view.LikeButton.OnLikeListener;
+import com.xuexiang.view.expandtextview.ExpandTextView;
 import com.xuexiang.view.margicbutton.MagicButton;
 import com.xuexiang.view.materialspinner.MaterialSpinner;
 
@@ -82,6 +83,10 @@ public class CustomViewActivity extends BaseActivity implements OnLikeListener{
 		initLikeButton();
 		
 		initMaterialSpinner();
+		
+		initExpandTextView();
+		
+		initCompareIndicator();
 	}
 
 	private void initAndroidSegmentedControlView() {
@@ -430,5 +435,20 @@ public class CustomViewActivity extends BaseActivity implements OnLikeListener{
 	      }
 	    });
 	}
+    
+    private void initExpandTextView() {
+    	ExpandTextView textView = (ExpandTextView) findViewById(R.id.cusTextView);
+        textView.updateText(getResources().getString(R.string.test_expandtext));
+	}
+    
+	private void initCompareIndicator() {
+		CompareIndicator CompareIndicator1 = (CompareIndicator) findViewById(R.id.CompareIndicator1);
+		CompareIndicator CompareIndicator2 = (CompareIndicator) findViewById(R.id.CompareIndicator2);
+		CompareIndicator CompareIndicator3 = (CompareIndicator) findViewById(R.id.CompareIndicator3);
+        CompareIndicator1.updateView(10,90);
+        CompareIndicator2.updateView(30,70);
+        CompareIndicator3.updateView(70,30);		
+	}
+
 
 }
