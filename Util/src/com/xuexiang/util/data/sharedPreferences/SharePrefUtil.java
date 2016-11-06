@@ -4,7 +4,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.text.TextUtils;
 
-import com.xuexiang.util.security.Base64Util;
+import com.xuexiang.util.common.Base64Util;
 
 public class SharePrefUtil {
 	

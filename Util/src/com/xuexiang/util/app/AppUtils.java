@@ -623,18 +623,4 @@ public final class AppUtils {
         return result;
     }
 
-    /**
-     * 获取版本号
-     */
-    public static int getAppVersion(Context context) {
-        PackageManager manager = context.getPackageManager();
-        PackageInfo info = null;
-        try {
-            info = manager.getPackageInfo(context.getPackageName(), 0);
-        } catch (PackageManager.NameNotFoundException e) {
-            e.printStackTrace();
-        }
-        return info.versionCode;
-    }
-
 }

@@ -12,7 +12,7 @@
   ~ please contact The MITRE Corporation, Contracts Office,7515 Colshire Drive,
   ~ McLean, VA  22102-7539, (703) 983-6000.
   ~
-  ~ Approved for Public Release; Distribution Unlimited. Case Number 14-4045
+  ~ Approved for Public Release; Distribution Unlimited. Case Number 14-4045
 -->
 
 <resources>
@@ -188,7 +188,7 @@
         <attr name="progressbar_height" format="dimension" />
         <attr name="radius" format="dimension" />
     </declare-styleable>
-    <declare-styleable name="customTextView">
+   <declare-styleable name="customTextView">
         <attr name="textSolidColor" format="color" />
         <attr name="textSelectedSolidColor" format="color" />
         <attr name="textStrokeColor" format="color" />
@@ -444,9 +444,11 @@
         <attr name="is_enabled" format="boolean" />
         <attr name="anim_scale_factor" format="float" />
     </declare-styleable>
+    
     <declare-styleable name="icon">
         <attr name="name" format="string" />
     </declare-styleable>
+ 
     <declare-styleable name="ProgressWheel">
         <attr name="matProg_progressIndeterminate" format="boolean" />
         <attr name="matProg_barColor" format="color" />
@@ -459,71 +461,75 @@
         <attr name="matProg_barWidth" format="dimension" />
         <attr name="matProg_linearProgress" format="boolean" />
     </declare-styleable>
-    <declare-styleable name="Rotate3dAnimation">
+    
+     <declare-styleable name="Rotate3dAnimation">
         <attr name="rollType" format="enum">
-            <enum name="x" value="0" />
-            <enum name="y" value="1" />
-            <enum name="z" value="2" />
+            <enum name="x" value="0"/>
+            <enum name="y" value="1"/>
+            <enum name="z" value="2"/>
         </attr>
         <attr name="fromDeg" format="float" />
         <attr name="toDeg" format="float" />
-        <attr name="pivotX" format="fraction" />
+        <attr name="pivotX" format="fraction"/>
         <attr name="pivotY" format="fraction" />
     </declare-styleable>
+    
     <declare-styleable name="MaterialSpinner">
-        <attr name="ms_arrow_tint" format="color" />
-        <attr name="ms_hide_arrow" format="boolean" />
-        <attr name="ms_background_color" format="color" />
-        <attr name="ms_text_color" format="color" />
-        <attr name="ms_dropdown_max_height" format="dimension" />
-        <attr name="ms_dropdown_height" format="dimension">
-            <enum name="fill_parent" value="-1" />
-            <enum name="match_parent" value="-1" />
-            <enum name="wrap_content" value="-2" />
-        </attr>
+	    <attr name="ms_arrow_tint" format="color"/>
+	    <attr name="ms_hide_arrow" format="boolean"/>
+	    <attr name="ms_background_color" format="color"/>
+	    <attr name="ms_text_color" format="color"/>
+	    <attr name="ms_dropdown_max_height" format="dimension"/>
+	    <attr name="ms_dropdown_height" format="dimension">
+	      <enum name="fill_parent" value="-1"/>
+	      <enum name="match_parent" value="-1"/>
+	      <enum name="wrap_content" value="-2"/>
+	    </attr>
     </declare-styleable>
-    <declare-styleable name="cbprogressbar">
-
+    
+     <declare-styleable name="cbprogressbar">
         <!-- 进度百分比文字大小 -->
-        <attr name="percent_text_size" format="dimension" />
+        <attr name="percent_text_size" format="dimension"/>
         <!-- 矩形进度条 是空心样式还是实心样式 -->
-        <attr name="isHorizonStroke" format="boolean" />
+        <attr name="isHorizonStroke" format="boolean"/>
         <!-- 进度百分比文字颜色 -->
-        <attr name="percent_text_color" format="color|integer" />
+        <attr name="percent_text_color" format="color|integer"/>
         <!-- 进度条背景颜色 -->
-        <attr name="progressBarBgColor" format="color|integer" />
+        <attr name="progressBarBgColor" format="color|integer"/>
         <!-- 进度颜色 -->
-        <attr name="progressColor" format="color|integer" />
+        <attr name="progressColor" format="color|integer"/>
         <!-- 扇形进度条颜色 -->
-        <attr name="sectorColor" format="color|integer" />
+        <attr name="sectorColor" format="color|integer"/>
         <!-- 扇形背景颜色 -->
-        <attr name="unSweepColor" format="color|integer" />
+        <attr name="unSweepColor" format="color|integer"/>
         <!-- 进度条样式圆形还是矩形 -->
         <attr name="orientation" format="integer">
-            <enum name="horizontal" value="0" />
-            <enum name="circle" value="1" />
-            <enum name="sector" value="2" />
+	        <enum name="horizontal" value="0"/>
+	        <enum name="circle" value="1"/>
+	        <enum name="sector" value="2"/>
         </attr>
         <!-- 圆形进度条边框大小 -->
-        <attr name="stroke_size" format="dimension" />
+        <attr name="stroke_size" format="dimension"/>
         <!-- 矩形进度条 四周圆角大小 -->
-        <attr name="rect_round" format="dimension" />
+        <attr name="rect_round" format="dimension"/>
         <!-- 进度文字是否显示百分号 -->
-        <attr name="showPercentSign" format="boolean" />
+        <attr name="showPercentSign" format="boolean"/>
     </declare-styleable>
+    
     <declare-styleable name="UserGuideView">
-        <attr name="HighlightViewStyle" format="enum">
-            <enum name="rect" value="0" />
-            <enum name="circle" value="1" />
-            <enum name="oval" value="2" />
-        </attr>
-        <attr name="MaskBlurStyle" format="enum">
-            <enum name="solid" value="0" />
-            <enum name="normal" value="1" />
-        </attr>
-        <attr name="tipView" format="reference" />
-        <attr name="maskColor" format="reference|color" />
-    </declare-styleable>
+       <attr name="HighlightViewStyle" format="enum">
+           <enum name="rect" value="0" />
+           <enum name="circle" value="1" />
+           <enum name="oval" value="2" />
+       </attr>
+       <attr name="MaskBlurStyle" format="enum">
+           <enum name="solid" value="0" />
+           <enum name="normal" value="1" />
+       </attr>
+       <attr name="tipView" format="reference" />
+       <attr name="maskColor" format="reference|color" />
+   </declare-styleable>
+   
     <declare-styleable name="CommonItem">
         <attr name="img_item" format="reference" />
         <attr name="text_item" format="reference" />
@@ -531,32 +537,5 @@
         <attr name="textcolor_item" format="reference" />
         <attr name="background_item" format="reference" />
         <attr name="arrow_item" format="reference" />
-    </declare-styleable>
-    <declare-styleable name="ExpandTextView">
-
-        <!-- 文本颜色 -->
-        <attr name="etv_textColor" format="color|reference" />
-        <!-- 最大显示文本行数 -->
-        <attr name="etv_maxLines" format="integer|reference" />
-        <!-- 文本字体大小 -->
-        <attr name="etv_textSize" format="dimension|reference" />
-        <!-- 动画显示时间 -->
-        <attr name="etv_animDuration" format="integer|reference" />
-        <!-- 提示图标的宽度 -->
-        <attr name="etv_drawableWidth" format="dimension|reference" />
-        <!-- 提示图标的高度 -->
-        <attr name="etv_drawableHeight" format="dimension|reference" />
-        <!-- 展开时候的提示图标 -->
-        <attr name="etv_expandDrawable" format="color|reference" />
-        <!-- 收缩收起时候的提示图标 -->
-        <attr name="etv_shrinkDrawable" format="color|reference" />
-    </declare-styleable>
-    <declare-styleable name="compareindicator">
-        <attr name="approve_res" format="reference" />
-        <attr name="opposite_res" format="reference" />
-        <attr name="approve_line_color" format="color" />
-        <attr name="oppose_line_color" format="color" />
-        <attr name="lineWidth" format="dimension" />
-    </declare-styleable>
-
+   </declare-styleable>
 </resources>

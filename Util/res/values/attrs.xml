@@ -534,32 +534,5 @@
         <attr name="background_item" format="reference" />
         <attr name="arrow_item" format="reference" />
    </declare-styleable>
-   
-    <declare-styleable name="ExpandTextView">
-        <!-- 文本颜色 -->
-        <attr name="etv_textColor" format="color|reference"/>
-        <!-- 最大显示文本行数 -->
-        <attr name="etv_maxLines" format="integer|reference"/>
-        <!-- 文本字体大小 -->
-        <attr name="etv_textSize" format="dimension|reference"/>
-        <!-- 动画显示时间-->
-        <attr name="etv_animDuration" format="integer|reference"/>
-        <!-- 提示图标的宽度 -->
-        <attr name="etv_drawableWidth" format="dimension|reference"/>
-        <!-- 提示图标的高度 -->
-        <attr name="etv_drawableHeight" format="dimension|reference"/>
-        <!-- 展开时候的提示图标 -->
-        <attr name="etv_expandDrawable" format="color|reference"/>
-        <!-- 收缩收起时候的提示图标 -->
-        <attr name="etv_shrinkDrawable" format="color|reference"/>
-    </declare-styleable>
-    
-    <declare-styleable name="compareindicator">
-        <attr name="approve_res" format="reference"/>
-        <attr name="opposite_res" format="reference"/>
-        <attr name="approve_line_color" format="color"/>
-        <attr name="oppose_line_color" format="color"/>
-        <attr name="lineWidth" format="dimension"/>
-    </declare-styleable>
 
 </resources>

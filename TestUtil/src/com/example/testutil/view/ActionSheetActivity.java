@@ -7,7 +7,6 @@ import android.widget.Toast;
 import com.example.testutil.R;
 import com.xuexiang.app.BaseActivity;
 import com.xuexiang.view.ActionSheet;
-import com.xuexiang.view.CompareIndicator;
 import com.xuexiang.view.ActionSheet.ActionSheetListener;
 
 /**  
@@ -23,8 +22,6 @@ public class ActionSheetActivity extends BaseActivity implements ActionSheetList
 		 setContentView(R.layout.activity_actionsheet);
 	        
          initActionBar("ActionSheet");
-         
-         initCompareIndicator();
 	}
 
 
@@ -56,14 +53,5 @@ public class ActionSheetActivity extends BaseActivity implements ActionSheetList
               break;
       }
       showActionSheet();
-	}
-	
-	private void initCompareIndicator() {
-		CompareIndicator CompareIndicator1 = (CompareIndicator) findViewById(R.id.CompareIndicator1);
-		CompareIndicator CompareIndicator2 = (CompareIndicator) findViewById(R.id.CompareIndicator2);
-		CompareIndicator CompareIndicator3 = (CompareIndicator) findViewById(R.id.CompareIndicator3);
-        CompareIndicator1.updateView(10,90);
-        CompareIndicator2.updateView(30,70);
-        CompareIndicator3.updateView(70,30);		
 	}
 }

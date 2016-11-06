@@ -316,13 +316,13 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp" />
 
-            <com.xuexiang.view.materialspinner.MaterialSpinner
-                android:id="@+id/spinner"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:ms_dropdown_height="wrap_content"
-                app:ms_dropdown_max_height="350dp" />
-
+           <com.xuexiang.view.materialspinner.MaterialSpinner
+		        android:id="@+id/spinner"
+		        app:ms_dropdown_max_height="350dp"
+		        app:ms_dropdown_height="wrap_content"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"/>
+             
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -514,83 +514,28 @@
                     app:like_drawable="@drawable/ic_android_green_500_24dp"
                     app:unlike_drawable="@drawable/ic_android_grey_500_24dp" />
             </LinearLayout>
-
-            <com.xuexiang.view.CommonItem
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:arrow_item="@drawable/arrow_right"
-                app:background_item="@color/tv_White"
-                app:img_item="@drawable/setting_blue"
-                app:text_item="@string/setting"
-                app:textcolor_item="@color/tv_Black"
-                app:textsize_item="@dimen/normalsize" />
-
-            <com.xuexiang.view.CommonItem
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                app:arrow_item="@drawable/arrow_right"
-                app:background_item="@color/tv_White"
-                app:img_item="@drawable/biaoqing"
-                app:text_item="@string/emoj"
-                app:textcolor_item="@color/tv_Black"
-                app:textsize_item="@dimen/normalsize" />
-
-            <com.xuexiang.view.expandtextview.ExpandTextView
-                android:id="@+id/cusTextView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:background="@android:color/white"
-                android:paddingBottom="8dp"
-                android:paddingLeft="8dp"
-                android:paddingRight="8dp"
-                android:paddingTop="8dp"
-                app:etv_drawableHeight="12dp"
-                app:etv_drawableWidth="14dp"
-                app:etv_expandDrawable="@drawable/expand_up"
-                app:etv_maxLines="3"
-                app:etv_shrinkDrawable="@drawable/expand_down"
-                app:etv_textColor="@android:color/black"
-                app:etv_textSize="14sp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:paddingLeft="8dp"
-                android:paddingRight="8dp"
-                android:text="@string/test_expandtext"
-                android:textSize="14sp" />
             
             
-             <com.xuexiang.view.CompareIndicator
-		        android:id="@+id/CompareIndicator1"
+             <com.xuexiang.view.CommonItem
 		        android:layout_width="match_parent"
 		        android:layout_height="wrap_content"
-		        android:layout_marginTop="50dp"
-		        app:approve_res="@drawable/bad"
-		        app:opposite_res="@drawable/good"
-		        />
+		        app:arrow_item="@drawable/arrow_right"
+		        app:background_item="@color/tv_White"
+		        app:img_item="@drawable/setting_blue"
+		        app:text_item="@string/setting"
+		        app:textcolor_item="@color/tv_Black"
+		        app:textsize_item="@dimen/normalsize" />
 		
-		    <com.xuexiang.view.CompareIndicator
-		        android:id="@+id/CompareIndicator2"
+		    <com.xuexiang.view.CommonItem
 		        android:layout_width="match_parent"
 		        android:layout_height="wrap_content"
-		        android:layout_marginTop="50dp"
-		        app:approve_line_color="@color/lightgreen"
-		        app:approve_res="@drawable/approve"
-		        app:oppose_line_color="@color/darkred"
-		        app:opposite_res="@drawable/opposite"
-		        />
-		    <com.xuexiang.view.CompareIndicator
-		        android:id="@+id/CompareIndicator3"
-		        android:layout_width="match_parent"
-		        android:layout_height="wrap_content"
-		        android:layout_marginTop="50dp"
-		        app:approve_res="@drawable/approve_x"
-		        app:opposite_res="@drawable/disapprove"
-		        />
+		        android:layout_marginTop="10dp"
+		        app:arrow_item="@drawable/arrow_right"
+		        app:background_item="@color/tv_White"
+		        app:img_item="@drawable/biaoqing"
+		        app:text_item="@string/emoj"
+		        app:textcolor_item="@color/tv_Black"
+		        app:textsize_item="@dimen/normalsize" />
         </LinearLayout>
     </ScrollView>
 
