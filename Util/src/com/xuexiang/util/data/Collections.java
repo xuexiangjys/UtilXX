@@ -18,6 +18,7 @@ package com.xuexiang.util.data;
 
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
 
 /** Utilities for working with arrays and `java.util.Collection<E>` (including its various subclasses) */
@@ -87,6 +88,18 @@ public final class Collections {
 		}
 
 		return out.toString();
+	}
+	
+	public static <T> void removeItem(List<T> list, T t) {		
+		if (list != null && list.size() > 0 && t != null) {
+			Iterator<T> it = list.iterator();
+			while (it.hasNext()) {
+			   T e = it.next();
+			   if (t.equals(e)) {
+				   it.remove();
+			   }
+		    }	
+		}
 	}
 
 }
