@@ -13,43 +13,43 @@ import android.os.Environment;
 import android.util.Base64;
 
 /**
- * ±¾µØÎÄ¼şµÄIO²Ù×÷Àà
+ * æœ¬åœ°æ–‡ä»¶çš„IOæ“ä½œç±»
  *
  */
 public class LocalFileUtil {
 
-	//¸ùÄ¿Â¼
+	//æ ¹ç›®å½•
 	public static final String LOCAL_DATA_PATH = Environment.getExternalStorageDirectory().getAbsolutePath()
 			+ "/myutil/";
 	
-	//ÈÕÖ¾Ä¿Â¼
+	//æ—¥å¿—ç›®å½•
     public static final String LOG_DIR = LOCAL_DATA_PATH
 				+ "/logs/";
     
-	//Êı¾İ¿âÄ¿Â¼
+	//æ•°æ®åº“ç›®å½•
     public static final String DATABASE_PATH = LOCAL_DATA_PATH
 				+ "/database/";
 		
-	//Í·ÏñÂ·¾¶
+	//å¤´åƒè·¯å¾„
 	public static final String HEAD_PHOTO_DIR = LOCAL_DATA_PATH
 			+ "headphoto/";
 	
-	//Í¼Æ¬ÊÕ²Ø±£´æÂ·¾¶
+	//å›¾ç‰‡æ”¶è—ä¿å­˜è·¯å¾„
 	public static final String PICTURE_COLLECT_DIR = LOCAL_DATA_PATH
 			+ "collect/";
 	
-	//½ØÆÁÍ¼Æ¬±£´æµØÖ·
+	//æˆªå±å›¾ç‰‡ä¿å­˜åœ°å€
 	public static final String PICTURE_SCREENSHOT_DIR = LOCAL_DATA_PATH
 			+ "screenshot/";
 	
-	/* ÏÂÔØ°ü°²×°Â·¾¶ */
+	/* ä¸‹è½½åŒ…å®‰è£…è·¯å¾„ */
 	public static final String APK_PATH = LOCAL_DATA_PATH + "apk/";
 	
-	/* ÏÂÔØÎÄ¼şµÄÂ·¾¶ */
+	/* ä¸‹è½½æ–‡ä»¶çš„è·¯å¾„ */
 	public static final String DOWNLOAD_PATH = LOCAL_DATA_PATH + "download/";
 	
 	public static boolean existsSDCard() {
-		if (Environment.getExternalStorageState().equals(android.os.Environment.MEDIA_MOUNTED)) {// Èç¹ûSD¿¨´æÔÚ
+		if (Environment.getExternalStorageState().equals(android.os.Environment.MEDIA_MOUNTED)) {// å¦‚æœSDå¡å­˜åœ¨
 			return true;
 		} else {
 			return false;
@@ -57,7 +57,7 @@ public class LocalFileUtil {
 	}
 
 	/**
-	 * »ñÈ¡±¾µØÎÄ¼şµÄÊı¾İ
+	 * è·å–æœ¬åœ°æ–‡ä»¶çš„æ•°æ®
 	 * 
 	 * @param file
 	 * @return
@@ -82,7 +82,7 @@ public class LocalFileUtil {
 	}
 
 	/**
-	 * ¶ÁÈ¡×Ö½ÚÎÄ¼ş
+	 * è¯»å–å­—èŠ‚æ–‡ä»¶
 	 * 
 	 * @param pathName
 	 * @return
@@ -96,12 +96,12 @@ public class LocalFileUtil {
 	}
 
 	/**
-	 * ÏÂÔØÎÄ¼şµ½±¾µØÂ·¾¶fileÖĞ
+	 * ä¸‹è½½æ–‡ä»¶åˆ°æœ¬åœ°è·¯å¾„fileä¸­
 	 * 
 	 * @param file
-	 *            ±£´æµÄÂ·¾¶
+	 *            ä¿å­˜çš„è·¯å¾„
 	 * @param str
-	 *            Òª±£´æµÄ×Ö·û´®
+	 *            è¦ä¿å­˜çš„å­—ç¬¦ä¸²
 	 * @return
 	 */
 	public static boolean writeFile(File fileName, String str) {
@@ -123,7 +123,7 @@ public class LocalFileUtil {
 
 	public static boolean exisFile(File file) {
 		boolean exis = true;
-		if (!file.exists()) {// Èç¹û±¾µØÎÄ¼ş²»´æÔÚ£¬ÔòÏÂÔØ
+		if (!file.exists()) {// å¦‚æœæœ¬åœ°æ–‡ä»¶ä¸å­˜åœ¨ï¼Œåˆ™ä¸‹è½½
 			if (!file.getParentFile().exists()) {
 				file.getParentFile().mkdir();
 			}
@@ -134,9 +134,9 @@ public class LocalFileUtil {
 
 	
 	/**
-	 * ´ÓÒ»¸öÄ¿Â¼ÖĞÉ¾³ıÄ³¸öÎÄ¼ş
+	 * ä»ä¸€ä¸ªç›®å½•ä¸­åˆ é™¤æŸä¸ªæ–‡ä»¶
 	 * @param file
-	 * @param cmd Ìõ¼ş
+	 * @param cmd æ¡ä»¶
 	 */
 	public static boolean deleteFile(String path, String cmd){
 		boolean res = false;
@@ -148,7 +148,7 @@ public class LocalFileUtil {
 	}
 	
 	/**
-	 * É¾³ıÕû¸öÄ¿Â¼
+	 * åˆ é™¤æ•´ä¸ªç›®å½•
 	 * @param file
 	 * @return
 	 */
@@ -164,7 +164,7 @@ public class LocalFileUtil {
 	}
 	
 	/**
-	 * É¾³ıÄ¿Â¼ÖĞµÄÎÄ¼ş
+	 * åˆ é™¤ç›®å½•ä¸­çš„æ–‡ä»¶
 	 * @param path
 	 */
 	public static void deleteDirectory(String path){
@@ -186,8 +186,8 @@ public class LocalFileUtil {
 
 	
 	/**
-	 * »ñÈ¡µ¥¸öÎÄ¼şµÄjsonÎÄ¼ş
-	 * @param path ÎÄ¼şÂ·¾¶
+	 * è·å–å•ä¸ªæ–‡ä»¶çš„jsonæ–‡ä»¶
+	 * @param path æ–‡ä»¶è·¯å¾„
 	 * @return
 	 */
 	public static String getSingleFileData(String path){
@@ -197,7 +197,7 @@ public class LocalFileUtil {
 	}
 	
 	/**
-	 * ¶ÔÒ»¸öÎÄ¼ş½øĞĞBase64±àÂë
+	 * å¯¹ä¸€ä¸ªæ–‡ä»¶è¿›è¡ŒBase64ç¼–ç 
 	 * @param file
 	 * @return
 	 */
@@ -224,13 +224,13 @@ public class LocalFileUtil {
 	
 	
 	/**
-	 * »ñÈ¡Ò»¸öÄ¿Â¼ÖĞ×î³¤Ê±¼äÃ»ÓĞ±»¸Ä¶¯µÄÎÄ¼ş
+	 * è·å–ä¸€ä¸ªç›®å½•ä¸­æœ€é•¿æ—¶é—´æ²¡æœ‰è¢«æ”¹åŠ¨çš„æ–‡ä»¶
 	 * @param file
 	 */
 	public static File findOldFile(File file) {
 		File oldFile = file.listFiles()[0];
 		long modifiedTime = file.listFiles()[0].lastModified();
-		for (File f:file.listFiles()) {//ÕÒ³öĞŞ¸ÄÊ±¼ä×îĞ¡µÄÎÄ¼ş
+		for (File f:file.listFiles()) {//æ‰¾å‡ºä¿®æ”¹æ—¶é—´æœ€å°çš„æ–‡ä»¶
 			if(f.lastModified() < modifiedTime){
 				oldFile = f;
 			}
@@ -240,7 +240,7 @@ public class LocalFileUtil {
 	}
 	
 	/**
-	 * É¾³ıÒ»¸öÄ¿Â¼ÖĞµÄËùÓĞÎÄ¼ş
+	 * åˆ é™¤ä¸€ä¸ªç›®å½•ä¸­çš„æ‰€æœ‰æ–‡ä»¶
 	 * @param dir
 	 */
 	public static void deleteFileList(File dir){
@@ -252,7 +252,7 @@ public class LocalFileUtil {
 	}
 	
 	
-	 /** ÒÆ¶¯ÎÄ¼ş
+	 /** ç§»åŠ¨æ–‡ä»¶
 	 * @param src
 	 * @param dest
 	 */
@@ -292,7 +292,7 @@ public class LocalFileUtil {
 	}
 	
 	/**
-	 * »ñÈ¡Ò»¸öÎÄ±¾
+	 * è·å–ä¸€ä¸ªæ–‡æœ¬
 	 * @param inputStream
 	 * @return
 	 */

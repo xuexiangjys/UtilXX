@@ -13,7 +13,7 @@ import com.xuexiang.util.net.okhttp.callback.Callback;
 
 /**
  * Created by zhy on 15/12/15.
- * 对OkHttpRequest的封装，对外提供更多的接口：cancel(),readTimeOut()...
+ * 瀵筄kHttpRequest鐨勫皝瑁咃紝瀵瑰鎻愪緵鏇村鐨勬帴鍙ｏ細cancel(),readTimeOut()...
  */
 public class RequestCall
 {

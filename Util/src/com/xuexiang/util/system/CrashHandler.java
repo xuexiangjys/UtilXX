@@ -22,23 +22,23 @@ import com.xuexiang.util.data.DateUtils;
 import com.xuexiang.util.file.LocalFileUtil;
 
 /**
- * UncaughtException´¦ÀíÀà,µ±³ÌĞò·¢ÉúUncaughtÒì³£µÄÊ±ºò,ÓÉ¸ÃÀàÀ´½Ó¹Ü³ÌĞò,²¢¼ÇÂ¼·¢ËÍ´íÎó±¨¸æ.
+ * UncaughtExceptionå¤„ç†ç±»,å½“ç¨‹åºå‘ç”ŸUncaughtå¼‚å¸¸çš„æ—¶å€™,ç”±è¯¥ç±»æ¥æ¥ç®¡ç¨‹åº,å¹¶è®°å½•å‘é€é”™è¯¯æŠ¥å‘Š.
  * 
  */
 public class CrashHandler implements UncaughtExceptionHandler {
-	// ÏµÍ³Ä¬ÈÏµÄUncaughtException´¦ÀíÀà
+	// ç³»ç»Ÿé»˜è®¤çš„UncaughtExceptionå¤„ç†ç±»
 	private Thread.UncaughtExceptionHandler mDefaultHandler;
-	// CrashHandlerÊµÀı
+	// CrashHandlerå®ä¾‹
 	private static CrashHandler INSTANCE;
-	// ³ÌĞòµÄContext¶ÔÏó
+	// ç¨‹åºçš„Contextå¯¹è±¡
 	private Context mContext;
 
-	//±£Ö¤Ö»ÓĞÒ»¸öCrashHandlerÊµÀı 
+	//ä¿è¯åªæœ‰ä¸€ä¸ªCrashHandlerå®ä¾‹ 
 	private CrashHandler() {
 
 	}
 
-	//»ñÈ¡CrashHandlerÊµÀı ,µ¥ÀıÄ£Ê½
+	//è·å–CrashHandlerå®ä¾‹ ,å•ä¾‹æ¨¡å¼
 	public static CrashHandler getInstance() {
 		if (INSTANCE == null)
 			INSTANCE = new CrashHandler();
@@ -46,34 +46,34 @@ public class CrashHandler implements UncaughtExceptionHandler {
 	}
 
 	/**
-	 * ³õÊ¼»¯
+	 * åˆå§‹åŒ–
 	 * 
 	 * @param context
 	 */
 	public void init(Context context) {
 		mContext = context;
-		// »ñÈ¡ÏµÍ³Ä¬ÈÏµÄUncaughtException´¦ÀíÆ÷
+		// è·å–ç³»ç»Ÿé»˜è®¤çš„UncaughtExceptionå¤„ç†å™¨
 		mDefaultHandler = Thread.getDefaultUncaughtExceptionHandler();
-		// ÉèÖÃ¸ÃCrashHandlerÎª³ÌĞòµÄÄ¬ÈÏ´¦ÀíÆ÷
+		// è®¾ç½®è¯¥CrashHandlerä¸ºç¨‹åºçš„é»˜è®¤å¤„ç†å™¨
 		Thread.setDefaultUncaughtExceptionHandler(this);
 	}
 
 	/**
-	 * µ±UncaughtException·¢ÉúÊ±»á×ªÈë¸ÃÖØĞ´µÄ·½·¨À´´¦Àí
+	 * å½“UncaughtExceptionå‘ç”Ÿæ—¶ä¼šè½¬å…¥è¯¥é‡å†™çš„æ–¹æ³•æ¥å¤„ç†
 	 */
 	public void uncaughtException(Thread thread, Throwable ex) {
 		if (!handleException(ex) && mDefaultHandler != null) {
-			// Èç¹û×Ô¶¨ÒåµÄÃ»ÓĞ´¦ÀíÔòÈÃÏµÍ³Ä¬ÈÏµÄÒì³£´¦ÀíÆ÷À´´¦Àí
+			// å¦‚æœè‡ªå®šä¹‰çš„æ²¡æœ‰å¤„ç†åˆ™è®©ç³»ç»Ÿé»˜è®¤çš„å¼‚å¸¸å¤„ç†å™¨æ¥å¤„ç†
 			mDefaultHandler.uncaughtException(thread, ex);
 		}
 	}
 
 	/**
-	 * ×Ô¶¨Òå´íÎó´¦Àí,ÊÕ¼¯´íÎóĞÅÏ¢ ·¢ËÍ´íÎó±¨¸æµÈ²Ù×÷¾ùÔÚ´ËÍê³É.
+	 * è‡ªå®šä¹‰é”™è¯¯å¤„ç†,æ”¶é›†é”™è¯¯ä¿¡æ¯ å‘é€é”™è¯¯æŠ¥å‘Šç­‰æ“ä½œå‡åœ¨æ­¤å®Œæˆ.
 	 * 
 	 * @param ex
-	 *            Òì³£ĞÅÏ¢
-	 * @return true Èç¹û´¦ÀíÁË¸ÃÒì³£ĞÅÏ¢;·ñÔò·µ»Øfalse.
+	 *            å¼‚å¸¸ä¿¡æ¯
+	 * @return true å¦‚æœå¤„ç†äº†è¯¥å¼‚å¸¸ä¿¡æ¯;å¦åˆ™è¿”å›false.
 	 */
 	public boolean handleException(Throwable ex) {
 		if (ex == null || mContext == null)
@@ -108,7 +108,7 @@ public class CrashHandler implements UncaughtExceptionHandler {
 				fos.close();
 				return file;
 			} catch (Exception e) {
-				//sd¿¨´æ´¢£¬¼ÇµÃ¼ÓÉÏÈ¨ÏŞ£¬²»È»ÕâÀï»áÅ×³öÒì³£
+				//sdå¡å­˜å‚¨ï¼Œè®°å¾—åŠ ä¸Šæƒé™ï¼Œä¸ç„¶è¿™é‡Œä¼šæŠ›å‡ºå¼‚å¸¸
 				Log.i("Show","save2File error:" + e.getMessage());
 			}
 		}
@@ -119,29 +119,29 @@ public class CrashHandler implements UncaughtExceptionHandler {
 			final String crashReport, final File file) {
 		AlertDialog.Builder builder = new AlertDialog.Builder(context)
 		.setIcon(android.R.drawable.ic_dialog_info)
-		.setTitle("Ó¦ÓÃ³ÌĞò´íÎó")
-		.setMessage("ºÜ±§Ç¸£¬Ó¦ÓÃ³ÌĞò³öÏÖ´íÎó£¬¼´½«ÍË³ö¡£\nÇëÑ¡ÔñÓÊ¼şµÄ·½Ê½½«´Ë´íÎó±¨¸æÌá½»¸øÎÒ£¬ÎÒ»á¾¡¿ìĞŞ¸´Õâ¸öÎÊÌâ£¬Ğ»Ğ»£¡")
-		.setPositiveButton("Ìá½»±¨¸æ",
+		.setTitle("åº”ç”¨ç¨‹åºé”™è¯¯")
+		.setMessage("å¾ˆæŠ±æ­‰ï¼Œåº”ç”¨ç¨‹åºå‡ºç°é”™è¯¯ï¼Œå³å°†é€€å‡ºã€‚\nè¯·é€‰æ‹©é‚®ä»¶çš„æ–¹å¼å°†æ­¤é”™è¯¯æŠ¥å‘Šæäº¤ç»™æˆ‘ï¼Œæˆ‘ä¼šå°½å¿«ä¿®å¤è¿™ä¸ªé—®é¢˜ï¼Œè°¢è°¢ï¼")
+		.setPositiveButton("æäº¤æŠ¥å‘Š",
 				new DialogInterface.OnClickListener() {
 					public void onClick(DialogInterface dialog, int which) {
 						try {
 
-							//ÕâÒÔÏÂµÄÄÚÈİ£¬Ö»×ö²Î¿¼£¬ÒòÎªÃ»ÓĞ·şÎñÆ÷
+							//è¿™ä»¥ä¸‹çš„å†…å®¹ï¼Œåªåšå‚è€ƒï¼Œå› ä¸ºæ²¡æœ‰æœåŠ¡å™¨
 							Intent intent = new Intent(Intent.ACTION_SEND);
 							intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 							String[] tos = { "way.ping.li@gmail.com" };
 							intent.putExtra(Intent.EXTRA_EMAIL, tos);
 
 							intent.putExtra(Intent.EXTRA_SUBJECT,
-									"Android¿Í»§¶Ë - ´íÎó±¨¸æ");
+									"Androidå®¢æˆ·ç«¯ - é”™è¯¯æŠ¥å‘Š");
 							if (file != null) {
 								intent.putExtra(Intent.EXTRA_STREAM,
 										Uri.fromFile(file));
 								intent.putExtra(Intent.EXTRA_TEXT,
-										"Çë½«´Ë´íÎó±¨¸æ·¢ËÍ¸øÎÒ£¬ÒÔ±ãÎÒ¾¡¿ìĞŞ¸´´ËÎÊÌâ£¬Ğ»Ğ»ºÏ×÷£¡\n");
+										"è¯·å°†æ­¤é”™è¯¯æŠ¥å‘Šå‘é€ç»™æˆ‘ï¼Œä»¥ä¾¿æˆ‘å°½å¿«ä¿®å¤æ­¤é—®é¢˜ï¼Œè°¢è°¢åˆä½œï¼\n");
 							} else {
 								intent.putExtra(Intent.EXTRA_TEXT,
-										"Çë½«´Ë´íÎó±¨¸æ·¢ËÍ¸øÎÒ£¬ÒÔ±ãÎÒ¾¡¿ìĞŞ¸´´ËÎÊÌâ£¬Ğ»Ğ»ºÏ×÷£¡\n"
+										"è¯·å°†æ­¤é”™è¯¯æŠ¥å‘Šå‘é€ç»™æˆ‘ï¼Œä»¥ä¾¿æˆ‘å°½å¿«ä¿®å¤æ­¤é—®é¢˜ï¼Œè°¢è°¢åˆä½œï¼\n"
 												+ crashReport);
 							}
 							intent.setType("text/plain");
@@ -153,7 +153,7 @@ public class CrashHandler implements UncaughtExceptionHandler {
 							Log.i("Show","error:" + e.getMessage());
 						} finally {
 							dialog.dismiss();
-							// ÍË³ö
+							// é€€å‡º
 							android.os.Process.killProcess(android.os.Process.myPid());
 							System.exit(1);
 						}
@@ -163,20 +163,20 @@ public class CrashHandler implements UncaughtExceptionHandler {
 				new DialogInterface.OnClickListener() {
 					public void onClick(DialogInterface dialog, int which) {
 						dialog.dismiss();
-						// ÍË³ö
+						// é€€å‡º
 						android.os.Process.killProcess(android.os.Process.myPid());
 						System.exit(1);
 					}
 				});
 		
 		AlertDialog dialog = builder.create();
-		//ĞèÒªµÄ´°¿Ú¾ä±ú·½Ê½£¬Ã»ÓĞÕâ¾ä»á±¨´íµÄ
+		//éœ€è¦çš„çª—å£å¥æŸ„æ–¹å¼ï¼Œæ²¡æœ‰è¿™å¥ä¼šæŠ¥é”™çš„
         dialog.getWindow().setType(WindowManager.LayoutParams.TYPE_SYSTEM_ALERT);
 		dialog.show();
 	}
 
 	/**
-	 * »ñÈ¡APP±ÀÀ£Òì³£±¨¸æ
+	 * è·å–APPå´©æºƒå¼‚å¸¸æŠ¥å‘Š
 	 * 
 	 * @param ex
 	 * @return
@@ -197,7 +197,7 @@ public class CrashHandler implements UncaughtExceptionHandler {
 	}
 
 	/**
-	 * »ñÈ¡App°²×°°üĞÅÏ¢
+	 * è·å–Appå®‰è£…åŒ…ä¿¡æ¯
 	 * 
 	 * @return
 	 */

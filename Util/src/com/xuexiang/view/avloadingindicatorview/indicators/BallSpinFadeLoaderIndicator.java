@@ -86,8 +86,8 @@ public class BallSpinFadeLoaderIndicator extends Indicator {
     }
 
     /**
-     * 圆O的圆心为(a,b),半径为R,点A与到X轴的为角α.
-     *则点A的坐标为(a+R*cosα,b+R*sinα)
+     * 鍦哋鐨勫渾蹇冧负(a,b),鍗婂緞涓篟,鐐笰涓庡埌X杞寸殑涓鸿伪.
+     *鍒欑偣A鐨勫潗鏍囦负(a+R*cos伪,b+R*sin伪)
      * @param width
      * @param height
      * @param radius

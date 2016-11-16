@@ -8,11 +8,11 @@ import java.util.Map;
 
 
 /**  
- * ´´½¨Ê±¼ä£º2016-6-5 ÏÂÎç2:15:25   
+ * åˆ›å»ºæ—¶é—´ï¼š2016-6-5 ä¸‹åˆ2:15:25   
  * @author xuexiang 
  **/
 public class BaseTagSubject implements ITagSubject {
-	//´æ·ÅÊı¾İ¹Û²ìÕß¼¯ºÏ
+	//å­˜æ”¾æ•°æ®è§‚å¯Ÿè€…é›†åˆ
     private Map<WeakReference<ITagObserver>, List<String>> mObservers = new HashMap<WeakReference<ITagObserver>, List<String>>();
 
 	@Override

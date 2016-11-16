@@ -64,7 +64,7 @@ public class GestureContentView extends ViewGroup {
 	}
 	
 	/*
-	 * 设置子view的位置
+	 * 璁剧疆瀛恦iew鐨勪綅缃�
 	 */
 	@Override
 	protected void onLayout(boolean changed, int l, int t, int r, int b) {

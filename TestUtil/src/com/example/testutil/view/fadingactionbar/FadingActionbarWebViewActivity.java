@@ -37,7 +37,7 @@ public class FadingActionbarWebViewActivity extends ActionBarActivity {
         setContentView(helper.createView(this));
         helper.initActionBar(this);
 
-       //上面和其他的一样，只不过这里面的界面是webview
+       //涓婇潰鍜屽叾浠栫殑涓�鏍凤紝鍙笉杩囪繖閲岄潰鐨勭晫闈㈡槸webview
         WebView webView = (WebView) findViewById(R.id.webView);
         webView.setWebViewClient(new WebViewClient());
         webView.loadUrl("https://www.baidu.com/");

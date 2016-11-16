@@ -14,11 +14,11 @@ import com.example.testutil.R;
 import com.xuexiang.view.guideview.UserGuideView;
 
 /**
- * ÃèÊö£º
+ * æè¿°ï¼š
  * Created by xx on 2015-11-26.
  */
 public class UserGuideViewActivity extends Activity {
-    private String[] datas = new String[]{"ÊÕ²Ø","×ÖÌå´óĞ¡","Èí¼şÉèÖÃ","»»·ô"};
+    private String[] datas = new String[]{"æ”¶è—","å­—ä½“å¤§å°","è½¯ä»¶è®¾ç½®","æ¢è‚¤"};
     GridView mGridView;
     private UserGuideView guideView;
     private ImageView icon;

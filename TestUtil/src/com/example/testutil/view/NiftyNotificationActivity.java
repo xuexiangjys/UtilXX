@@ -19,7 +19,7 @@ public class NiftyNotificationActivity extends Activity {
 
 	public void showNotify(View v) {
 
-		String msg = "Today we’d like to share a couple of simple styles and effects for android notifications.";
+		String msg = "Today we鈥檇 like to share a couple of simple styles and effects for android notifications.";
 
 		switch (v.getId()) {
 		case R.id.scale:

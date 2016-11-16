@@ -15,34 +15,34 @@ import com.xuexiang.util.resource.ResourceUtils;
 
 public class LoadingButton extends View{
 
-    /** Ô²»·±³¾°µÄ»­±Ê **/
+    /** åœ†ç¯èƒŒæ™¯çš„ç”»ç¬” **/
     private Paint mCirclePaint;
-    /** Ô²»·½ø¶ÈÌõµÄ»­±Ê **/
+    /** åœ†ç¯è¿›åº¦æ¡çš„ç”»ç¬” **/
     private Paint mArcPaint;
-    /** Ô²ĞÎÊµĞÄ±³¾°µÄ»­±Ê **/
+    /** åœ†å½¢å®å¿ƒèƒŒæ™¯çš„ç”»ç¬” **/
     private Paint mFillCirclePaint;
-    /** ViewµÄ¿í¶È **/
+    /** Viewçš„å®½åº¦ **/
     private int width;
-    /** ViewµÄ¸ß¶È£¬ÕâÀïViewÓ¦¸ÃÊÇÕı·½ĞÎ£¬ËùÒÔ¿í¸ßÊÇÒ»ÑùµÄ **/
+    /** Viewçš„é«˜åº¦ï¼Œè¿™é‡ŒViewåº”è¯¥æ˜¯æ­£æ–¹å½¢ï¼Œæ‰€ä»¥å®½é«˜æ˜¯ä¸€æ ·çš„ **/
     private int height;
-    /** ViewµÄÖĞĞÄ×ø±êx **/
+    /** Viewçš„ä¸­å¿ƒåæ ‡x **/
     private int centerX;
-    /** ViewµÄÖĞĞÄ×ø±êy **/
+    /** Viewçš„ä¸­å¿ƒåæ ‡y **/
     private int centerY;
-    /** ÊÇ·ñÏÔÊ¾Ğı×ªµÄÔ²»· **/
+    /** æ˜¯å¦æ˜¾ç¤ºæ—‹è½¬çš„åœ†ç¯ **/
     private boolean isShowArc = false;
-    /** ÊÇ·ñÎªÊ×´Î»æÖÆ **/
+    /** æ˜¯å¦ä¸ºé¦–æ¬¡ç»˜åˆ¶ **/
     private boolean isDefaultDraw = true;
     private int drawableWidth;
-    /** ÊÇ·ñÔÚ»æÖÆcompleteDrawable **/
+    /** æ˜¯å¦åœ¨ç»˜åˆ¶completeDrawable **/
     private boolean isDrawableStart = false;
-    /** ÊÇ·ñ´¦ÓÚÍê³É×´Ì¬ **/
+    /** æ˜¯å¦å¤„äºå®ŒæˆçŠ¶æ€ **/
     private boolean isCompleted = false;
-    /** ÓÃÓÚÕ¹Ê¾icon **/
+    /** ç”¨äºå±•ç¤ºicon **/
     private Drawable mCommonDrawable;
-    /** Íê³ÉÊ±µÄDrawable **/
+    /** å®Œæˆæ—¶çš„Drawable **/
     private Drawable mCompleteDrawable;
-    /** Õ¹Ê¾iconµÄÄ¬ÈÏ¿í¶È **/
+    /** å±•ç¤ºiconçš„é»˜è®¤å®½åº¦ **/
     private int defaultCommonDrawableWidth;
 
     public LoadingButton(Context context) {

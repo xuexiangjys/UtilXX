@@ -5,7 +5,7 @@ import java.util.Map;
 
 /**
  * @author ZhiCheng Guo
- * @version 2014Äê10ÔÂ7ÈÕ ÉÏÎç11:04:36
+ * @version 2014å¹´10æœˆ7æ—¥ ä¸Šåˆ11:04:36
  */
 public interface MultiPartRequest {
 

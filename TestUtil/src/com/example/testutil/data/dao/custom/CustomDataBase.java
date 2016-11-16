@@ -38,8 +38,8 @@ public class CustomDataBase implements ICustomDataBase {
 
 	@Override
 	public void onUpgrade(SQLiteDatabase database, ConnectionSource connectionSource, int oldVersion, int newVersion) {
-		Log.i("xx", "数据库旧版本=======" + oldVersion);
-		Log.i("xx", "数据库新版本=======" + newVersion);
+		Log.i("xx", "鏁版嵁搴撴棫鐗堟湰=======" + oldVersion);
+		Log.i("xx", "鏁版嵁搴撴柊鐗堟湰=======" + newVersion);
 	}
 
 	@Override

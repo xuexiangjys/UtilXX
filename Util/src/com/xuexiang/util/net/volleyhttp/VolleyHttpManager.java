@@ -16,10 +16,10 @@ import com.xuexiang.app.BaseApplication;
 
 
 /**  
- * ´´½¨Ê±¼ä£º2016-5-16 ÏÂÎç9:13:59  
- * ÏîÄ¿Ãû³Æ£ºVolleyDemo  
+ * åˆ›å»ºæ—¶é—´ï¼š2016-5-16 ä¸‹åˆ9:13:59  
+ * é¡¹ç›®åç§°ï¼šVolleyDemo  
  * @author xuexiang
- * ÎÄ¼şÃû³Æ£ºHttpGsonRequest.java  
+ * æ–‡ä»¶åç§°ï¼šHttpGsonRequest.java  
  **/
 public class VolleyHttpManager<T> {
 	
@@ -47,13 +47,13 @@ public class VolleyHttpManager<T> {
 	}
 	
 	
-/****************************************************·µ»ØµÄÊÇÒ»¸öÀà¶ÔÏó************************************************************************************************************************/	
+/****************************************************è¿”å›çš„æ˜¯ä¸€ä¸ªç±»å¯¹è±¡************************************************************************************************************************/	
 	/**
-	 * »ñÈ¡·µ»ØÎªÊµÌåÀàµÄÇëÇó·½·¨
-	 * @param requestMode ÇëÇó·½Ê½
-	 * @param url ÇëÇó·şÎñµØÖ·
-	 * @param httpSuccess ÇëÇó³É¹¦µÄÏìÓ¦
-	 * @param httpError ÇëÇóÊ§°ÜµÄÏìÓ¦
+	 * è·å–è¿”å›ä¸ºå®ä½“ç±»çš„è¯·æ±‚æ–¹æ³•
+	 * @param requestMode è¯·æ±‚æ–¹å¼
+	 * @param url è¯·æ±‚æœåŠ¡åœ°å€
+	 * @param httpSuccess è¯·æ±‚æˆåŠŸçš„å“åº”
+	 * @param httpError è¯·æ±‚å¤±è´¥çš„å“åº”
 	 * @return
 	 */
 	public void httpClassRequest(int requestMode, String url, Listener<T> listener,ErrorListener errorlistener) {
@@ -62,10 +62,10 @@ public class VolleyHttpManager<T> {
 	
 	
 	/**
-	 * @param requestMode ÇëÇó·½Ê½
-	 * @param url ÇëÇó·şÎñµØÖ·
-	 * @param httpSuccess ÇëÇó³É¹¦µÄÏìÓ¦
-	 * @param httpError ÇëÇóÊ§°ÜµÄÏìÓ¦
+	 * @param requestMode è¯·æ±‚æ–¹å¼
+	 * @param url è¯·æ±‚æœåŠ¡åœ°å€
+	 * @param httpSuccess è¯·æ±‚æˆåŠŸçš„å“åº”
+	 * @param httpError è¯·æ±‚å¤±è´¥çš„å“åº”
 	 * @return
 	 */
 	public GsonRequest<T> getHttpRequest(int requestMode, String url, Listener<T> listener,ErrorListener errorlistener) {
@@ -73,11 +73,11 @@ public class VolleyHttpManager<T> {
 	}
 	
 	/**
-	 * @param requestMode ÇëÇó·½Ê½
-	 * @param url ÇëÇó·şÎñµØÖ·
-	 * @param httpSuccess ÇëÇó³É¹¦µÄÏìÓ¦
-	 * @param httpError ÇëÇóÊ§°ÜµÄÏìÓ¦
-	 * @param Tag ÇëÇó±êÖ¾
+	 * @param requestMode è¯·æ±‚æ–¹å¼
+	 * @param url è¯·æ±‚æœåŠ¡åœ°å€
+	 * @param httpSuccess è¯·æ±‚æˆåŠŸçš„å“åº”
+	 * @param httpError è¯·æ±‚å¤±è´¥çš„å“åº”
+	 * @param Tag è¯·æ±‚æ ‡å¿—
 	 * @return
 	 */
 	public GsonRequest<T> getTagHttpRequest(int requestMode, String url, Listener<T> listener, ErrorListener errorlistener, Object Tag) {
@@ -96,15 +96,15 @@ public class VolleyHttpManager<T> {
         return httpRequest;
 	}
 	
-/****************************************************·µ»ØµÄÊÇÒ»¸ö×Ö·û´®************************************************************************************************************************/		
+/****************************************************è¿”å›çš„æ˜¯ä¸€ä¸ªå­—ç¬¦ä¸²************************************************************************************************************************/		
 	
 	
 	/**
-	 * »ñÈ¡·µ»ØÎªÊµÌåÀàµÄÇëÇó·½·¨
-	 * @param requestMode ÇëÇó·½Ê½
-	 * @param url ÇëÇó·şÎñµØÖ·
-	 * @param httpSuccess ÇëÇó³É¹¦µÄÏìÓ¦
-	 * @param httpError ÇëÇóÊ§°ÜµÄÏìÓ¦
+	 * è·å–è¿”å›ä¸ºå®ä½“ç±»çš„è¯·æ±‚æ–¹æ³•
+	 * @param requestMode è¯·æ±‚æ–¹å¼
+	 * @param url è¯·æ±‚æœåŠ¡åœ°å€
+	 * @param httpSuccess è¯·æ±‚æˆåŠŸçš„å“åº”
+	 * @param httpError è¯·æ±‚å¤±è´¥çš„å“åº”
 	 * @return
 	 */
 	public void httpStringRequest(int requestMode, String url, Listener<String> listener,ErrorListener errorlistener) {
@@ -113,10 +113,10 @@ public class VolleyHttpManager<T> {
 	
 	
 	/**
-	 * @param requestMode ÇëÇó·½Ê½
-	 * @param url ÇëÇó·şÎñµØÖ·
-	 * @param httpSuccess ÇëÇó³É¹¦µÄÏìÓ¦
-	 * @param httpError ÇëÇóÊ§°ÜµÄÏìÓ¦
+	 * @param requestMode è¯·æ±‚æ–¹å¼
+	 * @param url è¯·æ±‚æœåŠ¡åœ°å€
+	 * @param httpSuccess è¯·æ±‚æˆåŠŸçš„å“åº”
+	 * @param httpError è¯·æ±‚å¤±è´¥çš„å“åº”
 	 * @return
 	 */
 	public StringRequest getStringHttpRequest(int requestMode, String url, Listener<String> listener,ErrorListener errorlistener) {
@@ -124,11 +124,11 @@ public class VolleyHttpManager<T> {
 	}
 		
 	/**
-	 * »ñÈ¡·µ»ØÎªString×Ö·û´®µÄÇëÇó·½·¨
-	 * @param requestMode ÇëÇó·½Ê½
-	 * @param url ÇëÇó·şÎñµØÖ·
-	 * @param httpSuccess ÇëÇó³É¹¦µÄÏìÓ¦
-	 * @param httpError ÇëÇóÊ§°ÜµÄÏìÓ¦
+	 * è·å–è¿”å›ä¸ºStringå­—ç¬¦ä¸²çš„è¯·æ±‚æ–¹æ³•
+	 * @param requestMode è¯·æ±‚æ–¹å¼
+	 * @param url è¯·æ±‚æœåŠ¡åœ°å€
+	 * @param httpSuccess è¯·æ±‚æˆåŠŸçš„å“åº”
+	 * @param httpError è¯·æ±‚å¤±è´¥çš„å“åº”
 	 * @return
 	 */
 	public StringRequest getTagStringHttpRequest(int requestMode, String url, Listener<String> listener, ErrorListener errorlistener, Object Tag) {
@@ -148,14 +148,14 @@ public class VolleyHttpManager<T> {
 	}
 	
 	
-/****************************************************·µ»ØµÄÊÇÒ»¸öJSONObject************************************************************************************************************************/		
+/****************************************************è¿”å›çš„æ˜¯ä¸€ä¸ªJSONObject************************************************************************************************************************/		
 	
 	/**
-	 * »ñÈ¡·µ»ØÎªÊµÌåÀàµÄÇëÇó·½·¨
-	 * @param requestMode ÇëÇó·½Ê½
-	 * @param url ÇëÇó·şÎñµØÖ·
-	 * @param httpSuccess ÇëÇó³É¹¦µÄÏìÓ¦
-	 * @param httpError ÇëÇóÊ§°ÜµÄÏìÓ¦
+	 * è·å–è¿”å›ä¸ºå®ä½“ç±»çš„è¯·æ±‚æ–¹æ³•
+	 * @param requestMode è¯·æ±‚æ–¹å¼
+	 * @param url è¯·æ±‚æœåŠ¡åœ°å€
+	 * @param httpSuccess è¯·æ±‚æˆåŠŸçš„å“åº”
+	 * @param httpError è¯·æ±‚å¤±è´¥çš„å“åº”
 	 * @return
 	 */
 	public void httpJsonObjectRequest(int requestMode, String url, Listener<JSONObject> listener, ErrorListener errorlistener) {
@@ -164,10 +164,10 @@ public class VolleyHttpManager<T> {
 	
 	
 	/**
-	 * @param requestMode ÇëÇó·½Ê½
-	 * @param url ÇëÇó·şÎñµØÖ·
-	 * @param httpSuccess ÇëÇó³É¹¦µÄÏìÓ¦
-	 * @param httpError ÇëÇóÊ§°ÜµÄÏìÓ¦
+	 * @param requestMode è¯·æ±‚æ–¹å¼
+	 * @param url è¯·æ±‚æœåŠ¡åœ°å€
+	 * @param httpSuccess è¯·æ±‚æˆåŠŸçš„å“åº”
+	 * @param httpError è¯·æ±‚å¤±è´¥çš„å“åº”
 	 * @return
 	 */
 	public MyJsonObjectRequest getJsonObjectHttpRequest(int requestMode, String url, Listener<JSONObject> listener, ErrorListener errorlistener) {
@@ -175,11 +175,11 @@ public class VolleyHttpManager<T> {
 	}
 	
 	/**
-	 * »ñÈ¡·µ»ØÎªString×Ö·û´®µÄÇëÇó·½·¨
-	 * @param requestMode ÇëÇó·½Ê½
-	 * @param url ÇëÇó·şÎñµØÖ·
-	 * @param httpSuccess ÇëÇó³É¹¦µÄÏìÓ¦
-	 * @param httpError ÇëÇóÊ§°ÜµÄÏìÓ¦
+	 * è·å–è¿”å›ä¸ºStringå­—ç¬¦ä¸²çš„è¯·æ±‚æ–¹æ³•
+	 * @param requestMode è¯·æ±‚æ–¹å¼
+	 * @param url è¯·æ±‚æœåŠ¡åœ°å€
+	 * @param httpSuccess è¯·æ±‚æˆåŠŸçš„å“åº”
+	 * @param httpError è¯·æ±‚å¤±è´¥çš„å“åº”
 	 * @return
 	 */
 	public MyJsonObjectRequest getTagJsonObjectHttpRequest(int requestMode, String url, Listener<JSONObject> listener, ErrorListener errorlistener, Object Tag) {

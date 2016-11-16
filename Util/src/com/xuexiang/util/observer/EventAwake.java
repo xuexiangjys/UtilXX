@@ -7,7 +7,7 @@ import java.util.Map;
 
 /**
  * Created by xx on 2016/1/19.
- * similar EventBus£¬notify operation when message change
+ * similar EventBusï¼Œnotify operation when message change
  */
 public class EventAwake {
 

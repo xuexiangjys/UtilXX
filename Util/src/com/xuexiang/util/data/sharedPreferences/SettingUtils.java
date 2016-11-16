@@ -27,7 +27,7 @@ import android.content.SharedPreferences.Editor;
 import android.preference.PreferenceManager;
 
 /**
- * Ó¦ÓÃÅäÖÃ¹¤¾ßÀà
+ * åº”ç”¨é…ç½®å·¥å…·ç±»
  *
  * @author jingle1267@163.com
  */

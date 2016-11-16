@@ -19,7 +19,7 @@ import com.j256.ormlite.stmt.UpdateBuilder;
 import com.j256.ormlite.support.DatabaseConnection;
 
 /**
- * Êı¾İ±í²Ù×÷Àà
+ * æ•°æ®è¡¨æ“ä½œç±»
  */
 public class DBService<T> {
     private Context mContext;
@@ -31,9 +31,9 @@ public class DBService<T> {
 	/**
 	 * @param context
 	 * @param clazz
-	 * @param databaseName  Êı¾İ¿âÃû
-	 * @param databaseVersion Êı¾İ¿â°æ±¾ºÅ
-	 * @param idatabase db²Ù×÷½Ó¿Ú
+	 * @param databaseName  æ•°æ®åº“å
+	 * @param databaseVersion æ•°æ®åº“ç‰ˆæœ¬å·
+	 * @param idatabase dbæ“ä½œæ¥å£
 	 * @throws SQLException
 	 */
 	public DBService(Context context, Class<T> clazz, String databaseName, int databaseVersion, IDataBase idatabase) throws SQLException  {
@@ -44,9 +44,9 @@ public class DBService<T> {
 		}
 	}
 
-	/*************************************************²åÈë**********************************************/
+	/*************************************************æ’å…¥**********************************************/
 	/**
-	 * ²åÈëµ¥ÌõÊı¾İ
+	 * æ’å…¥å•æ¡æ•°æ®
 	 * @param object
 	 * @return
 	 * @throws SQLException
@@ -56,7 +56,7 @@ public class DBService<T> {
 	}
 	
 	/**
-	 * ²åÈëµ¥ÌõÊı¾İ(·µ»Ø±»²åÈëµÄ¶ÔÏó£©
+	 * æ’å…¥å•æ¡æ•°æ®(è¿”å›è¢«æ’å…¥çš„å¯¹è±¡ï¼‰
 	 * @param object
 	 * @return
 	 * @throws SQLException
@@ -66,7 +66,7 @@ public class DBService<T> {
 	}
 	
 	/**
-	 * ÅúÁ¿Ìí¼Ó
+	 * æ‰¹é‡æ·»åŠ 
 	 * @param collection
 	 * @return
 	 * @throws SQLException
@@ -76,9 +76,9 @@ public class DBService<T> {
 
 	}
 
-/*************************************************²éÑ¯**********************************************/
+/*************************************************æŸ¥è¯¢**********************************************/
 	/**
-	 * Ê¹ÓÃµü´úÆ÷²éÑ¯ËùÓĞ
+	 * ä½¿ç”¨è¿­ä»£å™¨æŸ¥è¯¢æ‰€æœ‰
 	 * @return
 	 * @throws IOException
 	 */
@@ -98,7 +98,7 @@ public class DBService<T> {
 	}
 	
 	/**
-	 * ²éÑ¯ËùÓĞµÄÊı¾İ
+	 * æŸ¥è¯¢æ‰€æœ‰çš„æ•°æ®
 	 * @return
 	 * @throws IOException
 	 * @throws SQLException
@@ -108,10 +108,10 @@ public class DBService<T> {
 	}
 	
 	/**
-	 * ÎŞÌõ¼şÅÅĞò²éÑ¯
-	 * ·µ»ØÒ»¸ö¶ÔÏó¼¯ºÏ
-	 * @param columnName ÅÅĞòµÄÁĞÃû
-	 * @param ascending true:ÉıĞò£¬false£º½µĞò
+	 * æ— æ¡ä»¶æ’åºæŸ¥è¯¢
+	 * è¿”å›ä¸€ä¸ªå¯¹è±¡é›†åˆ
+	 * @param columnName æ’åºçš„åˆ—å
+	 * @param ascending true:å‡åºï¼Œfalseï¼šé™åº
 	 * @return
 	 * @throws SQLException
 	 */
@@ -120,10 +120,10 @@ public class DBService<T> {
 	}
 	
 	/**
-	 * ÎŞÌõ¼şÅÅĞò²éÑ¯
-	 * ·µ»ØÒ»¸ö¶ÔÏó¼¯ºÏ
-	 * @param columnName ÅÅĞòµÄÁĞÃû
-	 * @param ascending true:ÉıĞò£¬false£º½µĞò
+	 * æ— æ¡ä»¶æ’åºæŸ¥è¯¢
+	 * è¿”å›ä¸€ä¸ªå¯¹è±¡é›†åˆ
+	 * @param columnName æ’åºçš„åˆ—å
+	 * @param ascending true:å‡åºï¼Œfalseï¼šé™åº
 	 * @return
 	 * @throws SQLException
 	 */
@@ -132,7 +132,7 @@ public class DBService<T> {
 	}
 	
 	/**
-	 * ¸ù¾İid²éÑ¯³öÒ»ÌõÊı¾İ
+	 * æ ¹æ®idæŸ¥è¯¢å‡ºä¸€æ¡æ•°æ®
 	 * @param id
 	 * @return
 	 * @throws SQLException
@@ -142,7 +142,7 @@ public class DBService<T> {
 	}
 	
 	/**
-	 * ¸ù¾İid²éÑ¯³öÒ»ÌõÊı¾İ
+	 * æ ¹æ®idæŸ¥è¯¢å‡ºä¸€æ¡æ•°æ®
 	 * @param id
 	 * @return
 	 * @throws SQLException
@@ -152,62 +152,62 @@ public class DBService<T> {
 	}
 	
 	/**
-	 * ¸ù¾İÌõ¼ş²éÑ¯(Ò»¸öÌõ¼ş)
-	 * ·µ»ØÒ»¸ö¶ÔÏó¼¯ºÏ
+	 * æ ¹æ®æ¡ä»¶æŸ¥è¯¢(ä¸€ä¸ªæ¡ä»¶)
+	 * è¿”å›ä¸€ä¸ªå¯¹è±¡é›†åˆ
 	 */
 	public List<T> queryByField(String fieldName,Object value) throws SQLException{
 		return mDao.queryForEq(fieldName, value);
 	}
 	
 	/**
-	 * ¸ù¾İÌõ¼ş²éÑ¯(Ò»¸öÌõ¼ş)
-	 * ·µ»ØÒ»¸ö¶ÔÏó¼¯ºÏ
+	 * æ ¹æ®æ¡ä»¶æŸ¥è¯¢(ä¸€ä¸ªæ¡ä»¶)
+	 * è¿”å›ä¸€ä¸ªå¯¹è±¡é›†åˆ
 	 */
 	public List<T> queryByField(Map<String, Object> clause) throws SQLException {
 		return mDao.queryForFieldValuesArgs(clause);
 	}
 	/**
-	 * ¸ù¾İÌõ¼ş²éÑ¯(Ò»¸öÌõ¼ş)
-	 * ·µ»ØÒ»¸ö¶ÔÏó¼¯ºÏ
+	 * æ ¹æ®æ¡ä»¶æŸ¥è¯¢(ä¸€ä¸ªæ¡ä»¶)
+	 * è¿”å›ä¸€ä¸ªå¯¹è±¡é›†åˆ
 	 */
 	public List<T> queryByColumn(String columnName, Object value) throws SQLException {
 		return mDao.queryBuilder().where().eq(columnName, value).query();
 	}
 	
 	/**
-	 * ¸ù¾İÌõ¼ş²éÑ¯(Ò»¸öÌõ¼ş)
-	 * ·µ»ØÒ»¸ö¶ÔÏó
+	 * æ ¹æ®æ¡ä»¶æŸ¥è¯¢(ä¸€ä¸ªæ¡ä»¶)
+	 * è¿”å›ä¸€ä¸ªå¯¹è±¡
 	 */
 	public T queryForColumn(String columnName, Object value) throws SQLException {
 		return mDao.queryBuilder().where().eq(columnName, value).queryForFirst();
 	}
 	
 	/**
-	 * ¸ù¾İÌõ¼şÄ£ºı²éÑ¯(Ò»¸öÌõ¼ş)
-	 * ·µ»ØÒ»¸ö¶ÔÏó¼¯ºÏ
+	 * æ ¹æ®æ¡ä»¶æ¨¡ç³ŠæŸ¥è¯¢(ä¸€ä¸ªæ¡ä»¶)
+	 * è¿”å›ä¸€ä¸ªå¯¹è±¡é›†åˆ
 	 */
 	public List<T> indistinctQueryForColumn(String columnName, Object value) throws SQLException {
 		return mDao.queryBuilder().where().like(columnName, "%" + value + "%").query();
 	}
 	
 	/**
-	 * ¸ù¾İÌõ¼ş²éÑ¯(¶ş¸öÌõ¼ş)
-	 * ·µ»ØÒ»¸ö¶ÔÏó¼¯ºÏ
+	 * æ ¹æ®æ¡ä»¶æŸ¥è¯¢(äºŒä¸ªæ¡ä»¶)
+	 * è¿”å›ä¸€ä¸ªå¯¹è±¡é›†åˆ
 	 */
 	public List<T> queryByColumn(String columnName1, Object value1, String columnName2, Object value2) throws SQLException {
 		return mDao.queryBuilder().where().eq(columnName1, value1).and().eq(columnName2, value2).query();
 	}
 	
 	/**
-	 * ¸ù¾İÌõ¼ş²éÑ¯(¶ş¸öÌõ¼ş)
-	 * ·µ»ØÒ»¸ö¶ÔÏó
+	 * æ ¹æ®æ¡ä»¶æŸ¥è¯¢(äºŒä¸ªæ¡ä»¶)
+	 * è¿”å›ä¸€ä¸ªå¯¹è±¡
 	 */
 	public T queryForColumn(String columnName1, Object value1, String columnName2, Object value2) throws SQLException {
 		return mDao.queryBuilder().where().eq(columnName1, value1).and().eq(columnName2, value2).queryForFirst();
 	}
 
 	/**
-	 * ¸ù¾İsqlÓï¾ä²éÑ¯
+	 * æ ¹æ®sqlè¯­å¥æŸ¥è¯¢
 	 * @param sql
 	 * @return
 	 * @throws SQLException
@@ -219,7 +219,7 @@ public class DBService<T> {
 	}
 	
 	/**
-	 * ¸ù¾İsqlÓï¾ä²éÑ¯
+	 * æ ¹æ®sqlè¯­å¥æŸ¥è¯¢
 	 * @param sql
 	 * @return
 	 * @throws SQLException
@@ -231,17 +231,17 @@ public class DBService<T> {
 	}
 
 
-/*************************************************¸üĞÂ**********************************************/
+/*************************************************æ›´æ–°**********************************************/
 	/**
-	 * Ê¹ÓÃ¶ÔÏó¸üĞÂÒ»Ìõ¼ÇÂ¼
+	 * ä½¿ç”¨å¯¹è±¡æ›´æ–°ä¸€æ¡è®°å½•
 	 */
 	public int updateData(T object) throws SQLException {
 		return mDao.update(object);
 	}
 	
 	/**
-	 * ¸ù¾İÌõ¼ş×öupdateÊ±Ö±½ÓÊ¹ÓÃsqlÓï¾ä½øĞĞ¸üĞÂ
-	 * @Description statement ¸üĞÂµÄSQLÓï¾ä±ØĞë°üº¬¹Ø¼ü×ÖINSERT£¬DELETE£¬ UPDATE
+	 * æ ¹æ®æ¡ä»¶åšupdateæ—¶ç›´æ¥ä½¿ç”¨sqlè¯­å¥è¿›è¡Œæ›´æ–°
+	 * @Description statement æ›´æ–°çš„SQLè¯­å¥å¿…é¡»åŒ…å«å…³é”®å­—INSERTï¼ŒDELETEï¼Œ UPDATE
 	 */
 	public int updateDatabySQL(String sql) throws SQLException {
 		return mDao.updateRaw(sql);
@@ -249,10 +249,10 @@ public class DBService<T> {
 	}
 	
 	/**
-	 * ¸ù¾İÄ³Ò»Ìõ¼ş¸üĞÂ¶ÔÏóµÄ¶àÁĞÊôĞÔ
-	 * @param clause ¸üĞÂÁĞÃûºÍ¸üĞÂÖµµÄ¼¯ºÏ
-	 * @param columnName  ¸üĞÂÌõ¼şÁĞÃû
-	 * @param value ¸üĞÂÌõ¼şÖµ
+	 * æ ¹æ®æŸä¸€æ¡ä»¶æ›´æ–°å¯¹è±¡çš„å¤šåˆ—å±æ€§
+	 * @param clause æ›´æ–°åˆ—åå’Œæ›´æ–°å€¼çš„é›†åˆ
+	 * @param columnName  æ›´æ–°æ¡ä»¶åˆ—å
+	 * @param value æ›´æ–°æ¡ä»¶å€¼
 	 * @return
 	 * @throws SQLException
 	 */
@@ -266,11 +266,11 @@ public class DBService<T> {
 	}
 	
 	/**
-	 * ¸ù¾İÄ³Ò»Ìõ¼ş¸üĞÂ¶ÔÏó
-	 * @param updatecolumnName ¸üĞÂÌõ¼şÁĞÃû
-	 * @param updatevalue  ¸üĞÂÌõ¼şÖµ
-	 * @param columnName  ¸üĞÂÁĞÃû
-	 * @param value ¸üĞÂÖµ
+	 * æ ¹æ®æŸä¸€æ¡ä»¶æ›´æ–°å¯¹è±¡
+	 * @param updatecolumnName æ›´æ–°æ¡ä»¶åˆ—å
+	 * @param updatevalue  æ›´æ–°æ¡ä»¶å€¼
+	 * @param columnName  æ›´æ–°åˆ—å
+	 * @param value æ›´æ–°å€¼
 	 * @return
 	 * @throws SQLException
 	 */
@@ -279,9 +279,9 @@ public class DBService<T> {
 	   return updateDatabySQL(sql);
 	}
 
-/*************************************************É¾³ı**********************************************/
+/*************************************************åˆ é™¤**********************************************/
 	/**
-	 * ¸ù¾İidÉ¾³ıÒ»Ìõ¼ÇÂ¼
+	 * æ ¹æ®idåˆ é™¤ä¸€æ¡è®°å½•
 	 * @param id
 	 * @throws SQLException
 	 */
@@ -290,7 +290,7 @@ public class DBService<T> {
 	}
 	
 	/**
-	 * ¸ù¾İidÉ¾³ıÒ»Ìõ¼ÇÂ¼
+	 * æ ¹æ®idåˆ é™¤ä¸€æ¡è®°å½•
 	 * @param id
 	 * @throws SQLException
 	 */
@@ -299,7 +299,7 @@ public class DBService<T> {
 	}
 	
 	/**
-	 * ¸ù¾İ¶ÔÏóÉ¾³ıÒ»Ìõ¼ÇÂ¼
+	 * æ ¹æ®å¯¹è±¡åˆ é™¤ä¸€æ¡è®°å½•
 	 * @param object
 	 * @throws SQLException
 	 */
@@ -308,7 +308,7 @@ public class DBService<T> {
 	}
 
 	/**
-	 * ÅúÁ¿É¾³ı
+	 * æ‰¹é‡åˆ é™¤
 	 * @param datas
 	 * @return
 	 * @throws SQLException
@@ -318,7 +318,7 @@ public class DBService<T> {
 	}
 	
 	/**
-	 * É¾³ıËùÓĞ
+	 * åˆ é™¤æ‰€æœ‰
 	 * @throws SQLException
 	 */
 	public int deleteAll() throws SQLException {
@@ -328,24 +328,24 @@ public class DBService<T> {
 	}
 	
     /** 
-     * ¿É½øĞĞÅúÁ¿²Ù×÷£¬ĞèÒª½øĞĞÅúÁ¿²Ù×÷Ê±Ö±½Ó½«´úÂë·Åµ½callableµÄcall()ÖĞ¼´¿É
+     * å¯è¿›è¡Œæ‰¹é‡æ“ä½œï¼Œéœ€è¦è¿›è¡Œæ‰¹é‡æ“ä½œæ—¶ç›´æ¥å°†ä»£ç æ”¾åˆ°callableçš„call()ä¸­å³å¯
      */ 
     public <A> void doBatchTasks(Callable<A> callable) throws Exception{
     	mDao.callBatchTasks(callable);
     }
 
-/*************************************************Ö´ĞĞSQLÓï¾ä**********************************************/
+/*************************************************æ‰§è¡ŒSQLè¯­å¥**********************************************/
 	/**
-	 * Ö±½ÓÖ´ĞĞËùÓĞµÄsqlÓï¾ä£¬Ó¦ÓÃÓÚÌØÊâ³¡¾°
+	 * ç›´æ¥æ‰§è¡Œæ‰€æœ‰çš„sqlè¯­å¥ï¼Œåº”ç”¨äºç‰¹æ®Šåœºæ™¯
 	 */
 	public int executeSql(String sql) throws SQLException {
 		int result = mDao.executeRaw(sql);
 		return result;
 	}
 	
-/*************************************************ÊÂÎñ²Ù×÷**********************************************/
+/*************************************************äº‹åŠ¡æ“ä½œ**********************************************/
 	/** 
-	 * ¿ªÆôÊı¾İ¿âÊÂÎñ²Ù×÷
+	 * å¼€å¯æ•°æ®åº“äº‹åŠ¡æ“ä½œ
 	 */ 
 	public void beginTransaction(String savepoint) throws SQLException{
 		mConnection= mDao.startThreadConnection();
@@ -354,7 +354,7 @@ public class DBService<T> {
 	}
 		
 	/** 
-	 * Ìá½»ÊÂÎñ 
+	 * æäº¤äº‹åŠ¡ 
 	 */ 
 	public void commit() throws SQLException{
        mConnection.commit(savePoint);
@@ -362,7 +362,7 @@ public class DBService<T> {
 	}
 	
 	/** 
-	 * ÊÂÎñ»Ø¹ö
+	 * äº‹åŠ¡å›æ»š
 	 */ 
 	public void rollBack(Savepoint savepoint) throws SQLException{
 	  mConnection.rollback(savepoint);

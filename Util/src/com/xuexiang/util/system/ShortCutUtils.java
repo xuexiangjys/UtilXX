@@ -26,11 +26,11 @@ import android.net.Uri;
 import com.xuexiang.util.resource.RUtils;
 
 /**
- * ´´½¨É¾³ı¿ì½İÍ¼±ê
+ * åˆ›å»ºåˆ é™¤å¿«æ·å›¾æ ‡
  *
  * @author jingle1267@163.com
  *         <p/>
- *         ĞèÒªÈ¨ÏŞ: com.android.launcher.permission.INSTALL_SHORTCUT com.android.launcher.permission.UNINSTALL_SHORTCUT
+ *         éœ€è¦æƒé™: com.android.launcher.permission.INSTALL_SHORTCUT com.android.launcher.permission.UNINSTALL_SHORTCUT
  */
 public final class ShortCutUtils {
 
@@ -42,10 +42,10 @@ public final class ShortCutUtils {
     }
 
     /**
-     * ¼ì²âÊÇ·ñ´æÔÚ¿ì½İ¼ü
+     * æ£€æµ‹æ˜¯å¦å­˜åœ¨å¿«æ·é”®
      *
      * @param activity Activity
-     * @return ÊÇ·ñ´æÔÚ×ÀÃæÍ¼±ê
+     * @return æ˜¯å¦å­˜åœ¨æ¡Œé¢å›¾æ ‡
      */
     public static boolean hasShortcut(Activity activity) {
         boolean isInstallShortcut = false;
@@ -64,21 +64,21 @@ public final class ShortCutUtils {
     }
 
     /**
-     * Îª³ÌĞò´´½¨×ÀÃæ¿ì½İ·½Ê½
+     * ä¸ºç¨‹åºåˆ›å»ºæ¡Œé¢å¿«æ·æ–¹å¼
      *
      * @param activity Activity
      */
     public static void addShortcut(Activity activity) {
         Intent shortcut = new Intent(
                 "com.android.launcher.action.INSTALL_SHORTCUT");
-        // ¿ì½İ·½Ê½µÄÃû³Æ
+        // å¿«æ·æ–¹å¼çš„åç§°
         shortcut.putExtra(Intent.EXTRA_SHORTCUT_NAME,
                 activity.getString(RUtils.getString(activity, "app_name")));
-        shortcut.putExtra("duplicate", false); // ²»ÔÊĞíÖØ¸´´´½¨
+        shortcut.putExtra("duplicate", false); // ä¸å…è®¸é‡å¤åˆ›å»º
         Intent shortcutIntent = new Intent(Intent.ACTION_MAIN);
         shortcutIntent.setClassName(activity, activity.getClass().getName());
         shortcut.putExtra(Intent.EXTRA_SHORTCUT_INTENT, shortcutIntent);
-        // ¿ì½İ·½Ê½µÄÍ¼±ê
+        // å¿«æ·æ–¹å¼çš„å›¾æ ‡
         ShortcutIconResource iconRes = Intent.ShortcutIconResource.fromContext(
                 activity, RUtils.getDrawable(activity, "ic_launcher"));
         shortcut.putExtra(Intent.EXTRA_SHORTCUT_ICON_RESOURCE, iconRes);
@@ -87,14 +87,14 @@ public final class ShortCutUtils {
     }
 
     /**
-     * É¾³ı³ÌĞòµÄ¿ì½İ·½Ê½
+     * åˆ é™¤ç¨‹åºçš„å¿«æ·æ–¹å¼
      *
      * @param activity Activity
      */
     public static void delShortcut(Activity activity) {
         Intent shortcut = new Intent(
                 "com.android.launcher.action.UNINSTALL_SHORTCUT");
-        // ¿ì½İ·½Ê½µÄÃû³Æ
+        // å¿«æ·æ–¹å¼çš„åç§°
         shortcut.putExtra(Intent.EXTRA_SHORTCUT_NAME,
                 activity.getString(RUtils.getString(activity, "app_name")));
         String appClass = activity.getPackageName() + "."

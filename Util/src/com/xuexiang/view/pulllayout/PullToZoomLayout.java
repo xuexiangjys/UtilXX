@@ -10,10 +10,10 @@ import android.widget.LinearLayout;
 import com.xuexiang.util.resource.MResource;
 
 /**  
- * ´´½¨Ê±¼ä£º2016-6-12 ÏÂÎç11:19:30  
- * ÏîÄ¿Ãû³Æ£ºUtil  
+ * åˆ›å»ºæ—¶é—´ï¼š2016-6-12 ä¸‹åˆ11:19:30  
+ * é¡¹ç›®åç§°ï¼šUtil  
  * @author xuexiang
- * ÎÄ¼şÃû³Æ£ºPullToZoomLayout.java  
+ * æ–‡ä»¶åç§°ï¼šPullToZoomLayout.java  
  **/
 public class PullToZoomLayout extends PullToZoomBase {
 	  private View headerView;

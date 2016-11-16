@@ -21,7 +21,7 @@ import android.content.res.Configuration;
 import android.view.Surface;
 
 /**
- * ´°¿Ú¹¤¾ßÏä
+ * çª—å£å·¥å…·ç®±
  *
  * @author zhenguo
  */
@@ -35,7 +35,7 @@ public final class WindowUtils {
     }
 
     /**
-     * »ñÈ¡µ±Ç°´°¿ÚµÄĞı×ª½Ç¶È
+     * è·å–å½“å‰çª—å£çš„æ—‹è½¬è§’åº¦
      *
      * @param activity
      * @return
@@ -56,7 +56,7 @@ public final class WindowUtils {
     }
 
     /**
-     * µ±Ç°ÊÇ·ñÊÇºáÆÁ
+     * å½“å‰æ˜¯å¦æ˜¯æ¨ªå±
      *
      * @param context
      * @return
@@ -66,7 +66,7 @@ public final class WindowUtils {
     }
 
     /**
-     * µ±Ç°ÊÇ·ñÊÇÊúÆÁ
+     * å½“å‰æ˜¯å¦æ˜¯ç«–å±
      *
      * @param context
      * @return

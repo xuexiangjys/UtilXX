@@ -32,16 +32,16 @@ import android.net.Uri;
 import android.os.Environment;
 
 /**
- * Õ®”√π§æﬂ¿‡
+ * ÈÄöÁî®Â∑•ÂÖ∑Á±ª
  *
  * @author jingle1267@163.com
  */
 public class CommonUtil {
 
     /**
-     *  «∑Ò”–SDCard
+     * ÊòØÂê¶ÊúâSDCard
      *
-     * @return  «∑Ò”–SDCard
+     * @return ÊòØÂê¶ÊúâSDCard
      */
     public static boolean hasSDCard() {
 
@@ -50,9 +50,9 @@ public class CommonUtil {
     }
 
     /**
-     * ªÒ»°”¶”√‘À––µƒ◊Ó¥Ûƒ⁄¥Ê
+     * Ëé∑ÂèñÂ∫îÁî®ËøêË°åÁöÑÊúÄÂ§ßÂÜÖÂ≠ò
      *
-     * @return ◊Ó¥Ûƒ⁄¥Ê
+     * @return ÊúÄÂ§ßÂÜÖÂ≠ò
      */
     public static long getMaxMemory() {
 
@@ -60,9 +60,9 @@ public class CommonUtil {
     }
     
     /**
-	 * ∏˘æ›”¶”√√˚◊÷»•”¶”√ –≥°≤È—Ø∏√”¶”√ 
+	 * Ê†πÊçÆÂ∫îÁî®ÂêçÂ≠óÂéªÂ∫îÁî®Â∏ÇÂú∫Êü•ËØ¢ËØ•Â∫îÁî® 
 	 * @param context
-	 * @param appName market://search?q=pub:Ã˝Ã˝÷––ƒ
+	 * @param appName market://search?q=pub:Âê¨Âê¨‰∏≠ÂøÉ
 	 */
 	public static void searchTingting(Context context,String appName) {
 		Intent intent = new Intent(Intent.ACTION_VIEW);
@@ -70,9 +70,9 @@ public class CommonUtil {
 		context.startActivity(intent);
 	}
 	/**
-	 * ∏˘æ›”¶”√µƒ∞¸√˚£¨»•”¶”√ –≥°À—À˜∏√”¶”√
-	 * com.google.android.voicesearch google”Ô“Ù
-	 * com.snda.tts.service Ã˝Ã˝÷––ƒ
+	 * Ê†πÊçÆÂ∫îÁî®ÁöÑÂåÖÂêçÔºåÂéªÂ∫îÁî®Â∏ÇÂú∫ÊêúÁ¥¢ËØ•Â∫îÁî®
+	 * com.google.android.voicesearch googleËØ≠Èü≥
+	 * com.snda.tts.service Âê¨Âê¨‰∏≠ÂøÉ
 	 * @param context
 	 * @param appPckName
 	 */
@@ -94,15 +94,15 @@ public class CommonUtil {
 			intent.setType("image/*");
 			Uri u = Uri.fromFile(file);
 			intent.putExtra(Intent.EXTRA_STREAM, u);
-			context.startActivity(Intent.createChooser(intent, "∑÷œÌ"));
+			context.startActivity(Intent.createChooser(intent, "ÂàÜ‰∫´"));
 		}
 	}
 	/**
-	 *¥Úø™…Ë÷√Õ¯“≥ΩÁ√Ê
+	 *ÊâìÂºÄËÆæÁΩÆÁΩëÈ°µÁïåÈù¢
 	 */
 	public static void openSettingNet(Context context) {
         Intent intent = null;
-        //≈–∂œ ÷ª˙œµÕ≥µƒ∞Ê±æ  º¥API¥Û”⁄10 æÕ «3.0ªÚ“‘…œ∞Ê±æ
+        //Âà§Êñ≠ÊâãÊú∫Á≥ªÁªüÁöÑÁâàÊú¨  Âç≥APIÂ§ß‰∫é10 Â∞±ÊòØ3.0Êàñ‰ª•‰∏äÁâàÊú¨
         if(android.os.Build.VERSION.SDK_INT>10){
             intent = new Intent(android.provider.Settings.ACTION_WIRELESS_SETTINGS);
         } else {
@@ -127,7 +127,7 @@ public class CommonUtil {
 		}
 	}
 	public static void showInfoDialog(Context context, String message) {
-		showInfoDialog(context, message, "Ã· æ", "»∑∂®", null);
+		showInfoDialog(context, message, "ÊèêÁ§∫", "Á°ÆÂÆö", null);
 	}
 
 	public static void showInfoDialog(Context context, String message,
@@ -161,7 +161,7 @@ public class CommonUtil {
 	}
 
 	/**
-	 * ∏¸–¬À¢–¬ ±º‰
+	 * Êõ¥Êñ∞Âà∑Êñ∞Êó∂Èó¥
 	 * @param created
 	 * @return
 	 */
@@ -175,30 +175,30 @@ public class CommonUtil {
 		long curTime = System.currentTimeMillis();
 		difference_months = (int) (((curTime / 2592000) % 12) - ((created / 2592000) % 12));
 		if (difference_months > 0) {
-			when.append(difference_months + "‘¬");
+			when.append(difference_months + "Êúà");
 		}
 
 		difference_days = (int) (((curTime / 86400) % 30) - ((created / 86400) % 30));
 		if (difference_days > 0) {
-			when.append(difference_days + "ÃÏ");
+			when.append(difference_days + "Â§©");
 		}
 
 		difference_hours = (int) (((curTime / 3600) % 24) - ((created / 3600) % 24));
 		if (difference_hours > 0) {
-			when.append(difference_hours + "–° ±");
+			when.append(difference_hours + "Â∞èÊó∂");
 		}
 
 		difference_minutes = (int) (((curTime / 60) % 60) - ((created / 60) % 60));
 		if (difference_minutes > 0) {
-			when.append(difference_minutes + "∑÷÷”");
+			when.append(difference_minutes + "ÂàÜÈíü");
 		}
 
 		difference_seconds = (int) ((curTime % 60) - (created % 60));
 		if (difference_seconds > 0) {
-			when.append(difference_seconds + "√Î");
+			when.append(difference_seconds + "Áßí");
 		}
 
-		return when.append("«∞").toString();
+		return when.append("Ââç").toString();
 	}
 
 }

@@ -15,10 +15,10 @@ import com.xuexiang.view.pwd.PwdGestureView;
 import com.xuexiang.view.pwd.PwdInputView;
 
 /**  
- * ´´½¨Ê±¼ä£º2016-7-3 ÏÂÎç11:40:30  
- * ÏîÄ¿Ãû³Æ£ºUtilTest  
+ * åˆ›å»ºæ—¶é—´ï¼š2016-7-3 ä¸‹åˆ11:40:30  
+ * é¡¹ç›®åç§°ï¼šUtilTest  
  * @author xuexiang
- * ÎÄ¼şÃû³Æ£ºPassWordInputActivity.java  
+ * æ–‡ä»¶åç§°ï¼šPassWordInputActivity.java  
  **/
 public class PassWordInputActivity extends BaseActivity {
 	PwdGestureView mPwdGestureView;
@@ -146,8 +146,8 @@ public class PassWordInputActivity extends BaseActivity {
                 mPwdInputView.setShadowPasswords(show, R.drawable.icon_pwd);
                 mPwdInputView2.setShadowPasswords(show, R.drawable.icon_pwd);
             } else if (rb_text.isChecked()) {
-                mPwdInputView.setShadowPasswords(show, "ÃÜ");
-                mPwdInputView2.setShadowPasswords(show, "ÃÜ");
+                mPwdInputView.setShadowPasswords(show, "å¯†");
+                mPwdInputView2.setShadowPasswords(show, "å¯†");
 
             } else if (rb_pwd.isChecked()) {
                 mPwdInputView.setShadowPasswords(show);

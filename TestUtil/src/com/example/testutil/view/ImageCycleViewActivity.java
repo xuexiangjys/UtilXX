@@ -51,7 +51,7 @@ public class ImageCycleViewActivity extends BaseActivity {
 
 			@Override
 			public void onImageClick(int position, View view) {
-				Toast("µã»÷ÁËµÚ" + (position + 1) + "Ïî!");
+				Toast("ç‚¹å‡»äº†ç¬¬" + (position + 1) + "é¡¹!");
 			}
 		});
 	}
@@ -63,9 +63,9 @@ public class ImageCycleViewActivity extends BaseActivity {
     	ArrayList<View> dots = new ArrayList<View>();
     	ArrayList<String> titles = new ArrayList<String>();
     	for (int i = 0; i < imageUrlList.size(); i++) {  
-            titles.add("±êÌâ" + (i + 1));
+            titles.add("æ ‡é¢˜" + (i + 1));
             ImageView image = new ImageView(mContext);  
-            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(20, 20);  //dotµÄ¿í¸ß
+            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(20, 20);  //dotçš„å®½é«˜
             params.setMargins(3, 0, 3, 0);  
             image.setImageResource(R.drawable.home_img_ratio);
             mDotsll.addView(image, params);  
@@ -74,7 +74,7 @@ public class ImageCycleViewActivity extends BaseActivity {
     	RollViewPager rollViewPager = new RollViewPager(this, dots, R.drawable.home_img_ratio_selected, R.drawable.home_img_ratio, new OnPagerClickCallback(){
 			@Override
 			public void onPagerClick(int position) {
-				Toast("µã»÷ÁËµÚ" + (position + 1) + "Ïî!");
+				Toast("ç‚¹å‡»äº†ç¬¬" + (position + 1) + "é¡¹!");
 			}
 		});
     	LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT,LayoutParams.MATCH_PARENT);

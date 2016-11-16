@@ -98,8 +98,8 @@ public class WifiUtil {
 	
 	public WifiConfiguration getConfig(String wifiAP_ssid, String wifiAP_password){
 		WifiConfiguration netConfig = new WifiConfiguration();
-		int securityType = getValue("WPA2_PSK");//Í¨¹ı·´Éä£¬»ñÈ¡±»Òş²ØµÄ°²È«ÀàĞÍWPA2_PSK
-		//wifiÈÈµãÃû×Ö
+		int securityType = getValue("WPA2_PSK");//é€šè¿‡åå°„ï¼Œè·å–è¢«éšè—çš„å®‰å…¨ç±»å‹WPA2_PSK
+		//wifiçƒ­ç‚¹åå­—
 		netConfig.SSID = wifiAP_ssid;
 		netConfig.allowedAuthAlgorithms
 				.set(WifiConfiguration.AuthAlgorithm.OPEN);
@@ -115,7 +115,7 @@ public class WifiUtil {
 				.set(WifiConfiguration.GroupCipher.CCMP);
 		netConfig.allowedGroupCiphers
 				.set(WifiConfiguration.GroupCipher.TKIP);
-		//ÃÜÂë
+		//å¯†ç 
 		netConfig.preSharedKey = wifiAP_password;
 		
 		return netConfig;
@@ -157,7 +157,7 @@ public class WifiUtil {
 	}
 	
 	/**
-     * ÅĞ¶ÏÄ³¸öÍøÂçÓĞÃ»ÓĞÁ¬½Ó
+     * åˆ¤æ–­æŸä¸ªç½‘ç»œæœ‰æ²¡æœ‰è¿æ¥
      * @param ssid
      * @return
      */
@@ -193,7 +193,7 @@ public class WifiUtil {
 	
 	/**
 	 * 
-	 * ÃèÊö£º´ò¿ªwifi.
+	 * æè¿°ï¼šæ‰“å¼€wifi.
 	 * @param context
 	 * @param enabled
 	 * @return
@@ -209,7 +209,7 @@ public class WifiUtil {
 	
 	/**
 	 * 
-	 * ÃèÊö£ºÊÇ·ñÓĞÍøÂçÁ¬½Ó.
+	 * æè¿°ï¼šæ˜¯å¦æœ‰ç½‘ç»œè¿æ¥.
 	 * @param context
 	 * @return
 	 */
@@ -225,7 +225,7 @@ public class WifiUtil {
 	}
 	
 	/**
-	 * ÅĞ¶Ïµ±Ç°ÍøÂçÊÇ·ñÊÇwifiÍøÂç.
+	 * åˆ¤æ–­å½“å‰ç½‘ç»œæ˜¯å¦æ˜¯wifiç½‘ç»œ.
 	 *
 	 * @param context the context
 	 * @return boolean
@@ -243,19 +243,19 @@ public class WifiUtil {
 
 	/**
 	 * 
-	 * ÃèÊö£ºµÃµ½ËùÓĞµÄWiFiÁĞ±í.
+	 * æè¿°ï¼šå¾—åˆ°æ‰€æœ‰çš„WiFiåˆ—è¡¨.
 	 * @param context
 	 * @return
 	 */
 	public static List<ScanResult> getScanResults(Context context) {
 		WifiManager wifiManager = (WifiManager) context.getSystemService(Context.WIFI_SERVICE);
 		List<ScanResult> list = null;
-		//¿ªÊ¼É¨ÃèWiFi
+		//å¼€å§‹æ‰«æWiFi
 		boolean f = wifiManager.startScan();
 		if(!f){
 			getScanResults(context);
 		}else{
-			// µÃµ½É¨Ãè½á¹û
+			// å¾—åˆ°æ‰«æç»“æœ
 			list = wifiManager.getScanResults();
 		}
 		
@@ -264,7 +264,7 @@ public class WifiUtil {
 
 	/**
 	 * 
-	 * ÃèÊö£º¸ù¾İSSID¹ıÂËÉ¨Ãè½á¹û.
+	 * æè¿°ï¼šæ ¹æ®SSIDè¿‡æ»¤æ‰«æç»“æœ.
 	 * @param context
 	 * @param bssid
 	 * @return
@@ -272,16 +272,16 @@ public class WifiUtil {
 	public static ScanResult getScanResultsByBSSID(Context context,String bssid) {
 		WifiManager wifiManager = (WifiManager) context.getSystemService(Context.WIFI_SERVICE);
 		ScanResult scanResult = null;
-		//¿ªÊ¼É¨ÃèWiFi
+		//å¼€å§‹æ‰«æWiFi
 		boolean f = wifiManager.startScan();
 		if(!f){
 			getScanResultsByBSSID(context,bssid);
 		}
-		// µÃµ½É¨Ãè½á¹û
+		// å¾—åˆ°æ‰«æç»“æœ
 		List<ScanResult> list = wifiManager.getScanResults();
 		if (list != null) {
 			for (int i = 0; i < list.size(); i++) {
-				// µÃµ½É¨Ãè½á¹û
+				// å¾—åˆ°æ‰«æç»“æœ
 				scanResult = list.get(i);
 				if (scanResult.BSSID.equals(bssid)) {
 					break;
@@ -293,7 +293,7 @@ public class WifiUtil {
 
 	/**
 	 * 
-	 * ÃèÊö£º»ñÈ¡Á¬½ÓµÄWIFIĞÅÏ¢.
+	 * æè¿°ï¼šè·å–è¿æ¥çš„WIFIä¿¡æ¯.
 	 * @param context
 	 * @return
 	 */

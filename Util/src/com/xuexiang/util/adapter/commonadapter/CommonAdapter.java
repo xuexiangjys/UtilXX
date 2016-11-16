@@ -27,11 +27,11 @@ public  abstract class  CommonAdapter<T> extends BaseAdapter {
     protected final int mItemLayoutId;
 
     /**
-     * ³õÊ¼»¯Í¨ÓÃAdapter
+     * åˆå§‹åŒ–é€šç”¨Adapter
      *
-     * @param context      ÉÏÏÂÎÄ
-     * @param mDatas       ĞèÒªÏÔÊ¾µÄÊı¾İ¼¯ºÏ
-     * @param itemLayoutId ×Ó²¼¾ÖÎÄ¼ş
+     * @param context      ä¸Šä¸‹æ–‡
+     * @param mDatas       éœ€è¦æ˜¾ç¤ºçš„æ•°æ®é›†åˆ
+     * @param itemLayoutId å­å¸ƒå±€æ–‡ä»¶
      */
     public CommonAdapter(Context context, List<T> mDatas, int itemLayoutId) {
         this.mContext = context;
@@ -91,7 +91,7 @@ public  abstract class  CommonAdapter<T> extends BaseAdapter {
 
         switch (itemViewType) {
             case TYPE_ITEM:
-                //´ÓViewHolderÖĞ»ñÈ¡¿Ø¼şview£¬ÈôÎª¿ÕÔò´´½¨
+                //ä»ViewHolderä¸­è·å–æ§ä»¶viewï¼Œè‹¥ä¸ºç©ºåˆ™åˆ›å»º
                 final ViewHolder viewHolder = getViewHolder(position, convertView, parent);
                 convert(viewHolder, getItem(position), position);
 
@@ -106,15 +106,15 @@ public  abstract class  CommonAdapter<T> extends BaseAdapter {
     }
 
     /**
-     * ³éÈ¡³ögetViewÖĞ¼ä¸Ä±äµÄ²¿·Ö
+     * æŠ½å–å‡ºgetViewä¸­é—´æ”¹å˜çš„éƒ¨åˆ†
      *
-     * @param helper holder»º´æ¶ÔÏó
-     * @param item   Bean¶ÔÏó
+     * @param helper holderç¼“å­˜å¯¹è±¡
+     * @param item   Beanå¯¹è±¡
      */
     public abstract void convert(ViewHolder helper, T item, int position);
 
     /**
-     * »ñµÃViewHolderÖĞµÄview
+     * è·å¾—ViewHolderä¸­çš„view
      *
      * @param position
      * @param convertView
@@ -130,7 +130,7 @@ public  abstract class  CommonAdapter<T> extends BaseAdapter {
     }
 
     /**
-     *section»Øµ÷½Ó¿Ú
+     *sectionå›è°ƒæ¥å£
      */
     public interface SectionCallBack {
 

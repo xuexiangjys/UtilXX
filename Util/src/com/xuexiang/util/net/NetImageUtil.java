@@ -11,22 +11,22 @@ import com.xuexiang.app.BaseApplication;
 import com.xuexiang.util.resource.RUtils;
 
 /**  
- * ´´½¨Ê±¼ä£º2016-5-17 ÉÏÎç9:42:25  
- * ÏîÄ¿Ãû³Æ£ºVolleyDemo  
+ * åˆ›å»ºæ—¶é—´ï¼š2016-5-17 ä¸Šåˆ9:42:25  
+ * é¡¹ç›®åç§°ï¼šVolleyDemo  
  * @author xuexiang
- * ÎÄ¼şÃû³Æ£ºLoadNetImageUtil.java  
+ * æ–‡ä»¶åç§°ï¼šLoadNetImageUtil.java  
  **/
 public class NetImageUtil {
 	
 	
-	/************************************************Volley¿ò¼Ü*********************************************************************************/
+	/************************************************Volleyæ¡†æ¶*********************************************************************************/
 	
     public static void getImage(String url,ImageView imageView){
 		
 		ImageLoader imageLoader = new ImageLoader(BaseApplication.getVolleyRequestQueue(),BitmapCache.instance());
-		// Í¼Æ¬¼àÌı £¨Ä¬ÈÏÍ¼Æ¬£¬´íÎóÍ¼Æ¬£© ºÍ imageView
+		// å›¾ç‰‡ç›‘å¬ ï¼ˆé»˜è®¤å›¾ç‰‡ï¼Œé”™è¯¯å›¾ç‰‡ï¼‰ å’Œ imageView
 		ImageListener imageListener = ImageLoader.getImageListener(imageView, RUtils.getDrawable(BaseApplication.getContext(), "noimg"), RUtils.getDrawable(BaseApplication.getContext(), "noimg"));		
-		//¼ÓÔØÍ¼Æ¬
+		//åŠ è½½å›¾ç‰‡
 		imageLoader.get(url, imageListener);
 		
 	}
@@ -39,7 +39,7 @@ public class NetImageUtil {
         imageView.setImageUrl(url, imageLoader);
 	}
     
-   /************************************************Final¿ò¼Ü*********************************************************************************/
+   /************************************************Finalæ¡†æ¶*********************************************************************************/
 	
     public static void getImage(Context context, String url, ImageView imageView){
     	FinalBitmap bitmap = FinalBitmap.create(context);

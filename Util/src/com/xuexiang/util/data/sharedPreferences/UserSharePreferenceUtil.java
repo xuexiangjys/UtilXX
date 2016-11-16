@@ -4,7 +4,7 @@ import android.content.Context;
 
 
 /**
- * ÓÃ»§¹ÜÀí
+ * ç”¨æˆ·ç®¡ç†
  * @author xx
  *
  */
@@ -22,12 +22,12 @@ public class UserSharePreferenceUtil extends BaseSharedPreferencesUtil {
 	private String SHARED_KEY_REALNAME = "realname";
 	private String SHARED_KEY_IDENTITYCARD = "identitycard";
 	private String SHARED_KEY_ISCHECK = "ischeck";	
-	/**********************Ä¬ÈÏµØÖ·**************************************/	
+	/**********************é»˜è®¤åœ°å€**************************************/	
 	private String SHARED_KEY_CONSIGNEE_DEFAULT = "consignee";
 	private String SHARED_KEY_CONTACT_DEFAULT = "contact";
 	private String SHARED_KEY_ADDRESS_DEFAULT = "address";
 	private String SHARED_KEY_POSTCODE_DEFAULT = "postcode";	
-	/**********************×Ô¶¯µÇÂ¼**************************************/	
+	/**********************è‡ªåŠ¨ç™»å½•**************************************/	
 	private String SHARED_KEY_REMEMBER = "remember";
 	private String SHARED_KEY_AUTO_LOGIN = "autologin";
 
@@ -210,7 +210,7 @@ public class UserSharePreferenceUtil extends BaseSharedPreferencesUtil {
     }  
 	
     /**
-     * µÇ³ö£¬Ïú»Ù¼ÇÂ¼
+     * ç™»å‡ºï¼Œé”€æ¯è®°å½•
      */
     public void LoginOut() {  
         clear();

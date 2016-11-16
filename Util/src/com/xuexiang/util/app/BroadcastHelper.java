@@ -15,7 +15,7 @@ import com.xuexiang.app.StartAppReceiver;
 public class BroadcastHelper {
 	
 	/**
-	 * ·¢ÆğÆô¶¯Ó¦ÓÃµÄ¹ã²¥
+	 * å‘èµ·å¯åŠ¨åº”ç”¨çš„å¹¿æ’­
 	 * @param context
 	 */
 	public static void sendStartAppBroadCast(Context context) {
@@ -54,7 +54,7 @@ public class BroadcastHelper {
 	}
 	
 	/**
-	 * ·¢¹ã²¥£¬´«µİStringĞÍÊı¾İ
+	 * å‘å¹¿æ’­ï¼Œä¼ é€’Stringå‹æ•°æ®
 	 * @param context
 	 * @param action
 	 * @param key
@@ -65,7 +65,7 @@ public class BroadcastHelper {
 	}
 	
 	/**
-	 * ·¢¹ã²¥£¬´«µİintĞÍÊı¾İ
+	 * å‘å¹¿æ’­ï¼Œä¼ é€’intå‹æ•°æ®
 	 * @param context
 	 * @param action
 	 * @param key
@@ -76,7 +76,7 @@ public class BroadcastHelper {
 	}
 	
 	/**
-	 * ·¢¹ã²¥£¬´«µİÒ»¸ö¶ÔÏó
+	 * å‘å¹¿æ’­ï¼Œä¼ é€’ä¸€ä¸ªå¯¹è±¡
 	 * @param context
 	 * @param action
 	 * @param key
@@ -87,7 +87,7 @@ public class BroadcastHelper {
 	}
 	
 	/**
-	 * ·¢¹ã²¥£¬´«µİ¶à¸ö¶ÔÏó
+	 * å‘å¹¿æ’­ï¼Œä¼ é€’å¤šä¸ªå¯¹è±¡
 	 * @param context
 	 * @param cls
 	 * @param action
@@ -111,7 +111,7 @@ public class BroadcastHelper {
 	}
 	
 	/**
-	 * ¹ã²¥×¢²á
+	 * å¹¿æ’­æ³¨å†Œ
 	 * @param context
 	 * @param actionList
 	 * @param receiver

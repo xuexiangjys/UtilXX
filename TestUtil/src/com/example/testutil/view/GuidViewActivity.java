@@ -13,10 +13,10 @@ import com.xuexiang.app.BaseActivity;
 import com.xuexiang.view.guideview.GuideView;
 
 /**  
- * ´´½¨Ê±¼ä£º2016-7-27 ÉÏÎç8:38:14  
- * ÏîÄ¿Ãû³Æ£ºUtilTest  
+ * åˆ›å»ºæ—¶é—´ï¼š2016-7-27 ä¸Šåˆ8:38:14  
+ * é¡¹ç›®åç§°ï¼šUtilTest  
  * @author xuexiang
- * ÎÄ¼şÃû³Æ£ºGuidViewActivity.java  
+ * æ–‡ä»¶åç§°ï¼šGuidViewActivity.java  
  **/
 public class GuidViewActivity extends BaseActivity {
 	private ImageButton menu;
@@ -37,22 +37,22 @@ public class GuidViewActivity extends BaseActivity {
 	
 	 private void setGuideView() {
 
-	        // Ê¹ÓÃÍ¼Æ¬
+	        // ä½¿ç”¨å›¾ç‰‡
 	        ImageView iv = new ImageView(this);
 	        iv.setImageResource(R.drawable.img_new_task_guide);
 	        RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
 	        iv.setLayoutParams(params);
 
-	        // Ê¹ÓÃÎÄ×Ö
+	        // ä½¿ç”¨æ–‡å­—
 	        TextView tv = new TextView(this);
-	        tv.setText("»¶Ó­Ê¹ÓÃ");
+	        tv.setText("æ¬¢è¿ä½¿ç”¨");
 	        tv.setTextColor(getResources().getColor(R.color.white));
 	        tv.setTextSize(30);
 	        tv.setGravity(Gravity.CENTER);
 
-	        // Ê¹ÓÃÎÄ×Ö
+	        // ä½¿ç”¨æ–‡å­—
 	        final TextView tv2 = new TextView(this);
-	        tv2.setText("»¶Ó­Ê¹ÓÃ2");
+	        tv2.setText("æ¬¢è¿ä½¿ç”¨2");
 	        tv2.setTextColor(getResources().getColor(R.color.white));
 	        tv2.setTextSize(30);
 	        tv2.setGravity(Gravity.CENTER);
@@ -60,10 +60,10 @@ public class GuidViewActivity extends BaseActivity {
 
 	        guideView = GuideView.Builder
 	                .newInstance(this)
-	                .setTargetView(menu)//ÉèÖÃÄ¿±ê
+	                .setTargetView(menu)//è®¾ç½®ç›®æ ‡
 	                .setCustomGuideView(iv)
 	                .setDirction(GuideView.Direction.LEFT_BOTTOM)
-	                .setShape(GuideView.MyShape.CIRCULAR)   // ÉèÖÃÔ²ĞÎÏÔÊ¾ÇøÓò£¬
+	                .setShape(GuideView.MyShape.CIRCULAR)   // è®¾ç½®åœ†å½¢æ˜¾ç¤ºåŒºåŸŸï¼Œ
 	                .setBgColor(getResources().getColor(R.color.shadow_guidview))
 	                .setOnclickListener(new GuideView.OnClickCallback() {
 	                    @Override
@@ -80,7 +80,7 @@ public class GuidViewActivity extends BaseActivity {
 	                .setTargetView(btnTest)
 	                .setCustomGuideView(tv)
 	                .setDirction(GuideView.Direction.LEFT_BOTTOM)
-	                .setShape(GuideView.MyShape.ELLIPSE)   // ÉèÖÃÍÖÔ²ĞÎÏÔÊ¾ÇøÓò£¬
+	                .setShape(GuideView.MyShape.ELLIPSE)   // è®¾ç½®æ¤­åœ†å½¢æ˜¾ç¤ºåŒºåŸŸï¼Œ
 	                .setBgColor(getResources().getColor(R.color.shadow_guidview))
 	                .setOnclickListener(new GuideView.OnClickCallback() {
 	                    @Override
@@ -97,8 +97,8 @@ public class GuidViewActivity extends BaseActivity {
 	                .setTargetView(btnTest2)
 	                .setCustomGuideView(tv2)
 	                .setDirction(GuideView.Direction.LEFT_BOTTOM)
-	                .setShape(GuideView.MyShape.RECTANGULAR)   // ÉèÖÃ¾ØĞÎÏÔÊ¾ÇøÓò£¬
-	                .setRadius(80)          // ÉèÖÃÔ²ĞÎ»ò¾ØĞÎÍ¸Ã÷ÇøÓò°ë¾¶£¬Ä¬ÈÏÊÇtargetViewµÄÏÔÊ¾¾ØĞÎµÄ°ë¾¶£¬Èç¹ûÊÇ¾ØĞÎ£¬ÕâÀïÊÇÉèÖÃ¾ØĞÎÔ²½Ç´óĞ¡
+	                .setShape(GuideView.MyShape.RECTANGULAR)   // è®¾ç½®çŸ©å½¢æ˜¾ç¤ºåŒºåŸŸï¼Œ
+	                .setRadius(80)          // è®¾ç½®åœ†å½¢æˆ–çŸ©å½¢é€æ˜åŒºåŸŸåŠå¾„ï¼Œé»˜è®¤æ˜¯targetViewçš„æ˜¾ç¤ºçŸ©å½¢çš„åŠå¾„ï¼Œå¦‚æœæ˜¯çŸ©å½¢ï¼Œè¿™é‡Œæ˜¯è®¾ç½®çŸ©å½¢åœ†è§’å¤§å°
 	                .setBgColor(getResources().getColor(R.color.shadow_guidview))
 	                .setOnclickListener(new GuideView.OnClickCallback() {
 	                    @Override

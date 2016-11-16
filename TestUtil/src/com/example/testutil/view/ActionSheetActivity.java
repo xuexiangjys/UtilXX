@@ -11,10 +11,10 @@ import com.xuexiang.view.CompareIndicator;
 import com.xuexiang.view.ActionSheet.ActionSheetListener;
 
 /**  
- * ´´½¨Ê±¼ä£º2016-5-29 ÏÂÎç7:17:49  
- * ÏîÄ¿Ãû³Æ£ºTestUtil  
+ * åˆ›å»ºæ—¶é—´ï¼š2016-5-29 ä¸‹åˆ7:17:49  
+ * é¡¹ç›®åç§°ï¼šTestUtil  
  * @author xuexiang
- * ÎÄ¼şÃû³Æ£ºActionSheetActivity.java  
+ * æ–‡ä»¶åç§°ï¼šActionSheetActivity.java  
  **/
 public class ActionSheetActivity extends BaseActivity implements ActionSheetListener, OnClickListener{
 

@@ -26,13 +26,13 @@ public class LoadingAnimatorView extends SurfaceView implements
         SurfaceHolder.Callback, Runnable {
     private SurfaceHolder mHolder;
     private Canvas canvas = null;  
-   //»æÖÆµÄÏß³Ì
+   //ç»˜åˆ¶çš„çº¿ç¨‹
   	private Thread mThread;
     private PaintFlagsDrawFilter pfd;  
     private Bitmap bitmap;
-    private Paint mFillpaint;  //Ìî³ä»­±Ê
-    private Paint mBackgroundpaint; //±³¾°»­±Ê
-    private Paint mLoadingTextpaint; //loadingÎÄ×Ö»­±Ê
+    private Paint mFillpaint;  //å¡«å……ç”»ç¬”
+    private Paint mBackgroundpaint; //èƒŒæ™¯ç”»ç¬”
+    private Paint mLoadingTextpaint; //loadingæ–‡å­—ç”»ç¬”
     public boolean isLoading = true;
     private int y = 100;
     
@@ -49,8 +49,8 @@ public class LoadingAnimatorView extends SurfaceView implements
 
 	public LoadingAnimatorView(Context context) {
         super(context);
-        mloadingAnimatorPicture = RUtils.getDrawable(getContext(), "ic_launcher"); //Ä¬ÈÏÖµ
-        mLoadText = "ÕıÔÚ¼ÓÔØÖĞ";  //Ä¬ÈÏÖµ
+        mloadingAnimatorPicture = RUtils.getDrawable(getContext(), "ic_launcher"); //é»˜è®¤å€¼
+        mLoadText = "æ­£åœ¨åŠ è½½ä¸­";  //é»˜è®¤å€¼
         init();
     }
 
@@ -104,20 +104,20 @@ public class LoadingAnimatorView extends SurfaceView implements
          Bitmap bmp = BitmapFactory.decodeStream(getResources()
                  .openRawResource(mloadingAnimatorPicture));
          bmp=ChangeSize(bmp,bmp.getWidth(),bmp.getHeight());
-         bitmap = bmp.extractAlpha();// »ñÈ¡Ò»¸öÍ¸Ã÷Í¼Æ¬
-         y = bitmap.getHeight();//³õÊ¼»¯yÖá×ø±ê
+         bitmap = bmp.extractAlpha();// è·å–ä¸€ä¸ªé€æ˜å›¾ç‰‡
+         y = bitmap.getHeight();//åˆå§‹åŒ–yè½´åæ ‡
          Log.e("xuexiang","bitmap:"+bitmap.getWidth()+","+bitmap.getHeight());
 	}
     
     
     private static Bitmap ChangeSize(Bitmap bitmap,float widtn,float height) {
     	  Matrix matrix = new Matrix(); 
-    	  matrix.postScale(100/widtn,100/height); //³¤ºÍ¿í·Å´óËõĞ¡µÄ±ÈÀı
+    	  matrix.postScale(100/widtn,100/height); //é•¿å’Œå®½æ”¾å¤§ç¼©å°çš„æ¯”ä¾‹
     	  Bitmap resizeBmp = Bitmap.createBitmap(bitmap,0,0,bitmap.getWidth(),bitmap.getHeight(),matrix,true);
     	  return resizeBmp;
     	 }
     
-	//¸Ä±ä²Ã¼ôÇøÓò
+	//æ”¹å˜è£å‰ªåŒºåŸŸ
     private void playAnimator() {
         if (y > 0) {
             y-=3;
@@ -138,12 +138,12 @@ public class LoadingAnimatorView extends SurfaceView implements
                 Rect targetRect = new Rect(0,150,getWidth(),getHeight());   
                 FontMetricsInt fontMetrics = mLoadingTextpaint.getFontMetricsInt();  
                 int baseline = (targetRect.bottom + targetRect.top - fontMetrics.bottom - fontMetrics.top) / 2;  
-                // ÏÂÃæÕâĞĞÊÇÊµÏÖË®Æ½¾ÓÖĞ£¬drawText¶ÔÓ¦¸ÄÎª´«ÈëtargetRect.centerX()  
+                // ä¸‹é¢è¿™è¡Œæ˜¯å®ç°æ°´å¹³å±…ä¸­ï¼ŒdrawTextå¯¹åº”æ”¹ä¸ºä¼ å…¥targetRect.centerX()  
                 canvas.drawText(mLoadText, targetRect.centerX(), baseline, mLoadingTextpaint); 
                 
                 canvas.drawBitmap(bitmap, getWidth()/2-bitmap.getWidth()/2, getHeight()/2-bitmap.getHeight()*0.8f, mBackgroundpaint);
                 canvas.save();
-                //²Ã¼ô
+                //è£å‰ª
                 canvas.clipRect(getWidth()/2-bitmap.getWidth()/2, y+getHeight()/2-bitmap.getHeight()*0.8f, bitmap.getWidth()+getWidth()/2,
                         bitmap.getHeight()+getHeight()/2);
                 canvas.drawBitmap(bitmap, getWidth()/2-bitmap.getWidth()/2, getHeight()/2-bitmap.getHeight()*0.8f, mFillpaint);
@@ -171,7 +171,7 @@ public class LoadingAnimatorView extends SurfaceView implements
 
     @Override
     public void surfaceCreated(SurfaceHolder holder) {
-    	mThread = new Thread(this);//¿ªÆô»æÖÆÏß³Ì
+    	mThread = new Thread(this);//å¼€å¯ç»˜åˆ¶çº¿ç¨‹
     	mThread.start();
     }
 
@@ -179,7 +179,7 @@ public class LoadingAnimatorView extends SurfaceView implements
     public void surfaceDestroyed(SurfaceHolder holder) {
     	close();
     }
-   //»æÖÆ¶¯»­Ïß³Ì
+   //ç»˜åˆ¶åŠ¨ç”»çº¿ç¨‹
     @Override
     public void run() {
         while (isLoading) {

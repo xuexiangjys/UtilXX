@@ -15,80 +15,80 @@ import android.util.AttributeSet;
 import android.view.View;
 
 /**
- * ×Ô¶¨ÒåµÄprogressBar
+ * è‡ªå®šä¹‰çš„progressBar
  * @author zhl
  */
 public class CBProgressBar extends View {
     private static final int STYLE_HORIZONTAL = 0;
     private static final int STYLE_ROUND = 1;
     private static final int STYLE_SECTOR=2;
-    /**½ø¶È±³¾°»­±Ê**/
+    /**è¿›åº¦èƒŒæ™¯ç”»ç¬”**/
 //	private Paint mBgpaint;
-    /**½ø¶È»­±Ê**/
+    /**è¿›åº¦ç”»ç¬”**/
 //	private Paint mPrgpaint;
-    /**½ø¶ÈÎÄ×Ö»­±Ê**/
+    /**è¿›åº¦æ–‡å­—ç”»ç¬”**/
 //	private Paint mTextpaint;
     /**
-     * Ô²ĞÎ½ø¶ÈÌõ±ß¿ò¿í¶È
+     * åœ†å½¢è¿›åº¦æ¡è¾¹æ¡†å®½åº¦
      **/
     private int strokeSize=20;
     /**
-     * ½ø¶ÈÌõÖĞĞÄX×ø±ê
+     * è¿›åº¦æ¡ä¸­å¿ƒXåæ ‡
      **/
     private int centerX;
     /**
-     * ½ø¶ÈÌõÖĞĞÄY×ø±ê
+     * è¿›åº¦æ¡ä¸­å¿ƒYåæ ‡
      **/
     private int centerY;
     /**
-     * ½ø¶ÈÌáÊ¾ÎÄ×Ö´óĞ¡
+     * è¿›åº¦æç¤ºæ–‡å­—å¤§å°
      **/
     private int percenttextsize = 18;
     /**
-     * ½ø¶ÈÌáÊ¾ÎÄ×ÖÑÕÉ«
+     * è¿›åº¦æç¤ºæ–‡å­—é¢œè‰²
      **/
     private int percenttextcolor = 0xff009ACD;
     /**
-     * ½ø¶ÈÌõ±³¾°ÑÕÉ«
+     * è¿›åº¦æ¡èƒŒæ™¯é¢œè‰²
      **/
     private int progressBarBgColor = 0xff636363;
     /**
-     * ½ø¶ÈÑÕÉ«
+     * è¿›åº¦é¢œè‰²
      **/
     private int progressColor = 0xff00C5CD;
     /**
-     * ÉÈĞÎÉ¨Ãè½ø¶ÈµÄÑÕÉ«
+     * æ‰‡å½¢æ‰«æè¿›åº¦çš„é¢œè‰²
      */
     private int sectorColor=0xaaffffff;
     /**
-     * ÉÈĞÎÉ¨Ãè±³¾°
+     * æ‰‡å½¢æ‰«æèƒŒæ™¯
      */
     private int unSweepColor = 0xaa5e5e5e;
     /**
-     * ½ø¶ÈÌõÑùÊ½£¨Ë®Æ½/Ô²ĞÎ£©
+     * è¿›åº¦æ¡æ ·å¼ï¼ˆæ°´å¹³/åœ†å½¢ï¼‰
      **/
     private int orientation = STYLE_HORIZONTAL;
     /**
-     * Ô²ĞÎ½ø¶ÈÌõ°ë¾¶
+     * åœ†å½¢è¿›åº¦æ¡åŠå¾„
      **/
     private int radius = 30;
     /**
-     * ½ø¶È×î´óÖµ
+     * è¿›åº¦æœ€å¤§å€¼
      **/
     private int max = 100;
     /**
-     * ½ø¶ÈÖµ
+     * è¿›åº¦å€¼
      **/
     private int progress = 0;
     /**
-     * Ë®Æ½½ø¶ÈÌõÊÇ·ñÊÇ¿ÕĞÄ
+     * æ°´å¹³è¿›åº¦æ¡æ˜¯å¦æ˜¯ç©ºå¿ƒ
      **/
     private boolean isHorizonStroke;
     /**
-     * Ë®Æ½½ø¶ÈÔ²½ÇÖµ
+     * æ°´å¹³è¿›åº¦åœ†è§’å€¼
      **/
     private int rectRound=5;
-    /**½ø¶ÈÎÄ×ÖÊÇ·ñÏÔÊ¾°Ù·ÖºÅ**/
+    /**è¿›åº¦æ–‡å­—æ˜¯å¦æ˜¾ç¤ºç™¾åˆ†å·**/
     private boolean showPercentSign;
     private Paint mPaint;
 
@@ -138,24 +138,24 @@ public class CBProgressBar extends View {
     }
 
     /**
-     * »æÖÆÔ²ĞÎ½ø¶ÈÌõ
+     * ç»˜åˆ¶åœ†å½¢è¿›åº¦æ¡
      *
      * @param canvas
      */
     private void drawRoundProgressBar(Canvas canvas, Paint piant) {
-        // ³õÊ¼»¯»­±ÊÊôĞÔ
+        // åˆå§‹åŒ–ç”»ç¬”å±æ€§
         piant.setColor(progressBarBgColor);
         piant.setStyle(Paint.Style.STROKE);
         piant.setStrokeWidth(strokeSize);
-        // »­Ô²
+        // ç”»åœ†
         canvas.drawCircle(centerX, centerY, radius, piant);
-        // »­Ô²ĞÎ½ø¶È
+        // ç”»åœ†å½¢è¿›åº¦
         piant.setColor(progressColor);
         piant.setStyle(Paint.Style.STROKE);
         piant.setStrokeWidth(strokeSize);
         RectF oval = new RectF(centerX - radius, centerY - radius, radius + centerX, radius + centerY);
         canvas.drawArc(oval, -90, 360 * progress / max, false, piant);
-        // »­½ø¶ÈÎÄ×Ö
+        // ç”»è¿›åº¦æ–‡å­—
         piant.setStyle(Paint.Style.FILL);
         piant.setColor(percenttextcolor);
         piant.setTextSize(percenttextsize);
@@ -175,12 +175,12 @@ public class CBProgressBar extends View {
     }
 
     /**
-     * »æÖÆË®Æ½¾ØĞÎ½ø¶ÈÌõ
+     * ç»˜åˆ¶æ°´å¹³çŸ©å½¢è¿›åº¦æ¡
      *
      * @param canvas
      */
     private void drawHoriRectProgressBar(Canvas canvas, Paint piant) {
-        // ³õÊ¼»¯»­±ÊÊôĞÔ
+        // åˆå§‹åŒ–ç”»ç¬”å±æ€§
         piant.setColor(progressBarBgColor);
         if (isHorizonStroke) {
             piant.setStyle(Paint.Style.STROKE);
@@ -188,11 +188,11 @@ public class CBProgressBar extends View {
         } else {
             piant.setStyle(Paint.Style.FILL);
         }
-        // »­Ë®Æ½¾ØĞÎ
+        // ç”»æ°´å¹³çŸ©å½¢
         canvas.drawRoundRect(new RectF(centerX - getWidth() / 2, centerY - getHeight() / 2,
                 centerX + getWidth() / 2, centerY + getHeight() / 2), rectRound, rectRound, piant);
 
-        // »­Ë®Æ½½ø¶È
+        // ç”»æ°´å¹³è¿›åº¦
         piant.setStyle(Paint.Style.FILL);
         piant.setColor(progressColor);
         if(isHorizonStroke){
@@ -205,7 +205,7 @@ public class CBProgressBar extends View {
             piant.setXfermode(null);
         }
 
-        // »­½ø¶ÈÎÄ×Ö
+        // ç”»è¿›åº¦æ–‡å­—
         piant.setStyle(Paint.Style.FILL);
         piant.setColor(percenttextcolor);
         piant.setTextSize(percenttextsize);
@@ -224,18 +224,18 @@ public class CBProgressBar extends View {
     }
 
     /**
-     * »æÖÆÉÈĞÎÉ¨ÃèÊ½½ø¶È
+     * ç»˜åˆ¶æ‰‡å½¢æ‰«æå¼è¿›åº¦
      * @param canvas
      * @param piant
      */
     private void drawSectorProgressBar(Canvas canvas, Paint piant) {
-        // ³õÊ¼»¯»­±ÊÊôĞÔ
+        // åˆå§‹åŒ–ç”»ç¬”å±æ€§
         piant.setColor(sectorColor);
         piant.setStyle(Paint.Style.STROKE);
         piant.setStrokeWidth(2);
-        // »æÍâÈ¦
+        // ç»˜å¤–åœˆ
         canvas.drawCircle(centerX, centerY, radius, piant);
-        // »æÄÚÈ¦
+        // ç»˜å†…åœˆ
         piant.setColor(unSweepColor);
         piant.setStyle(Paint.Style.FILL);
         canvas.drawCircle(centerX, centerY, radius - 2, piant);

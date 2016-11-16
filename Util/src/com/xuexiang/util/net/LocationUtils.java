@@ -35,7 +35,7 @@ import android.text.TextUtils;
 import android.util.Log;
 
 /**
- * ¸ù¾İ¾­Î³¶È²éÑ¯µØÖ·ĞÅÏ¢ºÍ¸ù¾İµØÖ·ĞÅÏ¢²éÑ¯¾­Î³¶È
+ * æ ¹æ®ç»çº¬åº¦æŸ¥è¯¢åœ°å€ä¿¡æ¯å’Œæ ¹æ®åœ°å€ä¿¡æ¯æŸ¥è¯¢ç»çº¬åº¦
  *
  * @author jingle1267@163.com
  */
@@ -52,10 +52,10 @@ public final class LocationUtils {
     }
 
     /**
-     * ¸ù¾İµØÖ·»ñÈ¡¶ÔÓ¦µÄ¾­Î³¶È
+     * æ ¹æ®åœ°å€è·å–å¯¹åº”çš„ç»çº¬åº¦
      *
-     * @param address µØÖ·ĞÅÏ¢
-     * @return ¾­Î³¶ÈÊı×é
+     * @param address åœ°å€ä¿¡æ¯
+     * @return ç»çº¬åº¦æ•°ç»„
      */
     public static double[] getLocationInfo(String address) {
         if (TextUtils.isEmpty(address)) {
@@ -64,38 +64,38 @@ public final class LocationUtils {
         if (DEBUG) {
             LogUtils.d(TAG, "address : " + address);
         }
-        // ¶¨ÒåÒ»¸öHttpClient£¬ÓÃÓÚÏòÖ¸¶¨µØÖ··¢ËÍÇëÇó
+        // å®šä¹‰ä¸€ä¸ªHttpClientï¼Œç”¨äºå‘æŒ‡å®šåœ°å€å‘é€è¯·æ±‚
         HttpClient client = new DefaultHttpClient();
-        // ÏòÖ¸¶¨µØÖ··¢ËÍGETÇëÇó
+        // å‘æŒ‡å®šåœ°å€å‘é€GETè¯·æ±‚
         HttpGet httpGet = new HttpGet("http://maps.google."
                 + "com/maps/api/geocode/json?address=" + address
                 + "ka&sensor=false");
         StringBuilder sb = new StringBuilder();
         try {
-            // »ñÈ¡·şÎñÆ÷µÄÏìÓ¦
+            // è·å–æœåŠ¡å™¨çš„å“åº”
             HttpResponse response = client.execute(httpGet);
             HttpEntity entity = response.getEntity();
-            // »ñÈ¡·şÎñÆ÷ÏìÓ¦µÄÊäÈëÁ÷
+            // è·å–æœåŠ¡å™¨å“åº”çš„è¾“å…¥æµ
             InputStream stream = entity.getContent();
             int b;
-            // Ñ­»·¶ÁÈ¡·şÎñÆ÷ÏìÓ¦
+            // å¾ªç¯è¯»å–æœåŠ¡å™¨å“åº”
             while ((b = stream.read()) != -1) {
                 sb.append((char) b);
             }
-            // ½«·şÎñÆ÷·µ»ØµÄ×Ö·û´®×ª»»ÎªJSONObject¶ÔÏó
+            // å°†æœåŠ¡å™¨è¿”å›çš„å­—ç¬¦ä¸²è½¬æ¢ä¸ºJSONObjectå¯¹è±¡
             JSONObject jsonObject = new JSONObject(sb.toString());
-            // ´ÓJSONObject¶ÔÏóÖĞÈ¡³ö´ú±íÎ»ÖÃµÄlocationÊôĞÔ
+            // ä»JSONObjectå¯¹è±¡ä¸­å–å‡ºä»£è¡¨ä½ç½®çš„locationå±æ€§
             JSONObject location = jsonObject.getJSONArray("results")
                     .getJSONObject(0).getJSONObject("geometry")
                     .getJSONObject("location");
-            // »ñÈ¡¾­¶ÈĞÅÏ¢
+            // è·å–ç»åº¦ä¿¡æ¯
             double longitude = location.getDouble("lng");
-            // »ñÈ¡Î³¶ÈĞÅÏ¢
+            // è·å–çº¬åº¦ä¿¡æ¯
             double latitude = location.getDouble("lat");
             if (DEBUG) {
                 LogUtils.d(TAG, "location : (" + longitude + "," + latitude + ")");
             }
-            // ½«¾­¶È¡¢Î³¶ÈĞÅÏ¢×é³Édouble[]Êı×é
+            // å°†ç»åº¦ã€çº¬åº¦ä¿¡æ¯ç»„æˆdouble[]æ•°ç»„
             return new double[]{longitude, latitude};
         } catch (Exception e) {
             e.printStackTrace();
@@ -104,12 +104,12 @@ public final class LocationUtils {
     }
 
     /**
-     * ¸ù¾İ¾­Î³¶È»ñÈ¡¶ÔÓ¦µÄµØÖ·
+     * æ ¹æ®ç»çº¬åº¦è·å–å¯¹åº”çš„åœ°å€
      *
-     * @param longitude ¾­¶È
-     * @param latitude  Î³¶È
-     * @param lang      ÓïÑÔ Èç¹ûÎ»¿ÕÔòÄ¬ÈÏen
-     * @return µØÖ·ĞÅÏ¢
+     * @param longitude ç»åº¦
+     * @param latitude  çº¬åº¦
+     * @param lang      è¯­è¨€ å¦‚æœä½ç©ºåˆ™é»˜è®¤en
+     * @return åœ°å€ä¿¡æ¯
      * @throws Exception
      */
     public static String getAddress(double longitude, double latitude,
@@ -120,13 +120,13 @@ public final class LocationUtils {
         if (lang == null) {
             lang = "en";
         }
-        // Éè¶¨ÇëÇóµÄ³¬Ê±Ê±¼ä
+        // è®¾å®šè¯·æ±‚çš„è¶…æ—¶æ—¶é—´
         HttpParams params = new BasicHttpParams();
         HttpConnectionParams.setConnectionTimeout(params, 10 * 1000);
         HttpConnectionParams.setSoTimeout(params, 10 * 1000);
-        // ¶¨ÒåÒ»¸öHttpClient£¬ÓÃÓÚÏòÖ¸¶¨µØÖ··¢ËÍÇëÇó
+        // å®šä¹‰ä¸€ä¸ªHttpClientï¼Œç”¨äºå‘æŒ‡å®šåœ°å€å‘é€è¯·æ±‚
         HttpClient client = new DefaultHttpClient(params);
-        // ÏòÖ¸¶¨µØÖ··¢ËÍGETÇëÇó
+        // å‘æŒ‡å®šåœ°å€å‘é€GETè¯·æ±‚
         HttpGet httpGet = new HttpGet("https://maps.googleapis.com/maps/api/"
                 + "geocode/json?latlng=" + latitude + "," + longitude
                 + "&sensor=false&language=" + lang);
@@ -135,19 +135,19 @@ public final class LocationUtils {
                     "URL : " + httpGet.getURI());
         }
         StringBuilder sb = new StringBuilder();
-        // Ö´ĞĞÇëÇó
+        // æ‰§è¡Œè¯·æ±‚
         HttpResponse response = client.execute(httpGet);
         HttpEntity entity = response.getEntity();
-        // »ñÈ¡·şÎñÆ÷ÏìÓ¦µÄ×Ö·û´®
+        // è·å–æœåŠ¡å™¨å“åº”çš„å­—ç¬¦ä¸²
         InputStream stream = entity.getContent();
         int b;
         while ((b = stream.read()) != -1) {
             sb.append((char) b);
         }
-        // °Ñ·şÎñÆ÷ÏàÓ¦µÄ×Ö·û´®×ª»»ÎªJSONObject
+        // æŠŠæœåŠ¡å™¨ç›¸åº”çš„å­—ç¬¦ä¸²è½¬æ¢ä¸ºJSONObject
         JSONObject jsonObj = new JSONObject(sb.toString());
         Log.d("ConvertUtil", "getAddress:" + sb.toString());
-        // ½âÎö³öÏìÓ¦½á¹ûÖĞµÄµØÖ·Êı¾İ
+        // è§£æå‡ºå“åº”ç»“æœä¸­çš„åœ°å€æ•°æ®
         JSONObject addressObject = jsonObj.getJSONArray("results")
                 .getJSONObject(0);
         String address = decodeLocationName(addressObject);
@@ -158,11 +158,11 @@ public final class LocationUtils {
     }
 
     /**
-     * ¸ù¾İGoogle API ½âÎö³ö¹ú¼ÒºÍ³ÇÊĞÃû³Æ
+     * æ ¹æ®Google API è§£æå‡ºå›½å®¶å’ŒåŸå¸‚åç§°
      * https://developers.google.com/maps/documentation/geocoding
      *
-     * @param jsonObject µØÖ·Json¶ÔÏó
-     * @return ·µ»Ø¹ú¼ÒºÍ³ÇÊĞ
+     * @param jsonObject åœ°å€Jsonå¯¹è±¡
+     * @return è¿”å›å›½å®¶å’ŒåŸå¸‚
      */
     public static String decodeLocationName(JSONObject jsonObject) {
         JSONArray jsonArray;

@@ -4,14 +4,14 @@ package com.xuexiang.util.common;
  * PatrolDev
  * Created by acer_april
  * on 2016/3/22
- * Description: 16½øÖÆÖµÓëString/ByteÖ®¼äµÄ×ª»»
+ * Description: 16è¿›åˆ¶å€¼ä¸String/Byteä¹‹é—´çš„è½¬æ¢
  */
 public class HexUtil {
     /**
-     * ×Ö·û´®×ª»»³ÉÊ®Áù½øÖÆ×Ö·û´®
+     * å­—ç¬¦ä¸²è½¬æ¢æˆåå…­è¿›åˆ¶å­—ç¬¦ä¸²
      *
-     * @param str ´ı×ª»»µÄASCII×Ö·û´®
-     * @return Ã¿¸öByteÖ®¼ä¿Õ¸ñ·Ö¸ô£¬Èç: [61 6C 6B]
+     * @param str å¾…è½¬æ¢çš„ASCIIå­—ç¬¦ä¸²
+     * @return æ¯ä¸ªByteä¹‹é—´ç©ºæ ¼åˆ†éš”ï¼Œå¦‚: [61 6C 6B]
      */
     public static String str2HexStr(String str) {
 
@@ -31,10 +31,10 @@ public class HexUtil {
     }
 
     /**
-     * Ê®Áù½øÖÆ×ª»»×Ö·û´®
+     * åå…­è¿›åˆ¶è½¬æ¢å­—ç¬¦ä¸²
      *
-     * @param hexStr Byte×Ö·û´®(ByteÖ®¼äÎŞ·Ö¸ô·û Èç:[616C6B])
-     * @return String ¶ÔÓ¦µÄ×Ö·û´®
+     * @param hexStr Byteå­—ç¬¦ä¸²(Byteä¹‹é—´æ— åˆ†éš”ç¬¦ å¦‚:[616C6B])
+     * @return String å¯¹åº”çš„å­—ç¬¦ä¸²
      */
     public static String hexStr2Str(String hexStr) {
         String str = "0123456789ABCDEF";
@@ -51,10 +51,10 @@ public class HexUtil {
     }
 
     /**
-     * bytes×ª»»³ÉÊ®Áù½øÖÆ×Ö·û´®
+     * bytesè½¬æ¢æˆåå…­è¿›åˆ¶å­—ç¬¦ä¸²
      *
-     * @param b byteÊı×é
-     * @return String Ã¿¸öByteÖµÖ®¼ä¿Õ¸ñ·Ö¸ô
+     * @param b byteæ•°ç»„
+     * @return String æ¯ä¸ªByteå€¼ä¹‹é—´ç©ºæ ¼åˆ†éš”
      */
     public static String byte2HexStr(byte[] b) {
         String stmp = "";
@@ -68,9 +68,9 @@ public class HexUtil {
     }
 
     /**
-     * bytes×Ö·û´®×ª»»ÎªByteÖµ
+     * byteså­—ç¬¦ä¸²è½¬æ¢ä¸ºByteå€¼
      *
-     * @param src Byte×Ö·û´®£¬Ã¿¸öByteÖ®¼äÃ»ÓĞ·Ö¸ô·û
+     * @param src Byteå­—ç¬¦ä¸²ï¼Œæ¯ä¸ªByteä¹‹é—´æ²¡æœ‰åˆ†éš”ç¬¦
      * @return byte[]
      */
     public static byte[] hexStr2Bytes(String src) {
@@ -87,10 +87,10 @@ public class HexUtil {
     }
 
     /**
-     * StringµÄ×Ö·û´®×ª»»³ÉunicodeµÄString
+     * Stringçš„å­—ç¬¦ä¸²è½¬æ¢æˆunicodeçš„String
      *
-     * @param strText È«½Ç×Ö·û´®
-     * @return String Ã¿¸öunicodeÖ®¼äÎŞ·Ö¸ô·û
+     * @param strText å…¨è§’å­—ç¬¦ä¸²
+     * @return String æ¯ä¸ªunicodeä¹‹é—´æ— åˆ†éš”ç¬¦
      * @throws Exception
      */
     public static String strToUnicode(String strText)
@@ -105,30 +105,30 @@ public class HexUtil {
             strHex = Integer.toHexString(intAsc);
             if (intAsc > 128)
                 str.append("\\u" + strHex);
-            else // µÍÎ»ÔÚÇ°Ãæ²¹00
+            else // ä½ä½åœ¨å‰é¢è¡¥00
                 str.append("\\u00" + strHex);
         }
         return str.toString();
     }
 
     /**
-     * unicodeµÄString×ª»»³ÉStringµÄ×Ö·û´®
+     * unicodeçš„Stringè½¬æ¢æˆStringçš„å­—ç¬¦ä¸²
      *
-     * @param hex 16½øÖÆÖµ×Ö·û´® £¨Ò»¸öunicodeÎª2byte£©
-     * @return String È«½Ç×Ö·û´®
+     * @param hex 16è¿›åˆ¶å€¼å­—ç¬¦ä¸² ï¼ˆä¸€ä¸ªunicodeä¸º2byteï¼‰
+     * @return String å…¨è§’å­—ç¬¦ä¸²
      */
     public static String unicodeToString(String hex) {
         int t = hex.length() / 6;
         StringBuilder str = new StringBuilder();
         for (int i = 0; i < t; i++) {
             String s = hex.substring(i * 6, (i + 1) * 6);
-            // ¸ßÎ»ĞèÒª²¹ÉÏ00ÔÙ×ª
+            // é«˜ä½éœ€è¦è¡¥ä¸Š00å†è½¬
             String s1 = s.substring(2, 4) + "00";
-            // µÍÎ»Ö±½Ó×ª
+            // ä½ä½ç›´æ¥è½¬
             String s2 = s.substring(4);
-            // ½«16½øÖÆµÄstring×ªÎªint
+            // å°†16è¿›åˆ¶çš„stringè½¬ä¸ºint
             int n = Integer.valueOf(s1, 16) + Integer.valueOf(s2, 16);
-            // ½«int×ª»»Îª×Ö·û
+            // å°†intè½¬æ¢ä¸ºå­—ç¬¦
             char[] chars = Character.toChars(n);
             str.append(new String(chars));
         }

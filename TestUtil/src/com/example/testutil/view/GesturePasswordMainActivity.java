@@ -7,10 +7,10 @@ import com.example.testutil.R;
 import com.xuexiang.app.BaseActivity;
 
 /**  
- * ´´½¨Ê±¼ä£º2016-5-29 ÏÂÎç11:36:48  
- * ÏîÄ¿Ãû³Æ£ºTestUtil  
+ * åˆ›å»ºæ—¶é—´ï¼š2016-5-29 ä¸‹åˆ11:36:48  
+ * é¡¹ç›®åç§°ï¼šTestUtil  
  * @author xuexiang
- * ÎÄ¼şÃû³Æ£ºGesturePasswordMainActivity.java  
+ * æ–‡ä»¶åç§°ï¼šGesturePasswordMainActivity.java  
  **/
 public class GesturePasswordMainActivity extends BaseActivity {
 

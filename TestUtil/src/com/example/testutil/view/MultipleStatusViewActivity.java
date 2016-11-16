@@ -43,7 +43,7 @@ public class MultipleStatusViewActivity extends BaseActivity implements View.OnC
     
     private final View.OnClickListener onRetryClickListener = new View.OnClickListener() {
         @Override public void onClick(View v) {
-            Toast.makeText(getApplicationContext(),"您点击了重试视图",Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(),"鎮ㄧ偣鍑讳簡閲嶈瘯瑙嗗浘",Toast.LENGTH_SHORT).show();
             mMultipleStatusView.showLoading();
         }
     };

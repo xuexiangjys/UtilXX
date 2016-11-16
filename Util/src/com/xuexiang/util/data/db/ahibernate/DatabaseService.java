@@ -33,8 +33,8 @@ public class DatabaseService<T> {
 
     // ===================object begin===========================
     /**
-     * ¸´ÔÓ²éÑ¯¶ÔÏó¼¯ºÏ
-     * @param where ²éÑ¯Ìõ¼ş
+     * å¤æ‚æŸ¥è¯¢å¯¹è±¡é›†åˆ
+     * @param where æŸ¥è¯¢æ¡ä»¶
      * @return
      */
     public List<T> getObjectsByWhere(Map<String, String> where) {
@@ -43,9 +43,9 @@ public class DatabaseService<T> {
     }
     
     /**
-     * ¸´ÔÓ²éÑ¯¶ÔÏó
-     * @param where ²éÑ¯Ìõ¼ş
-     * @return ¶ÔÏó
+     * å¤æ‚æŸ¥è¯¢å¯¹è±¡
+     * @param where æŸ¥è¯¢æ¡ä»¶
+     * @return å¯¹è±¡
      */
     public T getObjectByWhere(Map<String, String> where) {
         List<T> objectList = mDao.queryList(clazz, where);
@@ -57,9 +57,9 @@ public class DatabaseService<T> {
     }
     
     /**
-     * ¸ù¾İid²éÑ¯¶ÔÏó
+     * æ ¹æ®idæŸ¥è¯¢å¯¹è±¡
      * @param id
-     * @return ¶ÔÏó
+     * @return å¯¹è±¡
      */
     public T queryById(long id) {
     	Map<String,String> map=new HashMap<String, String>();
@@ -73,10 +73,10 @@ public class DatabaseService<T> {
     }
     
     /**
-     * ¸ù¾İÁĞÃû²éÑ¯¶ÔÏó
-     * @param Column ÁĞÃû
-     * @param value Öµ
-     * @return ¶ÔÏó
+     * æ ¹æ®åˆ—åæŸ¥è¯¢å¯¹è±¡
+     * @param Column åˆ—å
+     * @param value å€¼
+     * @return å¯¹è±¡
      */
     public List<T> getObjectsByColumn(String Columnname,String value) {
     	Map<String,String> map=new HashMap<String, String>();
@@ -90,10 +90,10 @@ public class DatabaseService<T> {
     }
     
     /**
-     * ¸ù¾İÁĞÃû²éÑ¯¶ÔÏó
-     * @param Column ÁĞÃû
-     * @param value Öµ
-     * @return ¶ÔÏó
+     * æ ¹æ®åˆ—åæŸ¥è¯¢å¯¹è±¡
+     * @param Column åˆ—å
+     * @param value å€¼
+     * @return å¯¹è±¡
      */
     public T queryByColumn(String Columnname,String value) {
     	Map<String,String> map=new HashMap<String, String>();
@@ -107,10 +107,10 @@ public class DatabaseService<T> {
     }
     
     /**
-     * ¸ù¾İÁĞÃû²éÑ¯¶ÔÏó
-     * @param Column ÁĞÃû
-     * @param value Öµ
-     * @return ¶ÔÏó
+     * æ ¹æ®åˆ—åæŸ¥è¯¢å¯¹è±¡
+     * @param Column åˆ—å
+     * @param value å€¼
+     * @return å¯¹è±¡
      */
     public T queryByColumn2(String Columnname1,String value1,String Columnname2,String value2) {
     	Map<String,String> map=new HashMap<String, String>();
@@ -125,9 +125,9 @@ public class DatabaseService<T> {
     }
 
     /**
-     * ¸ù¾İ¶ÔÏó£¨²¿·ÖÊôĞÔ£©²éÑ¯¶ÔÏó¼¯ºÏ
+     * æ ¹æ®å¯¹è±¡ï¼ˆéƒ¨åˆ†å±æ€§ï¼‰æŸ¥è¯¢å¯¹è±¡é›†åˆ
      * @param t
-     * @return ¶ÔÏó¼¯ºÏ
+     * @return å¯¹è±¡é›†åˆ
      */
     public List<T> getObjects(T t) {
         List<T> objectList = mDao.queryList(t);
@@ -135,9 +135,9 @@ public class DatabaseService<T> {
     }
     
     /**
-     * ¸ù¾İ¶ÔÏó£¨²¿·ÖÊôĞÔ£©²éÑ¯¶ÔÏó
+     * æ ¹æ®å¯¹è±¡ï¼ˆéƒ¨åˆ†å±æ€§ï¼‰æŸ¥è¯¢å¯¹è±¡
      * @param t
-     * @return ¶ÔÏó
+     * @return å¯¹è±¡
      */
     public T getObject(T t) {
         List<T> objectList = mDao.queryList(t);
@@ -151,7 +151,7 @@ public class DatabaseService<T> {
     
 
     /**
-     * Ìí¼Ó¶ÔÏóµ½Êı¾İ¿â
+     * æ·»åŠ å¯¹è±¡åˆ°æ•°æ®åº“
      * @param t
      * @return
      */
@@ -160,18 +160,18 @@ public class DatabaseService<T> {
     }
 
     /**
-     * ¸´ÔÓ¶ÔÏó¸üĞÂ
-     * @param t  ¶ÔÏó
-     * @param where ¸üĞÂÌõ¼ş
+     * å¤æ‚å¯¹è±¡æ›´æ–°
+     * @param t  å¯¹è±¡
+     * @param where æ›´æ–°æ¡ä»¶
      */
     public void update(T t, Map<String, String> where) {
         mDao.update(t, where);
     }
     
     /**
-     * ¸´ÔÓ¶ÔÏó¸üĞÂ
-     * @param t  ¶ÔÏó
-     * @param where ¸üĞÂÌõ¼ş
+     * å¤æ‚å¯¹è±¡æ›´æ–°
+     * @param t  å¯¹è±¡
+     * @param where æ›´æ–°æ¡ä»¶
      */
     public void updateByColumn(T t, String Columnname,String value) {
     	Map<String,String> map=new HashMap<String, String>();
@@ -180,7 +180,7 @@ public class DatabaseService<T> {
     }
     
     /**
-     * ¶ÔÏó¸üĞÂ
+     * å¯¹è±¡æ›´æ–°
      * @param t
      */
     public void update(T t) {
@@ -188,16 +188,16 @@ public class DatabaseService<T> {
     }
    
     /**
-     * ¸´ÔÓÌõ¼şÉ¾³ı
-     * @param where É¾³ıÌõ¼ş
+     * å¤æ‚æ¡ä»¶åˆ é™¤
+     * @param where åˆ é™¤æ¡ä»¶
      */
     public void delete(Map<String, String> where) {
         mDao.delete(clazz, where);
     }
     
     /**
-     * ¸´ÔÓÌõ¼şÉ¾³ı
-     * @param where É¾³ıÌõ¼ş
+     * å¤æ‚æ¡ä»¶åˆ é™¤
+     * @param where åˆ é™¤æ¡ä»¶
      */
     public void deleteByColumn(String Columnname,String value) {
     	Map<String,String> map=new HashMap<String, String>();
@@ -206,7 +206,7 @@ public class DatabaseService<T> {
     }
     
     /**
-     * ¸ù¾İidÉ¾³ı
+     * æ ¹æ®idåˆ é™¤
      * @param id
      */
     public void deleteById(long id) {
@@ -215,7 +215,7 @@ public class DatabaseService<T> {
         mDao.delete(clazz, map);
     }
     /**
-     * É¾³ıÖ¸¶¨¶ÔÏó
+     * åˆ é™¤æŒ‡å®šå¯¹è±¡
      * @param t
      */
     public void delete(T t) {

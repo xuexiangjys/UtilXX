@@ -13,7 +13,7 @@ public class ServiceActivity extends BaseActivity implements OnClickListener{
 	public void onCreateActivity() {
 		 setContentView(R.layout.activity_service);
 	        
-		 initActionBar("×Ô¶¨Òå·şÎñ½çÃæ");
+		 initActionBar("è‡ªå®šä¹‰æœåŠ¡ç•Œé¢");
 			
 	}
 	
@@ -22,7 +22,7 @@ public class ServiceActivity extends BaseActivity implements OnClickListener{
 		Intent intent = new Intent();
 		switch (v.getId()) {
 		case R.id.btn_floatviewservice:
-			mToastUtil.showToast("µã»÷ÁËFloatServiceActivity");
+			mToastUtil.showToast("ç‚¹å‡»äº†FloatServiceActivity");
         	intent.setClass(this, FloatServiceActivity.class);
             startActivity(intent);			
 			break;

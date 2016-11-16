@@ -49,7 +49,7 @@ public class AssetDatabaseOpenHelper {
     /**
      * Create and/or open a database that will be used for reading and writing.
      *
-     * @return SQLiteDatabase对象
+     * @return SQLiteDatabase瀵硅薄
      * @throws RuntimeException if cannot copy database from assets
      * @throws SQLiteException  if the database cannot be opened
      */
@@ -71,7 +71,7 @@ public class AssetDatabaseOpenHelper {
     /**
      * Create and/or open a database that will be used for reading only.
      *
-     * @return SQLiteDatabase对象
+     * @return SQLiteDatabase瀵硅薄
      * @throws RuntimeException if cannot copy database from assets
      * @throws SQLiteException  if the database cannot be opened
      */
@@ -90,7 +90,7 @@ public class AssetDatabaseOpenHelper {
     }
 
     /**
-     * 获取数据库名称
+     * 鑾峰彇鏁版嵁搴撳悕绉�
      *
      * @return the database name
      */

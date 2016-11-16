@@ -7,10 +7,10 @@ import com.xuexiang.app.BaseActivity;
 import com.xuexiang.view.PatternView;
 
 /**  
- * ´´½¨Ê±¼ä£º2016-5-29 ÏÂÎç11:58:50  
- * ÏîÄ¿Ãû³Æ£ºTestUtil  
+ * åˆ›å»ºæ—¶é—´ï¼š2016-5-29 ä¸‹åˆ11:58:50  
+ * é¡¹ç›®åç§°ï¼šTestUtil  
  * @author xuexiang
- * ÎÄ¼şÃû³Æ£ºPatternViewActivity.java  
+ * æ–‡ä»¶åç§°ï¼šPatternViewActivity.java  
  **/
 public class PatternViewActivity extends BaseActivity {
 

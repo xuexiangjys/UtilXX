@@ -1,13 +1,13 @@
 package com.example.testutil.net.model;
 
 public class Student {
-		private String sno;  //Ñ§ºÅ
-		private String sname;  //ĞÕÃû
-		private String ssex;  //ĞÔ±ğ
-		private int sage;  //ÄêÁä
-		private String dno;  //ËùÔÚÑ§Ôº
-		private String contact; //ÁªÏµµç»°
-		private String homeaddr; //¼ÒÍ¥×¡Ö·
+		private String sno;  //å­¦å·
+		private String sname;  //å§“å
+		private String ssex;  //æ€§åˆ«
+		private int sage;  //å¹´é¾„
+		private String dno;  //æ‰€åœ¨å­¦é™¢
+		private String contact; //è”ç³»ç”µè¯
+		private String homeaddr; //å®¶åº­ä½å€
 		public String getSno() {
 			return sno;
 		}
@@ -54,7 +54,7 @@ public class Student {
 		@Override
 		public String toString() {
 			// TODO Auto-generated method stub
-			return "Ñ§ºÅ:"+sno+"£¬ÄêÁä:"+sage+"£¬ĞÔ±ğ:"+ssex+"£¬ËùÔÚÑ§Ôº:"+dno+"£¬ÁªÏµµç»°:"+contact+"£¬¼ÒÍ¥×¡Ö·:"+homeaddr;
+			return "å­¦å·:"+sno+"ï¼Œå¹´é¾„:"+sage+"ï¼Œæ€§åˆ«:"+ssex+"ï¼Œæ‰€åœ¨å­¦é™¢:"+dno+"ï¼Œè”ç³»ç”µè¯:"+contact+"ï¼Œå®¶åº­ä½å€:"+homeaddr;
 		}
     }
 

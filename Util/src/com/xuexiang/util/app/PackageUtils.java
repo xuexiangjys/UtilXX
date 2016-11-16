@@ -638,9 +638,9 @@ public final class PackageUtils {
     }
     
     /**
-     * ¼ì²éÄ³¸öÓ¦ÓÃÊÇ·ñ°²×°
+     * æ£€æŸ¥æŸä¸ªåº”ç”¨æ˜¯å¦å®‰è£…
      * @param context
-     * @param packageName °üÃû
+     * @param packageName åŒ…å
      * @return
      */
     public static boolean checkAPP(Context context, String packageName) {
@@ -657,7 +657,7 @@ public final class PackageUtils {
     }
     
     /**
-   	 * Ê¹ÓÃÏµÍ³°²×°apk
+   	 * ä½¿ç”¨ç³»ç»Ÿå®‰è£…apk
    	 * 
    	 * @param url
    	 */
@@ -673,7 +673,7 @@ public final class PackageUtils {
    	}
 
        /**
-        * ´ò¿ªÖ¸¶¨µÄÓ¦ÓÃ
+        * æ‰“å¼€æŒ‡å®šçš„åº”ç”¨
        * @param context
        * @param appInfo
        */
@@ -682,7 +682,7 @@ public final class PackageUtils {
       }  
     
      /**
-      * ´ò¿ªÖ¸¶¨µÄÓ¦ÓÃ
+      * æ‰“å¼€æŒ‡å®šçš„åº”ç”¨
      * @param context
      * @param packageName
      */
@@ -717,58 +717,58 @@ public final class PackageUtils {
     
     
     /**
-     * Ê¹ÓÃÏµÍ³×Ô´øµÄ°²×°assetÏÂµÄapkÓ¦ÓÃ
+     * ä½¿ç”¨ç³»ç»Ÿè‡ªå¸¦çš„å®‰è£…assetä¸‹çš„apkåº”ç”¨
      * @param context
-     * @param appPackageName Ó¦ÓÃµÄ°üÃû³Æ
-     * @param appName  Ó¦ÓÃÃû³Æ
-     * @param apkFileName apkÎÄ¼şµÄÃû³Æ
+     * @param appPackageName åº”ç”¨çš„åŒ…åç§°
+     * @param appName  åº”ç”¨åç§°
+     * @param apkFileName apkæ–‡ä»¶çš„åç§°
      */
     public static void intallAPKFromAssetBySystem(final Context context, String appPackageName, String appName, final String apkFileName) {
     	
         if(PackageUtils.checkAPP(context, appPackageName)) {
-        	ToastUtil.getInstance(context).showToast("ÒÑ°²×°" + appName + "!");
+        	ToastUtil.getInstance(context).showToast("å·²å®‰è£…" + appName + "!");
         	PackageUtils.openApp(context, appPackageName);
         } else {
-        	ToastUtil.getInstance(context).showToast("Î´°²×°" + appName + "!");
+        	ToastUtil.getInstance(context).showToast("æœªå®‰è£…" + appName + "!");
         	if(ResourceUtils.copyAPKFromAssets(context, apkFileName)) {
-        		DialogUtil.showChangePrompt(context, "ÊÇ·ñ°²×°" + appName + "Ó¦ÓÃ£¿", new DialogInterface.OnClickListener() {
+        		DialogUtil.showChangePrompt(context, "æ˜¯å¦å®‰è£…" + appName + "åº”ç”¨ï¼Ÿ", new DialogInterface.OnClickListener() {
 					@Override
 					public void onClick(DialogInterface dialog, int which) {
 						PackageUtils.installApk(context,LocalFileUtil.APK_PATH + apkFileName);
 					}}, null);            		
         	} else {
-        		ToastUtil.getInstance(context).showToast("»ñÈ¡APK×ÊÔ´Ê§°Ü£¡");
+        		ToastUtil.getInstance(context).showToast("è·å–APKèµ„æºå¤±è´¥ï¼");
         	}
         }
 	}
     
     /**
-     * ×Ô¶¨Òå°²×°assetÏÂµÄapkÓ¦ÓÃ
+     * è‡ªå®šä¹‰å®‰è£…assetä¸‹çš„apkåº”ç”¨
      * @param context
-     * @param appPackageName Ó¦ÓÃµÄ°üÃû³Æ
-     * @param appName  Ó¦ÓÃÃû³Æ
-     * @param apkFileName apkÎÄ¼şµÄÃû³Æ
+     * @param appPackageName åº”ç”¨çš„åŒ…åç§°
+     * @param appName  åº”ç”¨åç§°
+     * @param apkFileName apkæ–‡ä»¶çš„åç§°
      */
     public static void intallAPKFromAssetByCustom(final Context context, final String appPackageName, final String appName, final String apkFileName) {
     	
         if(PackageUtils.checkAPP(context, appPackageName)) {
-        	ToastUtil.getInstance(context).showToast("ÒÑ°²×°" + appName + "!");
+        	ToastUtil.getInstance(context).showToast("å·²å®‰è£…" + appName + "!");
         	PackageUtils.openApp(context, appPackageName);
         } else {
-        	ToastUtil.getInstance(context).showToast("Î´°²×°" + appName + "!");
+        	ToastUtil.getInstance(context).showToast("æœªå®‰è£…" + appName + "!");
         	if(ResourceUtils.copyAPKFromAssets(context, apkFileName)) {
-        		DialogUtil.showChangePrompt(context, "ÊÇ·ñ°²×°" + appName + "Ó¦ÓÃ£¿", new DialogInterface.OnClickListener() {
+        		DialogUtil.showChangePrompt(context, "æ˜¯å¦å®‰è£…" + appName + "åº”ç”¨ï¼Ÿ", new DialogInterface.OnClickListener() {
 					@Override
 					public void onClick(DialogInterface dialog, int which) {
 						if (PackageUtils.install(context,LocalFileUtil.APK_PATH + apkFileName) == PackageUtils.INSTALL_SUCCEEDED) {
-							ToastUtil.getInstance(context).showToast("°²×°" + appName + "³É¹¦£¡");
+							ToastUtil.getInstance(context).showToast("å®‰è£…" + appName + "æˆåŠŸï¼");
 	            			PackageUtils.openApp(context, appPackageName);
 	            		} else {
-	            			ToastUtil.getInstance(context).showToast("°²×°" + appName + "Ê§°Ü£¡");
+	            			ToastUtil.getInstance(context).showToast("å®‰è£…" + appName + "å¤±è´¥ï¼");
 	            		}
 					}}, null);            		
         	} else {
-        		ToastUtil.getInstance(context).showToast("»ñÈ¡APK×ÊÔ´Ê§°Ü£¡");
+        		ToastUtil.getInstance(context).showToast("è·å–APKèµ„æºå¤±è´¥ï¼");
         	}
         }
 	}

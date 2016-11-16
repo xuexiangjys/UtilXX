@@ -22,50 +22,50 @@ import android.util.AttributeSet;
 import android.view.View;
 
 /**
- * Ëõ·ÅÕ¹¿ªµÄ¶¯»­¼òµ¥Textview
+ * ç¼©æ”¾å±•å¼€çš„åŠ¨ç”»ç®€å•Textview
  *
  * Created by igeek on 2016/9/1.
  * @author igeek2014@hotmail.com
  */
 public class ExpandTextView extends View implements View.OnClickListener {
 
-    //ĞĞÎÄ±¾¼ÇÂ¼¼¯
+    //è¡Œæ–‡æœ¬è®°å½•é›†
     private List<LineText> lineTexts = new ArrayList<LineText>();
-    //×î´óÏÔÊ¾ÎÄ±¾ĞĞÊı
+    //æœ€å¤§æ˜¾ç¤ºæ–‡æœ¬è¡Œæ•°
     private int maxLines;
-    //Ä¿±êÎÄ±¾ĞĞ
+    //ç›®æ ‡æ–‡æœ¬è¡Œ
     private int targetLine;
-    //ÊÕËõÊÕÆğÊ±ºòµÄÌáÊ¾Í¼±ê
+    //æ”¶ç¼©æ”¶èµ·æ—¶å€™çš„æç¤ºå›¾æ ‡
     private Drawable expandDrawable;
-    //Õ¹¿ªÊ±ºòµÄÌáÊ¾Í¼±ê
+    //å±•å¼€æ—¶å€™çš„æç¤ºå›¾æ ‡
     private Drawable shrinkDrawable;
-    //ÌáÊ¾Í¼±êµÄ¿í¶È
+    //æç¤ºå›¾æ ‡çš„å®½åº¦
     private int drawableWidth;
-    //ÌáÊ¾Í¼±êµÄ¸ß¶È
+    //æç¤ºå›¾æ ‡çš„é«˜åº¦
     private int drawableHeight;
-    //×î´óÏÔÊ¾ÎÄ±¾ĞĞ¶ÔÓ¦µÄ±¾ÊÓÍ¼¸ß¶È
+    //æœ€å¤§æ˜¾ç¤ºæ–‡æœ¬è¡Œå¯¹åº”çš„æœ¬è§†å›¾é«˜åº¦
     private int maxLinesHeight;
-    //Õ¹¿ªÊ±ºòµÄÊÓÍ¼¸ß¶È
+    //å±•å¼€æ—¶å€™çš„è§†å›¾é«˜åº¦
     private int expandHeight;
-    //µ±Ç°ÊÓÍ¼µÄ¸ß¶È
+    //å½“å‰è§†å›¾çš„é«˜åº¦
     private int viewHeight;
-    //ÊÕËõĞĞ½áÎ²ÌáÊ¾ÓïÎÄ±¾¿í¶È
+    //æ”¶ç¼©è¡Œç»“å°¾æç¤ºè¯­æ–‡æœ¬å®½åº¦
     private float ellipsizWidth;
-    //ÊÕËõĞĞ½áÎ²ÌáÊ¾ÓïÎÄ±¾»æÖÆË®Æ½Æğµã
+    //æ”¶ç¼©è¡Œç»“å°¾æç¤ºè¯­æ–‡æœ¬ç»˜åˆ¶æ°´å¹³èµ·ç‚¹
     private float ellipsizStartX;
 
-    //ÎÄ±¾×ÖÌå´óĞ¡
+    //æ–‡æœ¬å­—ä½“å¤§å°
     private int textSize;
-    //ÎÄ±¾ÑÕÉ«
+    //æ–‡æœ¬é¢œè‰²
     private int textColor;
-    //µ±Ç°ÎÄ±¾
+    //å½“å‰æ–‡æœ¬
     private String text;
     private String ellipsizText = "...";
-    //ÊÕËõĞĞÎÄ±¾
+    //æ”¶ç¼©è¡Œæ–‡æœ¬
     private String shrinkLineText;
-    //¶¯»­ÏÔÊ¾Ê±¼ä
+    //åŠ¨ç”»æ˜¾ç¤ºæ—¶é—´
     private int animDuration;
-    //ÊÇ·ñÄÜ¹»ÏÔÊ¾ ellipsizText ¡¾ĞèÒªÊÕËõĞĞµ±Ç°ÎÄ±¾µÄ¿í¶È¡¿
+    //æ˜¯å¦èƒ½å¤Ÿæ˜¾ç¤º ellipsizText ã€éœ€è¦æ”¶ç¼©è¡Œå½“å‰æ–‡æœ¬çš„å®½åº¦ã€‘
     private boolean showEllipsizText = false;
     private boolean showTipDrawalbe = false;
     private boolean needMeasure = true;
@@ -231,7 +231,7 @@ public class ExpandTextView extends View implements View.OnClickListener {
                 canvas.drawText(lineText.getText(), getPaddingLeft(), lineText.getBaseLine(), textPaint);
             } else {
                 if (targetLine == maxLines && maxLines < lineTexts.size()) {
-                    //ÊÕËõ×ªÌ¬
+                    //æ”¶ç¼©è½¬æ€
                     if (showEllipsizText)
                         canvas.drawText(ellipsizText, ellipsizStartX, lineText.getBaseLine(), textPaint);
                     canvas.drawText(shrinkLineText, getPaddingLeft(), lineText.getBaseLine(), textPaint);
@@ -241,7 +241,7 @@ public class ExpandTextView extends View implements View.OnClickListener {
                         canvas.drawBitmap(drawabletoZoomBitmap(shrinkDrawable, drawableWidth, drawableHeight), left, top, null);
                     }
                 } else if (targetLine == lineTexts.size()) {
-                    //Õ¹¿ª×´Ì¬
+                    //å±•å¼€çŠ¶æ€
                     canvas.drawText(lineText.getText(), getPaddingLeft(), lineText.getBaseLine(), textPaint);
                     if (showTipDrawalbe){
                         int left=getWidth() - drawableWidth - getPaddingRight();
@@ -296,37 +296,37 @@ public class ExpandTextView extends View implements View.OnClickListener {
     }
 
     /**
-     * drawlable Ëõ·Å
+     * drawlable ç¼©æ”¾
      *
      * @return
      */
     public static Bitmap drawabletoZoomBitmap(Drawable drawable, int w, int h) {
-        // È¡ drawable µÄ³¤¿í
+        // å– drawable çš„é•¿å®½
         int width = drawable.getIntrinsicWidth();
         int height = drawable.getIntrinsicHeight();
-        // drawable×ª»»³Ébitmap
+        // drawableè½¬æ¢æˆbitmap
         Bitmap oldbmp = drawabletoBitmap(drawable);
-        // ´´½¨²Ù×÷Í¼Æ¬ÓÃµÄMatrix¶ÔÏó
+        // åˆ›å»ºæ“ä½œå›¾ç‰‡ç”¨çš„Matrixå¯¹è±¡
         Matrix matrix = new Matrix();
-        // ¼ÆËãËõ·Å±ÈÀı
+        // è®¡ç®—ç¼©æ”¾æ¯”ä¾‹
         float sx = ((float) w / width);
         float sy = ((float) h / height);
-        // ÉèÖÃËõ·Å±ÈÀı
+        // è®¾ç½®ç¼©æ”¾æ¯”ä¾‹
         matrix.postScale(sx, sy);
-        // ½¨Á¢ĞÂµÄbitmap£¬ÆäÄÚÈİÊÇ¶ÔÔ­bitmapµÄËõ·ÅºóµÄÍ¼
+        // å»ºç«‹æ–°çš„bitmapï¼Œå…¶å†…å®¹æ˜¯å¯¹åŸbitmapçš„ç¼©æ”¾åçš„å›¾
         Bitmap newbmp = Bitmap.createBitmap(oldbmp, 0, 0, width, height,
                 matrix, true);
         return newbmp;
     }
 
     /**
-     * Drawable×ª»»³ÉBitmap
+     * Drawableè½¬æ¢æˆBitmap
      */
     public static Bitmap drawabletoBitmap(Drawable drawable) {
-        // È¡ drawable µÄ³¤¿í
+        // å– drawable çš„é•¿å®½
         int width = drawable.getIntrinsicWidth();
         int height = drawable.getIntrinsicHeight();
-        // È¡ drawable µÄÑÕÉ«¸ñÊ½
+        // å– drawable çš„é¢œè‰²æ ¼å¼
         Bitmap.Config config = drawable.getOpacity() != PixelFormat.OPAQUE ? Bitmap.Config.ARGB_8888
                 : Bitmap.Config.RGB_565;
         Bitmap bitmap = Bitmap.createBitmap(width, height, config);

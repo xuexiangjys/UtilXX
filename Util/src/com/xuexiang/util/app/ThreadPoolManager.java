@@ -4,7 +4,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 /**
- * 线程池，管理线程的工具类
+ * 绾跨▼姹狅紝绠＄悊绾跨▼鐨勫伐鍏风被
  * 
  * @author xx
  */

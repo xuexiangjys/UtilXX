@@ -190,16 +190,16 @@ public class ResideMenuMainFragmentPagerActivity extends FragmentActivity implem
 		// valid scale factor is between 0.0f and 1.0f. leftmenu'width is
 		// 150dip.
 		resideMenu.setScaleValue(0.6f);
-		// ½ûÖ¹Ê¹ÓÃÓÒ²à²Ëµ¥
+		// ç¦æ­¢ä½¿ç”¨å³ä¾§èœå•
 		resideMenu.setDirectionDisable(ResideMenu.DIRECTION_RIGHT);
 
 		// create menu items;
-		itemHuiyuan = new ResideMenuItem(this, R.drawable.lzf, "¿ªÍ¨»áÔ±");
-		itemQianbao = new ResideMenuItem(this, R.drawable.lze, "QQÇ®°ü");
-		itemZhuangban = new ResideMenuItem(this, R.drawable.lzc, "¸öĞÔ×°°ç");
-		itemShoucang = new ResideMenuItem(this, R.drawable.lzg, "ÎÒµÄÊÕ²Ø");
-		itemXiangce = new ResideMenuItem(this, R.drawable.lzd, "ÎÒµÄÏà²á");
-		itemFile = new ResideMenuItem(this, R.drawable.ktn, "ÎÒµÄÎÄ¼ş");
+		itemHuiyuan = new ResideMenuItem(this, R.drawable.lzf, "å¼€é€šä¼šå‘˜");
+		itemQianbao = new ResideMenuItem(this, R.drawable.lze, "QQé’±åŒ…");
+		itemZhuangban = new ResideMenuItem(this, R.drawable.lzc, "ä¸ªæ€§è£…æ‰®");
+		itemShoucang = new ResideMenuItem(this, R.drawable.lzg, "æˆ‘çš„æ”¶è—");
+		itemXiangce = new ResideMenuItem(this, R.drawable.lzd, "æˆ‘çš„ç›¸å†Œ");
+		itemFile = new ResideMenuItem(this, R.drawable.ktn, "æˆ‘çš„æ–‡ä»¶");
 
 		resideMenu.addMenuItem(itemHuiyuan, ResideMenu.DIRECTION_LEFT);
 		resideMenu.addMenuItem(itemQianbao, ResideMenu.DIRECTION_LEFT);
@@ -208,8 +208,8 @@ public class ResideMenuMainFragmentPagerActivity extends FragmentActivity implem
 		resideMenu.addMenuItem(itemXiangce, ResideMenu.DIRECTION_LEFT);
 		resideMenu.addMenuItem(itemFile, ResideMenu.DIRECTION_LEFT);
 		
-		info = new ResideMenuInfo(this, R.drawable.icon_profile, "¿ªĞÄ¹í",
-				"32 ¼¶");
+		info = new ResideMenuInfo(this, R.drawable.icon_profile, "å¼€å¿ƒé¬¼",
+				"32 çº§");
 
 	}
 	
@@ -235,37 +235,37 @@ public class ResideMenuMainFragmentPagerActivity extends FragmentActivity implem
 			
 			if (v == itemHuiyuan) {
 				Intent intent = new Intent();
-				intent.putExtra("flog", "¿ªÍ¨»áÔ±½çÃæ");
+				intent.putExtra("flog", "å¼€é€šä¼šå‘˜ç•Œé¢");
 				intent.setClass(getApplicationContext(), ClickActivity.class);
 				startActivity(intent);
 			} else if (v == itemQianbao) {
 				Intent intent = new Intent();
-				intent.putExtra("flog", "QQÇ®°ü½çÃæ");
+				intent.putExtra("flog", "QQé’±åŒ…ç•Œé¢");
 				intent.setClass(getApplicationContext(), ClickActivity.class);
 				startActivity(intent);
 			} else if (v == itemZhuangban) {
 				Intent intent = new Intent();
-				intent.putExtra("flog", "¸öĞÔ×°°ç½çÃæ");
+				intent.putExtra("flog", "ä¸ªæ€§è£…æ‰®ç•Œé¢");
 				intent.setClass(getApplicationContext(), ClickActivity.class);
 				startActivity(intent);
 			} else if (v == itemShoucang) {
 				Intent intent = new Intent();
-				intent.putExtra("flog", "ÎÒµÄÊÕ²Ø½çÃæ");
+				intent.putExtra("flog", "æˆ‘çš„æ”¶è—ç•Œé¢");
 				intent.setClass(getApplicationContext(), ClickActivity.class);
 				startActivity(intent);
 			} else if (v == itemXiangce) {
 				Intent intent = new Intent();
-				intent.putExtra("flog", "ÎÒµÄÏà²á½çÃæ");
+				intent.putExtra("flog", "æˆ‘çš„ç›¸å†Œç•Œé¢");
 				intent.setClass(getApplicationContext(), ClickActivity.class);
 				startActivity(intent);
 			} else if (v == itemFile) {
 				Intent intent = new Intent();
-				intent.putExtra("flog", "ÎÒµÄÎÄ¼ş½çÃæ");
+				intent.putExtra("flog", "æˆ‘çš„æ–‡ä»¶ç•Œé¢");
 				intent.setClass(getApplicationContext(), ClickActivity.class);
 				startActivity(intent);
 			} else if (v == info) {
 				Intent intent = new Intent();
-				intent.putExtra("flog", "ÎÒµÄ¸öÈËĞÅÏ¢½çÃæ");
+				intent.putExtra("flog", "æˆ‘çš„ä¸ªäººä¿¡æ¯ç•Œé¢");
 				intent.setClass(getApplicationContext(), ClickActivity.class);
 				startActivity(intent);
 				
@@ -290,19 +290,19 @@ public class ResideMenuMainFragmentPagerActivity extends FragmentActivity implem
 		}
 	};
 	
-	// What good method is to access resideMenu£¿
+	// What good method is to access resideMenuï¼Ÿ
 		public ResideMenu getResideMenu() {
 			return resideMenu;
 		}
 
-		// ¼àÌıÊÖ»úÉÏµÄBACK¼ü
+		// ç›‘å¬æ‰‹æœºä¸Šçš„BACKé”®
 		public boolean onKeyDown(int keyCode, KeyEvent event) {
 			if (keyCode == KeyEvent.KEYCODE_BACK) {
-				// ÅĞ¶Ï²Ëµ¥ÊÇ·ñ¹Ø±Õ
+				// åˆ¤æ–­èœå•æ˜¯å¦å…³é—­
 				if (is_closed) {
-					// ÅĞ¶ÏÁ½´Îµã»÷µÄÊ±¼ä¼ä¸ô£¨Ä¬ÈÏÉèÖÃÎª2Ãë£©
+					// åˆ¤æ–­ä¸¤æ¬¡ç‚¹å‡»çš„æ—¶é—´é—´éš”ï¼ˆé»˜è®¤è®¾ç½®ä¸º2ç§’ï¼‰
 					if ((System.currentTimeMillis() - mExitTime) > 3000) {
-						Toast.makeText(this, "ÔÙ°´Ò»´ÎÍË³ö³ÌĞò", Toast.LENGTH_SHORT).show();
+						Toast.makeText(this, "å†æŒ‰ä¸€æ¬¡é€€å‡ºç¨‹åº", Toast.LENGTH_SHORT).show();
 
 						mExitTime = System.currentTimeMillis();
 					} else {

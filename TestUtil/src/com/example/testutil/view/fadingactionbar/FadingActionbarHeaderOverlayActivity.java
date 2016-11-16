@@ -38,9 +38,9 @@ public class FadingActionbarHeaderOverlayActivity extends ActionBarActivity {
 
         FadingActionBarHelper helper = new FadingActionBarHelper()
             .actionBarBackground(R.drawable.ab_background)
-            .headerLayout(R.layout.fadingactionbar_header)// 设置actionbar上图片的layout
+            .headerLayout(R.layout.fadingactionbar_header)// 璁剧疆actionbar涓婂浘鐗囩殑layout
             .contentLayout(R.layout.activity_fadingactionbarlistview)
-            .headerOverlayLayout(R.layout.fadingactionbar_header_overlay);//设置顶部浮动的布局（特别）
+            .headerOverlayLayout(R.layout.fadingactionbar_header_overlay);//璁剧疆椤堕儴娴姩鐨勫竷灞�锛堢壒鍒級
         
         setContentView(helper.createView(this));
         helper.initActionBar(this);

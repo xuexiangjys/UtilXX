@@ -20,7 +20,7 @@ public class ExpandableGridViewActivity extends BaseActivity {
 	private ArrayList<IconItem> mList;
 	private String[][] child_text_array;
 
-	private int sign = -1;// �����б���չ��
+	private int sign = -1;// 控制列表的展开
 
 	@Override
 	public void onCreateActivity() {
@@ -44,9 +44,9 @@ public class ExpandableGridViewActivity extends BaseActivity {
 			public boolean onGroupClick(ExpandableListView parent, View v,
 					int groupPosition, long id) {
 				if (sign == -1) {
-					// չ����ѡ��group
+					// 展开被选的group
 					expandableGridView.expandGroup(groupPosition);
-					// ���ñ�ѡ�е�group���ڶ���
+					// 设置被选中的group置于顶端
 					expandableGridView.setSelectedGroup(groupPosition);
 					sign = groupPosition;
 				} else if (sign == groupPosition) {
@@ -54,9 +54,9 @@ public class ExpandableGridViewActivity extends BaseActivity {
 					sign = -1;
 				} else {
 					expandableGridView.collapseGroup(sign);
-					// չ����ѡ��group
+					// 展开被选的group
 					expandableGridView.expandGroup(groupPosition);
-					// ���ñ�ѡ�е�group���ڶ���
+					// 设置被选中的group置于顶端
 					expandableGridView.setSelectedGroup(groupPosition);
 					sign = groupPosition;
 				}

@@ -1,8 +1,8 @@
 package com.xuexiang.util.observer.normal;
 
 /**  
- * ¹Û²ìÕß½Ó¿Ú
- * ´´½¨Ê±¼ä£º2016-6-5 ÉÏÎç12:55:56  
+ * è§‚å¯Ÿè€…æ¥å£
+ * åˆ›å»ºæ—¶é—´ï¼š2016-6-5 ä¸Šåˆ12:55:56  
  * @author xuexiang
  **/
 public interface IObserver {

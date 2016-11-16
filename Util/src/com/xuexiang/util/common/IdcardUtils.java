@@ -24,7 +24,7 @@ import java.util.HashMap;
 import java.util.Map;
  
 /**
- * Éí·İÖ¤¹¤¾ßÀà
+ * èº«ä»½è¯å·¥å…·ç±»
  * 
  * @author June
  * @version 1.0, 2010-06-17
@@ -32,71 +32,71 @@ import java.util.Map;
 public class IdcardUtils  {
  
 
-	/** ÖĞ¹ú¹«ÃñÉí·İÖ¤ºÅÂë×îĞ¡³¤¶È¡£ */
+	/** ä¸­å›½å…¬æ°‘èº«ä»½è¯å·ç æœ€å°é•¿åº¦ã€‚ */
     public static final int CHINA_ID_MIN_LENGTH = 15;
  
-    /** ÖĞ¹ú¹«ÃñÉí·İÖ¤ºÅÂë×î´ó³¤¶È¡£ */
+    /** ä¸­å›½å…¬æ°‘èº«ä»½è¯å·ç æœ€å¤§é•¿åº¦ã€‚ */
     public static final int CHINA_ID_MAX_LENGTH = 18;
  
-    /** Ê¡¡¢Ö±Ï½ÊĞ´úÂë±í */
+    /** çœã€ç›´è¾–å¸‚ä»£ç è¡¨ */
     public static final String cityCode[] = {
             "11", "12", "13", "14", "15", "21", "22", "23", "31", "32", "33", "34", "35", "36", "37", "41",
             "42", "43", "44", "45", "46", "50", "51", "52", "53", "54", "61", "62", "63", "64", "65", "71",
             "81", "82", "91"
     };
  
-    /** Ã¿Î»¼ÓÈ¨Òò×Ó */
+    /** æ¯ä½åŠ æƒå› å­ */
     public static final int power[] = {
             7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2
     };
  
-    /** µÚ18Î»Ğ£¼ìÂë */
+    /** ç¬¬18ä½æ ¡æ£€ç  */
     public static final String verifyCode[] = {
             "1", "0", "X", "9", "8", "7", "6", "5", "4", "3", "2"
     };
-    /** ×îµÍÄêÏŞ */
+    /** æœ€ä½å¹´é™ */
     public static final int MIN = 1930;
     public static Map<String, String> cityCodes = new HashMap<String, String>();
-    /** Ì¨ÍåÉí·İÊ××ÖÄ¸¶ÔÓ¦Êı×Ö */
+    /** å°æ¹¾èº«ä»½é¦–å­—æ¯å¯¹åº”æ•°å­— */
     public static Map<String, Integer> twFirstCode = new HashMap<String, Integer>();
-    /** Ïã¸ÛÉí·İÊ××ÖÄ¸¶ÔÓ¦Êı×Ö */
+    /** é¦™æ¸¯èº«ä»½é¦–å­—æ¯å¯¹åº”æ•°å­— */
     public static Map<String, Integer> hkFirstCode = new HashMap<String, Integer>();
     static {
-        cityCodes.put("11", "±±¾©");
-        cityCodes.put("12", "Ìì½ò");
-        cityCodes.put("13", "ºÓ±±");
-        cityCodes.put("14", "É½Î÷");
-        cityCodes.put("15", "ÄÚÃÉ¹Å");
-        cityCodes.put("21", "ÁÉÄş");
-        cityCodes.put("22", "¼ªÁÖ");
-        cityCodes.put("23", "ºÚÁú½­");
-        cityCodes.put("31", "ÉÏº£");
-        cityCodes.put("32", "½­ËÕ");
-        cityCodes.put("33", "Õã½­");
-        cityCodes.put("34", "°²»Õ");
-        cityCodes.put("35", "¸£½¨");
-        cityCodes.put("36", "½­Î÷");
-        cityCodes.put("37", "É½¶«");
-        cityCodes.put("41", "ºÓÄÏ");
-        cityCodes.put("42", "ºş±±");
-        cityCodes.put("43", "ºşÄÏ");
-        cityCodes.put("44", "¹ã¶«");
-        cityCodes.put("45", "¹ãÎ÷");
-        cityCodes.put("46", "º£ÄÏ");
-        cityCodes.put("50", "ÖØÇì");
-        cityCodes.put("51", "ËÄ´¨");
-        cityCodes.put("52", "¹óÖİ");
-        cityCodes.put("53", "ÔÆÄÏ");
-        cityCodes.put("54", "Î÷²Ø");
-        cityCodes.put("61", "ÉÂÎ÷");
-        cityCodes.put("62", "¸ÊËà");
-        cityCodes.put("63", "Çàº£");
-        cityCodes.put("64", "ÄşÏÄ");
-        cityCodes.put("65", "ĞÂ½®");
-        cityCodes.put("71", "Ì¨Íå");
-        cityCodes.put("81", "Ïã¸Û");
-        cityCodes.put("82", "°ÄÃÅ");
-        cityCodes.put("91", "¹úÍâ");
+        cityCodes.put("11", "åŒ—äº¬");
+        cityCodes.put("12", "å¤©æ´¥");
+        cityCodes.put("13", "æ²³åŒ—");
+        cityCodes.put("14", "å±±è¥¿");
+        cityCodes.put("15", "å†…è’™å¤");
+        cityCodes.put("21", "è¾½å®");
+        cityCodes.put("22", "å‰æ—");
+        cityCodes.put("23", "é»‘é¾™æ±Ÿ");
+        cityCodes.put("31", "ä¸Šæµ·");
+        cityCodes.put("32", "æ±Ÿè‹");
+        cityCodes.put("33", "æµ™æ±Ÿ");
+        cityCodes.put("34", "å®‰å¾½");
+        cityCodes.put("35", "ç¦å»º");
+        cityCodes.put("36", "æ±Ÿè¥¿");
+        cityCodes.put("37", "å±±ä¸œ");
+        cityCodes.put("41", "æ²³å—");
+        cityCodes.put("42", "æ¹–åŒ—");
+        cityCodes.put("43", "æ¹–å—");
+        cityCodes.put("44", "å¹¿ä¸œ");
+        cityCodes.put("45", "å¹¿è¥¿");
+        cityCodes.put("46", "æµ·å—");
+        cityCodes.put("50", "é‡åº†");
+        cityCodes.put("51", "å››å·");
+        cityCodes.put("52", "è´µå·");
+        cityCodes.put("53", "äº‘å—");
+        cityCodes.put("54", "è¥¿è—");
+        cityCodes.put("61", "é™•è¥¿");
+        cityCodes.put("62", "ç”˜è‚ƒ");
+        cityCodes.put("63", "é’æµ·");
+        cityCodes.put("64", "å®å¤");
+        cityCodes.put("65", "æ–°ç–†");
+        cityCodes.put("71", "å°æ¹¾");
+        cityCodes.put("81", "é¦™æ¸¯");
+        cityCodes.put("82", "æ¾³é—¨");
+        cityCodes.put("91", "å›½å¤–");
         twFirstCode.put("A", 10);
         twFirstCode.put("B", 11);
         twFirstCode.put("C", 12);
@@ -136,11 +136,11 @@ public class IdcardUtils  {
     }
  
     /**
-     * ½«15Î»Éí·İÖ¤ºÅÂë×ª»»Îª18Î»
+     * å°†15ä½èº«ä»½è¯å·ç è½¬æ¢ä¸º18ä½
      * 
      * @param idCard
-     *            15Î»Éí·İ±àÂë
-     * @return 18Î»Éí·İ±àÂë
+     *            15ä½èº«ä»½ç¼–ç 
+     * @return 18ä½èº«ä»½ç¼–ç 
      */
     public static String conver15CardTo18(String idCard) {
         String idCard18 = "";
@@ -148,7 +148,7 @@ public class IdcardUtils  {
             return null;
         }
         if (isNum(idCard)) {
-            // »ñÈ¡³öÉúÄêÔÂÈÕ
+            // è·å–å‡ºç”Ÿå¹´æœˆæ—¥
             String birthday = idCard.substring(6, 12);
             Date birthDate = null;
             try {
@@ -159,15 +159,15 @@ public class IdcardUtils  {
             Calendar cal = Calendar.getInstance();
             if (birthDate != null)
                 cal.setTime(birthDate);
-            // »ñÈ¡³öÉúÄê(ÍêÈ«±íÏÖĞÎÊ½,Èç£º2010)
+            // è·å–å‡ºç”Ÿå¹´(å®Œå…¨è¡¨ç°å½¢å¼,å¦‚ï¼š2010)
             String sYear = String.valueOf(cal.get(Calendar.YEAR));
             idCard18 = idCard.substring(0, 6) + sYear + idCard.substring(8);
-            // ×ª»»×Ö·ûÊı×é
+            // è½¬æ¢å­—ç¬¦æ•°ç»„
             char[] cArr = idCard18.toCharArray();
             if (cArr != null) {
                 int[] iCard = converCharToInt(cArr);
                 int iSum17 = getPowerSum(iCard);
-                // »ñÈ¡Ğ£ÑéÎ»
+                // è·å–æ ¡éªŒä½
                 String sVal = getCheckCode18(iSum17);
                 if (sVal.length() > 0) {
                     idCard18 += sVal;
@@ -182,24 +182,24 @@ public class IdcardUtils  {
     }
  
     /**
-     * ÑéÖ¤18Î»Éí·İ±àÂëÊÇ·ñºÏ·¨
+     * éªŒè¯18ä½èº«ä»½ç¼–ç æ˜¯å¦åˆæ³•
      * 
-     * @param idCard Éí·İ±àÂë
-     * @return ÊÇ·ñºÏ·¨
+     * @param idCard èº«ä»½ç¼–ç 
+     * @return æ˜¯å¦åˆæ³•
      */
     public static boolean validateIdCard18(String idCard) {
         boolean bTrue = false;
         if (idCard.length() == CHINA_ID_MAX_LENGTH) {
-            // Ç°17Î»
+            // å‰17ä½
             String code17 = idCard.substring(0, 17);
-            // µÚ18Î»
+            // ç¬¬18ä½
             String code18 = idCard.substring(17, CHINA_ID_MAX_LENGTH);
             if (isNum(code17)) {
                 char[] cArr = code17.toCharArray();
                 if (cArr != null) {
                     int[] iCard = converCharToInt(cArr);
                     int iSum17 = getPowerSum(iCard);
-                    // »ñÈ¡Ğ£ÑéÎ»
+                    // è·å–æ ¡éªŒä½
                     String val = getCheckCode18(iSum17);
                     if (val.length() > 0) {
                         if (val.equalsIgnoreCase(code18)) {
@@ -213,11 +213,11 @@ public class IdcardUtils  {
     }
  
     /**
-     * ÑéÖ¤15Î»Éí·İ±àÂëÊÇ·ñºÏ·¨
+     * éªŒè¯15ä½èº«ä»½ç¼–ç æ˜¯å¦åˆæ³•
      * 
      * @param idCard
-     *            Éí·İ±àÂë
-     * @return ÊÇ·ñºÏ·¨
+     *            èº«ä»½ç¼–ç 
+     * @return æ˜¯å¦åˆæ³•
      */
     public static boolean validateIdCard15(String idCard) {
         if (idCard.length() != CHINA_ID_MIN_LENGTH) {
@@ -249,13 +249,13 @@ public class IdcardUtils  {
     }
  
     /**
-     * ÑéÖ¤10Î»Éí·İ±àÂëÊÇ·ñºÏ·¨
+     * éªŒè¯10ä½èº«ä»½ç¼–ç æ˜¯å¦åˆæ³•
      * 
-     * @param idCard Éí·İ±àÂë
-     * @return Éí·İÖ¤ĞÅÏ¢Êı×é
+     * @param idCard èº«ä»½ç¼–ç 
+     * @return èº«ä»½è¯ä¿¡æ¯æ•°ç»„
      *         <p>
-     *         [0] - Ì¨Íå¡¢°ÄÃÅ¡¢Ïã¸Û [1] - ĞÔ±ğ(ÄĞM,Å®F,Î´ÖªN) [2] - ÊÇ·ñºÏ·¨(ºÏ·¨true,²»ºÏ·¨false)
-     *         Èô²»ÊÇÉí·İÖ¤¼şºÅÂëÔò·µ»Ønull
+     *         [0] - å°æ¹¾ã€æ¾³é—¨ã€é¦™æ¸¯ [1] - æ€§åˆ«(ç”·M,å¥³F,æœªçŸ¥N) [2] - æ˜¯å¦åˆæ³•(åˆæ³•true,ä¸åˆæ³•false)
+     *         è‹¥ä¸æ˜¯èº«ä»½è¯ä»¶å·ç åˆ™è¿”å›null
      *         </p>
      */
     public static String[] validateIdCard10(String idCard) {
@@ -264,8 +264,8 @@ public class IdcardUtils  {
         if (card.length() != 8 && card.length() != 9 && idCard.length() != 10) {
             return null;
         }
-        if (idCard.matches("^[a-zA-Z][0-9]{9}$")) { // Ì¨Íå
-            info[0] = "Ì¨Íå";
+        if (idCard.matches("^[a-zA-Z][0-9]{9}$")) { // å°æ¹¾
+            info[0] = "å°æ¹¾";
             System.out.println("11111");
             String char2 = idCard.substring(1, 2);
             if (char2.equals("1")) {
@@ -281,12 +281,12 @@ public class IdcardUtils  {
                 return info;
             }
             info[2] = validateTWCard(idCard) ? "true" : "false";
-        } else if (idCard.matches("^[1|5|7][0-9]{6}\\(?[0-9A-Z]\\)?$")) { // °ÄÃÅ
-            info[0] = "°ÄÃÅ";
+        } else if (idCard.matches("^[1|5|7][0-9]{6}\\(?[0-9A-Z]\\)?$")) { // æ¾³é—¨
+            info[0] = "æ¾³é—¨";
             info[1] = "N";
             // TODO
-        } else if (idCard.matches("^[A-Z]{1,2}[0-9]{6}\\(?[0-9A]\\)?$")) { // Ïã¸Û
-            info[0] = "Ïã¸Û";
+        } else if (idCard.matches("^[A-Z]{1,2}[0-9]{6}\\(?[0-9A]\\)?$")) { // é¦™æ¸¯
+            info[0] = "é¦™æ¸¯";
             info[1] = "N";
             info[2] = validateHKCard(idCard) ? "true" : "false";
         } else {
@@ -296,11 +296,11 @@ public class IdcardUtils  {
     }
  
     /**
-     * ÑéÖ¤Ì¨ÍåÉí·İÖ¤ºÅÂë
+     * éªŒè¯å°æ¹¾èº«ä»½è¯å·ç 
      * 
      * @param idCard
-     *            Éí·İÖ¤ºÅÂë
-     * @return ÑéÖ¤ÂëÊÇ·ñ·ûºÏ
+     *            èº«ä»½è¯å·ç 
+     * @return éªŒè¯ç æ˜¯å¦ç¬¦åˆ
      */
     public static boolean validateTWCard(String idCard) {
         String start = idCard.substring(0, 1);
@@ -318,17 +318,17 @@ public class IdcardUtils  {
     }
  
     /**
-     * ÑéÖ¤Ïã¸ÛÉí·İÖ¤ºÅÂë(´æÔÚBug£¬²¿·İÌØÊâÉí·İÖ¤ÎŞ·¨¼ì²é)
+     * éªŒè¯é¦™æ¸¯èº«ä»½è¯å·ç (å­˜åœ¨Bugï¼Œéƒ¨ä»½ç‰¹æ®Šèº«ä»½è¯æ— æ³•æ£€æŸ¥)
      * <p>
-     * Éí·İÖ¤Ç°2Î»ÎªÓ¢ÎÄ×Ö·û£¬Èç¹ûÖ»³öÏÖÒ»¸öÓ¢ÎÄ×Ö·ûÔò±íÊ¾µÚÒ»Î»ÊÇ¿Õ¸ñ£¬¶ÔÓ¦Êı×Ö58 Ç°2Î»Ó¢ÎÄ×Ö·ûA-Z·Ö±ğ¶ÔÓ¦Êı×Ö10-35
-     * ×îºóÒ»Î»Ğ£ÑéÂëÎª0-9µÄÊı×Ö¼ÓÉÏ×Ö·û"A"£¬"A"´ú±í10
+     * èº«ä»½è¯å‰2ä½ä¸ºè‹±æ–‡å­—ç¬¦ï¼Œå¦‚æœåªå‡ºç°ä¸€ä¸ªè‹±æ–‡å­—ç¬¦åˆ™è¡¨ç¤ºç¬¬ä¸€ä½æ˜¯ç©ºæ ¼ï¼Œå¯¹åº”æ•°å­—58 å‰2ä½è‹±æ–‡å­—ç¬¦A-Zåˆ†åˆ«å¯¹åº”æ•°å­—10-35
+     * æœ€åä¸€ä½æ ¡éªŒç ä¸º0-9çš„æ•°å­—åŠ ä¸Šå­—ç¬¦"A"ï¼Œ"A"ä»£è¡¨10
      * </p>
      * <p>
-     * ½«Éí·İÖ¤ºÅÂëÈ«²¿×ª»»ÎªÊı×Ö£¬·Ö±ğ¶ÔÓ¦³Ë9-1Ïà¼ÓµÄ×ÜºÍ£¬Õû³ı11ÔòÖ¤¼şºÅÂëÓĞĞ§
+     * å°†èº«ä»½è¯å·ç å…¨éƒ¨è½¬æ¢ä¸ºæ•°å­—ï¼Œåˆ†åˆ«å¯¹åº”ä¹˜9-1ç›¸åŠ çš„æ€»å’Œï¼Œæ•´é™¤11åˆ™è¯ä»¶å·ç æœ‰æ•ˆ
      * </p>
      * 
-     * @param idCard Éí·İÖ¤ºÅÂë
-     * @return ÑéÖ¤ÂëÊÇ·ñ·ûºÏ
+     * @param idCard èº«ä»½è¯å·ç 
+     * @return éªŒè¯ç æ˜¯å¦ç¬¦åˆ
      */
     public static boolean validateHKCard(String idCard) {
         String card = idCard.replaceAll("[\\(|\\)]", "");
@@ -357,11 +357,11 @@ public class IdcardUtils  {
     }
  
     /**
-     * ½«×Ö·ûÊı×é×ª»»³ÉÊı×ÖÊı×é
+     * å°†å­—ç¬¦æ•°ç»„è½¬æ¢æˆæ•°å­—æ•°ç»„
      * 
      * @param ca
-     *            ×Ö·ûÊı×é
-     * @return Êı×ÖÊı×é
+     *            å­—ç¬¦æ•°ç»„
+     * @return æ•°å­—æ•°ç»„
      */
     public static int[] converCharToInt(char[] ca) {
         int len = ca.length;
@@ -377,10 +377,10 @@ public class IdcardUtils  {
     }
  
     /**
-     * ½«Éí·İÖ¤µÄÃ¿Î»ºÍ¶ÔÓ¦Î»µÄ¼ÓÈ¨Òò×ÓÏà³ËÖ®ºó£¬ÔÙµÃµ½ºÍÖµ
+     * å°†èº«ä»½è¯çš„æ¯ä½å’Œå¯¹åº”ä½çš„åŠ æƒå› å­ç›¸ä¹˜ä¹‹åï¼Œå†å¾—åˆ°å’Œå€¼
      * 
      * @param iArr
-     * @return Éí·İÖ¤±àÂë¡£
+     * @return èº«ä»½è¯ç¼–ç ã€‚
      */
     public static int getPowerSum(int[] iArr) {
         int iSum = 0;
@@ -397,10 +397,10 @@ public class IdcardUtils  {
     }
  
     /**
-     * ½«powerºÍÖµÓë11È¡Ä£»ñµÃÓàÊı½øĞĞĞ£ÑéÂëÅĞ¶Ï
+     * å°†powerå’Œå€¼ä¸11å–æ¨¡è·å¾—ä½™æ•°è¿›è¡Œæ ¡éªŒç åˆ¤æ–­
      * 
      * @param iSum
-     * @return Ğ£ÑéÎ»
+     * @return æ ¡éªŒä½
      */
     public static String getCheckCode18(int iSum) {
         String sCode = "";
@@ -443,11 +443,11 @@ public class IdcardUtils  {
     }
  
     /**
-     * ¸ù¾İÉí·İ±àºÅ»ñÈ¡ÄêÁä
+     * æ ¹æ®èº«ä»½ç¼–å·è·å–å¹´é¾„
      * 
      * @param idCard
-     *            Éí·İ±àºÅ
-     * @return ÄêÁä
+     *            èº«ä»½ç¼–å·
+     * @return å¹´é¾„
      */
     public static int getAgeByIdCard(String idCard) {
         int iAge = 0;
@@ -462,10 +462,10 @@ public class IdcardUtils  {
     }
  
     /**
-     * ¸ù¾İÉí·İ±àºÅ»ñÈ¡ÉúÈÕ
+     * æ ¹æ®èº«ä»½ç¼–å·è·å–ç”Ÿæ—¥
      * 
-     * @param idCard Éí·İ±àºÅ
-     * @return ÉúÈÕ(yyyyMMdd)
+     * @param idCard èº«ä»½ç¼–å·
+     * @return ç”Ÿæ—¥(yyyyMMdd)
      */
     public static String getBirthByIdCard(String idCard) {
         Integer len = idCard.length();
@@ -478,10 +478,10 @@ public class IdcardUtils  {
     }
  
     /**
-     * ¸ù¾İÉí·İ±àºÅ»ñÈ¡ÉúÈÕÄê
+     * æ ¹æ®èº«ä»½ç¼–å·è·å–ç”Ÿæ—¥å¹´
      * 
-     * @param idCard Éí·İ±àºÅ
-     * @return ÉúÈÕ(yyyy)
+     * @param idCard èº«ä»½ç¼–å·
+     * @return ç”Ÿæ—¥(yyyy)
      */
     public static Short getYearByIdCard(String idCard) {
         Integer len = idCard.length();
@@ -494,11 +494,11 @@ public class IdcardUtils  {
     }
  
     /**
-     * ¸ù¾İÉí·İ±àºÅ»ñÈ¡ÉúÈÕÔÂ
+     * æ ¹æ®èº«ä»½ç¼–å·è·å–ç”Ÿæ—¥æœˆ
      * 
      * @param idCard
-     *            Éí·İ±àºÅ
-     * @return ÉúÈÕ(MM)
+     *            èº«ä»½ç¼–å·
+     * @return ç”Ÿæ—¥(MM)
      */
     public static Short getMonthByIdCard(String idCard) {
         Integer len = idCard.length();
@@ -511,11 +511,11 @@ public class IdcardUtils  {
     }
  
     /**
-     * ¸ù¾İÉí·İ±àºÅ»ñÈ¡ÉúÈÕÌì
+     * æ ¹æ®èº«ä»½ç¼–å·è·å–ç”Ÿæ—¥å¤©
      * 
      * @param idCard
-     *            Éí·İ±àºÅ
-     * @return ÉúÈÕ(dd)
+     *            èº«ä»½ç¼–å·
+     * @return ç”Ÿæ—¥(dd)
      */
     public static Short getDateByIdCard(String idCard) {
         Integer len = idCard.length();
@@ -528,10 +528,10 @@ public class IdcardUtils  {
     }
  
     /**
-     * ¸ù¾İÉí·İ±àºÅ»ñÈ¡ĞÔ±ğ
+     * æ ¹æ®èº«ä»½ç¼–å·è·å–æ€§åˆ«
      * 
-     * @param idCard Éí·İ±àºÅ
-     * @return ĞÔ±ğ(M-ÄĞ£¬F-Å®£¬N-Î´Öª)
+     * @param idCard èº«ä»½ç¼–å·
+     * @return æ€§åˆ«(M-ç”·ï¼ŒF-å¥³ï¼ŒN-æœªçŸ¥)
      */
     public static String getGenderByIdCard(String idCard) {
         String sGender = "N";
@@ -548,10 +548,10 @@ public class IdcardUtils  {
     }
  
     /**
-     * ¸ù¾İÉí·İ±àºÅ»ñÈ¡»§¼®Ê¡·İ
+     * æ ¹æ®èº«ä»½ç¼–å·è·å–æˆ·ç±çœä»½
      * 
-     * @param idCard Éí·İ±àÂë
-     * @return Ê¡¼¶±àÂë¡£
+     * @param idCard èº«ä»½ç¼–ç 
+     * @return çœçº§ç¼–ç ã€‚
      */
     public static String getProvinceByIdCard(String idCard) {
         int len = idCard.length();
@@ -565,25 +565,25 @@ public class IdcardUtils  {
     }
  
     /**
-     * Êı×ÖÑéÖ¤
+     * æ•°å­—éªŒè¯
      * 
      * @param val
-     * @return ÌáÈ¡µÄÊı×Ö¡£
+     * @return æå–çš„æ•°å­—ã€‚
      */
     public static boolean isNum(String val) {
         return val == null || "".equals(val) ? false : val.matches("^[0-9]*$");
     }
  
     /**
-     * ÑéÖ¤Ğ¡ÓÚµ±Ç°ÈÕÆÚ ÊÇ·ñÓĞĞ§
+     * éªŒè¯å°äºå½“å‰æ—¥æœŸ æ˜¯å¦æœ‰æ•ˆ
      * 
      * @param iYear
-     *            ´ıÑéÖ¤ÈÕÆÚ(Äê)
+     *            å¾…éªŒè¯æ—¥æœŸ(å¹´)
      * @param iMonth
-     *            ´ıÑéÖ¤ÈÕÆÚ(ÔÂ 1-12)
+     *            å¾…éªŒè¯æ—¥æœŸ(æœˆ 1-12)
      * @param iDate
-     *            ´ıÑéÖ¤ÈÕÆÚ(ÈÕ)
-     * @return ÊÇ·ñÓĞĞ§
+     *            å¾…éªŒè¯æ—¥æœŸ(æ—¥)
+     * @return æ˜¯å¦æœ‰æ•ˆ
      */
     public static boolean valiDate(int iYear, int iMonth, int iDate) {
         Calendar cal = Calendar.getInstance();
@@ -614,7 +614,7 @@ public class IdcardUtils  {
     }
     
     /**
-     * ÑéÖ¤Éí·İÖ¤ÊÇ·ñºÏ·¨
+     * éªŒè¯èº«ä»½è¯æ˜¯å¦åˆæ³•
      */
     public static boolean validateCard(String idCard) {
         String card = idCard.trim();

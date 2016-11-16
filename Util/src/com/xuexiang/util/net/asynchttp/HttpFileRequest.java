@@ -1,7 +1,7 @@
 /**
  * @FILE:HuiHenDuoFileRequest.java
  * @AUTHOR:xq
- * @DATE:2014-8-26 上午10:06:30
+ * @DATE:2014-8-26 涓婂崍10:06:30
  **/
 package com.xuexiang.util.net.asynchttp;
 
@@ -46,7 +46,7 @@ public class HttpFileRequest extends HttpRequest {
 	}
 
 	/**
-	 * @description: 获取参数
+	 * @description: 鑾峰彇鍙傛暟
 	 * @author:xx
 	 * @return:RequestParams
 	 * @return
@@ -76,7 +76,7 @@ public class HttpFileRequest extends HttpRequest {
 				requestParams.put(key, params.get(key));
 			}
 		}
-		CustomLog.d("提交参数为:", stringBuilder.toString());
+		CustomLog.d("鎻愪氦鍙傛暟涓�:", stringBuilder.toString());
 		return requestParams;
 	}
 
@@ -93,7 +93,7 @@ public class HttpFileRequest extends HttpRequest {
 	}
 
 	/**
-	 * @description:失败后调用
+	 * @description:澶辫触鍚庤皟鐢�
 	 * @author:xx
 	 * @return:void
 	 * @param arg3
@@ -106,7 +106,7 @@ public class HttpFileRequest extends HttpRequest {
 	}
 
 	/**
-	 * @description:成功后调用
+	 * @description:鎴愬姛鍚庤皟鐢�
 	 * @author:xx
 	 * @return:void
 	 * @param result
@@ -114,7 +114,7 @@ public class HttpFileRequest extends HttpRequest {
 
 	@Override
 	public void onSuccess(String result) {
-		CustomLog.d("结果是=%s", result);
+		CustomLog.d("缁撴灉鏄�=%s", result);
 		try {
 			if (mHttpSuccess != null)
 				mHttpSuccess.onSuccess(result);

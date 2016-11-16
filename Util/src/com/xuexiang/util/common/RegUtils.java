@@ -21,7 +21,7 @@ import java.util.regex.Pattern;
 import android.text.TextUtils;
 
 /**
- * Êı¾İĞ£Ñé
+ * æ•°æ®æ ¡éªŒ
  *
  * @author jingle1267@163.com
  */
@@ -35,10 +35,10 @@ public final class RegUtils {
     }
 
     /**
-     * ÓÊÏä¼ì²â
+     * é‚®ç®±æ£€æµ‹
      *
-     * @param email ¿ÉÄÜÊÇEmailµÄ×Ö·û´®
-     * @return ÊÇ·ñÊÇEmail
+     * @param email å¯èƒ½æ˜¯Emailçš„å­—ç¬¦ä¸²
+     * @return æ˜¯å¦æ˜¯Email
      */
     public static boolean isEmail(String email) {
         Pattern pattern = Pattern
@@ -48,20 +48,20 @@ public final class RegUtils {
     }
 
     /**
-     * ·Ç¿ÕÑéÖ¤
+     * éç©ºéªŒè¯
      *
-     * @param data Ô´×Ö·û´®
-     * @return ÊÇ·ñÎª¿Õ
+     * @param data æºå­—ç¬¦ä¸²
+     * @return æ˜¯å¦ä¸ºç©º
      */
     public static boolean isEmpoty(String data) {
         return TextUtils.isEmpty(data);
     }
 
     /**
-     * ÓÊÏäÑéÖ¤
+     * é‚®ç®±éªŒè¯
      *
-     * @param data ¿ÉÄÜÊÇEmailµÄ×Ö·û´®
-     * @return ÊÇ·ñÊÇEmail
+     * @param data å¯èƒ½æ˜¯Emailçš„å­—ç¬¦ä¸²
+     * @return æ˜¯å¦æ˜¯Email
      */
     public static boolean isEmail2(String data) {
         String expr = "^([a-z0-9A-Z]+[-|\\.]?)+[a-z0-9A-Z]@([a-z0-9A-Z]+(-[a-z0-9A-Z]+)?\\.)+[a-zA-Z]{2,}$";
@@ -69,10 +69,10 @@ public final class RegUtils {
     }
 
     /**
-     * ÒÆ¶¯ÊÖ»úºÅÂëÑéÖ¤
+     * ç§»åŠ¨æ‰‹æœºå·ç éªŒè¯
      *
-     * @param data ¿ÉÄÜÊÇÊÖ»úºÅÂë×Ö·û´®
-     * @return ÊÇ·ñÊÇÊÖ»úºÅÂë
+     * @param data å¯èƒ½æ˜¯æ‰‹æœºå·ç å­—ç¬¦ä¸²
+     * @return æ˜¯å¦æ˜¯æ‰‹æœºå·ç 
      */
     public static boolean isMobileNumber(String data) {
         String expr = "^((13[0-9])|(15[^4,\\D])|(18[0,5-9]))\\d{8}$";
@@ -80,10 +80,10 @@ public final class RegUtils {
     }
 
     /**
-     * Ö»º¬×ÖÄ¸ºÍÊı×Ö
+     * åªå«å­—æ¯å’Œæ•°å­—
      *
-     * @param data ¿ÉÄÜÖ»°üº¬×ÖÄ¸ºÍÊı×ÖµÄ×Ö·û´®
-     * @return ÊÇ·ñÖ»°üº¬×ÖÄ¸ºÍÊı×Ö
+     * @param data å¯èƒ½åªåŒ…å«å­—æ¯å’Œæ•°å­—çš„å­—ç¬¦ä¸²
+     * @return æ˜¯å¦åªåŒ…å«å­—æ¯å’Œæ•°å­—
      */
     public static boolean isNumberLetter(String data) {
         String expr = "^[A-Za-z0-9]+$";
@@ -91,10 +91,10 @@ public final class RegUtils {
     }
 
     /**
-     * Ö»º¬Êı×Ö
+     * åªå«æ•°å­—
      *
-     * @param data ¿ÉÄÜÖ»°üº¬Êı×ÖµÄ×Ö·û´®
-     * @return ÊÇ·ñÖ»°üº¬Êı×Ö
+     * @param data å¯èƒ½åªåŒ…å«æ•°å­—çš„å­—ç¬¦ä¸²
+     * @return æ˜¯å¦åªåŒ…å«æ•°å­—
      */
     public static boolean isNumber(String data) {
         String expr = "^[0-9]+$";
@@ -102,10 +102,10 @@ public final class RegUtils {
     }
 
     /**
-     * Ö»º¬×ÖÄ¸
+     * åªå«å­—æ¯
      *
-     * @param data ¿ÉÄÜÖ»°üº¬×ÖÄ¸µÄ×Ö·û´®
-     * @return ÊÇ·ñÖ»°üº¬×ÖÄ¸
+     * @param data å¯èƒ½åªåŒ…å«å­—æ¯çš„å­—ç¬¦ä¸²
+     * @return æ˜¯å¦åªåŒ…å«å­—æ¯
      */
     public static boolean isLetter(String data) {
         String expr = "^[A-Za-z]+$";
@@ -113,10 +113,10 @@ public final class RegUtils {
     }
 
     /**
-     * Ö»ÊÇÖĞÎÄ
+     * åªæ˜¯ä¸­æ–‡
      *
-     * @param data ¿ÉÄÜÊÇÖĞÎÄµÄ×Ö·û´®
-     * @return ÊÇ·ñÖ»ÊÇÖĞÎÄ
+     * @param data å¯èƒ½æ˜¯ä¸­æ–‡çš„å­—ç¬¦ä¸²
+     * @return æ˜¯å¦åªæ˜¯ä¸­æ–‡
      */
     public static boolean isChinese(String data) {
         String expr = "^[\u0391-\uFFE5]+$";
@@ -124,10 +124,10 @@ public final class RegUtils {
     }
 
     /**
-     * °üº¬ÖĞÎÄ
+     * åŒ…å«ä¸­æ–‡
      *
-     * @param data ¿ÉÄÜ°üº¬ÖĞÎÄµÄ×Ö·û´®
-     * @return ÊÇ·ñ°üº¬ÖĞÎÄ
+     * @param data å¯èƒ½åŒ…å«ä¸­æ–‡çš„å­—ç¬¦ä¸²
+     * @return æ˜¯å¦åŒ…å«ä¸­æ–‡
      */
     public static boolean isContainChinese(String data) {
         String chinese = "[\u0391-\uFFE5]";
@@ -144,11 +144,11 @@ public final class RegUtils {
     }
 
     /**
-     * Ğ¡ÊıµãÎ»Êı
+     * å°æ•°ç‚¹ä½æ•°
      *
-     * @param data   ¿ÉÄÜ°üº¬Ğ¡ÊıµãµÄ×Ö·û´®
-     * @param length Ğ¡ÊıµãºóµÄ³¤¶È
-     * @return ÊÇ·ñĞ¡ÊıµãºóÓĞlengthÎ»Êı×Ö
+     * @param data   å¯èƒ½åŒ…å«å°æ•°ç‚¹çš„å­—ç¬¦ä¸²
+     * @param length å°æ•°ç‚¹åçš„é•¿åº¦
+     * @return æ˜¯å¦å°æ•°ç‚¹åæœ‰lengthä½æ•°å­—
      */
     public static boolean isDianWeiShu(String data, int length) {
         String expr = "^[1-9][0-9]+\\.[0-9]{" + length + "}$";
@@ -156,10 +156,10 @@ public final class RegUtils {
     }
 
     /**
-     * Éí·İÖ¤ºÅÂëÑéÖ¤
+     * èº«ä»½è¯å·ç éªŒè¯
      *
-     * @param data ¿ÉÄÜÊÇÉí·İÖ¤ºÅÂëµÄ×Ö·û´®
-     * @return ÊÇ·ñÊÇÉí·İÖ¤ºÅÂë
+     * @param data å¯èƒ½æ˜¯èº«ä»½è¯å·ç çš„å­—ç¬¦ä¸²
+     * @return æ˜¯å¦æ˜¯èº«ä»½è¯å·ç 
      */
     public static boolean isCard(String data) {
         String expr = "^[0-9]{17}[0-9xX]$";
@@ -167,10 +167,10 @@ public final class RegUtils {
     }
 
     /**
-     * ÓÊÕş±àÂëÑéÖ¤
+     * é‚®æ”¿ç¼–ç éªŒè¯
      *
-     * @param data ¿ÉÄÜ°üº¬ÓÊÕş±àÂëµÄ×Ö·û´®
-     * @return ÊÇ·ñÊÇÓÊÕş±àÂë
+     * @param data å¯èƒ½åŒ…å«é‚®æ”¿ç¼–ç çš„å­—ç¬¦ä¸²
+     * @return æ˜¯å¦æ˜¯é‚®æ”¿ç¼–ç 
      */
     public static boolean isPostCode(String data) {
         String expr = "^[0-9]{6,10}";
@@ -178,11 +178,11 @@ public final class RegUtils {
     }
 
     /**
-     * ³¤¶ÈÑéÖ¤
+     * é•¿åº¦éªŒè¯
      *
-     * @param data   Ô´×Ö·û´®
-     * @param length ÆÚÍû³¤¶È
-     * @return ÊÇ·ñÊÇÆÚÍû³¤¶È
+     * @param data   æºå­—ç¬¦ä¸²
+     * @param length æœŸæœ›é•¿åº¦
+     * @return æ˜¯å¦æ˜¯æœŸæœ›é•¿åº¦
      */
     public static boolean isLength(String data, int length) {
 

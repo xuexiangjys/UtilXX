@@ -4,7 +4,7 @@ import android.graphics.Bitmap;
 import android.graphics.Color;
 
 /**
- * ×÷Õß£º °ÍÕÆ on 16/9/3 14:05
+ * ä½œè€…ï¼š å·´æŽŒ on 16/9/3 14:05
  * Github: https://github.com/JeasonWong
  */
 public class ShareItem {

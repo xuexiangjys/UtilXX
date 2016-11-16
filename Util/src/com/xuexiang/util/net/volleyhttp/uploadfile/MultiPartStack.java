@@ -34,13 +34,13 @@ import com.android.volley.toolbox.HurlStack;
 
 /**
  * @author ZhiCheng Guo
- * @version 2014Äê10ÔÂ7ÈÕ ÉÏÎç11:00:52 Õâ¸öStackÓÃÓÚÉÏ´«ÎÄ¼ş, Èç¹ûÃ»ÓĞÕâ¸öStack, ÔòÉÏ´«ÎÄ¼ş²»³É¹¦
+ * @version 2014å¹´10æœˆ7æ—¥ ä¸Šåˆ11:00:52 è¿™ä¸ªStackç”¨äºä¸Šä¼ æ–‡ä»¶, å¦‚æœæ²¡æœ‰è¿™ä¸ªStack, åˆ™ä¸Šä¼ æ–‡ä»¶ä¸æˆåŠŸ
  */
 public class MultiPartStack extends HurlStack {
 	@SuppressWarnings("unused")
 	private static final String TAG = MultiPartStack.class.getSimpleName();
     private final static String HEADER_CONTENT_TYPE = "Content-Type";
-    /** Ä¬ÈÏ±àÂë*/
+    /** é»˜è®¤ç¼–ç */
 	public static final String DEFAULT_ENCODING = "UTF-8";
 	
 	

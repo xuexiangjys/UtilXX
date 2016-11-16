@@ -28,12 +28,12 @@ public class FadingActionbarScrollViewActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
 
         FadingActionBarHelper helper = new FadingActionBarHelper()
-            .actionBarBackground(R.drawable.ab_background)//设置actionbar的背景色
-            .headerLayout(R.layout.fadingactionbar_header)// 设置actionbar上图片的layout
-            .contentLayout(R.layout.activity_fadingactionbarscrollview);// 设置界面内容的布局
+            .actionBarBackground(R.drawable.ab_background)//璁剧疆actionbar鐨勮儗鏅壊
+            .headerLayout(R.layout.fadingactionbar_header)// 璁剧疆actionbar涓婂浘鐗囩殑layout
+            .contentLayout(R.layout.activity_fadingactionbarscrollview);// 璁剧疆鐣岄潰鍐呭鐨勫竷灞�
         
-        setContentView(helper.createView(this));// 配置布局
-        helper.initActionBar(this);// 用当前对象进行初始化
+        setContentView(helper.createView(this));// 閰嶇疆甯冨眬
+        helper.initActionBar(this);// 鐢ㄥ綋鍓嶅璞¤繘琛屽垵濮嬪寲
     }
 
 }

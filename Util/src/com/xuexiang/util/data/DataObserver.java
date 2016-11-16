@@ -8,12 +8,12 @@ import android.database.DataSetObserver;
 
 /** 
  * @author  XX 
- * @date ´´½¨Ê±¼ä£º2016-5-25 ÉÏÎç11:11:10 
+ * @date åˆ›å»ºæ—¶é—´ï¼š2016-5-25 ä¸Šåˆ11:11:10 
  */
 
 public class DataObserver {
 
-	//´æ·ÅÊı¾İ¹Û²ìÕß¼¯ºÏ
+	//å­˜æ”¾æ•°æ®è§‚å¯Ÿè€…é›†åˆ
     private ArrayList<WeakReference<DataSetObserver>> mObservers = new ArrayList<WeakReference<DataSetObserver>>();
     
     /**

@@ -8,14 +8,14 @@ import com.j256.ormlite.support.ConnectionSource;
 
 public class BaseDBHelper<T> extends OrmLiteSqliteOpenHelper {
 	
-	/** 具体某个应用程序数据库的*/
+	/** 鍏蜂綋鏌愪釜搴旂敤绋嬪簭鏁版嵁搴撶殑*/
 	private IDataBase mIDataBase;
 
 	/**
 	 * @param context
-	 * @param databaseName 数据库名
-	 * @param databaseVersion  数据库版本号
-	 * @param idatabase db操作接口
+	 * @param databaseName 鏁版嵁搴撳悕
+	 * @param databaseVersion  鏁版嵁搴撶増鏈彿
+	 * @param idatabase db鎿嶄綔鎺ュ彛
 	 */
 	public BaseDBHelper(Context context, String databaseName, int databaseVersion, IDataBase idatabase) {
 		super(context, databaseName, null, databaseVersion);
@@ -32,7 +32,7 @@ public class BaseDBHelper<T> extends OrmLiteSqliteOpenHelper {
 		mIDataBase.onUpgrade(db, connectionSource, oldVersion, newVersion);
 	}
 
-	// 释放资源
+	// 閲婃斁璧勬簮
 	@Override
 	public void close() {		
 		super.close();

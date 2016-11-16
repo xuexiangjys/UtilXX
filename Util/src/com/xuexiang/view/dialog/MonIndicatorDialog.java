@@ -11,10 +11,10 @@ import android.view.KeyEvent;
 import android.widget.TextView;
 
 /**  
- * ´´½¨Ê±¼ä£º2016-6-4 ÉÏÎç12:03:08  
- * ÏîÄ¿Ãû³Æ£ºspotsloadingdialog  
+ * åˆ›å»ºæ—¶é—´ï¼š2016-6-4 ä¸Šåˆ12:03:08  
+ * é¡¹ç›®åç§°ï¼šspotsloadingdialog  
  * @author xuexiang
- * ÎÄ¼şÃû³Æ£ºMonIndicatorDialog.java  
+ * æ–‡ä»¶åç§°ï¼šMonIndicatorDialog.java  
  **/
 public class MonIndicatorDialog extends AlertDialog{
     private TextView mTitle;
@@ -57,7 +57,7 @@ public class MonIndicatorDialog extends AlertDialog{
 		 mTitle = (TextView) findViewById(RUtils.getId(getContext(), "title"));
 	     mMonIndicator = (MonIndicator) findViewById(RUtils.getId(getContext(), "monIndicator"));
 	     if (TextUtils.isEmpty(mLoadingText)) {
-	    	 mTitle.setText("ÕıÔÚ¼ÓÔØÖĞ...");
+	    	 mTitle.setText("æ­£åœ¨åŠ è½½ä¸­...");
 	     } else {
 	    	 mTitle.setText(mLoadingText);
 	     }

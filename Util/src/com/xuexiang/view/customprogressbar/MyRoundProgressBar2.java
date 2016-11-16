@@ -12,7 +12,7 @@ import android.util.AttributeSet;
 
 /**
  * Created by C058 on 2016/5/26.
- * Ä£·Âios app storeÓ¦ÓÃÏÂÔØÔ²ĞÎ½øÍ¼Ìõ
+ * æ¨¡ä»¿ios app storeåº”ç”¨ä¸‹è½½åœ†å½¢è¿›å›¾æ¡
  */
 public class MyRoundProgressBar2 extends MyHoriztalProgressBar {
 
@@ -36,23 +36,23 @@ public class MyRoundProgressBar2 extends MyHoriztalProgressBar {
         ta.recycle();
 
         mReachHeight = mUnReachHeight * 2;
-        mPaint.setAntiAlias(true);//¿¹¾â³İ
-        mPaint.setDither(true); //·À¶¶¶¯Ä£Ê½
-        mPaint.setStyle(Paint.Style.STROKE);//»­±Ê·ç¸ñÉèÖÃÎª¿ÕĞÄ
+        mPaint.setAntiAlias(true);//æŠ—é”¯é½¿
+        mPaint.setDither(true); //é˜²æŠ–åŠ¨æ¨¡å¼
+        mPaint.setStyle(Paint.Style.STROKE);//ç”»ç¬”é£æ ¼è®¾ç½®ä¸ºç©ºå¿ƒ
         mPaint.setStrokeCap(Paint.Cap.ROUND);
     }
 
     @Override
     protected synchronized void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
 
-        int diameter = mRadius * 2 + getPaddingLeft() + getPaddingRight() + mUnReachHeight * 2; //¿Ø¼ş¿í¶È Ä¬ÈÏËÄ¸öpaddingÒ»ÖÂ
+        int diameter = mRadius * 2 + getPaddingLeft() + getPaddingRight() + mUnReachHeight * 2; //æ§ä»¶å®½åº¦ é»˜è®¤å››ä¸ªpaddingä¸€è‡´
         int width = resolveSize(diameter, widthMeasureSpec);
         int height = resolveSize(diameter, heightMeasureSpec);
-        int realWidth = Math.min(width, height);//µ±¿í¸ßÉèÖÃ²»Ò»ÖÂ£¬È¡Ğ¡µÄÄÇ¸ö
-        //ÍâÔ²µÄ°ë¾¶
+        int realWidth = Math.min(width, height);//å½“å®½é«˜è®¾ç½®ä¸ä¸€è‡´ï¼Œå–å°çš„é‚£ä¸ª
+        //å¤–åœ†çš„åŠå¾„
         mRadius = (realWidth - getPaddingLeft() - getPaddingRight() - mUnReachHeight) / 2;
         mRectf = new RectF(0, 0, mRadius * 2, mRadius * 2);
-        //ÄÚÔ²µÄ°ë¾¶
+        //å†…åœ†çš„åŠå¾„
         mInRadius = mRadius - mUnReachHeight;
         mInRectf = new RectF(0, 0, mInRadius * 2, mInRadius * 2);
         setMeasuredDimension(realWidth, realWidth);
@@ -66,10 +66,10 @@ public class MyRoundProgressBar2 extends MyHoriztalProgressBar {
         //draw unreachbar
         mPaint.setColor(mUnReachColor);
         mPaint.setStrokeWidth(mUnReachHeight);
-        //´ÓÔ²µã¿ªÊ¼»­Ô²
+        //ä»åœ†ç‚¹å¼€å§‹ç”»åœ†
         canvas.drawCircle(mRadius, mRadius, mRadius, mPaint);
         //draw reachbar
-        //½«»­²¼ÒÆ¶¯µ½»­ÄÚÔ²µÄÎ»ÖÃ
+        //å°†ç”»å¸ƒç§»åŠ¨åˆ°ç”»å†…åœ†çš„ä½ç½®
         canvas.translate(mUnReachHeight, mUnReachHeight);
         mPaint.setColor(mReachColor);
         mPaint.setStrokeWidth(mReachHeight);

@@ -15,10 +15,10 @@ import com.xuexiang.util.adapter.BaseContentAdapter;
 import com.xuexiang.util.data.db.ahibernate.DatabaseService;
 
 /**  
- * ´´½¨Ê±¼ä£º2016-2-5 ÏÂÎç3:42:49  
- * ÏîÄ¿Ãû³Æ£ºOrmDemo  
+ * åˆ›å»ºæ—¶é—´ï¼š2016-2-5 ä¸‹åˆ3:42:49  
+ * é¡¹ç›®åç§°ï¼šOrmDemo  
  * @author xuexiang
- * ÎÄ¼şÃû³Æ£ºUserDataAdapter.java  
+ * æ–‡ä»¶åç§°ï¼šUserDataAdapter.java  
  **/
 public class UserDataAdapter extends  BaseContentAdapter<User>{
 	

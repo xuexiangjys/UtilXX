@@ -10,7 +10,7 @@ import com.google.gson.reflect.TypeToken;
 import com.xuexiang.util.net.JsonUtil;
 
 /**
- * ÍøÂçÇëÇó·µ»ØµÄÊÇÒ»¸öÊµÌå¶ÔÏó¼¯ºÏ
+ * ç½‘ç»œè¯·æ±‚è¿”å›çš„æ˜¯ä¸€ä¸ªå®ä½“å¯¹è±¡é›†åˆ
  * @author xx
  * @param <T>
  */

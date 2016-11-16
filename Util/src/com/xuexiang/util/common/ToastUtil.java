@@ -8,7 +8,7 @@ import android.widget.Toast;
 
 import com.xuexiang.util.resource.MResource;
 /**
- * ÏÔÊ¾È«¾ÖµÄToast£¬·ÀÖ¹ToastµÄÖØ¸´µ¯³ö
+ * æ˜¾ç¤ºå…¨å±€çš„Toastï¼Œé˜²æ­¢Toastçš„é‡å¤å¼¹å‡º
  *
  */
 public class ToastUtil {

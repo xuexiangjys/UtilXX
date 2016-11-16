@@ -69,12 +69,12 @@ public class ApplicationUtils {
     private static Handler handler = new Handler();
 
     /**
-     * ÊÖ»úºÅÕıÔò
+     * æ‰‹æœºå·æ­£åˆ™
      */
     public static final String REG_PHONE_CHINA = "^((13[0-9])|(15[^4,\\D])|(18[0,5-9]))\\d{8}$";
 
     /**
-     * ÓÊÏäÕıÔò
+     * é‚®ç®±æ­£åˆ™
      */
     public static final String REG_EMAIL = "\\w+([-+.]\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
 
@@ -141,13 +141,13 @@ public class ApplicationUtils {
     }
 
     /**
-     * °Ñ¶ÔÏóĞ´ÈëÎÄ¼ş
+     * æŠŠå¯¹è±¡å†™å…¥æ–‡ä»¶
      */
     public static void writeObjectToFile(Object object, File file) {
         try {
             ObjectOutputStream os = new ObjectOutputStream(
                     new FileOutputStream(file));
-            os.writeObject(object);// ½«User¶ÔÏóĞ´½øÎÄ¼ş
+            os.writeObject(object);// å°†Userå¯¹è±¡å†™è¿›æ–‡ä»¶
             os.close();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -157,12 +157,12 @@ public class ApplicationUtils {
     }
 
     /**
-     * ´ÓÎÄ¼şÖĞ¶ÁÈ¡¶ÔÏó
+     * ä»æ–‡ä»¶ä¸­è¯»å–å¯¹è±¡
      */
     public static Object readObjectFromFile(File file) {
         try {
             ObjectInputStream is = new ObjectInputStream(new FileInputStream(file));
-            Object object = is.readObject();// ´ÓÁ÷ÖĞ¶ÁÈ¡UserµÄÊı¾İ
+            Object object = is.readObject();// ä»æµä¸­è¯»å–Userçš„æ•°æ®
             is.close();
             return object;
         } catch (FileNotFoundException e) {
@@ -176,7 +176,7 @@ public class ApplicationUtils {
     }
 
     /**
-     * »ñÈ¡°æ±¾ºÅ
+     * è·å–ç‰ˆæœ¬å·
      */
     public static int getAppVersion() {
         PackageManager manager = mContext.getPackageManager();
@@ -190,17 +190,17 @@ public class ApplicationUtils {
     }
 
     /**
-     * »ñÈ¡¸ùÄ¿Â¼ÏÂµÄcacheµØÖ·
+     * è·å–æ ¹ç›®å½•ä¸‹çš„cacheåœ°å€
      */
     public static File getCacheDir() {
         return mContext.getExternalCacheDir();
     }
 
     /**
-     * ÉèÖÃÓ²ÅÌ»º´æÂ·¾¶£¨ÓÃÓÚ´æ·ÅÍ¼Æ¬£¬Êı¾İµÈÎÄ¼ş£©
+     * è®¾ç½®ç¡¬ç›˜ç¼“å­˜è·¯å¾„ï¼ˆç”¨äºå­˜æ”¾å›¾ç‰‡ï¼Œæ•°æ®ç­‰æ–‡ä»¶ï¼‰
      *
-     * @param uniqueName Â·¾¶Ãû£¬ÔÚAPP»º´æÄ¿Â¼ÏÂ
-     * @return ·µ»ØÂ·¾¶ÎÄ¼ş
+     * @param uniqueName è·¯å¾„åï¼Œåœ¨APPç¼“å­˜ç›®å½•ä¸‹
+     * @return è¿”å›è·¯å¾„æ–‡ä»¶
      */
     public static File setDiskCacheDir(String uniqueName) {
         String cachePath;
@@ -214,11 +214,11 @@ public class ApplicationUtils {
     }
 
     /**
-     * file×ª»¯Îªbitmap
+     * fileè½¬åŒ–ä¸ºbitmap
      */
     public static Bitmap fileToBitmap(File file) {
         String filePath = file.getPath();
-        Bitmap bitmap = BitmapFactory.decodeFile(filePath, getBitmapOption(2)); //½«Í¼Æ¬µÄ³¤ºÍ¿íËõĞ¡Î¶Ô­À´µÄ1/2
+        Bitmap bitmap = BitmapFactory.decodeFile(filePath, getBitmapOption(2)); //å°†å›¾ç‰‡çš„é•¿å’Œå®½ç¼©å°å‘³åŸæ¥çš„1/2
         return bitmap;
     }
 
@@ -231,10 +231,10 @@ public class ApplicationUtils {
     }
 
     /**
-     * bitmap±£´æÎªÍ¼Æ¬ÎÄ¼ş
+     * bitmapä¿å­˜ä¸ºå›¾ç‰‡æ–‡ä»¶
      */
     public static void saveBitmapFile(Bitmap bitmap, String filePath) {
-        File file = new File(filePath);//½«Òª±£´æÍ¼Æ¬µÄÂ·¾¶
+        File file = new File(filePath);//å°†è¦ä¿å­˜å›¾ç‰‡çš„è·¯å¾„
         try {
             BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(file));
             bitmap.compress(Bitmap.CompressFormat.JPEG, 100, bos);
@@ -246,10 +246,10 @@ public class ApplicationUtils {
     }
 
     /**
-     * MD5¼ÓÃÜ£¬°Ñ×Ö·û´®¼ÓÃÜ³É32Î»ÂÒÂë
+     * MD5åŠ å¯†ï¼ŒæŠŠå­—ç¬¦ä¸²åŠ å¯†æˆ32ä½ä¹±ç 
      *
-     * @param key ´«Èë¼ÓÃÜµÄ×Ö·û´®
-     * @return ·µ»ØMD5¼ÓÃÜºóµÄ×Ö·û´®
+     * @param key ä¼ å…¥åŠ å¯†çš„å­—ç¬¦ä¸²
+     * @return è¿”å›MD5åŠ å¯†åçš„å­—ç¬¦ä¸²
      */
     public static String MD5(String key) {
         String cacheKey;
@@ -264,7 +264,7 @@ public class ApplicationUtils {
     }
 
     /**
-     * ×Ö½Ú×ª»»³É16½øÖÆ×Ö·û´®
+     * å­—èŠ‚è½¬æ¢æˆ16è¿›åˆ¶å­—ç¬¦ä¸²
      */
     private static String bytesToHexString(byte[] bytes) {
         StringBuilder sb = new StringBuilder();
@@ -279,9 +279,9 @@ public class ApplicationUtils {
     }
 
     /**
-     * ÏÂÔØÍ¼Æ¬±£´æµ½APP»º´æ¸ùÄ¿Â¼ÏÂ£¬È»ºóÍ¨Öª²åÈëÍ¼¿âÊı¾İ¿â£¬È»ºóÍ¨ÖªÍ¼¿âÏÔÊ¾³öÀ´
+     * ä¸‹è½½å›¾ç‰‡ä¿å­˜åˆ°APPç¼“å­˜æ ¹ç›®å½•ä¸‹ï¼Œç„¶åé€šçŸ¥æ’å…¥å›¾åº“æ•°æ®åº“ï¼Œç„¶åé€šçŸ¥å›¾åº“æ˜¾ç¤ºå‡ºæ¥
      *
-     * @param url Í¼Æ¬ÍøÂçµØÖ·
+     * @param url å›¾ç‰‡ç½‘ç»œåœ°å€
      */
     public static void downloadImage(final String url) {
         new Thread(new Runnable() {
@@ -298,7 +298,7 @@ public class ApplicationUtils {
                     urlConnection.setDoInput(true);
                     urlConnection.setConnectTimeout(10 * 1000);
                     urlConnection.setReadTimeout(10 * 1000);
-                    //¶ÔHttpURLConnection¶ÔÏóµÄÒ»ÇĞÅäÖÃ¶¼±ØĞëÒªÔÚconnect()º¯ÊıÖ´ĞĞÖ®Ç°Íê³É¡£
+                    //å¯¹HttpURLConnectionå¯¹è±¡çš„ä¸€åˆ‡é…ç½®éƒ½å¿…é¡»è¦åœ¨connect()å‡½æ•°æ‰§è¡Œä¹‹å‰å®Œæˆã€‚
                     int respondCode;
                     urlConnection.connect();
                     final InputStream inputStream = urlConnection.getInputStream();
@@ -309,7 +309,7 @@ public class ApplicationUtils {
                             handler.post(new Runnable() {
                                 @Override
                                 public void run() {
-                                    ApplicationUtils.Toast("±£´æÊ§°Ü");
+                                    ApplicationUtils.Toast("ä¿å­˜å¤±è´¥");
                                 }
                             });
                             return;
@@ -319,7 +319,7 @@ public class ApplicationUtils {
                             handler.post(new Runnable() {
                                 @Override
                                 public void run() {
-                                    ApplicationUtils.Toast("ÎÄ¼şÒÑ´æÔÚ");
+                                    ApplicationUtils.Toast("æ–‡ä»¶å·²å­˜åœ¨");
                                 }
                             });
                             return;
@@ -330,19 +330,19 @@ public class ApplicationUtils {
                             out.flush();
                             out.close();
 
-                            // Æä´Î°ÑÎÄ¼ş²åÈëµ½ÏµÍ³Í¼¿â
+                            // å…¶æ¬¡æŠŠæ–‡ä»¶æ’å…¥åˆ°ç³»ç»Ÿå›¾åº“
                             try {
                                 MediaStore.Images.Media.insertImage(mContext.getContentResolver(),
                                         getCacheDir().getAbsolutePath(), ApplicationUtils.MD5(url) + ".jpg", "");
                             } catch (FileNotFoundException e) {
                                 e.printStackTrace();
                             }
-                            // ×îºóÍ¨ÖªÍ¼¿â¸üĞÂ
+                            // æœ€åé€šçŸ¥å›¾åº“æ›´æ–°
                             mContext.sendBroadcast(new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE, Uri.parse("file://" + f.getAbsolutePath())));
                             handler.post(new Runnable() {
                                 @Override
                                 public void run() {
-                                    ApplicationUtils.Toast("ÒÑ±£´æÔÚAPPµÄ»º´æÄ¿Â¼");
+                                    ApplicationUtils.Toast("å·²ä¿å­˜åœ¨APPçš„ç¼“å­˜ç›®å½•");
                                 }
                             });
                         } catch (FileNotFoundException e) {
@@ -367,7 +367,7 @@ public class ApplicationUtils {
     }
 
     /**
-     * SP´æ´¢string
+     * SPå­˜å‚¨string
      */
     public static void SPPutString(SharedPreferences sp, String key, String value) {
         SharedPreferences.Editor editor = sp.edit();
@@ -376,7 +376,7 @@ public class ApplicationUtils {
     }
 
     /**
-     * SP´æ´¢Int
+     * SPå­˜å‚¨Int
      */
     public static void SPPutInt(SharedPreferences sp, String key, int value) {
         SharedPreferences.Editor editor = sp.edit();
@@ -385,27 +385,27 @@ public class ApplicationUtils {
     }
 
     /**
-     * ²¦´òµç»°
+     * æ‹¨æ‰“ç”µè¯
      */
     public static void call(Activity activity, String phoneNumber) {
         activity.startActivity(new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + phoneNumber)));
     }
 
-    //Ìøµ½²¦ºÅ½çÃæ
+    //è·³åˆ°æ‹¨å·ç•Œé¢
     public static void jumpDialUI(Activity activity,String phoneNumber){
         Intent intent = new Intent(Intent.ACTION_DIAL,Uri.parse("tel:" + phoneNumber));
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         activity.startActivity(intent);
     }
     /**
-     * Ìø×ªÖÁ²¦ºÅ½çÃæ
+     * è·³è½¬è‡³æ‹¨å·ç•Œé¢
      */
     public static void callDial(String phoneNumber) {
         mContext.startActivity(new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + phoneNumber)));
     }
 
     /**
-     * ·¢ËÍ¶ÌĞÅ
+     * å‘é€çŸ­ä¿¡
      */
     public static void sendSms(String phoneNumber,
                                String content) {
@@ -417,25 +417,25 @@ public class ApplicationUtils {
     }
 
     /**
-     * »½ĞÑÆÁÄ»²¢½âËø
+     * å”¤é†’å±å¹•å¹¶è§£é”
      */
     public static void wakeUpAndUnlock() {
         KeyguardManager km = (KeyguardManager) mContext.getSystemService(Context.KEYGUARD_SERVICE);
         KeyguardManager.KeyguardLock kl = km.newKeyguardLock("unLock");
-        //½âËø
+        //è§£é”
         kl.disableKeyguard();
-        //»ñÈ¡µçÔ´¹ÜÀíÆ÷¶ÔÏó
+        //è·å–ç”µæºç®¡ç†å™¨å¯¹è±¡
         PowerManager pm = (PowerManager) mContext.getSystemService(Context.POWER_SERVICE);
-        //»ñÈ¡PowerManager.WakeLock¶ÔÏó,ºóÃæµÄ²ÎÊı|±íÊ¾Í¬Ê±´«ÈëÁ½¸öÖµ,×îºóµÄÊÇLogCatÀïÓÃµÄTag
+        //è·å–PowerManager.WakeLockå¯¹è±¡,åé¢çš„å‚æ•°|è¡¨ç¤ºåŒæ—¶ä¼ å…¥ä¸¤ä¸ªå€¼,æœ€åçš„æ˜¯LogCaté‡Œç”¨çš„Tag
         PowerManager.WakeLock wl = pm.newWakeLock(PowerManager.ACQUIRE_CAUSES_WAKEUP | PowerManager.SCREEN_DIM_WAKE_LOCK, "bright");
-        //µãÁÁÆÁÄ»
+        //ç‚¹äº®å±å¹•
         wl.acquire();
-        //ÊÍ·Å
+        //é‡Šæ”¾
         wl.release();
     }
 
     /**
-     * ÅĞ¶Ïµ±Ç°App´¦ÓÚÇ°Ì¨»¹ÊÇºóÌ¨×´Ì¬
+     * åˆ¤æ–­å½“å‰Appå¤„äºå‰å°è¿˜æ˜¯åå°çŠ¶æ€
      */
     public static boolean isApplicationBackground() {
         ActivityManager am = (ActivityManager) mContext
@@ -452,7 +452,7 @@ public class ApplicationUtils {
     }
 
     /**
-     * ÅĞ¶Ïµ±Ç°ÊÖ»úÊÇ·ñ´¦ÓÚËøÆÁ(Ë¯Ãß)×´Ì¬
+     * åˆ¤æ–­å½“å‰æ‰‹æœºæ˜¯å¦å¤„äºé”å±(ç¡çœ )çŠ¶æ€
      */
     public static boolean isSleeping() {
         KeyguardManager kgMgr = (KeyguardManager) mContext
@@ -462,7 +462,7 @@ public class ApplicationUtils {
     }
 
     /**
-     * ÅĞ¶Ïµ±Ç°ÊÇ·ñÓĞÍøÂçÁ¬½Ó
+     * åˆ¤æ–­å½“å‰æ˜¯å¦æœ‰ç½‘ç»œè¿æ¥
      *
      * @return
      */
@@ -477,7 +477,7 @@ public class ApplicationUtils {
     }
 
     /**
-     * ÅĞ¶Ïµ±Ç°ÊÇ·ñÊÇWIFIÁ¬½Ó×´Ì¬
+     * åˆ¤æ–­å½“å‰æ˜¯å¦æ˜¯WIFIè¿æ¥çŠ¶æ€
      */
     public static boolean isWifiConnected() {
         ConnectivityManager connectivityManager = (ConnectivityManager) mContext
@@ -491,7 +491,7 @@ public class ApplicationUtils {
     }
 
     /**
-     * °²×°APK
+     * å®‰è£…APK
      */
     public static void installApk(File file) {
         Intent intent = new Intent();
@@ -505,7 +505,7 @@ public class ApplicationUtils {
     }
 
     /**
-     * ÅĞ¶Ïµ±Ç°Éè±¸ÊÇ·ñÎªÊÖ»ú
+     * åˆ¤æ–­å½“å‰è®¾å¤‡æ˜¯å¦ä¸ºæ‰‹æœº
      */
     public static boolean isPhone() {
         TelephonyManager telephony = (TelephonyManager) mContext
@@ -519,7 +519,7 @@ public class ApplicationUtils {
 
 
     /**
-     * »ñÈ¡µ±Ç°Éè±¸µÄIMEI£¬ĞèÒªÓëÉÏÃæµÄisPhone()Ò»ÆğÊ¹ÓÃ
+     * è·å–å½“å‰è®¾å¤‡çš„IMEIï¼Œéœ€è¦ä¸ä¸Šé¢çš„isPhone()ä¸€èµ·ä½¿ç”¨
      */
     @TargetApi(Build.VERSION_CODES.CUPCAKE)
     public static String getDeviceIMEI(Context context) {
@@ -537,7 +537,7 @@ public class ApplicationUtils {
     }
 
     /**
-     * »ñÈ¡µ±Ç°Éè±¸µÄMACµØÖ·
+     * è·å–å½“å‰è®¾å¤‡çš„MACåœ°å€
      */
     public static String getMacAddress() {
         String macAddress;
@@ -553,7 +553,7 @@ public class ApplicationUtils {
     }
 
     /**
-     * ÊÇ·ñÓĞSD¿¨
+     * æ˜¯å¦æœ‰SDå¡
      */
     public static boolean haveSDCard() {
         return Environment.getExternalStorageState().equals(
@@ -561,7 +561,7 @@ public class ApplicationUtils {
     }
 
     /**
-     * ¶¯Ì¬Òş²ØÈí¼üÅÌ
+     * åŠ¨æ€éšè—è½¯é”®ç›˜
      */
     @TargetApi(Build.VERSION_CODES.CUPCAKE)
     public static void hideSoftInput(Activity activity) {
@@ -582,7 +582,7 @@ public class ApplicationUtils {
     }
 
     /**
-     * ¶¯Ì¬ÏÔÊ¾Èí¼üÅÌ
+     * åŠ¨æ€æ˜¾ç¤ºè½¯é”®ç›˜
      */
     @TargetApi(Build.VERSION_CODES.CUPCAKE)
     public static void showSoftInput(Context context, EditText edit) {
@@ -595,7 +595,7 @@ public class ApplicationUtils {
     }
 
     /**
-     * Ö÷¶¯»Øµ½Home£¬ºóÌ¨ÔËĞĞ
+     * ä¸»åŠ¨å›åˆ°Homeï¼Œåå°è¿è¡Œ
      */
     public static void goHome() {
         Intent mHomeIntent = new Intent(Intent.ACTION_MAIN);
@@ -606,7 +606,7 @@ public class ApplicationUtils {
     }
 
     /**
-     * »ñÈ¡×´Ì¬À¸¸ß¶È
+     * è·å–çŠ¶æ€æ é«˜åº¦
      */
     @TargetApi(Build.VERSION_CODES.CUPCAKE)
     public static int getStatusBarHeight(Activity activity) {
@@ -616,8 +616,8 @@ public class ApplicationUtils {
     }
 
     /**
-     * »ñÈ¡MCC+MNC´úÂë (SIM¿¨ÔËÓªÉÌ¹ú¼Ò´úÂëºÍÔËÓªÉÌÍøÂç´úÂë)
-     * ½öµ±ÓÃ»§ÒÑÔÚÍøÂç×¢²áÊ±ÓĞĞ§, CDMA ¿ÉÄÜ»áÎŞĞ§£¨ÖĞ¹úÒÆ¶¯£º46000 46002, ÖĞ¹úÁªÍ¨£º46001,ÖĞ¹úµçĞÅ£º46003£©
+     * è·å–MCC+MNCä»£ç  (SIMå¡è¿è¥å•†å›½å®¶ä»£ç å’Œè¿è¥å•†ç½‘ç»œä»£ç )
+     * ä»…å½“ç”¨æˆ·å·²åœ¨ç½‘ç»œæ³¨å†Œæ—¶æœ‰æ•ˆ, CDMA å¯èƒ½ä¼šæ— æ•ˆï¼ˆä¸­å›½ç§»åŠ¨ï¼š46000 46002, ä¸­å›½è”é€šï¼š46001,ä¸­å›½ç”µä¿¡ï¼š46003ï¼‰
      */
     public static String getNetworkOperator() {
         TelephonyManager telephonyManager = (TelephonyManager) mContext
@@ -626,8 +626,8 @@ public class ApplicationUtils {
     }
 
     /**
-     * ·µ»ØÒÆ¶¯ÍøÂçÔËÓªÉÌµÄÃû×Ö
-     * (Àı£ºÖĞ¹úÁªÍ¨¡¢ÖĞ¹úÒÆ¶¯¡¢ÖĞ¹úµçĞÅ) ½öµ±ÓÃ»§ÒÑÔÚÍøÂç×¢²áÊ±ÓĞĞ§, CDMA ¿ÉÄÜ»áÎŞĞ§)
+     * è¿”å›ç§»åŠ¨ç½‘ç»œè¿è¥å•†çš„åå­—
+     * (ä¾‹ï¼šä¸­å›½è”é€šã€ä¸­å›½ç§»åŠ¨ã€ä¸­å›½ç”µä¿¡) ä»…å½“ç”¨æˆ·å·²åœ¨ç½‘ç»œæ³¨å†Œæ—¶æœ‰æ•ˆ, CDMA å¯èƒ½ä¼šæ— æ•ˆ)
      */
     public static String getNetworkOperatorName() {
         TelephonyManager telephonyManager = (TelephonyManager) mContext
@@ -636,10 +636,10 @@ public class ApplicationUtils {
     }
 
     /**
-     * ·µ»ØÒÆ¶¯ÖÕ¶ËÀàĞÍ
-     * PHONE_TYPE_NONE :0 ÊÖ»úÖÆÊ½Î´Öª
-     * PHONE_TYPE_GSM :1 ÊÖ»úÖÆÊ½ÎªGSM£¬ÒÆ¶¯ºÍÁªÍ¨
-     * PHONE_TYPE_CDMA :2 ÊÖ»úÖÆÊ½ÎªCDMA£¬µçĞÅ
+     * è¿”å›ç§»åŠ¨ç»ˆç«¯ç±»å‹
+     * PHONE_TYPE_NONE :0 æ‰‹æœºåˆ¶å¼æœªçŸ¥
+     * PHONE_TYPE_GSM :1 æ‰‹æœºåˆ¶å¼ä¸ºGSMï¼Œç§»åŠ¨å’Œè”é€š
+     * PHONE_TYPE_CDMA :2 æ‰‹æœºåˆ¶å¼ä¸ºCDMAï¼Œç”µä¿¡
      * PHONE_TYPE_SIP:3
      */
     public static int getPhoneType() {
@@ -678,8 +678,8 @@ public class ApplicationUtils {
     }
 
     /**
-     * ÅĞ¶ÏÊÖ»úÁ¬½ÓµÄÍøÂçÀàĞÍ(2G,3G,4G)
-     * ÁªÍ¨µÄ3GÎªUMTS»òHSDPA£¬ÒÆ¶¯ºÍÁªÍ¨µÄ2GÎªGPRS»òEGDE£¬µçĞÅµÄ2GÎªCDMA£¬µçĞÅµÄ3GÎªEVDO
+     * åˆ¤æ–­æ‰‹æœºè¿æ¥çš„ç½‘ç»œç±»å‹(2G,3G,4G)
+     * è”é€šçš„3Gä¸ºUMTSæˆ–HSDPAï¼Œç§»åŠ¨å’Œè”é€šçš„2Gä¸ºGPRSæˆ–EGDEï¼Œç”µä¿¡çš„2Gä¸ºCDMAï¼Œç”µä¿¡çš„3Gä¸ºEVDO
      */
     public static int getNetWorkClass() {
         TelephonyManager telephonyManager = (TelephonyManager) mContext
@@ -713,7 +713,7 @@ public class ApplicationUtils {
     }
 
     /**
-     * ÅĞ¶Ïµ±Ç°ÊÖ»úµÄÍøÂçÀàĞÍ(WIFI»¹ÊÇ2,3,4G)
+     * åˆ¤æ–­å½“å‰æ‰‹æœºçš„ç½‘ç»œç±»å‹(WIFIè¿˜æ˜¯2,3,4G)
      */
     public static int getNetWorkStatus() {
         int netWorkType = Constants.NETWORK_CLASS_UNKNOWN;
@@ -736,7 +736,7 @@ public class ApplicationUtils {
     }
 
     /**
-     * px-sp×ª»»
+     * px-spè½¬æ¢
      */
     public static int px2sp(float pxValue) {
         final float fontScale = mContext.getResources().getDisplayMetrics().scaledDensity;
@@ -744,7 +744,7 @@ public class ApplicationUtils {
     }
 
     /**
-     * sp-px×ª»»
+     * sp-pxè½¬æ¢
      */
     public static int sp2px(float spValue) {
         final float fontScale = mContext.getResources().getDisplayMetrics().scaledDensity;
@@ -752,7 +752,7 @@ public class ApplicationUtils {
     }
 
     /**
-     * ×Ö·û´®½âÎö³ÉºÁÃëÊı
+     * å­—ç¬¦ä¸²è§£ææˆæ¯«ç§’æ•°
      */
     public static long string2Millis(String str, String pattern) {
         SimpleDateFormat format = new SimpleDateFormat(pattern,
@@ -767,7 +767,7 @@ public class ApplicationUtils {
     }
 
     /**
-     * »ñÈ¡cpuºËÊı
+     * è·å–cpuæ ¸æ•°
      */
     public static int getNumberOfCPUCores() {
         if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.GINGERBREAD_MR1) {

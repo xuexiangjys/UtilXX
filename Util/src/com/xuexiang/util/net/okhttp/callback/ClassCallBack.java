@@ -8,7 +8,7 @@ import com.google.gson.Gson;
 
 
 /**
- * �������󷵻ص���һ��ʵ�����
+ * 网络请求返回的是一个实体对象
  * @author xx
  *
  * @param <T>

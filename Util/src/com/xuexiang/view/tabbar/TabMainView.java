@@ -28,7 +28,7 @@ public class TabMainView extends View {
 	private OvershootInterpolator overshootInterpolator;
 
 	/**
-	 * 鍥炬爣闆嗗悎
+	 * 閸ョ偓鐖ｉ梿鍡楁値
 	 */
 	private Bitmap centerBtnsBitmap[] = new Bitmap[4];
 
@@ -39,7 +39,7 @@ public class TabMainView extends View {
 	private Bitmap rightBtnBitmap;
 
 	/**
-	 * 鍥炬爣鐨勪腑鐐归泦鍚�
+	 * 閸ョ偓鐖ｉ惃鍕厬閻愬綊娉﹂崥锟�
 	 */
 	private float centerXs[] = new float[5];
 
@@ -48,40 +48,40 @@ public class TabMainView extends View {
 	private float rightBtnCenterX;
 
 	/**
-	 * 鏈�澶х殑鍦嗗崐寰�
+	 * 閺堬拷婢堆呮畱閸﹀棗宕愬锟�
 	 */
 	private float maxOvalR = 0;
 	/**
-	 * 鏈�灏忕殑鍦嗗崐寰�
+	 * 閺堬拷鐏忓繒娈戦崷鍡楀磹瀵帮拷
 	 */
 	private float minOvalR = 0;
 	/**
-	 * 鍦嗙偣鐨勫崐寰�
+	 * 閸﹀棛鍋ｉ惃鍕磹瀵帮拷
 	 */
 	private float dotR = 0;
 	/**
-	 * 鍦嗙偣鐨勫渾蹇� 鍧愭爣
+	 * 閸﹀棛鍋ｉ惃鍕妇韫囷拷 閸ф劖鐖�
 	 */
 	private float dotY = 0;
 	/**
-	 * 鏈�澶х殑鍦嗙Щ鍔ㄩ暱搴�
+	 * 閺堬拷婢堆呮畱閸﹀棛些閸斻劑鏆辨惔锟�
 	 */
 	private float maxMoveLength = 0;
 	/**
-	 * 宸﹁竟鐭╁舰鐨勫渾蹇冨潗鏍�
+	 * 瀹革箒绔熼惌鈺佽埌閻ㄥ嫬娓捐箛鍐ㄦ綏閺嶏拷
 	 */
 	private float leftCenterX = 0;
 	/**
-	 * 鍙宠竟鐭╁舰鐨勫渾蹇冨潗鏍�
+	 * 閸欏疇绔熼惌鈺佽埌閻ㄥ嫬娓捐箛鍐ㄦ綏閺嶏拷
 	 */
 	private float rightCenterX = 0;
 	/**
-	 * 宸﹁竟鎸夐挳鐨勫渾蹇冨潗鏍囨渶澶у��
+	 * 瀹革箒绔熼幐澶愭尦閻ㄥ嫬娓捐箛鍐ㄦ綏閺嶅洦娓舵径褍锟斤拷
 	 */
 	private float secondlyFirstX = 0;
 
 	/**
-	 * 鏃嬭浆瑙掑害闆嗗悎锛�0銆佷腑蹇冩寜閽搴� 1銆佷富鎸夐挳鐨勮搴� 2銆佸乏杈规寜閽搴� 3銆佸彸杈规寜閽搴�
+	 * 閺冨娴嗙憴鎺戝闂嗗棗鎮庨敍锟�0閵嗕椒鑵戣箛鍐╁瘻闁筋喛顫楁惔锟� 1閵嗕椒瀵岄幐澶愭尦閻ㄥ嫯顫楁惔锟� 2閵嗕礁涔忔潏瑙勫瘻闁筋喛顫楁惔锟� 3閵嗕礁褰告潏瑙勫瘻闁筋喛顫楁惔锟�
 	 */
 	private float mainBtnDegrees;
 
@@ -92,59 +92,59 @@ public class TabMainView extends View {
 	private float centerBtnsDegrees;
 
 	/**
-	 * 鍔ㄧ敾鏃堕棿闀垮害
+	 * 閸斻劎鏁鹃弮鍫曟？闂�鍨
 	 */
 	private long durationMillis = 300;
 
 	/**
-	 * 鏄惁宸茬粡灞曞紑
+	 * 閺勵垰鎯佸鑼病鐏炴洖绱�
 	 */
 	private boolean isOpened = true;
 	/**
-	 * 鏄惁鐢讳富鍥炬爣
+	 * 閺勵垰鎯侀悽璁冲瘜閸ョ偓鐖�
 	 */
 	private boolean drawIcons = false;
 	/**
-	 * 鏄惁鐢诲渾鐐�
+	 * 閺勵垰鎯侀悽璇叉妇閻愶拷
 	 */
 	private boolean drawDot = false;
 
 	/**
-	 * 鐐瑰嚮鐨勪綅缃�
+	 * 閻愮懓鍤惃鍕秴缂冿拷
 	 */
 	private int position = 0;
 	/**
-	 * 褰撳墠鎸変笅鐨勪綅缃�
+	 * 瑜版挸澧犻幐澶夌瑓閻ㄥ嫪缍呯純锟�
 	 */
 	private int sizePosition = -1;
 	/**
-	 * 鎺т欢瀹藉害
+	 * 閹貉傛鐎硅棄瀹�
 	 */
 	private int width = 0;
 	/**
-	 * 鎺т欢楂樺害
+	 * 閹貉傛妤傛ê瀹�
 	 */
 	private int height = 0;
 	/**
-	 * 鎺т欢鐨勬í鍧愭爣涓偣
+	 * 閹貉傛閻ㄥ嫭铆閸ф劖鐖ｆ稉顓犲仯
 	 */
 	private int centerX = 0;
 	/**
-	 * 鎺т欢鐨勭旱鍧愭爣涓偣
+	 * 閹貉傛閻ㄥ嫮鏃遍崸鎰垼娑擃厾鍋�
 	 */
 	private int centerY = 0;
 	/**
-	 * 鎺т欢楂樺害鐨凞P鍊�
+	 * 閹貉傛妤傛ê瀹抽惃鍑濸閸婏拷
 	 */
 	private int heightDip = 66;
 
 	/**
-	 * 棰滆壊闆嗗悎
+	 * 妫版粏澹婇梿鍡楁値
 	 */
 	private int colors[] = new int[3];
 
 	/**
-	 * 鍔ㄧ敾鐩戝惉鍣�
+	 * 閸斻劎鏁鹃惄鎴濇儔閸ｏ拷
 	 */
 	private OnAnimationEndListener animationEndListener;
 
@@ -328,12 +328,12 @@ public class TabMainView extends View {
 		}
 		// //////Icons//////////
 
-		// 缁樺埗涓績鎸夐挳
+		// 缂佹ê鍩楁稉顓炵妇閹稿鎸�
 		if (mainBtnBitmap != null) {
 			drawIcon(mainBtnBitmap, canvas, maxOvalR, centerXs[2], mainBtnDegrees, 2);
 		}
 
-		// 缁樺埗鑿滃崟鎸夐挳
+		// 缂佹ê鍩楅懣婊冨礋閹稿鎸�
 		for (int i = 0; i < centerBtnsBitmap.length; i++) {
 			if (centerBtnsBitmap[i] != null) {
 				int btn = i;
@@ -344,14 +344,14 @@ public class TabMainView extends View {
 			}
 		}
 
-		// 缁樺埗宸︿晶鎸夐挳
+		// 缂佹ê鍩楀锔挎櫠閹稿鎸�
 		if (leftBtnBitmap != null) {
 			rectF.set(leftBtnCenterX - minOvalR, centerY - minOvalR, leftBtnCenterX + minOvalR, centerY + minOvalR);
 			canvas.drawArc(rectF, 0, 360, false, paint);
 			drawIcon(leftBtnBitmap, canvas, maxOvalR, leftBtnCenterX, leftBtnDegrees, 10);
 		}
 
-		// 缁樺埗鍙充晶鎸夐挳
+		// 缂佹ê鍩楅崣鍏呮櫠閹稿鎸�
 		if (rightBtnBitmap != null) {
 			rectF.set(rightBtnCenterX - minOvalR, centerY - minOvalR, rightBtnCenterX + minOvalR, centerY + minOvalR);
 			canvas.drawArc(rectF, 0, 360, false, paint);

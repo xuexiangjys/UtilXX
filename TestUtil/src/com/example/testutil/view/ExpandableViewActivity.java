@@ -13,10 +13,10 @@ import com.example.testutil.view.expandableview.ScrollGridActivity;
 import com.xuexiang.app.BaseActivity;
 
 /**  
- * ´´½¨Ê±¼ä£º2016-6-22 ÏÂÎç11:50:29  
- * ÏîÄ¿Ãû³Æ£ºUtilTest  
+ * åˆ›å»ºæ—¶é—´ï¼š2016-6-22 ä¸‹åˆ11:50:29  
+ * é¡¹ç›®åç§°ï¼šUtilTest  
  * @author xuexiang
- * ÎÄ¼şÃû³Æ£ºExpandableViewActivity.java  
+ * æ–‡ä»¶åç§°ï¼šExpandableViewActivity.java  
  **/
 public class ExpandableViewActivity extends BaseActivity {
 
@@ -24,7 +24,7 @@ public class ExpandableViewActivity extends BaseActivity {
 	@Override
 	public void onCreateActivity() {
 		setContentView(R.layout.activity_expandableview);
-		initTitleBar("¶ş¼¶ÁĞ±í");
+		initTitleBar("äºŒçº§åˆ—è¡¨");
 		
 		initview();
 		

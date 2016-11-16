@@ -26,25 +26,25 @@ import com.xuexiang.view.LoopViewPager;
 
 
 /**
- * LoopViewPager²¼¾Ö
+ * LoopViewPagerå¸ƒå±€
  * <p/>
- * ¼ÓÈëÁËLoopViewPagerºÍLinearLayout
- * ¿ÉÒÔÍ¨¹ıview_loop_viewpagerĞŞ¸ÄÒ»Ğ©²ÎÊı
+ * åŠ å…¥äº†LoopViewPagerå’ŒLinearLayout
+ * å¯ä»¥é€šè¿‡view_loop_viewpagerä¿®æ”¹ä¸€äº›å‚æ•°
  *
  * @USER Edwin
- * @DATE 16/6/14 ÏÂÎç11:58
+ * @DATE 16/6/14 ä¸‹åˆ11:58
  */
 public class LoopViewPagerLayout extends RelativeLayout implements OnPageChangeListener {
     private LoopViewPager loopViewPager;
     private LinearLayout indicatorLayout;
     private OnBannerItemClickListener onBannerItemClickListener = null;
     private LoopPagerAdapterWrapper loopPagerAdapterWrapper;
-    private int totalDistance;//Ğ¡ºìµãÒªÒÆ¶¯µÄÈ«²¿¾àÀë
-    private int startX;//Ğ¡ºìµã¿ªÊ¼Î»ÖÃ
-    private int size = DisplayUtils.dip2px(getContext(), 8);//ÉèÖÃµãµÄ´óĞ¡;
-    private ArrayList<BannerInfo> bannerInfos;//bannerÊı¾İ
-    private TextView animIndicator;//ÒÆ¶¯µÄĞ¡ºìµã
-    private TextView[] indicators;//³õÊ¼»¯Ğ¡°×µã
+    private int totalDistance;//å°çº¢ç‚¹è¦ç§»åŠ¨çš„å…¨éƒ¨è·ç¦»
+    private int startX;//å°çº¢ç‚¹å¼€å§‹ä½ç½®
+    private int size = DisplayUtils.dip2px(getContext(), 8);//è®¾ç½®ç‚¹çš„å¤§å°;
+    private ArrayList<BannerInfo> bannerInfos;//banneræ•°æ®
+    private TextView animIndicator;//ç§»åŠ¨çš„å°çº¢ç‚¹
+    private TextView[] indicators;//åˆå§‹åŒ–å°ç™½ç‚¹
 
     public LoopViewPagerLayout(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -72,14 +72,14 @@ public class LoopViewPagerLayout extends RelativeLayout implements OnPageChangeL
                 params.setMargins(0, 0, 0, 0);
             }
             indicators[i].setLayoutParams(params);
-            indicators[i].setBackgroundResource(RUtils.getDrawable(getContext(), "indicator_normal_background"));//ÉèÖÃÄ¬ÈÏµÄ±³¾°ÑÕÉ«
+            indicators[i].setBackgroundResource(RUtils.getDrawable(getContext(), "indicator_normal_background"));//è®¾ç½®é»˜è®¤çš„èƒŒæ™¯é¢œè‰²
             indicatorLayout.addView(indicators[i]);
         }
 
-        //TODO Ğ¡Ô²µã
+        //TODO å°åœ†ç‚¹
         animIndicator = new TextView(getContext());
         animIndicator.setLayoutParams(new LinearLayout.LayoutParams(size, size));
-        animIndicator.setBackgroundResource(RUtils.getDrawable(getContext(), "indicator_selected_background"));//ÉèÖÃÑ¡ÖĞµÄ±³¾°ÑÕÉ«
+        animIndicator.setBackgroundResource(RUtils.getDrawable(getContext(), "indicator_selected_background"));//è®¾ç½®é€‰ä¸­çš„èƒŒæ™¯é¢œè‰²
         addView(animIndicator);
 
         indicatorLayout.getViewTreeObserver().addOnPreDrawListener(new MyOnPreDrawListener());
@@ -159,7 +159,7 @@ public class LoopViewPagerLayout extends RelativeLayout implements OnPageChangeL
     public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
         if (loopPagerAdapterWrapper.getCount() > 0) {
             float length = ((position % 4) + positionOffset) / (bannerInfos.size() - 1);
-            //TODO ·ÀÖ¹×îºóÒ»ÕÅÍ¼Æ¬Ğ¡ºìµã»¬³öÈ¥ÁË.
+            //TODO é˜²æ­¢æœ€åä¸€å¼ å›¾ç‰‡å°çº¢ç‚¹æ»‘å‡ºå»äº†.
             if (length >= 1)
                 length = 1;
             float path = length * totalDistance;
@@ -202,15 +202,15 @@ public class LoopViewPagerLayout extends RelativeLayout implements OnPageChangeL
     }
 
     /**
-     * ¿ªÊ¼Ñ­»·
+     * å¼€å§‹å¾ªç¯
      */
     public void startLoop() {
         loopViewPager.startLoop();
     }
 
     /**
-     * Í£Ö¹Ñ­»·
-     * Îñ±ØÔÚonDestoryÖ´ĞĞ
+     * åœæ­¢å¾ªç¯
+     * åŠ¡å¿…åœ¨onDestoryæ‰§è¡Œ
      */
     public void stopLoop() {
         loopViewPager.stopLoop();

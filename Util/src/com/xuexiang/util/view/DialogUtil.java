@@ -12,7 +12,7 @@ import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
 
 /**
- * ¶Ô»°¿òÏÔÊ¾µÄ¹¤¾ßÀà
+ * å¯¹è¯æ¡†æ˜¾ç¤ºçš„å·¥å…·ç±»
  *
  */
 public class DialogUtil {
@@ -36,7 +36,7 @@ public class DialogUtil {
 	}
     
     /**
-     * ¸Ä±äÊı¾İµÄÌáÊ¾
+     * æ”¹å˜æ•°æ®çš„æç¤º
      * @param ctx
      * @param yesListener
      */
@@ -44,17 +44,17 @@ public class DialogUtil {
     	AlertDialog.Builder builder = new Builder(ctx);
     	builder.setIcon(android.R.drawable.ic_dialog_info);
     	builder.setTitle(
-				"ÌáÊ¾");
+				"æç¤º");
 		builder.setMessage(message);
-		builder.setPositiveButton("ÊÇ", yesListener);
-		builder.setNegativeButton("·ñ", noListener);
+		builder.setPositiveButton("æ˜¯", yesListener);
+		builder.setNegativeButton("å¦", noListener);
 		AlertDialog dialog = builder.create();
 		dialog.setCanceledOnTouchOutside(false);
 		dialog.show();
     }
     
     /**
-	 * ½ø¶ÈÌõ¶Ô»°¿ò
+	 * è¿›åº¦æ¡å¯¹è¯æ¡†
 	 * 
 	 * @param title
 	 * @param msg
@@ -63,15 +63,15 @@ public class DialogUtil {
 		final ProgressDialog dialog = new ProgressDialog(context);
 		dialog.setTitle(title);
 		dialog.setMessage(msg);
-		dialog.setCancelable(false);// ÉèÖÃµã»÷¿Õ°×´¦Ò²²»ÄÜ¹Ø±Õ¸Ã¶Ô»°¿ò
+		dialog.setCancelable(false);// è®¾ç½®ç‚¹å‡»ç©ºç™½å¤„ä¹Ÿä¸èƒ½å…³é—­è¯¥å¯¹è¯æ¡†
 		
 		dialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
 		dialog.setMax(maxCount);
-		dialog.setIndeterminate(false);// ÉèÖÃÏÔÊ¾Ã÷È·µÄ½ø¶È
-		dialog.setButton(ProgressDialog.BUTTON_NEGATIVE, "È¡Ïû",
+		dialog.setIndeterminate(false);// è®¾ç½®æ˜¾ç¤ºæ˜ç¡®çš„è¿›åº¦
+		dialog.setButton(ProgressDialog.BUTTON_NEGATIVE, "å–æ¶ˆ",
 				new DialogInterface.OnClickListener() {
 					public void onClick(DialogInterface dialog, int whichButton) {
-						// ÕâÀïÌí¼Óµã»÷ºóµÄÂß¼­
+						// è¿™é‡Œæ·»åŠ ç‚¹å‡»åçš„é€»è¾‘
 					}
 				});
 		dialog.show();
@@ -79,7 +79,7 @@ public class DialogUtil {
 	}
 
     /**
-     * ÉèÖÃÍøÂçµÄÌáÊ¾
+     * è®¾ç½®ç½‘ç»œçš„æç¤º
      * @param ctx
      * @param message
      */
@@ -87,9 +87,9 @@ public class DialogUtil {
     	final Context context = ctx;
     	AlertDialog.Builder builder = new Builder(ctx);
 		builder.setIcon(android.R.drawable.ic_dialog_info);
-		builder.setTitle("ÌáÊ¾");
+		builder.setTitle("æç¤º");
 		builder.setMessage(message);
-		builder.setPositiveButton("ÉèÖÃ", new OnClickListener() {
+		builder.setPositiveButton("è®¾ç½®", new OnClickListener() {
 			
 			@Override
 			public void onClick(DialogInterface dialog, int which) {
@@ -98,13 +98,13 @@ public class DialogUtil {
 			}
 		});
 		
-		builder.setNegativeButton("È¡Ïû", null);
+		builder.setNegativeButton("å–æ¶ˆ", null);
 		AlertDialog dialog = builder.create();
 		dialog.show();
     }
     
     /**
-     * È·ÈÏ¶Ô»°¿ò
+     * ç¡®è®¤å¯¹è¯æ¡†
      * @param ctx
      * @param message
      * @param yesListener
@@ -114,7 +114,7 @@ public class DialogUtil {
     }
     
     /**
-     * È·ÈÏ¶Ô»°¿ò
+     * ç¡®è®¤å¯¹è¯æ¡†
      * @param ctx
      * @param message
      * @param yesListener
@@ -123,12 +123,12 @@ public class DialogUtil {
     	AlertDialog.Builder builder = new Builder(ctx);
     	builder.setIcon(android.R.drawable.ic_dialog_info);
     	if (TextUtils.isEmpty(title)) {
-    		builder.setTitle("ÌáÊ¾");
+    		builder.setTitle("æç¤º");
     	} else {
     		builder.setTitle(title);
     	}   	
 		builder.setMessage(message);
-		builder.setPositiveButton("È·¶¨", yesListener);
+		builder.setPositiveButton("ç¡®å®š", yesListener);
 		AlertDialog dialog = builder.create();
 		dialog.setCanceledOnTouchOutside(false);
 
@@ -136,7 +136,7 @@ public class DialogUtil {
     }
     
     /**
-     * ×Ô¶¨ÒåÏÔÊ¾ÄÚÈİµÄÌáÊ¾¿ò
+     * è‡ªå®šä¹‰æ˜¾ç¤ºå†…å®¹çš„æç¤ºæ¡†
      * @param ctx
      * @param yesListener
      */
@@ -144,7 +144,7 @@ public class DialogUtil {
     	AlertDialog.Builder builder = new Builder(ctx);
     	builder.setIcon(android.R.drawable.ic_delete);
     	builder.setTitle(
-				"É¾³ı");
+				"åˆ é™¤");
 		builder.setMessage(message);
 		builder.setPositiveButton(yesMsg, yesListener);
 		builder.setNegativeButton(noMsg, noListener);
@@ -154,11 +154,11 @@ public class DialogUtil {
     }
     
     /**
-     * ÌîĞ´ÉèÖÃµÄ×Ô¶¨Òå¶Ô»°¿ò
+     * å¡«å†™è®¾ç½®çš„è‡ªå®šä¹‰å¯¹è¯æ¡†
      * @param ctx
-     * @param title ±êÌâ
-     * @param et edittext¿Ø¼ş
-     * @param edtcontent ÌîĞ´ÄÚÈİ
+     * @param title æ ‡é¢˜
+     * @param et edittextæ§ä»¶
+     * @param edtcontent å¡«å†™å†…å®¹
      * @param yesListener
      */
     public static void showFilloutDialog(Context ctx,String title,EditText et,String edtcontent,OnClickListener yesListener){
@@ -167,8 +167,8 @@ public class DialogUtil {
 		builder.setTitle(title)
 				.setIcon(android.R.drawable.ic_dialog_info)
 				.setView(et)
-				.setNegativeButton("È¡Ïû", null);
-		builder.setPositiveButton("È·¶¨",yesListener).create().show();
+				.setNegativeButton("å–æ¶ˆ", null);
+		builder.setPositiveButton("ç¡®å®š",yesListener).create().show();
     }
 
 }

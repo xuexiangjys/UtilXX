@@ -8,10 +8,10 @@ import android.widget.AbsListView;
 import android.widget.LinearLayout;
 
 /**  
- * ´´½¨Ê±¼ä£º2016-6-12 ÏÂÎç11:14:52  
- * ÏîÄ¿Ãû³Æ£ºUtil  
+ * åˆ›å»ºæ—¶é—´ï¼š2016-6-12 ä¸‹åˆ11:14:52  
+ * é¡¹ç›®åç§°ï¼šUtil  
  * @author xuexiang
- * ÎÄ¼şÃû³Æ£ºPullBase.java  
+ * æ–‡ä»¶åç§°ï¼šPullBase.java  
  **/
 public class PullBase extends LinearLayout {
 

@@ -44,7 +44,7 @@ public class ProTypeFragment extends Fragment {
 			@Override
 			public void onItemClick(AdapterView<?> arg0, View arg1, int position,
 					long arg3) {
-				Toast.makeText(getActivity(), "µã»÷ÁË£º"+adapter.getItem(position).getTypename(), Toast.LENGTH_SHORT).show();
+				Toast.makeText(getActivity(), "ç‚¹å‡»äº†ï¼š"+adapter.getItem(position).getTypename(), Toast.LENGTH_SHORT).show();
 			}
 		});
 

@@ -35,7 +35,7 @@ public class ExpandableGridAdapter extends BaseExpandableListAdapter implements 
 	}
 
 	/**
-	 * »ñÈ¡Ò»¼¶±êÇ©×ÜÊı
+	 * è·å–ä¸€çº§æ ‡ç­¾æ€»æ•°
 	 */
 	@Override
 	public int getGroupCount() {
@@ -43,17 +43,17 @@ public class ExpandableGridAdapter extends BaseExpandableListAdapter implements 
 	}
 
 	/**
-	 * »ñÈ¡Ò»¼¶±êÇ©ÏÂ¶ş¼¶±êÇ©µÄ×ÜÊı
+	 * è·å–ä¸€çº§æ ‡ç­¾ä¸‹äºŒçº§æ ‡ç­¾çš„æ€»æ•°
 	 */
 	@Override
 	public int getChildrenCount(int groupPosition) {
-		// ÕâÀï·µ»Ø1ÊÇÎªÁËÈÃExpandableListViewÖ»ÏÔÊ¾Ò»¸öChildView£¬·ñÔòÔÚÕ¹¿ª
-		// ExpandableListViewÊ±»áÏÔÊ¾ºÍChildCountÊıÁ¿ÏàÍ¬µÄGridView
+		// è¿™é‡Œè¿”å›1æ˜¯ä¸ºäº†è®©ExpandableListViewåªæ˜¾ç¤ºä¸€ä¸ªChildViewï¼Œå¦åˆ™åœ¨å±•å¼€
+		// ExpandableListViewæ—¶ä¼šæ˜¾ç¤ºå’ŒChildCountæ•°é‡ç›¸åŒçš„GridView
 		return 1;
 	}
 
 	/**
-	 * »ñÈ¡Ò»¼¶±êÇ©ÄÚÈİ
+	 * è·å–ä¸€çº§æ ‡ç­¾å†…å®¹
 	 */
 	@Override
 	public CharSequence getGroup(int groupPosition) {
@@ -61,7 +61,7 @@ public class ExpandableGridAdapter extends BaseExpandableListAdapter implements 
 	}
 
 	/**
-	 * »ñÈ¡Ò»¼¶±êÇ©ÏÂ¶ş¼¶±êÇ©µÄÄÚÈİ
+	 * è·å–ä¸€çº§æ ‡ç­¾ä¸‹äºŒçº§æ ‡ç­¾çš„å†…å®¹
 	 */
 	@Override
 	public Object getChild(int groupPosition, int childPosition) {
@@ -69,7 +69,7 @@ public class ExpandableGridAdapter extends BaseExpandableListAdapter implements 
 	}
 
 	/**
-	 * »ñÈ¡Ò»¼¶±êÇ©µÄID
+	 * è·å–ä¸€çº§æ ‡ç­¾çš„ID
 	 */
 	@Override
 	public long getGroupId(int groupPosition) {
@@ -77,7 +77,7 @@ public class ExpandableGridAdapter extends BaseExpandableListAdapter implements 
 	}
 
 	/**
-	 * »ñÈ¡¶ş¼¶±êÇ©µÄID
+	 * è·å–äºŒçº§æ ‡ç­¾çš„ID
 	 */
 	@Override
 	public long getChildId(int groupPosition, int childPosition) {
@@ -85,7 +85,7 @@ public class ExpandableGridAdapter extends BaseExpandableListAdapter implements 
 	}
 
 	/**
-	 * Ö¸¶¨Î»ÖÃÏàÓ¦µÄ×éÊÓÍ¼
+	 * æŒ‡å®šä½ç½®ç›¸åº”çš„ç»„è§†å›¾
 	 */
 	@Override
 	public boolean hasStableIds() {
@@ -93,7 +93,7 @@ public class ExpandableGridAdapter extends BaseExpandableListAdapter implements 
 	}
 
 	/**
-	 * ¶ÔÒ»¼¶±êÇ©½øĞĞÉèÖÃ
+	 * å¯¹ä¸€çº§æ ‡ç­¾è¿›è¡Œè®¾ç½®
 	 */
 	@Override
 	public View getGroupView(int groupPosition, boolean isExpanded,
@@ -115,7 +115,7 @@ public class ExpandableGridAdapter extends BaseExpandableListAdapter implements 
 	}
 
 	/**
-	 * ¶ÔÒ»¼¶±êÇ©ÏÂµÄ¶ş¼¶±êÇ©½øĞĞÉèÖÃ
+	 * å¯¹ä¸€çº§æ ‡ç­¾ä¸‹çš„äºŒçº§æ ‡ç­¾è¿›è¡Œè®¾ç½®
 	 */
 	@Override
 	public View getChildView(int groupPosition, int childPosition,
@@ -135,7 +135,7 @@ public class ExpandableGridAdapter extends BaseExpandableListAdapter implements 
 	}
 
 	/**
-	 * µ±Ñ¡Ôñ×Ó½ÚµãµÄÊ±ºò£¬µ÷ÓÃ¸Ã·½·¨
+	 * å½“é€‰æ‹©å­èŠ‚ç‚¹çš„æ—¶å€™ï¼Œè°ƒç”¨è¯¥æ–¹æ³•
 	 */
 	@Override
 	public boolean isChildSelectable(int groupPosition, int childPosition) {
@@ -145,7 +145,7 @@ public class ExpandableGridAdapter extends BaseExpandableListAdapter implements 
 	@Override
 	public void onItemClick(AdapterView<?> parent, View view, int position,
 			long id) {
-		Toast.makeText(mContext, "µ±Ç°Ñ¡ÖĞµÄÊÇ:" + mChildArray.get(position),
+		Toast.makeText(mContext, "å½“å‰é€‰ä¸­çš„æ˜¯:" + mChildArray.get(position),
 				Toast.LENGTH_SHORT).show();
 	}
 }

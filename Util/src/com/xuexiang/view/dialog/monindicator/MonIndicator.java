@@ -20,10 +20,10 @@ public class MonIndicator extends View{
 	private int[] colors = new int[]{0xFF942909, 0xFF577B8C, 0xFF201289, 0xFF7E207C, 0xFF38B549};
 	private Paint paint = new Paint();
 	private RectF oval=new RectF();
-	//ÊôĞÔ
-	private int circleRadius;//Ô²°ë¾¶
-	private int circleSpacing;//Ô²¼ä¾à
-	private int increment = 2;//ÔöÁ¿
+	//å±æ€§
+	private int circleRadius;//åœ†åŠå¾„
+	private int circleSpacing;//åœ†é—´è·
+	private int increment = 2;//å¢é‡
 	
 	
 	public MonIndicator(Context context) {
@@ -34,7 +34,7 @@ public class MonIndicator extends View{
 		TypedArray a = context.obtainStyledAttributes(attrs, RUtils.getStyleable(context, "monindicator"));
 		circleRadius = (int)a.getDimension(MResource.getIdByName(context, "styleable", "monindicator_circleRadius"), paramsCreator.getDefaultCircleRadius());
 		circleSpacing = (int)a.getDimension(MResource.getIdByName(context, "styleable", "monindicator_circleSpacing"), paramsCreator.getDefaultCircleSpacing());
-		int cycle = a.getInt(MResource.getIdByName(context, "styleable", "monindicator_cycle"), 2000);//ÖÜÆÚ£¬Ä¬ÈÏÎª2Ãë
+		int cycle = a.getInt(MResource.getIdByName(context, "styleable", "monindicator_cycle"), 2000);//å‘¨æœŸï¼Œé»˜è®¤ä¸º2ç§’
 		cycle = cycle/2;
 		int number = (int)(cycle*1.0/1000 * 83);
 		this.increment = (int)(this.circleRadius * 2.0 / number);
@@ -42,40 +42,40 @@ public class MonIndicator extends View{
 		createWrappers();
 	}
 	/**
-	 * ´´½¨wrappers
+	 * åˆ›å»ºwrappers
 	 */
 	private void createWrappers(){
 		wrappers = new ArrayList<CircleWrapper>();
-		int diameter = this.circleRadius * 2;//Ö±¾¶
-		//µÚÒ»¸öÔ²
+		int diameter = this.circleRadius * 2;//ç›´å¾„
+		//ç¬¬ä¸€ä¸ªåœ†
 		CircleWrapper wrapper = new CircleWrapper();
 		wrapper.diameter = diameter;
 		wrapper.initDiameter = diameter;
 		wrapper.dynamicDiameter = wrapper.initDiameter;
 		wrapper.orientation = -1;
 		wrappers.add(wrapper);
-		//µÚ¶ş¸öÔ²
+		//ç¬¬äºŒä¸ªåœ†
 		wrapper = new CircleWrapper();
 		wrapper.diameter = diameter;
 		wrapper.initDiameter = (int)(diameter*0.75);
 		wrapper.dynamicDiameter = wrapper.initDiameter;
 		wrapper.orientation = 1;
 		wrappers.add(wrapper);
-		//µÚÈı¸öÔ²
+		//ç¬¬ä¸‰ä¸ªåœ†
 		wrapper = new CircleWrapper();
 		wrapper.diameter = diameter;
 		wrapper.initDiameter = (int)(diameter*0.5);
 		wrapper.dynamicDiameter = wrapper.initDiameter;
 		wrapper.orientation = 1;
 		wrappers.add(wrapper);
-		//µÚËÄ¸öÔ²
+		//ç¬¬å››ä¸ªåœ†
 		wrapper = new CircleWrapper();
 		wrapper.diameter = diameter;
 		wrapper.initDiameter = (int)(diameter*0.25);
 		wrapper.dynamicDiameter = wrapper.initDiameter;
 		wrapper.orientation = 1;
 	    wrappers.add(wrapper);
-		//µÚÎå¸öÔ²
+		//ç¬¬äº”ä¸ªåœ†
 		wrapper = new CircleWrapper();
 		wrapper.diameter = diameter;
 		wrapper.initDiameter = 0;
@@ -84,14 +84,14 @@ public class MonIndicator extends View{
 		wrappers.add(wrapper);
 	}
 	/**
-	 * ²â»æ
+	 * æµ‹ç»˜
 	 */
 	@Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         setMeasuredDimension(measureWidth(widthMeasureSpec), measureHeight(heightMeasureSpec));
     }	
 	/**
-     * ¼ÆËã×é¼ş¿í¶È
+     * è®¡ç®—ç»„ä»¶å®½åº¦
      */
     private int measureWidth(int measureSpec) {
         int result;
@@ -109,7 +109,7 @@ public class MonIndicator extends View{
         return result;
     }
     /**
-     * ¼ÆËã×é¼ş¸ß¶È
+     * è®¡ç®—ç»„ä»¶é«˜åº¦
      */
     private int measureHeight(int measureSpec) {
         int result;
@@ -127,14 +127,14 @@ public class MonIndicator extends View{
         return result;
     }
     /**
-     * ¼ÆËãÄ¬ÈÏ¿í¶È
+     * è®¡ç®—é»˜è®¤å®½åº¦
      */
     private int getDefaultWidth(){
     	int defaultWidth = this.circleRadius * 2 * this.wrappers.size() + (this.wrappers.size()-1) * this.circleSpacing;
     	return defaultWidth;
     }
     /**
-     * ¼ÆËãÄ¬ÈÏ¿í¶È
+     * è®¡ç®—é»˜è®¤å®½åº¦
      */
     private int getDefaultHeight(){
     	return this.circleRadius * 2;
@@ -153,7 +153,7 @@ public class MonIndicator extends View{
 		this.invalidate();
 	}
     /**
-     * »­Ô²1
+     * ç”»åœ†1
      */
     private void drawCircle01(Canvas canvas){
     	paint.setColor(colors[0]);
@@ -178,7 +178,7 @@ public class MonIndicator extends View{
 		canvas.drawArc(oval, 0, 360, false, paint);
     }
     /**
-     * »­Ô²2
+     * ç”»åœ†2
      */
     private void drawCircle02(Canvas canvas){
     	paint.setColor(colors[1]);
@@ -209,7 +209,7 @@ public class MonIndicator extends View{
 		canvas.drawArc(oval, 0, 360, false, paint);
     }
     /**
-     * »­Ô²3
+     * ç”»åœ†3
      */
     private void drawCircle03(Canvas canvas){
     	paint.setColor(colors[2]);
@@ -240,7 +240,7 @@ public class MonIndicator extends View{
 		canvas.drawArc(oval, 0, 360, false, paint);
     }
     /**
-     * »­Ô²4
+     * ç”»åœ†4
      */
     private void drawCircle04(Canvas canvas){
     	paint.setColor(colors[3]);
@@ -271,7 +271,7 @@ public class MonIndicator extends View{
 		canvas.drawArc(oval, 0, 360, false, paint);
     }
     /**
-     * »­Ô²5
+     * ç”»åœ†5
      */
     private void drawCircle05(Canvas canvas){
     	paint.setColor(colors[4]);
@@ -289,7 +289,7 @@ public class MonIndicator extends View{
 		canvas.drawArc(oval, 0, 360, false, paint);
     }
     /**
-     * ÉèÖÃÑÕÉ«
+     * è®¾ç½®é¢œè‰²
      * @param colors
      */
 	public void setColors(int[] colors) {
@@ -300,12 +300,12 @@ public class MonIndicator extends View{
 		}
 	}
     /**
-     * ÄÚ²¿Àà
+     * å†…éƒ¨ç±»
      */
     private class CircleWrapper{
-    	private int diameter;//Ô²µÄÖ±¾¶
-    	private int initDiameter;//³õÊ¼Ö±¾¶
-    	private int dynamicDiameter;//¶¯Ì¬Ö±¾¶
-    	private int orientation;//·½Ïò£¬¼´Ôö¼Ó»¹ÊÇ¼õÉÙ 1:Ôö¼Ó -1Îª¼õÉÙ
+    	private int diameter;//åœ†çš„ç›´å¾„
+    	private int initDiameter;//åˆå§‹ç›´å¾„
+    	private int dynamicDiameter;//åŠ¨æ€ç›´å¾„
+    	private int orientation;//æ–¹å‘ï¼Œå³å¢åŠ è¿˜æ˜¯å‡å°‘ 1:å¢åŠ  -1ä¸ºå‡å°‘
     }
 }

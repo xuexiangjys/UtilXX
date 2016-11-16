@@ -11,7 +11,7 @@ import com.xuexiang.view.rangesliderview.RangeSliderView;
 
 /** 
  * @author xx
- * @Date 2016-9-27 ÏÂÎç10:20:24 
+ * @Date 2016-9-27 ä¸‹åˆ10:20:24 
  * @Copyright (c) 2016, xuexiangjys@163.com All Rights Reserved. 
  */
 public class RangeSliderViewActivity extends BaseActivity {

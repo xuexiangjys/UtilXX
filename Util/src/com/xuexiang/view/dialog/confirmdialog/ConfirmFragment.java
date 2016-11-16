@@ -25,7 +25,7 @@ public class ConfirmFragment extends DialogFragment{
 		return mDialog;
 	}
 	
-	// onAttach是关联activity的,用接口回调
+	// onAttach鏄叧鑱攁ctivity鐨�,鐢ㄦ帴鍙ｅ洖璋�
 	@Override
 	public void onAttach(Activity activity) {
 		super.onAttach(activity);

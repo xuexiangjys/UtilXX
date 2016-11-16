@@ -15,7 +15,7 @@ import java.lang.reflect.Field;
 public class ImageUtils
 {
     /**
-     * ¸ù¾İInputStream»ñÈ¡Í¼Æ¬Êµ¼ÊµÄ¿í¶ÈºÍ¸ß¶È
+     * æ ¹æ®InputStreamè·å–å›¾ç‰‡å®é™…çš„å®½åº¦å’Œé«˜åº¦
      *
      * @param imageStream
      * @return
@@ -55,7 +55,7 @@ public class ImageUtils
 
     public static int calculateInSampleSize(ImageSize srcSize, ImageSize targetSize)
     {
-        // Ô´Í¼Æ¬µÄ¿í¶È
+        // æºå›¾ç‰‡çš„å®½åº¦
         int width = srcSize.width;
         int height = srcSize.height;
         int inSampleSize = 1;
@@ -65,7 +65,7 @@ public class ImageUtils
 
         if (width > reqWidth && height > reqHeight)
         {
-            // ¼ÆËã³öÊµ¼Ê¿í¶ÈºÍÄ¿±ê¿í¶ÈµÄ±ÈÂÊ
+            // è®¡ç®—å‡ºå®é™…å®½åº¦å’Œç›®æ ‡å®½åº¦çš„æ¯”ç‡
             int widthRatio = Math.round((float) width / (float) reqWidth);
             int heightRatio = Math.round((float) height / (float) reqHeight);
             inSampleSize = Math.max(widthRatio, heightRatio);
@@ -74,7 +74,7 @@ public class ImageUtils
     }
 
     /**
-     * ¸ù¾İImageView»ñÊÊµ±µÄÑ¹ËõµÄ¿íºÍ¸ß
+     * æ ¹æ®ImageViewè·é€‚å½“çš„å‹ç¼©çš„å®½å’Œé«˜
      *
      * @param view
      * @return
@@ -91,7 +91,7 @@ public class ImageUtils
     }
 
     /**
-     * ¸ù¾İview»ñµÃÆÚÍûµÄ¸ß¶È
+     * æ ¹æ®viewè·å¾—æœŸæœ›çš„é«˜åº¦
      *
      * @param view
      * @return
@@ -103,22 +103,22 @@ public class ImageUtils
         if (view == null) return 0;
 
         final ViewGroup.LayoutParams params = view.getLayoutParams();
-        //Èç¹ûÊÇWRAP_CONTENT£¬´ËÊ±Í¼Æ¬»¹Ã»¼ÓÔØ£¬getWidth¸ù±¾ÎŞĞ§
+        //å¦‚æœæ˜¯WRAP_CONTENTï¼Œæ­¤æ—¶å›¾ç‰‡è¿˜æ²¡åŠ è½½ï¼ŒgetWidthæ ¹æœ¬æ— æ•ˆ
         if (params != null && params.height != ViewGroup.LayoutParams.WRAP_CONTENT)
         {
-            height = view.getWidth(); // »ñµÃÊµ¼ÊµÄ¿í¶È
+            height = view.getWidth(); // è·å¾—å®é™…çš„å®½åº¦
         }
         if (height <= 0 && params != null)
         {
-            height = params.height; // »ñµÃ²¼¾ÖÎÄ¼şÖĞµÄÉùÃ÷µÄ¿í¶È
+            height = params.height; // è·å¾—å¸ƒå±€æ–‡ä»¶ä¸­çš„å£°æ˜çš„å®½åº¦
         }
 
         if (height <= 0)
         {
-            height = getImageViewFieldValue(view, "mMaxHeight");// »ñµÃÉèÖÃµÄ×î´óµÄ¿í¶È
+            height = getImageViewFieldValue(view, "mMaxHeight");// è·å¾—è®¾ç½®çš„æœ€å¤§çš„å®½åº¦
         }
 
-        //Èç¹û¿í¶È»¹ÊÇÃ»ÓĞ»ñÈ¡µ½£¬±ï´óÕĞ£¬Ê¹ÓÃÆÁÄ»µÄ¿í¶È
+        //å¦‚æœå®½åº¦è¿˜æ˜¯æ²¡æœ‰è·å–åˆ°ï¼Œæ†‹å¤§æ‹›ï¼Œä½¿ç”¨å±å¹•çš„å®½åº¦
         if (height <= 0)
         {
             DisplayMetrics displayMetrics = view.getContext().getResources()
@@ -130,7 +130,7 @@ public class ImageUtils
     }
 
     /**
-     * ¸ù¾İview»ñµÃÆÚÍûµÄ¿í¶È
+     * æ ¹æ®viewè·å¾—æœŸæœ›çš„å®½åº¦
      *
      * @param view
      * @return
@@ -141,22 +141,22 @@ public class ImageUtils
         if (view == null) return 0;
 
         final ViewGroup.LayoutParams params = view.getLayoutParams();
-        //Èç¹ûÊÇWRAP_CONTENT£¬´ËÊ±Í¼Æ¬»¹Ã»¼ÓÔØ£¬getWidth¸ù±¾ÎŞĞ§
+        //å¦‚æœæ˜¯WRAP_CONTENTï¼Œæ­¤æ—¶å›¾ç‰‡è¿˜æ²¡åŠ è½½ï¼ŒgetWidthæ ¹æœ¬æ— æ•ˆ
         if (params != null && params.width != ViewGroup.LayoutParams.WRAP_CONTENT)
         {
-            width = view.getWidth(); // »ñµÃÊµ¼ÊµÄ¿í¶È
+            width = view.getWidth(); // è·å¾—å®é™…çš„å®½åº¦
         }
         if (width <= 0 && params != null)
         {
-            width = params.width; // »ñµÃ²¼¾ÖÎÄ¼şÖĞµÄÉùÃ÷µÄ¿í¶È
+            width = params.width; // è·å¾—å¸ƒå±€æ–‡ä»¶ä¸­çš„å£°æ˜çš„å®½åº¦
         }
 
         if (width <= 0)
 
         {
-            width = getImageViewFieldValue(view, "mMaxWidth");// »ñµÃÉèÖÃµÄ×î´óµÄ¿í¶È
+            width = getImageViewFieldValue(view, "mMaxWidth");// è·å¾—è®¾ç½®çš„æœ€å¤§çš„å®½åº¦
         }
-        //Èç¹û¿í¶È»¹ÊÇÃ»ÓĞ»ñÈ¡µ½£¬±ï´óÕĞ£¬Ê¹ÓÃÆÁÄ»µÄ¿í¶È
+        //å¦‚æœå®½åº¦è¿˜æ˜¯æ²¡æœ‰è·å–åˆ°ï¼Œæ†‹å¤§æ‹›ï¼Œä½¿ç”¨å±å¹•çš„å®½åº¦
         if (width <= 0)
 
         {
@@ -169,7 +169,7 @@ public class ImageUtils
     }
 
     /**
-     * Í¨¹ı·´Éä»ñÈ¡imageviewµÄÄ³¸öÊôĞÔÖµ
+     * é€šè¿‡åå°„è·å–imageviewçš„æŸä¸ªå±æ€§å€¼
      *
      * @param object
      * @param fieldName

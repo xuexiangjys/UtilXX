@@ -3,7 +3,7 @@ package com.xuexiang.view.flowtaglayout;
 import java.util.List;
 
 /**
- *µ¥Ñ¡ ¶àÑ¡
+ *å•é€‰ å¤šé€‰
  * Created by yexiuliang on 2016/7/11.
  */
 public interface OnTagSelectListener {

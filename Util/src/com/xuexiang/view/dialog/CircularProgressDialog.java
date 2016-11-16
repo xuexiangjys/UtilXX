@@ -10,10 +10,10 @@ import android.view.KeyEvent;
 import android.widget.TextView;
 
 /**  
- * ´´½¨Ê±¼ä£º2016-6-4 ÏÂÎç1:32:33  
- * ÏîÄ¿Ãû³Æ£ºspotsloadingdialog  
+ * åˆ›å»ºæ—¶é—´ï¼š2016-6-4 ä¸‹åˆ1:32:33  
+ * é¡¹ç›®åç§°ï¼šspotsloadingdialog  
  * @author xuexiang
- * ÎÄ¼şÃû³Æ£ºCircularProgressDialog.java  
+ * æ–‡ä»¶åç§°ï¼šCircularProgressDialog.java  
  **/
 public class CircularProgressDialog extends AlertDialog {
 	private TextView mTitle;
@@ -44,7 +44,7 @@ public class CircularProgressDialog extends AlertDialog {
 	private void initView() {
 		 mTitle = (TextView) findViewById(RUtils.getId(getContext(), "title"));
 	     if (TextUtils.isEmpty(mLoadingText)) {
-	    	 mTitle.setText("ÕıÔÚ¼ÓÔØÖĞ...");
+	    	 mTitle.setText("æ­£åœ¨åŠ è½½ä¸­...");
 	     } else {
 	    	 mTitle.setText(mLoadingText);
 	     }

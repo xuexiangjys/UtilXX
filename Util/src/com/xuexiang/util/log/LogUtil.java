@@ -8,7 +8,7 @@ import java.io.StringWriter;
 import java.lang.reflect.Method;
 
 /**
- * ×Ô¶¨ÒåLog¹¤¾ß£¬¿ÉÒÔDebugºÍRelease¿ØÖÆ¡£
+ * è‡ªå®šä¹‰Logå·¥å…·ï¼Œå¯ä»¥Debugå’ŒReleaseæ§åˆ¶ã€‚
  */
 public class LogUtil {
     private static final String TAG = "LogUtil";

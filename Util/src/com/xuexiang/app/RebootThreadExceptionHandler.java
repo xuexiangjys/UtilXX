@@ -28,9 +28,9 @@ import android.text.TextUtils;
 import android.widget.Toast;
 
 /**
- * ÖØÆôÏß³ÌÒì³£´¦ÀíÆ÷£¬µ±·¢ÉúÎ´ÖªÒì³£Ê±»áÌáÊ¾Òì³£ĞÅÏ¢²¢ÔÚÒ»ÃëÖÓºóÖØĞÂÆô¶¯Ó¦ÓÃ
- * <br>Ê¹ÓÃ´Ë¹¦ÄÜµÄµÚÒ»²½ĞèÒªÄãÔÚAndroidMainfest.xmlÖĞ×¢²áme.xiaopan.android.content.StartApplicationBrocastReceiver¹ã²¥£¨×¢Òâ²»ÒªÈÎºÎµÄfilter£©
- * <br>µÚ¶ş²½¾ÍÊÇÔÚÄãµÄApplicationµÄonCreate()·½·¨ÖĞ¼ÓÉÏnew RebootThreadExceptionHandler(getBaseContext());¼´¿É
+ * é‡å¯çº¿ç¨‹å¼‚å¸¸å¤„ç†å™¨ï¼Œå½“å‘ç”ŸæœªçŸ¥å¼‚å¸¸æ—¶ä¼šæç¤ºå¼‚å¸¸ä¿¡æ¯å¹¶åœ¨ä¸€ç§’é’Ÿåé‡æ–°å¯åŠ¨åº”ç”¨
+ * <br>ä½¿ç”¨æ­¤åŠŸèƒ½çš„ç¬¬ä¸€æ­¥éœ€è¦ä½ åœ¨AndroidMainfest.xmlä¸­æ³¨å†Œme.xiaopan.android.content.StartApplicationBrocastReceiverå¹¿æ’­ï¼ˆæ³¨æ„ä¸è¦ä»»ä½•çš„filterï¼‰
+ * <br>ç¬¬äºŒæ­¥å°±æ˜¯åœ¨ä½ çš„Applicationçš„onCreate()æ–¹æ³•ä¸­åŠ ä¸Šnew RebootThreadExceptionHandler(getBaseContext());å³å¯
  *
  * @author zhenguo
  */
@@ -51,10 +51,10 @@ public class RebootThreadExceptionHandler implements UncaughtExceptionHandler {
 
     @Override
     public void uncaughtException(Thread thread, Throwable ex) {
-        ex.printStackTrace();// Êä³öÒì³£ĞÅÏ¢µ½¿ØÖÆÌ¨
+        ex.printStackTrace();// è¾“å‡ºå¼‚å¸¸ä¿¡æ¯åˆ°æ§åˆ¶å°
 
         if (TextUtils.isEmpty(hintText)) {
-            /* Æô¶¯ĞÂÏß³ÌÌáÊ¾³ÌĞòÒì³£ */
+            /* å¯åŠ¨æ–°çº¿ç¨‹æç¤ºç¨‹åºå¼‚å¸¸ */
             new Thread(new Runnable() {
                 @Override
                 public void run() {
@@ -65,7 +65,7 @@ public class RebootThreadExceptionHandler implements UncaughtExceptionHandler {
                 }
             }).start();
 
-			/* Ö÷Ïß³ÌµÈ´ı1ÃëÖÓ£¬ÈÃÌáÊ¾ĞÅÏ¢ÏÔÊ¾³öÀ´ */
+			/* ä¸»çº¿ç¨‹ç­‰å¾…1ç§’é’Ÿï¼Œè®©æç¤ºä¿¡æ¯æ˜¾ç¤ºå‡ºæ¥ */
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {
@@ -73,7 +73,7 @@ public class RebootThreadExceptionHandler implements UncaughtExceptionHandler {
             }
         }
 
-		/* ÉèÖÃ¶¨Ê±Æ÷£¬ÔÚ1ÃëÖÓºó·¢³öÆô¶¯³ÌĞòµÄ¹ã²¥ */
+		/* è®¾ç½®å®šæ—¶å™¨ï¼Œåœ¨1ç§’é’Ÿåå‘å‡ºå¯åŠ¨ç¨‹åºçš„å¹¿æ’­ */
         AlarmManager alarmManager = (AlarmManager) context
                 .getSystemService(Context.ALARM_SERVICE);
         Calendar calendar = new GregorianCalendar();
@@ -82,7 +82,7 @@ public class RebootThreadExceptionHandler implements UncaughtExceptionHandler {
                 PendingIntent.getBroadcast(context, 0, new Intent(context,
                         StartAppReceiver.class), 0));
 
-        android.os.Process.killProcess(android.os.Process.myPid()); // ½áÊø³ÌĞò
+        android.os.Process.killProcess(android.os.Process.myPid()); // ç»“æŸç¨‹åº
     }
 
 }

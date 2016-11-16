@@ -33,21 +33,21 @@ import com.xuexiang.util.resource.RUtils;
 
 /**
  * 
- * Èí¼ş¸üĞÂ
+ * è½¯ä»¶æ›´æ–°
  * @author xx
  *
  */
 public class UpdateManager {
 	private Context mContext;
-	// ÌáÊ¾Óï
+	// æç¤ºè¯­
 	private String mUpdateMsg;
-	// ·µ»ØµÄ°²×°°üurl
+	// è¿”å›çš„å®‰è£…åŒ…url
 	private String mApkUrl;
 	private Dialog mNoticeDialog;
 	private Dialog mDownloadDialog;
 	private String mApkName;
 	private String mSaveFileName;
-	/* ½ø¶ÈÌõÓëÍ¨ÖªuiË¢ĞÂµÄhandlerºÍmsg³£Á¿ */
+	/* è¿›åº¦æ¡ä¸é€šçŸ¥uiåˆ·æ–°çš„handlerå’Œmsgå¸¸é‡ */
 	private boolean ishide = false;
 	private ProgressBar mProgress;
 	private TextView mTextView;
@@ -85,9 +85,9 @@ public class UpdateManager {
 
 	/**
 	 * @param context
-	 * @param apkName Ó¦ÓÃÃû
-	 * @param updatemsg ¸üĞÂÄÚÈİ  ÒÔ£»¸ô¿ªÄÚÈİ
-	 * @param dlurl ÏÂÔØµØÖ·
+	 * @param apkName åº”ç”¨å
+	 * @param updatemsg æ›´æ–°å†…å®¹  ä»¥ï¼›éš”å¼€å†…å®¹
+	 * @param dlurl ä¸‹è½½åœ°å€
 	 */
 	public UpdateManager(Context context, String apkName, String updatemsg, String dlurl) {
 		mContext = context;
@@ -191,16 +191,16 @@ public class UpdateManager {
 					int numread = is.read(buf);
 					count += numread;
 					progress = (int) (((float) count / length) * 100);
-					// ¸üĞÂ½ø¶È
+					// æ›´æ–°è¿›åº¦
 					if (numread <= 0) {
-						// ÏÂÔØÍê³ÉÍ¨Öª°²×°
+						// ä¸‹è½½å®Œæˆé€šçŸ¥å®‰è£…
 						mHandler.sendEmptyMessage(DOWN_UPDATE);
 						mHandler.sendEmptyMessage(DOWN_OVER);
 						mTimer.cancel();
 						break;
 					}
 					fos.write(buf, 0, numread);
-				} while (!interceptFlag);// µã»÷È¡Ïû¾ÍÍ£Ö¹ÏÂÔØ.
+				} while (!interceptFlag);// ç‚¹å‡»å–æ¶ˆå°±åœæ­¢ä¸‹è½½.
 				mTimer.cancel();
 				fos.close();
 				is.close();
@@ -221,23 +221,23 @@ public class UpdateManager {
 				System.currentTimeMillis());
 		mDownloadNotification.contentView = new RemoteViews(
 				mContext.getPackageName(), RUtils.getLayout(mContext, "custom_notification"));
-		// ÏÔÊ¾ÏÂÔØµÄ°üÃû
-		mDownloadNotification.contentView.setTextViewText(RUtils.getId(mContext, "down_tv"), "ÕıÔÚÏÂÔØ£º" + mApkName);
-		// ÏÔÊ¾ÏÂÔØµÄ½ø¶È
-		mDownloadNotification.contentView.setTextViewText(RUtils.getId(mContext, "down_rate"), "ÏÂÔØ½ø¶È£º" + "0%");
+		// æ˜¾ç¤ºä¸‹è½½çš„åŒ…å
+		mDownloadNotification.contentView.setTextViewText(RUtils.getId(mContext, "down_tv"), "æ­£åœ¨ä¸‹è½½ï¼š" + mApkName);
+		// æ˜¾ç¤ºä¸‹è½½çš„è¿›åº¦
+		mDownloadNotification.contentView.setTextViewText(RUtils.getId(mContext, "down_rate"), "ä¸‹è½½è¿›åº¦ï¼š" + "0%");
 		mDownloadNotification.flags |= Notification.FLAG_AUTO_CANCEL;
 		mDownloadNM.notify(downNotiID, mDownloadNotification);
 	}
 
 	public void updateProgress(int progress) {
 		mDownloadNotification.contentView.setTextViewText(RUtils.getId(mContext, "down_rate"),
-				"ÏÂÔØ½ø¶È£º"+ progress + "%");
+				"ä¸‹è½½è¿›åº¦ï¼š"+ progress + "%");
 		mDownloadNM.notify(downNotiID, mDownloadNotification);
 
 	}
 
 	/**
-	 * ÏÂÔØapk
+	 * ä¸‹è½½apk
 	 * 
 	 * @param url
 	 */
@@ -247,7 +247,7 @@ public class UpdateManager {
 	}
 
 	/**
-	 * °²×°apk
+	 * å®‰è£…apk
 	 * 
 	 * @param url
 	 */

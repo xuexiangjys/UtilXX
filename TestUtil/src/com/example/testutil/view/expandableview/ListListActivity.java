@@ -25,7 +25,7 @@ public class ListListActivity extends BaseActivity {
 	@Override
 	public void onCreateActivity() {
 		setContentView(R.layout.activity_classify);
-		initTitleBar("二级列表");
+		initTitleBar("浜岀骇鍒楄〃");
 		initModle();
 		initView();
 	}
@@ -48,7 +48,7 @@ public class ListListActivity extends BaseActivity {
 			}
 		});
 		mainlist.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
-		// 一定要设置这个属性，否则ListView不会刷新
+		// 涓�瀹氳璁剧疆杩欎釜灞炴�э紝鍚﹀垯ListView涓嶄細鍒锋柊
 		initAdapter(Model.MORELISTTXT[0]);
 
 		morelist.setOnItemClickListener(new OnItemClickListener() {
@@ -57,7 +57,7 @@ public class ListListActivity extends BaseActivity {
 			public void onItemClick(AdapterView<?> parent, View view,
 					int position, long id) {
 				moreAdapter.setSelectItem(position);
-				Toast.makeText(ListListActivity.this, "点击了："+moreAdapter.getItem(position), Toast.LENGTH_SHORT).show();
+				Toast.makeText(ListListActivity.this, "鐐瑰嚮浜嗭細"+moreAdapter.getItem(position), Toast.LENGTH_SHORT).show();
 				moreAdapter.notifyDataSetChanged();
 			}
 		});

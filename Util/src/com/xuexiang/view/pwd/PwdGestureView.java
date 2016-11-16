@@ -88,10 +88,10 @@ public class PwdGestureView extends View {
         mPaint.setStyle(Paint.Style.STROKE);
         mPaint.setStrokeWidth(dip2px(1));
         mRectFButtons.clear();
-        for (int i = 0; i < mLine; i++)//行
+        for (int i = 0; i < mLine; i++)//琛�
         {
 
-            for (int j = 0; j < mRow; j++)//列
+            for (int j = 0; j < mRow; j++)//鍒�
             {
                 RectF fButton = new RectF();
                 fButton.left = j * buttonWidth + buttonMarginLeft + buttonPadding;
@@ -403,8 +403,8 @@ public class PwdGestureView extends View {
             Path p = new Path();
             p.moveTo(x1, y1);
             p.lineTo(x2, y2);
-            canvas.drawTextOnPath("☞", p, getFontHeight(mPaintOrientation, "☞") * 3 / 2,
-                    getFontHeight(mPaintOrientation, "☞") / 2,
+            canvas.drawTextOnPath("鈽�", p, getFontHeight(mPaintOrientation, "鈽�") * 3 / 2,
+                    getFontHeight(mPaintOrientation, "鈽�") / 2,
                     mPaintOrientation);
         }
 

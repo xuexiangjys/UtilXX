@@ -17,10 +17,10 @@ import com.xuexiang.view.dragview.widget.DragGridView;
 import com.xuexiang.view.dragview.widget.ViewWithSign;
 
 /**  
- * ´´½¨Ê±¼ä£º2016-8-2 ÏÂÎç8:28:58  
- * ÏîÄ¿Ãû³Æ£ºUtilTest  
+ * åˆ›å»ºæ—¶é—´ï¼š2016-8-2 ä¸‹åˆ8:28:58  
+ * é¡¹ç›®åç§°ï¼šUtilTest  
  * @author xuexiang
- * ÎÄ¼şÃû³Æ£ºDragGridViewActivity.java  
+ * æ–‡ä»¶åç§°ï¼šDragGridViewActivity.java  
  **/
 public class DragGridViewActivity extends BaseActivity {
 
@@ -31,33 +31,33 @@ public class DragGridViewActivity extends BaseActivity {
     private ViewWithSign viewWithSign ;
     
     public String[][] gridDatas = {
-        {"Ãû³Æ1",""},
-        {"Ãû³Æ2",""},
-        {"Ãû³Æ3",""},
-        {"Ãû³Æ4",""},
-        {"Ãû³Æ5",""},
-        {"Ãû³Æ6","ÂìÒÏ"},
-        {"Ãû³Æ7",""},
-        {"Ãû³Æ8","»î¶¯1"},
-        {"Ãû³Æ9",""},
-        {"Ãû³Æ10","»î¶¯2"},
-        {"Ãû³Æ11",""},
-        {"Ãû³Æ12",""},
-        {"Ãû³Æ13",""},
-        {"Ãû³Æ14",""},
-        {"Ãû³Æ15",""},
-        {"Ãû³Æ17",""},
-        {"Ãû³Æ18",""},
-        {"Ãû³Æ19",""},
-        {"Ãû³Æ20",""},
-        {"Ãû³Æ21",""},
-        {"Ãû³Æ22",""},
-        {"Ãû³Æ23",""},
-        {"Ãû³Æ24",""},
-        {"Ãû³Æ25",""},
-        {"Ãû³Æ26",""},
-        {"Ãû³Æ27",""},
-        {"¸ü¶à",""}};
+        {"åç§°1",""},
+        {"åç§°2",""},
+        {"åç§°3",""},
+        {"åç§°4",""},
+        {"åç§°5",""},
+        {"åç§°6","èš‚èš"},
+        {"åç§°7",""},
+        {"åç§°8","æ´»åŠ¨1"},
+        {"åç§°9",""},
+        {"åç§°10","æ´»åŠ¨2"},
+        {"åç§°11",""},
+        {"åç§°12",""},
+        {"åç§°13",""},
+        {"åç§°14",""},
+        {"åç§°15",""},
+        {"åç§°17",""},
+        {"åç§°18",""},
+        {"åç§°19",""},
+        {"åç§°20",""},
+        {"åç§°21",""},
+        {"åç§°22",""},
+        {"åç§°23",""},
+        {"åç§°24",""},
+        {"åç§°25",""},
+        {"åç§°26",""},
+        {"åç§°27",""},
+        {"æ›´å¤š",""}};
     
     public int[] gridIconDatas = {R.drawable.ic_category_10, R.drawable.ic_category_20, R.drawable.ic_category_30, R.drawable.ic_category_40, R.drawable.ic_category_50, R.drawable.ic_category_60, R.drawable.ic_category_70, R.drawable.ic_category_80,
     		R.drawable.ic_category_10, R.drawable.ic_category_20, R.drawable.ic_category_30, R.drawable.ic_category_40, R.drawable.ic_category_50, R.drawable.ic_category_60, R.drawable.ic_category_70, R.drawable.ic_category_80,
@@ -93,7 +93,7 @@ public class DragGridViewActivity extends BaseActivity {
             }
         });
 
-        //ÉèÖÃÍÏ×§Êı¾İ½»»»
+        //è®¾ç½®æ‹–æ‹½æ•°æ®äº¤æ¢
         mGrid.setOnChangeListener(new DragGridView.OnChangeListener() {
             @Override
             public void onChange(int from, int to) {
@@ -143,7 +143,7 @@ public class DragGridViewActivity extends BaseActivity {
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view,
 					int position, long id) {
-				Toast("µã»÷ÁË£º" + mDatas.get(position).getName());
+				Toast("ç‚¹å‡»äº†ï¼š" + mDatas.get(position).getName());
 			}
 		});
 

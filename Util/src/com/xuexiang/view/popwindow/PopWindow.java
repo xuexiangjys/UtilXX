@@ -25,15 +25,15 @@ import com.xuexiang.util.resource.RUtils;
 
 
 /**
- * ÆÁÄ»µ×²¿µ¯³ö²Ëµ¥ÖĞÊÇÒ»¸ö¸ö¿ÉÒÔµã»÷µÄÍ¼Æ¬gird item
+ * å±å¹•åº•éƒ¨å¼¹å‡ºèœå•ä¸­æ˜¯ä¸€ä¸ªä¸ªå¯ä»¥ç‚¹å‡»çš„å›¾ç‰‡gird item
  * Created by GuDong on 2014/11/24.
  */
 public class PopWindow implements View.OnClickListener, View.OnTouchListener {
     /**
-     * ÉèÖÃÒª·ÖÏíµÄÄÚÈİ£¬²»Í¬·ÖÏíÄÚÈİ ×Ô¼ºÊµÏÖ·ÖÏíÄÚÈİµÄ¸ñÊ½
+     * è®¾ç½®è¦åˆ†äº«çš„å†…å®¹ï¼Œä¸åŒåˆ†äº«å†…å®¹ è‡ªå·±å®ç°åˆ†äº«å†…å®¹çš„æ ¼å¼
      *
      * @param activity
-     * @param shareInfo ¾ßÌå·ÖÏíµÄÄÚÈİ
+     * @param shareInfo å…·ä½“åˆ†äº«çš„å†…å®¹
      */
 	private List<ActionItem> mActionItems;
 	private OnItemSelectedListerner mListerner;
@@ -179,7 +179,7 @@ public class PopWindow implements View.OnClickListener, View.OnTouchListener {
     }
 
     /**
-     * ÉèÖÃ·ÖÏíµÄ±³¾°Í¼Æ¬
+     * è®¾ç½®åˆ†äº«çš„èƒŒæ™¯å›¾ç‰‡
      *
      * @param shareBackground
      */

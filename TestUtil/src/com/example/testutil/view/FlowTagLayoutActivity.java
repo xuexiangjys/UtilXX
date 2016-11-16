@@ -31,17 +31,17 @@ public class FlowTagLayoutActivity extends BaseActivity {
         mSizeFlowTagLayout = (FlowTagLayout) findViewById(R.id.single_choose_flow_layout);
         mMobileFlowTagLayout = (FlowTagLayout) findViewById(R.id.multi_select_flow_layout);
 
-        //µã»÷
+        //ç‚¹å‡»
         mColorTagAdapter = new TagAdapter<String>(this);
         mColorFlowTagLayout.setAdapter(mColorTagAdapter);
         mColorFlowTagLayout.setOnTagClickListener(new OnTagClickListener() {
             @Override
             public void onItemClick(FlowTagLayout parent, View view, int position) {
-            	Toast("µã»÷ÁË£º" + parent.getAdapter().getItem(position));
+            	Toast("ç‚¹å‡»äº†ï¼š" + parent.getAdapter().getItem(position));
             }
         });
 
-        //µ¥Ñ¡
+        //å•é€‰
         mSizeTagAdapter = new TagAdapter<String>(this);
         mSizeTagAdapter.setSelected(4);
         mSizeFlowTagLayout.setTagCheckedMode(FlowTagLayout.FLOW_TAG_CHECKED_SINGLE);
@@ -55,14 +55,14 @@ public class FlowTagLayoutActivity extends BaseActivity {
                         sb.append(parent.getAdapter().getItem(i));
                         sb.append(":");
                     }
-                    Toast(position + "¹§Ï²Äã" + sb.toString());
+                    Toast(position + "æ­å–œä½ " + sb.toString());
                 } else {
-                	Toast("Ã»ÓĞÑ¡Ôñ±êÇ©");
+                	Toast("æ²¡æœ‰é€‰æ‹©æ ‡ç­¾");
                 }
             }
         });
 
-        //¶àÑ¡
+        //å¤šé€‰
         mMobileTagAdapter = new TagAdapter<String>(this);
         mMobileFlowTagLayout.setTagCheckedMode(FlowTagLayout.FLOW_TAG_CHECKED_MULTI);
         mMobileFlowTagLayout.setAdapter(mMobileTagAdapter);
@@ -76,9 +76,9 @@ public class FlowTagLayoutActivity extends BaseActivity {
                         sb.append(parent.getAdapter().getItem(i));
                         sb.append(":");
                     }
-                    Toast("O(¡É_¡É)O¹ş¹ş¹ş~:" + sb.toString());
+                    Toast("O(âˆ©_âˆ©)Oå“ˆå“ˆå“ˆ~:" + sb.toString());
                 } else {
-                	Toast("Ã»ÓĞÑ¡Ôñ±êÇ©");
+                	Toast("æ²¡æœ‰é€‰æ‹©æ ‡ç­¾");
                 }
             }
         });
@@ -93,7 +93,7 @@ public class FlowTagLayoutActivity extends BaseActivity {
 	private void initMobileData() {
         List<String> dataSource = new ArrayList<String>();
         for (int i = 0; i < 10; i++) {
-            dataSource.add("¶àÑ¡*-* "+i);
+            dataSource.add("å¤šé€‰*-* "+i);
 
         }
         mMobileTagAdapter.onlyAddAll(dataSource);
@@ -102,19 +102,19 @@ public class FlowTagLayoutActivity extends BaseActivity {
     private void initColorData() {
         List<String> dataSource = new ArrayList<String>();
         for (int i = 0; i < 10; i++) {
-            dataSource.add("µ¥»÷!+! "+i);
+            dataSource.add("å•å‡»!+! "+i);
 
         }
         mColorTagAdapter.onlyAddAll(dataSource);
     }
 
     /**
-     * ³õÊ¼»¯Êı¾İ
+     * åˆå§‹åŒ–æ•°æ®
      */
     private void initSizeData() {
         List<String> dataSource = new ArrayList<String>();
         for (int i = 0; i < 10; i++) {
-            dataSource.add("µ¥Ñ¡^-^ "+i);
+            dataSource.add("å•é€‰^-^ "+i);
 
         }
         mSizeTagAdapter.onlyAddAll(dataSource);

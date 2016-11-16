@@ -17,17 +17,17 @@ import com.xuexiang.app.BaseApplication;
 import com.xuexiang.util.view.DialogUtil;
 
 /**  
- * ´´½¨Ê±¼ä£º2016-5-30 ÏÂÎç6:56:42  
- * ÏîÄ¿Ãû³Æ£ºUtilTest  
+ * åˆ›å»ºæ—¶é—´ï¼š2016-5-30 ä¸‹åˆ6:56:42  
+ * é¡¹ç›®åç§°ï¼šUtilTest  
  * @author xuexiang
- * ÎÄ¼şÃû³Æ£ºNetActivity.java  
+ * æ–‡ä»¶åç§°ï¼šNetActivity.java  
  **/
 public class NetActivity extends BaseActivity implements OnClickListener{
 	private ImageView settingappurl;
 	@Override
 	public void onCreateActivity() {
 		setContentView(R.layout.activity_net);
-		initActionBar("ÍøÂç²Ù×÷½çÃæ");
+		initActionBar("ç½‘ç»œæ“ä½œç•Œé¢");
 		
 		initNetAppUrl();
 	}
@@ -38,7 +38,7 @@ public class NetActivity extends BaseActivity implements OnClickListener{
 			@Override
 			public void onClick(View v) {
 				final EditText edit = new EditText(mContext);
-				DialogUtil.showFilloutDialog(mContext, "ĞŞ¸ÄÍøÂç", edit, BaseApplication.app_url, 
+				DialogUtil.showFilloutDialog(mContext, "ä¿®æ”¹ç½‘ç»œ", edit, BaseApplication.app_url, 
 				new DialogInterface.OnClickListener() {
 					public void onClick(DialogInterface dialog,
 							int which) {
@@ -55,22 +55,22 @@ public class NetActivity extends BaseActivity implements OnClickListener{
 		Intent intent = new Intent();
 		switch (v.getId()) {
 		case R.id.btn_volley:
-			mToastUtil.showToast("µã»÷ÁËVolleyHttpActivity");
+			mToastUtil.showToast("ç‚¹å‡»äº†VolleyHttpActivity");
         	intent.setClass(this, VolleyHttpActivity.class);
             startActivity(intent);			
 			break;
 		case R.id.btn_asynchttp:
-			mToastUtil.showToast("µã»÷ÁËAsyncHttpActivity");
+			mToastUtil.showToast("ç‚¹å‡»äº†AsyncHttpActivity");
         	intent.setClass(this, AsyncHttpActivity.class);
             startActivity(intent);			
 			break;		
 		case R.id.btn_okhttp:
-			mToastUtil.showToast("µã»÷ÁËOkHttpActivity");
+			mToastUtil.showToast("ç‚¹å‡»äº†OkHttpActivity");
         	intent.setClass(this, OkHttpActivity.class);
             startActivity(intent);			
 			break;	
 		case R.id.btn_file_upload_downLoad:
-			mToastUtil.showToast("µã»÷ÁËFileUpLoadAndDownLoadActivity");
+			mToastUtil.showToast("ç‚¹å‡»äº†FileUpLoadAndDownLoadActivity");
         	intent.setClass(this, FileUpLoadAndDownLoadActivity.class);
             startActivity(intent);			
 			break;	

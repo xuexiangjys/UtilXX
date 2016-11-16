@@ -5,15 +5,15 @@ import com.xuexiang.util.view.DisplayUtils;
 import android.content.Context;
 
 public class ParamsCreator {
-	private int screenWidth;//ÆÁÄ»¿í¶È
-    private int densityDpi;//ÏñËØÃÜ¶È
+	private int screenWidth;//å±å¹•å®½åº¦
+    private int densityDpi;//åƒç´ å¯†åº¦
     public ParamsCreator(Context context){
     	screenWidth = DisplayUtils.getScreenW(context);
     	densityDpi = DisplayUtils.getScreenDpi(context);
     }
     
 	/**
-	 * »ñµÃÄ¬ÈÏÔ²µÄ°ë¾¶
+	 * èŽ·å¾—é»˜è®¤åœ†çš„åŠå¾„
 	 */
 	public int getDefaultCircleRadius(){
     	if(screenWidth >= 1400){//1440
@@ -47,7 +47,7 @@ public class ParamsCreator {
     	return 30;
 	}
 	/**
-	 * »ñµÃÄ¬ÈÏÔ²µÄ¼ä¾à
+	 * èŽ·å¾—é»˜è®¤åœ†çš„é—´è·
 	 */
 	public int getDefaultCircleSpacing(){
     	if(screenWidth >= 1400){//1440

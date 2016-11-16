@@ -17,14 +17,14 @@ import com.xuexiang.util.net.asynchttp.toolbox.HttpRequestQueque;
 import com.xuexiang.util.net.asynchttp.toolbox.HttpSuccess;
 
 /**  
- * ´´½¨Ê±¼ä£º2016-5-16 ÏÂÎç4:32:10  
- * ÏîÄ¿Ãû³Æ£ºHttpForJson  
+ * åˆ›å»ºæ—¶é—´ï¼š2016-5-16 ä¸‹åˆ4:32:10  
+ * é¡¹ç›®åç§°ï¼šHttpForJson  
  * @author xuexiang
- * ÎÄ¼şÃû³Æ£ºHttpManager.java  
+ * æ–‡ä»¶åç§°ï¼šHttpManager.java  
  **/
 public class AsyncHttpRequestManager {
 	
-	/**ÍøÂçÇëÇó¶ÔÏó*/
+	/**ç½‘ç»œè¯·æ±‚å¯¹è±¡*/
 	private HttpRequestQueque mHttpRequestQueque;
 	private static Context sContext;
 	
@@ -58,15 +58,15 @@ public class AsyncHttpRequestManager {
     public static void isDebugMode(boolean isDebug) {
     	CustomLog.debug = isDebug;
     }
-/****************************************************·µ»ØµÄÊÇÒ»¸öÀà¶ÔÏó************************************************************************************************************************/		
+/****************************************************è¿”å›çš„æ˜¯ä¸€ä¸ªç±»å¯¹è±¡************************************************************************************************************************/		
 	/**
-	 * ×Ô¶¨ÒåÍøÂçÇëÇó
-	 * @param clazz ·µ»ØÀàÀàÃû
-	 * @param url ÇëÇó·şÎñµØÖ·
-	 * @param mode ÇëÇó·½·¨
-	 * @param Json json×Ö·û´®
-	 * @param httpSuccess ÇëÇó³É¹¦µÄÏìÓ¦
-	 * @param httpError ÇëÇóÊ§°ÜµÄÏìÓ¦
+	 * è‡ªå®šä¹‰ç½‘ç»œè¯·æ±‚
+	 * @param clazz è¿”å›ç±»ç±»å
+	 * @param url è¯·æ±‚æœåŠ¡åœ°å€
+	 * @param mode è¯·æ±‚æ–¹æ³•
+	 * @param Json jsonå­—ç¬¦ä¸²
+	 * @param httpSuccess è¯·æ±‚æˆåŠŸçš„å“åº”
+	 * @param httpError è¯·æ±‚å¤±è´¥çš„å“åº”
 	 * @return
 	 */
 	public <T> HttpClassRequest<T> getClassRequest(Class<T> clazz, String url, String mode, String Json, HttpSuccess<T> httpSuccess, HttpError httpError) {
@@ -78,13 +78,13 @@ public class AsyncHttpRequestManager {
 	}
 	
 	/**
-	 * ×Ô¶¨ÒåÍøÂçÇëÇó
-	 * @param clazz ·µ»ØÀàÀàÃû
-	 * @param url ÇëÇó·şÎñµØÖ·
-	 * @param mode ÇëÇó·½·¨
-	 * @param Json json×Ö·û´®
-	 * @param httpSuccess ÇëÇó³É¹¦µÄÏìÓ¦
-	 * @param httpError ÇëÇóÊ§°ÜµÄÏìÓ¦
+	 * è‡ªå®šä¹‰ç½‘ç»œè¯·æ±‚
+	 * @param clazz è¿”å›ç±»ç±»å
+	 * @param url è¯·æ±‚æœåŠ¡åœ°å€
+	 * @param mode è¯·æ±‚æ–¹æ³•
+	 * @param Json jsonå­—ç¬¦ä¸²
+	 * @param httpSuccess è¯·æ±‚æˆåŠŸçš„å“åº”
+	 * @param httpError è¯·æ±‚å¤±è´¥çš„å“åº”
 	 * @return
 	 */
 	public <T> void executeClassRequest(Class<T> clazz, String url, String mode, String Json, HttpSuccess<T> httpSuccess, HttpError httpError) {
@@ -92,11 +92,11 @@ public class AsyncHttpRequestManager {
 	}
 	
 	/**
-	 * ÎŞ²ÎÊıÍøÂçÇëÇó
-	 * @param clazz ·µ»ØÀàÀàÃû
-	 * @param url ÇëÇó·şÎñµØÖ·
-	 * @param httpSuccess ÇëÇó³É¹¦µÄÏìÓ¦
-	 * @param httpError ÇëÇóÊ§°ÜµÄÏìÓ¦
+	 * æ— å‚æ•°ç½‘ç»œè¯·æ±‚
+	 * @param clazz è¿”å›ç±»ç±»å
+	 * @param url è¯·æ±‚æœåŠ¡åœ°å€
+	 * @param httpSuccess è¯·æ±‚æˆåŠŸçš„å“åº”
+	 * @param httpError è¯·æ±‚å¤±è´¥çš„å“åº”
 	 * @return
 	 */
 	public <T> HttpClassRequest<T> getClassRequest(Class<T> clazz, String url, HttpSuccess<T> httpSuccess, HttpError httpError) {     
@@ -104,11 +104,11 @@ public class AsyncHttpRequestManager {
 	}
 	
 	/**
-	 * ÎŞ²ÎÊıÍøÂçÇëÇó
-	 * @param clazz ·µ»ØÀàÀàÃû
-	 * @param url ÇëÇó·şÎñµØÖ·
-	 * @param httpSuccess ÇëÇó³É¹¦µÄÏìÓ¦
-	 * @param httpError ÇëÇóÊ§°ÜµÄÏìÓ¦
+	 * æ— å‚æ•°ç½‘ç»œè¯·æ±‚
+	 * @param clazz è¿”å›ç±»ç±»å
+	 * @param url è¯·æ±‚æœåŠ¡åœ°å€
+	 * @param httpSuccess è¯·æ±‚æˆåŠŸçš„å“åº”
+	 * @param httpError è¯·æ±‚å¤±è´¥çš„å“åº”
 	 * @return
 	 */
 	public <T> void executeClassRequest(Class<T> clazz, String url, HttpSuccess<T> httpSuccess, HttpError httpError) {     
@@ -116,12 +116,12 @@ public class AsyncHttpRequestManager {
 	}
 	
 	/**
-	 * map²ÎÊıÇëÇó
-	 * @param clazz ·µ»ØÀàÀàÃû
-	 * @param url ÇëÇó·şÎñµØÖ·
-	 * @param params ÇëÇó²ÎÊı¼¯ºÏ
-	 * @param httpSuccess ÇëÇó³É¹¦µÄÏìÓ¦
-	 * @param httpError ÇëÇóÊ§°ÜµÄÏìÓ¦
+	 * mapå‚æ•°è¯·æ±‚
+	 * @param clazz è¿”å›ç±»ç±»å
+	 * @param url è¯·æ±‚æœåŠ¡åœ°å€
+	 * @param params è¯·æ±‚å‚æ•°é›†åˆ
+	 * @param httpSuccess è¯·æ±‚æˆåŠŸçš„å“åº”
+	 * @param httpError è¯·æ±‚å¤±è´¥çš„å“åº”
 	 * @return
 	 */
 	public <T> HttpClassRequest<T> getClassRequest(Class<T> clazz, String url, HashMap<String, String> params, HttpSuccess<T> httpSuccess, HttpError httpError) {     
@@ -129,26 +129,26 @@ public class AsyncHttpRequestManager {
 	}
 	
 	/**
-	 * map²ÎÊıÇëÇó
-	 * @param clazz ·µ»ØÀàÀàÃû
-	 * @param url ÇëÇó·şÎñµØÖ·
-	 * @param params ÇëÇó²ÎÊı¼¯ºÏ
-	 * @param httpSuccess ÇëÇó³É¹¦µÄÏìÓ¦
-	 * @param httpError ÇëÇóÊ§°ÜµÄÏìÓ¦
+	 * mapå‚æ•°è¯·æ±‚
+	 * @param clazz è¿”å›ç±»ç±»å
+	 * @param url è¯·æ±‚æœåŠ¡åœ°å€
+	 * @param params è¯·æ±‚å‚æ•°é›†åˆ
+	 * @param httpSuccess è¯·æ±‚æˆåŠŸçš„å“åº”
+	 * @param httpError è¯·æ±‚å¤±è´¥çš„å“åº”
 	 * @return
 	 */
 	public <T> void executeClassRequest(Class<T> clazz, String url, HashMap<String, String> params, HttpSuccess<T> httpSuccess, HttpError httpError) {     
 		doPost(getClassRequest(clazz, url, params, httpSuccess, httpError));	
 	}
 	
-	/****************************************************·µ»ØµÄÊÇÒ»¸ö×Ö·û´®************************************************************************************************************************/			
+	/****************************************************è¿”å›çš„æ˜¯ä¸€ä¸ªå­—ç¬¦ä¸²************************************************************************************************************************/			
 	/**
-	 * ×Ô¶¨ÒåÍøÂçÇëÇó
-	 * @param url ÇëÇó·şÎñµØÖ·
-	 * @param mode ÇëÇó·½·¨
-	 * @param Json json×Ö·û´®
-	 * @param httpSuccess ÇëÇó³É¹¦µÄÏìÓ¦
-	 * @param httpError ÇëÇóÊ§°ÜµÄÏìÓ¦
+	 * è‡ªå®šä¹‰ç½‘ç»œè¯·æ±‚
+	 * @param url è¯·æ±‚æœåŠ¡åœ°å€
+	 * @param mode è¯·æ±‚æ–¹æ³•
+	 * @param Json jsonå­—ç¬¦ä¸²
+	 * @param httpSuccess è¯·æ±‚æˆåŠŸçš„å“åº”
+	 * @param httpError è¯·æ±‚å¤±è´¥çš„å“åº”
 	 * @return
 	 */
 	public HttpStringRequest getStringRequest(String url, String mode, String Json, HttpSuccess<String> httpSuccess, HttpError httpError) {
@@ -160,12 +160,12 @@ public class AsyncHttpRequestManager {
 	}
 	
 	/**
-	 * ×Ô¶¨ÒåÍøÂçÇëÇó
-	 * @param url ÇëÇó·şÎñµØÖ·
-	 * @param mode ÇëÇó·½·¨
-	 * @param Json json×Ö·û´®
-	 * @param httpSuccess ÇëÇó³É¹¦µÄÏìÓ¦
-	 * @param httpError ÇëÇóÊ§°ÜµÄÏìÓ¦
+	 * è‡ªå®šä¹‰ç½‘ç»œè¯·æ±‚
+	 * @param url è¯·æ±‚æœåŠ¡åœ°å€
+	 * @param mode è¯·æ±‚æ–¹æ³•
+	 * @param Json jsonå­—ç¬¦ä¸²
+	 * @param httpSuccess è¯·æ±‚æˆåŠŸçš„å“åº”
+	 * @param httpError è¯·æ±‚å¤±è´¥çš„å“åº”
 	 * @return
 	 */
 	public void executeStringRequest(String url, String mode, String Json, HttpSuccess<String> httpSuccess, HttpError httpError) {      
@@ -173,10 +173,10 @@ public class AsyncHttpRequestManager {
 	}
 	
 	/**
-	 * ÎŞ²ÎÊıÍøÂçÇëÇó
-	 * @param url ÇëÇó·şÎñµØÖ·
-	 * @param httpSuccess ÇëÇó³É¹¦µÄÏìÓ¦
-	 * @param httpError ÇëÇóÊ§°ÜµÄÏìÓ¦
+	 * æ— å‚æ•°ç½‘ç»œè¯·æ±‚
+	 * @param url è¯·æ±‚æœåŠ¡åœ°å€
+	 * @param httpSuccess è¯·æ±‚æˆåŠŸçš„å“åº”
+	 * @param httpError è¯·æ±‚å¤±è´¥çš„å“åº”
 	 * @return
 	 */
 	public HttpStringRequest getStringRequest(String url, HttpSuccess<String> httpSuccess, HttpError httpError) {
@@ -184,10 +184,10 @@ public class AsyncHttpRequestManager {
 	}
 	
 	/**
-	 * ÎŞ²ÎÊıÍøÂçÇëÇó
-	 * @param url ÇëÇó·şÎñµØÖ·
-	 * @param httpSuccess ÇëÇó³É¹¦µÄÏìÓ¦
-	 * @param httpError ÇëÇóÊ§°ÜµÄÏìÓ¦
+	 * æ— å‚æ•°ç½‘ç»œè¯·æ±‚
+	 * @param url è¯·æ±‚æœåŠ¡åœ°å€
+	 * @param httpSuccess è¯·æ±‚æˆåŠŸçš„å“åº”
+	 * @param httpError è¯·æ±‚å¤±è´¥çš„å“åº”
 	 * @return
 	 */
 	public void executeStringRequest(String url, HttpSuccess<String> httpSuccess, HttpError httpError) {
@@ -195,11 +195,11 @@ public class AsyncHttpRequestManager {
 	}
 	
 	/**
-	 * map²ÎÊıÇëÇó
-	 * @param url ÇëÇó·şÎñµØÖ·
-	 * @param params ÇëÇó²ÎÊı¼¯ºÏ
-	 * @param httpSuccess ÇëÇó³É¹¦µÄÏìÓ¦
-	 * @param httpError ÇëÇóÊ§°ÜµÄÏìÓ¦
+	 * mapå‚æ•°è¯·æ±‚
+	 * @param url è¯·æ±‚æœåŠ¡åœ°å€
+	 * @param params è¯·æ±‚å‚æ•°é›†åˆ
+	 * @param httpSuccess è¯·æ±‚æˆåŠŸçš„å“åº”
+	 * @param httpError è¯·æ±‚å¤±è´¥çš„å“åº”
 	 * @return
 	 */
 	public HttpStringRequest getStringRequest(String url, HashMap<String, String> params, HttpSuccess<String> httpSuccess, HttpError httpError) {
@@ -207,25 +207,25 @@ public class AsyncHttpRequestManager {
 	}
 	
 	/**
-	 * map²ÎÊıÇëÇó
-	 * @param url ÇëÇó·şÎñµØÖ·
-	 * @param params ÇëÇó²ÎÊı¼¯ºÏ
-	 * @param httpSuccess ÇëÇó³É¹¦µÄÏìÓ¦
-	 * @param httpError ÇëÇóÊ§°ÜµÄÏìÓ¦
+	 * mapå‚æ•°è¯·æ±‚
+	 * @param url è¯·æ±‚æœåŠ¡åœ°å€
+	 * @param params è¯·æ±‚å‚æ•°é›†åˆ
+	 * @param httpSuccess è¯·æ±‚æˆåŠŸçš„å“åº”
+	 * @param httpError è¯·æ±‚å¤±è´¥çš„å“åº”
 	 * @return
 	 */
 	public void executeStringRequest(String url, HashMap<String, String> params, HttpSuccess<String> httpSuccess, HttpError httpError) {
 		doPost(getStringRequest(url, params, httpSuccess, httpError));	
 	}
 	
-	/****************************************************·µ»ØµÄÊÇÒ»¸öJSONObject************************************************************************************************************************/			
+	/****************************************************è¿”å›çš„æ˜¯ä¸€ä¸ªJSONObject************************************************************************************************************************/			
 	/**
-	 * ×Ô¶¨ÒåÍøÂçÇëÇó
-	 * @param url ÇëÇó·şÎñµØÖ·
-	 * @param mode ÇëÇó·½·¨
-	 * @param Json json×Ö·û´®
-	 * @param httpSuccess ÇëÇó³É¹¦µÄÏìÓ¦
-	 * @param httpError ÇëÇóÊ§°ÜµÄÏìÓ¦
+	 * è‡ªå®šä¹‰ç½‘ç»œè¯·æ±‚
+	 * @param url è¯·æ±‚æœåŠ¡åœ°å€
+	 * @param mode è¯·æ±‚æ–¹æ³•
+	 * @param Json jsonå­—ç¬¦ä¸²
+	 * @param httpSuccess è¯·æ±‚æˆåŠŸçš„å“åº”
+	 * @param httpError è¯·æ±‚å¤±è´¥çš„å“åº”
 	 * @return
 	 */
 	public HttpJSONObjectRequest getJsonObjectRequest(String url, String mode, String Json, HttpSuccess<JSONObject> httpSuccess, HttpError httpError) {
@@ -237,12 +237,12 @@ public class AsyncHttpRequestManager {
 	}
 	
 	/**
-	 * ×Ô¶¨ÒåÍøÂçÇëÇó
-	 * @param url ÇëÇó·şÎñµØÖ·
-	 * @param mode ÇëÇó·½·¨
-	 * @param Json json×Ö·û´®
-	 * @param httpSuccess ÇëÇó³É¹¦µÄÏìÓ¦
-	 * @param httpError ÇëÇóÊ§°ÜµÄÏìÓ¦
+	 * è‡ªå®šä¹‰ç½‘ç»œè¯·æ±‚
+	 * @param url è¯·æ±‚æœåŠ¡åœ°å€
+	 * @param mode è¯·æ±‚æ–¹æ³•
+	 * @param Json jsonå­—ç¬¦ä¸²
+	 * @param httpSuccess è¯·æ±‚æˆåŠŸçš„å“åº”
+	 * @param httpError è¯·æ±‚å¤±è´¥çš„å“åº”
 	 * @return
 	 */
 	public void executeJsonObjectRequest(String url, String mode, String Json, HttpSuccess<JSONObject> httpSuccess, HttpError httpError) {       
@@ -250,10 +250,10 @@ public class AsyncHttpRequestManager {
 	}
 	
 	/**
-	 * ÎŞ²ÎÊıÍøÂçÇëÇó
-	 * @param url ÇëÇó·şÎñµØÖ·
-	 * @param httpSuccess ÇëÇó³É¹¦µÄÏìÓ¦
-	 * @param httpError ÇëÇóÊ§°ÜµÄÏìÓ¦
+	 * æ— å‚æ•°ç½‘ç»œè¯·æ±‚
+	 * @param url è¯·æ±‚æœåŠ¡åœ°å€
+	 * @param httpSuccess è¯·æ±‚æˆåŠŸçš„å“åº”
+	 * @param httpError è¯·æ±‚å¤±è´¥çš„å“åº”
 	 * @return
 	 */
 	public HttpJSONObjectRequest getJsonObjectRequest(String url, HttpSuccess<JSONObject> httpSuccess, HttpError httpError) {
@@ -261,10 +261,10 @@ public class AsyncHttpRequestManager {
 	}
 	
 	/**
-	 * ÎŞ²ÎÊıÍøÂçÇëÇó
-	 * @param url ÇëÇó·şÎñµØÖ·
-	 * @param httpSuccess ÇëÇó³É¹¦µÄÏìÓ¦
-	 * @param httpError ÇëÇóÊ§°ÜµÄÏìÓ¦
+	 * æ— å‚æ•°ç½‘ç»œè¯·æ±‚
+	 * @param url è¯·æ±‚æœåŠ¡åœ°å€
+	 * @param httpSuccess è¯·æ±‚æˆåŠŸçš„å“åº”
+	 * @param httpError è¯·æ±‚å¤±è´¥çš„å“åº”
 	 * @return
 	 */
 	public void executeJsonObjectRequest(String url, HttpSuccess<JSONObject> httpSuccess, HttpError httpError) {
@@ -272,11 +272,11 @@ public class AsyncHttpRequestManager {
 	}
 	
 	/**
-	 * map²ÎÊıÇëÇó
-	 * @param url ÇëÇó·şÎñµØÖ·
-	 * @param params ÇëÇó²ÎÊı¼¯ºÏ
-	 * @param httpSuccess ÇëÇó³É¹¦µÄÏìÓ¦
-	 * @param httpError ÇëÇóÊ§°ÜµÄÏìÓ¦
+	 * mapå‚æ•°è¯·æ±‚
+	 * @param url è¯·æ±‚æœåŠ¡åœ°å€
+	 * @param params è¯·æ±‚å‚æ•°é›†åˆ
+	 * @param httpSuccess è¯·æ±‚æˆåŠŸçš„å“åº”
+	 * @param httpError è¯·æ±‚å¤±è´¥çš„å“åº”
 	 * @return
 	 */
 	public HttpJSONObjectRequest getJsonObjectRequest(String url, HashMap<String, String> params, HttpSuccess<JSONObject> httpSuccess, HttpError httpError) {
@@ -284,24 +284,24 @@ public class AsyncHttpRequestManager {
 	}
 	
 	/**
-	 * map²ÎÊıÇëÇó
-	 * @param url ÇëÇó·şÎñµØÖ·
-	 * @param params ÇëÇó²ÎÊı¼¯ºÏ
-	 * @param httpSuccess ÇëÇó³É¹¦µÄÏìÓ¦
-	 * @param httpError ÇëÇóÊ§°ÜµÄÏìÓ¦
+	 * mapå‚æ•°è¯·æ±‚
+	 * @param url è¯·æ±‚æœåŠ¡åœ°å€
+	 * @param params è¯·æ±‚å‚æ•°é›†åˆ
+	 * @param httpSuccess è¯·æ±‚æˆåŠŸçš„å“åº”
+	 * @param httpError è¯·æ±‚å¤±è´¥çš„å“åº”
 	 * @return
 	 */
 	public void executeJsonObjectRequest(String url, HashMap<String, String> params, HttpSuccess<JSONObject> httpSuccess, HttpError httpError) {
 		doPost(getJsonObjectRequest(url, params, httpSuccess, httpError));	
 	}
 	
-	/****************************************************ÎÄ¼şÉÏ´«************************************************************************************************************************/			
+	/****************************************************æ–‡ä»¶ä¸Šä¼ ************************************************************************************************************************/			
 	/**
-	 * ÎŞ²ÎÊıÎÄ¼şÉÏ´«
-	 * @param url ÇëÇó·şÎñµØÖ·
-	 * @param files ÉÏ´«ÎÄ¼ş¼¯ºÏ
-	 * @param httpSuccess ÇëÇó³É¹¦µÄÏìÓ¦
-	 * @param httpError ÇëÇóÊ§°ÜµÄÏìÓ¦
+	 * æ— å‚æ•°æ–‡ä»¶ä¸Šä¼ 
+	 * @param url è¯·æ±‚æœåŠ¡åœ°å€
+	 * @param files ä¸Šä¼ æ–‡ä»¶é›†åˆ
+	 * @param httpSuccess è¯·æ±‚æˆåŠŸçš„å“åº”
+	 * @param httpError è¯·æ±‚å¤±è´¥çš„å“åº”
 	 * @return
 	 */
 	public HttpFileRequest getFileReques(String url, List<File> files, HttpSuccess<String> httpSuccess, HttpError httpError) {
@@ -313,11 +313,11 @@ public class AsyncHttpRequestManager {
 	}
 	
 	/**
-	 * ÎŞ²ÎÊıÎÄ¼şÉÏ´«
-	 * @param url ÇëÇó·şÎñµØÖ·
-	 * @param files ÉÏ´«ÎÄ¼ş¼¯ºÏ
-	 * @param httpSuccess ÇëÇó³É¹¦µÄÏìÓ¦
-	 * @param httpError ÇëÇóÊ§°ÜµÄÏìÓ¦
+	 * æ— å‚æ•°æ–‡ä»¶ä¸Šä¼ 
+	 * @param url è¯·æ±‚æœåŠ¡åœ°å€
+	 * @param files ä¸Šä¼ æ–‡ä»¶é›†åˆ
+	 * @param httpSuccess è¯·æ±‚æˆåŠŸçš„å“åº”
+	 * @param httpError è¯·æ±‚å¤±è´¥çš„å“åº”
 	 * @return
 	 */
 	public void executeFileReques(String url, List<File> files, HttpSuccess<String> httpSuccess, HttpError httpError) {
@@ -325,11 +325,11 @@ public class AsyncHttpRequestManager {
 	}
 	
 	/**
-	 * ÓĞ²ÎÊıÎÄ¼şÉÏ´«
-	 * @param url ÇëÇó·şÎñµØÖ·
-	 * @param files ÉÏ´«ÎÄ¼ş¼¯ºÏ
-	 * @param httpSuccess ÇëÇó³É¹¦µÄÏìÓ¦
-	 * @param httpError ÇëÇóÊ§°ÜµÄÏìÓ¦
+	 * æœ‰å‚æ•°æ–‡ä»¶ä¸Šä¼ 
+	 * @param url è¯·æ±‚æœåŠ¡åœ°å€
+	 * @param files ä¸Šä¼ æ–‡ä»¶é›†åˆ
+	 * @param httpSuccess è¯·æ±‚æˆåŠŸçš„å“åº”
+	 * @param httpError è¯·æ±‚å¤±è´¥çš„å“åº”
 	 * @return
 	 */
 	public HttpFileRequest getFileReques(String url, List<File> files, HashMap<String, String> param, HttpSuccess<String> httpSuccess, HttpError httpError) {
@@ -351,11 +351,11 @@ public class AsyncHttpRequestManager {
 	}
 	
 	/**
-	 * ÓĞ²ÎÊıÎÄ¼şÉÏ´«
-	 * @param url ÇëÇó·şÎñµØÖ·
-	 * @param files ÉÏ´«ÎÄ¼ş¼¯ºÏ
-	 * @param httpSuccess ÇëÇó³É¹¦µÄÏìÓ¦
-	 * @param httpError ÇëÇóÊ§°ÜµÄÏìÓ¦
+	 * æœ‰å‚æ•°æ–‡ä»¶ä¸Šä¼ 
+	 * @param url è¯·æ±‚æœåŠ¡åœ°å€
+	 * @param files ä¸Šä¼ æ–‡ä»¶é›†åˆ
+	 * @param httpSuccess è¯·æ±‚æˆåŠŸçš„å“åº”
+	 * @param httpError è¯·æ±‚å¤±è´¥çš„å“åº”
 	 * @return
 	 */
 	public void executeFileReques(String url, List<File> files, HashMap<String, String> param, HttpSuccess<String> httpSuccess, HttpError httpError) {

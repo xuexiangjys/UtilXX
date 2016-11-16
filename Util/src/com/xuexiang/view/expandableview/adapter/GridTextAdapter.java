@@ -14,7 +14,7 @@ import android.widget.TextView;
 
 
 /**
- * ³ÇÊĞÊÊÅäÆ÷
+ * åŸå¸‚é€‚é…å™¨
  * 
  * @author jayqiu
  * 

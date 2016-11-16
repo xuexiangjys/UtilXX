@@ -34,10 +34,10 @@ public class HackyViewPager extends ViewPager {
 		try {
 			return super.onInterceptTouchEvent(ev);
 		}  catch (IllegalArgumentException e) {
-			//²»Àí»á		
+			//ä¸ç†ä¼š		
 			return false;
 		}catch(ArrayIndexOutOfBoundsException e ){
-			//²»Àí»á
+			//ä¸ç†ä¼š
 			return false;
 		}
 	}

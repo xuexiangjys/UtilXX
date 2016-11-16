@@ -20,7 +20,7 @@ import android.content.Intent;
 import android.net.Uri;
 
 /**
- * ÊÖ»ú×é¼şµ÷ÓÃ¹¤¾ßÀà
+ * æ‰‹æœºç»„ä»¶è°ƒç”¨å·¥å…·ç±»
  *
  * @author jingle1267@163.com
  */
@@ -34,11 +34,11 @@ public final class PhoneUtil {
     }
 
     /**
-     * µ÷ÓÃÏµÍ³·¢¶ÌĞÅ½çÃæ
+     * è°ƒç”¨ç³»ç»Ÿå‘çŸ­ä¿¡ç•Œé¢
      *
      * @param activity    Activity
-     * @param phoneNumber ÊÖ»úºÅÂë
-     * @param smsContent  ¶ÌĞÅÄÚÈİ
+     * @param phoneNumber æ‰‹æœºå·ç 
+     * @param smsContent  çŸ­ä¿¡å†…å®¹
      */
     public static void sendMessage(Context activity, String phoneNumber,
                                    String smsContent) {
@@ -54,10 +54,10 @@ public final class PhoneUtil {
     }
 
     /**
-     * µ÷ÓÃÏµÍ³´òµç»°½çÃæ
+     * è°ƒç”¨ç³»ç»Ÿæ‰“ç”µè¯ç•Œé¢
      *
-     * @param context     ÉÏÏÂÎÄ
-     * @param phoneNumber ÊÖ»úºÅÂë
+     * @param context     ä¸Šä¸‹æ–‡
+     * @param phoneNumber æ‰‹æœºå·ç 
      */
     public static void callPhones(Context context, String phoneNumber) {
         if (phoneNumber == null || phoneNumber.length() < 1) {

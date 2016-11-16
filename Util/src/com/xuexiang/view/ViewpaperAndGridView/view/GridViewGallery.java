@@ -26,19 +26,19 @@ import com.xuexiang.view.ViewpaperAndGridView.bean.ChannelItem;
 public class GridViewGallery extends LinearLayout {
 
 	private Context mContext;  
-    /** ±£´æÊµÌå¶ÔÏóÁ´±í */  
+    /** ä¿å­˜å®ä½“å¯¹è±¡é“¾è¡¨ */  
     private List<ChannelItem> mList;  
     private ViewPager viewPager;  
     private LinearLayout ll_dot;  
     private ImageView[] dots;  
-    /** ViewPagerµ±Ç°Ò³ */  
+    /** ViewPagerå½“å‰é¡µ */  
     private int currentIndex;  
-    /** ViewPagerÒ³Êı */  
+    /** ViewPageré¡µæ•° */  
     private int viewPager_size;  
-    /** Ä¬ÈÏÒ»Ò³12¸öitem */  
+    /** é»˜è®¤ä¸€é¡µ12ä¸ªitem */  
     private int pageItemCount = 12;  
   
-    /** ±£´æÃ¿¸öÒ³ÃæµÄGridViewÊÓÍ¼ */  
+    /** ä¿å­˜æ¯ä¸ªé¡µé¢çš„GridViewè§†å›¾ */  
     private List<View> list_Views;  
   
     public GridViewGallery(Context context, AttributeSet attrs) { 
@@ -72,17 +72,17 @@ public class GridViewGallery extends LinearLayout {
         addView(view);  
     }  
   
-    // ³õÊ¼»¯µ×²¿Ğ¡Ô²µã  
+    // åˆå§‹åŒ–åº•éƒ¨å°åœ†ç‚¹  
     private void initDots() {  
   
-        // ¸ù¾İÆÁÄ»¿í¶È¸ß¶È¼ÆËãpageItemCount  
+        // æ ¹æ®å±å¹•å®½åº¦é«˜åº¦è®¡ç®—pageItemCount  
         int width = DisplayUtils.getScreenW(mContext);  
         int high = DisplayUtils.getScreenH(mContext);  
      
         int col = (width / 200) > 2 ? (width /200) : 3;
         int row = (high/400) > 4 ? (high/400):3;
 
-        pageItemCount = col * row;  //Ã¿Ò»Ò³¿É×°item
+        pageItemCount = col * row;  //æ¯ä¸€é¡µå¯è£…item
         int t=1;
         if(mList.size() % pageItemCount==0){
         	t=0;
@@ -97,7 +97,7 @@ public class GridViewGallery extends LinearLayout {
                 ll_dot.setVisibility(View.VISIBLE);  
                 for (int j = 0; j < viewPager_size; j++) {  
                     ImageView image = new ImageView(mContext);  
-                    LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(10, 10);  //dotµÄ¿í¸ß
+                    LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(10, 10);  //dotçš„å®½é«˜
                     params.setMargins(3, 0, 3, 0);  
                     image.setImageBitmap(ResourceUtils.getImageFromAssets(mContext, "play_hide.png"));  
                     ll_dot.addView(image, params);  
@@ -107,10 +107,10 @@ public class GridViewGallery extends LinearLayout {
         if (viewPager_size != 1) {  
             dots = new ImageView[viewPager_size];  
             for (int i = 0; i < viewPager_size; i++) {
-            	//´Ó²¼¾ÖÖĞÌî³ädotsÊı×é
+            	//ä»å¸ƒå±€ä¸­å¡«å……dotsæ•°ç»„
                 dots[i] = (ImageView) ll_dot.getChildAt(i);  
             }  
-            currentIndex = 0;  //µ±Ç°Ò³ 
+            currentIndex = 0;  //å½“å‰é¡µ 
             dots[currentIndex].setImageBitmap(ResourceUtils.getImageFromAssets(mContext, "play_display.png"));
             viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {  
   
@@ -132,7 +132,7 @@ public class GridViewGallery extends LinearLayout {
         }  
     }  
   
-    /** µ±Ç°µ×²¿Ğ¡Ô²µã */  
+    /** å½“å‰åº•éƒ¨å°åœ†ç‚¹ */  
     private void setCurDot(int positon) {  
         if (positon < 0 || positon > viewPager_size - 1 || currentIndex == positon) {  
             return;  
@@ -144,7 +144,7 @@ public class GridViewGallery extends LinearLayout {
         currentIndex = positon;  
     }  
   
-    //ViewPagerÖĞÃ¿¸öÒ³ÃæµÄGridView²¼¾Ö
+    //ViewPagerä¸­æ¯ä¸ªé¡µé¢çš„GridViewå¸ƒå±€
     private View getViewPagerItem(int index) {  
         LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);  
         View layout = inflater.inflate(RUtils.getLayout(mContext, "channel_viewpage_gridview"), null);  
@@ -155,7 +155,7 @@ public class GridViewGallery extends LinearLayout {
         
         gridView.setNumColumns(col);
   
-        //Ã¿¸öÒ³ÃæGridViewµÄAdpter
+        //æ¯ä¸ªé¡µé¢GridViewçš„Adpter
         GridViewItemAdapter adapter = new GridViewItemAdapter(mContext, mList, index, pageItemCount);  
   
         gridView.setAdapter(adapter);  

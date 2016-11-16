@@ -5,19 +5,19 @@ import java.util.Map;
 
 
 /**  
- * ´´½¨Ê±¼ä£º2016-6-5 ÉÏÎç1:12:48  
+ * åˆ›å»ºæ—¶é—´ï¼š2016-6-5 ä¸Šåˆ1:12:48  
  * @author xuexiang
  **/
 public class EventManager {
 
 	/**
-	 * ´æ·ÅËùÓĞ±»¹Û²ìÕß¶ÔÏóµÄ¼¯ºÏ
+	 * å­˜æ”¾æ‰€æœ‰è¢«è§‚å¯Ÿè€…å¯¹è±¡çš„é›†åˆ
 	 */
-	private static Map<String, BaseSubject> mEventManager = new HashMap<String, BaseSubject>();  //´æ·Å¸÷ÖÖ±»¹Û²ìÕß¶ÔÏó
+	private static Map<String, BaseSubject> mEventManager = new HashMap<String, BaseSubject>();  //å­˜æ”¾å„ç§è¢«è§‚å¯Ÿè€…å¯¹è±¡
 	
 	/**
-	 * »ñÈ¡±»¹Û²ìÕß¶ÔÏó
-	 * @param subjectName ±»¹Û²ìÕß¶ÔÏóµÄ±ê¼Ç
+	 * è·å–è¢«è§‚å¯Ÿè€…å¯¹è±¡
+	 * @param subjectName è¢«è§‚å¯Ÿè€…å¯¹è±¡çš„æ ‡è®°
 	 */
 	public static BaseSubject getSubject(String subjectName) {
 		BaseSubject baseSubject;

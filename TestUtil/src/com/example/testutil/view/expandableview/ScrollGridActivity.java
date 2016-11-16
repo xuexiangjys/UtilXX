@@ -29,7 +29,7 @@ public class ScrollGridActivity extends BaseActivity {
 	@Override
 	public void onCreateActivity() {
 		setContentView(R.layout.activity_scrollgrid);
-		initTitleBar("¶ş¼¶ÁĞ±í");
+		initTitleBar("äºŒçº§åˆ—è¡¨");
 		scrollView = (ScrollView) findViewById(R.id.tools_scrlllview);
 		shopAdapter = new ShopAdapter(getSupportFragmentManager());
 		inflater = LayoutInflater.from(this);
@@ -38,7 +38,7 @@ public class ScrollGridActivity extends BaseActivity {
 	}
 
 	/**
-	 * ¶¯Ì¬Éú³ÉÏÔÊ¾itemsÖĞµÄtextview
+	 * åŠ¨æ€ç”Ÿæˆæ˜¾ç¤ºitemsä¸­çš„textview
 	 */
 	private void showToolsView() {
 		list = Model.toolsList;
@@ -68,7 +68,7 @@ public class ScrollGridActivity extends BaseActivity {
 
 	/**
 	 * initPager<br/>
-	 * ³õÊ¼»¯ViewPager¿Ø¼şÏà¹ØÄÚÈİ
+	 * åˆå§‹åŒ–ViewPageræ§ä»¶ç›¸å…³å†…å®¹
 	 */
 	private void initPager() {
 		viewpager = (ViewPager) findViewById(R.id.goods_pager);
@@ -78,7 +78,7 @@ public class ScrollGridActivity extends BaseActivity {
 
 	/**
 	 * OnPageChangeListener<br/>
-	 * ¼àÌıViewPagerÑ¡Ïî¿¨±ä»¯ÊÂµÄÊÂ¼ş
+	 * ç›‘å¬ViewPageré€‰é¡¹å¡å˜åŒ–äº‹çš„äº‹ä»¶
 	 */
 	private OnPageChangeListener onPageChangeListener = new OnPageChangeListener() {
 		@Override
@@ -102,7 +102,7 @@ public class ScrollGridActivity extends BaseActivity {
 	};
 
 	/**
-	 * ViewPager ¼ÓÔØÑ¡Ïî¿¨
+	 * ViewPager åŠ è½½é€‰é¡¹å¡
 	 * 
 	 * @author Administrator
 	 *
@@ -128,7 +128,7 @@ public class ScrollGridActivity extends BaseActivity {
 	}
 
 	/**
-	 * ¸Ä±ätextViewµÄÑÕÉ«
+	 * æ”¹å˜textViewçš„é¢œè‰²
 	 * 
 	 * @param id
 	 */
@@ -144,7 +144,7 @@ public class ScrollGridActivity extends BaseActivity {
 	}
 
 	/**
-	 * ¸Ä±äÀ¸Ä¿Î»ÖÃ
+	 * æ”¹å˜æ ç›®ä½ç½®
 	 * 
 	 * @param clickPosition
 	 */

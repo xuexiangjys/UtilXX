@@ -45,7 +45,7 @@ public class SimpleAdapterActivity extends Activity
 			}
 		};
 //		mAdapter.showIndeterminateProgress(true);
-		// ÉèÖÃÊÊÅäÆ÷
+		// è®¾ç½®é€‚é…å™¨
 		mListView.setAdapter(mAdapter);
 
 	}
@@ -53,13 +53,13 @@ public class SimpleAdapterActivity extends Activity
 	private void initDatas()
 	{
 		ItemBean bean = null;
-		bean = new ItemBean("ÃÀÅ®Ò»Ö»", "ÖÜÈıÔçÉÏ¼ñµ½ÃÃ×ÓÒ»Ö»£¬ÔÚÊ³ÌÃ¶şÂ¥", "10086", "20130240122");
+		bean = new ItemBean("ç¾å¥³ä¸€åª", "å‘¨ä¸‰æ—©ä¸Šæ¡åˆ°å¦¹å­ä¸€åªï¼Œåœ¨é£Ÿå ‚äºŒæ¥¼", "10086", "20130240122");
 		mDatas.add(bean);
-		bean = new ItemBean("ÃÀÅ®Ò»À¦", "ÖÜÈıÔçÉÏ¼ñµ½ÃÃ×ÓÒ»À¦£¬ÔÚÊ³ÌÃÈıÂ¥", "10086", "20130240122");
+		bean = new ItemBean("ç¾å¥³ä¸€æ†", "å‘¨ä¸‰æ—©ä¸Šæ¡åˆ°å¦¹å­ä¸€æ†ï¼Œåœ¨é£Ÿå ‚ä¸‰æ¥¼", "10086", "20130240122");
 		mDatas.add(bean);
-		bean = new ItemBean("±È¿¨ÇğÒ»¸ö", "ÖÜÈıÔçÉÏ¼ñµ½±È¿¨ÇğÒ»¸ö£¬ÔÚÊ³ÌÃÒ»Â¥", "10086", "20130240122");
+		bean = new ItemBean("æ¯”å¡ä¸˜ä¸€ä¸ª", "å‘¨ä¸‰æ—©ä¸Šæ¡åˆ°æ¯”å¡ä¸˜ä¸€ä¸ªï¼Œåœ¨é£Ÿå ‚ä¸€æ¥¼", "10086", "20130240122");
 		mDatas.add(bean);
-		bean = new ItemBean("ºº×ÓÒ»»ğ³µ", "ÖÜÈıÔçÉÏ¼ñµ½xxxxxxxxxx£¬ÔÚxxx", "10086",
+		bean = new ItemBean("æ±‰å­ä¸€ç«è½¦", "å‘¨ä¸‰æ—©ä¸Šæ¡åˆ°xxxxxxxxxxï¼Œåœ¨xxx", "10086",
 				"20130240122");
 		mDatas.add(bean);
 	}

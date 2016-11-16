@@ -27,10 +27,10 @@ public class FadingActionbarLightBackgroundActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         FadingActionBarHelper helper = new FadingActionBarHelper()
-            .actionBarBackground(R.drawable.ab_background) //ÉèÖÃactionbarµÄ±³¾°
-            .headerLayout(R.layout.fadingactionbar_header_light) // ÉèÖÃ¶¥²¿µÄ²¼¾ÖÎÄ¼ş
-            .contentLayout(R.layout.activity_fadingactionbarscrollview);//ÉèÖÃ²¼¾ÖÎÄ¼ş£¬ÕâÀïÊÇscroolview¡£¿ÉÒÔ×Ô¼ºËæ±ãÉèÖÃ
-        //³õÊ¼»¯
+            .actionBarBackground(R.drawable.ab_background) //è®¾ç½®actionbarçš„èƒŒæ™¯
+            .headerLayout(R.layout.fadingactionbar_header_light) // è®¾ç½®é¡¶éƒ¨çš„å¸ƒå±€æ–‡ä»¶
+            .contentLayout(R.layout.activity_fadingactionbarscrollview);//è®¾ç½®å¸ƒå±€æ–‡ä»¶ï¼Œè¿™é‡Œæ˜¯scroolviewã€‚å¯ä»¥è‡ªå·±éšä¾¿è®¾ç½®
+        //åˆå§‹åŒ–
         setContentView(helper.createView(this));
         helper.initActionBar(this);
     }

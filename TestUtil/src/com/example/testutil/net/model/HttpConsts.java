@@ -3,15 +3,15 @@ package com.example.testutil.net.model;
 import com.xuexiang.app.BaseApplication;
 
 /**
- * ³£Á¿Àà
+ * å¸¸é‡ç±»
  *
  */
 public class HttpConsts {
 	
 	public static final String TEST_URL = "http://www.weather.com.cn/adat/sk/101010100.html";	
-	/** ÓÃ»§ĞÅÏ¢¹ÜÀí·şÎñµÄµØÖ·*/
+	/** ç”¨æˆ·ä¿¡æ¯ç®¡ç†æœåŠ¡çš„åœ°å€*/
 	public static String app_user_url = BaseApplication.app_url + "helper/User";
-	/** ÉÏÃÅ·şÎñĞÅÏ¢´¦ÀíÇëÇóµØÖ·*/
+	/** ä¸Šé—¨æœåŠ¡ä¿¡æ¯å¤„ç†è¯·æ±‚åœ°å€*/
 	public static String app_visitservice_url = BaseApplication.app_url + "helper/VisitService";
 	public static String visitservice_pic_bath_url  = BaseApplication.app_url + "helper/User/VisitService/";
 	
@@ -119,7 +119,7 @@ public class HttpConsts {
 	
 	
 	/**
-	 * ÉùÃ÷¹ã²¥µÄaction
+	 * å£°æ˜å¹¿æ’­çš„action
 	 */
 	public static final class Brodcast_Action{
 		public static final String ACTION_POLL_SERVICE="com.bmob.helpertest.poll.action.MESSAGE";
@@ -142,7 +142,7 @@ public class HttpConsts {
 		public static final String ERROR_READ_DATA="com.xuexiang.util.consts.Error.ERROR_READ_DATA";
 		public static final String ERROR_ACCESS_TIMEOUT="com.xuexiang.util.consts.Error.ERROR_ACCESS_TIMEOUT";
 		public static final String ERROR_ACCESS_OUT_OF_MEMORY="com.xuexiang.util.consts.Error.ERROR_OUT_OF_MEMORY";
-		public static final String ERROR_REQUEST_SERVER_FAIL="ERROR_REQUEST_SERVER_FAIL";//ÇëÇóÊ§°Ü
+		public static final String ERROR_REQUEST_SERVER_FAIL="ERROR_REQUEST_SERVER_FAIL";//è¯·æ±‚å¤±è´¥
 		public static final String ERROR_ADDRESS_FORMAT="ERROR_ADDRESS_FORMAT";
 		public static final String ERROR_RECEIVE_EXCEPTION="com.xuexiang.util.consts.Error.ERROR_RECEIVE_EXCEPTION";
 		
@@ -155,7 +155,7 @@ public class HttpConsts {
 	}
 	
 	/**
-	 * HandleÏûÏ¢µÄwhat
+	 * Handleæ¶ˆæ¯çš„what
 	 * 
 	 */
 	public static final class What{
@@ -187,7 +187,7 @@ public class HttpConsts {
 	}
 	
 	/**
-	 * ÉÌÆÌÀàĞÍ 
+	 * å•†é“ºç±»å‹ 
 	 */
 	public static final class ShopType{
 		public static final String REPAIR= "repair";		
@@ -198,106 +198,106 @@ public class HttpConsts {
 	}
 	
 	/**
-	 * ÉÏÃÅ·şÎñÀàĞÍ 
+	 * ä¸Šé—¨æœåŠ¡ç±»å‹ 
 	 */
 	public static final class VisitType{
-		/** ¼Ò½Ì*/
+		/** å®¶æ•™*/
 		public static final String PRIVATE_TEACHER= "privateteacher";	
-		/** ÃÀ¼×*/
+		/** ç¾ç”²*/
 		public static final String MANICURE = "manicure";
-		/** °´Ä¦*/
+		/** æŒ‰æ‘©*/
 		public static final String MASSAGE = "massage";
-		/** ´ó³ø*/
+		/** å¤§å¨*/
 		public static final String COOK = "cook";
-		/** Ï´ÒÂ*/
+		/** æ´—è¡£*/
 		public static final String LAUNDRY = "laundry";		
-		/** ±£Ñø³µÁ¾*/
+		/** ä¿å…»è½¦è¾†*/
 		public static final String KEEP_CAR = "keep_car";		
-		/** ½¡¿µ*/
+		/** å¥åº·*/
 		public static final String HEALTHY = "healthy";		
-		/** ÆäËû*/
+		/** å…¶ä»–*/
 		public static final String OTHER = "other";		
 	}
 	
 	/**
-	 * ÃÀÊ³µêÆÌÀàĞÍ
+	 * ç¾é£Ÿåº—é“ºç±»å‹
 	 */
 	public static final class FoodShopType{
-		/** ÃÀÊ³*/
+		/** ç¾é£Ÿ*/
 		public static final String DELICIOUS_FOOD= "deliciousfood";	
-		/** ³¬ÊĞ*/
+		/** è¶…å¸‚*/
 		public static final String SUPERMARKET = "supermarket";
-		/** ¹ûÊßÉúÏÊ*/
+		/** æœè”¬ç”Ÿé²œ*/
 		public static final String FRESH_FRUITS = "freshfruits";
-		/** ÌğµãÒûÆ·*/
+		/** ç”œç‚¹é¥®å“*/
 		public static final String DESSERT_DRINK = "Dessertdrink";
-		/** Á¬ËøÆ·ÅÆ*/
+		/** è¿é”å“ç‰Œ*/
 		public static final String CHAIN_BRAND = "Chainbrand";		
-		/** ÀÖ¾Ó×¨ËÍ*/
+		/** ä¹å±…ä¸“é€*/
 		public static final String SPECIAL_DELIVERY = "Specialdelivery";		
-		/** ÏÊ»¨*/
+		/** é²œèŠ±*/
 		public static final String FLOWER = "flower";		
-		/** ËÍÒ©ÉÏÃÅ*/
+		/** é€è¯ä¸Šé—¨*/
 		public static final String SEND_MEDICINE = "sendmedicine";
 	}
 	
 	/**
-	 * Î¬ĞŞÀàĞÍ 
+	 * ç»´ä¿®ç±»å‹ 
 	 */
 	public static final class RepairType{
-		/** Ë®µçÀà*/
+		/** æ°´ç”µç±»*/
 		public static final String PLUMBER= "plumber";	
-		/** Ä¾¹¤Àà*/
+		/** æœ¨å·¥ç±»*/
 		public static final String WOODWORKER = "woodworker";
-		/** ÄàÍßÀà*/
+		/** æ³¥ç“¦ç±»*/
 		public static final String MASON = "mason";
-		/** ÓÍÆáÀà*/
+		/** æ²¹æ¼†ç±»*/
 		public static final String PAINTER = "painter";
 	}
 	
 	/**
-	 * ÒøĞĞÀàĞÍ
+	 * é“¶è¡Œç±»å‹
 	 */
 	public static final class BankType{
-		/** ÖĞ¹ú½¨ÉèÒøĞĞ*/
+		/** ä¸­å›½å»ºè®¾é“¶è¡Œ*/
 		public static final String CCB= "ccb";	
-		/** ÖĞ¹úÅ©ÒµÒøĞĞ*/
+		/** ä¸­å›½å†œä¸šé“¶è¡Œ*/
 		public static final String ABC = "abc";
-		/** ÖĞ¹ú¹¤ÉÌÒøĞĞ*/
+		/** ä¸­å›½å·¥å•†é“¶è¡Œ*/
 		public static final String ICBC = "icbc";
-		/** ÖĞ¹úÒøĞĞ*/
+		/** ä¸­å›½é“¶è¡Œ*/
 		public static final String BOC = "boc";
-		/** ÖĞ¹úÃñÉúÒøĞĞ*/
+		/** ä¸­å›½æ°‘ç”Ÿé“¶è¡Œ*/
 		public static final String CMBC = "cmbc";		
-		/** ÕĞÉÌÒøĞĞ*/
+		/** æ‹›å•†é“¶è¡Œ*/
 		public static final String CMB = "cmb";		
-		/** ĞËÒµÒøĞĞ */
+		/** å…´ä¸šé“¶è¡Œ */
 		public static final String CIB = "cib";		
-		/** ½»Í¨ÒøĞĞ*/
+		/** äº¤é€šé“¶è¡Œ*/
 		public static final String BCM = "bcm";		
-		/**ÖĞ¹ú¹â´óÒøĞĞ*/
+		/**ä¸­å›½å…‰å¤§é“¶è¡Œ*/
 		public static final String CEB = "ceb";	
-		/**¹ã¶«·¢Õ¹ÒøĞĞ*/
+		/**å¹¿ä¸œå‘å±•é“¶è¡Œ*/
 		public static final String GDB = "gdb";	
 	}
 	
 	
 	public static final class ShopList {		
-		// shoplistÖĞÉÌÆÌÀàĞÍ
-	    public static final String[] SHOPLIST_TYPE = { "È«²¿Æ·Àà", "ÃÀÊ³", "³¬ÊĞ",
-					"¹ûÊßÉúÏÊ", "ÌğµãÒûÆ·", "Á¬ËøÆ·ÅÆ", "ÀÖ¾Ó×¨ËÍ", "ÏÊ»¨", "ËÍÒ©ÉÏÃÅ"}; 
+		// shoplistä¸­å•†é“ºç±»å‹
+	    public static final String[] SHOPLIST_TYPE = { "å…¨éƒ¨å“ç±»", "ç¾é£Ÿ", "è¶…å¸‚",
+					"æœè”¬ç”Ÿé²œ", "ç”œç‚¹é¥®å“", "è¿é”å“ç‰Œ", "ä¹å±…ä¸“é€", "é²œèŠ±", "é€è¯ä¸Šé—¨"}; 
 	    
-	    // shoplistÖĞÅÅĞòÌõ¼ş
-	 	public static final String[] SHOPLIST_CONDITION = { "×ÛºÏÅÅĞò", "ÏúÁ¿×î¸ß", "ËÙ¶È×î¿ì",
-	 			"ÆÀ·Ö×î¸ß", "ÆğËÍ¼Û×îµÍ", "ÅäËÍ·Ñ×îµÍ" };	 	
-	    // shoplistÖĞÅÅĞòÌõ¼ş
+	    // shoplistä¸­æ’åºæ¡ä»¶
+	 	public static final String[] SHOPLIST_CONDITION = { "ç»¼åˆæ’åº", "é”€é‡æœ€é«˜", "é€Ÿåº¦æœ€å¿«",
+	 			"è¯„åˆ†æœ€é«˜", "èµ·é€ä»·æœ€ä½", "é…é€è´¹æœ€ä½" };	 	
+	    // shoplistä¸­æ’åºæ¡ä»¶
 	 	public static final String[] SHOPLIST_CONDITION_HTTP = { "", "salednum", "delivertime",
 	 	 			"starnum", "startingprice", "deliverprice" };
 	 	
-	    // shoplistÖĞ´ÙÏúÌõ¼şÉ¸Ñ¡
-	    public static final String[] SHOPLIST_PROMOTION = { "É¸Ñ¡", "Ê×µ¥Á¢¼õ", "Âú¼õÓÅ»İ", "ÕÛ¿ÛÓÅ»İ",
-					"Âú·µ´ú½ğÈ¯", "ÌáÇ°ÏÂµ¥ÓÅ»İ", "ÂúÔù»î¶¯", "ÂúÃâÅäËÍ·Ñ" };	 
-	    // shoplistÖĞ´ÙÏúÌõ¼şÉ¸Ñ¡
+	    // shoplistä¸­ä¿ƒé”€æ¡ä»¶ç­›é€‰
+	    public static final String[] SHOPLIST_PROMOTION = { "ç­›é€‰", "é¦–å•ç«‹å‡", "æ»¡å‡ä¼˜æƒ ", "æŠ˜æ‰£ä¼˜æƒ ",
+					"æ»¡è¿”ä»£é‡‘åˆ¸", "æå‰ä¸‹å•ä¼˜æƒ ", "æ»¡èµ æ´»åŠ¨", "æ»¡å…é…é€è´¹" };	 
+	    // shoplistä¸­ä¿ƒé”€æ¡ä»¶ç­›é€‰
 	    public static final String[] SHOPLIST_PROMOTION_HTTP = { "", "firstorder", "fullreduction", "discount",
 					"vouchers", "preorder", "fullofgifts", "freedistribution" };	 
 	}

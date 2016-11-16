@@ -14,7 +14,7 @@ import com.google.gson.Gson;
 
 
  /**
-  * ×Ô¶¨Òå ÇëÇó·½·¨
+  * è‡ªå®šä¹‰ è¯·æ±‚æ–¹æ³•
   * @author yuan
   * http://blog.csdn.net/guolin_blog/article/details/17612763
   * @param <T>
@@ -28,14 +28,14 @@ public class GsonRequest<T> extends Request<T> {
 	private Class<T> mClass;
 	
 	/**
-	 * ¹¹Ôìº¯Êı £¬¿ÉÒÔÓĞ¶à¸ö²»Í¬²ÎÊıµÄ£¬ÕâÀï¾Í²»Ìí¼ÓÁË£¡
+	 * æ„é€ å‡½æ•° ï¼Œå¯ä»¥æœ‰å¤šä¸ªä¸åŒå‚æ•°çš„ï¼Œè¿™é‡Œå°±ä¸æ·»åŠ äº†ï¼
 	 * @param method
 	 * @param url
 	 * @param listener
 	 */
 	public GsonRequest(int method, String url,Class<T> clazz,Listener<T> listener,ErrorListener errorlistener) {
 		super(method, url, errorlistener);
-		//³õÊ¼»¯ ²ÎÊı
+		//åˆå§‹åŒ– å‚æ•°
 		mGson = new Gson();
 		mClass = clazz;
 		mListener = listener;
@@ -44,14 +44,14 @@ public class GsonRequest<T> extends Request<T> {
 	@Override
 	protected Response<T> parseNetworkResponse(NetworkResponse response) {
 		try {
-			//½«×Ö·ûÁ÷×ª³É×Ö·û´®£¬²¢ÇÒÉèÖÃ ×Ö·û±àÂë £¬À´×ÔÏìÓ¦ĞÅÏ¢µÄ±¨ÎÄ¶¼²»ĞÅÏ¢
+			//å°†å­—ç¬¦æµè½¬æˆå­—ç¬¦ä¸²ï¼Œå¹¶ä¸”è®¾ç½® å­—ç¬¦ç¼–ç  ï¼Œæ¥è‡ªå“åº”ä¿¡æ¯çš„æŠ¥æ–‡éƒ½ä¸ä¿¡æ¯
 			String jsonString=new String(response.data,HttpHeaderParser.parseCharset(response.headers));
 		
-			//·µ»ØĞÅÏ¢ Ê¹ÓÃ gson Ö±½Ó×ª ¶ÔÏó£¬µÚ¶ş¸ö²ÎÊı ÉèÖÃ±àÂë
+			//è¿”å›ä¿¡æ¯ ä½¿ç”¨ gson ç›´æ¥è½¬ å¯¹è±¡ï¼Œç¬¬äºŒä¸ªå‚æ•° è®¾ç½®ç¼–ç 
 			return Response.success(mGson.fromJson(jsonString, mClass),HttpHeaderParser.parseCacheHeaders(response));
 		
 		} catch (UnsupportedEncodingException e) {
-			// ³ö´íµÄÊ±ºò£¬½«´íÎóĞÅÏ¢ÖØĞÂµ÷³ö
+			// å‡ºé”™çš„æ—¶å€™ï¼Œå°†é”™è¯¯ä¿¡æ¯é‡æ–°è°ƒå‡º
 			return Response.error(new ParseError(e));
 		}
 	}

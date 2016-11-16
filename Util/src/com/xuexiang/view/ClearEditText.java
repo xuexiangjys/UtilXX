@@ -18,12 +18,12 @@ import android.widget.EditText;
 
 
 /**
- * @Description: ´øÉ¾³ı°´Å¥µÄÊäÈë¿ò
+ * @Description: å¸¦åˆ é™¤æŒ‰é’®çš„è¾“å…¥æ¡†
  */ 
 public class ClearEditText extends EditText implements  
         OnFocusChangeListener, TextWatcher { 
 	/**
-	 * É¾³ı°´Å¥µÄÒıÓÃ
+	 * åˆ é™¤æŒ‰é’®çš„å¼•ç”¨
 	 */
     private Drawable mClearDrawable; 
  
@@ -32,7 +32,7 @@ public class ClearEditText extends EditText implements
     } 
  
     public ClearEditText(Context context, AttributeSet attrs) { 
-    	//ÕâÀï¹¹Ôì·½·¨Ò²ºÜÖØÒª£¬²»¼ÓÕâ¸öºÜ¶àÊôĞÔ²»ÄÜÔÙXMLÀïÃæ¶¨Òå
+    	//è¿™é‡Œæ„é€ æ–¹æ³•ä¹Ÿå¾ˆé‡è¦ï¼Œä¸åŠ è¿™ä¸ªå¾ˆå¤šå±æ€§ä¸èƒ½å†XMLé‡Œé¢å®šä¹‰
     	this(context, attrs, android.R.attr.editTextStyle); 
     } 
     
@@ -43,7 +43,7 @@ public class ClearEditText extends EditText implements
     
     
     private void init() { 
-    	//»ñÈ¡EditTextµÄDrawableRight,¼ÙÈçÃ»ÓĞÉèÖÃÎÒÃÇ¾ÍÊ¹ÓÃÄ¬ÈÏµÄÍ¼Æ¬
+    	//è·å–EditTextçš„DrawableRight,å‡å¦‚æ²¡æœ‰è®¾ç½®æˆ‘ä»¬å°±ä½¿ç”¨é»˜è®¤çš„å›¾ç‰‡
     	mClearDrawable = getCompoundDrawables()[2]; 
         if (mClearDrawable == null) { 
         	mClearDrawable = ResourceUtils.getImageDrawableFromAssets(getContext(), "emotionstore_progresscancelbtn.png"); 
@@ -56,9 +56,9 @@ public class ClearEditText extends EditText implements
  
  
     /**
-     * ÒòÎªÎÒÃÇ²»ÄÜÖ±½Ó¸øEditTextÉèÖÃµã»÷ÊÂ¼ş£¬ËùÒÔÎÒÃÇÓÃ¼Ç×¡ÎÒÃÇ°´ÏÂµÄÎ»ÖÃÀ´Ä£Äâµã»÷ÊÂ¼ş
-     * µ±ÎÒÃÇ°´ÏÂµÄÎ»ÖÃ ÔÚ  EditTextµÄ¿í¶È - Í¼±êµ½¿Ø¼şÓÒ±ßµÄ¼ä¾à - Í¼±êµÄ¿í¶È  ºÍ
-     * EditTextµÄ¿í¶È - Í¼±êµ½¿Ø¼şÓÒ±ßµÄ¼ä¾àÖ®¼äÎÒÃÇ¾ÍËãµã»÷ÁËÍ¼±ê£¬ÊúÖ±·½ÏòÃ»ÓĞ¿¼ÂÇ
+     * å› ä¸ºæˆ‘ä»¬ä¸èƒ½ç›´æ¥ç»™EditTextè®¾ç½®ç‚¹å‡»äº‹ä»¶ï¼Œæ‰€ä»¥æˆ‘ä»¬ç”¨è®°ä½æˆ‘ä»¬æŒ‰ä¸‹çš„ä½ç½®æ¥æ¨¡æ‹Ÿç‚¹å‡»äº‹ä»¶
+     * å½“æˆ‘ä»¬æŒ‰ä¸‹çš„ä½ç½® åœ¨  EditTextçš„å®½åº¦ - å›¾æ ‡åˆ°æ§ä»¶å³è¾¹çš„é—´è· - å›¾æ ‡çš„å®½åº¦  å’Œ
+     * EditTextçš„å®½åº¦ - å›¾æ ‡åˆ°æ§ä»¶å³è¾¹çš„é—´è·ä¹‹é—´æˆ‘ä»¬å°±ç®—ç‚¹å‡»äº†å›¾æ ‡ï¼Œç«–ç›´æ–¹å‘æ²¡æœ‰è€ƒè™‘
      */
     @Override 
     public boolean onTouchEvent(MotionEvent event) { 
@@ -77,7 +77,7 @@ public class ClearEditText extends EditText implements
     } 
  
     /**
-     * µ±ClearEditText½¹µã·¢Éú±ä»¯µÄÊ±ºò£¬ÅĞ¶ÏÀïÃæ×Ö·û´®³¤¶ÈÉèÖÃÇå³ıÍ¼±êµÄÏÔÊ¾ÓëÒş²Ø
+     * å½“ClearEditTextç„¦ç‚¹å‘ç”Ÿå˜åŒ–çš„æ—¶å€™ï¼Œåˆ¤æ–­é‡Œé¢å­—ç¬¦ä¸²é•¿åº¦è®¾ç½®æ¸…é™¤å›¾æ ‡çš„æ˜¾ç¤ºä¸éšè—
      */
     @Override 
     public void onFocusChange(View v, boolean hasFocus) { 
@@ -90,7 +90,7 @@ public class ClearEditText extends EditText implements
  
  
     /**
-     * ÉèÖÃÇå³ıÍ¼±êµÄÏÔÊ¾ÓëÒş²Ø£¬µ÷ÓÃsetCompoundDrawablesÎªEditText»æÖÆÉÏÈ¥
+     * è®¾ç½®æ¸…é™¤å›¾æ ‡çš„æ˜¾ç¤ºä¸éšè—ï¼Œè°ƒç”¨setCompoundDrawablesä¸ºEditTextç»˜åˆ¶ä¸Šå»
      * @param visible
      */
     protected void setClearIconVisible(boolean visible) { 
@@ -101,7 +101,7 @@ public class ClearEditText extends EditText implements
      
     
     /**
-     * µ±ÊäÈë¿òÀïÃæÄÚÈİ·¢Éú±ä»¯µÄÊ±ºò»Øµ÷µÄ·½·¨
+     * å½“è¾“å…¥æ¡†é‡Œé¢å†…å®¹å‘ç”Ÿå˜åŒ–çš„æ—¶å€™å›è°ƒçš„æ–¹æ³•
      */
     @Override 
     public void onTextChanged(CharSequence s, int start, int count, 
@@ -122,7 +122,7 @@ public class ClearEditText extends EditText implements
     
    
     /**
-     * ÉèÖÃ»Î¶¯¶¯»­
+     * è®¾ç½®æ™ƒåŠ¨åŠ¨ç”»
      */
     public void setShakeAnimation(){
     	this.setAnimation(shakeAnimation(5));
@@ -130,8 +130,8 @@ public class ClearEditText extends EditText implements
     
     
     /**
-     * »Î¶¯¶¯»­
-     * @param counts 1ÃëÖÓ»Î¶¯¶àÉÙÏÂ
+     * æ™ƒåŠ¨åŠ¨ç”»
+     * @param counts 1ç§’é’Ÿæ™ƒåŠ¨å¤šå°‘ä¸‹
      * @return
      */
     public static Animation shakeAnimation(int counts){

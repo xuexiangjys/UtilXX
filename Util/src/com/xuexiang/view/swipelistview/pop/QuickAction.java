@@ -270,7 +270,7 @@ public class QuickAction extends PopupWindows implements OnDismissListener {
 		int dyBottom		= screenHeight - anchorRect.bottom;
 
 //		boolean onTop		= (dyTop > dyBottom) ? true : false;
-		//弹出的对话框全部朝上
+		//寮瑰嚭鐨勫璇濇鍏ㄩ儴鏈濅笂
 		boolean onTop		= true;
 
 		if (onTop) {

@@ -15,9 +15,9 @@ import android.widget.TextView;
 import java.util.LinkedList;
 
 /**
- * ÀàÃèÊö£º
- * ´´½¨ÈË£ºBob
- * ´´½¨Ê±¼ä£º2015/9/25 11:36
+ * ç±»æè¿°ï¼š
+ * åˆ›å»ºäººï¼šBob
+ * åˆ›å»ºæ—¶é—´ï¼š2015/9/25 11:36
  */
 public class TitleBar extends ViewGroup implements View.OnClickListener {
     private static final int DEFAULT_MAIN_TEXT_SIZE = 18;
@@ -405,7 +405,7 @@ public class TitleBar extends ViewGroup implements View.OnClickListener {
     }
 
     /**
-     * ¼ÆËã×´Ì¬À¸¸ß¶È¸ß¶È
+     * è®¡ç®—çŠ¶æ€æ é«˜åº¦é«˜åº¦
      * getStatusBarHeight
      * @return
      */

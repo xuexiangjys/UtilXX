@@ -3,10 +3,10 @@ package com.example.testutil;
 import com.xuexiang.app.BaseActivity;
 
 /**  
- * ´´½¨Ê±¼ä£º2016-5-30 ÏÂÎç6:53:12  
- * ÏîÄ¿Ãû³Æ£ºUtilTest  
+ * åˆ›å»ºæ—¶é—´ï¼š2016-5-30 ä¸‹åˆ6:53:12  
+ * é¡¹ç›®åç§°ï¼šUtilTest  
  * @author xuexiang
- * ÎÄ¼şÃû³Æ£ºFileActivity.java  
+ * æ–‡ä»¶åç§°ï¼šFileActivity.java  
  **/
 public class FileActivity extends BaseActivity {
 
@@ -14,7 +14,7 @@ public class FileActivity extends BaseActivity {
 	public void onCreateActivity() {
 		 setContentView(R.layout.activity_file);
 	        
-	     initActionBar("ÎÄ¼ş²Ù×÷½çÃæ");
+	     initActionBar("æ–‡ä»¶æ“ä½œç•Œé¢");
 	}
 
 }

@@ -54,7 +54,7 @@ public class OkHttpActivity extends BaseActivity implements OnClickListener{
 	private TextView content;
 	private ImageView mImageView;
 	private HoriztalProgressBarDialog mHoriztalProgressBarDialog;
-	private EditText path;						//ÎÄ¼şÂ·¾¶
+	private EditText path;						//æ–‡ä»¶è·¯å¾„
 	private final int SELECT_FILE = 1;
 	@Override
 	public void onCreateActivity() {
@@ -69,7 +69,7 @@ public class OkHttpActivity extends BaseActivity implements OnClickListener{
 		path = (EditText) findViewById(R.id.filePath);
 	}
 	
-/*******************************************×Ô¶¨Òårequest£¬·µ»ØÒ»¸ö¶ÔÏó****************************************************************************************************************************/	
+/*******************************************è‡ªå®šä¹‰requestï¼Œè¿”å›ä¸€ä¸ªå¯¹è±¡****************************************************************************************************************************/	
 	
 	private void classRequsetPost(){
 		UserInfo userinfo = new UserInfo();
@@ -112,7 +112,7 @@ public class OkHttpActivity extends BaseActivity implements OnClickListener{
 					}});
 	}
 	
-/*******************************************×Ô¶¨Òårequest£¬·µ»ØÒ»¸östring****************************************************************************************************************************/		
+/*******************************************è‡ªå®šä¹‰requestï¼Œè¿”å›ä¸€ä¸ªstring****************************************************************************************************************************/		
     private void stringRequsetPost() {    
     	VisitInfo visitInfo = new VisitInfo();
 		visitInfo.setPageNum(0);
@@ -151,7 +151,7 @@ public class OkHttpActivity extends BaseActivity implements OnClickListener{
 					}});
 	}
 	
-/*******************************************×Ô¶¨Òårequest£¬·µ»ØÒ»¸öJSONObject****************************************************************************************************************************/			
+/*******************************************è‡ªå®šä¹‰requestï¼Œè¿”å›ä¸€ä¸ªJSONObject****************************************************************************************************************************/			
    
     private void JSONObjectPost() {    
     	UserInfo userinfo = new UserInfo();
@@ -268,7 +268,7 @@ public class OkHttpActivity extends BaseActivity implements OnClickListener{
  
 
     /**
-     * Í¼Æ¬¼ÓÔØ
+     * å›¾ç‰‡åŠ è½½
      */
     private void getNetImage() {
     	 String url = "http://images.csdn.net/20150817/1.jpg";
@@ -294,10 +294,10 @@ public class OkHttpActivity extends BaseActivity implements OnClickListener{
     }
 
     /**
-     * ÎÄ¼şÏÂÔØ
+     * æ–‡ä»¶ä¸‹è½½
      */
     private void downLoadFile() {
-    	mHoriztalProgressBarDialog = new HoriztalProgressBarDialog(this, "ÕıÔÚÏÂÔØÎÄ¼ş£ºhelper.apk");
+    	mHoriztalProgressBarDialog = new HoriztalProgressBarDialog(this, "æ­£åœ¨ä¸‹è½½æ–‡ä»¶ï¼šhelper.apk");
 		mHoriztalProgressBarDialog.show();
         OkHttpUtils
                .get()
@@ -318,21 +318,21 @@ public class OkHttpActivity extends BaseActivity implements OnClickListener{
                    @Override
                    public void onResponse(File file, int id) {
                 	   mHoriztalProgressBarDialog.dismiss();
-                	   addLog("ÎÄ¼şÏÂÔØÍê±Ï£¡ÎÄ¼şÂ·¾¶ :" + file.getAbsolutePath());
+                	   addLog("æ–‡ä»¶ä¸‹è½½å®Œæ¯•ï¼æ–‡ä»¶è·¯å¾„ :" + file.getAbsolutePath());
                    }
                });
   	}
     
     /**
-     * µ¥ÎÄ¼şÉÏ´«
+     * å•æ–‡ä»¶ä¸Šä¼ 
      */
     private void singleUpLoadFile() {
     	 File file = new File(LocalFileUtil.DOWNLOAD_PATH, "helper.apk");
          if (!file.exists()) {
-             Toast("ÎÄ¼ş²»´æÔÚ£¬ÇëĞŞ¸ÄÎÄ¼şÂ·¾¶");
+             Toast("æ–‡ä»¶ä¸å­˜åœ¨ï¼Œè¯·ä¿®æ”¹æ–‡ä»¶è·¯å¾„");
              return;
          }
-         mHoriztalProgressBarDialog = new HoriztalProgressBarDialog(this, "ÕıÔÚÉÏ´«ÎÄ¼ş£ºhelper.apk");
+         mHoriztalProgressBarDialog = new HoriztalProgressBarDialog(this, "æ­£åœ¨ä¸Šä¼ æ–‡ä»¶ï¼šhelper.apk");
  		 mHoriztalProgressBarDialog.show();
     	 OkHttpUtils.post()
 			        .addFile("file", "helper.apk", file)
@@ -353,25 +353,25 @@ public class OkHttpActivity extends BaseActivity implements OnClickListener{
 						@Override
 						public void onResponse(String response, int arg1) {
 							mHoriztalProgressBarDialog.dismiss();
-		                	addLog("ÎÄ¼şÉÏ´«Íê±Ï£¡·µ»Ø½á¹û:" + response);
+		                	addLog("æ–‡ä»¶ä¸Šä¼ å®Œæ¯•ï¼è¿”å›ç»“æœ:" + response);
 						}});
 	}
     
     
-/*******************************************¶àÎÄ¼şÉÏ´«****************************************************************************************************************************/			
+/*******************************************å¤šæ–‡ä»¶ä¸Šä¼ ****************************************************************************************************************************/			
 	private void selectFile(){
 		Intent intent = new Intent(Intent.ACTION_GET_CONTENT); 
 	    intent.setType("*/*"); 
 	    intent.addCategory(Intent.CATEGORY_OPENABLE);
 	    try {
-	        startActivityForResult( Intent.createChooser(intent, "Ñ¡ÔñÉÏ´«ÎÄ¼ş"), SELECT_FILE);
+	        startActivityForResult( Intent.createChooser(intent, "é€‰æ‹©ä¸Šä¼ æ–‡ä»¶"), SELECT_FILE);
 	    } catch (android.content.ActivityNotFoundException ex) {
 	       
 	    }
 	}
 		
 	/**
-	 * Activity»Øµ÷·½·¨
+	 * Activityå›è°ƒæ–¹æ³•
 	 */
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -381,7 +381,7 @@ public class OkHttpActivity extends BaseActivity implements OnClickListener{
 	}
 	
 	/**
-	 * ´¦Àí·µ»ØµÄÎÄ¼ş
+	 * å¤„ç†è¿”å›çš„æ–‡ä»¶
 	 * @param data
 	 */
 	private void handlerActivityResult(Intent intent){
@@ -390,7 +390,7 @@ public class OkHttpActivity extends BaseActivity implements OnClickListener{
 		path.append(filePath + ",");
 	}
 	
-	// È¡µ½¾ø¶ÔÂ·¾¶
+	// å–åˆ°ç»å¯¹è·¯å¾„
 	protected String getAbsolutePath(Uri uri) {
 		// can post image
 		String[] proj = { MediaStore.Images.Media.DATA };
@@ -411,7 +411,7 @@ public class OkHttpActivity extends BaseActivity implements OnClickListener{
 		}
 				
 		Map<String, File> files = new HashMap<String, File>();
-		String[] paths = path.getText().toString().split(",");		//¸ù¾İ¶ººÅ²ğ·ÖÎÄ¼şµÄÂ·¾¶
+		String[] paths = path.getText().toString().split(",");		//æ ¹æ®é€—å·æ‹†åˆ†æ–‡ä»¶çš„è·¯å¾„
 		for (int i = 0; i < paths.length; i++) {
 			File file = FileUtils.createNewFile(paths[i]);
 			if (file != null) {
@@ -423,7 +423,7 @@ public class OkHttpActivity extends BaseActivity implements OnClickListener{
 	}
 	
 	/**
-	 * ¶àÎÄ¼şÉÏ´«
+	 * å¤šæ–‡ä»¶ä¸Šä¼ 
 	 */
 	public void multiFileUpload(Map<String, File> files) {
 		Iterator<Map.Entry<String, File>> it = files.entrySet().iterator();
@@ -435,13 +435,13 @@ public class OkHttpActivity extends BaseActivity implements OnClickListener{
 			   }
 		   }
         if (files.isEmpty()) {
-            Toast("²»´æÔÚÓĞĞ§ÎÄ¼ş£¬ÇëĞŞ¸ÄÎÄ¼şÂ·¾¶");
+            Toast("ä¸å­˜åœ¨æœ‰æ•ˆæ–‡ä»¶ï¼Œè¯·ä¿®æ”¹æ–‡ä»¶è·¯å¾„");
             return;
         }
-        mHoriztalProgressBarDialog = new HoriztalProgressBarDialog(this, "¶àÎÄ¼şÉÏ´«ÖĞ...");
+        mHoriztalProgressBarDialog = new HoriztalProgressBarDialog(this, "å¤šæ–‡ä»¶ä¸Šä¼ ä¸­...");
 		mHoriztalProgressBarDialog.show();
 		Map<String, String> param = new HashMap<String, String>();
-		param.put("content", "ÕâÊÇÉÏ´«µÄ²ÎÊı:ÕâÊÇokhttpÉÏ´«µÄÎÄ¼ş");
+		param.put("content", "è¿™æ˜¯ä¸Šä¼ çš„å‚æ•°:è¿™æ˜¯okhttpä¸Šä¼ çš„æ–‡ä»¶");
         OkHttpUtils.post()
                 .files("file", files)
                 .url(HttpConsts.UPLPAD_URL)
@@ -462,7 +462,7 @@ public class OkHttpActivity extends BaseActivity implements OnClickListener{
 					@Override
 					public void onResponse(String response, int arg1) {
 						mHoriztalProgressBarDialog.dismiss();
-	                	addLog("ÎÄ¼şÉÏ´«Íê±Ï£¡·µ»Ø½á¹û:" + response);
+	                	addLog("æ–‡ä»¶ä¸Šä¼ å®Œæ¯•ï¼è¿”å›ç»“æœ:" + response);
 					}});
     }
 	

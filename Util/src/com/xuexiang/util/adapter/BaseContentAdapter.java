@@ -12,7 +12,7 @@ import android.widget.BaseAdapter;
 import android.widget.Toast;
 
 /**
- * »ùÀàÊÊÅäÆ÷
+ * åŸºç±»é€‚é…å™¨
  * @author xx
  * @param <T>
  * TODO
@@ -69,9 +69,9 @@ public abstract class BaseContentAdapter<T> extends BaseAdapter{
 
 	
 	/**
-	 * ¸ù¾İ·Ö¸ô·û½«String×ª»»ÎªList
+	 * æ ¹æ®åˆ†éš”ç¬¦å°†Stringè½¬æ¢ä¸ºList
 	 * @param str
-	 * @param separator ·Ö¸ô·û
+	 * @param separator åˆ†éš”ç¬¦
 	 * @return
 	 */
 	public List<String> StringToList(String str, String separator){
@@ -81,7 +81,7 @@ public abstract class BaseContentAdapter<T> extends BaseAdapter{
 	}
 	
 	/**
-	 * ¸ù¾İ·Ö¸ô·û½«List×ª»»ÎªString
+	 * æ ¹æ®åˆ†éš”ç¬¦å°†Listè½¬æ¢ä¸ºString
 	 * @param list
 	 * @param separator
 	 * @return

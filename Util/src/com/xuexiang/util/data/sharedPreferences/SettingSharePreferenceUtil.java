@@ -4,11 +4,11 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.text.TextUtils;
 
-/** ÉèÖÃÏî¹ÜÀí
+/** è®¾ç½®é¡¹ç®¡ç†
   * @ClassName: SharePreferenceUtil
   * @Description: TODO
   * @author smile
-  * @date 2014-6-10 ÏÂÎç4:20:14
+  * @date 2014-6-10 ä¸‹åˆ4:20:14
   */
 @SuppressLint("CommitPrefEdits")
 public class SettingSharePreferenceUtil extends BaseSharedPreferencesUtil{
@@ -96,26 +96,26 @@ public class SettingSharePreferenceUtil extends BaseSharedPreferencesUtil{
 	}
 	
 	/**
-	 * ÊÇ·ñÔÊĞíÍÆËÍÍ¨Öª
+	 * æ˜¯å¦å…è®¸æ¨é€é€šçŸ¥
 	 */
 	public boolean isAllowPushNotify() {
 		return getBoolean(SHARED_KEY_NOTIFY, true);
 	}
 	/**
-	 * ÊÇ·ñÔÊĞíÉùÒô
+	 * æ˜¯å¦å…è®¸å£°éŸ³
 	 */
 	public boolean isAllowVoice() {
 		return getBoolean(SHARED_KEY_VOICE, true);
 	}
 	/**
-	 * ÊÇ·ñÔÊĞíÕğ¶¯
+	 * æ˜¯å¦å…è®¸éœ‡åŠ¨
 	 */
 	public boolean isAllowVibrate() {
 		return getBoolean(SHARED_KEY_VIBRATE, true);
 	}
 
 	/**
-	 * ÊÇ·ñµ÷ÊÔÄ£Ê½
+	 * æ˜¯å¦è°ƒè¯•æ¨¡å¼
 	 */
 	public boolean isDebugMode() {
 		return getBoolean(SHARED_KEY_DEBUGMODE, false);

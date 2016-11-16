@@ -38,7 +38,7 @@ public class CustomDataBaseActivity extends BaseActivity implements OnClickListe
 		case R.id.add:
 			Student student = new Student();
 			student.setUsername("xuexiang");
-			student.setSex("ÄÐ");
+			student.setSex("ç”·");
 			student.setAge(23);
 //			student.setScore(100);
 			

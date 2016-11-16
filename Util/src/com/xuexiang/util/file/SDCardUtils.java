@@ -20,7 +20,7 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 
 /**
- * SDcard²Ù×÷¹¤¾ßÀà
+ * SDcardæ“ä½œå·¥å…·ç±»
  *
  * @author jingle1267@163.com
  */
@@ -36,7 +36,7 @@ public final class SDCardUtils {
     /**
      * Check the SD card
      *
-     * @return ÊÇ·ñ´æÔÚSDCard
+     * @return æ˜¯å¦å­˜åœ¨SDCard
      */
     public static boolean checkSDCardAvailable() {
         return android.os.Environment.getExternalStorageState().equals(
@@ -46,9 +46,9 @@ public final class SDCardUtils {
     /**
      * Check if the file is exists
      *
-     * @param filePath ÎÄ¼şÂ·¾¶
-     * @param fileName ÎÄ¼şÃû
-     * @return ÊÇ·ñ´æÔÚÎÄ¼ş
+     * @param filePath æ–‡ä»¶è·¯å¾„
+     * @param fileName æ–‡ä»¶å
+     * @return æ˜¯å¦å­˜åœ¨æ–‡ä»¶
      */
     public static boolean isFileExistsInSDCard(String filePath, String fileName) {
         boolean flag = false;
@@ -64,10 +64,10 @@ public final class SDCardUtils {
     /**
      * Write file to SD card
      *
-     * @param filePath ÎÄ¼şÂ·¾¶
-     * @param filename ÎÄ¼şÃû
-     * @param content  ÄÚÈİ
-     * @return ÊÇ·ñ±£´æ³É¹¦
+     * @param filePath æ–‡ä»¶è·¯å¾„
+     * @param filename æ–‡ä»¶å
+     * @param content  å†…å®¹
+     * @return æ˜¯å¦ä¿å­˜æˆåŠŸ
      * @throws Exception
      */
     public static boolean saveFileToSDCard(String filePath, String filename,
@@ -93,7 +93,7 @@ public final class SDCardUtils {
      * @param fileName String PATH =
      *                 Environment.getExternalStorageDirectory().getAbsolutePath() +
      *                 "/dirName";
-     * @return ByteÊı×é
+     * @return Byteæ•°ç»„
      */
     public static byte[] readFileFromSDCard(String filePath, String fileName) {
         byte[] buffer = null;
@@ -115,10 +115,10 @@ public final class SDCardUtils {
     /**
      * Delete file
      *
-     * @param filePath ÎÄ¼şÂ·¾¶
+     * @param filePath æ–‡ä»¶è·¯å¾„
      * @param fileName filePath =
      *                 android.os.Environment.getExternalStorageDirectory().getPath()
-     * @return ÊÇ·ñÉ¾³ı³É¹¦
+     * @return æ˜¯å¦åˆ é™¤æˆåŠŸ
      */
     public static boolean deleteSDFile(String filePath, String fileName) {
         File file = new File(filePath + "/" + fileName);

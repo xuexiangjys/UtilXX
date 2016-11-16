@@ -109,10 +109,10 @@ public class MyHoriztalProgressBar2 extends ProgressBar {
         Paint paint = new Paint();
         paint.setColor(mUnReachColor);
         paint.setStrokeWidth(2 * mProgressbarHeight);
-        //�?��的半�?        canvas.drawArc(mRectf, 90, 180, false, paint);
-        //直线
+        //寮?ご鐨勫崐鍦?        canvas.drawArc(mRectf, 90, 180, false, paint);
+        //鐩寸嚎
         canvas.drawLine(mProgressbarRadius, 0, mRealWidth - mProgressbarRadius, 0, paint);
-        //结尾的半�?        canvas.translate(mRealWidth - mProgressbarHeight, 0);
+        //缁撳熬鐨勫崐鍦?        canvas.translate(mRealWidth - mProgressbarHeight, 0);
         canvas.drawCircle(mProgressbarRadius, mProgressbarRadius, mProgressbarRadius, paint);
         return bitmap;
     }

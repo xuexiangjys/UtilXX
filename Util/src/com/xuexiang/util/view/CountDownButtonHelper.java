@@ -5,15 +5,15 @@ import android.util.Log;
 import android.widget.Button;
 
 /**
- * µ¹¼ÆÊ±Button°ïÖúÀà
+ * å€’è®¡æ—¶Buttonå¸®åŠ©ç±»
  * 
  * @author xx
  */
 public class CountDownButtonHelper {
 
-	// µ¹¼ÆÊ±timer
+	// å€’è®¡æ—¶timer
 	private CountDownTimer countDownTimer;
-	// ¼ÆÊ±½áÊøµÄ»Øµ÷½Ó¿Ú
+	// è®¡æ—¶ç»“æŸçš„å›è°ƒæ¥å£
 	private OnFinishListener listener;
 
 	private Button button;
@@ -26,13 +26,13 @@ public class CountDownButtonHelper {
 	/**
 	 * 
 	 * @param button
-	 *            ĞèÒªÏÔÊ¾µ¹¼ÆÊ±µÄButton
+	 *            éœ€è¦æ˜¾ç¤ºå€’è®¡æ—¶çš„Button
 	 * @param defaultString
-	 *            Ä¬ÈÏÏÔÊ¾µÄ×Ö·û´®
+	 *            é»˜è®¤æ˜¾ç¤ºçš„å­—ç¬¦ä¸²
 	 * @param max
-	 *            ĞèÒª½øĞĞµ¹¼ÆÊ±µÄ×î´óÖµ,µ¥Î»ÊÇÃë
+	 *            éœ€è¦è¿›è¡Œå€’è®¡æ—¶çš„æœ€å¤§å€¼,å•ä½æ˜¯ç§’
 	 * @param interval
-	 *            µ¹¼ÆÊ±µÄ¼ä¸ô£¬µ¥Î»ÊÇÃë
+	 *            å€’è®¡æ—¶çš„é—´éš”ï¼Œå•ä½æ˜¯ç§’
 	 */
 	public CountDownButtonHelper(final Button button,
 			final String defaultString, int max, int interval) {
@@ -41,17 +41,17 @@ public class CountDownButtonHelper {
 		this.defaultString = defaultString;
 		this.max = max;
 		this.interval = interval;
-		// ÓÉÓÚCountDownTimer²¢²»ÊÇ×¼È·¼ÆÊ±£¬ÔÚonTick·½·¨µ÷ÓÃµÄÊ±ºò£¬time»áÓĞ1-10ms×óÓÒµÄÎó²î£¬Õâ»áµ¼ÖÂ×îºóÒ»Ãë²»»áµ÷ÓÃonTick()
-		// Òò´Ë£¬ÉèÖÃ¼ä¸ôµÄÊ±ºò£¬Ä¬ÈÏ¼õÈ¥ÁË10ms£¬´Ó¶ø¼õÈ¥Îó²î¡£
-		// ¾­¹ıÒÔÉÏµÄÎ¢µ÷£¬×îºóÒ»ÃëµÄÏÔÊ¾Ê±¼ä»áÓÉÓÚ10msÑÓ³ÙµÄ»ıÀÛ£¬µ¼ÖÂÏÔÊ¾Ê±¼ä±È1s³¤max*10msµÄÊ±¼ä£¬ÆäËûÊ±¼äµÄÏÔÊ¾Õı³£,×ÜÊ±¼äÕı³£
+		// ç”±äºCountDownTimerå¹¶ä¸æ˜¯å‡†ç¡®è®¡æ—¶ï¼Œåœ¨onTickæ–¹æ³•è°ƒç”¨çš„æ—¶å€™ï¼Œtimeä¼šæœ‰1-10mså·¦å³çš„è¯¯å·®ï¼Œè¿™ä¼šå¯¼è‡´æœ€åä¸€ç§’ä¸ä¼šè°ƒç”¨onTick()
+		// å› æ­¤ï¼Œè®¾ç½®é—´éš”çš„æ—¶å€™ï¼Œé»˜è®¤å‡å»äº†10msï¼Œä»è€Œå‡å»è¯¯å·®ã€‚
+		// ç»è¿‡ä»¥ä¸Šçš„å¾®è°ƒï¼Œæœ€åä¸€ç§’çš„æ˜¾ç¤ºæ—¶é—´ä¼šç”±äº10mså»¶è¿Ÿçš„ç§¯ç´¯ï¼Œå¯¼è‡´æ˜¾ç¤ºæ—¶é—´æ¯”1sé•¿max*10msçš„æ—¶é—´ï¼Œå…¶ä»–æ—¶é—´çš„æ˜¾ç¤ºæ­£å¸¸,æ€»æ—¶é—´æ­£å¸¸
 		countDownTimer = new CountDownTimer(max * 1000, interval * 1000 - 10) {
 
 			@Override
 			public void onTick(long time) {
-				// µÚÒ»´Îµ÷ÓÃ»áÓĞ1-10msµÄÎó²î£¬Òò´ËĞèÒª+15ms£¬·ÀÖ¹µÚÒ»¸öÊı²»ÏÔÊ¾£¬µÚ¶ş¸öÊıÏÔÊ¾2s
+				// ç¬¬ä¸€æ¬¡è°ƒç”¨ä¼šæœ‰1-10msçš„è¯¯å·®ï¼Œå› æ­¤éœ€è¦+15msï¼Œé˜²æ­¢ç¬¬ä¸€ä¸ªæ•°ä¸æ˜¾ç¤ºï¼Œç¬¬äºŒä¸ªæ•°æ˜¾ç¤º2s
 				curtime=time;
 				button.setText(defaultString + "(" + ((time + 15) / 1000)
-						+ "Ãë)");
+						+ "ç§’)");
 				Log.d("CountDownButtonHelper", "time = " + (time) + " text = "
 						+ ((time + 15) / 1000));
 			}
@@ -68,7 +68,7 @@ public class CountDownButtonHelper {
 	}
 
 	/**
-	 * ¿ªÊ¼µ¹¼ÆÊ±
+	 * å¼€å§‹å€’è®¡æ—¶
 	 */
 	public void start() {
 		button.setEnabled(false);
@@ -76,7 +76,7 @@ public class CountDownButtonHelper {
 	}
 
 	/**
-	 * ÉèÖÃµ¹¼ÆÊ±½áÊøµÄ¼àÌıÆ÷
+	 * è®¾ç½®å€’è®¡æ—¶ç»“æŸçš„ç›‘å¬å™¨
 	 * 
 	 * @param listener
 	 */
@@ -85,7 +85,7 @@ public class CountDownButtonHelper {
 	}
 
 	/**
-	 * ¼ÆÊ±½áÊøµÄ»Øµ÷½Ó¿Ú
+	 * è®¡æ—¶ç»“æŸçš„å›è°ƒæ¥å£
 	 * 
 	 * @author zhaokaiqiang
 	 * 
@@ -95,7 +95,7 @@ public class CountDownButtonHelper {
 	}
 		
 	/**
-	 * ºÍactivityµÄonDestroy()·½·¨Í¬²½
+	 * å’Œactivityçš„onDestroy()æ–¹æ³•åŒæ­¥
 	 */
 	public void onDestroy() {
 		if (countDownTimer != null) {

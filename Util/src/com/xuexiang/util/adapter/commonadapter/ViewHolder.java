@@ -17,7 +17,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 /**
- * Í¨ÓÃ ViewHolder »º´æÀà
+ * é€šç”¨ ViewHolder ç¼“å­˜ç±»
  *
  */
 public class ViewHolder {
@@ -37,7 +37,7 @@ public class ViewHolder {
     }
 
     /**
-     * ÄÃµ½Ò»¸öViewHolder¶ÔÏó
+     * æ‹¿åˆ°ä¸€ä¸ªViewHolderå¯¹è±¡
      *
      * @param context
      * @param convertView
@@ -49,7 +49,7 @@ public class ViewHolder {
     public static ViewHolder get(Context context, View convertView,ViewGroup parent, int layoutId, int position)
     {
         if (convertView == null){
-            //´´½¨ViewHolder¶ÔÏó ,²¢×öView»º´æ
+            //åˆ›å»ºViewHolderå¯¹è±¡ ,å¹¶åšViewç¼“å­˜
             return new ViewHolder(context, parent, layoutId, position);
         }
         return (ViewHolder)convertView.getTag();
@@ -62,7 +62,7 @@ public class ViewHolder {
 
 
     /**
-     * Í¨¹ı¿Ø¼şµÄId»ñÈ¡¶ÔÓÚµÄ¿Ø¼ş£¬Èç¹ûÃ»ÓĞÔò¼ÓÈëviews
+     * é€šè¿‡æ§ä»¶çš„Idè·å–å¯¹äºçš„æ§ä»¶ï¼Œå¦‚æœæ²¡æœ‰åˆ™åŠ å…¥views
      *
      * @param viewId
      * @return
@@ -80,7 +80,7 @@ public class ViewHolder {
 
 
     /**
-     * ÎªTextViewÉèÖÃ×Ö·û´®
+     * ä¸ºTextViewè®¾ç½®å­—ç¬¦ä¸²
      *
      * @param viewId
      * @param text
@@ -94,7 +94,7 @@ public class ViewHolder {
     }
 
     /**
-     * ÎªTextViewÉèÖÃ×Ö·û´®
+     * ä¸ºTextViewè®¾ç½®å­—ç¬¦ä¸²
      *
      * @param viewId
      * @param text
@@ -137,7 +137,7 @@ public class ViewHolder {
 
 
     /**
-     * ÎªImageViewÉèÖÃÍ¼Æ¬
+     * ä¸ºImageViewè®¾ç½®å›¾ç‰‡
      *  setImageResource
      * @param viewId
      * @param drawableId
@@ -170,7 +170,7 @@ public class ViewHolder {
     }
 
     /**
-     * ÎªImageViewÉèÖÃÍ¼Æ¬
+     * ä¸ºImageViewè®¾ç½®å›¾ç‰‡
      *  setImageBitmap
      * @param viewId
      * @return
@@ -184,7 +184,7 @@ public class ViewHolder {
 
 
     /**
-     * ÉèÖÃviewµÄ¿É¼ûĞÔ
+     * è®¾ç½®viewçš„å¯è§æ€§
      * @param viewId
      * @param visibility
      */
@@ -196,7 +196,7 @@ public class ViewHolder {
     }
 
     /**
-     * ÎªviewÉèÖÃ¼àÌıÊÂ¼ş
+     * ä¸ºviewè®¾ç½®ç›‘å¬äº‹ä»¶
      * @param viewId
      * @param listener
      */
@@ -213,7 +213,7 @@ public class ViewHolder {
     }
 
     /**
-     * ÉèÖÃviewµÄ±³¾°ÑÕÉ«
+     * è®¾ç½®viewçš„èƒŒæ™¯é¢œè‰²
      * @param viewId
      * @param colorId
      */

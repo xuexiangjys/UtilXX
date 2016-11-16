@@ -31,7 +31,7 @@ public class FadingActionbarNoParallaxActivity extends ActionBarActivity {
             .actionBarBackground(R.drawable.ab_background)
             .headerLayout(R.layout.fadingactionbar_header)
             .contentLayout(R.layout.activity_fadingactionbarscrollview)
-            .parallax(false);//设置没有视差效果，就是说移动的时候顶部的图片随内容上移，无层次感
+            .parallax(false);//璁剧疆娌℃湁瑙嗗樊鏁堟灉锛屽氨鏄绉诲姩鐨勬椂鍊欓《閮ㄧ殑鍥剧墖闅忓唴瀹逛笂绉伙紝鏃犲眰娆℃劅
         
         setContentView(helper.createView(this));
         helper.initActionBar(this);

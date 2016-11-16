@@ -6,10 +6,10 @@ import android.view.MotionEvent;
 import android.widget.AbsListView;
 
 /**  
- * ´´½¨Ê±¼ä£º2016-6-12 ÏÂÎç11:16:16  
- * ÏîÄ¿Ãû³Æ£ºUtil  
+ * åˆ›å»ºæ—¶é—´ï¼š2016-6-12 ä¸‹åˆ11:16:16  
+ * é¡¹ç›®åç§°ï¼šUtil  
  * @author xuexiang
- * ÎÄ¼şÃû³Æ£ºPullToShowBase.java  
+ * æ–‡ä»¶åç§°ï¼šPullToShowBase.java  
  **/
 public abstract class PullToShowBase extends PullBase {
 	  private float downY = 0F;

@@ -65,7 +65,7 @@ public class CustomTextView extends TextView {
         drawable.setStroke(strokeWidth, strokeColor);
         
         if (normalSolidColor != 0 && selectedSolidColor != 0) {
-            //设置state_selected状态时，和正常状态时文字的颜色
+            //璁剧疆state_selected鐘舵�佹椂锛屽拰姝ｅ父鐘舵�佹椂鏂囧瓧鐨勯鑹�
             int[][] states = new int[3][1];
             states[0] = new int[]{android.R.attr.state_selected};
             states[1] = new int[]{android.R.attr.state_pressed};
@@ -98,7 +98,7 @@ public class CustomTextView extends TextView {
 
 
         if (normalTextColor != 0 && selectedTextColor != 0) {
-            //设置state_selected状态时，和正常状态时文字的颜色
+            //璁剧疆state_selected鐘舵�佹椂锛屽拰姝ｅ父鐘舵�佹椂鏂囧瓧鐨勯鑹�
             int[][] states = new int[3][1];
             states[0] = new int[]{android.R.attr.state_selected};
             states[1] = new int[]{android.R.attr.state_pressed};
@@ -116,7 +116,7 @@ public class CustomTextView extends TextView {
 
 
     /**
-     * 设置填充图片
+     * 璁剧疆濉厖鍥剧墖
      *
      * @param drawableId  drawable id
      */
@@ -136,9 +136,9 @@ public class CustomTextView extends TextView {
 
     /**
      *
-     * 设置填充颜色
+     * 璁剧疆濉厖棰滆壊
      *
-     * @param colorId   颜色id
+     * @param colorId   棰滆壊id
      */
     public void setSolidColor(int colorId) {
         drawable.setColor(colorId);
@@ -146,12 +146,12 @@ public class CustomTextView extends TextView {
     }
 
     /**
-     * 设置圆角弧度
+     * 璁剧疆鍦嗚寮у害
      *
-     * @param leftTopRadius         左上角弧度
-     * @param leftBottomRadius      左下角弧度
-     * @param rightTopRadius        右上角弧度
-     * @param rightBottomRadius     右下角弧度
+     * @param leftTopRadius         宸︿笂瑙掑姬搴�
+     * @param leftBottomRadius      宸︿笅瑙掑姬搴�
+     * @param rightTopRadius        鍙充笂瑙掑姬搴�
+     * @param rightBottomRadius     鍙充笅瑙掑姬搴�
      */
     public void setRadius(int leftTopRadius, int leftBottomRadius, int rightTopRadius, int rightBottomRadius) {
         drawable.setCornerRadii(new float[]{leftTopRadius, leftTopRadius, rightTopRadius, rightTopRadius, rightBottomRadius, rightBottomRadius, leftBottomRadius, leftBottomRadius});
@@ -159,10 +159,10 @@ public class CustomTextView extends TextView {
     }
 
     /**
-     * 设置边框颜色及宽度
+     * 璁剧疆杈规棰滆壊鍙婂搴�
      *
-     * @param strokeWidth      边框宽度
-     * @param colorId          边框颜色 id
+     * @param strokeWidth      杈规瀹藉害
+     * @param colorId          杈规棰滆壊 id
      */
     public void setStrokeColorAndWidth(int strokeWidth,int colorId){
         drawable.setStroke(strokeWidth, colorId);
@@ -171,15 +171,15 @@ public class CustomTextView extends TextView {
 
 
     /**
-     * 设置textView选中状态颜色
+     * 璁剧疆textView閫変腑鐘舵�侀鑹�
      *
-     * @param normalTextColor     正常状态颜色
-     * @param selectedTextColor   按下状态颜色
+     * @param normalTextColor     姝ｅ父鐘舵�侀鑹�
+     * @param selectedTextColor   鎸変笅鐘舵�侀鑹�
      */
     public void setSelectedTextColor(int normalTextColor,int selectedTextColor) {
     	
         if (normalTextColor != 0 && selectedTextColor != 0) {
-            //设置state_selected状态时，和正常状态时文字的颜色
+            //璁剧疆state_selected鐘舵�佹椂锛屽拰姝ｅ父鐘舵�佹椂鏂囧瓧鐨勯鑹�
             setClickable(true);
             int[][] states = new int[3][1];
             states[0] = new int[]{android.R.attr.state_selected};
@@ -194,14 +194,14 @@ public class CustomTextView extends TextView {
     }
     
     /**
-     * 设置textView选中状态颜色
+     * 璁剧疆textView閫変腑鐘舵�侀鑹�
      *
-     * @param normalTextColor     正常状态颜色
-     * @param selectedTextColor   按下状态颜色
+     * @param normalTextColor     姝ｅ父鐘舵�侀鑹�
+     * @param selectedTextColor   鎸変笅鐘舵�侀鑹�
      */
     public void setSelectedSolidColor(int normalSolidColor,int selectedSolidColor) {
     	if (normalSolidColor != 0 && selectedSolidColor != 0) {
-            //设置state_selected状态时，和正常状态时文字的颜色
+            //璁剧疆state_selected鐘舵�佹椂锛屽拰姝ｅ父鐘舵�佹椂鏂囧瓧鐨勯鑹�
             setClickable(true);
             int[][] states = new int[3][1];
             states[0] = new int[]{android.R.attr.state_selected};

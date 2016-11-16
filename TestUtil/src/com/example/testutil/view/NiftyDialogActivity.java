@@ -9,10 +9,10 @@ import com.xuexiang.view.dialogeffects.Effectstype;
 import com.xuexiang.view.dialogeffects.NiftyDialogBuilder;
 
 /**  
- * ´´½¨Ê±¼ä£º2016-6-9 ÏÂÎç11:34:13  
- * ÏîÄ¿Ãû³Æ£ºUtilTest  
+ * åˆ›å»ºæ—¶é—´ï¼š2016-6-9 ä¸‹åˆ11:34:13  
+ * é¡¹ç›®åç§°ï¼šUtilTest  
  * @author xuexiang
- * ÎÄ¼şÃû³Æ£ºNiftyDialogActivity.java  
+ * æ–‡ä»¶åç§°ï¼šNiftyDialogActivity.java  
  **/
 public class NiftyDialogActivity extends BaseActivity {
 

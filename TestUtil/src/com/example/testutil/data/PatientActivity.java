@@ -42,12 +42,12 @@ public class PatientActivity extends Activity {
             public void onClick(View arg0) {
             	Patient pat = new Patient();
                 pat.setName("baocui");
-                pat.setAge("23岁");
+                pat.setAge("23宀�");
                 int row=mDatabaseService.add(pat);
                 if(row>0){
-                	 Toast.makeText(PatientActivity.this, "插入成功", Toast.LENGTH_SHORT).show();
+                	 Toast.makeText(PatientActivity.this, "鎻掑叆鎴愬姛", Toast.LENGTH_SHORT).show();
                 }else{
-                	 Toast.makeText(PatientActivity.this, "插入失败", Toast.LENGTH_SHORT).show();
+                	 Toast.makeText(PatientActivity.this, "鎻掑叆澶辫触", Toast.LENGTH_SHORT).show();
                 }
                
             }

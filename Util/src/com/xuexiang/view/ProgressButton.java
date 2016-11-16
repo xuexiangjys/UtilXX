@@ -73,7 +73,7 @@ public class ProgressButton extends View {
         mProgerssRotateAnim = new RotateAnimation(0f, 360f, Animation.RELATIVE_TO_SELF,
                 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
         mProgerssRotateAnim.setRepeatCount(-1);
-        mProgerssRotateAnim.setInterpolator(new LinearInterpolator());//不停�?        mProgerssRotateAnim.setFillAfter(true);//停在�?��
+        mProgerssRotateAnim.setInterpolator(new LinearInterpolator());//涓嶅仠椤?        mProgerssRotateAnim.setFillAfter(true);//鍋滃湪鏈?悗
         paintRectF = new Paint();
         paintRectF.setAntiAlias(true);
         paintRectF.setStyle(Paint.Style.FILL);
@@ -99,7 +99,7 @@ public class ProgressButton extends View {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
 
-        RectF mRectF = new RectF();                           //RectF对象
+        RectF mRectF = new RectF();                           //RectF瀵硅薄
         mRectF.left = mPadding + mSpac;
         mRectF.top = mPadding;
         mRectF.right = getMeasuredWidth() - mPadding - mSpac;

@@ -56,10 +56,10 @@ import com.xuexiang.util.view.Colors;
 import com.xuexiang.view.materialdesign.view.ButtonFloat;
 
 /**  
- * ´´½¨Ê±¼ä£º2016-5-28 ÉÏÎç12:54:52  
- * ÏîÄ¿Ãû³Æ£ºTestUtil  
+ * åˆ›å»ºæ—¶é—´ï¼š2016-5-28 ä¸Šåˆ12:54:52  
+ * é¡¹ç›®åç§°ï¼šTestUtil  
  * @author xuexiang
- * ÎÄ¼şÃû³Æ£ºViewActivity.java  
+ * æ–‡ä»¶åç§°ï¼šViewActivity.java  
  **/
 public class ViewActivity extends BaseActivity implements OnClickListener{
 	private ButtonFloat mButtonFloat;
@@ -67,13 +67,13 @@ public class ViewActivity extends BaseActivity implements OnClickListener{
 	public void onCreateActivity() {
 	    setContentView(R.layout.activity_view);
 	        
-	    initActionBar("×Ô¶¨Òå¿Ø¼ş½çÃæ");
+	    initActionBar("è‡ªå®šä¹‰æ§ä»¶ç•Œé¢");
 		
 	    initFloatButton();
 	}
 
 	/**
-	 * ³õÊ¼»¯Ğü¸¡°´Å¥
+	 * åˆå§‹åŒ–æ‚¬æµ®æŒ‰é’®
 	 */
 	private void initFloatButton() {
 		mButtonFloat = (ButtonFloat) findViewById(R.id.buttonfloat);
@@ -82,7 +82,7 @@ public class ViewActivity extends BaseActivity implements OnClickListener{
 		mButtonFloat.setOnClickListener(new OnClickListener() {			
 			@Override
 			public void onClick(View v) {
-				mToastUtil.showToast("µã»÷ÁËĞü¸¡°´Å¥");	
+				mToastUtil.showToast("ç‚¹å‡»äº†æ‚¬æµ®æŒ‰é’®");	
 			}
 		});
 	}
@@ -92,237 +92,237 @@ public class ViewActivity extends BaseActivity implements OnClickListener{
 		Intent intent = new Intent();
 		switch ( v.getId()) {
 		case R.id.btn_customview:
-			mToastUtil.showToast("µã»÷ÁËCustomViewActivity");
+			mToastUtil.showToast("ç‚¹å‡»äº†CustomViewActivity");
         	intent.setClass(this, CustomViewActivity.class);
             startActivity(intent);			
 			break;
 		case R.id.btn_materialdesign:
-			mToastUtil.showToast("µã»÷ÁËMaterialDesignActivity");
+			mToastUtil.showToast("ç‚¹å‡»äº†MaterialDesignActivity");
         	intent.setClass(this, MaterialDesignActivity.class);
             startActivity(intent);			
 			break;
 		case R.id.btn_actionsheet:
-			mToastUtil.showToast("µã»÷ÁËActionSheetActivity");
+			mToastUtil.showToast("ç‚¹å‡»äº†ActionSheetActivity");
         	intent.setClass(this, ActionSheetActivity.class);
             startActivity(intent);			
 			break;
 		case R.id.btn_gesturepassword:
-			mToastUtil.showToast("µã»÷ÁËGesturePasswordWelComeActivity");
+			mToastUtil.showToast("ç‚¹å‡»äº†GesturePasswordWelComeActivity");
         	intent.setClass(this, GesturePasswordWelComeActivity.class);
             startActivity(intent);			
 			break;
 		case R.id.btn_PatternView:
-			mToastUtil.showToast("µã»÷ÁËPatternViewActivity");
+			mToastUtil.showToast("ç‚¹å‡»äº†PatternViewActivity");
         	intent.setClass(this, PatternViewActivity.class);
             startActivity(intent);			
 			break;
 		case R.id.btn_loadingdialog:
-			mToastUtil.showToast("µã»÷ÁËLoadingDialogActivity");
+			mToastUtil.showToast("ç‚¹å‡»äº†LoadingDialogActivity");
         	intent.setClass(this, LoadingDialogActivity.class);
             startActivity(intent);			
 			break;			
 		case R.id.btn_titleBar:
-			mToastUtil.showToast("µã»÷ÁËTitleBarActivity");
+			mToastUtil.showToast("ç‚¹å‡»äº†TitleBarActivity");
         	intent.setClass(this, TitleBarActivity.class);
             startActivity(intent);			
 			break;
 		case R.id.btn_niftydialog:
-			mToastUtil.showToast("µã»÷ÁËNiftyDialogActivity");
+			mToastUtil.showToast("ç‚¹å‡»äº†NiftyDialogActivity");
         	intent.setClass(this, NiftyDialogActivity.class);
             startActivity(intent);			
 			break;			
 		case R.id.btn_flagtextview:
-			mToastUtil.showToast("µã»÷ÁËFlagTextViewActivity");
+			mToastUtil.showToast("ç‚¹å‡»äº†FlagTextViewActivity");
         	intent.setClass(this, FlagTextViewActivity.class);
             startActivity(intent);			
 			break;
 		case R.id.btn_headerlayout:
-			mToastUtil.showToast("µã»÷ÁËHeaderLayoutActivity");
+			mToastUtil.showToast("ç‚¹å‡»äº†HeaderLayoutActivity");
         	intent.setClass(this, HeaderLayoutActivity.class);
             startActivity(intent);			
 			break;
 		case R.id.btn_residemenu:
-			mToastUtil.showToast("µã»÷ÁËResideMenuMainFragmentPagerActivity");
+			mToastUtil.showToast("ç‚¹å‡»äº†ResideMenuMainFragmentPagerActivity");
         	intent.setClass(this, ResideMenuMainFragmentPagerActivity.class);
             startActivity(intent);			
 			break;	
 		case R.id.btn_pickerui:
-			mToastUtil.showToast("µã»÷ÁËPickerUIActivity");
+			mToastUtil.showToast("ç‚¹å‡»äº†PickerUIActivity");
         	intent.setClass(this, PickerUIActivity.class);
             startActivity(intent);			
 			break;	
 		case R.id.btn_pulllayout:
-			mToastUtil.showToast("µã»÷ÁËPullLayoutActivity");
+			mToastUtil.showToast("ç‚¹å‡»äº†PullLayoutActivity");
         	intent.setClass(this, PullLayoutActivity.class);
             startActivity(intent);			
 			break;	
 		case R.id.btn_dropdownmenu:
-			mToastUtil.showToast("µã»÷ÁËDropDownMenuActivity");
+			mToastUtil.showToast("ç‚¹å‡»äº†DropDownMenuActivity");
         	intent.setClass(this, DropDownMenuActivity.class);
             startActivity(intent);			
 			break;	
 		case R.id.btn_swipemenu:
-			mToastUtil.showToast("µã»÷ÁËSwipeMenuActivity");
+			mToastUtil.showToast("ç‚¹å‡»äº†SwipeMenuActivity");
         	intent.setClass(this, SwipeMenuActivity.class);
             startActivity(intent);			
 			break;	
 		case R.id.btn_tabbar:
-			mToastUtil.showToast("µã»÷ÁËTabBarActivity");
+			mToastUtil.showToast("ç‚¹å‡»äº†TabBarActivity");
         	intent.setClass(this, TabBarActivity.class);
             startActivity(intent);			
 			break;	
 		case R.id.btn_expandableview:
-			mToastUtil.showToast("µã»÷ÁËExpandableViewActivity");
+			mToastUtil.showToast("ç‚¹å‡»äº†ExpandableViewActivity");
         	intent.setClass(this, ExpandableViewActivity.class);
             startActivity(intent);			
 			break;	
 		case R.id.btn_viewpaperadv:
-			mToastUtil.showToast("µã»÷ÁËViewpaperAdvActivity");
+			mToastUtil.showToast("ç‚¹å‡»äº†ViewpaperAdvActivity");
         	intent.setClass(this, ViewpaperAdvActivity.class);
             startActivity(intent);			
 			break;	
 		case R.id.btn_imagecycleview:
-			mToastUtil.showToast("µã»÷ÁËImageCycleViewActivity");
+			mToastUtil.showToast("ç‚¹å‡»äº†ImageCycleViewActivity");
         	intent.setClass(this, ImageCycleViewActivity.class);
             startActivity(intent);			
 			break;			
 		case R.id.btn_progressbutton:
-			mToastUtil.showToast("µã»÷ÁËProgressButtonActivity");
+			mToastUtil.showToast("ç‚¹å‡»äº†ProgressButtonActivity");
         	intent.setClass(this, ProgressButtonActivity.class);
             startActivity(intent);			
 			break;	
 		case R.id.btn_customprogressbar:
-			mToastUtil.showToast("µã»÷ÁËCustomProgressBarActivity");
+			mToastUtil.showToast("ç‚¹å‡»äº†CustomProgressBarActivity");
         	intent.setClass(this, CustomProgressBarActivity.class);
             startActivity(intent);			
 			break;	
 		case R.id.btn_customtextView:
-			mToastUtil.showToast("µã»÷ÁËCustomTextViewActivity");
+			mToastUtil.showToast("ç‚¹å‡»äº†CustomTextViewActivity");
         	intent.setClass(this, CustomTextViewActivity.class);
             startActivity(intent);			
 			break;	
 		case R.id.btn_passwordinput:
-			mToastUtil.showToast("µã»÷ÁËPassWordInputActivity");
+			mToastUtil.showToast("ç‚¹å‡»äº†PassWordInputActivity");
         	intent.setClass(this, PassWordInputActivity.class);
             startActivity(intent);			
 			break;	
 		case R.id.btn_timeline:
-			mToastUtil.showToast("µã»÷ÁËTimeLineActivity");
+			mToastUtil.showToast("ç‚¹å‡»äº†TimeLineActivity");
         	intent.setClass(this, TimeLineActivity.class);
             startActivity(intent);			
 			break;	
 		case R.id.btn_guidview:
-			mToastUtil.showToast("µã»÷ÁËGuidViewActivity");
+			mToastUtil.showToast("ç‚¹å‡»äº†GuidViewActivity");
         	intent.setClass(this, GuidViewActivity.class);
             startActivity(intent);			
 			break;	
 		case R.id.btn_userguidview:
-			mToastUtil.showToast("µã»÷ÁËUserGuideViewActivity");
+			mToastUtil.showToast("ç‚¹å‡»äº†UserGuideViewActivity");
         	intent.setClass(this, UserGuideViewActivity.class);
             startActivity(intent);			
 			break;	
 		case R.id.btn_swipelistview:
-			mToastUtil.showToast("µã»÷ÁËSwipeListViewActivity");
+			mToastUtil.showToast("ç‚¹å‡»äº†SwipeListViewActivity");
         	intent.setClass(this, SwipeListViewActivity.class);
             startActivity(intent);			
 			break;				
 		case R.id.btn_swipedismisslistview:
-			mToastUtil.showToast("µã»÷ÁËSwipeDismissListViewActivity");
+			mToastUtil.showToast("ç‚¹å‡»äº†SwipeDismissListViewActivity");
         	intent.setClass(this, SwipeDismissListViewActivity.class);
             startActivity(intent);			
 			break;				
 		case R.id.btn_viewPaperandgridview:
-			mToastUtil.showToast("µã»÷ÁËViewPaperAndGridViewActivity");
+			mToastUtil.showToast("ç‚¹å‡»äº†ViewPaperAndGridViewActivity");
         	intent.setClass(this, ViewPaperAndGridViewActivity.class);
             startActivity(intent);			
 			break;	
 		case R.id.btn_draggridView:
-			mToastUtil.showToast("µã»÷ÁËDragGridViewActivity");
+			mToastUtil.showToast("ç‚¹å‡»äº†DragGridViewActivity");
         	intent.setClass(this, DragGridViewActivity.class);
             startActivity(intent);			
 			break;			
 		case R.id.btn_flowtaglayout:
-			mToastUtil.showToast("µã»÷ÁËFlowTagLayoutActivity");
+			mToastUtil.showToast("ç‚¹å‡»äº†FlowTagLayoutActivity");
         	intent.setClass(this, FlowTagLayoutActivity.class);
             startActivity(intent);			
 			break;				
 		case R.id.btn_circularfloatingactionmenu:
-			mToastUtil.showToast("µã»÷ÁËCircularFloatingActionMenuActivity");
+			mToastUtil.showToast("ç‚¹å‡»äº†CircularFloatingActionMenuActivity");
         	intent.setClass(this, CircularFloatingActionMenuActivity.class);
             startActivity(intent);			
 			break;
 		case R.id.btn_rangesliderview:
-			mToastUtil.showToast("µã»÷ÁËRangeSliderViewActivity");
+			mToastUtil.showToast("ç‚¹å‡»äº†RangeSliderViewActivity");
         	intent.setClass(this, RangeSliderViewActivity.class);
             startActivity(intent);			
 			break;
 		case R.id.btn_snakbar:
-			mToastUtil.showToast("µã»÷ÁËSnakbarActivity");
+			mToastUtil.showToast("ç‚¹å‡»äº†SnakbarActivity");
         	intent.setClass(this, SnakbarActivity.class);
             startActivity(intent);			
 			break;
 		case R.id.btn_flipshareview:
-			mToastUtil.showToast("µã»÷ÁËFlipShareViewActivity");
+			mToastUtil.showToast("ç‚¹å‡»äº†FlipShareViewActivity");
         	intent.setClass(this, FlipShareViewActivity.class);
             startActivity(intent);			
 			break;
 		case R.id.btn_satellitemenu:
-			mToastUtil.showToast("µã»÷ÁËSatelliteMenuActivity");
+			mToastUtil.showToast("ç‚¹å‡»äº†SatelliteMenuActivity");
         	intent.setClass(this, SatelliteMenuActivity.class);
             startActivity(intent);			
 			break;
 		case R.id.btn_floatingactionmenu:
-			mToastUtil.showToast("µã»÷ÁËFloatingActionMenuActivity");
+			mToastUtil.showToast("ç‚¹å‡»äº†FloatingActionMenuActivity");
         	intent.setClass(this, FloatingActionMenuActivity.class);
             startActivity(intent);			
 			break;
 		case R.id.btn_avloadingindicatorview:
-			mToastUtil.showToast("µã»÷ÁËAVLoadingIndicatorViewActivity");
+			mToastUtil.showToast("ç‚¹å‡»äº†AVLoadingIndicatorViewActivity");
         	intent.setClass(this, AVLoadingIndicatorViewActivity.class);
             startActivity(intent);			
 			break;
 		case R.id.btn_multiplestatusview:
-			mToastUtil.showToast("µã»÷ÁËMultipleStatusViewActivity");
+			mToastUtil.showToast("ç‚¹å‡»äº†MultipleStatusViewActivity");
         	intent.setClass(this, MultipleStatusViewActivity.class);
             startActivity(intent);			
 			break;
 		case R.id.btn_niftynotification:
-			mToastUtil.showToast("µã»÷ÁËNiftyNotificationActivity");
+			mToastUtil.showToast("ç‚¹å‡»äº†NiftyNotificationActivity");
         	intent.setClass(this, NiftyNotificationActivity.class);
             startActivity(intent);			
 			break;
 		case R.id.btn_stepsview:
-			mToastUtil.showToast("µã»÷ÁËStepsViewActivity");
+			mToastUtil.showToast("ç‚¹å‡»äº†StepsViewActivity");
         	intent.setClass(this, StepsViewActivity.class);
             startActivity(intent);			
 			break;
 		case R.id.btn_systembartint:
-			mToastUtil.showToast("µã»÷ÁËSystemBarTintManagerActivity");
+			mToastUtil.showToast("ç‚¹å‡»äº†SystemBarTintManagerActivity");
         	intent.setClass(this, SystemBarTintManagerActivity.class);
             startActivity(intent);			
 			break;
 		case R.id.btn_fadingactionbar:
-			mToastUtil.showToast("µã»÷ÁËFadingActionbarHomeActivity");
+			mToastUtil.showToast("ç‚¹å‡»äº†FadingActionbarHomeActivity");
         	intent.setClass(this, FadingActionbarHomeActivity.class);
             startActivity(intent);			
 			break;
 		case R.id.btn_ioniconview:
-			mToastUtil.showToast("µã»÷ÁËIonIconViewActivity");
+			mToastUtil.showToast("ç‚¹å‡»äº†IonIconViewActivity");
         	intent.setClass(this, IonIconViewActivity.class);
             startActivity(intent);			
 			break;
 		case R.id.btn_morphingbutton:
-			mToastUtil.showToast("µã»÷ÁËMorphingButtonActivity");
+			mToastUtil.showToast("ç‚¹å‡»äº†MorphingButtonActivity");
         	intent.setClass(this, MorphingButtonActivity.class);
             startActivity(intent);			
 			break;
 		case R.id.btn_materialishprogress:
-			mToastUtil.showToast("µã»÷ÁËMaterialishProgressActivity");
+			mToastUtil.showToast("ç‚¹å‡»äº†MaterialishProgressActivity");
         	intent.setClass(this, MaterialishProgressActivity.class);
             startActivity(intent);			
 			break;
 		case R.id.btn_sweetalert:
-			mToastUtil.showToast("µã»÷ÁËSweetAlertActivity");
+			mToastUtil.showToast("ç‚¹å‡»äº†SweetAlertActivity");
         	intent.setClass(this, SweetAlertActivity.class);
             startActivity(intent);			
 			break;

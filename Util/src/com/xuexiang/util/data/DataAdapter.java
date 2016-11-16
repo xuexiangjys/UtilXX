@@ -7,11 +7,11 @@ import java.util.List;
 
 /** 
  * @author  XX 
- * @date ´´½¨Ê±¼ä£º2016-5-25 ÉÏÎç11:15:02 
+ * @date åˆ›å»ºæ—¶é—´ï¼š2016-5-25 ä¸Šåˆ11:15:02 
  */
 
 public class DataAdapter<T> extends DataObserver {
-	//´æ·ÅÊı¾İµÄ¼¯ºÏ
+	//å­˜æ”¾æ•°æ®çš„é›†åˆ
 	private List<T> mItems = new ArrayList<T>();
 	
 	public void setItems(List<T> items) {
@@ -24,7 +24,7 @@ public class DataAdapter<T> extends DataObserver {
 		
 	}
 	/**
-	 * »ñÈ¡list¼¯ºÏµÄ¶ÔÏó
+	 * è·å–listé›†åˆçš„å¯¹è±¡
 	 */
 	public List<T> getItems() {
 		return mItems;
@@ -47,7 +47,7 @@ public class DataAdapter<T> extends DataObserver {
 	}
 	
 	/**
-	 * ±éÀúµÄ·½Ê½É¾³ılistÖĞµÄ×ÓÏî
+	 * éå†çš„æ–¹å¼åˆ é™¤listä¸­çš„å­é¡¹
 	 */
 	public void removeFromList(T item) {
 		if (item != null) {
@@ -62,14 +62,14 @@ public class DataAdapter<T> extends DataObserver {
 	}
 	
 	/**
-	 * »ñÈ¡list¼¯ºÏµÄµü´úÆ÷
+	 * è·å–listé›†åˆçš„è¿­ä»£å™¨
 	 */
 	public Iterator<T> getIterator() {
 		return mItems.iterator();
 	}
 	
 	/**
-	 * Çå¿Õlist²Ù×÷
+	 * æ¸…ç©ºlistæ“ä½œ
 	 */
 	public void clear() {
 		if (hasData()) {
@@ -82,14 +82,14 @@ public class DataAdapter<T> extends DataObserver {
 	}
 
 	/**
-	 * »ñÈ¡list¼¯ºÏ×ÓÏîµÄ´óĞ¡
+	 * è·å–listé›†åˆå­é¡¹çš„å¤§å°
 	 */
 	public int size() {
 		return mItems.size();
 	}
 
 	/**
-	 * list¼¯ºÏÀïÊÇ·ñÓĞÊı¾İ
+	 * listé›†åˆé‡Œæ˜¯å¦æœ‰æ•°æ®
 	 */
 	public boolean hasData() {
 		return mItems != null && size() > 0;

@@ -6,7 +6,7 @@ import android.preference.ListPreference;
 import android.preference.PreferenceManager;
 
 /** 
- * SharedPreferences¹ÜÀí¹¤¾ß»ùÀà
+ * SharedPreferencesç®¡ç†å·¥å…·åŸºç±»
  * @author  XX 
  */
 
@@ -16,9 +16,9 @@ public class BaseSharedPreferencesUtil {
 	public Context mContext;
 	
 	/**
-	 * »ñÈ¡×Ô¶¨ÒåµÄSharedPreferences
+	 * è·å–è‡ªå®šä¹‰çš„SharedPreferences
 	 * @param context
-	 * @param spName ×Ô¶¨ÒåSharedPreferencesÃû
+	 * @param spName è‡ªå®šä¹‰SharedPreferenceså
 	 */
 	public BaseSharedPreferencesUtil(Context context, String spName) {
 		mContext = context;
@@ -27,7 +27,7 @@ public class BaseSharedPreferencesUtil {
 	}
 	
 	/**
-	 * »ñÈ¡ÏµÍ³Ä¬ÈÏµÄSharedPreferences
+	 * è·å–ç³»ç»Ÿé»˜è®¤çš„SharedPreferences
 	 * @param context
 	 */
 	public BaseSharedPreferencesUtil(Context context) {
@@ -38,7 +38,7 @@ public class BaseSharedPreferencesUtil {
 	
 	
 	/**
-	 * ×Ô¶¨ÒåsharedpreferencesÉèÖÃbooleanÖµ
+	 * è‡ªå®šä¹‰sharedpreferencesè®¾ç½®booleanå€¼
 	 * @param key
 	 * @param value
 	 */
@@ -48,7 +48,7 @@ public class BaseSharedPreferencesUtil {
 	}
 	
 	/**
-	 * ×Ô¶¨ÒåsharedpreferencesÉèÖÃfloatÖµ
+	 * è‡ªå®šä¹‰sharedpreferencesè®¾ç½®floatå€¼
 	 * @param key
 	 * @param value
 	 */
@@ -58,7 +58,7 @@ public class BaseSharedPreferencesUtil {
 	}
 	
 	/**
-	 * ×Ô¶¨ÒåsharedpreferencesÉèÖÃlongÖµ
+	 * è‡ªå®šä¹‰sharedpreferencesè®¾ç½®longå€¼
 	 * @param key
 	 * @param value
 	 */
@@ -68,7 +68,7 @@ public class BaseSharedPreferencesUtil {
 	}
 	
 	/**
-	 * ×Ô¶¨ÒåsharedpreferencesÉèÖÃStringÖµ
+	 * è‡ªå®šä¹‰sharedpreferencesè®¾ç½®Stringå€¼
 	 * @param key
 	 * @param value
 	 */
@@ -78,7 +78,7 @@ public class BaseSharedPreferencesUtil {
 	}
 	
 	/**
-	 * ×Ô¶¨ÒåsharedpreferencesÉèÖÃintÖµ
+	 * è‡ªå®šä¹‰sharedpreferencesè®¾ç½®intå€¼
 	 * @param key
 	 * @param value
 	 */
@@ -94,7 +94,7 @@ public class BaseSharedPreferencesUtil {
 	}	
 	
 	/**
-	 * Çå¿ÕÏú»Ù
+	 * æ¸…ç©ºé”€æ¯
 	 */
 	public void clear() {
 		mEditor.clear();
@@ -104,7 +104,7 @@ public class BaseSharedPreferencesUtil {
 /*****************************************************************************************************************************************************************/
 	
 	/**
-	 * ¸ù¾İkey»ñÈ¡booleanÖµ
+	 * æ ¹æ®keyè·å–booleanå€¼
 	 * @param key
 	 * @param defValue
 	 * @return
@@ -114,7 +114,7 @@ public class BaseSharedPreferencesUtil {
 	}
 	
 	/**
-	 * ¸ù¾İkey»ñÈ¡longÖµ
+	 * æ ¹æ®keyè·å–longå€¼
 	 * @param key
 	 * @param defValue
 	 * @return
@@ -124,7 +124,7 @@ public class BaseSharedPreferencesUtil {
 	}
 	
 	/**
-	 * ¸ù¾İkey»ñÈ¡floatÖµ
+	 * æ ¹æ®keyè·å–floatå€¼
 	 * @param key
 	 * @param defValue
 	 * @return
@@ -134,7 +134,7 @@ public class BaseSharedPreferencesUtil {
 	}
 	
 	/**
-	 * ¸ù¾İkey»ñÈ¡StringÖµ
+	 * æ ¹æ®keyè·å–Stringå€¼
 	 * @param key
 	 * @param defValue
 	 * @return
@@ -144,7 +144,7 @@ public class BaseSharedPreferencesUtil {
 	}
 	
 	/**
-	 * ¸ù¾İkey»ñÈ¡intÖµ
+	 * æ ¹æ®keyè·å–intå€¼
 	 * @param key
 	 * @param defValue
 	 * @return
@@ -155,8 +155,8 @@ public class BaseSharedPreferencesUtil {
 	
 	
 	/**
-	 * ¸ù¾İ×ÊÔ´id»ñÈ¡StringÖµ
-	 * @param resourceid ×ÊÔ´id
+	 * æ ¹æ®èµ„æºidè·å–Stringå€¼
+	 * @param resourceid èµ„æºid
 	 * @return
 	 */
 	public String getResourceString(int resourceId) {
@@ -164,7 +164,7 @@ public class BaseSharedPreferencesUtil {
 	}
 	
 	/**
-	 * »ñÈ¡ListPreferenceÖĞÊäÈëµÄ¾ßÌåµÄÖµ
+	 * è·å–ListPreferenceä¸­è¾“å…¥çš„å…·ä½“çš„å€¼
 	 * @param listpref
 	 * @param matchvalue
 	 * @return

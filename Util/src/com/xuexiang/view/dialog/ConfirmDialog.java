@@ -14,7 +14,7 @@ import android.widget.TextView;
 
 import com.xuexiang.util.resource.RUtils;
 /**
- * 自定义退出弹出框
+ * 鑷畾涔夐��鍑哄脊鍑烘
  * @author xx
  */
 public class ConfirmDialog {
@@ -36,7 +36,7 @@ public class ConfirmDialog {
 
 	public void showDialog(){
 		dialog=new AlertDialog.Builder(context).create();
-		//点击外部区域不能取消dialog 
+		//鐐瑰嚮澶栭儴鍖哄煙涓嶈兘鍙栨秷dialog 
 		dialog.setCanceledOnTouchOutside(false);
 		dialog.setOnKeyListener(keylistener);
 		dialog.show();

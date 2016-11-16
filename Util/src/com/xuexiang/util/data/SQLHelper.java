@@ -16,7 +16,7 @@ import com.xuexiang.util.app.AppUtils;
 
 /**
  * Created by linlongxin on 2016/1/5.
- * æ•°æ®åº“è¾…åŠ©ç±»
+ * Êı¾İ¿â¸¨ÖúÀà
  */
 public class SQLHelper extends SQLiteOpenHelper {
 
@@ -25,7 +25,7 @@ public class SQLHelper extends SQLiteOpenHelper {
     private static Context mContext;
     private static SQLiteDatabase database;
 
-    //keyæ˜¯è¡¨çš„name,valueæ˜¯è¡¨çš„sqlå»ºè¡¨è¯­å¥
+    //keyÊÇ±íµÄname,valueÊÇ±íµÄsql½¨±íÓï¾ä
     private Map<String, String> tables = new HashMap<String, String>();
 
     public SQLHelper(Context context, String dataBaseName) {
@@ -35,7 +35,7 @@ public class SQLHelper extends SQLiteOpenHelper {
     }
 
     /**
-     * æ·»åŠ è¡¨çš„åˆ›å»º
+     * Ìí¼Ó±íµÄ´´½¨
      *
      * @param tableName
      * @param sql
@@ -48,7 +48,7 @@ public class SQLHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        //åˆ›å»ºæ‰€æœ‰çš„è¡¨
+        //´´½¨ËùÓĞµÄ±í
         for (Map.Entry<String, String> table : tables.entrySet()) {
             db.execSQL(table.getValue());
         }
@@ -103,7 +103,7 @@ public class SQLHelper extends SQLiteOpenHelper {
     }
 
     /**
-     * æ›´æ–°æ•°æ®åº“é€šè¿‡APPç‰ˆæœ¬
+     * ¸üĞÂÊı¾İ¿âÍ¨¹ıAPP°æ±¾
      *
      * @param db
      * @param oldVersion
@@ -123,7 +123,7 @@ public class SQLHelper extends SQLiteOpenHelper {
     }
 
     /**
-     * åˆ é™¤æ•°æ®åº“
+     * É¾³ıÊı¾İ¿â
      */
     public boolean deleteDataBase() {
         return mContext.deleteDatabase(DATABASE_NAME);

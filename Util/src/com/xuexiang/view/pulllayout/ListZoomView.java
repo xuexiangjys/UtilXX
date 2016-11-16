@@ -13,10 +13,10 @@ import android.widget.ListView;
 import com.xuexiang.util.resource.MResource;
 
 /**  
- * ´´½¨Ê±¼ä£º2016-6-12 ÏÂÎç11:20:41  
- * ÏîÄ¿Ãû³Æ£ºUtil  
+ * åˆ›å»ºæ—¶é—´ï¼š2016-6-12 ä¸‹åˆ11:20:41  
+ * é¡¹ç›®åç§°ï¼šUtil  
  * @author xuexiang
- * ÎÄ¼şÃû³Æ£ºListZoomView.java  
+ * æ–‡ä»¶åç§°ï¼šListZoomView.java  
  **/
 public class ListZoomView extends ListView {
 	  private int maxHeaderHeight = 0;

@@ -20,7 +20,7 @@ import android.content.Context;
 import android.content.Intent;
 
 /**
- * Æô¶¯³ÌĞò¹ã²¥½ÓÊÕÆ÷
+ * å¯åŠ¨ç¨‹åºå¹¿æ’­æ¥æ”¶å™¨
  *
  * @author zhenguo
  */

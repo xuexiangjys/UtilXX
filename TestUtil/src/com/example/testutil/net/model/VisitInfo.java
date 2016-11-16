@@ -3,11 +3,11 @@ package com.example.testutil.net.model;
 import java.io.Serializable;
 
 /**  
- * ÉÏÃÅ·şÎñĞÅÏ¢Àà
- * ´´½¨Ê±¼ä£º2016-3-1 ÏÂÎç11:11:04  
- * ÏîÄ¿Ãû³Æ£ºhelpertest  
+ * ä¸Šé—¨æœåŠ¡ä¿¡æ¯ç±»
+ * åˆ›å»ºæ—¶é—´ï¼š2016-3-1 ä¸‹åˆ11:11:04  
+ * é¡¹ç›®åç§°ï¼šhelpertest  
  * @author xuexiang
- * ÎÄ¼şÃû³Æ£ºVisitInfo.java  
+ * æ–‡ä»¶åç§°ï¼šVisitInfo.java  
  **/
 public class VisitInfo extends HttpConnect implements Serializable{
 
@@ -18,23 +18,23 @@ public class VisitInfo extends HttpConnect implements Serializable{
 	
 	/** Key*/
 	private int id;
-	/** ×÷Õß*/
+	/** ä½œè€…*/
 	private UserInfo author;
-	/** ·şÎñ±êÌâ*/
+	/** æœåŠ¡æ ‡é¢˜*/
 	private String title;
-	/** ·şÎñÄÚÈİÃèÊö*/
+	/** æœåŠ¡å†…å®¹æè¿°*/
 	private String description;
-	/** ½éÉÜÍ¼Æ¬*/
+	/** ä»‹ç»å›¾ç‰‡*/
 	private String piclist;		
-	/** ÔŞµÄ¸öÊı*/
+	/** èµçš„ä¸ªæ•°*/
 	private int love;
-	/** ·¢²¼Ê±¼ä*/
+	/** å‘å¸ƒæ—¶é—´*/
 	private String createtime;
-	/** ·¢²¼ÈËµØÖ·*/
+	/** å‘å¸ƒäººåœ°å€*/
 	private String address;
-	/** ·şÎñ·ÑÓÃ*/
+	/** æœåŠ¡è´¹ç”¨*/
 	private double price;	
-	/** ·şÎñÀàĞÍ*/
+	/** æœåŠ¡ç±»å‹*/
 	private String visittype;
 		
 	public int getId() {

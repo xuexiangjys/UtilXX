@@ -26,7 +26,7 @@ public final class RSAUtils
     private static String RSA = "RSA";
 
     /**
-     * Ëæ»úÉú³ÉRSAÃÜÔ¿¶Ô(Ä¬ÈÏÃÜÔ¿³¤¶ÈÎª1024)
+     * éšæœºç”ŸæˆRSAå¯†é’¥å¯¹(é»˜è®¤å¯†é’¥é•¿åº¦ä¸º1024)
      * 
      * @return
      */
@@ -36,11 +36,11 @@ public final class RSAUtils
     }
 
     /**
-     * Ëæ»úÉú³ÉRSAÃÜÔ¿¶Ô
+     * éšæœºç”ŸæˆRSAå¯†é’¥å¯¹
      * 
      * @param keyLength
-     *            ÃÜÔ¿³¤¶È£¬·¶Î§£º512¡«2048<br>
-     *            Ò»°ã1024
+     *            å¯†é’¥é•¿åº¦ï¼ŒèŒƒå›´ï¼š512ï½2048<br>
+     *            ä¸€èˆ¬1024
      * @return
      */
     public static KeyPair generateRSAKeyPair(int keyLength)
@@ -58,23 +58,23 @@ public final class RSAUtils
     }
 
     /**
-     * ÓÃ¹«Ô¿¼ÓÃÜ <br>
-     * Ã¿´Î¼ÓÃÜµÄ×Ö½ÚÊı£¬²»ÄÜ³¬¹ıÃÜÔ¿µÄ³¤¶ÈÖµ¼õÈ¥11
+     * ç”¨å…¬é’¥åŠ å¯† <br>
+     * æ¯æ¬¡åŠ å¯†çš„å­—èŠ‚æ•°ï¼Œä¸èƒ½è¶…è¿‡å¯†é’¥çš„é•¿åº¦å€¼å‡å»11
      * 
      * @param data
-     *            Ğè¼ÓÃÜÊı¾İµÄbyteÊı¾İ
+     *            éœ€åŠ å¯†æ•°æ®çš„byteæ•°æ®
      * @param pubKey
-     *            ¹«Ô¿
-     * @return ¼ÓÃÜºóµÄbyteĞÍÊı¾İ
+     *            å…¬é’¥
+     * @return åŠ å¯†åçš„byteå‹æ•°æ®
      */
     public static byte[] encryptData(byte[] data, PublicKey publicKey)
     {
         try
         {
             Cipher cipher = Cipher.getInstance(RSA);
-            // ±àÂëÇ°Éè¶¨±àÂë·½Ê½¼°ÃÜÔ¿
+            // ç¼–ç å‰è®¾å®šç¼–ç æ–¹å¼åŠå¯†é’¥
             cipher.init(Cipher.ENCRYPT_MODE, publicKey);
-            // ´«Èë±àÂëÊı¾İ²¢·µ»Ø±àÂë½á¹û
+            // ä¼ å…¥ç¼–ç æ•°æ®å¹¶è¿”å›ç¼–ç ç»“æœ
             return cipher.doFinal(data);
         } catch (Exception e)
         {
@@ -84,12 +84,12 @@ public final class RSAUtils
     }
 
     /**
-     * ÓÃË½Ô¿½âÃÜ
+     * ç”¨ç§é’¥è§£å¯†
      * 
      * @param encryptedData
-     *            ¾­¹ıencryptedData()¼ÓÃÜ·µ»ØµÄbyteÊı¾İ
+     *            ç»è¿‡encryptedData()åŠ å¯†è¿”å›çš„byteæ•°æ®
      * @param privateKey
-     *            Ë½Ô¿
+     *            ç§é’¥
      * @return
      */
     public static byte[] decryptData(byte[] encryptedData, PrivateKey privateKey)
@@ -106,7 +106,7 @@ public final class RSAUtils
     }
 
     /**
-     * Í¨¹ı¹«Ô¿byte[](publicKey.getEncoded())½«¹«Ô¿»¹Ô­£¬ÊÊÓÃÓÚRSAËã·¨
+     * é€šè¿‡å…¬é’¥byte[](publicKey.getEncoded())å°†å…¬é’¥è¿˜åŸï¼Œé€‚ç”¨äºRSAç®—æ³•
      * 
      * @param keyBytes
      * @return
@@ -123,7 +123,7 @@ public final class RSAUtils
     }
 
     /**
-     * Í¨¹ıË½Ô¿byte[]½«¹«Ô¿»¹Ô­£¬ÊÊÓÃÓÚRSAËã·¨
+     * é€šè¿‡ç§é’¥byte[]å°†å…¬é’¥è¿˜åŸï¼Œé€‚ç”¨äºRSAç®—æ³•
      * 
      * @param keyBytes
      * @return
@@ -140,7 +140,7 @@ public final class RSAUtils
     }
 
     /**
-     * Ê¹ÓÃN¡¢eÖµ»¹Ô­¹«Ô¿
+     * ä½¿ç”¨Nã€eå€¼è¿˜åŸå…¬é’¥
      * 
      * @param modulus
      * @param publicExponent
@@ -160,7 +160,7 @@ public final class RSAUtils
     }
 
     /**
-     * Ê¹ÓÃN¡¢dÖµ»¹Ô­Ë½Ô¿
+     * ä½¿ç”¨Nã€då€¼è¿˜åŸç§é’¥
      * 
      * @param modulus
      * @param privateExponent
@@ -180,12 +180,12 @@ public final class RSAUtils
     }
 
     /**
-     * ´Ó×Ö·û´®ÖĞ¼ÓÔØ¹«Ô¿
+     * ä»å­—ç¬¦ä¸²ä¸­åŠ è½½å…¬é’¥
      * 
      * @param publicKeyStr
-     *            ¹«Ô¿Êı¾İ×Ö·û´®
+     *            å…¬é’¥æ•°æ®å­—ç¬¦ä¸²
      * @throws Exception
-     *             ¼ÓÔØ¹«Ô¿Ê±²úÉúµÄÒì³£
+     *             åŠ è½½å…¬é’¥æ—¶äº§ç”Ÿçš„å¼‚å¸¸
      */
     public static PublicKey loadPublicKey(String publicKeyStr) throws Exception
     {
@@ -197,19 +197,19 @@ public final class RSAUtils
             return (RSAPublicKey) keyFactory.generatePublic(keySpec);
         } catch (NoSuchAlgorithmException e)
         {
-            throw new Exception("ÎŞ´ËËã·¨");
+            throw new Exception("æ— æ­¤ç®—æ³•");
         } catch (InvalidKeySpecException e)
         {
-            throw new Exception("¹«Ô¿·Ç·¨");
+            throw new Exception("å…¬é’¥éæ³•");
         } catch (NullPointerException e)
         {
-            throw new Exception("¹«Ô¿Êı¾İÎª¿Õ");
+            throw new Exception("å…¬é’¥æ•°æ®ä¸ºç©º");
         }
     }
 
     /**
-     * ´Ó×Ö·û´®ÖĞ¼ÓÔØË½Ô¿<br>
-     * ¼ÓÔØÊ±Ê¹ÓÃµÄÊÇPKCS8EncodedKeySpec£¨PKCS#8±àÂëµÄKeyÖ¸Áî£©¡£
+     * ä»å­—ç¬¦ä¸²ä¸­åŠ è½½ç§é’¥<br>
+     * åŠ è½½æ—¶ä½¿ç”¨çš„æ˜¯PKCS8EncodedKeySpecï¼ˆPKCS#8ç¼–ç çš„KeyæŒ‡ä»¤ï¼‰ã€‚
      * 
      * @param privateKeyStr
      * @return
@@ -226,23 +226,23 @@ public final class RSAUtils
             return (RSAPrivateKey) keyFactory.generatePrivate(keySpec);
         } catch (NoSuchAlgorithmException e)
         {
-            throw new Exception("ÎŞ´ËËã·¨");
+            throw new Exception("æ— æ­¤ç®—æ³•");
         } catch (InvalidKeySpecException e)
         {
-            throw new Exception("Ë½Ô¿·Ç·¨");
+            throw new Exception("ç§é’¥éæ³•");
         } catch (NullPointerException e)
         {
-            throw new Exception("Ë½Ô¿Êı¾İÎª¿Õ");
+            throw new Exception("ç§é’¥æ•°æ®ä¸ºç©º");
         }
     }
 
     /**
-     * ´ÓÎÄ¼şÖĞÊäÈëÁ÷ÖĞ¼ÓÔØ¹«Ô¿
+     * ä»æ–‡ä»¶ä¸­è¾“å…¥æµä¸­åŠ è½½å…¬é’¥
      * 
      * @param in
-     *            ¹«Ô¿ÊäÈëÁ÷
+     *            å…¬é’¥è¾“å…¥æµ
      * @throws Exception
-     *             ¼ÓÔØ¹«Ô¿Ê±²úÉúµÄÒì³£
+     *             åŠ è½½å…¬é’¥æ—¶äº§ç”Ÿçš„å¼‚å¸¸
      */
     public static PublicKey loadPublicKey(InputStream in) throws Exception
     {
@@ -251,19 +251,19 @@ public final class RSAUtils
             return loadPublicKey(readKey(in));
         } catch (IOException e)
         {
-            throw new Exception("¹«Ô¿Êı¾İÁ÷¶ÁÈ¡´íÎó");
+            throw new Exception("å…¬é’¥æ•°æ®æµè¯»å–é”™è¯¯");
         } catch (NullPointerException e)
         {
-            throw new Exception("¹«Ô¿ÊäÈëÁ÷Îª¿Õ");
+            throw new Exception("å…¬é’¥è¾“å…¥æµä¸ºç©º");
         }
     }
 
     /**
-     * ´ÓÎÄ¼şÖĞ¼ÓÔØË½Ô¿
+     * ä»æ–‡ä»¶ä¸­åŠ è½½ç§é’¥
      * 
      * @param keyFileName
-     *            Ë½Ô¿ÎÄ¼şÃû
-     * @return ÊÇ·ñ³É¹¦
+     *            ç§é’¥æ–‡ä»¶å
+     * @return æ˜¯å¦æˆåŠŸ
      * @throws Exception
      */
     public static PrivateKey loadPrivateKey(InputStream in) throws Exception
@@ -273,15 +273,15 @@ public final class RSAUtils
             return loadPrivateKey(readKey(in));
         } catch (IOException e)
         {
-            throw new Exception("Ë½Ô¿Êı¾İ¶ÁÈ¡´íÎó");
+            throw new Exception("ç§é’¥æ•°æ®è¯»å–é”™è¯¯");
         } catch (NullPointerException e)
         {
-            throw new Exception("Ë½Ô¿ÊäÈëÁ÷Îª¿Õ");
+            throw new Exception("ç§é’¥è¾“å…¥æµä¸ºç©º");
         }
     }
 
     /**
-     * ¶ÁÈ¡ÃÜÔ¿ĞÅÏ¢
+     * è¯»å–å¯†é’¥ä¿¡æ¯
      * 
      * @param in
      * @return
@@ -308,7 +308,7 @@ public final class RSAUtils
     }
 
     /**
-     * ´òÓ¡¹«Ô¿ĞÅÏ¢
+     * æ‰“å°å…¬é’¥ä¿¡æ¯
      * 
      * @param publicKey
      */

@@ -13,9 +13,9 @@ public abstract class BaseDBHelper<T> extends OrmLiteSqliteOpenHelper {
 		
 	/**
 	 * @param context
-	 * @param databaseName 数据库名
-	 * @param databaseVersion  数据库版本号
-	 * @param idatabase db操作接口
+	 * @param databaseName 鏁版嵁搴撳悕
+	 * @param databaseVersion  鏁版嵁搴撶増鏈彿
+	 * @param idatabase db鎿嶄綔鎺ュ彛
 	 */
 	public BaseDBHelper(Context context) {
 		super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -27,7 +27,7 @@ public abstract class BaseDBHelper<T> extends OrmLiteSqliteOpenHelper {
 	@Override
 	public abstract void onUpgrade(SQLiteDatabase db, ConnectionSource connectionSource, int oldVersion, int newVersion);
 
-	// 释放资源
+	// 閲婃斁璧勬簮
 	@Override
 	public void close() {		
 		super.close();

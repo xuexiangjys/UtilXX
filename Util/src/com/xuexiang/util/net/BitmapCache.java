@@ -13,9 +13,9 @@ public class BitmapCache implements ImageCache{
 	
 	private static BitmapCache mBitmapCache;
 	
-	//ÉèÖÃ×î´óµÄ ³ß´çÖµ	
+	//è®¾ç½®æœ€å¤§çš„ å°ºå¯¸å€¼	
 	public BitmapCache() {
-		//¹¹Ôì·½·¨ ÊµÏÖ LruCache »º´æ Í¼Æ¬	
+		//æž„é€ æ–¹æ³• å®žçŽ° LruCache ç¼“å­˜ å›¾ç‰‡	
 		int maxMemory = (int) Runtime.getRuntime().maxMemory();
 		int cacheSize = maxMemory / 8;
 		mMemoryCache = new LruCache<String,Bitmap>(cacheSize){
@@ -36,13 +36,13 @@ public class BitmapCache implements ImageCache{
 	
 	@Override
 	public Bitmap getBitmap(String url) {
-		// µÃµ½
+		// å¾—åˆ°
 		return mMemoryCache.get(url);
 	}
 
 	@Override
 	public void putBitmap(String url, Bitmap bitmap) {
-		// ÉèÖÃ
+		// è®¾ç½®
 		if(getBitmap(url) == null) {
 		   mMemoryCache.put(url, bitmap);
 		}

@@ -19,10 +19,10 @@ import com.xuexiang.view.customprogressbar.MyRoundProgressBar;
 import com.xuexiang.view.customprogressbar.MyRoundProgressBar2;
 
 /**  
- * ´´½¨Ê±¼ä£º2016-6-26 ÏÂÎç5:29:17  
- * ÏîÄ¿Ãû³Æ£ºUtilTest  
+ * åˆ›å»ºæ—¶é—´ï¼š2016-6-26 ä¸‹åˆ5:29:17  
+ * é¡¹ç›®åç§°ï¼šUtilTest  
  * @author xuexiang
- * ÎÄ¼şÃû³Æ£ºCustomProgressBarActivity.java  
+ * æ–‡ä»¶åç§°ï¼šCustomProgressBarActivity.java  
  **/
 public class CustomProgressBarActivity extends BaseActivity {
 	private MyHoriztalProgressBar progressBar1, progressBar2, progressBar3;
@@ -47,7 +47,7 @@ public class CustomProgressBarActivity extends BaseActivity {
 				cbProgress3.setProgress(msg.arg1);
 				if(msg.arg1==100){
 					isDownloading = false;
-					btnDownload.setText("ÏÂÔØ");
+					btnDownload.setText("ä¸‹è½½");
 				}
 				break;
 
@@ -144,7 +144,7 @@ public class CustomProgressBarActivity extends BaseActivity {
 		mDefaultLButton.setCallback(new LoadingButton.Callback() {
             @Override
             public void complete() {
-                Toast("ÏÂÔØÍê³É,¿ÉÒÔÔÚÕâÀïĞ´Íê³ÉµÄ»Øµ÷·½·¨");
+                Toast("ä¸‹è½½å®Œæˆ,å¯ä»¥åœ¨è¿™é‡Œå†™å®Œæˆçš„å›è°ƒæ–¹æ³•");
             }
         });
 		 
@@ -166,7 +166,7 @@ public class CustomProgressBarActivity extends BaseActivity {
 		cbProgress2.setMax(100);
 		cbProgress3.setMax(100);
 		btnDownload =  (Button) this.findViewById(R.id.btn_download);
-		btnDownload.setText("ÏÂÔØ");
+		btnDownload.setText("ä¸‹è½½");
 		btnDownload.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -174,14 +174,14 @@ public class CustomProgressBarActivity extends BaseActivity {
 				if(!isDownloading){
 					stop = false;
 					isDownloading = true;
-					btnDownload.setText("Í£Ö¹");
+					btnDownload.setText("åœæ­¢");
 					downloading(cbProgress);
 					downloading(cbProgress2);
 					downloading(cbProgress3);
 				}else{
 					isDownloading = false;
 					stop = true;
-					btnDownload.setText("ÏÂÔØ");
+					btnDownload.setText("ä¸‹è½½");
 				}
 			}
 		});

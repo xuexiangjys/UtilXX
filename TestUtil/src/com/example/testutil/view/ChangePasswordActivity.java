@@ -10,10 +10,10 @@ import com.xuexiang.view.GestureContentView;
 import com.xuexiang.view.Gesture.GestureDrawline.GestureCallBack;
 
 /**  
- * ´´½¨Ê±¼ä£º2016-5-25 ÏÂÎç11:42:27  
- * ÏîÄ¿Ãû³Æ£ºGesturePassword  
+ * åˆ›å»ºæ—¶é—´ï¼š2016-5-25 ä¸‹åˆ11:42:27  
+ * é¡¹ç›®åç§°ï¼šGesturePassword  
  * @author xuexiang
- * ÎÄ¼şÃû³Æ£ºChangePasswordActivity.java  
+ * æ–‡ä»¶åç§°ï¼šChangePasswordActivity.java  
  **/
 public class ChangePasswordActivity extends BaseActivity {
 	private FrameLayout mContainer;
@@ -48,16 +48,16 @@ public class ChangePasswordActivity extends BaseActivity {
 							mFirstPassword = inputCode;
 							mContentView.clearDrawlineState(0L);
 							isFirstInput = false;
-							Toast("ÇëÔÙÊäÈëÒ»´ÎÈ·ÈÏ£¡");
+							Toast("è¯·å†è¾“å…¥ä¸€æ¬¡ç¡®è®¤ï¼");
 						} else {
 							if (inputCode.equals(mFirstPassword)) {
 								mSettingManager.setPassword(mFirstPassword);
-								Toast("ÉèÖÃÊÖÊÆÃÜÂë³É¹¦");
+								Toast("è®¾ç½®æ‰‹åŠ¿å¯†ç æˆåŠŸ");
 								mContentView.clearDrawlineState(0L);
 								finish();
 							} else {
 								mContentView.clearDrawlineState(500L);
-								Toast("ÑéÖ¤Ê§°Ü£¬ÇëÖØĞÂÉèÖÃÊÖÊÆÃÜÂë£¡");
+								Toast("éªŒè¯å¤±è´¥ï¼Œè¯·é‡æ–°è®¾ç½®æ‰‹åŠ¿å¯†ç ï¼");
 								isFirstInput = true;
 							}
 						}
@@ -66,7 +66,7 @@ public class ChangePasswordActivity extends BaseActivity {
 
 					@Override
 					public void checkSuccess() {
-						Toast("ÑéÖ¤³É¹¦,ÇëÉèÖÃĞÂÃÜÂë£¡");			
+						Toast("éªŒè¯æˆåŠŸ,è¯·è®¾ç½®æ–°å¯†ç ï¼");			
 						mSettingManager.setPassword("");
 						mContentView.clearDrawlineState(0L);
 						refreshGestureContentView();
@@ -74,7 +74,7 @@ public class ChangePasswordActivity extends BaseActivity {
 
 					@Override
 					public void checkFail() {
-						Toast("ÑéÖ¤Ê§°Ü£¡");
+						Toast("éªŒè¯å¤±è´¥ï¼");
 						mContentView.clearDrawlineState(500L);
 					}
 				});

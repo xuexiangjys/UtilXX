@@ -17,10 +17,10 @@ import com.xuexiang.view.popwindow.PopWindow.OnItemSelectedListerner;
 import com.xuexiang.view.popwindow.TitlePopup.OnItemOnClickListener;
 
 /**  
- * ´´½¨Ê±¼ä£º2016-6-8 ÏÂÎç9:49:23  
- * ÏîÄ¿Ãû³Æ£ºUtilTest  
+ * åˆ›å»ºæ—¶é—´ï¼š2016-6-8 ä¸‹åˆ9:49:23  
+ * é¡¹ç›®åç§°ï¼šUtilTest  
  * @author xuexiang
- * ÎÄ¼şÃû³Æ£ºTitleBarActivity.java  
+ * æ–‡ä»¶åç§°ï¼šTitleBarActivity.java  
  **/
 public class TitleBarActivity extends BaseActivity implements OnClickListener {
 
@@ -38,23 +38,23 @@ public class TitleBarActivity extends BaseActivity implements OnClickListener {
 		
 		btShare = (Button) findViewById(R.id.bt_share);
         btShare.setOnClickListener(this);
-        mPopWindow = new PopWindow(this,"·ÖÏí");
+        mPopWindow = new PopWindow(this,"åˆ†äº«");
 		
 		initActionItem();
 		initTitleBarWithRightMenu("TitleBarActivity", Itemlist, new OnItemOnClickListener() {
 			@Override
 			public void onItemClick(ActionItem item, int position) {
-				Toast("Äãµã»÷ÁË"+ item.mTitle);
+				Toast("ä½ ç‚¹å‡»äº†"+ item.mTitle);
 			}
 		});
 		
 //		initActionBar();
 	}
 	private void initActionItem() {
-		Itemlist.add(new ActionItem(mContext, "Ê×Ò³", R.drawable.mm_title_btn_home_normal));
-		Itemlist.add(new ActionItem(mContext, "¹ºÎï³µ", R.drawable.mm_title_btn_cart_normal));
-		Itemlist.add(new ActionItem(mContext, "É¨Ò»É¨",  R.drawable.mm_title_btn_qrcode_normal));
-		Itemlist.add(new ActionItem(mContext, "ÎÒµÄÀÖ¾Ó", R.drawable.mm_title_btn_account_normal));
+		Itemlist.add(new ActionItem(mContext, "é¦–é¡µ", R.drawable.mm_title_btn_home_normal));
+		Itemlist.add(new ActionItem(mContext, "è´­ç‰©è½¦", R.drawable.mm_title_btn_cart_normal));
+		Itemlist.add(new ActionItem(mContext, "æ‰«ä¸€æ‰«",  R.drawable.mm_title_btn_qrcode_normal));
+		Itemlist.add(new ActionItem(mContext, "æˆ‘çš„ä¹å±…", R.drawable.mm_title_btn_account_normal));
 	}
 
 	private void initActionBar() {
@@ -62,29 +62,29 @@ public class TitleBarActivity extends BaseActivity implements OnClickListener {
 //	        mCollectView = (ImageView) mTitleBar.addAction(new TitleBar.ImageAction(R.drawable.collect) {
 //	            @Override
 //	            public void performAction(View view) {
-//	                Toast("µã»÷ÁËÊÕ²Ø");
+//	                Toast("ç‚¹å‡»äº†æ”¶è—");
 //	                mCollectView.setImageResource(R.drawable.publish);
-//	                mTitleBar.setTitle(mIsSelected ? "ÎÄÕÂÏêÇé\nÅóÓÑÈ¦" : "Ìû×ÓÏêÇé");
+//	                mTitleBar.setTitle(mIsSelected ? "æ–‡ç« è¯¦æƒ…\næœ‹å‹åœˆ" : "å¸–å­è¯¦æƒ…");
 //	                mIsSelected = !mIsSelected;
 //	            }
 //	        });
 
-	        mTitleBar.addAction(new TitleBar.TextAction("·¢²¼") {
+	        mTitleBar.addAction(new TitleBar.TextAction("å‘å¸ƒ") {
 	            @Override
 	            public void performAction(View view) {
-	                Toast("µã»÷ÁË·¢²¼");
+	                Toast("ç‚¹å‡»äº†å‘å¸ƒ");
 	            }
 	        });
 	}
 	
 	 private List<ActionItem> getShareInfo() {
 	    	List<ActionItem> list = new ArrayList<ActionItem>();
-	    	list.add(new ActionItem(mContext, "Î¢ĞÅ", R.drawable.share_weixin));
-	    	list.add(new ActionItem(mContext, "ÅóÓÑÈ¦", R.drawable.share_momment));
-	    	list.add(new ActionItem(mContext, "ĞÂÀËÎ¢²©", R.drawable.share_sina));
+	    	list.add(new ActionItem(mContext, "å¾®ä¿¡", R.drawable.share_weixin));
+	    	list.add(new ActionItem(mContext, "æœ‹å‹åœˆ", R.drawable.share_momment));
+	    	list.add(new ActionItem(mContext, "æ–°æµªå¾®åš", R.drawable.share_sina));
 	    	list.add(new ActionItem(mContext, "QQ", R.drawable.share_qq));
-	    	list.add(new ActionItem(mContext, "QQ¿Õ¼ä", R.drawable.share_qzeon));
-	    	list.add(new ActionItem(mContext, "¶ÌĞÅ", R.drawable.share_message));   	
+	    	list.add(new ActionItem(mContext, "QQç©ºé—´", R.drawable.share_qzeon));
+	    	list.add(new ActionItem(mContext, "çŸ­ä¿¡", R.drawable.share_message));   	
 	    	return list;
 	 }
 	@Override
@@ -93,7 +93,7 @@ public class TitleBarActivity extends BaseActivity implements OnClickListener {
     	mPopWindow.setOnItemSelectedListerner(new OnItemSelectedListerner(){
 			@Override
 			public void onSelected(ActionItem shareInfo) {
-				Toast.makeText(getApplicationContext(), "Äãµã»÷ÁË£º" + shareInfo.mTitle, Toast.LENGTH_SHORT).show();
+				Toast.makeText(getApplicationContext(), "ä½ ç‚¹å‡»äº†ï¼š" + shareInfo.mTitle, Toast.LENGTH_SHORT).show();
 				//mPopWindow.hide();
 			}
 		});

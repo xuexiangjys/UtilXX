@@ -42,7 +42,7 @@ public abstract class OkHttpRequest
 
 
     /**
-     * 初始化一些基本参�?url , tag , headers
+     * 鍒濆鍖栦竴浜涘熀鏈弬鏁?url , tag , headers
      */
     private void initBuilder()
     {

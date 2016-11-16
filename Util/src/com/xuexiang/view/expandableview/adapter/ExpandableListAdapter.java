@@ -29,7 +29,7 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
 	}
 
 	/**
-	 * »ñÈ¡Ò»¼¶±êÇ©×ÜÊı
+	 * è·å–ä¸€çº§æ ‡ç­¾æ€»æ•°
 	 */
 	@Override
 	public int getGroupCount() {
@@ -37,7 +37,7 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
 	}
 
 	/**
-	 * »ñÈ¡Ò»¼¶±êÇ©ÏÂ¶ş¼¶±êÇ©µÄ×ÜÊı
+	 * è·å–ä¸€çº§æ ‡ç­¾ä¸‹äºŒçº§æ ‡ç­¾çš„æ€»æ•°
 	 */
 	@Override
 	public int getChildrenCount(int groupPosition) {
@@ -45,7 +45,7 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
 	}
 
 	/**
-	 * »ñÈ¡Ò»¼¶±êÇ©ÄÚÈİ
+	 * è·å–ä¸€çº§æ ‡ç­¾å†…å®¹
 	 */
 	@Override
 	public CharSequence getGroup(int groupPosition) {
@@ -53,7 +53,7 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
 	}
 
 	/**
-	 * »ñÈ¡Ò»¼¶±êÇ©ÏÂ¶ş¼¶±êÇ©µÄÄÚÈİ
+	 * è·å–ä¸€çº§æ ‡ç­¾ä¸‹äºŒçº§æ ‡ç­¾çš„å†…å®¹
 	 */
 	@Override
 	public Object getChild(int groupPosition, int childPosition) {
@@ -61,7 +61,7 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
 	}
 
 	/**
-	 * »ñÈ¡Ò»¼¶±êÇ©µÄID
+	 * è·å–ä¸€çº§æ ‡ç­¾çš„ID
 	 */
 	@Override
 	public long getGroupId(int groupPosition) {
@@ -69,7 +69,7 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
 	}
 
 	/**
-	 * »ñÈ¡¶ş¼¶±êÇ©µÄID
+	 * è·å–äºŒçº§æ ‡ç­¾çš„ID
 	 */
 	@Override
 	public long getChildId(int groupPosition, int childPosition) {
@@ -77,7 +77,7 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
 	}
 
 	/**
-	 * Ö¸¶¨Î»ÖÃÏàÓ¦µÄ×éÊÓÍ¼
+	 * æŒ‡å®šä½ç½®ç›¸åº”çš„ç»„è§†å›¾
 	 */
 	@Override
 	public boolean hasStableIds() {
@@ -85,7 +85,7 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
 	}
 
 	/**
-	 * ¶ÔÒ»¼¶±êÇ©½øĞĞÉèÖÃ
+	 * å¯¹ä¸€çº§æ ‡ç­¾è¿›è¡Œè®¾ç½®
 	 */
 	@Override
 	public View getGroupView(int groupPosition, boolean isExpanded,
@@ -111,7 +111,7 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
 	}
 
 	/**
-	 * ¶ÔÒ»¼¶±êÇ©ÏÂµÄ¶ş¼¶±êÇ©½øĞĞÉèÖÃ
+	 * å¯¹ä¸€çº§æ ‡ç­¾ä¸‹çš„äºŒçº§æ ‡ç­¾è¿›è¡Œè®¾ç½®
 	 */
 	@Override
 	public View getChildView(int groupPosition, int childPosition,
@@ -127,7 +127,7 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
 	}
 
 	/**
-	 * µ±Ñ¡Ôñ×Ó½ÚµãµÄÊ±ºò£¬µ÷ÓÃ¸Ã·½·¨
+	 * å½“é€‰æ‹©å­èŠ‚ç‚¹çš„æ—¶å€™ï¼Œè°ƒç”¨è¯¥æ–¹æ³•
 	 */
 	@Override
 	public boolean isChildSelectable(int groupPosition, int childPosition) {

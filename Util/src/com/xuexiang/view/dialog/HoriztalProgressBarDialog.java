@@ -50,7 +50,7 @@ public class HoriztalProgressBarDialog extends AlertDialog {
 		mTitle = (TextView) findViewById(RUtils.getId(getContext(), "title"));
 		mHoriztalProgressBar = (MyHoriztalProgressBar) findViewById(RUtils.getId(getContext(), "progressbar"));
 	    if (TextUtils.isEmpty(mLoadingText)) {
-	    	mTitle.setText("ÕýÔÚ¼ÓÔØÖÐ...");
+	    	mTitle.setText("æ­£åœ¨åŠ è½½ä¸­...");
 	    } else {
 	    	mTitle.setText(mLoadingText);
 	    }

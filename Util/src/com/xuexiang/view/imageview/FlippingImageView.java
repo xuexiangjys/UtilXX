@@ -9,9 +9,9 @@ import android.widget.ImageView;
 
 import com.xuexiang.view.imageview.RotateAnimation.Mode;
 /**
- * ×óÓÒ·­×ªĞı×ªÍ¼Æ¬
+ * å·¦å³ç¿»è½¬æ—‹è½¬å›¾ç‰‡
  * @author liuxiang
- * @date 2015-1-30 ÏÂÎç5:27:02
+ * @date 2015-1-30 ä¸‹åˆ5:27:02
  * @version V1.0
  */ 
 public class FlippingImageView extends ImageView {

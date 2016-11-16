@@ -45,7 +45,7 @@ public class AsyncHttpActivity extends BaseActivity implements OnClickListener {
 	private TextView content;
 	
 	private AlertDialog mAlertDialog;
-	private EditText path;						//文件路径
+	private EditText path;						//鏂囦欢璺緞
 	private final int SELECT_FILE = 1;
 	@Override
 	public void onCreateActivity() {
@@ -60,7 +60,7 @@ public class AsyncHttpActivity extends BaseActivity implements OnClickListener {
 		path = (EditText) findViewById(R.id.filePath);
 	}
 	
-/*******************************************自定义request，返回一个对象****************************************************************************************************************************/	
+/*******************************************鑷畾涔塺equest锛岃繑鍥炰竴涓璞�****************************************************************************************************************************/	
 	
 	private void classRequsetPost(){
 		UserInfo userinfo = new UserInfo();
@@ -97,7 +97,7 @@ public class AsyncHttpActivity extends BaseActivity implements OnClickListener {
 		mHttpRequest.doGet(userRequest);
 	}
 	
-/*******************************************自定义request，返回一个string****************************************************************************************************************************/		
+/*******************************************鑷畾涔塺equest锛岃繑鍥炰竴涓猻tring****************************************************************************************************************************/		
     private void stringRequsetPost() {    
     	VisitInfo visitInfo = new VisitInfo();
 		visitInfo.setPageNum(0);
@@ -141,7 +141,7 @@ public class AsyncHttpActivity extends BaseActivity implements OnClickListener {
 	    mHttpRequest.doGet(userRequest);		
 	}
 	
-/*******************************************自定义request，返回一个JSONObject****************************************************************************************************************************/			
+/*******************************************鑷畾涔塺equest锛岃繑鍥炰竴涓狫SONObject****************************************************************************************************************************/			
    
     private void JSONObjectPost() {    
     	UserInfo userinfo = new UserInfo();
@@ -243,20 +243,20 @@ public class AsyncHttpActivity extends BaseActivity implements OnClickListener {
     	
     }
     
-    /*******************************************多文件上传****************************************************************************************************************************/			
+    /*******************************************澶氭枃浠朵笂浼�****************************************************************************************************************************/			
    	private void selectFile(){
    		Intent intent = new Intent(Intent.ACTION_GET_CONTENT); 
    	    intent.setType("*/*"); 
    	    intent.addCategory(Intent.CATEGORY_OPENABLE);
    	    try {
-   	        startActivityForResult( Intent.createChooser(intent, "选择上传文件"), SELECT_FILE);
+   	        startActivityForResult( Intent.createChooser(intent, "閫夋嫨涓婁紶鏂囦欢"), SELECT_FILE);
    	    } catch (android.content.ActivityNotFoundException ex) {
    	       
    	    }
    	}
    		
    	/**
-   	 * Activity回调方法
+   	 * Activity鍥炶皟鏂规硶
    	 */
    	@Override
    	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -266,7 +266,7 @@ public class AsyncHttpActivity extends BaseActivity implements OnClickListener {
    	}
    	
    	/**
-   	 * 处理返回的文件
+   	 * 澶勭悊杩斿洖鐨勬枃浠�
    	 * @param data
    	 */
    	private void handlerActivityResult(Intent intent){
@@ -277,7 +277,7 @@ public class AsyncHttpActivity extends BaseActivity implements OnClickListener {
    		path.append(filePath + ",");
    	}
    	
-   	// 取到绝对路径
+   	// 鍙栧埌缁濆璺緞
    	protected String getAbsolutePath(Uri uri) {
    		// can post image
    		String[] proj = { MediaStore.Images.Media.DATA };
@@ -298,35 +298,35 @@ public class AsyncHttpActivity extends BaseActivity implements OnClickListener {
    		}
    		
    		List<File> list = new ArrayList<File>();
-		String[] paths = path.getText().toString().split(",");		//根据逗号拆分文件的路径
+		String[] paths = path.getText().toString().split(",");		//鏍规嵁閫楀彿鎷嗗垎鏂囦欢鐨勮矾寰�
 		for(int i = 0; i < paths.length; i++) {
 			File file = FileUtils.createNewFile(paths[i]);
 			if (file != null) {
-				list.add(new File(paths[i]));		//创建File
+				list.add(new File(paths[i]));		//鍒涘缓File
 			}			
 		} 		
    		multiFileUpload(list);
    	}
    	
    	/**
-   	 * 多文件上传
+   	 * 澶氭枃浠朵笂浼�
    	 */
    	public void multiFileUpload(List<File> files) {
         if (files.isEmpty()) {
-            Toast("不存在有效文件，请修改文件路径");
+            Toast("涓嶅瓨鍦ㄦ湁鏁堟枃浠讹紝璇蜂慨鏀规枃浠惰矾寰�");
             return;
         }
         
-        mAlertDialog = new CircularProgressDialog(this, "正在上传文件！");
+        mAlertDialog = new CircularProgressDialog(this, "姝ｅ湪涓婁紶鏂囦欢锛�");
 	    mAlertDialog.show();
 	    HashMap<String, String> param = new HashMap<String, String>();
-	    param.put("content", "这是上传的参数:这是AsyncHttp上传的文件");
+	    param.put("content", "杩欐槸涓婁紶鐨勫弬鏁�:杩欐槸AsyncHttp涓婁紶鐨勬枃浠�");
 	    mHttpRequest.executeFileReques(HttpConsts.UPLPAD_URL, files, param, new HttpSuccess<String>(){
 
 			@Override
 			public void onSuccess(String response) {
 				mAlertDialog.dismiss();
-				addLog("文件上传完毕！返回结果:" + response);
+				addLog("鏂囦欢涓婁紶瀹屾瘯锛佽繑鍥炵粨鏋�:" + response);
 			}}, new HttpError(){
 
 			@Override

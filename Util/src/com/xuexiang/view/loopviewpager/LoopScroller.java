@@ -6,13 +6,13 @@ import android.widget.Scroller;
 
 /**
  * Scroller
- * ¸üºÃµÄÓÃ»§ÌåÑé
+ * æ›´å¥½çš„ç”¨æˆ·ä½“éªŒ
  *
  * @USER Edwin
- * @DATE 16/6/12 ÏÂÎç9:27
+ * @DATE 16/6/12 ä¸‹åˆ9:27
  */
 public class LoopScroller extends Scroller {
-    private int mDuration = 1000;//ËÙÂÊ±ØĞëĞ¡ÓÚÑÓ³ÙÊ±¼äloop_ms
+    private int mDuration = 1000;//é€Ÿç‡å¿…é¡»å°äºå»¶è¿Ÿæ—¶é—´loop_ms
 
     public LoopScroller(Context context, Interpolator interpolator) {
         super(context, interpolator);

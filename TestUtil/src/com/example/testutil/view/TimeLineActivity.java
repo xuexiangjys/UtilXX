@@ -10,10 +10,10 @@ import com.xuexiang.view.timeline.TimeItem;
 import com.xuexiang.view.timeline.TimeLineAdapter;
 
 /**  
- * ´´½¨Ê±¼ä£º2016-7-8 ÉÏÎç8:51:41  
- * ÏîÄ¿Ãû³Æ£ºUtilTest  
+ * åˆ›å»ºæ—¶é—´ï¼š2016-7-8 ä¸Šåˆ8:51:41  
+ * é¡¹ç›®åç§°ï¼šUtilTest  
  * @author xuexiang
- * ÎÄ¼şÃû³Æ£ºTimeLineActivity.java  
+ * æ–‡ä»¶åç§°ï¼šTimeLineActivity.java  
  **/
 public class TimeLineActivity extends BaseActivity {
 	private ListView uplevel_list;
@@ -34,7 +34,7 @@ public class TimeLineActivity extends BaseActivity {
 	private void initData() {
 		list = new ArrayList<TimeItem>();
 		for (int i = 1; i <= 100; i++) {
-			TimeItem item = new TimeItem("2015/8/17", "½ñÌì×¬ÁË" + i + "000¿é");			
+			TimeItem item = new TimeItem("2015/8/17", "ä»Šå¤©èµšäº†" + i + "000å—");			
 			list.add(item);
 		}
 		adapter = new TimeLineAdapter(this, list);

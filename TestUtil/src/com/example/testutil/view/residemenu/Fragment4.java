@@ -50,8 +50,8 @@ public class Fragment4 extends Fragment  implements IObserver, ITagObserver{
 	
 	@Override
 	public void onChanged() {
-		Log.e("xx","Fragment4ÊÕµ½ÏûÏ¢2");
-		mTvEvent.setText("ÊÕµ½ÏûÏ¢2");
+		Log.e("xx","Fragment4æ”¶åˆ°æ¶ˆæ¯2");
+		mTvEvent.setText("æ”¶åˆ°æ¶ˆæ¯2");
 	}
 
 	@Override
@@ -61,14 +61,14 @@ public class Fragment4 extends Fragment  implements IObserver, ITagObserver{
 
 	public void onEventMainThread(Event2 event) {
 
-		String msg = "onEventMainThreadÊÕµ½ÁËÏûÏ¢£º" + event.getMsg();
+		String msg = "onEventMainThreadæ”¶åˆ°äº†æ¶ˆæ¯ï¼š" + event.getMsg();
 		mTvEvent.setText(msg);
 		Log.e("xx",msg);
 	}
 
 	@Override
 	public void onChanged(Event event) {
-		Log.e("xx","Fragment4ÊÕµ½ÏûÏ¢, Event Tag:" + event.getTag() + ",ÏûÏ¢ÄÚÈİ£º" + event.getMessage());
+		Log.e("xx","Fragment4æ”¶åˆ°æ¶ˆæ¯, Event Tag:" + event.getTag() + ",æ¶ˆæ¯å†…å®¹ï¼š" + event.getMessage());
 	}
 	
 	@Override

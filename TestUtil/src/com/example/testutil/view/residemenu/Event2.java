@@ -1,10 +1,10 @@
 package com.example.testutil.view.residemenu;
 
 /**  
- * ´´½¨Ê±¼ä£º2016-6-5 ÏÂÎç1:27:28  
- * ÏîÄ¿Ãû³Æ£ºViewpager  
+ * åˆ›å»ºæ—¶é—´ï¼š2016-6-5 ä¸‹åˆ1:27:28  
+ * é¡¹ç›®åç§°ï¼šViewpager  
  * @author xuexiang
- * ÎÄ¼şÃû³Æ£ºEvent2.java  
+ * æ–‡ä»¶åç§°ï¼šEvent2.java  
  **/
 public class Event2 {
 	private String mMsg;

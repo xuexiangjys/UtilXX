@@ -18,7 +18,7 @@ package com.xuexiang.util.resource;
 import android.content.Context;
 
 /**
- * R×ÊÔ´·´Éä¹¤¾ßÀà
+ * Rèµ„æºåå°„å·¥å…·ç±»
  *
  * @author zhenguo
  */
@@ -48,10 +48,10 @@ public final class RUtils {
     }
 
     /**
-     * »ñÈ¡¶¯»­ID
+     * è·å–åŠ¨ç”»ID
      *
-     * @param context ÉÏÏÂÎÄ
-     * @param name    Ãû³Æ
+     * @param context ä¸Šä¸‹æ–‡
+     * @param name    åç§°
      */
     public static int getAnim(Context context, String name) {
         try {
@@ -65,10 +65,10 @@ public final class RUtils {
     }
 
     /**
-     * »ñÈ¡ÊôĞÔID
+     * è·å–å±æ€§ID
      *
-     * @param context ÉÏÏÂÎÄ
-     * @param name    Ãû³Æ
+     * @param context ä¸Šä¸‹æ–‡
+     * @param name    åç§°
      */
     public static int getAttr(Context context, String name) {
         try {
@@ -82,10 +82,10 @@ public final class RUtils {
     }
 
     /**
-     * »ñÈ¡ÑÕÉ«ID
+     * è·å–é¢œè‰²ID
      *
-     * @param context ÉÏÏÂÎÄ
-     * @param name    Ãû³Æ
+     * @param context ä¸Šä¸‹æ–‡
+     * @param name    åç§°
      */
     public static int getColor(Context context, String name) {
         try {
@@ -100,10 +100,10 @@ public final class RUtils {
     }
 
     /**
-     * »ñÈ¡³ß´çID
+     * è·å–å°ºå¯¸ID
      *
-     * @param context ÉÏÏÂÎÄ
-     * @param name    Ãû³Æ
+     * @param context ä¸Šä¸‹æ–‡
+     * @param name    åç§°
      */
     public static int getDimen(Context context, String name) {
         try {
@@ -118,10 +118,10 @@ public final class RUtils {
     }
 
     /**
-     * »ñÈ¡Í¼Æ¬ID
+     * è·å–å›¾ç‰‡ID
      *
-     * @param context ÉÏÏÂÎÄ
-     * @param name    Ãû³Æ
+     * @param context ä¸Šä¸‹æ–‡
+     * @param name    åç§°
      */
     public static int getDrawable(Context context, String name) {
         try {
@@ -137,10 +137,10 @@ public final class RUtils {
     }
 
     /**
-     * »ñÈ¡ID
+     * è·å–ID
      *
-     * @param context ÉÏÏÂÎÄ
-     * @param name    Ãû³Æ
+     * @param context ä¸Šä¸‹æ–‡
+     * @param name    åç§°
      */
     public static int getId(Context context, String name) {
         try {
@@ -154,10 +154,10 @@ public final class RUtils {
     }
 
     /**
-     * »ñÈ¡²¼¾ÖID
+     * è·å–å¸ƒå±€ID
      *
-     * @param context ÉÏÏÂÎÄ
-     * @param name    Ãû³Æ
+     * @param context ä¸Šä¸‹æ–‡
+     * @param name    åç§°
      */
     public static int getLayout(Context context, String name) {
         try {
@@ -172,10 +172,10 @@ public final class RUtils {
     }
 
     /**
-     * »ñÈ¡²Ëµ¥ID
+     * è·å–èœå•ID
      *
-     * @param context ÉÏÏÂÎÄ
-     * @param name    Ãû³Æ
+     * @param context ä¸Šä¸‹æ–‡
+     * @param name    åç§°
      */
     public static int getMenu(Context context, String name) {
         try {
@@ -189,10 +189,10 @@ public final class RUtils {
     }
 
     /**
-     * »ñÈ¡RAW ID
+     * è·å–RAW ID
      *
-     * @param context ÉÏÏÂÎÄ
-     * @param name    Ãû³Æ
+     * @param context ä¸Šä¸‹æ–‡
+     * @param name    åç§°
      */
     public static int getRaw(Context context, String name) {
         try {
@@ -206,10 +206,10 @@ public final class RUtils {
     }
 
     /**
-     * »ñÈ¡×Ö·û´®ID
+     * è·å–å­—ç¬¦ä¸²ID
      *
-     * @param context ÉÏÏÂÎÄ
-     * @param name    Ãû³Æ
+     * @param context ä¸Šä¸‹æ–‡
+     * @param name    åç§°
      */
     public static int getString(Context context, String name) {
         try {
@@ -224,10 +224,10 @@ public final class RUtils {
     }
 
     /**
-     * »ñÈ¡ÑùÊ½ID
+     * è·å–æ ·å¼ID
      *
-     * @param context ÉÏÏÂÎÄ
-     * @param name    Ãû³Æ
+     * @param context ä¸Šä¸‹æ–‡
+     * @param name    åç§°
      */
     public static int getStyle(Context context, String name) {
         try {
@@ -242,10 +242,10 @@ public final class RUtils {
     }
 
     /**
-     * »ñÈ¡×Ô¶¨ÒåÊôĞÔ×é
+     * è·å–è‡ªå®šä¹‰å±æ€§ç»„
      *
-     * @param context ÉÏÏÂÎÄ
-     * @param name    Ãû³Æ
+     * @param context ä¸Šä¸‹æ–‡
+     * @param name    åç§°
      */
     public static int[] getStyleable(Context context, String name) {
         try {
@@ -261,21 +261,21 @@ public final class RUtils {
     }
     
     /**
-     * »ñÈ¡×Ô¶¨ÒåÊôĞÔ
+     * è·å–è‡ªå®šä¹‰å±æ€§
      *
-     * @param context       ÉÏÏÂÎÄ
-     * @param attributeName ÊôĞÔÃû³Æ
+     * @param context       ä¸Šä¸‹æ–‡
+     * @param attributeName å±æ€§åç§°
      */
     public static int getStyleableAttribute(Context context, String attributeName) {
         return MResource.getIdByName(context, "styleable", attributeName);
     }
 
     /**
-     * »ñÈ¡×Ô¶¨ÒåÊôĞÔ
+     * è·å–è‡ªå®šä¹‰å±æ€§
      *
-     * @param context       ÉÏÏÂÎÄ
-     * @param styleableName ÊôĞÔ×éÃû³Æ
-     * @param attributeName ÊôĞÔÃû³Æ
+     * @param context       ä¸Šä¸‹æ–‡
+     * @param styleableName å±æ€§ç»„åç§°
+     * @param attributeName å±æ€§åç§°
      */
     public static int getStyleableAttribute(Context context,
                                             String styleableName, String attributeName) {

@@ -12,7 +12,7 @@ public class SharePrefUtil {
 	private static SharedPreferences sp;
 
 	/**
-	 * ±£´æ²¼¶ûÖµ
+	 * ä¿å­˜å¸ƒå°”å€¼
 	 * 
 	 * @param context
 	 * @param key
@@ -25,7 +25,7 @@ public class SharePrefUtil {
 	}
 
 	/**
-	 * ±£´æ×Ö·û´®
+	 * ä¿å­˜å­—ç¬¦ä¸²
 	 * 
 	 * @param context
 	 * @param key
@@ -45,7 +45,7 @@ public class SharePrefUtil {
 	}
 
 	/**
-	 * ±£´ælongĞÍ
+	 * ä¿å­˜longå‹
 	 * 
 	 * @param context
 	 * @param key
@@ -58,7 +58,7 @@ public class SharePrefUtil {
 	}
 
 	/**
-	 * ±£´æintĞÍ
+	 * ä¿å­˜intå‹
 	 * 
 	 * @param context
 	 * @param key
@@ -71,7 +71,7 @@ public class SharePrefUtil {
 	}
 
 	/**
-	 * ±£´æfloatĞÍ
+	 * ä¿å­˜floatå‹
 	 * 
 	 * @param context
 	 * @param key
@@ -84,7 +84,7 @@ public class SharePrefUtil {
 	}
 
 	/**
-	 * »ñÈ¡×Ö·ûÖµ
+	 * è·å–å­—ç¬¦å€¼
 	 * 
 	 * @param context
 	 * @param key
@@ -98,7 +98,7 @@ public class SharePrefUtil {
 	}
 
 	/**
-	 * »ñÈ¡intÖµ
+	 * è·å–intå€¼
 	 * 
 	 * @param context
 	 * @param key
@@ -112,7 +112,7 @@ public class SharePrefUtil {
 	}
 
 	/**
-	 * »ñÈ¡longÖµ
+	 * è·å–longå€¼
 	 * 
 	 * @param context
 	 * @param key
@@ -126,7 +126,7 @@ public class SharePrefUtil {
 	}
 
 	/**
-	 * »ñÈ¡floatÖµ
+	 * è·å–floatå€¼
 	 * 
 	 * @param context
 	 * @param key
@@ -140,7 +140,7 @@ public class SharePrefUtil {
 	}
 
 	/**
-	 * »ñÈ¡²¼¶ûÖµ
+	 * è·å–å¸ƒå°”å€¼
 	 * 
 	 * @param context
 	 * @param key
@@ -155,7 +155,7 @@ public class SharePrefUtil {
 	}
 	
 	/**
-	 * ½«¶ÔÏó½øĞĞbase64±àÂëºó±£´æµ½SharePrefÖĞ
+	 * å°†å¯¹è±¡è¿›è¡Œbase64ç¼–ç åä¿å­˜åˆ°SharePrefä¸­
 	 * 
 	 * @param context
 	 * @param key
@@ -164,13 +164,13 @@ public class SharePrefUtil {
 	public static void saveObj(Context context, String key, Object object) {
 		if (sp == null)
 			sp = context.getSharedPreferences(SP_NAME, 0);		
-		// ½«¶ÔÏóµÄ×ªÎªbase64Âë
+		// å°†å¯¹è±¡çš„è½¬ä¸ºbase64ç 
 		String objBase64 = Base64Util.encode(object.toString(), "UTF-8");
         sp.edit().putString(key,objBase64).commit();
 	}
 
 	/**
-	 * ½«SharePrefÖĞ¾­¹ıbase64±àÂëµÄ¶ÔÏó¶ÁÈ¡³öÀ´
+	 * å°†SharePrefä¸­ç»è¿‡base64ç¼–ç çš„å¯¹è±¡è¯»å–å‡ºæ¥
 	 * 
 	 * @param context
 	 * @param key
@@ -183,7 +183,7 @@ public class SharePrefUtil {
 		String objBase64 = sp.getString(key, null);
 		if (TextUtils.isEmpty(objBase64))
 			return null;
-		// ¶ÔBase64¸ñÊ½µÄ×Ö·û´®½øĞĞ½âÂë
+		// å¯¹Base64æ ¼å¼çš„å­—ç¬¦ä¸²è¿›è¡Œè§£ç 
 		String obj = Base64Util.decode(objBase64, "UTF-8");
 		return obj;
 	}

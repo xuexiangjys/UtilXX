@@ -17,24 +17,24 @@ import com.xuexiang.view.dropdownmenu.view.DropdownButton;
 import com.xuexiang.view.dropdownmenu.view.DropdownListView;
 
 /**  
- * 创建时间：2016-6-14 下午12:16:41  
- * 项目名称：UtilTest  
+ * 鍒涘缓鏃堕棿锛�2016-6-14 涓嬪崍12:16:41  
+ * 椤圭洰鍚嶇О锛歎tilTest  
  * @author xuexiang
- * 文件名称：DropDownMenuActivity.java  
+ * 鏂囦欢鍚嶇О锛欴ropDownMenuActivity.java  
  **/
 public class DropDownMenuActivity extends BaseActivity {
 
 	private static final int ID_TYPE_ALL = 0;
     private static final int ID_TYPE_MY = 1;
-    private static final String TYPE_ALL = "全部讨论";
-    private static final String TYPE_MY = "我的讨论";
+    private static final String TYPE_ALL = "鍏ㄩ儴璁ㄨ";
+    private static final String TYPE_MY = "鎴戠殑璁ㄨ";
 
     private static final int ID_LABEL_ALL = -1;
-    private static final String LABEL_ALL = "全部标签";
+    private static final String LABEL_ALL = "鍏ㄩ儴鏍囩";
 
-    private static final String ORDER_REPLY_TIME = "评论排序";
-    private static final String ORDER_PUBLISH_TIME = "发布时间排序";
-    private static final String ORDER_HOT = "热门排序";
+    private static final String ORDER_REPLY_TIME = "璇勮鎺掑簭";
+    private static final String ORDER_PUBLISH_TIME = "鍙戝竷鏃堕棿鎺掑簭";
+    private static final String ORDER_HOT = "鐑棬鎺掑簭";
     private static final int ID_ORDER_REPLY_TIME = 51;
     private static final int ID_ORDER_PUBLISH_TIME = 49;
     private static final int ID_ORDER_HOT = 53;
@@ -102,11 +102,11 @@ public class DropDownMenuActivity extends BaseActivity {
 
 	private class DropdownButtonsController implements DropdownListView.Container {
         private DropdownListView currentDropdownList;
-        private List<DropdownItemObject> datasetType = new ArrayList<DropdownItemObject>(2);//全部讨论
-        private List<DropdownItemObject> datasetAllLabel = new ArrayList<DropdownItemObject>();//全部标签
-        private List<DropdownItemObject> datasetMyLabel = new ArrayList<DropdownItemObject>();//我的标签
-        private List<DropdownItemObject> datasetLabel = datasetAllLabel;//标签集合   默认是全部标�?        
-        private List<DropdownItemObject> datasetOrder = new ArrayList<DropdownItemObject>(3);//评论排序
+        private List<DropdownItemObject> datasetType = new ArrayList<DropdownItemObject>(2);//鍏ㄩ儴璁ㄨ
+        private List<DropdownItemObject> datasetAllLabel = new ArrayList<DropdownItemObject>();//鍏ㄩ儴鏍囩
+        private List<DropdownItemObject> datasetMyLabel = new ArrayList<DropdownItemObject>();//鎴戠殑鏍囩
+        private List<DropdownItemObject> datasetLabel = datasetAllLabel;//鏍囩闆嗗悎   榛樿鏄叏閮ㄦ爣锟�?        
+        private List<DropdownItemObject> datasetOrder = new ArrayList<DropdownItemObject>(3);//璇勮鎺掑簭
 
         @Override
         public void show(DropdownListView view) {

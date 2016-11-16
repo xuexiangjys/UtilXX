@@ -31,7 +31,7 @@ public class ViewWithSign extends LinearLayout {
         addDrawText(getCont());
     }
 
-    private String content = ""; //ÌáÊ¾ÄÚÈİ
+    private String content = ""; //æç¤ºå†…å®¹
     private final int COLOR_THEME = Color.parseColor("#ea5f61");
     private Paint textPaint = new Paint();
     private int paintMiddle;
@@ -69,7 +69,7 @@ public class ViewWithSign extends LinearLayout {
         if (TextUtils.isEmpty(getCont())) {
             return;
         }
-        textPaint.setAntiAlias(true);  //¿¹¾â³İ
+        textPaint.setAntiAlias(true);  //æŠ—é”¯é½¿
         path3 = new Path();
         path3.moveTo(width - startDis, 0);
         path3.lineTo(width - startDis - paintMiddle, 0);
@@ -106,7 +106,7 @@ public class ViewWithSign extends LinearLayout {
         int childWidthSize = getMeasuredWidth();
         int childHeightSize = getMeasuredHeight();
 
-        //¸ß¶ÈºÍ¿í¶ÈÒ»Ñù
+        //é«˜åº¦å’Œå®½åº¦ä¸€æ ·
         heightMeasureSpec = widthMeasureSpec = MeasureSpec.makeMeasureSpec(childWidthSize, MeasureSpec.EXACTLY);
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
         width = getWidth();

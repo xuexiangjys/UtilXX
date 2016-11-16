@@ -7,7 +7,7 @@ import android.view.View;
 import com.xuexiang.app.BaseActivity;
 
 /**
- * ²âÊÔ´úÂë
+ * æµ‹è¯•ä»£ç 
  */
 public class MainActivity extends BaseActivity {
 	
@@ -15,61 +15,61 @@ public class MainActivity extends BaseActivity {
 	public void onCreateActivity() {
 		 setContentView(R.layout.activity_main);
 	        
-	     initActionBar("Ö÷½çÃæ");
+	     initActionBar("ä¸»ç•Œé¢");
 	}
 
 	public void onClick(View v) {
 	    Intent intent = new Intent();
 		switch (v.getId()) {
         case R.id.btn_common:
-        	mToastUtil.showToast("µã»÷ÁËCommonActivity");
+        	mToastUtil.showToast("ç‚¹å‡»äº†CommonActivity");
         	intent.setClass(this, CommonActivity.class);
             startActivity(intent);
             break;
         case R.id.btn_data:
-        	mToastUtil.showToast("µã»÷ÁËDataActivity");
+        	mToastUtil.showToast("ç‚¹å‡»äº†DataActivity");
         	intent.setClass(this, DataActivity.class);
             startActivity(intent);
             break;
         case R.id.btn_dapter:
-        	mToastUtil.showToast("µã»÷ÁËBaseAdapterListviewActivity");
+        	mToastUtil.showToast("ç‚¹å‡»äº†BaseAdapterListviewActivity");
         	intent.setClass(this, AdapterListviewActivity.class);
             startActivity(intent);
             break;           
         case R.id.btn_service:
-        	mToastUtil.showToast("µã»÷ÁËServiceActivity");
+        	mToastUtil.showToast("ç‚¹å‡»äº†ServiceActivity");
         	intent.setClass(this, ServiceActivity.class);
             startActivity(intent);
             break;
         case R.id.btn_file:
-        	mToastUtil.showToast("µã»÷ÁËFileActivity");
+        	mToastUtil.showToast("ç‚¹å‡»äº†FileActivity");
         	intent.setClass(this, FileActivity.class);
             startActivity(intent);
             break;
         case R.id.btn_net:
-        	mToastUtil.showToast("µã»÷ÁËNetActivity");
+        	mToastUtil.showToast("ç‚¹å‡»äº†NetActivity");
         	intent.setClass(this, NetActivity.class);
             startActivity(intent);
             break;
         case R.id.btn_resource:
-        	mToastUtil.showToast("µã»÷ÁËResourceActivity");
+        	mToastUtil.showToast("ç‚¹å‡»äº†ResourceActivity");
         	intent.setClass(this, ResourceActivity.class);
             startActivity(intent);
             break;
         case R.id.btn_system:
-        	mToastUtil.showToast("µã»÷ÁËSystemActivity");
+        	mToastUtil.showToast("ç‚¹å‡»äº†SystemActivity");
         	intent.setClass(this, SystemActivity.class);
             startActivity(intent);
             break;
         case R.id.btn_view:
-        	mToastUtil.showToast("µã»÷ÁËViewActivity");
+        	mToastUtil.showToast("ç‚¹å‡»äº†ViewActivity");
         	intent.setClass(this, ViewActivity.class);
             startActivity(intent);
             break;
        }
 	}
 
-	/**  * ²Ëµ¥¡¢·µ»Ø¼üÏìÓ¦  */
+	/**  * èœå•ã€è¿”å›é”®å“åº”  */
 	@Override 
 	public boolean onKeyDown(int keyCode, KeyEvent event) {  
 		if(keyCode == KeyEvent.KEYCODE_BACK) {    

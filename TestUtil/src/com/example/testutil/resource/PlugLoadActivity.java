@@ -56,7 +56,7 @@ public class PlugLoadActivity extends Activity {
 			    intent.setType("*/*"); 
 			    intent.addCategory(Intent.CATEGORY_OPENABLE);
 			    try {
-			        startActivityForResult( Intent.createChooser(intent, "选择路径"), 1);
+			        startActivityForResult( Intent.createChooser(intent, "閫夋嫨璺緞"), 1);
 			    } catch (android.content.ActivityNotFoundException ex) {
 			       
 			    }
@@ -124,7 +124,7 @@ public class PlugLoadActivity extends Activity {
 		  		}	  			
 	  	} 
 	    
-	 // 取到绝对路径
+	 // 鍙栧埌缁濆璺緞
 		protected String getAbsolutePath(Uri uri) {
 			// can post image
 			String[] proj = { MediaStore.Images.Media.DATA };

@@ -29,42 +29,42 @@ public class NumberUtils {
 	}
 	
 	/**
-	 * ¸ñÊ½»¯doubleÀàĞÍµÄÊı¾İ£¬ÊÇ½á¹û±£ÁôÁ½Î»Ğ¡Êı
+	 * æ ¼å¼åŒ–doubleç±»å‹çš„æ•°æ®ï¼Œæ˜¯ç»“æœä¿ç•™ä¸¤ä½å°æ•°
 	 * @param value
 	 * @return
 	 */
 	public static String format(double value){
-		//¶ÔdoubleÀàĞÍµÄÊı¾İ½øĞĞ¸ñÊ½»¯µÄÀà
+		//å¯¹doubleç±»å‹çš„æ•°æ®è¿›è¡Œæ ¼å¼åŒ–çš„ç±»
 		return format(value,"######0.00");
 	}
 	
 	/**
-	 * ¸ñÊ½»¯doubleÀàĞÍµÄÊı¾İ
+	 * æ ¼å¼åŒ–doubleç±»å‹çš„æ•°æ®
 	 * @param value
 	 * @return
 	 */
 	public static String format(double value,String format){
-		//¶ÔdoubleÀàĞÍµÄÊı¾İ½øĞĞ¸ñÊ½»¯µÄÀà
+		//å¯¹doubleç±»å‹çš„æ•°æ®è¿›è¡Œæ ¼å¼åŒ–çš„ç±»
 		DecimalFormat  deFormat=new DecimalFormat(format);
 		return deFormat.format(value);
 	}
 	
 	public static String distanceFormat(double distance){
-		return distance<1000?format(distance,"######")+"Ã×":format(distance/1000,"######0.0")+"Ç§Ã×";
+		return distance<1000?format(distance,"######")+"ç±³":format(distance/1000,"######0.0")+"åƒç±³";
 	}
 	
 	public static String avgPriceFormat(double avgPrice){
-		return "ÈË¾ù:"+priceFormat(avgPrice);
+		return "äººå‡:"+priceFormat(avgPrice);
 	}
 	
 
 	public static String priceFormat(double price){
-		return format(price,"######0.00")+"Ôª";
+		return format(price,"######0.00")+"å…ƒ";
 	}
 	
 
 	/**
-	 * ¼ÆËãÁ½¸ö×ø±ê¼äµÄ¾àÀë,µ¥Î»Ã×
+	 * è®¡ç®—ä¸¤ä¸ªåæ ‡é—´çš„è·ç¦»,å•ä½ç±³
 	 * @param longt1
 	 * @param lat1
 	 * @param longt2
@@ -80,7 +80,7 @@ public class NumberUtils {
         return distance;
     }
 	
-	private final static double PI = 3.14159265358979323; // Ô²ÖÜÂÊ
-    private final static double ER = 6371229; // µØÇòµÄ°ë¾¶
+	private final static double PI = 3.14159265358979323; // åœ†å‘¨ç‡
+    private final static double ER = 6371229; // åœ°çƒçš„åŠå¾„
 	
 }

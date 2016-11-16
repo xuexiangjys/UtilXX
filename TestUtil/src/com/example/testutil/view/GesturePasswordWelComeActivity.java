@@ -37,17 +37,17 @@ public class GesturePasswordWelComeActivity extends BaseActivity {
 							mFirstPassword = inputCode;
 							mContentView.clearDrawlineState(0L);
 							isFirstInput = false;
-							Toast("请再输入一次确认！");
+							Toast("璇峰啀杈撳叆涓�娆＄‘璁わ紒");
 						} else {
 							if (inputCode.equals(mFirstPassword)) {
 								mSettingManager.setPassword(mFirstPassword);
-								Toast("设置手势密码成功");
+								Toast("璁剧疆鎵嬪娍瀵嗙爜鎴愬姛");
 								mContentView.clearDrawlineState(0L);
 								startActivity(new Intent(GesturePasswordWelComeActivity.this, GesturePasswordMainActivity.class));
 								finish();
 							} else {
 								mContentView.clearDrawlineState(500L);
-								Toast("验证失败，请重新设置手势密码！");
+								Toast("楠岃瘉澶辫触锛岃閲嶆柊璁剧疆鎵嬪娍瀵嗙爜锛�");
 								isFirstInput = true;
 							}
 						}
@@ -56,14 +56,14 @@ public class GesturePasswordWelComeActivity extends BaseActivity {
 
 					@Override
 					public void checkSuccess() {
-						Toast("验证成功！");
+						Toast("楠岃瘉鎴愬姛锛�");
 						startActivity(new Intent(GesturePasswordWelComeActivity.this, GesturePasswordMainActivity.class));
 						finish();
 					}
 
 					@Override
 					public void checkFail() {
-						Toast("验证失败！");
+						Toast("楠岃瘉澶辫触锛�");
 						mContentView.clearDrawlineState(500L);
 					}
 				});

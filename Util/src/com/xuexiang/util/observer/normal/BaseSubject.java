@@ -4,14 +4,14 @@ import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 
 /**  
- * ±»¹Û²ìÕß
- * ´´½¨Ê±¼ä£º2016-6-5 ÉÏÎç1:03:27   
+ * è¢«è§‚å¯Ÿè€…
+ * åˆ›å»ºæ—¶é—´ï¼š2016-6-5 ä¸Šåˆ1:03:27   
  * @author xuexiang
  **/
 public class BaseSubject implements ISubject {
 	
     /**
-     * ´æ·ÅÊı¾İ¹Û²ìÕß¼¯ºÏ
+     * å­˜æ”¾æ•°æ®è§‚å¯Ÿè€…é›†åˆ
      */
     private ArrayList<WeakReference<IObserver>> mObservers = new ArrayList<WeakReference<IObserver>>();
 

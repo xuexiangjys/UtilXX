@@ -30,8 +30,8 @@ import com.xuexiang.util.net.okhttp.persistentcookiejar.persistence.SharedPrefsC
 import com.xuexiang.util.view.FlexibleToast;
 
 /**
- * ²¶»ñÓ¦ÓÃÒì³£Application ÔÚÕâÀïÍê³ÉÕû¸öÓ¦ÓÃÍË³ö£»ÔÚÕâÀï½øĞĞÈ«¾Ö±äÁ¿µÄ´«µİ£»ÔÚÕâÀïÍê³ÉµÍÄÚ´æµÄÊÍ·Å£»ÔÚÕâÀï²¶»ñÎ´×¥×¡µÄÒì³££»ÓÃÓÚÓ¦ÓÃÅäÖÃ,
- * Ô¤¼ÓÔØ´¦Àí
+ * æ•è·åº”ç”¨å¼‚å¸¸Application åœ¨è¿™é‡Œå®Œæˆæ•´ä¸ªåº”ç”¨é€€å‡ºï¼›åœ¨è¿™é‡Œè¿›è¡Œå…¨å±€å˜é‡çš„ä¼ é€’ï¼›åœ¨è¿™é‡Œå®Œæˆä½å†…å­˜çš„é‡Šæ”¾ï¼›åœ¨è¿™é‡Œæ•è·æœªæŠ“ä½çš„å¼‚å¸¸ï¼›ç”¨äºåº”ç”¨é…ç½®,
+ * é¢„åŠ è½½å¤„ç†
  * 
  * @author jingle1267@163.com
  */
@@ -42,12 +42,12 @@ public class BaseApplication extends Application {
 	private SettingSharePreferenceUtil mSettingManager;
 	private static BaseApplication mInstance;
 	private static Context mContext;
-	/** VolleyÇëÇó¶ÓÁĞ */
+	/** Volleyè¯·æ±‚é˜Ÿåˆ— */
 	private static RequestQueue mRequestQueue;
 
-	// È«¾ÖµÄ handler ¶ÔÏó
+	// å…¨å±€çš„ handler å¯¹è±¡
 	private static Handler mAppHandler = new Handler();
-	// È«¾ÖµÄ Toast ¶ÔÏó
+	// å…¨å±€çš„ Toast å¯¹è±¡
 	private static FlexibleToast mFlexibleToast;
 	private static FlexibleToast.Builder mBuilder;
 
@@ -55,7 +55,7 @@ public class BaseApplication extends Application {
 	public void onCreate() {
 		super.onCreate();
 		mContext = this;
-		PluginManager.init(this); //²å¼ş¹ÜÀíÀà
+		PluginManager.init(this); //æ’ä»¶ç®¡ç†ç±»
 		// Volley+Okhttp
 		mRequestQueue = Volley.newRequestQueue(getApplicationContext(),
 				new OkHttpStack(new OkHttpClient()));
@@ -80,9 +80,9 @@ public class BaseApplication extends Application {
 						sslParams.trustManager).build();
 		OkHttpUtils.initClient(okHttpClient);
 
-		// activity¹ÜÀí
+		// activityç®¡ç†
 		activityStack = new Stack<Activity>();
-		// Òì³£´¦Àí
+		// å¼‚å¸¸å¤„ç†
 		BaseCrashHandler.getInstance().init(this);
 		// CrashHandler.getInstance().init(this);
 
@@ -92,9 +92,9 @@ public class BaseApplication extends Application {
 		if (!TextUtils.isEmpty(mSettingManager.getAppUrl())) {
 			app_url = mSettingManager.getAppUrl();
 		}
-		// ³ÌĞòÒì³£¹Ø±Õ1sÖ®ºóÖØĞÂÆô¶¯
+		// ç¨‹åºå¼‚å¸¸å…³é—­1sä¹‹åé‡æ–°å¯åŠ¨
 		// new RebootThreadExceptionHandler(getBaseContext());
-		LogUtils.e("»¶Ó­Ê¹ÓÃxxµÄUtil£¡");
+		LogUtils.e("æ¬¢è¿ä½¿ç”¨xxçš„Utilï¼");
 	}
 
 	@Override
@@ -104,14 +104,14 @@ public class BaseApplication extends Application {
 
 	}
 
-	// ÔÚÄÚ´æµÍÊ±,·¢ËÍ¹ã²¥¿ÉÒÔÊÍ·ÅÒ»Ğ©ÄÚ´æ
+	// åœ¨å†…å­˜ä½æ—¶,å‘é€å¹¿æ’­å¯ä»¥é‡Šæ”¾ä¸€äº›å†…å­˜
 	@Override
 	public void onLowMemory() {
 		super.onLowMemory();
 	}
 
 	/**
-	 * Ìí¼ÓActivityµ½¶ÑÕ»
+	 * æ·»åŠ Activityåˆ°å †æ ˆ
 	 */
 	public void addActivity(Activity activity) {
 		if (activityStack == null) {
@@ -120,7 +120,7 @@ public class BaseApplication extends Application {
 		activityStack.add(activity);
 	}
 
-	// /ÍË³öÕû¸öÓ¦ÓÃ
+	// /é€€å‡ºæ•´ä¸ªåº”ç”¨
 	public void exitApp() {
 		for (Activity activity : activityStack) {
 			if (activity != null) {
@@ -133,12 +133,12 @@ public class BaseApplication extends Application {
 		return mInstance;
 	}
 
-	// Èë¿Ú
+	// å…¥å£
 	public static RequestQueue getVolleyRequestQueue() {
 		return mRequestQueue;
 	}
 
-	// Èë¿Ú
+	// å…¥å£
 	public static Context getContext() {
 		return mContext;
 	}

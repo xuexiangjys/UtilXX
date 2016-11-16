@@ -20,10 +20,10 @@ import com.android.volley.toolbox.HttpHeaderParser;
 import com.android.volley.toolbox.JsonRequest;
 
 /**  
- * ´´½¨Ê±¼ä£º2016-5-17 ÏÂÎç8:19:34  
- * ÏîÄ¿Ãû³Æ£ºVolleyDemo  
+ * åˆ›å»ºæ—¶é—´ï¼š2016-5-17 ä¸‹åˆ8:19:34  
+ * é¡¹ç›®åç§°ï¼šVolleyDemo  
  * @author xuexiang
- * ÎÄ¼şÃû³Æ£ºJsonObjectRequest.java  
+ * æ–‡ä»¶åç§°ï¼šJsonObjectRequest.java  
  **/
 public class MyJsonObjectRequest extends JsonRequest<JSONObject> {  
 	public static final String JSONObjectData = "data";
@@ -31,9 +31,9 @@ public class MyJsonObjectRequest extends JsonRequest<JSONObject> {
     private Map<String, String> params;
   
     /** 
-     * ÕâÀïµÄmethod±ØĞëÊÇMethod.POSJSONObject£¬Ò²¾ÍÊÇ±ØĞë´ø²ÎÊı¡£ 
-     * Èç¹û²»Ïë´ø²ÎÊı£¬¿ÉÒÔÓÃJsonObjectRequest£¬¸øËü¹¹Ôì²ÎÊı´«null¡£GEJSONObject·½Ê½ÇëÇó¡£ 
-     * @param stringRequest ¸ñÊ½Ó¦¸ÃÊÇ "key1=value1&key2=value2" 
+     * è¿™é‡Œçš„methodå¿…é¡»æ˜¯Method.POSJSONObjectï¼Œä¹Ÿå°±æ˜¯å¿…é¡»å¸¦å‚æ•°ã€‚ 
+     * å¦‚æœä¸æƒ³å¸¦å‚æ•°ï¼Œå¯ä»¥ç”¨JsonObjectRequestï¼Œç»™å®ƒæ„é€ å‚æ•°ä¼ nullã€‚GEJSONObjectæ–¹å¼è¯·æ±‚ã€‚ 
+     * @param stringRequest æ ¼å¼åº”è¯¥æ˜¯ "key1=value1&key2=value2" 
      */  
   
     public MyJsonObjectRequest(int method, String url, String stringRequest,  
@@ -81,7 +81,7 @@ public class MyJsonObjectRequest extends JsonRequest<JSONObject> {
     }
     
     /**
-     * requestBuilder  Ê¹ÓÃ·½·¨²Î¼ûhttpClientRequest
+     * requestBuilder  ä½¿ç”¨æ–¹æ³•å‚è§httpClientRequest
      */
     public static class RequestBuilder{
         private int method = Method.GET;

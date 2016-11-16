@@ -21,33 +21,33 @@ import com.xuexiang.util.common.ToastUtil;
 import com.xuexiang.util.file.FileUtils;
 import com.xuexiang.util.file.LocalFileUtil;
 /**
- * ÈÕÖ¾¹¤¾ßÀà
- * ÓÃÀ´±£´ædebug¡¢error¡¢CrashµÈLog
+ * æ—¥å¿—å·¥å…·ç±»
+ * ç”¨æ¥ä¿å­˜debugã€errorã€Crashç­‰Log
  */
 public class LogHelper {
 
 	private static Context mContext;
-	private static boolean mIsDebugMode = false;// ±êÊ¶DebugModeµÄ×´Ì¬£¬»ñÈ¡¶ÑÕ»ĞÅÏ¢»áÓ°ÏìĞÔÄÜ£¬·¢²¼Ó¦ÓÃÊ±¼ÇµÃ¹Ø±ÕDebugMode,ÔÚĞèÒªÊ±´ò¿ª¡£
+	private static boolean mIsDebugMode = false;// æ ‡è¯†DebugModeçš„çŠ¶æ€ï¼Œè·å–å †æ ˆä¿¡æ¯ä¼šå½±å“æ€§èƒ½ï¼Œå‘å¸ƒåº”ç”¨æ—¶è®°å¾—å…³é—­DebugMode,åœ¨éœ€è¦æ—¶æ‰“å¼€ã€‚
 
-	private static final String CLASS_METHOD_LINE_FORMAT = "%s.%s()  Line:%d  (%s)\r\n\n";//¸ñÊ½»¯ÈÕÖ¾ĞÅÏ¢
+	private static final String CLASS_METHOD_LINE_FORMAT = "%s.%s()  Line:%d  (%s)\r\n\n";//æ ¼å¼åŒ–æ—¥å¿—ä¿¡æ¯
 	private static FileOutputStream mLogWriter = null;
 	private static String ERROR_LOG_PATH;
-	private static String mLineBreak = "\r\n";//»»ĞĞ·û
+	private static String mLineBreak = "\r\n";//æ¢è¡Œç¬¦
 	public static String mDebugLogPath;
 
 	/**
-	 * ÓÃÓÚ¸ñÊ½»¯ÈÕÆÚ,×÷ÎªÈÕÖ¾ÎÄ¼şÃûµÄÒ»²¿·Ö SimpleDateFormat : mSimpleDateFormat
+	 * ç”¨äºæ ¼å¼åŒ–æ—¥æœŸ,ä½œä¸ºæ—¥å¿—æ–‡ä»¶åçš„ä¸€éƒ¨åˆ† SimpleDateFormat : mSimpleDateFormat
 	 */
 	private static SimpleDateFormat mSimpleDateFormat = new SimpleDateFormat(
 			"yyyy-MM-dd");
-	// ¸ñÊ½»¯ÈÕÆÚ£¬ÓÃÓÚ´òÓ¡Ã¿ĞĞÈÕÖ¾µÄÊ±¼ä
+	// æ ¼å¼åŒ–æ—¥æœŸï¼Œç”¨äºæ‰“å°æ¯è¡Œæ—¥å¿—çš„æ—¶é—´
 	private static SimpleDateFormat mLineTime = new SimpleDateFormat(
 			"yyyy-MM-dd HH:mm:ss.SSS");
 	private static SimpleDateFormat mErrorLogDateFormat = new SimpleDateFormat("yyyy-MM-dd__HH-mm-ss.SSS");
 
 	/**
-	 * ´ò¿ªLog Helper
-	 * @param deleteOld ÊÇ·ñÉ¾³ı¾ÉµÄÈÕÖ¾
+	 * æ‰“å¼€Log Helper
+	 * @param deleteOld æ˜¯å¦åˆ é™¤æ—§çš„æ—¥å¿—
 	 */
 	public static void open(Context ctx, boolean deleteOld) {
 
@@ -69,20 +69,20 @@ public class LogHelper {
 			try {
 				mLogWriter = new FileOutputStream(debugLogFile, true);
 			} catch (IOException e) {
-				ToastUtil.getInstance(mContext).showToast("´ò¿ªÈÕÖ¾ÖúÊÖÊ§°Ü£¡");
+				ToastUtil.getInstance(mContext).showToast("æ‰“å¼€æ—¥å¿—åŠ©æ‰‹å¤±è´¥ï¼");
 				e.printStackTrace();
 				return;
 			}
 			mIsDebugMode = true;
 			saveDeviceInfo();
 			trace("Open Log Helper!");
-			ToastUtil.getInstance(mContext).showToast("ÈÕÖ¾ÖúÊÖÒÑ´ò¿ª£¡");
+			ToastUtil.getInstance(mContext).showToast("æ—¥å¿—åŠ©æ‰‹å·²æ‰“å¼€ï¼");
 		}
 
 	}
 
 	/**
-	 * ¹Ø±ÕLog Helper
+	 * å…³é—­Log Helper
 	 */
 	public static void close() {
 		if (mIsDebugMode) {
@@ -104,14 +104,14 @@ public class LogHelper {
 	}
 
 	/**
-	 * ×·×Ù Ä³¸ö²Ù×÷Ëùµ÷ÓÃµÄ¾ßÌåÀàºÍ·½·¨
+	 * è¿½è¸ª æŸä¸ªæ“ä½œæ‰€è°ƒç”¨çš„å…·ä½“ç±»å’Œæ–¹æ³•
 	 * 
 	 * @throws
 	 */
 	public static void trace() {
 		if (mIsDebugMode) {
 			StackTraceElement traceElement = Thread.currentThread()
-					.getStackTrace()[3];// ´Ó¶ÑÕ»ĞÅÏ¢ÖĞ»ñÈ¡µ±Ç°±»µ÷ÓÃµÄ·½·¨ĞÅÏ¢
+					.getStackTrace()[3];// ä»å †æ ˆä¿¡æ¯ä¸­è·å–å½“å‰è¢«è°ƒç”¨çš„æ–¹æ³•ä¿¡æ¯
 			String logtext = mLineTime.format(new Date()) + mLineBreak;
 			logtext += "stack: "+ String.format(CLASS_METHOD_LINE_FORMAT, traceElement
 					.getClassName(), traceElement.getMethodName(), traceElement
@@ -126,14 +126,14 @@ public class LogHelper {
 	public static void trace(String info) {
 		if (mIsDebugMode) {
 			StackTraceElement traceElement = Thread.currentThread()
-					.getStackTrace()[3];// ´Ó¶ÑÕ»ĞÅÏ¢ÖĞ»ñÈ¡µ±Ç°±»µ÷ÓÃµÄ·½·¨ĞÅÏ¢
+					.getStackTrace()[3];// ä»å †æ ˆä¿¡æ¯ä¸­è·å–å½“å‰è¢«è°ƒç”¨çš„æ–¹æ³•ä¿¡æ¯
 			String logtext = mLineTime.format(new Date()) + mLineBreak;
 			
 			logtext += "stack: "+String.format(CLASS_METHOD_LINE_FORMAT, traceElement
 					.getClassName(), traceElement.getMethodName(), traceElement
 					.getLineNumber(), traceElement.getFileName()) + mLineBreak;
 			
-			logtext+="¡¾trace info: " + info + "¡¿" + mLineBreak+ mLineBreak+ mLineBreak+ mLineBreak;
+			logtext+="ã€trace info: " + info + "ã€‘" + mLineBreak+ mLineBreak+ mLineBreak+ mLineBreak;
 			logtext += "-------------------------------------------------------------"+mLineBreak;
 
 			write(logtext);
@@ -141,7 +141,7 @@ public class LogHelper {
 	}
 
 	/**
-	 * ±£´æÒ»¸öÒì³£µÄ¶ÑÕ»ĞÅÏ¢
+	 * ä¿å­˜ä¸€ä¸ªå¼‚å¸¸çš„å †æ ˆä¿¡æ¯
 	 * @param ex
 	 */
 	public static void saveExceptionStackInfo(Throwable e){
@@ -163,7 +163,7 @@ public class LogHelper {
 	
 
 	/**
-	 * saveDeviceInfo:{±£´æÉè±¸²ÎÊıĞÅÏ¢}
+	 * saveDeviceInfo:{ä¿å­˜è®¾å¤‡å‚æ•°ä¿¡æ¯}
 	 */
 	public static void saveDeviceInfo() {
 
@@ -179,9 +179,9 @@ public class LogHelper {
 	public static String getDevicesInfo(Context paramContext){
 		Map<String, String> logInfo = new HashMap<String, String>();
 		try {
-			// »ñµÃ°ü¹ÜÀíÆ÷
+			// è·å¾—åŒ…ç®¡ç†å™¨
 			PackageManager mPackageManager = paramContext.getPackageManager();
-			// µÃµ½¸ÃÓ¦ÓÃµÄĞÅÏ¢£¬¼´Ö÷Activity
+			// å¾—åˆ°è¯¥åº”ç”¨çš„ä¿¡æ¯ï¼Œå³ä¸»Activity
 			PackageInfo mPackageInfo = mPackageManager.getPackageInfo(
 					paramContext.getPackageName(),
 					PackageManager.GET_ACTIVITIES);
@@ -195,9 +195,9 @@ public class LogHelper {
 		} catch (NameNotFoundException e) {
 			e.printStackTrace();
 		}
-		// ·´Éä»úÖÆ
+		// åå°„æœºåˆ¶
 		Field[] mFields = Build.class.getDeclaredFields();
-		// µü´úBuildµÄ×Ö¶Îkey-value ´Ë´¦µÄĞÅÏ¢Ö÷ÒªÊÇÎªÁËÔÚ·şÎñÆ÷¶ËÊÖ»ú¸÷ÖÖ°æ±¾ÊÖ»ú±¨´íµÄÔ­Òò
+		// è¿­ä»£Buildçš„å­—æ®µkey-value æ­¤å¤„çš„ä¿¡æ¯ä¸»è¦æ˜¯ä¸ºäº†åœ¨æœåŠ¡å™¨ç«¯æ‰‹æœºå„ç§ç‰ˆæœ¬æ‰‹æœºæŠ¥é”™çš„åŸå› 
 		for (Field field : mFields) {
 			try {
 				field.setAccessible(true);

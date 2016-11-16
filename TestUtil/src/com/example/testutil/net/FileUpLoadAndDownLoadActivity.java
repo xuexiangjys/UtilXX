@@ -34,9 +34,9 @@ import com.xuexiang.util.view.DialogUtil;
 import com.xuexiang.view.dialog.HoriztalProgressBarDialog;
 
 public class FileUpLoadAndDownLoadActivity extends BaseActivity implements OnClickListener{
-	private EditText path;						//ÎÄ¼şÂ·¾¶
-	private ProgressBar uploadProgress;			//½ø¶ÈÌõ
-	private TextView progress;					//½ø¶È
+	private EditText path;						//æ–‡ä»¶è·¯å¾„
+	private ProgressBar uploadProgress;			//è¿›åº¦æ¡
+	private TextView progress;					//è¿›åº¦
 	private Button upload;			
 	
 	private final int SELECT_FILE = 1;
@@ -82,7 +82,7 @@ public class FileUpLoadAndDownLoadActivity extends BaseActivity implements OnCli
 	    intent.setType("*/*"); 
 	    intent.addCategory(Intent.CATEGORY_OPENABLE);
 	    try {
-	        startActivityForResult( Intent.createChooser(intent, "Ñ¡ÔñÉÏ´«ÎÄ¼ş"), SELECT_FILE);
+	        startActivityForResult( Intent.createChooser(intent, "é€‰æ‹©ä¸Šä¼ æ–‡ä»¶"), SELECT_FILE);
 	    } catch (android.content.ActivityNotFoundException ex) {
 	       
 	    }
@@ -90,7 +90,7 @@ public class FileUpLoadAndDownLoadActivity extends BaseActivity implements OnCli
 	
 	
 	/**
-	 * Activity»Øµ÷·½·¨
+	 * Activityå›è°ƒæ–¹æ³•
 	 */
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -110,28 +110,28 @@ public class FileUpLoadAndDownLoadActivity extends BaseActivity implements OnCli
 		}
 				
 		List<File> list = new ArrayList<File>();
-		String[] paths = path.getText().toString().split(",");		//¸ù¾İ¶ººÅ²ğ·ÖÎÄ¼şµÄÂ·¾¶
+		String[] paths = path.getText().toString().split(",");		//æ ¹æ®é€—å·æ‹†åˆ†æ–‡ä»¶çš„è·¯å¾„
 		for(int i = 0; i < paths.length; i++){
 			File file = FileUtils.createNewFile(paths[i]);
 			if (file != null) {
-				list.add(new File(paths[i]));		//´´½¨File
+				list.add(new File(paths[i]));		//åˆ›å»ºFile
 			}								
 		}
-//		new UpLoadAsyncTask().execute(list);							//ÎŞ²ÎÊıÉÏ´«ÎÄ¼ş
+//		new UpLoadAsyncTask().execute(list);							//æ— å‚æ•°ä¸Šä¼ æ–‡ä»¶
 		
-	/**************************************ÓĞ²ÎÊıÉÏ´«ÎÄ¼ş******************************************/
+	/**************************************æœ‰å‚æ•°ä¸Šä¼ æ–‡ä»¶******************************************/
 		Map<String, Object> params = new HashMap<String, Object>();
 		for (int i = 0; i < list.size(); i++) {
 			params.put("file" + i, list.get(i));
 		}
-		params.put("content", "ÕâÊÇÉÏ´«µÄ²ÎÊı:ÕâÊÇHttpClientÉÏ´«µÄÎÄ¼ş");
+		params.put("content", "è¿™æ˜¯ä¸Šä¼ çš„å‚æ•°:è¿™æ˜¯HttpClientä¸Šä¼ çš„æ–‡ä»¶");
 		new MyUpLoadAsyncTask().execute(params);	
 		
 	}
 	
 	
 	/**
-	 * ´¦Àí·µ»ØµÄÎÄ¼ş
+	 * å¤„ç†è¿”å›çš„æ–‡ä»¶
 	 * @param data
 	 */
 	private void handlerActivityResult(Intent intent){
@@ -139,7 +139,7 @@ public class FileUpLoadAndDownLoadActivity extends BaseActivity implements OnCli
 		path.append(imagePath + ",");
 	}
 	
-	// È¡µ½¾ø¶ÔÂ·¾¶
+	// å–åˆ°ç»å¯¹è·¯å¾„
 	protected String getAbsolutePath(Uri uri) {
 		// can post image
 		String[] proj = { MediaStore.Images.Media.DATA };
@@ -153,7 +153,7 @@ public class FileUpLoadAndDownLoadActivity extends BaseActivity implements OnCli
 	
 	
 	/**
-	 * ÎŞ²ÎÊıÎÄ¼şÉÏ´«
+	 * æ— å‚æ•°æ–‡ä»¶ä¸Šä¼ 
 	 * @author Tercel
 	 *
 	 */
@@ -161,22 +161,22 @@ public class FileUpLoadAndDownLoadActivity extends BaseActivity implements OnCli
         @Override  
         protected void onPreExecute() {  
         	upload.setClickable(false);
-        	Toast("¿ªÊ¼ÉÏ´«");
+        	Toast("å¼€å§‹ä¸Šä¼ ");
         }
         
         
 		@Override
 		protected String doInBackground(List<File>... params) {
-			ProgressListener listener = new ProgressListener() {	//ÉÏ´«½ø¶È¼àÌıÆ÷			
+			ProgressListener listener = new ProgressListener() {	//ä¸Šä¼ è¿›åº¦ç›‘å¬å™¨			
 				@Override
 				public void cumulative(long num) {
-					ShowLog("ÉÏ´«Á¿" + String.valueOf(num));		//ÉÏ´«Á¿
+					ShowLog("ä¸Šä¼ é‡" + String.valueOf(num));		//ä¸Šä¼ é‡
 				}
 				
 				@Override
 				public void progress(int progress) {
-					ShowLog("ÉÏ´«½ø¶È" + String.valueOf(progress));
-					publishProgress((long)progress);			//½ø¶È
+					ShowLog("ä¸Šä¼ è¿›åº¦" + String.valueOf(progress));
+					publishProgress((long)progress);			//è¿›åº¦
 				}
 			};
 			
@@ -184,7 +184,7 @@ public class FileUpLoadAndDownLoadActivity extends BaseActivity implements OnCli
 				return FileUpload.post(HttpConsts.UPLPAD_URL, params[0], listener);
 			} catch (Exception e) {				
 				e.printStackTrace();
-				//Òì³£×Ô¼º´¦Àí
+				//å¼‚å¸¸è‡ªå·±å¤„ç†
 			}
 			return null;
 		}
@@ -205,7 +205,7 @@ public class FileUpLoadAndDownLoadActivity extends BaseActivity implements OnCli
 	
 	
 	/**
-	 * ÓĞ²ÎÊıÎÄ¼şÉÏ´«
+	 * æœ‰å‚æ•°æ–‡ä»¶ä¸Šä¼ 
 	 * @author Tercel
 	 *
 	 */
@@ -213,22 +213,22 @@ public class FileUpLoadAndDownLoadActivity extends BaseActivity implements OnCli
         @Override  
         protected void onPreExecute() {  
         	upload.setClickable(false);
-        	Toast("¿ªÊ¼ÉÏ´«");
+        	Toast("å¼€å§‹ä¸Šä¼ ");
         }
         
         
 		@Override
 		protected String doInBackground(Map<String, Object>... params) {
-			ProgressListener listener = new ProgressListener() {	//ÉÏ´«½ø¶È¼àÌıÆ÷			
+			ProgressListener listener = new ProgressListener() {	//ä¸Šä¼ è¿›åº¦ç›‘å¬å™¨			
 				@Override
 				public void cumulative(long num) {
-					ShowLog("ÉÏ´«Á¿" + String.valueOf(num));		//ÉÏ´«Á¿
+					ShowLog("ä¸Šä¼ é‡" + String.valueOf(num));		//ä¸Šä¼ é‡
 				}
 				
 				@Override
 				public void progress(int progress) {
-					ShowLog("ÉÏ´«½ø¶È" + String.valueOf(progress));
-					publishProgress((long)progress);			//½ø¶È
+					ShowLog("ä¸Šä¼ è¿›åº¦" + String.valueOf(progress));
+					publishProgress((long)progress);			//è¿›åº¦
 				}
 			};
 			
@@ -236,7 +236,7 @@ public class FileUpLoadAndDownLoadActivity extends BaseActivity implements OnCli
 				return FileUpload.post(HttpConsts.UPLPAD_URL, params[0], listener);
 			} catch (Exception e) {				
 				e.printStackTrace();
-				//Òì³£×Ô¼º´¦Àí
+				//å¼‚å¸¸è‡ªå·±å¤„ç†
 			}
 			return null;
 		}
@@ -257,11 +257,11 @@ public class FileUpLoadAndDownLoadActivity extends BaseActivity implements OnCli
 	
 	
 	/**
-	 * °æ±¾¸üĞÂ
+	 * ç‰ˆæœ¬æ›´æ–°
 	 */
 	private void showNewAppInfo() {
-		final String updatemsg = "×îĞÂ°æ±¾Îª1.3, ÊÇ·ñĞèÒª¸üĞÂ£¿\n¸üĞÂÄÚÈİÈçÏÂ£ºÔö¼ÓÁËÎ¬ĞŞÄ£¿é¡¢ÍâÂôÄ£¿é¡¢ÉÏÃÅ·şÎñÄ£¿é¡£";
-		DialogUtil.showDialog(mContext,"·¢ÏÖĞÂ°æ±¾£¡",
+		final String updatemsg = "æœ€æ–°ç‰ˆæœ¬ä¸º1.3, æ˜¯å¦éœ€è¦æ›´æ–°ï¼Ÿ\næ›´æ–°å†…å®¹å¦‚ä¸‹ï¼šå¢åŠ äº†ç»´ä¿®æ¨¡å—ã€å¤–å–æ¨¡å—ã€ä¸Šé—¨æœåŠ¡æ¨¡å—ã€‚";
+		DialogUtil.showDialog(mContext,"å‘ç°æ–°ç‰ˆæœ¬ï¼",
 				updatemsg,
 				getString(R.string.system_sure),
 				getString(R.string.system_cancel) , 
@@ -275,15 +275,15 @@ public class FileUpLoadAndDownLoadActivity extends BaseActivity implements OnCli
 	}	
 	
     /**
-     * ÏÂÔØÎÄ¼ş
+     * ä¸‹è½½æ–‡ä»¶
      */
     private void downLoadFile() {
-    	mHoriztalProgressBarDialog = new HoriztalProgressBarDialog(this, "ÕıÔÚÏÂÔØÎÄ¼ş£ºhelper.apk");
+    	mHoriztalProgressBarDialog = new HoriztalProgressBarDialog(this, "æ­£åœ¨ä¸‹è½½æ–‡ä»¶ï¼šhelper.apk");
 		mHoriztalProgressBarDialog.show();
 		FileDownloadThread download = new FileDownloadThread (HttpConsts.APK_UPDATE_URL, "helper.apk", new ProgressListener(){
 			@Override
 			public void cumulative(long arg0) {
-				LogUtils.d("ÒÑÏÂÔØÎÄ¼ş´óĞ¡£º" + arg0);
+				LogUtils.d("å·²ä¸‹è½½æ–‡ä»¶å¤§å°ï¼š" + arg0);
 			}
 
 			@Override
@@ -293,7 +293,7 @@ public class FileUpLoadAndDownLoadActivity extends BaseActivity implements OnCli
 
 			@Override
 			public void onFinish(long fileS) {
-				Toast("ÒÑÏÂÔØÍê±Ï£¬ÎÄ¼ş´óĞ¡£º" + CacheTools.formatFileSize(fileS));
+				Toast("å·²ä¸‹è½½å®Œæ¯•ï¼Œæ–‡ä»¶å¤§å°ï¼š" + CacheTools.formatFileSize(fileS));
 				mHoriztalProgressBarDialog.dismiss();
 			}});		
 		download.start();

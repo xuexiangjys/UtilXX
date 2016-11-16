@@ -8,10 +8,10 @@ import com.example.testutil.system.LogHelperActivity;
 import com.xuexiang.app.BaseActivity;
 
 /**  
- * ´´½¨Ê±¼ä£º2016-5-30 ÏÂÎç6:57:59  
- * ÏîÄ¿Ãû³Æ£ºUtilTest  
+ * åˆ›å»ºæ—¶é—´ï¼š2016-5-30 ä¸‹åˆ6:57:59  
+ * é¡¹ç›®åç§°ï¼šUtilTest  
  * @author xuexiang
- * ÎÄ¼şÃû³Æ£ºSystemActivity.java  
+ * æ–‡ä»¶åç§°ï¼šSystemActivity.java  
  **/
 public class SystemActivity extends BaseActivity implements OnClickListener{
 
@@ -19,7 +19,7 @@ public class SystemActivity extends BaseActivity implements OnClickListener{
 	public void onCreateActivity() {
 		 setContentView(R.layout.activity_system);
 	        
-		 initActionBar("ÏµÍ³²Ù×÷½çÃæ");
+		 initActionBar("ç³»ç»Ÿæ“ä½œç•Œé¢");
 	}
 
 	@Override
@@ -27,7 +27,7 @@ public class SystemActivity extends BaseActivity implements OnClickListener{
 		Intent intent = new Intent();
 		switch (v.getId()) {
 		case R.id.btn_loghelper:
-			mToastUtil.showToast("µã»÷ÁËLogHelperActivity");
+			mToastUtil.showToast("ç‚¹å‡»äº†LogHelperActivity");
         	intent.setClass(this, LogHelperActivity.class);
             startActivity(intent);	
 			break;

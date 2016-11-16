@@ -12,8 +12,8 @@ import com.xuexiang.util.net.uploadfile.HttpClientUtil.ProgressListener;
 
 
 /**
- * 带进度的文件上传表单正文<br>
- * @author MSD_小谢
+ * 甯﹁繘搴︾殑鏂囦欢涓婁紶琛ㄥ崟姝ｆ枃<br>
+ * @author MSD_灏忚阿
  *
  */
 public class CustomMultipartEntity extends MultipartEntity {	

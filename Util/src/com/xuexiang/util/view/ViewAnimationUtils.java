@@ -24,7 +24,7 @@ import android.view.animation.CycleInterpolator;
 import android.view.animation.TranslateAnimation;
 
 /**
- * ÊÓÍ¼¶¯»­¹¤¾ßÏä£¬Ìá¹©¼òµ¥µÄ¿ØÖÆÊÓÍ¼µÄ¶¯»­µÄ¹¤¾ß·½·¨
+ * è§†å›¾åŠ¨ç”»å·¥å…·ç®±ï¼Œæä¾›ç®€å•çš„æ§åˆ¶è§†å›¾çš„åŠ¨ç”»çš„å·¥å…·æ–¹æ³•
  *
  * @author zhenguo
  */
@@ -38,22 +38,22 @@ public final class ViewAnimationUtils {
     }
 
     // /**
-    // * Ä¬ÈÏ¶¯»­³ÖĞøÊ±¼ä
+    // * é»˜è®¤åŠ¨ç”»æŒç»­æ—¶é—´
     // */
     // public static final long DEFAULT_ANIMATION_DURATION = 300;
 
 	/*
-     *  ************************************************************* ÊÓÍ¼Í¸Ã÷¶È½¥±ä¶¯»­
+     *  ************************************************************* è§†å›¾é€æ˜åº¦æ¸å˜åŠ¨ç”»
 	 * ********************************************************************
 	 */
 
     /**
-     * ½«¸ø¶¨ÊÓÍ¼½¥½¥ÒşÈ¥£¨view.setVisibility(View.INVISIBLE)£©
+     * å°†ç»™å®šè§†å›¾æ¸æ¸éšå»ï¼ˆview.setVisibility(View.INVISIBLE)ï¼‰
      *
-     * @param view              ±»´¦ÀíµÄÊÓÍ¼
-     * @param isBanClick        ÔÚÖ´ĞĞ¶¯»­µÄ¹ı³ÌÖĞÊÇ·ñ½ûÖ¹µã»÷
-     * @param durationMillis    ³ÖĞøÊ±¼ä£¬ºÁÃë
-     * @param animationListener ¶¯»­¼àÌıÆ÷
+     * @param view              è¢«å¤„ç†çš„è§†å›¾
+     * @param isBanClick        åœ¨æ‰§è¡ŒåŠ¨ç”»çš„è¿‡ç¨‹ä¸­æ˜¯å¦ç¦æ­¢ç‚¹å‡»
+     * @param durationMillis    æŒç»­æ—¶é—´ï¼Œæ¯«ç§’
+     * @param animationListener åŠ¨ç”»ç›‘å¬å™¨
      */
     public static void invisibleViewByAlpha(final View view,
                                             long durationMillis, final boolean isBanClick,
@@ -95,11 +95,11 @@ public final class ViewAnimationUtils {
     }
 
     /**
-     * ½«¸ø¶¨ÊÓÍ¼½¥½¥ÒşÈ¥£¨view.setVisibility(View.INVISIBLE)£©
+     * å°†ç»™å®šè§†å›¾æ¸æ¸éšå»ï¼ˆview.setVisibility(View.INVISIBLE)ï¼‰
      *
-     * @param view              ±»´¦ÀíµÄÊÓÍ¼
-     * @param durationMillis    ³ÖĞøÊ±¼ä£¬ºÁÃë
-     * @param animationListener ¶¯»­¼àÌıÆ÷
+     * @param view              è¢«å¤„ç†çš„è§†å›¾
+     * @param durationMillis    æŒç»­æ—¶é—´ï¼Œæ¯«ç§’
+     * @param animationListener åŠ¨ç”»ç›‘å¬å™¨
      */
     public static void invisibleViewByAlpha(final View view,
                                             long durationMillis, final AnimationListener animationListener) {
@@ -107,11 +107,11 @@ public final class ViewAnimationUtils {
     }
 
     /**
-     * ½«¸ø¶¨ÊÓÍ¼½¥½¥ÒşÈ¥£¨view.setVisibility(View.INVISIBLE)£©
+     * å°†ç»™å®šè§†å›¾æ¸æ¸éšå»ï¼ˆview.setVisibility(View.INVISIBLE)ï¼‰
      *
-     * @param view           ±»´¦ÀíµÄÊÓÍ¼
-     * @param durationMillis ³ÖĞøÊ±¼ä£¬ºÁÃë
-     * @param isBanClick     ÔÚÖ´ĞĞ¶¯»­µÄ¹ı³ÌÖĞÊÇ·ñ½ûÖ¹µã»÷
+     * @param view           è¢«å¤„ç†çš„è§†å›¾
+     * @param durationMillis æŒç»­æ—¶é—´ï¼Œæ¯«ç§’
+     * @param isBanClick     åœ¨æ‰§è¡ŒåŠ¨ç”»çš„è¿‡ç¨‹ä¸­æ˜¯å¦ç¦æ­¢ç‚¹å‡»
      */
     public static void invisibleViewByAlpha(final View view,
                                             long durationMillis, boolean isBanClick) {
@@ -119,22 +119,22 @@ public final class ViewAnimationUtils {
     }
 
     /**
-     * ½«¸ø¶¨ÊÓÍ¼½¥½¥ÒşÈ¥£¨view.setVisibility(View.INVISIBLE)£©
+     * å°†ç»™å®šè§†å›¾æ¸æ¸éšå»ï¼ˆview.setVisibility(View.INVISIBLE)ï¼‰
      *
-     * @param view           ±»´¦ÀíµÄÊÓÍ¼
-     * @param durationMillis ³ÖĞøÊ±¼ä£¬ºÁÃë
+     * @param view           è¢«å¤„ç†çš„è§†å›¾
+     * @param durationMillis æŒç»­æ—¶é—´ï¼Œæ¯«ç§’
      */
     public static void invisibleViewByAlpha(final View view, long durationMillis) {
         invisibleViewByAlpha(view, durationMillis, false, null);
     }
 
     /**
-     * ½«¸ø¶¨ÊÓÍ¼½¥½¥ÒşÈ¥£¨view.setVisibility(View.INVISIBLE)£©£¬
-     * Ä¬ÈÏµÄ³ÖĞøÊ±¼äÎªDEFAULT_ALPHA_ANIMATION_DURATION
+     * å°†ç»™å®šè§†å›¾æ¸æ¸éšå»ï¼ˆview.setVisibility(View.INVISIBLE)ï¼‰ï¼Œ
+     * é»˜è®¤çš„æŒç»­æ—¶é—´ä¸ºDEFAULT_ALPHA_ANIMATION_DURATION
      *
-     * @param view              ±»´¦ÀíµÄÊÓÍ¼
-     * @param isBanClick        ÔÚÖ´ĞĞ¶¯»­µÄ¹ı³ÌÖĞÊÇ·ñ½ûÖ¹µã»÷
-     * @param animationListener ¶¯»­¼àÌıÆ÷
+     * @param view              è¢«å¤„ç†çš„è§†å›¾
+     * @param isBanClick        åœ¨æ‰§è¡ŒåŠ¨ç”»çš„è¿‡ç¨‹ä¸­æ˜¯å¦ç¦æ­¢ç‚¹å‡»
+     * @param animationListener åŠ¨ç”»ç›‘å¬å™¨
      */
     public static void invisibleViewByAlpha(final View view,
                                             boolean isBanClick, final AnimationListener animationListener) {
@@ -143,11 +143,11 @@ public final class ViewAnimationUtils {
     }
 
     /**
-     * ½«¸ø¶¨ÊÓÍ¼½¥½¥ÒşÈ¥£¨view.setVisibility(View.INVISIBLE)£©£¬
-     * Ä¬ÈÏµÄ³ÖĞøÊ±¼äÎªDEFAULT_ALPHA_ANIMATION_DURATION
+     * å°†ç»™å®šè§†å›¾æ¸æ¸éšå»ï¼ˆview.setVisibility(View.INVISIBLE)ï¼‰ï¼Œ
+     * é»˜è®¤çš„æŒç»­æ—¶é—´ä¸ºDEFAULT_ALPHA_ANIMATION_DURATION
      *
-     * @param view              ±»´¦ÀíµÄÊÓÍ¼
-     * @param animationListener ¶¯»­¼àÌıÆ÷
+     * @param view              è¢«å¤„ç†çš„è§†å›¾
+     * @param animationListener åŠ¨ç”»ç›‘å¬å™¨
      */
     public static void invisibleViewByAlpha(final View view,
                                             final AnimationListener animationListener) {
@@ -156,11 +156,11 @@ public final class ViewAnimationUtils {
     }
 
     /**
-     * ½«¸ø¶¨ÊÓÍ¼½¥½¥ÒşÈ¥£¨view.setVisibility(View.INVISIBLE)£©£¬
-     * Ä¬ÈÏµÄ³ÖĞøÊ±¼äÎªDEFAULT_ALPHA_ANIMATION_DURATION
+     * å°†ç»™å®šè§†å›¾æ¸æ¸éšå»ï¼ˆview.setVisibility(View.INVISIBLE)ï¼‰ï¼Œ
+     * é»˜è®¤çš„æŒç»­æ—¶é—´ä¸ºDEFAULT_ALPHA_ANIMATION_DURATION
      *
-     * @param view       ±»´¦ÀíµÄÊÓÍ¼
-     * @param isBanClick ÔÚÖ´ĞĞ¶¯»­µÄ¹ı³ÌÖĞÊÇ·ñ½ûÖ¹µã»÷
+     * @param view       è¢«å¤„ç†çš„è§†å›¾
+     * @param isBanClick åœ¨æ‰§è¡ŒåŠ¨ç”»çš„è¿‡ç¨‹ä¸­æ˜¯å¦ç¦æ­¢ç‚¹å‡»
      */
     public static void invisibleViewByAlpha(final View view, boolean isBanClick) {
         invisibleViewByAlpha(view, AnimationUtils.DEFAULT_ANIMATION_DURATION,
@@ -168,10 +168,10 @@ public final class ViewAnimationUtils {
     }
 
     /**
-     * ½«¸ø¶¨ÊÓÍ¼½¥½¥ÒşÈ¥£¨view.setVisibility(View.INVISIBLE)£©£¬
-     * Ä¬ÈÏµÄ³ÖĞøÊ±¼äÎªDEFAULT_ALPHA_ANIMATION_DURATION
+     * å°†ç»™å®šè§†å›¾æ¸æ¸éšå»ï¼ˆview.setVisibility(View.INVISIBLE)ï¼‰ï¼Œ
+     * é»˜è®¤çš„æŒç»­æ—¶é—´ä¸ºDEFAULT_ALPHA_ANIMATION_DURATION
      *
-     * @param view ±»´¦ÀíµÄÊÓÍ¼
+     * @param view è¢«å¤„ç†çš„è§†å›¾
      */
     public static void invisibleViewByAlpha(final View view) {
         invisibleViewByAlpha(view, AnimationUtils.DEFAULT_ANIMATION_DURATION,
@@ -179,12 +179,12 @@ public final class ViewAnimationUtils {
     }
 
     /**
-     * ½«¸ø¶¨ÊÓÍ¼½¥½¥ÒşÈ¥×îºó´Ó½çÃæÖĞÒÆ³ı£¨view.setVisibility(View.GONE)£©
+     * å°†ç»™å®šè§†å›¾æ¸æ¸éšå»æœ€åä»ç•Œé¢ä¸­ç§»é™¤ï¼ˆview.setVisibility(View.GONE)ï¼‰
      *
-     * @param view              ±»´¦ÀíµÄÊÓÍ¼
-     * @param durationMillis    ³ÖĞøÊ±¼ä£¬ºÁÃë
-     * @param isBanClick        ÔÚÖ´ĞĞ¶¯»­µÄ¹ı³ÌÖĞÊÇ·ñ½ûÖ¹µã»÷
-     * @param animationListener ¶¯»­¼àÌıÆ÷
+     * @param view              è¢«å¤„ç†çš„è§†å›¾
+     * @param durationMillis    æŒç»­æ—¶é—´ï¼Œæ¯«ç§’
+     * @param isBanClick        åœ¨æ‰§è¡ŒåŠ¨ç”»çš„è¿‡ç¨‹ä¸­æ˜¯å¦ç¦æ­¢ç‚¹å‡»
+     * @param animationListener åŠ¨ç”»ç›‘å¬å™¨
      */
     public static void goneViewByAlpha(final View view, long durationMillis,
                                        final boolean isBanClick, final AnimationListener animationListener) {
@@ -225,11 +225,11 @@ public final class ViewAnimationUtils {
     }
 
     /**
-     * ½«¸ø¶¨ÊÓÍ¼½¥½¥ÒşÈ¥×îºó´Ó½çÃæÖĞÒÆ³ı£¨view.setVisibility(View.GONE)£©
+     * å°†ç»™å®šè§†å›¾æ¸æ¸éšå»æœ€åä»ç•Œé¢ä¸­ç§»é™¤ï¼ˆview.setVisibility(View.GONE)ï¼‰
      *
-     * @param view              ±»´¦ÀíµÄÊÓÍ¼
-     * @param durationMillis    ³ÖĞøÊ±¼ä£¬ºÁÃë
-     * @param animationListener ¶¯»­¼àÌıÆ÷
+     * @param view              è¢«å¤„ç†çš„è§†å›¾
+     * @param durationMillis    æŒç»­æ—¶é—´ï¼Œæ¯«ç§’
+     * @param animationListener åŠ¨ç”»ç›‘å¬å™¨
      */
     public static void goneViewByAlpha(final View view, long durationMillis,
                                        final AnimationListener animationListener) {
@@ -237,11 +237,11 @@ public final class ViewAnimationUtils {
     }
 
     /**
-     * ½«¸ø¶¨ÊÓÍ¼½¥½¥ÒşÈ¥×îºó´Ó½çÃæÖĞÒÆ³ı£¨view.setVisibility(View.GONE)£©
+     * å°†ç»™å®šè§†å›¾æ¸æ¸éšå»æœ€åä»ç•Œé¢ä¸­ç§»é™¤ï¼ˆview.setVisibility(View.GONE)ï¼‰
      *
-     * @param view           ±»´¦ÀíµÄÊÓÍ¼
-     * @param durationMillis ³ÖĞøÊ±¼ä£¬ºÁÃë
-     * @param isBanClick     ÔÚÖ´ĞĞ¶¯»­µÄ¹ı³ÌÖĞÊÇ·ñ½ûÖ¹µã»÷
+     * @param view           è¢«å¤„ç†çš„è§†å›¾
+     * @param durationMillis æŒç»­æ—¶é—´ï¼Œæ¯«ç§’
+     * @param isBanClick     åœ¨æ‰§è¡ŒåŠ¨ç”»çš„è¿‡ç¨‹ä¸­æ˜¯å¦ç¦æ­¢ç‚¹å‡»
      */
     public static void goneViewByAlpha(final View view, long durationMillis,
                                        final boolean isBanClick) {
@@ -249,22 +249,22 @@ public final class ViewAnimationUtils {
     }
 
     /**
-     * ½«¸ø¶¨ÊÓÍ¼½¥½¥ÒşÈ¥×îºó´Ó½çÃæÖĞÒÆ³ı£¨view.setVisibility(View.GONE)£©
+     * å°†ç»™å®šè§†å›¾æ¸æ¸éšå»æœ€åä»ç•Œé¢ä¸­ç§»é™¤ï¼ˆview.setVisibility(View.GONE)ï¼‰
      *
-     * @param view           ±»´¦ÀíµÄÊÓÍ¼
-     * @param durationMillis ³ÖĞøÊ±¼ä£¬ºÁÃë
+     * @param view           è¢«å¤„ç†çš„è§†å›¾
+     * @param durationMillis æŒç»­æ—¶é—´ï¼Œæ¯«ç§’
      */
     public static void goneViewByAlpha(final View view, long durationMillis) {
         goneViewByAlpha(view, durationMillis, false, null);
     }
 
     /**
-     * ½«¸ø¶¨ÊÓÍ¼½¥½¥ÒşÈ¥×îºó´Ó½çÃæÖĞÒÆ³ı£¨view.setVisibility(View.GONE)£©£¬
-     * Ä¬ÈÏµÄ³ÖĞøÊ±¼äÎªDEFAULT_ALPHA_ANIMATION_DURATION
+     * å°†ç»™å®šè§†å›¾æ¸æ¸éšå»æœ€åä»ç•Œé¢ä¸­ç§»é™¤ï¼ˆview.setVisibility(View.GONE)ï¼‰ï¼Œ
+     * é»˜è®¤çš„æŒç»­æ—¶é—´ä¸ºDEFAULT_ALPHA_ANIMATION_DURATION
      *
-     * @param view              ±»´¦ÀíµÄÊÓÍ¼
-     * @param isBanClick        ÔÚÖ´ĞĞ¶¯»­µÄ¹ı³ÌÖĞÊÇ·ñ½ûÖ¹µã»÷
-     * @param animationListener ¶¯»­¼àÌıÆ÷
+     * @param view              è¢«å¤„ç†çš„è§†å›¾
+     * @param isBanClick        åœ¨æ‰§è¡ŒåŠ¨ç”»çš„è¿‡ç¨‹ä¸­æ˜¯å¦ç¦æ­¢ç‚¹å‡»
+     * @param animationListener åŠ¨ç”»ç›‘å¬å™¨
      */
     public static void goneViewByAlpha(final View view,
                                        final boolean isBanClick, final AnimationListener animationListener) {
@@ -273,11 +273,11 @@ public final class ViewAnimationUtils {
     }
 
     /**
-     * ½«¸ø¶¨ÊÓÍ¼½¥½¥ÒşÈ¥×îºó´Ó½çÃæÖĞÒÆ³ı£¨view.setVisibility(View.GONE)£©£¬
-     * Ä¬ÈÏµÄ³ÖĞøÊ±¼äÎªDEFAULT_ALPHA_ANIMATION_DURATION
+     * å°†ç»™å®šè§†å›¾æ¸æ¸éšå»æœ€åä»ç•Œé¢ä¸­ç§»é™¤ï¼ˆview.setVisibility(View.GONE)ï¼‰ï¼Œ
+     * é»˜è®¤çš„æŒç»­æ—¶é—´ä¸ºDEFAULT_ALPHA_ANIMATION_DURATION
      *
-     * @param view              ±»´¦ÀíµÄÊÓÍ¼
-     * @param animationListener ¶¯»­¼àÌıÆ÷
+     * @param view              è¢«å¤„ç†çš„è§†å›¾
+     * @param animationListener åŠ¨ç”»ç›‘å¬å™¨
      */
     public static void goneViewByAlpha(final View view,
                                        final AnimationListener animationListener) {
@@ -286,11 +286,11 @@ public final class ViewAnimationUtils {
     }
 
     /**
-     * ½«¸ø¶¨ÊÓÍ¼½¥½¥ÒşÈ¥×îºó´Ó½çÃæÖĞÒÆ³ı£¨view.setVisibility(View.GONE)£©£¬
-     * Ä¬ÈÏµÄ³ÖĞøÊ±¼äÎªDEFAULT_ALPHA_ANIMATION_DURATION
+     * å°†ç»™å®šè§†å›¾æ¸æ¸éšå»æœ€åä»ç•Œé¢ä¸­ç§»é™¤ï¼ˆview.setVisibility(View.GONE)ï¼‰ï¼Œ
+     * é»˜è®¤çš„æŒç»­æ—¶é—´ä¸ºDEFAULT_ALPHA_ANIMATION_DURATION
      *
-     * @param view       ±»´¦ÀíµÄÊÓÍ¼
-     * @param isBanClick ÔÚÖ´ĞĞ¶¯»­µÄ¹ı³ÌÖĞÊÇ·ñ½ûÖ¹µã»÷
+     * @param view       è¢«å¤„ç†çš„è§†å›¾
+     * @param isBanClick åœ¨æ‰§è¡ŒåŠ¨ç”»çš„è¿‡ç¨‹ä¸­æ˜¯å¦ç¦æ­¢ç‚¹å‡»
      */
     public static void goneViewByAlpha(final View view, final boolean isBanClick) {
         goneViewByAlpha(view, AnimationUtils.DEFAULT_ANIMATION_DURATION,
@@ -298,10 +298,10 @@ public final class ViewAnimationUtils {
     }
 
     /**
-     * ½«¸ø¶¨ÊÓÍ¼½¥½¥ÒşÈ¥×îºó´Ó½çÃæÖĞÒÆ³ı£¨view.setVisibility(View.GONE)£©£¬
-     * Ä¬ÈÏµÄ³ÖĞøÊ±¼äÎªDEFAULT_ALPHA_ANIMATION_DURATION
+     * å°†ç»™å®šè§†å›¾æ¸æ¸éšå»æœ€åä»ç•Œé¢ä¸­ç§»é™¤ï¼ˆview.setVisibility(View.GONE)ï¼‰ï¼Œ
+     * é»˜è®¤çš„æŒç»­æ—¶é—´ä¸ºDEFAULT_ALPHA_ANIMATION_DURATION
      *
-     * @param view ±»´¦ÀíµÄÊÓÍ¼
+     * @param view è¢«å¤„ç†çš„è§†å›¾
      */
     public static void goneViewByAlpha(final View view) {
         goneViewByAlpha(view, AnimationUtils.DEFAULT_ANIMATION_DURATION, false,
@@ -309,12 +309,12 @@ public final class ViewAnimationUtils {
     }
 
     /**
-     * ½«¸ø¶¨ÊÓÍ¼½¥½¥ÏÔÊ¾³öÀ´£¨view.setVisibility(View.VISIBLE)£©
+     * å°†ç»™å®šè§†å›¾æ¸æ¸æ˜¾ç¤ºå‡ºæ¥ï¼ˆview.setVisibility(View.VISIBLE)ï¼‰
      *
-     * @param view              ±»´¦ÀíµÄÊÓÍ¼
-     * @param durationMillis    ³ÖĞøÊ±¼ä£¬ºÁÃë
-     * @param isBanClick        ÔÚÖ´ĞĞ¶¯»­µÄ¹ı³ÌÖĞÊÇ·ñ½ûÖ¹µã»÷
-     * @param animationListener ¶¯»­¼àÌıÆ÷
+     * @param view              è¢«å¤„ç†çš„è§†å›¾
+     * @param durationMillis    æŒç»­æ—¶é—´ï¼Œæ¯«ç§’
+     * @param isBanClick        åœ¨æ‰§è¡ŒåŠ¨ç”»çš„è¿‡ç¨‹ä¸­æ˜¯å¦ç¦æ­¢ç‚¹å‡»
+     * @param animationListener åŠ¨ç”»ç›‘å¬å™¨
      */
     public static void visibleViewByAlpha(final View view, long durationMillis,
                                           final boolean isBanClick, final AnimationListener animationListener) {
@@ -355,11 +355,11 @@ public final class ViewAnimationUtils {
     }
 
     /**
-     * ½«¸ø¶¨ÊÓÍ¼½¥½¥ÏÔÊ¾³öÀ´£¨view.setVisibility(View.VISIBLE)£©
+     * å°†ç»™å®šè§†å›¾æ¸æ¸æ˜¾ç¤ºå‡ºæ¥ï¼ˆview.setVisibility(View.VISIBLE)ï¼‰
      *
-     * @param view              ±»´¦ÀíµÄÊÓÍ¼
-     * @param durationMillis    ³ÖĞøÊ±¼ä£¬ºÁÃë
-     * @param animationListener ¶¯»­¼àÌıÆ÷
+     * @param view              è¢«å¤„ç†çš„è§†å›¾
+     * @param durationMillis    æŒç»­æ—¶é—´ï¼Œæ¯«ç§’
+     * @param animationListener åŠ¨ç”»ç›‘å¬å™¨
      */
     public static void visibleViewByAlpha(final View view, long durationMillis,
                                           final AnimationListener animationListener) {
@@ -367,11 +367,11 @@ public final class ViewAnimationUtils {
     }
 
     /**
-     * ½«¸ø¶¨ÊÓÍ¼½¥½¥ÏÔÊ¾³öÀ´£¨view.setVisibility(View.VISIBLE)£©
+     * å°†ç»™å®šè§†å›¾æ¸æ¸æ˜¾ç¤ºå‡ºæ¥ï¼ˆview.setVisibility(View.VISIBLE)ï¼‰
      *
-     * @param view           ±»´¦ÀíµÄÊÓÍ¼
-     * @param durationMillis ³ÖĞøÊ±¼ä£¬ºÁÃë
-     * @param isBanClick     ÔÚÖ´ĞĞ¶¯»­µÄ¹ı³ÌÖĞÊÇ·ñ½ûÖ¹µã»÷
+     * @param view           è¢«å¤„ç†çš„è§†å›¾
+     * @param durationMillis æŒç»­æ—¶é—´ï¼Œæ¯«ç§’
+     * @param isBanClick     åœ¨æ‰§è¡ŒåŠ¨ç”»çš„è¿‡ç¨‹ä¸­æ˜¯å¦ç¦æ­¢ç‚¹å‡»
      */
     public static void visibleViewByAlpha(final View view, long durationMillis,
                                           final boolean isBanClick) {
@@ -379,22 +379,22 @@ public final class ViewAnimationUtils {
     }
 
     /**
-     * ½«¸ø¶¨ÊÓÍ¼½¥½¥ÏÔÊ¾³öÀ´£¨view.setVisibility(View.VISIBLE)£©
+     * å°†ç»™å®šè§†å›¾æ¸æ¸æ˜¾ç¤ºå‡ºæ¥ï¼ˆview.setVisibility(View.VISIBLE)ï¼‰
      *
-     * @param view           ±»´¦ÀíµÄÊÓÍ¼
-     * @param durationMillis ³ÖĞøÊ±¼ä£¬ºÁÃë
+     * @param view           è¢«å¤„ç†çš„è§†å›¾
+     * @param durationMillis æŒç»­æ—¶é—´ï¼Œæ¯«ç§’
      */
     public static void visibleViewByAlpha(final View view, long durationMillis) {
         visibleViewByAlpha(view, durationMillis, false, null);
     }
 
     /**
-     * ½«¸ø¶¨ÊÓÍ¼½¥½¥ÏÔÊ¾³öÀ´£¨view.setVisibility(View.VISIBLE)£©£¬
-     * Ä¬ÈÏµÄ³ÖĞøÊ±¼äÎªDEFAULT_ALPHA_ANIMATION_DURATION
+     * å°†ç»™å®šè§†å›¾æ¸æ¸æ˜¾ç¤ºå‡ºæ¥ï¼ˆview.setVisibility(View.VISIBLE)ï¼‰ï¼Œ
+     * é»˜è®¤çš„æŒç»­æ—¶é—´ä¸ºDEFAULT_ALPHA_ANIMATION_DURATION
      *
-     * @param view              ±»´¦ÀíµÄÊÓÍ¼
-     * @param animationListener ¶¯»­¼àÌıÆ÷
-     * @param isBanClick        ÔÚÖ´ĞĞ¶¯»­µÄ¹ı³ÌÖĞÊÇ·ñ½ûÖ¹µã»÷
+     * @param view              è¢«å¤„ç†çš„è§†å›¾
+     * @param animationListener åŠ¨ç”»ç›‘å¬å™¨
+     * @param isBanClick        åœ¨æ‰§è¡ŒåŠ¨ç”»çš„è¿‡ç¨‹ä¸­æ˜¯å¦ç¦æ­¢ç‚¹å‡»
      */
     public static void visibleViewByAlpha(final View view,
                                           final boolean isBanClick, final AnimationListener animationListener) {
@@ -403,11 +403,11 @@ public final class ViewAnimationUtils {
     }
 
     /**
-     * ½«¸ø¶¨ÊÓÍ¼½¥½¥ÏÔÊ¾³öÀ´£¨view.setVisibility(View.VISIBLE)£©£¬
-     * Ä¬ÈÏµÄ³ÖĞøÊ±¼äÎªDEFAULT_ALPHA_ANIMATION_DURATION
+     * å°†ç»™å®šè§†å›¾æ¸æ¸æ˜¾ç¤ºå‡ºæ¥ï¼ˆview.setVisibility(View.VISIBLE)ï¼‰ï¼Œ
+     * é»˜è®¤çš„æŒç»­æ—¶é—´ä¸ºDEFAULT_ALPHA_ANIMATION_DURATION
      *
-     * @param view              ±»´¦ÀíµÄÊÓÍ¼
-     * @param animationListener ¶¯»­¼àÌıÆ÷
+     * @param view              è¢«å¤„ç†çš„è§†å›¾
+     * @param animationListener åŠ¨ç”»ç›‘å¬å™¨
      */
     public static void visibleViewByAlpha(final View view,
                                           final AnimationListener animationListener) {
@@ -416,11 +416,11 @@ public final class ViewAnimationUtils {
     }
 
     /**
-     * ½«¸ø¶¨ÊÓÍ¼½¥½¥ÏÔÊ¾³öÀ´£¨view.setVisibility(View.VISIBLE)£©£¬
-     * Ä¬ÈÏµÄ³ÖĞøÊ±¼äÎªDEFAULT_ALPHA_ANIMATION_DURATION
+     * å°†ç»™å®šè§†å›¾æ¸æ¸æ˜¾ç¤ºå‡ºæ¥ï¼ˆview.setVisibility(View.VISIBLE)ï¼‰ï¼Œ
+     * é»˜è®¤çš„æŒç»­æ—¶é—´ä¸ºDEFAULT_ALPHA_ANIMATION_DURATION
      *
-     * @param view       ±»´¦ÀíµÄÊÓÍ¼
-     * @param isBanClick ÔÚÖ´ĞĞ¶¯»­µÄ¹ı³ÌÖĞÊÇ·ñ½ûÖ¹µã»÷
+     * @param view       è¢«å¤„ç†çš„è§†å›¾
+     * @param isBanClick åœ¨æ‰§è¡ŒåŠ¨ç”»çš„è¿‡ç¨‹ä¸­æ˜¯å¦ç¦æ­¢ç‚¹å‡»
      */
     public static void visibleViewByAlpha(final View view,
                                           final boolean isBanClick) {
@@ -429,10 +429,10 @@ public final class ViewAnimationUtils {
     }
 
     /**
-     * ½«¸ø¶¨ÊÓÍ¼½¥½¥ÏÔÊ¾³öÀ´£¨view.setVisibility(View.VISIBLE)£©£¬
-     * Ä¬ÈÏµÄ³ÖĞøÊ±¼äÎªDEFAULT_ALPHA_ANIMATION_DURATION
+     * å°†ç»™å®šè§†å›¾æ¸æ¸æ˜¾ç¤ºå‡ºæ¥ï¼ˆview.setVisibility(View.VISIBLE)ï¼‰ï¼Œ
+     * é»˜è®¤çš„æŒç»­æ—¶é—´ä¸ºDEFAULT_ALPHA_ANIMATION_DURATION
      *
-     * @param view ±»´¦ÀíµÄÊÓÍ¼
+     * @param view è¢«å¤„ç†çš„è§†å›¾
      */
     public static void visibleViewByAlpha(final View view) {
         visibleViewByAlpha(view, AnimationUtils.DEFAULT_ANIMATION_DURATION,
@@ -440,21 +440,21 @@ public final class ViewAnimationUtils {
     }
 
 	/*
-	 *  ************************************************************* ÊÓÍ¼ÒÆ¶¯¶¯»­
+	 *  ************************************************************* è§†å›¾ç§»åŠ¨åŠ¨ç”»
 	 * ********************************************************************
 	 */
 
     /**
-     * ÊÓÍ¼ÒÆ¶¯
+     * è§†å›¾ç§»åŠ¨
      *
-     * @param view           ÒªÒÆ¶¯µÄÊÓÍ¼
-     * @param fromXDelta     XÖá¿ªÊ¼×ø±ê
-     * @param toXDelta       XÖá½áÊø×ø±ê
-     * @param fromYDelta     YÖá¿ªÊ¼×ø±ê
-     * @param toYDelta       YÖá½áÊø×ø±ê
-     * @param cycles         ÖØ¸´
-     * @param durationMillis ³ÖĞøÊ±¼ä
-     * @param isBanClick     ÔÚÖ´ĞĞ¶¯»­µÄ¹ı³ÌÖĞÊÇ·ñ½ûÖ¹µã»÷
+     * @param view           è¦ç§»åŠ¨çš„è§†å›¾
+     * @param fromXDelta     Xè½´å¼€å§‹åæ ‡
+     * @param toXDelta       Xè½´ç»“æŸåæ ‡
+     * @param fromYDelta     Yè½´å¼€å§‹åæ ‡
+     * @param toYDelta       Yè½´ç»“æŸåæ ‡
+     * @param cycles         é‡å¤
+     * @param durationMillis æŒç»­æ—¶é—´
+     * @param isBanClick     åœ¨æ‰§è¡ŒåŠ¨ç”»çš„è¿‡ç¨‹ä¸­æ˜¯å¦ç¦æ­¢ç‚¹å‡»
      */
     public static void translate(final View view, float fromXDelta,
                                  float toXDelta, float fromYDelta, float toYDelta, float cycles,
@@ -489,15 +489,15 @@ public final class ViewAnimationUtils {
     }
 
     /**
-     * ÊÓÍ¼ÒÆ¶¯
+     * è§†å›¾ç§»åŠ¨
      *
-     * @param view           ÒªÒÆ¶¯µÄÊÓÍ¼
-     * @param fromXDelta     XÖá¿ªÊ¼×ø±ê
-     * @param toXDelta       XÖá½áÊø×ø±ê
-     * @param fromYDelta     YÖá¿ªÊ¼×ø±ê
-     * @param toYDelta       YÖá½áÊø×ø±ê
-     * @param cycles         ÖØ¸´
-     * @param durationMillis ³ÖĞøÊ±¼ä
+     * @param view           è¦ç§»åŠ¨çš„è§†å›¾
+     * @param fromXDelta     Xè½´å¼€å§‹åæ ‡
+     * @param toXDelta       Xè½´ç»“æŸåæ ‡
+     * @param fromYDelta     Yè½´å¼€å§‹åæ ‡
+     * @param toYDelta       Yè½´ç»“æŸåæ ‡
+     * @param cycles         é‡å¤
+     * @param durationMillis æŒç»­æ—¶é—´
      */
     public static void translate(final View view, float fromXDelta,
                                  float toXDelta, float fromYDelta, float toYDelta, float cycles,
@@ -507,14 +507,14 @@ public final class ViewAnimationUtils {
     }
 
     /**
-     * ÊÓÍ¼Ò¡»Î
+     * è§†å›¾æ‘‡æ™ƒ
      *
-     * @param view           ÒªÒ¡¶¯µÄÊÓÍ¼
-     * @param fromXDelta     XÖá¿ªÊ¼×ø±ê
-     * @param toXDelta       XÖá½áÊø×ø±ê
-     * @param cycles         ÖØ¸´´ÎÊı
-     * @param durationMillis ³ÖĞøÊ±¼ä
-     * @param isBanClick     ÔÚÖ´ĞĞ¶¯»­µÄ¹ı³ÌÖĞÊÇ·ñ½ûÖ¹µã»÷
+     * @param view           è¦æ‘‡åŠ¨çš„è§†å›¾
+     * @param fromXDelta     Xè½´å¼€å§‹åæ ‡
+     * @param toXDelta       Xè½´ç»“æŸåæ ‡
+     * @param cycles         é‡å¤æ¬¡æ•°
+     * @param durationMillis æŒç»­æ—¶é—´
+     * @param isBanClick     åœ¨æ‰§è¡ŒåŠ¨ç”»çš„è¿‡ç¨‹ä¸­æ˜¯å¦ç¦æ­¢ç‚¹å‡»
      */
     public static void shake(View view, float fromXDelta, float toXDelta,
                              float cycles, long durationMillis, final boolean isBanClick) {
@@ -523,13 +523,13 @@ public final class ViewAnimationUtils {
     }
 
     /**
-     * ÊÓÍ¼Ò¡»Î
+     * è§†å›¾æ‘‡æ™ƒ
      *
-     * @param view           ÒªÒ¡¶¯µÄÊÓÍ¼
-     * @param fromXDelta     XÖá¿ªÊ¼×ø±ê
-     * @param toXDelta       XÖá½áÊø×ø±ê
-     * @param cycles         ÖØ¸´´ÎÊı
-     * @param durationMillis ³ÖĞøÊ±¼ä
+     * @param view           è¦æ‘‡åŠ¨çš„è§†å›¾
+     * @param fromXDelta     Xè½´å¼€å§‹åæ ‡
+     * @param toXDelta       Xè½´ç»“æŸåæ ‡
+     * @param cycles         é‡å¤æ¬¡æ•°
+     * @param durationMillis æŒç»­æ—¶é—´
      */
     public static void shake(View view, float fromXDelta, float toXDelta,
                              float cycles, long durationMillis) {
@@ -538,12 +538,12 @@ public final class ViewAnimationUtils {
     }
 
     /**
-     * ÊÓÍ¼Ò¡»Î£¬Ä¬ÈÏÒ¡»Î·ù¶ÈÎª10£¬ÖØ¸´7´Î
+     * è§†å›¾æ‘‡æ™ƒï¼Œé»˜è®¤æ‘‡æ™ƒå¹…åº¦ä¸º10ï¼Œé‡å¤7æ¬¡
      *
      * @param view
-     * @param cycles         ÖØ¸´´ÎÊı
-     * @param durationMillis ³ÖĞøÊ±¼ä
-     * @param isBanClick     ÔÚÖ´ĞĞ¶¯»­µÄ¹ı³ÌÖĞÊÇ·ñ½ûÖ¹µã»÷
+     * @param cycles         é‡å¤æ¬¡æ•°
+     * @param durationMillis æŒç»­æ—¶é—´
+     * @param isBanClick     åœ¨æ‰§è¡ŒåŠ¨ç”»çš„è¿‡ç¨‹ä¸­æ˜¯å¦ç¦æ­¢ç‚¹å‡»
      */
     public static void shake(View view, float cycles, long durationMillis,
                              final boolean isBanClick) {
@@ -552,33 +552,33 @@ public final class ViewAnimationUtils {
     }
 
     /**
-     * ÊÓÍ¼Ò¡»Î£¬Ä¬ÈÏÒ¡»Î·ù¶ÈÎª10£¬³ÖĞø700ºÁÃë
+     * è§†å›¾æ‘‡æ™ƒï¼Œé»˜è®¤æ‘‡æ™ƒå¹…åº¦ä¸º10ï¼ŒæŒç»­700æ¯«ç§’
      *
      * @param view
-     * @param cycles         ÖØ¸´´ÎÊı
-     * @param isBanClick     ÔÚÖ´ĞĞ¶¯»­µÄ¹ı³ÌÖĞÊÇ·ñ½ûÖ¹µã»÷
+     * @param cycles         é‡å¤æ¬¡æ•°
+     * @param isBanClick     åœ¨æ‰§è¡ŒåŠ¨ç”»çš„è¿‡ç¨‹ä¸­æ˜¯å¦ç¦æ­¢ç‚¹å‡»
      */
     public static void shake(View view, float cycles, final boolean isBanClick) {
         translate(view, 0.0f, 10.0f, 0.0f, 0.0f, cycles, 700, isBanClick);
     }
 
     /**
-     * ÊÓÍ¼Ò¡»Î£¬Ä¬ÈÏÒ¡»Î·ù¶ÈÎª10
+     * è§†å›¾æ‘‡æ™ƒï¼Œé»˜è®¤æ‘‡æ™ƒå¹…åº¦ä¸º10
      *
      * @param view
-     * @param cycles         ÖØ¸´´ÎÊı
-     * @param durationMillis ³ÖĞøÊ±¼ä
+     * @param cycles         é‡å¤æ¬¡æ•°
+     * @param durationMillis æŒç»­æ—¶é—´
      */
     public static void shake(View view, float cycles, long durationMillis) {
         translate(view, 0.0f, 10.0f, 0.0f, 0.0f, cycles, durationMillis, false);
     }
 
     /**
-     * ÊÓÍ¼Ò¡»Î£¬Ä¬ÈÏÒ¡»Î·ù¶ÈÎª10£¬ÖØ¸´7´Î
+     * è§†å›¾æ‘‡æ™ƒï¼Œé»˜è®¤æ‘‡æ™ƒå¹…åº¦ä¸º10ï¼Œé‡å¤7æ¬¡
      *
      * @param view
-     * @param durationMillis ³ÖĞøÊ±¼ä
-     * @param isBanClick     ÔÚÖ´ĞĞ¶¯»­µÄ¹ı³ÌÖĞÊÇ·ñ½ûÖ¹µã»÷
+     * @param durationMillis æŒç»­æ—¶é—´
+     * @param isBanClick     åœ¨æ‰§è¡ŒåŠ¨ç”»çš„è¿‡ç¨‹ä¸­æ˜¯å¦ç¦æ­¢ç‚¹å‡»
      */
     public static void shake(View view, long durationMillis,
                              final boolean isBanClick) {
@@ -586,37 +586,37 @@ public final class ViewAnimationUtils {
     }
 
     /**
-     * ÊÓÍ¼Ò¡»Î£¬Ä¬ÈÏÒ¡»Î·ù¶ÈÎª10£¬³ÖĞø700ºÁÃë
+     * è§†å›¾æ‘‡æ™ƒï¼Œé»˜è®¤æ‘‡æ™ƒå¹…åº¦ä¸º10ï¼ŒæŒç»­700æ¯«ç§’
      *
-     * @param view   ÒªÒ¡¶¯µÄÊÓÍ¼
-     * @param cycles ÖØ¸´´ÎÊı
+     * @param view   è¦æ‘‡åŠ¨çš„è§†å›¾
+     * @param cycles é‡å¤æ¬¡æ•°
      */
     public static void shake(View view, float cycles) {
         translate(view, 0.0f, 10.0f, 0.0f, 0.0f, cycles, 700, false);
     }
 
     /**
-     * ÊÓÍ¼Ò¡»Î£¬Ä¬ÈÏÒ¡»Î·ù¶ÈÎª10£¬ÖØ¸´7´Î
+     * è§†å›¾æ‘‡æ™ƒï¼Œé»˜è®¤æ‘‡æ™ƒå¹…åº¦ä¸º10ï¼Œé‡å¤7æ¬¡
      *
      * @param view
-     * @param durationMillis ³ÖĞøÊ±¼ä
+     * @param durationMillis æŒç»­æ—¶é—´
      */
     public static void shake(View view, long durationMillis) {
         translate(view, 0.0f, 10.0f, 0.0f, 0.0f, 7, durationMillis, false);
     }
 
     /**
-     * ÊÓÍ¼Ò¡»Î£¬Ä¬ÈÏÒ¡»Î·ù¶ÈÎª10£¬ÖØ¸´7´Î£¬³ÖĞø700ºÁÃë
+     * è§†å›¾æ‘‡æ™ƒï¼Œé»˜è®¤æ‘‡æ™ƒå¹…åº¦ä¸º10ï¼Œé‡å¤7æ¬¡ï¼ŒæŒç»­700æ¯«ç§’
      *
      * @param view
-     * @param isBanClick ÔÚÖ´ĞĞ¶¯»­µÄ¹ı³ÌÖĞÊÇ·ñ½ûÖ¹µã»÷
+     * @param isBanClick åœ¨æ‰§è¡ŒåŠ¨ç”»çš„è¿‡ç¨‹ä¸­æ˜¯å¦ç¦æ­¢ç‚¹å‡»
      */
     public static void shake(View view, final boolean isBanClick) {
         translate(view, 0.0f, 10.0f, 0.0f, 0.0f, 7, 700, isBanClick);
     }
 
     /**
-     * ÊÓÍ¼Ò¡»Î£¬Ä¬ÈÏÒ¡»Î·ù¶ÈÎª10£¬ÖØ¸´7´Î£¬³ÖĞø700ºÁÃë
+     * è§†å›¾æ‘‡æ™ƒï¼Œé»˜è®¤æ‘‡æ™ƒå¹…åº¦ä¸º10ï¼Œé‡å¤7æ¬¡ï¼ŒæŒç»­700æ¯«ç§’
      *
      * @param view
      */

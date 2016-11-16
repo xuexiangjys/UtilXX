@@ -22,26 +22,26 @@ import android.content.Context;
 import android.os.Environment;
 
 /**
- * ±¾Ó¦ÓÃÊı¾İÇå³ı¹ÜÀíÆ÷
- * Ö÷Òª¹¦ÄÜÓĞÇå³ıÄÚ/Íâ»º´æ£¬Çå³ıÊı¾İ¿â£¬Çå³ısharedPreference£¬Çå³ıfilesºÍÇå³ı×Ô¶¨ÒåÄ¿Â¼
+ * æœ¬åº”ç”¨æ•°æ®æ¸…é™¤ç®¡ç†å™¨
+ * ä¸»è¦åŠŸèƒ½æœ‰æ¸…é™¤å†…/å¤–ç¼“å­˜ï¼Œæ¸…é™¤æ•°æ®åº“ï¼Œæ¸…é™¤sharedPreferenceï¼Œæ¸…é™¤fileså’Œæ¸…é™¤è‡ªå®šä¹‰ç›®å½•
  *
  * @author jingle1267@163.com
  */
 public class DataCleanManager {
 
     /**
-     * Çå³ı±¾Ó¦ÓÃÄÚ²¿»º´æ(/data/data/com.xxx.xxx/cache)
+     * æ¸…é™¤æœ¬åº”ç”¨å†…éƒ¨ç¼“å­˜(/data/data/com.xxx.xxx/cache)
      *
-     * @param context ÉÏÏÂÎÄ
+     * @param context ä¸Šä¸‹æ–‡
      */
     public static void cleanInternalCache(Context context) {
         deleteFilesByDirectory(context.getCacheDir());
     }
 
     /**
-     * Çå³ı±¾Ó¦ÓÃËùÓĞÊı¾İ¿â(/data/data/com.xxx.xxx/databases)
+     * æ¸…é™¤æœ¬åº”ç”¨æ‰€æœ‰æ•°æ®åº“(/data/data/com.xxx.xxx/databases)
      *
-     * @param context ÉÏÏÂÎÄ
+     * @param context ä¸Šä¸‹æ–‡
      */
     public static void cleanDatabases(Context context) {
         deleteFilesByDirectory(new File(context.getFilesDir().getPath()
@@ -49,9 +49,9 @@ public class DataCleanManager {
     }
 
     /**
-     * Çå³ı±¾Ó¦ÓÃSharedPreference(/data/data/com.xxx.xxx/shared_prefs)
+     * æ¸…é™¤æœ¬åº”ç”¨SharedPreference(/data/data/com.xxx.xxx/shared_prefs)
      *
-     * @param context ÉÏÏÂÎÄ
+     * @param context ä¸Šä¸‹æ–‡
      */
     public static void cleanSharedPreference(Context context) {
         deleteFilesByDirectory(new File(context.getFilesDir().getPath()
@@ -59,28 +59,28 @@ public class DataCleanManager {
     }
 
     /**
-     * °´Ãû×ÖÇå³ı±¾Ó¦ÓÃÊı¾İ¿â
+     * æŒ‰åå­—æ¸…é™¤æœ¬åº”ç”¨æ•°æ®åº“
      *
-     * @param context ÉÏÏÂÎÄ
-     * @param dbName Êı¾İ¿âÃû³Æ
+     * @param context ä¸Šä¸‹æ–‡
+     * @param dbName æ•°æ®åº“åç§°
      */
     public static void cleanDatabaseByName(Context context, String dbName) {
         context.deleteDatabase(dbName);
     }
 
     /**
-     * Çå³ı/data/data/com.xxx.xxx/filesÏÂµÄÄÚÈİ
+     * æ¸…é™¤/data/data/com.xxx.xxx/filesä¸‹çš„å†…å®¹
      *
-     * @param context ÉÏÏÂÎÄ
+     * @param context ä¸Šä¸‹æ–‡
      */
     public static void cleanFiles(Context context) {
         deleteFilesByDirectory(context.getFilesDir());
     }
 
     /**
-     * Çå³ıÍâ²¿cacheÏÂµÄÄÚÈİ(/mnt/sdcard/android/data/com.xxx.xxx/cache)
+     * æ¸…é™¤å¤–éƒ¨cacheä¸‹çš„å†…å®¹(/mnt/sdcard/android/data/com.xxx.xxx/cache)
      *
-     * @param context ÉÏÏÂÎÄ
+     * @param context ä¸Šä¸‹æ–‡
      */
     public static void cleanExternalCache(Context context) {
         if (Environment.getExternalStorageState().equals(
@@ -90,19 +90,19 @@ public class DataCleanManager {
     }
 
     /**
-     * Çå³ı×Ô¶¨ÒåÂ·¾¶ÏÂµÄÎÄ¼ş£¬Ê¹ÓÃĞèĞ¡ĞÄ£¬Çë²»ÒªÎóÉ¾¡£¶øÇÒÖ»Ö§³ÖÄ¿Â¼ÏÂµÄÎÄ¼şÉ¾³ı
+     * æ¸…é™¤è‡ªå®šä¹‰è·¯å¾„ä¸‹çš„æ–‡ä»¶ï¼Œä½¿ç”¨éœ€å°å¿ƒï¼Œè¯·ä¸è¦è¯¯åˆ ã€‚è€Œä¸”åªæ”¯æŒç›®å½•ä¸‹çš„æ–‡ä»¶åˆ é™¤
      *
-     * @param filePath ÎÄ¼şÂ·¾¶
+     * @param filePath æ–‡ä»¶è·¯å¾„
      */
     public static void cleanCustomCache(String filePath) {
         deleteFilesByDirectory(new File(filePath));
     }
 
     /**
-     * Çå³ı±¾Ó¦ÓÃËùÓĞµÄÊı¾İ
+     * æ¸…é™¤æœ¬åº”ç”¨æ‰€æœ‰çš„æ•°æ®
      *
-     * @param context ÉÏÏÂÎÄ
-     * @param filePath ÎÄ¼şÂ·¾¶
+     * @param context ä¸Šä¸‹æ–‡
+     * @param filePath æ–‡ä»¶è·¯å¾„
      */
     public static void cleanApplicationData(Context context, String... filePath) {
         cleanInternalCache(context);
@@ -116,10 +116,10 @@ public class DataCleanManager {
     }
 
     /**
-     * É¾³ı·½·¨ ÕâÀïÖ»»áÉ¾³ıÄ³¸öÎÄ¼ş¼ĞÏÂµÄÎÄ¼ş¡£ ´Ë²Ù×÷½ÏÎ£ÏÕ£¬ÇëÉ÷ÓÃ£»
+     * åˆ é™¤æ–¹æ³• è¿™é‡Œåªä¼šåˆ é™¤æŸä¸ªæ–‡ä»¶å¤¹ä¸‹çš„æ–‡ä»¶ã€‚ æ­¤æ“ä½œè¾ƒå±é™©ï¼Œè¯·æ…ç”¨ï¼›
      *
      *
-     * @param directory ÎÄ¼ş¼ĞFile¶ÔÏó
+     * @param directory æ–‡ä»¶å¤¹Fileå¯¹è±¡
      */
     private static void deleteFilesByDirectory(File directory) {
         if (directory != null && directory.exists() && directory.isDirectory()) {
@@ -134,15 +134,15 @@ public class DataCleanManager {
         }
     }
 
-    // »ñÈ¡ÎÄ¼ş
-    //Context.getExternalFilesDir() --> SDCard/Android/data/ÄãµÄÓ¦ÓÃµÄ°üÃû/files/ Ä¿Â¼£¬Ò»°ã·ÅÒ»Ğ©³¤Ê±¼ä±£´æµÄÊı¾İ
-    //Context.getExternalCacheDir() --> SDCard/Android/data/ÄãµÄÓ¦ÓÃ°üÃû/cache/Ä¿Â¼£¬Ò»°ã´æ·ÅÁÙÊ±»º´æÊı¾İ
+    // è·å–æ–‡ä»¶
+    //Context.getExternalFilesDir() --> SDCard/Android/data/ä½ çš„åº”ç”¨çš„åŒ…å/files/ ç›®å½•ï¼Œä¸€èˆ¬æ”¾ä¸€äº›é•¿æ—¶é—´ä¿å­˜çš„æ•°æ®
+    //Context.getExternalCacheDir() --> SDCard/Android/data/ä½ çš„åº”ç”¨åŒ…å/cache/ç›®å½•ï¼Œä¸€èˆ¬å­˜æ”¾ä¸´æ—¶ç¼“å­˜æ•°æ®
     public static long getFolderSize(File file) throws Exception {
         long size = 0;
         try {
             File[] fileList = file.listFiles();
             for (int i = 0; i < fileList.length; i++) {
-                // Èç¹ûÏÂÃæ»¹ÓĞÎÄ¼ş
+                // å¦‚æœä¸‹é¢è¿˜æœ‰æ–‡ä»¶
                 if (fileList[i].isDirectory()) {
                     size = size + getFolderSize(fileList[i]);
                 } else {
@@ -160,7 +160,7 @@ public class DataCleanManager {
     }
 
     /**
-     * ¸ñÊ½»¯µ¥Î»
+     * æ ¼å¼åŒ–å•ä½
      *
      * @param size
      * @return

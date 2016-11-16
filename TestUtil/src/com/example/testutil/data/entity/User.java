@@ -5,10 +5,10 @@ import com.hrw.framework.ahibernate.annotation.Id;
 import com.hrw.framework.ahibernate.annotation.Table;
 
 /**  
- * ´´½¨Ê±¼ä£º2016-2-4 ÏÂÎç3:17:07  
- * ÏîÄ¿Ãû³Æ£ºOrmDemo  
+ * åˆ›å»ºæ—¶é—´ï¼š2016-2-4 ä¸‹åˆ3:17:07  
+ * é¡¹ç›®åç§°ï¼šOrmDemo  
  * @author xuexiang
- * ÎÄ¼şÃû³Æ£ºUser.java  
+ * æ–‡ä»¶åç§°ï¼šUser.java  
  **/
 @Table(name = "userinfo")
 public class User {

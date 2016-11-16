@@ -11,10 +11,10 @@ import android.view.KeyEvent;
 import android.widget.TextView;
 
 /**  
- * ´´½¨Ê±¼ä£º2016-6-4 ÏÂÎç5:57:21  
- * ÏîÄ¿Ãû³Æ£ºspotsloadingdialog  
+ * åˆ›å»ºæ—¶é—´ï¼š2016-6-4 ä¸‹åˆ5:57:21  
+ * é¡¹ç›®åç§°ï¼šspotsloadingdialog  
  * @author xuexiang
- * ÎÄ¼şÃû³Æ£ºRoundProgressBarDialog.java  
+ * æ–‡ä»¶åç§°ï¼šRoundProgressBarDialog.java  
  **/
 public class RoundProgressBarDialog extends AlertDialog {
 	
@@ -48,7 +48,7 @@ public class RoundProgressBarDialog extends AlertDialog {
 		 mTitle = (TextView) findViewById(RUtils.getId(getContext(), "title"));
 		 mRoundProgressBar = (RoundProgressBar) findViewById(RUtils.getId(getContext(), "roundProgressBar"));
 	     if (TextUtils.isEmpty(mLoadingText)) {
-	    	 mTitle.setText("ÕıÔÚ¼ÓÔØÖĞ...");
+	    	 mTitle.setText("æ­£åœ¨åŠ è½½ä¸­...");
 	     } else {
 	    	 mTitle.setText(mLoadingText);
 	     }

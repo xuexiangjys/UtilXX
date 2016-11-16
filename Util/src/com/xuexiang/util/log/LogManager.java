@@ -16,20 +16,20 @@ import com.xuexiang.util.file.SDCardUtils;
 import android.util.Log;
 
 /**
- * ÈÕÖ¾¹ÜÀíÀà
+ * æ—¥å¿—ç®¡ç†ç±»
  * @author xx
  *
  */
 public class LogManager {
 
 	/**
-	 * ÈÕÖ¾¿ª¹Ø
+	 * æ—¥å¿—å¼€å…³
 	 */
 	private static final boolean LOG_OPEN_DEBUG = true;
 	private static final boolean LOG_OPEN_POINT = false;
 
 	/**
-	 * ÈÕÖ¾ÀàĞÍ¿ª¹Ø£¬±ØĞë LOG_OPEN_DEBUG = trueµÄÊ±ºò²ÅÄÜÆô×÷ÓÃ
+	 * æ—¥å¿—ç±»å‹å¼€å…³ï¼Œå¿…é¡» LOG_OPEN_DEBUG = trueçš„æ—¶å€™æ‰èƒ½å¯ä½œç”¨
 	 */
 	private static boolean logOpeni = true;
 	private static boolean logOpend = true;
@@ -37,7 +37,7 @@ public class LogManager {
 	private static boolean logOpene = true;
 
 	/**
-	 * ÈÕÖ¾Ä¿Â¼
+	 * æ—¥å¿—ç›®å½•
 	 */	
 	private static final String PATH_LOG_INFO = LocalFileUtil.LOG_DIR + "info/";
 	private static final String PATH_LOG_WARNING = LocalFileUtil.LOG_DIR + "warning/";
@@ -135,7 +135,7 @@ public class LogManager {
 	}
 
 	/**
-	 * ¸ù¾İÎÄ¼şÂ·¾¶ µİ¹é´´½¨ÎÄ¼ş
+	 * æ ¹æ®æ–‡ä»¶è·¯å¾„ é€’å½’åˆ›å»ºæ–‡ä»¶
 	 * 
 	 * @param file
 	 */

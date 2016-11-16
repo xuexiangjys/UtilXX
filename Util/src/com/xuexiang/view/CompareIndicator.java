@@ -13,17 +13,17 @@ import android.util.AttributeSet;
 import android.view.View;
 
 /**
- * ×÷Õß: xx on 16/1/4.
+ * ä½œè€…: xx on 16/1/4.
  */
 public class CompareIndicator extends View {
 	
     /**
-     * ·´¶ÔÃæµÄÍ¼±ê
+     * åå¯¹é¢çš„å›¾æ ‡
      */
     private Bitmap mOppositeBitmap;
     
     /**
-     * ÔŞ³ÉÃæµÄÍ¼±ê
+     * èµæˆé¢çš„å›¾æ ‡
      */
     private Bitmap mApproveBitmap;
     private Context context;
@@ -32,12 +32,12 @@ public class CompareIndicator extends View {
     private Paint mApprovePaint;
 
     /**
-     * ·´¶ÔÃæµÄÊıÁ¿
+     * åå¯¹é¢çš„æ•°é‡
      */
     private int mOppostiteCount = 0;
 
     /**
-     * ÔŞ³ÉÃæµÄÊıÁ¿
+     * èµæˆé¢çš„æ•°é‡
      */
     private int mApproveCount = 0;
     private float marginLeft_16dp;
@@ -46,12 +46,12 @@ public class CompareIndicator extends View {
     private float Start_down_cy;
 
     /**
-     * ÔŞ³ÉÏßµÄÑÕÉ«
+     * èµæˆçº¿çš„é¢œè‰²
      */
     private int approveLineColor;
     
     /**
-     * ·´¶ÔÏßµÄÑÕÉ«
+     * åå¯¹çº¿çš„é¢œè‰²
      */
     private int oppositeLineColor;
 
@@ -172,25 +172,25 @@ public class CompareIndicator extends View {
         mApprovePaint.setColor(approveLineColor);
         float lineWidth = DisplayUtils.dip2px(context, lineWidthDimen);
         /**
-         * ´Ë´¦²»ÄÜ¿ªÆôcanvas»æÍ¼Ó²¼ş¼ÓËÙ »áµ¼ÖÂ²¿·Öapi ÏÔÊ¾²»Õı³£
+         * æ­¤å¤„ä¸èƒ½å¼€å¯canvasç»˜å›¾ç¡¬ä»¶åŠ é€Ÿ ä¼šå¯¼è‡´éƒ¨åˆ†api æ˜¾ç¤ºä¸æ­£å¸¸
          */
 
         /**
-         * »­ µÚÈı¸öÔ²»¡
+         * ç”» ç¬¬ä¸‰ä¸ªåœ†å¼§
          */
 
         /**
-         * »­ÕÇÖ±Ïß
+         * ç”»æ¶¨ç›´çº¿
          */
         mApprovePaint.setStrokeWidth(lineWidth);
         mApprovePaint.setStrokeCap(Paint.Cap.ROUND);
         /**
-         * »­ µøÖ±Ïß
+         * ç”» è·Œç›´çº¿
          */
         mOppositePaint.setStrokeWidth(lineWidth);
         mOppositePaint.setStrokeCap(Paint.Cap.ROUND);
         /**
-         * »­×óÓÒÕÇµøÍ¼
+         * ç”»å·¦å³æ¶¨è·Œå›¾
          */
         marginLeft_16dp = DisplayUtils.dip2px(context, 16f);
         marginTop_12dp = DisplayUtils.dip2px(context, 10f);
@@ -224,7 +224,7 @@ public class CompareIndicator extends View {
         }
         float end_down_cx = Start_down_cx + oppositeLineWidth;
         /**
-         * »­ µÚ¶ş¸öÔ²»¡
+         * ç”» ç¬¬äºŒä¸ªåœ†å¼§
          */
         float start_up_cx = end_down_cx + DisplayUtils.dip2px(context, 8);
         canvas.drawBitmap(mOppositeBitmap, marginLeft_16dp, marginTop_12dp, BitmapPaint);
@@ -235,7 +235,7 @@ public class CompareIndicator extends View {
 
         canvas.drawLine(start_up_cx, end_down_cy, end_up_cx, end_down_cy, mApprovePaint);
         /**
-         * »­ µÚËÄ¸öÔ²»¡
+         * ç”» ç¬¬å››ä¸ªåœ†å¼§
          */
         mOppositePaint.setTextSize(DisplayUtils.dip2px(context, 12));
         canvas.drawText(String.valueOf(mOppostiteCount), Start_down_cx, Start_down_cy + DisplayUtils.dip2px(context, 18), mOppositePaint);

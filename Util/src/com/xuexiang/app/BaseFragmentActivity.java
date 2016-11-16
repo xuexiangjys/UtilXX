@@ -38,7 +38,7 @@ import com.xuexiang.view.popwindow.TitlePopup;
 import com.xuexiang.view.popwindow.TitlePopup.OnItemOnClickListener;
 
 
-/** activityµÄ»ùÀà
+/** activityçš„åŸºç±»
   * @ClassName: BaseActivity
   * @Description: TODO
   * @author xx
@@ -51,7 +51,7 @@ public abstract class BaseFragmentActivity extends FragmentActivity {
 	public UserSharePreferenceUtil mUserManager;	
 	public SettingSharePreferenceUtil mSettingManager;
 	public ActivityManager mActivityManager;
-	public Handler mHandler;// ¼ì²â¼ÓÔØÊı¾İµÄ½á¹û
+	public Handler mHandler;// æ£€æµ‹åŠ è½½æ•°æ®çš„ç»“æœ
 	public TextView mTitle;
 	public ImageView mLeftMenu,mRightMenu;
 	
@@ -88,22 +88,22 @@ public abstract class BaseFragmentActivity extends FragmentActivity {
 	}
 	
 	/**
-	 * ³õÊ¼»¯¿Ø¼ş
+	 * åˆå§‹åŒ–æ§ä»¶
 	 */
 	public abstract void initView();
 	
 	/**
-	 * ³õÊ¼»¯¼àÌıÊÂ¼ş
+	 * åˆå§‹åŒ–ç›‘å¬äº‹ä»¶
 	 */
 	public abstract void initListener();
 	
 	/**
-	 * ³õÊ¼»¯Êı¾İ
+	 * åˆå§‹åŒ–æ•°æ®
 	 */
 	public abstract void initData();
 
 	/**
-	 * ³õÊ¼»¯ActionBar
+	 * åˆå§‹åŒ–ActionBar
 	 */
 	public void initActionBar(String title){
 		mTitle = (TextView)findViewById(MResource.getIdByName(mContext, "id", "tv_title"));
@@ -120,7 +120,7 @@ public abstract class BaseFragmentActivity extends FragmentActivity {
 	
 
 	/**
-	 * ÀûÓÃTitleBar³õÊ¼»¯ActionBar
+	 * åˆ©ç”¨TitleBaråˆå§‹åŒ–ActionBar
 	 */
 	public void initTitleBar(String title){
 		mTitleBar = (TitleBar) findViewById(RUtils.getId(mContext, "title_bar"));
@@ -129,7 +129,7 @@ public abstract class BaseFragmentActivity extends FragmentActivity {
 		mTitleBar.setBackgroundColor(Color.parseColor("#64b4ff"));
 
 		mTitleBar.setLeftImageResource(RUtils.getDrawable(mContext, "back_white"));
-        mTitleBar.setLeftText("·µ»Ø");
+        mTitleBar.setLeftText("è¿”å›");
         mTitleBar.setLeftTextColor(Color.WHITE);
         mTitleBar.setLeftClickListener(new View.OnClickListener() {
             @Override
@@ -146,7 +146,7 @@ public abstract class BaseFragmentActivity extends FragmentActivity {
 	}
 	
 	/**
-	 * ÀûÓÃTitleBar³õÊ¼»¯ActionBar
+	 * åˆ©ç”¨TitleBaråˆå§‹åŒ–ActionBar
 	 */
 	public void initTitleBarWithRightMenu(String title, ArrayList<ActionItem> actionItemlist, OnItemOnClickListener rightMenuAction ){
 		initTitleBar(title);
@@ -163,9 +163,9 @@ public abstract class BaseFragmentActivity extends FragmentActivity {
 	
 	
 	/**
-	 * ¼ìÑéEditTextÄÚÈİÊÇ·ñÎª¿Õ
-	 * @param et  EditText¿Ø¼ş
-	 * @param msg Îª¿ÕÊ±µÄÌáÊ¾ÎÄ×Ö
+	 * æ£€éªŒEditTextå†…å®¹æ˜¯å¦ä¸ºç©º
+	 * @param et  EditTextæ§ä»¶
+	 * @param msg ä¸ºç©ºæ—¶çš„æç¤ºæ–‡å­—
 	 * @return
 	 */
 	public boolean IsEditTextEmpty(EditText et,String msg){
@@ -191,7 +191,7 @@ public abstract class BaseFragmentActivity extends FragmentActivity {
 	}
 
 	/**
-	 * ´òlogÈÕÖ¾
+	 * æ‰“logæ—¥å¿—
 	 * @param msg
 	 */
 	public void ShowLog(String msg){

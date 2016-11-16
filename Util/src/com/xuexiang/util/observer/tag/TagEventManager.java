@@ -5,11 +5,11 @@ import java.util.Map;
 
 
 /**  
- * ´´½¨Ê±¼ä£º2016-6-5 ÏÂÎç4:16:29  
+ * åˆ›å»ºæ—¶é—´ï¼š2016-6-5 ä¸‹åˆ4:16:29  
  * @author xuexiang
  **/
 public class TagEventManager {
-	private static Map<String, BaseTagSubject> mEventManager = new HashMap<String, BaseTagSubject>();  //´æ·Å¸÷ÖÖ±»¹Û²ìÕß¶ÔÏó
+	private static Map<String, BaseTagSubject> mEventManager = new HashMap<String, BaseTagSubject>();  //å­˜æ”¾å„ç§è¢«è§‚å¯Ÿè€…å¯¹è±¡
 	
 	public static BaseTagSubject getTagSubject(String subjectName) {
 		BaseTagSubject baseSubject;

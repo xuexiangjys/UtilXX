@@ -2,25 +2,25 @@ package com.xuexiang.util.observer.normal;
 
 
 /**  
- * ±»¹Û²ìÕß½Ó¿Ú
- * ´´½¨Ê±¼ä£º2016-6-5 ÉÏÎç1:00:25  
+ * è¢«è§‚å¯Ÿè€…æ¥å£
+ * åˆ›å»ºæ—¶é—´ï¼š2016-6-5 ä¸Šåˆ1:00:25  
  * @author xuexiang
  **/
 public interface ISubject {
 	/**
-	 * Ôö¼Ó¹Û²ìÕß
-	 * @param observer ÊµÏÖIObserver½Ó¿ÚµÄ¶ÔÏó
+	 * å¢åŠ è§‚å¯Ÿè€…
+	 * @param observer å®ç°IObserveræ¥å£çš„å¯¹è±¡
 	 */
 	public void register(IObserver observer);
 	
 	/**
-	 * É¾³ı¹Û²ìÕß
-	 * @param observer ÊµÏÖIObserver½Ó¿ÚµÄ¶ÔÏó
+	 * åˆ é™¤è§‚å¯Ÿè€…
+	 * @param observer å®ç°IObserveræ¥å£çš„å¯¹è±¡
 	 */
 	public void unregister(IObserver observer);
 
 	/**
-	 * Í¨ÖªËùÓĞµÄ¹Û²ìÕß
+	 * é€šçŸ¥æ‰€æœ‰çš„è§‚å¯Ÿè€…
 	 */
 	public void notifyObservers();
 	

@@ -148,7 +148,7 @@ public class ResideMenu extends FrameLayout {
 	}
 
 	/**
-	 * 添加用户信息
+	 * 娣诲姞鐢ㄦ埛淇℃伅
 	 * 
 	 * @param menuInfo
 	 */

@@ -55,7 +55,7 @@ public class ImageViewActivity extends BaseActivity{
 		
 	}
 	/**
-	 * Բ��ͼƬ
+	 * 圆形图片
 	 */
 	private void RoundPicture() {	
         Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.beautiful);
@@ -66,7 +66,7 @@ public class ImageViewActivity extends BaseActivity{
     }
 	
     /**
-     * ͼƬ�ϲ�
+     * 图片合并
      */
     private void CombinePicture() {
        Bitmap bitmap = BitmapUtil.getRoundBitmap(BitmapFactory.decodeResource(getResources(),
@@ -80,7 +80,7 @@ public class ImageViewActivity extends BaseActivity{
    }
     
     /**
-     * ͼƬ�˾�
+     * 图片滤镜
      */
     private void blurPicture(int radius) {
     	if (radius > 25) {

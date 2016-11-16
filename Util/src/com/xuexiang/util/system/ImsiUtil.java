@@ -23,7 +23,7 @@ import android.telephony.TelephonyManager;
 import android.text.TextUtils;
 
 /**
- * IMSI������
+ * IMSI工具类
  *
  * @author jingle1267@163.com
  */
@@ -43,7 +43,7 @@ public class ImsiUtil {
     }
 
     /**
-     * ��ȡIMSInfo
+     * 获取IMSInfo
      *
      * @return
      */
@@ -78,7 +78,7 @@ public class ImsiUtil {
     }
 
     /**
-     * MTK��оƬ���ж�
+     * MTK的芯片的判断
      *
      * @return
      */
@@ -106,7 +106,7 @@ public class ImsiUtil {
             imei_2 = (String) m1.invoke(tm, simId_2);
 
             imsInfo = new IMSInfo();
-            imsInfo.chipName = "MTKоƬ";
+            imsInfo.chipName = "MTK芯片";
             imsInfo.imei_1 = imei_1;
             imsInfo.imei_2 = imei_2;
             imsInfo.imsi_1 = imsi_1;
@@ -120,7 +120,7 @@ public class ImsiUtil {
     }
 
     /**
-     * MTK��оƬ���ж�2
+     * MTK的芯片的判断2
      *
      * @return
      */
@@ -149,7 +149,7 @@ public class ImsiUtil {
             imei_2 = tm2.getDeviceId();
 
             imsInfo = new IMSInfo();
-            imsInfo.chipName = "MTKоƬ";
+            imsInfo.chipName = "MTK芯片";
             imsInfo.imei_1 = imei_1;
             imsInfo.imei_2 = imei_2;
             imsInfo.imsi_1 = imsi_1;
@@ -163,7 +163,7 @@ public class ImsiUtil {
     }
 
     /**
-     * չѶоƬ���ж�
+     * 展讯芯片的判断
      *
      * @return
      */
@@ -184,7 +184,7 @@ public class ImsiUtil {
             imsi_2 = tm1.getSubscriberId();
             imei_2 = tm1.getDeviceId();
             imsInfo = new IMSInfo();
-            imsInfo.chipName = "չѶоƬ";
+            imsInfo.chipName = "展讯芯片";
             imsInfo.imei_1 = imei_1;
             imsInfo.imei_2 = imei_2;
             imsInfo.imsi_1 = imsi_1;
@@ -197,7 +197,7 @@ public class ImsiUtil {
     }
 
     /**
-     * ��ͨоƬ�ж�
+     * 高通芯片判断
      *
      * @return
      */
@@ -225,7 +225,7 @@ public class ImsiUtil {
                 // TODO: handle exception
             }
             imsInfo = new IMSInfo();
-            imsInfo.chipName = "��ͨоƬ-getPreferredDataSubscription:"
+            imsInfo.chipName = "高通芯片-getPreferredDataSubscription:"
                     + statephoneType_2 + ",flag:" + flag;
             imsInfo.imei_1 = imei_1;
             imsInfo.imei_2 = imei_2;
@@ -240,7 +240,7 @@ public class ImsiUtil {
     }
 
     /**
-     * ϵͳ��api
+     * 系统的api
      *
      * @return
      */
@@ -261,11 +261,11 @@ public class ImsiUtil {
             return imsInfo;
         } else {
             imsInfo = new IMSInfo();
-            imsInfo.chipName = "����оƬ";
+            imsInfo.chipName = "单卡芯片";
             imsInfo.imei_1 = imei_1;
-            imsInfo.imei_2 = "û��";
+            imsInfo.imei_2 = "没有";
             imsInfo.imsi_1 = imsi_1;
-            imsInfo.imsi_2 = "û��";
+            imsInfo.imsi_2 = "没有";
             return imsInfo;
         }
     }

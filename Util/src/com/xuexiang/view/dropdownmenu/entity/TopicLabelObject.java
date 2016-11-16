@@ -3,7 +3,7 @@ package com.xuexiang.view.dropdownmenu.entity;
 /**
  * Created by Administrator on 2015/5/28.
  *
- * ±êÇ©ÊµÌåÀà */
+ * æ ‡ç­¾å®ä½“ç±» */
 public class TopicLabelObject {
 
     public int id;

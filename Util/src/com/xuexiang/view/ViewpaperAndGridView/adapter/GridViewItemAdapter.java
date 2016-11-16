@@ -19,11 +19,11 @@ public class GridViewItemAdapter extends BaseAdapter {
 
 	private List<ChannelItem> mList;  
     private Context mContext;  
-    /** ViewPagerÒ³Âë */  
+    /** ViewPageré¡µç  */  
     private int index;  
-    /** ¸ù¾İÆÁÄ»´óĞ¡¼ÆËãµÃµ½µÄÃ¿Ò³item¸öÊı */  
+    /** æ ¹æ®å±å¹•å¤§å°è®¡ç®—å¾—åˆ°çš„æ¯é¡µitemä¸ªæ•° */  
     private int pageItemCount;  
-    /** ´«½øÀ´µÄListµÄ×Ü³¤¶È */  
+    /** ä¼ è¿›æ¥çš„Listçš„æ€»é•¿åº¦ */  
     private int totalSize;  
   
     public GridViewItemAdapter(Context context, List<ChannelItem> list) {  

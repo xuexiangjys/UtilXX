@@ -11,7 +11,7 @@ import android.content.Context;
 
 public class HttpRequestQueque {
 
-	private AsyncHttpClient client;// ÊµÀı»°¶ÔÏó
+	private AsyncHttpClient client;// å®ä¾‹è¯å¯¹è±¡
 
 	private HttpRequest _httpRequst;
 
@@ -28,7 +28,7 @@ public class HttpRequestQueque {
 	}
 
 	/**
-	 * @description: Ìí¼ÓÇëÇó
+	 * @description: æ·»åŠ è¯·æ±‚
 	 * @author:hc
 	 * @return:void
 	 * @param httpRequst
@@ -61,7 +61,7 @@ public class HttpRequestQueque {
 	}
 
 	/**
-	 * @description: post ÉÏ´«
+	 * @description: post ä¸Šä¼ 
 	 * @author:hc
 	 * @return:void
 	 * @param httpRequst
@@ -94,7 +94,7 @@ public class HttpRequestQueque {
 	}
 
 	/**
-	 * @description: È¡Ïû¼ÓÔØ
+	 * @description: å–æ¶ˆåŠ è½½
 	 * @author:hc
 	 * @return:void
 	 */
@@ -104,7 +104,7 @@ public class HttpRequestQueque {
 	}
 
 	/**
-	 * @description: ˆÌĞĞhttpÇëÇó
+	 * @description: åŸ·è¡Œhttpè¯·æ±‚
 	 * @author:hc
 	 * @return:void
 	 * @param urlString
@@ -112,13 +112,13 @@ public class HttpRequestQueque {
 	 * @param res
 	 */
 
-	private void _get(String urlString, RequestParams params, AsyncHttpResponseHandler res) // urlÀïÃæ´ø²ÎÊı
+	private void _get(String urlString, RequestParams params, AsyncHttpResponseHandler res) // urlé‡Œé¢å¸¦å‚æ•°
 	{
 		client.get(urlString, params, res);
 	}
 
 	/**
-	 * @description: Ö´ĞĞpostÇëÇó
+	 * @description: æ‰§è¡Œpostè¯·æ±‚
 	 * @author:hc
 	 * @return:void
 	 * @param urlString
@@ -126,7 +126,7 @@ public class HttpRequestQueque {
 	 * @param res
 	 */
 
-	private void _post(String urlString, RequestParams params, AsyncHttpResponseHandler res) // urlÀïÃæ´ø²ÎÊı
+	private void _post(String urlString, RequestParams params, AsyncHttpResponseHandler res) // urlé‡Œé¢å¸¦å‚æ•°
 	{
 
 		client.post(urlString, params, res);

@@ -7,22 +7,22 @@ import java.text.DecimalFormat;
 import android.util.Log;
 
 public class FileSizeUtil {
-	public static final int SIZETYPE_B = 1;// »ñÈ¡ÎÄ¼ş´óĞ¡µ¥Î»ÎªBµÄdoubleÖµ
-	 public static final int SIZETYPE_KB = 2;// »ñÈ¡ÎÄ¼ş´óĞ¡µ¥Î»ÎªKBµÄdoubleÖµ
-	 public static final int SIZETYPE_MB = 3;// »ñÈ¡ÎÄ¼ş´óĞ¡µ¥Î»ÎªMBµÄdoubleÖµ
-	 public static final int SIZETYPE_GB = 4;// »ñÈ¡ÎÄ¼ş´óĞ¡µ¥Î»ÎªGBµÄdoubleÖµ
+	public static final int SIZETYPE_B = 1;// è·å–æ–‡ä»¶å¤§å°å•ä½ä¸ºBçš„doubleå€¼
+	 public static final int SIZETYPE_KB = 2;// è·å–æ–‡ä»¶å¤§å°å•ä½ä¸ºKBçš„doubleå€¼
+	 public static final int SIZETYPE_MB = 3;// è·å–æ–‡ä»¶å¤§å°å•ä½ä¸ºMBçš„doubleå€¼
+	 public static final int SIZETYPE_GB = 4;// è·å–æ–‡ä»¶å¤§å°å•ä½ä¸ºGBçš„doubleå€¼
 	 
 	 public static final long GB = 1073741824; // 1024 * 1024 * 1024
 	 public static final long MB = 1048576; // 1024 * 1024
 	 public static final long KB = 1024;
 	 /**
-	  * »ñÈ¡ÎÄ¼şÖ¸¶¨ÎÄ¼şµÄÖ¸¶¨µ¥Î»µÄ´óĞ¡
+	  * è·å–æ–‡ä»¶æŒ‡å®šæ–‡ä»¶çš„æŒ‡å®šå•ä½çš„å¤§å°
 	  * 
 	  * @param filePath
-	  *            ÎÄ¼şÂ·¾¶
+	  *            æ–‡ä»¶è·¯å¾„
 	  * @param sizeType
-	  *            »ñÈ¡´óĞ¡µÄÀàĞÍ1ÎªB¡¢2ÎªKB¡¢3ÎªMB¡¢4ÎªGB
-	  * @return doubleÖµµÄ´óĞ¡
+	  *            è·å–å¤§å°çš„ç±»å‹1ä¸ºBã€2ä¸ºKBã€3ä¸ºMBã€4ä¸ºGB
+	  * @return doubleå€¼çš„å¤§å°
 	  */
 	 public static double getFileOrFilesSize(String filePath, int sizeType) {
 	  File file = new File(filePath);
@@ -35,16 +35,16 @@ public class FileSizeUtil {
 	   }
 	  } catch (Exception e) {
 	   e.printStackTrace();
-	   Log.e("»ñÈ¡ÎÄ¼ş´óĞ¡", "»ñÈ¡Ê§°Ü!");
+	   Log.e("è·å–æ–‡ä»¶å¤§å°", "è·å–å¤±è´¥!");
 	  }
 	  return FormetFileSize(blockSize, sizeType);
 	 }
 	 /**
-	  * µ÷ÓÃ´Ë·½·¨×Ô¶¯¼ÆËãÖ¸¶¨ÎÄ¼ş»òÖ¸¶¨ÎÄ¼ş¼ĞµÄ´óĞ¡
+	  * è°ƒç”¨æ­¤æ–¹æ³•è‡ªåŠ¨è®¡ç®—æŒ‡å®šæ–‡ä»¶æˆ–æŒ‡å®šæ–‡ä»¶å¤¹çš„å¤§å°
 	  * 
 	  * @param filePath
-	  *            ÎÄ¼şÂ·¾¶
-	  * @return ¼ÆËãºÃµÄ´øB¡¢KB¡¢MB¡¢GBµÄ×Ö·û´®
+	  *            æ–‡ä»¶è·¯å¾„
+	  * @return è®¡ç®—å¥½çš„å¸¦Bã€KBã€MBã€GBçš„å­—ç¬¦ä¸²
 	  */
 	 public static String getAutoFileOrFilesSize(String filePath) {
 	  File file = new File(filePath);
@@ -57,12 +57,12 @@ public class FileSizeUtil {
 	   }
 	  } catch (Exception e) {
 	   e.printStackTrace();
-	   Log.e("»ñÈ¡ÎÄ¼ş´óĞ¡", "»ñÈ¡Ê§°Ü!");
+	   Log.e("è·å–æ–‡ä»¶å¤§å°", "è·å–å¤±è´¥!");
 	  }
 	  return FormetFileSize(blockSize);
 	 }
 	 /**
-	  * »ñÈ¡Ö¸¶¨ÎÄ¼ş´óĞ¡
+	  * è·å–æŒ‡å®šæ–‡ä»¶å¤§å°
 	  * 
 	  * @param f
 	  * @return
@@ -76,12 +76,12 @@ public class FileSizeUtil {
 	   size = fis.available();
 	  } else {
 	   file.createNewFile();
-	   Log.e("»ñÈ¡ÎÄ¼ş´óĞ¡", "ÎÄ¼ş²»´æÔÚ!");
+	   Log.e("è·å–æ–‡ä»¶å¤§å°", "æ–‡ä»¶ä¸å­˜åœ¨!");
 	  }
 	  return size;
 	 }
 	 /**
-	  * »ñÈ¡Ö¸¶¨ÎÄ¼ş¼Ğ
+	  * è·å–æŒ‡å®šæ–‡ä»¶å¤¹
 	  * 
 	  * @param f
 	  * @return
@@ -100,7 +100,7 @@ public class FileSizeUtil {
 	  return size;
 	 }
 	 /**
-	  * ×ª»»ÎÄ¼ş´óĞ¡
+	  * è½¬æ¢æ–‡ä»¶å¤§å°
 	  * 
 	  * @param fileS
 	  * @return
@@ -124,7 +124,7 @@ public class FileSizeUtil {
 	  return fileSizeString;
 	 }
 	 /**
-	  * ×ª»»ÎÄ¼ş´óĞ¡,Ö¸¶¨×ª»»µÄÀàĞÍ
+	  * è½¬æ¢æ–‡ä»¶å¤§å°,æŒ‡å®šè½¬æ¢çš„ç±»å‹
 	  * 
 	  * @param fileS
 	  * @param sizeType

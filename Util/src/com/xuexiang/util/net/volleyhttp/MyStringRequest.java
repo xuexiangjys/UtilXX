@@ -83,7 +83,7 @@ public class MyStringRequest extends Request<String> {
     }
     
     /**
-     * requestBuilder  使用方法参见httpClientRequest
+     * requestBuilder  浣跨敤鏂规硶鍙傝httpClientRequest
      */
     public static class RequestBuilder{
         private int method = Method.GET;

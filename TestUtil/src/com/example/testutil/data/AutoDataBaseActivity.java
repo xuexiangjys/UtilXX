@@ -37,7 +37,7 @@ public class AutoDataBaseActivity extends BaseActivity implements OnClickListene
 		case R.id.add:
 			Student student = new Student();
 			student.setUsername("xuexiang");
-			student.setSex("ÄÐ");
+			student.setSex("ç”·");
 			student.setAge(23);
 //			student.setScore(100);
 			
@@ -60,7 +60,7 @@ public class AutoDataBaseActivity extends BaseActivity implements OnClickListene
 			break;
 		case R.id.update:
 			try {
-				mDatabaseService.updateDataByColumn("sex", "ÄÐ", "sex", "Å®");
+				mDatabaseService.updateDataByColumn("sex", "ç”·", "sex", "å¥³");
 			} catch (SQLException e1) {
 				e1.printStackTrace();
 			}

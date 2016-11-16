@@ -36,10 +36,10 @@ public class FadingActionbarListViewActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
 
         FadingActionBarHelper helper = new FadingActionBarHelper()
-            .actionBarBackground(R.drawable.ab_background)// ÉèÖÃactionbarµÄ±³¾°
-            .headerLayout(R.layout.fadingactionbar_header)// ÉèÖÃactionbarÉÏÍ¼Æ¬µÄ²¼¾Ö£¬²»ÏŞÓÚÍ¼Æ¬
-            .contentLayout(R.layout.activity_fadingactionbarlistview);// ÉèÖÃÖ÷½çÃæ
-        //³õÊ¼»¯
+            .actionBarBackground(R.drawable.ab_background)// è®¾ç½®actionbarçš„èƒŒæ™¯
+            .headerLayout(R.layout.fadingactionbar_header)// è®¾ç½®actionbarä¸Šå›¾ç‰‡çš„å¸ƒå±€ï¼Œä¸é™äºå›¾ç‰‡
+            .contentLayout(R.layout.activity_fadingactionbarlistview);// è®¾ç½®ä¸»ç•Œé¢
+        //åˆå§‹åŒ–
         setContentView(helper.createView(this));
         helper.initActionBar(this);
 
@@ -51,12 +51,12 @@ public class FadingActionbarListViewActivity extends ActionBarActivity {
 
     /**
      * @return A list of Strings read from the specified resource
-     * ´Ó×ÊÔ´ÎÄ¼şÖĞ¶ÁÈ¡ÎÄ×Ö£¬¶ÁÒ»ĞĞÉèÖÃÒ»¸ölistµÄitem
+     * ä»èµ„æºæ–‡ä»¶ä¸­è¯»å–æ–‡å­—ï¼Œè¯»ä¸€è¡Œè®¾ç½®ä¸€ä¸ªlistçš„item
      */
     private ArrayList<String> loadItems(int rawResourceId) {
         try {
             ArrayList<String> countries = new ArrayList<String>();
-            //½¨Á¢ÊäÈëÁ÷
+            //å»ºç«‹è¾“å…¥æµ
             InputStream inputStream = getResources().openRawResource(rawResourceId);
             BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
             String line;

@@ -1,9 +1,9 @@
 package com.example.testutil.view.swipelistview.entity;
 
 public class RecentItem implements Comparable<RecentItem> {
-	private int headImg;// Í·Ïñ
-	private String name;// ÏûÏ¢À´×Ô
-	private int newNum;// ĞÂÏûÏ¢ÊıÄ¿
+	private int headImg;// å¤´åƒ
+	private String name;// æ¶ˆæ¯æ¥è‡ª
+	private int newNum;// æ–°æ¶ˆæ¯æ•°ç›®
 	
 	public RecentItem() {
 	}

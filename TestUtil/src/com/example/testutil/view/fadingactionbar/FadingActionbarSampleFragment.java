@@ -28,7 +28,7 @@ import com.xuexiang.view.fadingactionbar.extras.actionbarcompat.FadingActionBarH
 
 /**
  * @author:Jack Tony
- * @tips  :ÄÚ²¿ÊÇfragmentµÄactivity
+ * @tips  :å†…éƒ¨æ˜¯fragmentçš„activity
  * @date  :2014-8-9
  */
 public class FadingActionbarSampleFragment extends Fragment {
@@ -38,35 +38,35 @@ public class FadingActionbarSampleFragment extends Fragment {
     public static final String ARG_IMAGE_RES = "image_source";
     public static final String ARG_ACTION_BG_RES = "image_action_bs_res";
 
-    /* £¨·Ç Javadoc£©
+    /* ï¼ˆé Javadocï¼‰
      * @see android.support.v4.app.Fragment#onAttach(android.app.Activity)
-     * ÔÚfragmentºÍactivity°ó¶¨µÄÊ±ºò½øĞĞÈçÏÂ·½·¨
+     * åœ¨fragmentå’Œactivityç»‘å®šçš„æ—¶å€™è¿›è¡Œå¦‚ä¸‹æ–¹æ³•
      */
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
 
         mArguments = getArguments();
-        //³õÊ¼»¯£¬Èç¹û½ÓÊÜµÄ²ÎÊı²»Îª¿ÕÄÇÃ´¾ÍÓÃÉèÖÃºÃµÄÍ¼Æ¬£¬Èç¹ûÊÇnull£¬ÄÇÃ´¾ÍÓÃ ab_background_light
+        //åˆå§‹åŒ–ï¼Œå¦‚æœæ¥å—çš„å‚æ•°ä¸ä¸ºç©ºé‚£ä¹ˆå°±ç”¨è®¾ç½®å¥½çš„å›¾ç‰‡ï¼Œå¦‚æœæ˜¯nullï¼Œé‚£ä¹ˆå°±ç”¨ ab_background_light
         int actionBarBg = mArguments != null ? mArguments.getInt(ARG_ACTION_BG_RES) : R.drawable.ab_background_light;
 
-        //ÉèÖÃhelper
+        //è®¾ç½®helper
         mFadingHelper = new FadingActionBarHelper()
             .actionBarBackground(actionBarBg)
-            .headerLayout(R.layout.fadingactionbar_header_light) //ÉèÖÃ±³¾°É«
-            .contentLayout(R.layout.activity_fadingactionbarscrollview) //ÉèÖÃ¶¥²¿µÄ²¼¾Ö
+            .headerLayout(R.layout.fadingactionbar_header_light) //è®¾ç½®èƒŒæ™¯è‰²
+            .contentLayout(R.layout.activity_fadingactionbarscrollview) //è®¾ç½®é¡¶éƒ¨çš„å¸ƒå±€
             .lightActionBar(actionBarBg == R.drawable.ab_background_light);
         
         mFadingHelper.initActionBar(activity);
     }
     
-    /* £¨·Ç Javadoc£©
+    /* ï¼ˆé Javadocï¼‰
      * @see android.support.v4.app.Fragment#onCreateView(android.view.LayoutInflater, android.view.ViewGroup, android.os.Bundle)
-     * ÔÚfragmentÖĞµÄ»Øµ÷·½·¨ÖĞ£¬ÓÃhelperÀ´ÉèÖÃÊÓÍ¼
+     * åœ¨fragmentä¸­çš„å›è°ƒæ–¹æ³•ä¸­ï¼Œç”¨helperæ¥è®¾ç½®è§†å›¾
      */
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = mFadingHelper.createView(inflater);// ÉèÖÃÌî³äÆ÷
+        View view = mFadingHelper.createView(inflater);// è®¾ç½®å¡«å……å™¨
 
         if (mArguments != null){
             ImageView img = (ImageView) view.findViewById(R.id.image_header);

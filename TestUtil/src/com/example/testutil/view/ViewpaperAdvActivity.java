@@ -9,10 +9,10 @@ import com.xuexiang.view.loopviewpager.LoopViewPagerLayout.BannerInfo;
 import com.xuexiang.view.loopviewpager.LoopViewPagerLayout.OnBannerItemClickListener;
 
 /**  
- * ´´½¨Ê±¼ä£º2016-6-26 ÏÂÎç2:02:52  
- * ÏîÄ¿Ãû³Æ£ºUtilTest  
+ * åˆ›å»ºæ—¶é—´ï¼š2016-6-26 ä¸‹åˆ2:02:52  
+ * é¡¹ç›®åç§°ï¼šUtilTest  
  * @author xuexiang
- * ÎÄ¼şÃû³Æ£ºViewpaperAdvActivity.java  
+ * æ–‡ä»¶åç§°ï¼šViewpaperAdvActivity.java  
  **/
 public class ViewpaperAdvActivity extends BaseActivity implements OnBannerItemClickListener{
 	private LoopViewPagerLayout mLoopViewPager1;

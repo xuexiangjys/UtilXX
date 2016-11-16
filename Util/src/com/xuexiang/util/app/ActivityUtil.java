@@ -10,13 +10,13 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 /**
- * @Description: ActivityµÄ¹¤¾ßÀà
+ * @Description: Activityçš„å·¥å…·ç±»
  */ 
 public class ActivityUtil {
 	
 	
 	/**
-	 * ÑÓ³ÙÈ¥ÍùĞÂµÄActivity
+	 * å»¶è¿Ÿå»å¾€æ–°çš„Activity
 	 * @param context
 	 * @param cls
 	 * @param delay
@@ -32,7 +32,7 @@ public class ActivityUtil {
 		}, delay);
 	}
 	/**
-	 * Ìø×ªµ½ÁíÒ»¸öActivity£¬²»Ğ¯´øÊı¾İ£¬²»ÉèÖÃflag
+	 * è·³è½¬åˆ°å¦ä¸€ä¸ªActivityï¼Œä¸æºå¸¦æ•°æ®ï¼Œä¸è®¾ç½®flag
 	 * @param context
 	 * @param cls
 	 */
@@ -43,7 +43,7 @@ public class ActivityUtil {
 	}
 	
 	/**
-	 * Ìø×ªµ½ÁíÒ»¸öActivity£¬Ğ¯´øÊı¾İ
+	 * è·³è½¬åˆ°å¦ä¸€ä¸ªActivityï¼Œæºå¸¦æ•°æ®
 	 * @param context
 	 * @param cls
 	 */
@@ -56,7 +56,7 @@ public class ActivityUtil {
 		context.startActivity(intent);
 	}
 
-/***********************************************ÓĞ¶¯×÷µÄÆô¶¯activity*****************************************************************/
+/***********************************************æœ‰åŠ¨ä½œçš„å¯åŠ¨activity*****************************************************************/
 	/**
 	 * go to activity,use animation
 	 * @param context
@@ -172,7 +172,7 @@ public class ActivityUtil {
 		activity.overridePendingTransition(RUtils.getAnim(context, "in_from_top"), RUtils.getAnim(context, "out_to_bottom"));
 	}
 	
-/******************************************************Æô¶¯¶¯×÷¹éÀà********************************************************************************************/	
+/******************************************************å¯åŠ¨åŠ¨ä½œå½’ç±»********************************************************************************************/	
 	public enum StartAnim {
 		Left2Right,
 		Right2Left,
@@ -181,7 +181,7 @@ public class ActivityUtil {
 	}
 	
 	/**
-	 * Ìø×ªµ½ÁíÒ»¸öActivity£¬Ğ¯´øÊı¾İ
+	 * è·³è½¬åˆ°å¦ä¸€ä¸ªActivityï¼Œæºå¸¦æ•°æ®
 	 * @param context
 	 * @param cls
 	 */
@@ -209,7 +209,7 @@ public class ActivityUtil {
 	}
 	
 	/**
-	 * Ìø×ªµ½ÁíÒ»¸öActivity£¬Ğ¯´øÊı¾İ
+	 * è·³è½¬åˆ°å¦ä¸€ä¸ªActivityï¼Œæºå¸¦æ•°æ®
 	 * @param context
 	 * @param cls
 	 */

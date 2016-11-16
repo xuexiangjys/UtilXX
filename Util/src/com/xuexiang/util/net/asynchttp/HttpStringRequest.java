@@ -31,7 +31,7 @@ public class HttpStringRequest extends HttpRequest {
 	}
 	
 	/**
-	 * @description: »ñÈ¡²ÎÊı
+	 * @description: è·å–å‚æ•°
 	 * @author:hc
 	 * @return:RequestParams
 	 * @return
@@ -50,7 +50,7 @@ public class HttpStringRequest extends HttpRequest {
 			String val = mParams.get(key);
 			stringBuilder.append("&" + key + "=" + val);
 		}
-		CustomLog.d("Ìá½»²ÎÊıÎª   %s", "=" + stringBuilder.toString());
+		CustomLog.d("æäº¤å‚æ•°ä¸º   %s", "=" + stringBuilder.toString());
 		return requestParams;
 	}
 
@@ -67,7 +67,7 @@ public class HttpStringRequest extends HttpRequest {
 
 	@Override
 	public void onSuccess(String result) {
-		CustomLog.d("½á¹ûÊÇ=%s", result);
+		CustomLog.d("ç»“æœæ˜¯=%s", result);
 		try {
 			if (mHttpSuccess != null)
 				mHttpSuccess.onSuccess(result);

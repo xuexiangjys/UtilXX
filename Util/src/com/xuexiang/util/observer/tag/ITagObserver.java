@@ -2,7 +2,7 @@ package com.xuexiang.util.observer.tag;
 
 
 /**  
- * ´´½¨Ê±¼ä£º2016-6-5 ÏÂÎç2:24:22  
+ * åˆ›å»ºæ—¶é—´ï¼š2016-6-5 ä¸‹åˆ2:24:22  
  * @author xuexiang
  **/
 public interface ITagObserver {

@@ -13,10 +13,10 @@ import com.xuexiang.util.file.LocalFileUtil;
 import com.xuexiang.util.resource.ResourceUtils;
 
 /**  
- * ´´½¨Ê±¼ä£º2016-5-30 ÏÂÎç6:57:17  
- * ÏîÄ¿Ãû³Æ£ºUtilTest  
+ * åˆ›å»ºæ—¶é—´ï¼š2016-5-30 ä¸‹åˆ6:57:17  
+ * é¡¹ç›®åç§°ï¼šUtilTest  
  * @author xuexiang
- * ÎÄ¼şÃû³Æ£ºResourceActivity.java  
+ * æ–‡ä»¶åç§°ï¼šResourceActivity.java  
  **/
 public class ResourceActivity extends BaseActivity implements OnClickListener{
 
@@ -27,7 +27,7 @@ public class ResourceActivity extends BaseActivity implements OnClickListener{
 	@Override
 	public void onCreateActivity() {
 		setContentView(R.layout.activity_resource);
-		initActionBar("×ÊÔ´²Ù×÷½çÃæ");
+		initActionBar("èµ„æºæ“ä½œç•Œé¢");
 		
 		initView();
 	}
@@ -56,21 +56,21 @@ public class ResourceActivity extends BaseActivity implements OnClickListener{
      		ResourceUtils.copyFilesFromAssets(mContext, "drawable", LocalFileUtil.LOCAL_DATA_PATH  + "drawable");
 //			mAssetsManager.copyFileFromAssetToSD("drawable", Environment.getExternalStorageDirectory().toString() + "/"  + "drawable");
 			if(FileUtils.isFolderExist(LocalFileUtil.LOCAL_DATA_PATH  + "drawable")) {
-				mToastUtil.showToast("¸´ÖÆ³É¹¦£¡");
+				mToastUtil.showToast("å¤åˆ¶æˆåŠŸï¼");
 			} else {
-				mToastUtil.showToast("¸´ÖÆÊ§°Ü£¡");
+				mToastUtil.showToast("å¤åˆ¶å¤±è´¥ï¼");
 			}
 			break;
-		case R.id.btn_custom_intall_apk:  //×Ô¶¨Òå°²×°
-			PackageUtils.intallAPKFromAssetByCustom(mContext, "com.example.saolei", "ÌìÌìÉ¨À×", "saolei.apk" );
+		case R.id.btn_custom_intall_apk:  //è‡ªå®šä¹‰å®‰è£…
+			PackageUtils.intallAPKFromAssetByCustom(mContext, "com.example.saolei", "å¤©å¤©æ‰«é›·", "saolei.apk" );
             break;
             
 		case R.id.btn_system_intall_apk:
-			PackageUtils.intallAPKFromAssetBySystem(mContext, "com.way.ftp", "FTP·şÎñÆ÷", "FTP.apk");
+			PackageUtils.intallAPKFromAssetBySystem(mContext, "com.way.ftp", "FTPæœåŠ¡å™¨", "FTP.apk");
 			break;
 			
 		case R.id.btn_plugload:
-			mToastUtil.showToast("µã»÷ÁËPlugLoadActivity");
+			mToastUtil.showToast("ç‚¹å‡»äº†PlugLoadActivity");
 			startActivity(PlugLoadActivity.class);
 			break;	
 			

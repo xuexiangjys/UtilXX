@@ -16,7 +16,7 @@ import okio.Sink;
  * decorate any request body, but is most useful for tracking the upload progress of large
  * multipart requests.
  *
- * @author Leo Nikkilä
+ * @author Leo Nikkil盲
  */
 public class CountingRequestBody extends RequestBody
 {

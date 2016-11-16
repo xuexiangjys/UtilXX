@@ -21,7 +21,7 @@ import java.util.List;
 import com.xuexiang.util.resource.RUtils;
 
 /**
- * Òıµ¼ÃÉ²ã
+ * å¼•å¯¼è’™å±‚
  */
 public class GuideView extends RelativeLayout implements ViewTreeObserver.OnGlobalLayoutListener {
     private final String TAG = getClass().getSimpleName();
@@ -29,68 +29,68 @@ public class GuideView extends RelativeLayout implements ViewTreeObserver.OnGlob
     private List<View> mViews;
     private boolean first = true;
     /**
-     * targetViewÇ°×º¡£SHOW_GUIDE_PREFIX + targetView.getId()×÷Îª±£´æÔÚSPÎÄ¼şµÄkey¡£
+     * targetViewå‰ç¼€ã€‚SHOW_GUIDE_PREFIX + targetView.getId()ä½œä¸ºä¿å­˜åœ¨SPæ–‡ä»¶çš„keyã€‚
      */
     private static final String SHOW_GUIDE_PREFIX = "show_guide_on_view_";
     /**
-     * GuideView Æ«ÒÆÁ¿
+     * GuideView åç§»é‡
      */
     private int offsetX, offsetY;
     /**
-     * targetView µÄÍâÇĞÔ²°ë¾¶
+     * targetView çš„å¤–åˆ‡åœ†åŠå¾„
      */
     private int radius;
     /**
-     * ĞèÒªÏÔÊ¾ÌáÊ¾ĞÅÏ¢µÄView
+     * éœ€è¦æ˜¾ç¤ºæç¤ºä¿¡æ¯çš„View
      */
     private View targetView;
     /**
-     * ×Ô¶¨ÒåView
+     * è‡ªå®šä¹‰View
      */
     private View customGuideView;
     /**
-     * Í¸Ã÷Ô²ĞÎ»­±Ê
+     * é€æ˜åœ†å½¢ç”»ç¬”
      */
     private Paint mCirclePaint;
     /**
-     * ±³¾°É«»­±Ê
+     * èƒŒæ™¯è‰²ç”»ç¬”
      */
     private Paint mBackgroundPaint;
     /**
-     * targetViewÊÇ·ñÒÑ²âÁ¿
+     * targetViewæ˜¯å¦å·²æµ‹é‡
      */
     private boolean isMeasured;
     /**
-     * targetViewÔ²ĞÄ
+     * targetViewåœ†å¿ƒ
      */
     private int[] center;
     /**
-     * »æÍ¼²ãµşÄ£Ê½
+     * ç»˜å›¾å±‚å æ¨¡å¼
      */
     private PorterDuffXfermode porterDuffXfermode;
     /**
-     * »æÖÆÇ°¾°bitmap
+     * ç»˜åˆ¶å‰æ™¯bitmap
      */
     private Bitmap bitmap;
     /**
-     * ±³¾°É«ºÍÍ¸Ã÷¶È£¬¸ñÊ½ #aarrggbb
+     * èƒŒæ™¯è‰²å’Œé€æ˜åº¦ï¼Œæ ¼å¼ #aarrggbb
      */
     private int backgroundColor;
     /**
-     * Canvas,»æÖÆbitmap
+     * Canvas,ç»˜åˆ¶bitmap
      */
     private Canvas temp;
     /**
-     * Ïà¶ÔÓÚtargetViewµÄÎ»ÖÃ.ÔÚtargetµÄÄÇ¸ö·½Ïò
+     * ç›¸å¯¹äºtargetViewçš„ä½ç½®.åœ¨targetçš„é‚£ä¸ªæ–¹å‘
      */
     private Direction direction;
 
     /**
-     * ĞÎ×´
+     * å½¢çŠ¶
      */
     private MyShape myShape;
     /**
-     * targetView×óÉÏ½Ç×ø±ê
+     * targetViewå·¦ä¸Šè§’åæ ‡
      */
     private int[] location;
     private boolean onClickExit;
@@ -226,8 +226,8 @@ public class GuideView extends RelativeLayout implements ViewTreeObserver.OnGlob
     }
 
     /**
-     * Ìí¼ÓÌáÊ¾ÎÄ×Ö£¬Î»ÖÃÔÚtargetViewµÄÏÂ±ß
-     * ÔÚÆÁÄ»´°¿Ú£¬Ìí¼ÓÃÉ²ã£¬ÃÉ²ã»æÖÆ×Ü±³¾°ºÍÍ¸Ã÷Ô²ĞÎ£¬Ô²ĞÎÏÂ±ß»æÖÆËµÃ÷ÎÄ×Ö
+     * æ·»åŠ æç¤ºæ–‡å­—ï¼Œä½ç½®åœ¨targetViewçš„ä¸‹è¾¹
+     * åœ¨å±å¹•çª—å£ï¼Œæ·»åŠ è’™å±‚ï¼Œè’™å±‚ç»˜åˆ¶æ€»èƒŒæ™¯å’Œé€æ˜åœ†å½¢ï¼Œåœ†å½¢ä¸‹è¾¹ç»˜åˆ¶è¯´æ˜æ–‡å­—
      */
     private void createGuideView() {
         LayoutParams guideViewParams;
@@ -289,7 +289,7 @@ public class GuideView extends RelativeLayout implements ViewTreeObserver.OnGlob
     }
 
     /**
-     * »ñµÃtargetView µÄ¿í¸ß£¬Èç¹ûÎ´²âÁ¿£¬·µ»Ø£û-1£¬ -1£ı
+     * è·å¾—targetView çš„å®½é«˜ï¼Œå¦‚æœæœªæµ‹é‡ï¼Œè¿”å›ï½›-1ï¼Œ -1ï½
      *
      * @return
      */
@@ -303,7 +303,7 @@ public class GuideView extends RelativeLayout implements ViewTreeObserver.OnGlob
     }
 
     /**
-     * »ñµÃtargetView µÄ°ë¾¶
+     * è·å¾—targetView çš„åŠå¾„
      *
      * @return
      */
@@ -336,55 +336,55 @@ public class GuideView extends RelativeLayout implements ViewTreeObserver.OnGlob
 
     private void drawBackground(Canvas canvas) {
         needDraw = false;
-        // ÏÈ»æÖÆbitmap£¬ÔÙ½«bitmap»æÖÆµ½ÆÁÄ»
+        // å…ˆç»˜åˆ¶bitmapï¼Œå†å°†bitmapç»˜åˆ¶åˆ°å±å¹•
         bitmap = Bitmap.createBitmap(canvas.getWidth(), canvas.getHeight(), Bitmap.Config.ARGB_8888);
         temp = new Canvas(bitmap);
 
-        // ±³¾°»­±Ê
+        // èƒŒæ™¯ç”»ç¬”
         Paint bgPaint = new Paint();
         if (backgroundColor != 0)
             bgPaint.setColor(backgroundColor);
         else
             bgPaint.setColor(getResources().getColor(RUtils.getColor(mContext, "shadow_guidview")));
 
-        // »æÖÆÆÁÄ»±³¾°
+        // ç»˜åˆ¶å±å¹•èƒŒæ™¯
         temp.drawRect(0, 0, temp.getWidth(), temp.getHeight(), bgPaint);
 
-        // targetView µÄÍ¸Ã÷Ô²ĞÎ»­±Ê
+        // targetView çš„é€æ˜åœ†å½¢ç”»ç¬”
         if (mCirclePaint == null)
             mCirclePaint = new Paint();
-        porterDuffXfermode = new PorterDuffXfermode(PorterDuff.Mode.SRC_OUT);// »òÕßCLEAR
+        porterDuffXfermode = new PorterDuffXfermode(PorterDuff.Mode.SRC_OUT);// æˆ–è€…CLEAR
         mCirclePaint.setXfermode(porterDuffXfermode);
         mCirclePaint.setAntiAlias(true);
 
         if (myShape != null) {
             RectF oval = new RectF();
             switch (myShape) {
-                case CIRCULAR://Ô²ĞÎ
-                    temp.drawCircle(center[0], center[1], radius, mCirclePaint);//»æÖÆÔ²ĞÎ
+                case CIRCULAR://åœ†å½¢
+                    temp.drawCircle(center[0], center[1], radius, mCirclePaint);//ç»˜åˆ¶åœ†å½¢
                     break;
-                case ELLIPSE://ÍÖÔ²
-                    //RectF¶ÔÏó
-                    oval.left = center[0] - 150;                              //×ó±ß
-                    oval.top = center[1] - 50;                                   //ÉÏ±ß
-                    oval.right = center[0] + 150;                             //ÓÒ±ß
-                    oval.bottom = center[1] + 50;                                //ÏÂ±ß
-                    temp.drawOval(oval, mCirclePaint);                   //»æÖÆÍÖÔ²
+                case ELLIPSE://æ¤­åœ†
+                    //RectFå¯¹è±¡
+                    oval.left = center[0] - 150;                              //å·¦è¾¹
+                    oval.top = center[1] - 50;                                   //ä¸Šè¾¹
+                    oval.right = center[0] + 150;                             //å³è¾¹
+                    oval.bottom = center[1] + 50;                                //ä¸‹è¾¹
+                    temp.drawOval(oval, mCirclePaint);                   //ç»˜åˆ¶æ¤­åœ†
                     break;
-                case RECTANGULAR://Ô²½Ç¾ØĞÎ
-                    //RectF¶ÔÏó
-                    oval.left = center[0] - 150;                              //×ó±ß
-                    oval.top = center[1] - 50;                                   //ÉÏ±ß
-                    oval.right = center[0] + 150;                             //ÓÒ±ß
-                    oval.bottom = center[1] + 50;                                //ÏÂ±ß
-                    temp.drawRoundRect(oval, radius, radius, mCirclePaint);                   //»æÖÆÔ²½Ç¾ØĞÎ
+                case RECTANGULAR://åœ†è§’çŸ©å½¢
+                    //RectFå¯¹è±¡
+                    oval.left = center[0] - 150;                              //å·¦è¾¹
+                    oval.top = center[1] - 50;                                   //ä¸Šè¾¹
+                    oval.right = center[0] + 150;                             //å³è¾¹
+                    oval.bottom = center[1] + 50;                                //ä¸‹è¾¹
+                    temp.drawRoundRect(oval, radius, radius, mCirclePaint);                   //ç»˜åˆ¶åœ†è§’çŸ©å½¢
                     break;
             }
         } else {
-            temp.drawCircle(center[0], center[1], radius, mCirclePaint);//»æÖÆÔ²ĞÎ
+            temp.drawCircle(center[0], center[1], radius, mCirclePaint);//ç»˜åˆ¶åœ†å½¢
         }
 
-        // »æÖÆµ½ÆÁÄ»
+        // ç»˜åˆ¶åˆ°å±å¹•
         canvas.drawBitmap(bitmap, 0, 0, bgPaint);
         bitmap.recycle();
     }
@@ -420,26 +420,26 @@ public class GuideView extends RelativeLayout implements ViewTreeObserver.OnGlob
             isMeasured = true;
         }
 
-        // »ñÈ¡targetViewµÄÖĞĞÄ×ø±ê
+        // è·å–targetViewçš„ä¸­å¿ƒåæ ‡
         if (center == null) {
-            // »ñÈ¡ÓÒÉÏ½Ç×ø±ê
+            // è·å–å³ä¸Šè§’åæ ‡
             location = new int[2];
             targetView.getLocationInWindow(location);
             center = new int[2];
-            // »ñÈ¡ÖĞĞÄ×ø±ê
+            // è·å–ä¸­å¿ƒåæ ‡
             center[0] = location[0] + targetView.getWidth() / 2;
             center[1] = location[1] + targetView.getHeight() / 2;
         }
-        // »ñÈ¡targetViewÍâÇĞÔ²°ë¾¶
+        // è·å–targetViewå¤–åˆ‡åœ†åŠå¾„
         if (radius == 0) {
             radius = getTargetViewRadius();
         }
-        // Ìí¼ÓGuideView
+        // æ·»åŠ GuideView
         createGuideView();
     }
 
     /**
-     * ¶¨ÒåGuideViewÏà¶ÔÓÚtargetViewµÄ·½Î»£¬¹²°ËÖÖ¡£²»ÉèÖÃÔòÄ¬ÈÏÔÚtargetViewÏÂ·½
+     * å®šä¹‰GuideViewç›¸å¯¹äºtargetViewçš„æ–¹ä½ï¼Œå…±å…«ç§ã€‚ä¸è®¾ç½®åˆ™é»˜è®¤åœ¨targetViewä¸‹æ–¹
      */
     public enum Direction {
         LEFT, TOP, RIGHT, BOTTOM,
@@ -448,14 +448,14 @@ public class GuideView extends RelativeLayout implements ViewTreeObserver.OnGlob
     }
 
     /**
-     * ¶¨ÒåÄ¿±ê¿Ø¼şµÄĞÎ×´£¬¹²3ÖÖ¡£Ô²ĞÎ£¬ÍÖÔ²£¬´øÔ²½ÇµÄ¾ØĞÎ£¨¿ÉÒÔÉèÖÃÔ²½Ç´óĞ¡£©£¬²»ÉèÖÃÔòÄ¬ÈÏÊÇÔ²ĞÎ
+     * å®šä¹‰ç›®æ ‡æ§ä»¶çš„å½¢çŠ¶ï¼Œå…±3ç§ã€‚åœ†å½¢ï¼Œæ¤­åœ†ï¼Œå¸¦åœ†è§’çš„çŸ©å½¢ï¼ˆå¯ä»¥è®¾ç½®åœ†è§’å¤§å°ï¼‰ï¼Œä¸è®¾ç½®åˆ™é»˜è®¤æ˜¯åœ†å½¢
      */
     public enum MyShape {
         CIRCULAR, ELLIPSE, RECTANGULAR
     }
 
     /**
-     * GuideViewµã»÷Callback
+     * GuideViewç‚¹å‡»Callback
      */
     public interface OnClickCallback {
         void onClickedGuideView();

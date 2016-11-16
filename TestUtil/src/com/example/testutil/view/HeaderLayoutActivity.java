@@ -14,10 +14,10 @@ import com.xuexiang.view.HeaderLayout.onLeftImageButtonClickListener;
 import com.xuexiang.view.HeaderLayout.onRightImageButtonClickListener;
 
 /**  
- * ´´½¨Ê±¼ä£º2016-6-11 ÏÂÎç10:39:34  
- * ÏîÄ¿Ãû³Æ£ºUtilTest  
+ * åˆ›å»ºæ—¶é—´ï¼š2016-6-11 ä¸‹åˆ10:39:34  
+ * é¡¹ç›®åç§°ï¼šUtilTest  
  * @author xuexiang
- * ÎÄ¼şÃû³Æ£ºHeaderLayoutActivity.java  
+ * æ–‡ä»¶åç§°ï¼šHeaderLayoutActivity.java  
  **/
 public class HeaderLayoutActivity extends BaseActivity implements OnClickListener {
 	protected SlidingMenu side_drawer;
@@ -48,30 +48,30 @@ public class HeaderLayoutActivity extends BaseActivity implements OnClickListene
 	public void onClick(View v) {
 		switch (v.getId()) {
 		case R.id.btnDefaut:
-			Log.v("-------", "Ä¬ÈÏ±êÌâ");
+			Log.v("-------", "é»˜è®¤æ ‡é¢˜");
 			mHeaderLayout.init(HeaderStyle.DEFAULT_TITLE);
-			mHeaderLayout.setTitleAndLeftImageButton("Ä¬ÈÏ±êÌâ",
+			mHeaderLayout.setTitleAndLeftImageButton("é»˜è®¤æ ‡é¢˜",
 					R.drawable.head_camera_normal, leftButtonClickListener);
 			break;
 
 		case R.id.btnLeft:
-			Log.v("-------", "×ó²à°´Å¥");
+			Log.v("-------", "å·¦ä¾§æŒ‰é’®");
 			mHeaderLayout.init(HeaderStyle.TITLE_LIFT_IMAGEBUTTON);
-			mHeaderLayout.setTitleAndLeftImageButton("×ó²à°´Å¥",
+			mHeaderLayout.setTitleAndLeftImageButton("å·¦ä¾§æŒ‰é’®",
 					R.drawable.head_camera_normal, leftButtonClickListener);
 			break;
 		case R.id.btnRight:
-			Log.v("-------", "ÓÒ²à°´Å¥");
+			Log.v("-------", "å³ä¾§æŒ‰é’®");
 			mHeaderLayout.init(HeaderStyle.TITLE_RIGHT_IMAGEBUTTON);
-			mHeaderLayout.setTitleAndRightImageButton("ÓÒ²à°´Å¥",
+			mHeaderLayout.setTitleAndRightImageButton("å³ä¾§æŒ‰é’®",
 					R.drawable.head_locate_normal, rightButtonClickListener);
 			break;
 		case R.id.btnDouble:
-			Log.v("-------", "Ë«²à°´Å¥");
+			Log.v("-------", "åŒä¾§æŒ‰é’®");
 			mHeaderLayout.init(HeaderStyle.TITLE_DOUBLE_IMAGEBUTTON);
-			mHeaderLayout.setTitleAndLeftImageButton("Ë«²à°´Å¥",
+			mHeaderLayout.setTitleAndLeftImageButton("åŒä¾§æŒ‰é’®",
 					R.drawable.head_camera_normal, leftButtonClickListener);
-			mHeaderLayout.setTitleAndRightImageButton("Ë«²à°´Å¥",
+			mHeaderLayout.setTitleAndRightImageButton("åŒä¾§æŒ‰é’®",
 					R.drawable.head_locate_normal, rightButtonClickListener);
 			break;
 
@@ -84,7 +84,7 @@ public class HeaderLayoutActivity extends BaseActivity implements OnClickListene
 
 		public void onClick() {
 			// TODO Auto-generated method stub
-			// Toast.makeText(getApplicationContext(), "Äúµã»÷ÁË×ó²à°´Å¥£¡",
+			// Toast.makeText(getApplicationContext(), "æ‚¨ç‚¹å‡»äº†å·¦ä¾§æŒ‰é’®ï¼",
 			// Toast.LENGTH_SHORT).show();
 			if (side_drawer.isMenuShowing()) {
 				side_drawer.showContent();
@@ -97,7 +97,7 @@ public class HeaderLayoutActivity extends BaseActivity implements OnClickListene
 
 		public void onClick() {
 			// TODO Auto-generated method stub
-			// Toast.makeText(getApplicationContext(), "Äúµã»÷ÁËÓÒ²à°´Å¥£¡",
+			// Toast.makeText(getApplicationContext(), "æ‚¨ç‚¹å‡»äº†å³ä¾§æŒ‰é’®ï¼",
 			// Toast.LENGTH_SHORT).show();
 			if (side_drawer.isSecondaryMenuShowing()) {
 				side_drawer.showContent();

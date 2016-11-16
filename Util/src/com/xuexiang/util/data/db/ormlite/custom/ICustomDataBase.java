@@ -4,12 +4,12 @@ import com.j256.ormlite.support.ConnectionSource;
 import com.xuexiang.util.data.db.ormlite.default_.IDataBase;
 
 /**
- * ×Ô¶¨ÒåÊı¾İ¿â²Ù×÷½Ó¿Ú
+ * è‡ªå®šä¹‰æ•°æ®åº“æ“ä½œæ¥å£
  * @author xx
  */
 public interface ICustomDataBase extends IDataBase {
 	/**
-	 * ´´½¨»òÕß´ò¿ªÊı¾İ¿â
+	 * åˆ›å»ºæˆ–è€…æ‰“å¼€æ•°æ®åº“
 	 * @param connectionSource
 	 */
 	public void createOrOpenDB(ConnectionSource connectionSource);

@@ -22,10 +22,10 @@ import com.example.testutil.data.entity.User;
 import com.xuexiang.util.data.db.ahibernate.DatabaseService;
 
 /**  
- * ´´½¨Ê±¼ä£º2016-2-5 ÏÂÎç3:55:04  
- * ÏîÄ¿Ãû³Æ£ºOrmDemo  
+ * åˆ›å»ºæ—¶é—´ï¼š2016-2-5 ä¸‹åˆ3:55:04  
+ * é¡¹ç›®åç§°ï¼šOrmDemo  
  * @author xuexiang
- * ÎÄ¼şÃû³Æ£ºUserActivity.java  
+ * æ–‡ä»¶åç§°ï¼šUserActivity.java  
  **/
 public class UserActivity extends Activity implements OnClickListener {
 	private EditText loginname,password;
@@ -88,11 +88,11 @@ public class UserActivity extends Activity implements OnClickListener {
 
 	public void addUser() {
 		if(TextUtils.isEmpty(loginname.getText().toString())){
-			Toast("ÓÃ»§Ãû²»ÄÜÎª¿Õ£¡");
+			Toast("ç”¨æˆ·åä¸èƒ½ä¸ºç©ºï¼");
 			return;
 		}
         if(TextUtils.isEmpty(password.getText().toString())){
-        	Toast("ÃÜÂë²»ÄÜÎª¿Õ£¡");
+        	Toast("å¯†ç ä¸èƒ½ä¸ºç©ºï¼");
         	return;
 		}
         User user = new User();
@@ -100,20 +100,20 @@ public class UserActivity extends Activity implements OnClickListener {
         user.setPassword(password.getText().toString());
         int row=mDatabaseService.add(user);
         if(row>0){
-       	 Toast("²åÈë³É¹¦");
+       	 Toast("æ’å…¥æˆåŠŸ");
        }else{
-    	 Toast("²åÈëÊ§°Ü");    
+    	 Toast("æ’å…¥å¤±è´¥");    
        }
 		
 	}
 	
 	public void update(){
 		if(TextUtils.isEmpty(loginname.getText().toString())){
-			Toast("ÓÃ»§Ãû²»ÄÜÎª¿Õ£¡");
+			Toast("ç”¨æˆ·åä¸èƒ½ä¸ºç©ºï¼");
 			return;
 		}
         if(TextUtils.isEmpty(password.getText().toString())){
-        	Toast("ÃÜÂë²»ÄÜÎª¿Õ£¡");
+        	Toast("å¯†ç ä¸èƒ½ä¸ºç©ºï¼");
         	return;
 		}
         

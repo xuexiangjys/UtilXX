@@ -6,7 +6,7 @@ import android.media.MediaPlayer;
 import android.media.SoundPool;
 
 /**
- * @Description:ÉùÒô²¥·ÅµÄ¹¤¾ßÀà£¬¿ÉÒÔÊ¹ÓÃmeidaplayer£¬Ò²¿ÉÒÔÊ¹ÓÃSoundPool²¥·Å³ØÀ´²¥·Å¸üÓĞĞ§ÂÊ
+ * @Description:å£°éŸ³æ’­æ”¾çš„å·¥å…·ç±»ï¼Œå¯ä»¥ä½¿ç”¨meidaplayerï¼Œä¹Ÿå¯ä»¥ä½¿ç”¨SoundPoolæ’­æ”¾æ± æ¥æ’­æ”¾æ›´æœ‰æ•ˆç‡
  */ 
 public class PlaySoundUtil {
 	private MediaPlayer mMediaPlayer;
@@ -47,13 +47,13 @@ public class PlaySoundUtil {
 		}
 
 		mMediaPlayer = MediaPlayer.create(mContext, sid);
-		/* ×¼±¸²¥·Å */
+		/* å‡†å¤‡æ’­æ”¾ */
 		 try {
 			mMediaPlayer.prepare();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		/* ¿ªÊ¼²¥·Å */
+		/* å¼€å§‹æ’­æ”¾ */
 		mMediaPlayer.start();
 	}
 }

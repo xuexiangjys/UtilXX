@@ -5,12 +5,12 @@ import android.graphics.drawable.Drawable;
 
 /**
  * @author yangyu
- *	¹¦ÄÜÃèÊö£ºµ¯´°ÄÚ²¿×ÓÀàÏî£¨»æÖÆ±êÌâºÍÍ¼±ê£©
+ *	åŠŸèƒ½æè¿°ï¼šå¼¹çª—å†…éƒ¨å­ç±»é¡¹ï¼ˆç»˜åˆ¶æ ‡é¢˜å’Œå›¾æ ‡ï¼‰
  */
 public class ActionItem {
-	//¶¨ÒåÍ¼Æ¬¶ÔÏó
+	//å®šä¹‰å›¾ç‰‡å¯¹è±¡
 	public Drawable mDrawable;
-	//¶¨ÒåÎÄ±¾¶ÔÏó
+	//å®šä¹‰æ–‡æœ¬å¯¹è±¡
 	public CharSequence mTitle;
 	
 	public ActionItem(Drawable drawable, CharSequence title){

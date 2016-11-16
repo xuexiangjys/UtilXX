@@ -83,7 +83,7 @@ public class MultiAdapterActivity extends Activity
 			}
 		};
 //		mAdapter.showIndeterminateProgress(true);
-		// ÉèÖÃÊÊÅäÆ÷
+		// è®¾ç½®é€‚é…å™¨
 		mListView.setAdapter(mAdapter);
 
 	}

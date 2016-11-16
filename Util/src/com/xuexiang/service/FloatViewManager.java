@@ -18,7 +18,7 @@ import com.xuexiang.util.common.ToastUtil;
 import com.xuexiang.util.resource.RUtils;
 
 /**
- * Ğü¸¡¿ò¹ÜÀíÀà
+ * æ‚¬æµ®æ¡†ç®¡ç†ç±»
  * @author xx
  *
  */
@@ -26,10 +26,10 @@ public class FloatViewManager {
 	private Context mContext;
 	private ToastUtil mToastUtil;
 	private static FloatViewManager instance;     
-	//¶¨Òå¸¡¶¯´°¿Ú²¼¾Ö
+	//å®šä¹‰æµ®åŠ¨çª—å£å¸ƒå±€
     private LinearLayout mFloatLayout;
     private WindowManager.LayoutParams wmParams;
-    //´´½¨¸¡¶¯´°¿ÚÉèÖÃ²¼¾Ö²ÎÊıµÄ¶ÔÏó
+    //åˆ›å»ºæµ®åŠ¨çª—å£è®¾ç½®å¸ƒå±€å‚æ•°çš„å¯¹è±¡
     private WindowManager mWindowManager;
 	
     private Button mFloatView;
@@ -47,50 +47,50 @@ public class FloatViewManager {
     }
     
     /**
-   	 * ³õÊ¼»¯´òÓ¡Ğü¸¡¿ò
+   	 * åˆå§‹åŒ–æ‰“å°æ‚¬æµ®æ¡†
    	 */
    	public void initFloatView() {
 		wmParams = new WindowManager.LayoutParams();
-		//»ñÈ¡WindowManagerImpl.CompatModeWrapper
+		//è·å–WindowManagerImpl.CompatModeWrapper
 		mWindowManager = (WindowManager)mContext.getSystemService(Context.WINDOW_SERVICE);
-		//ÉèÖÃwindow type
+		//è®¾ç½®window type
 		wmParams.type = LayoutParams.TYPE_PHONE; 
-		//ÉèÖÃÍ¼Æ¬¸ñÊ½£¬Ğ§¹ûÎª±³¾°Í¸Ã÷
+		//è®¾ç½®å›¾ç‰‡æ ¼å¼ï¼Œæ•ˆæœä¸ºèƒŒæ™¯é€æ˜
         wmParams.format = PixelFormat.RGBA_8888; 
-        //ÉèÖÃ¸¡¶¯´°¿Ú²»¿É¾Û½¹£¨ÊµÏÖ²Ù×÷³ı¸¡¶¯´°¿ÚÍâµÄÆäËû¿É¼û´°¿ÚµÄ²Ù×÷£©
+        //è®¾ç½®æµ®åŠ¨çª—å£ä¸å¯èšç„¦ï¼ˆå®ç°æ“ä½œé™¤æµ®åŠ¨çª—å£å¤–çš„å…¶ä»–å¯è§çª—å£çš„æ“ä½œï¼‰
         wmParams.flags = 
 //          LayoutParams.FLAG_NOT_TOUCH_MODAL |
           LayoutParams.FLAG_NOT_FOCUSABLE
 //          LayoutParams.FLAG_NOT_TOUCHABLE
           ;
         
-        //µ÷ÕûĞü¸¡´°ÏÔÊ¾µÄÍ£¿¿Î»ÖÃÎª×ó²àÖÃ¶¥
+        //è°ƒæ•´æ‚¬æµ®çª—æ˜¾ç¤ºçš„åœé ä½ç½®ä¸ºå·¦ä¾§ç½®é¡¶
         wmParams.gravity = Gravity.LEFT | Gravity.TOP;       
-        // ÒÔÆÁÄ»×óÉÏ½ÇÎªÔ­µã£¬ÉèÖÃx¡¢y³õÊ¼Öµ
+        // ä»¥å±å¹•å·¦ä¸Šè§’ä¸ºåŸç‚¹ï¼Œè®¾ç½®xã€yåˆå§‹å€¼
         wmParams.x = 0;
         wmParams.y = 0;
         
-        //ÉèÖÃĞü¸¡´°¿Ú³¤¿íÊı¾İ  
+        //è®¾ç½®æ‚¬æµ®çª—å£é•¿å®½æ•°æ®  
         wmParams.width = WindowManager.LayoutParams.WRAP_CONTENT;
         wmParams.height = WindowManager.LayoutParams.WRAP_CONTENT;
         
         LayoutInflater inflater = LayoutInflater.from(mContext);
-        //»ñÈ¡¸¡¶¯´°¿ÚÊÓÍ¼ËùÔÚ²¼¾Ö
+        //è·å–æµ®åŠ¨çª—å£è§†å›¾æ‰€åœ¨å¸ƒå±€
         mFloatLayout = (LinearLayout) inflater.inflate(RUtils.getLayout(mContext, "service_floatview_layout"), null);       
-        //¸¡¶¯´°¿Ú°´Å¥
+        //æµ®åŠ¨çª—å£æŒ‰é’®
         mFloatView = (Button)mFloatLayout.findViewById(RUtils.getId(mContext, "float_id"));
         
         mFloatLayout.measure(View.MeasureSpec.makeMeasureSpec(0,View.MeasureSpec.UNSPECIFIED), View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED));
-        //ÉèÖÃ¼àÌı¸¡¶¯´°¿ÚµÄ´¥ÃşÒÆ¶¯
+        //è®¾ç½®ç›‘å¬æµ®åŠ¨çª—å£çš„è§¦æ‘¸ç§»åŠ¨
         mFloatView.setOnTouchListener(new OnTouchListener() {
 			
 			@Override
 			public boolean onTouch(View v, MotionEvent event) {
-				//getRawXÊÇ´¥ÃşÎ»ÖÃÏà¶ÔÓÚÆÁÄ»µÄ×ø±ê£¬getXÊÇÏà¶ÔÓÚ°´Å¥µÄ×ø±ê
+				//getRawXæ˜¯è§¦æ‘¸ä½ç½®ç›¸å¯¹äºå±å¹•çš„åæ ‡ï¼ŒgetXæ˜¯ç›¸å¯¹äºæŒ‰é’®çš„åæ ‡
 				wmParams.x = (int) event.getRawX() - mFloatView.getMeasuredWidth()/2;
-				//25Îª×´Ì¬À¸µÄ¸ß¶È
+				//25ä¸ºçŠ¶æ€æ çš„é«˜åº¦
 	            wmParams.y = (int) event.getRawY() - mFloatView.getMeasuredHeight()/2 - 25;
-	             //Ë¢ĞÂ
+	             //åˆ·æ–°
 	            mWindowManager.updateViewLayout(mFloatLayout, wmParams);
 				return false;
 			}
@@ -99,14 +99,14 @@ public class FloatViewManager {
         mFloatView.setOnClickListener(new OnClickListener() {			
 			@Override
 			public void onClick(View v) {
-				mToastUtil.showToast("ÖØÆô³ÌĞò");
+				mToastUtil.showToast("é‡å¯ç¨‹åº");
 				BroadcastHelper.sendStartAppBroadCast(mContext);
 			}
 		});
    	}
    	
    	/**
-   	 * Òş²ØĞü¸¡¿ò
+   	 * éšè—æ‚¬æµ®æ¡†
    	 */
    	public void dismissFloatView() {
    		if(mFloatLayout != null) {
@@ -115,10 +115,10 @@ public class FloatViewManager {
    	}
    	
    	/**
-   	 * ÏÔÊ¾Ğü¸¡¿ò
+   	 * æ˜¾ç¤ºæ‚¬æµ®æ¡†
    	 */
    	public void showFloatView() {
-   	    //Ìí¼ÓmFloatLayout
+   	    //æ·»åŠ mFloatLayout
 		if(mFloatLayout != null && wmParams != null) {
 			 mWindowManager.addView(mFloatLayout, wmParams); 
 		}

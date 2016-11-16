@@ -3,12 +3,12 @@ package com.xuexiang.util.resource;
 import android.content.Context;
 
 /** 
- * ¸ù¾İ×ÊÔ´µÄÃû×Ö»ñÈ¡ÆäIDÖµ 
+ * æ ¹æ®èµ„æºçš„åå­—è·å–å…¶IDå€¼ 
  * @author howlaa
  */ 
 public class MResource {
 	
-	//¸ù¾İÃû³Æ»ñÈ¡ID
+	//æ ¹æ®åç§°è·å–ID
     public static int getIdByName(Context context, String className, String name) {  
         String packageName = context.getPackageName();  
         Class r = null;  
@@ -39,7 +39,7 @@ public class MResource {
         return id;  
     }
     
-    //»ñÈ¡IDÊı×é
+    //è·å–IDæ•°ç»„
     public static int[] getIdsByName(Context context, String className, String name) {  
         String packageName = context.getPackageName();  
         Class r = null;  

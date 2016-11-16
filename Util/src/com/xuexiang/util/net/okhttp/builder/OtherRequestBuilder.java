@@ -6,7 +6,7 @@ import com.xuexiang.util.net.okhttp.request.OtherRequest;
 import com.xuexiang.util.net.okhttp.request.RequestCall;
 
 /**
- * DELETE¡¢PUT¡¢PATCHµÈÆäËû·½·¨
+ * DELETEã€PUTã€PATCHç­‰å…¶ä»–æ–¹æ³•
  */
 public class OtherRequestBuilder extends OkHttpRequestBuilder<OtherRequestBuilder>
 {

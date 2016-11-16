@@ -6,11 +6,11 @@ package com.xuexiang.view.timeline;
  */
 public class TimeItem {
 	/**
-	 * Ê±¼ä
+	 * æ—¶é—´
 	 */
 	public String mTime;
 	/**
-	 * ÄÚÈÝ
+	 * å†…å®¹
 	 */
 	public String mContent;
 

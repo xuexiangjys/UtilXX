@@ -14,10 +14,10 @@ import com.xuexiang.view.swipelistview.SwipeDismissListView;
 import com.xuexiang.view.swipelistview.SwipeDismissListView.OnDismissCallback;
 
 /**  
- * ´´½¨Ê±¼ä£º2016-7-31 ÏÂÎç9:03:04  
- * ÏîÄ¿Ãû³Æ£ºUtilTest  
+ * åˆ›å»ºæ—¶é—´ï¼š2016-7-31 ä¸‹åˆ9:03:04  
+ * é¡¹ç›®åç§°ï¼šUtilTest  
  * @author xuexiang
- * ÎÄ¼şÃû³Æ£ºSwipeListViewActivity.java  
+ * æ–‡ä»¶åç§°ï¼šSwipeListViewActivity.java  
  **/
 public class SwipeDismissListViewActivity extends BaseActivity {
 	private SwipeDismissListView swipeDismissListView;
@@ -32,7 +32,7 @@ public class SwipeDismissListViewActivity extends BaseActivity {
 	private void init() {
 		swipeDismissListView = (SwipeDismissListView) findViewById(R.id.swipeDismissListView);
 		for (int i = 0; i < 20; i++) {
-			dataSourceList.add("»¬¶¯É¾³ı" + i);
+			dataSourceList.add("æ»‘åŠ¨åˆ é™¤" + i);
 		}
 
 		adapter = new ArrayAdapter<String>(this,

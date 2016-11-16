@@ -28,7 +28,7 @@ import android.view.Window;
 import android.view.WindowManager;
 
 /**
- * ÊÖ»ú×´Ì¬¹¤¾ßÀà Ö÷Òª°üÀ¨ÍøÂç¡¢À¶ÑÀ¡¢ÆÁÄ»ÁÁ¶È¡¢·ÉĞĞÄ£Ê½¡¢ÒôÁ¿µÈ
+ * æ‰‹æœºçŠ¶æ€å·¥å…·ç±» ä¸»è¦åŒ…æ‹¬ç½‘ç»œã€è“ç‰™ã€å±å¹•äº®åº¦ã€é£è¡Œæ¨¡å¼ã€éŸ³é‡ç­‰
  * 
  * @author zhenguo
  */
@@ -43,13 +43,13 @@ public class DeviceStatusUtils {
 	}
 
 	/**
-	 * »ñÈ¡ÏµÍ³ÆÁÄ»ÁÁ¶ÈÄ£Ê½µÄ×´Ì¬£¬ĞèÒªWRITE_SETTINGSÈ¨ÏŞ
+	 * è·å–ç³»ç»Ÿå±å¹•äº®åº¦æ¨¡å¼çš„çŠ¶æ€ï¼Œéœ€è¦WRITE_SETTINGSæƒé™
 	 * 
 	 * @param context
-	 *            ÉÏÏÂÎÄ
-	 * @return System.SCREEN_BRIGHTNESS_MODE_AUTOMATIC£º×Ô¶¯£»System.
+	 *            ä¸Šä¸‹æ–‡
+	 * @return System.SCREEN_BRIGHTNESS_MODE_AUTOMATICï¼šè‡ªåŠ¨ï¼›System.
 	 *         SCREEN_BRIGHTNESS_MODE_AUTOMATIC
-	 *         £ºÊÖ¶¯£»Ä¬ÈÏ£ºSystem.SCREEN_BRIGHTNESS_MODE_AUTOMATIC
+	 *         ï¼šæ‰‹åŠ¨ï¼›é»˜è®¤ï¼šSystem.SCREEN_BRIGHTNESS_MODE_AUTOMATIC
 	 */
 	public static int getScreenBrightnessModeState(Context context) {
 		return Settings.System.getInt(context.getContentResolver(),
@@ -58,11 +58,11 @@ public class DeviceStatusUtils {
 	}
 
 	/**
-	 * ÅĞ¶ÏÏµÍ³ÆÁÄ»ÁÁ¶ÈÄ£Ê½ÊÇ·ñÊÇ×Ô¶¯£¬ĞèÒªWRITE_SETTINGSÈ¨ÏŞ
+	 * åˆ¤æ–­ç³»ç»Ÿå±å¹•äº®åº¦æ¨¡å¼æ˜¯å¦æ˜¯è‡ªåŠ¨ï¼Œéœ€è¦WRITE_SETTINGSæƒé™
 	 * 
 	 * @param context
-	 *            ÉÏÏÂÎÄ
-	 * @return true£º×Ô¶¯£»false£ºÊÖ¶¯£»Ä¬ÈÏ£ºtrue
+	 *            ä¸Šä¸‹æ–‡
+	 * @return trueï¼šè‡ªåŠ¨ï¼›falseï¼šæ‰‹åŠ¨ï¼›é»˜è®¤ï¼štrue
 	 */
 	public static boolean isScreenBrightnessModeAuto(Context context) {
 		return getScreenBrightnessModeState(context) == Settings.System.SCREEN_BRIGHTNESS_MODE_AUTOMATIC ? true
@@ -70,13 +70,13 @@ public class DeviceStatusUtils {
 	}
 
 	/**
-	 * ÉèÖÃÏµÍ³ÆÁÄ»ÁÁ¶ÈÄ£Ê½£¬ĞèÒªWRITE_SETTINGSÈ¨ÏŞ
+	 * è®¾ç½®ç³»ç»Ÿå±å¹•äº®åº¦æ¨¡å¼ï¼Œéœ€è¦WRITE_SETTINGSæƒé™
 	 * 
 	 * @param context
-	 *            ÉÏÏÂÎÄ
+	 *            ä¸Šä¸‹æ–‡
 	 * @param auto
-	 *            ×Ô¶¯
-	 * @return ÊÇ·ñÉèÖÃ³É¹¦
+	 *            è‡ªåŠ¨
+	 * @return æ˜¯å¦è®¾ç½®æˆåŠŸ
 	 */
 	public static boolean setScreenBrightnessMode(Context context, boolean auto) {
 		boolean result = true;
@@ -90,11 +90,11 @@ public class DeviceStatusUtils {
 	}
 
 	/**
-	 * »ñÈ¡ÏµÍ³ÁÁ¶È£¬ĞèÒªWRITE_SETTINGSÈ¨ÏŞ
+	 * è·å–ç³»ç»Ÿäº®åº¦ï¼Œéœ€è¦WRITE_SETTINGSæƒé™
 	 * 
 	 * @param context
-	 *            ÉÏÏÂÎÄ
-	 * @return ÁÁ¶È£¬·¶Î§ÊÇ0-255£»Ä¬ÈÏ255
+	 *            ä¸Šä¸‹æ–‡
+	 * @return äº®åº¦ï¼ŒèŒƒå›´æ˜¯0-255ï¼›é»˜è®¤255
 	 */
 	public static int getScreenBrightness(Context context) {
 		return Settings.System.getInt(context.getContentResolver(),
@@ -102,14 +102,14 @@ public class DeviceStatusUtils {
 	}
 
 	/**
-	 * ÉèÖÃÏµÍ³ÁÁ¶È£¨´Ë·½·¨Ö»ÊÇ¸ü¸ÄÁËÏµÍ³µÄÁÁ¶ÈÊôĞÔ£¬²¢²»ÄÜ¿´µ½Ğ§¹û¡£ÒªÏë¿´µ½Ğ§¹û¿ÉÒÔÊ¹ÓÃsetWindowBrightness()·½·¨ÉèÖÃ´°¿ÚµÄÁÁ¶È£©£¬
-	 * ĞèÒªWRITE_SETTINGSÈ¨ÏŞ
+	 * è®¾ç½®ç³»ç»Ÿäº®åº¦ï¼ˆæ­¤æ–¹æ³•åªæ˜¯æ›´æ”¹äº†ç³»ç»Ÿçš„äº®åº¦å±æ€§ï¼Œå¹¶ä¸èƒ½çœ‹åˆ°æ•ˆæœã€‚è¦æƒ³çœ‹åˆ°æ•ˆæœå¯ä»¥ä½¿ç”¨setWindowBrightness()æ–¹æ³•è®¾ç½®çª—å£çš„äº®åº¦ï¼‰ï¼Œ
+	 * éœ€è¦WRITE_SETTINGSæƒé™
 	 * 
 	 * @param context
-	 *            ÉÏÏÂÎÄ
+	 *            ä¸Šä¸‹æ–‡
 	 * @param screenBrightness
-	 *            ÁÁ¶È£¬·¶Î§ÊÇ0-255
-	 * @return ÉèÖÃÊÇ·ñ³É¹¦
+	 *            äº®åº¦ï¼ŒèŒƒå›´æ˜¯0-255
+	 * @return è®¾ç½®æ˜¯å¦æˆåŠŸ
 	 */
 	public static boolean setScreenBrightness(Context context,
 			int screenBrightness) {
@@ -128,12 +128,12 @@ public class DeviceStatusUtils {
 	}
 
 	/**
-	 * ÉèÖÃ¸ø¶¨ActivityµÄ´°¿ÚµÄÁÁ¶È£¨¿ÉÒÔ¿´µ½Ğ§¹û£¬µ«ÏµÍ³µÄÁÁ¶ÈÊôĞÔ²»»á¸Ä±ä£©
+	 * è®¾ç½®ç»™å®šActivityçš„çª—å£çš„äº®åº¦ï¼ˆå¯ä»¥çœ‹åˆ°æ•ˆæœï¼Œä½†ç³»ç»Ÿçš„äº®åº¦å±æ€§ä¸ä¼šæ”¹å˜ï¼‰
 	 * 
 	 * @param activity
-	 *            ÒªÍ¨¹ı´ËActivityÀ´ÉèÖÃ´°¿ÚµÄÁÁ¶È
+	 *            è¦é€šè¿‡æ­¤Activityæ¥è®¾ç½®çª—å£çš„äº®åº¦
 	 * @param screenBrightness
-	 *            ÁÁ¶È£¬·¶Î§ÊÇ0-255
+	 *            äº®åº¦ï¼ŒèŒƒå›´æ˜¯0-255
 	 */
 	public static void setWindowBrightness(Activity activity,
 			float screenBrightness) {
@@ -153,13 +153,13 @@ public class DeviceStatusUtils {
 	}
 
 	/**
-	 * ÉèÖÃÏµÍ³ÁÁ¶È²¢ÊµÊ±¿ÉÒÔ¿´µ½Ğ§¹û£¬ĞèÒªWRITE_SETTINGSÈ¨ÏŞ
+	 * è®¾ç½®ç³»ç»Ÿäº®åº¦å¹¶å®æ—¶å¯ä»¥çœ‹åˆ°æ•ˆæœï¼Œéœ€è¦WRITE_SETTINGSæƒé™
 	 * 
 	 * @param activity
-	 *            ÒªÍ¨¹ı´ËActivityÀ´ÉèÖÃ´°¿ÚµÄÁÁ¶È
+	 *            è¦é€šè¿‡æ­¤Activityæ¥è®¾ç½®çª—å£çš„äº®åº¦
 	 * @param screenBrightness
-	 *            ÁÁ¶È£¬·¶Î§ÊÇ0-255
-	 * @return ÉèÖÃÊÇ·ñ³É¹¦
+	 *            äº®åº¦ï¼ŒèŒƒå›´æ˜¯0-255
+	 * @return è®¾ç½®æ˜¯å¦æˆåŠŸ
 	 */
 	public static boolean setScreenBrightnessAndApply(Activity activity,
 			int screenBrightness) {
@@ -172,11 +172,11 @@ public class DeviceStatusUtils {
 	}
 
 	/**
-	 * »ñÈ¡ÆÁÄ»ĞİÃßÊ±¼ä£¬ĞèÒªWRITE_SETTINGSÈ¨ÏŞ
+	 * è·å–å±å¹•ä¼‘çœ æ—¶é—´ï¼Œéœ€è¦WRITE_SETTINGSæƒé™
 	 * 
 	 * @param context
-	 *            ÉÏÏÂÎÄ
-	 * @return ÆÁÄ»ĞİÃßÊ±¼ä£¬µ¥Î»ºÁÃë£¬Ä¬ÈÏ30000
+	 *            ä¸Šä¸‹æ–‡
+	 * @return å±å¹•ä¼‘çœ æ—¶é—´ï¼Œå•ä½æ¯«ç§’ï¼Œé»˜è®¤30000
 	 */
 	public static int getScreenDormantTime(Context context) {
 		return Settings.System.getInt(context.getContentResolver(),
@@ -184,11 +184,11 @@ public class DeviceStatusUtils {
 	}
 
 	/**
-	 * ÉèÖÃÆÁÄ»ĞİÃßÊ±¼ä£¬ĞèÒªWRITE_SETTINGSÈ¨ÏŞ
+	 * è®¾ç½®å±å¹•ä¼‘çœ æ—¶é—´ï¼Œéœ€è¦WRITE_SETTINGSæƒé™
 	 * 
 	 * @param context
-	 *            ÉÏÏÂÎÄ
-	 * @return ÉèÖÃÊÇ·ñ³É¹¦
+	 *            ä¸Šä¸‹æ–‡
+	 * @return è®¾ç½®æ˜¯å¦æˆåŠŸ
 	 */
 	public static boolean setScreenDormantTime(Context context, int millis) {
 		return Settings.System.putInt(context.getContentResolver(),
@@ -196,11 +196,11 @@ public class DeviceStatusUtils {
 	}
 
 	/**
-	 * »ñÈ¡·ÉĞĞÄ£Ê½µÄ×´Ì¬£¬ĞèÒªWRITE_APN_SETTINGSÈ¨ÏŞ
+	 * è·å–é£è¡Œæ¨¡å¼çš„çŠ¶æ€ï¼Œéœ€è¦WRITE_APN_SETTINGSæƒé™
 	 * 
 	 * @param context
-	 *            ÉÏÏÂÎÄ
-	 * @return 1£º´ò¿ª£»0£º¹Ø±Õ£»Ä¬ÈÏ£º¹Ø±Õ
+	 *            ä¸Šä¸‹æ–‡
+	 * @return 1ï¼šæ‰“å¼€ï¼›0ï¼šå…³é—­ï¼›é»˜è®¤ï¼šå…³é—­
 	 */
 	@SuppressWarnings("deprecation")
 	public static int getAirplaneModeState(Context context) {
@@ -214,29 +214,29 @@ public class DeviceStatusUtils {
 	}
 
 	/**
-	 * ÅĞ¶Ï·ÉĞĞÄ£Ê½ÊÇ·ñ´ò¿ª£¬ĞèÒªWRITE_APN_SETTINGSÈ¨ÏŞ
+	 * åˆ¤æ–­é£è¡Œæ¨¡å¼æ˜¯å¦æ‰“å¼€ï¼Œéœ€è¦WRITE_APN_SETTINGSæƒé™
 	 * 
 	 * @param context
-	 *            ÉÏÏÂÎÄ
-	 * @return true£º´ò¿ª£»false£º¹Ø±Õ£»Ä¬ÈÏ¹Ø±Õ
+	 *            ä¸Šä¸‹æ–‡
+	 * @return trueï¼šæ‰“å¼€ï¼›falseï¼šå…³é—­ï¼›é»˜è®¤å…³é—­
 	 */
 	public static boolean isAirplaneModeOpen(Context context) {
 		return getAirplaneModeState(context) == 1 ? true : false;
 	}
 
 	/**
-	 * ÉèÖÃ·ÉĞĞÄ£Ê½µÄ×´Ì¬£¬ĞèÒªWRITE_APN_SETTINGSÈ¨ÏŞ
+	 * è®¾ç½®é£è¡Œæ¨¡å¼çš„çŠ¶æ€ï¼Œéœ€è¦WRITE_APN_SETTINGSæƒé™
 	 * 
 	 * @param context
-	 *            ÉÏÏÂÎÄ
+	 *            ä¸Šä¸‹æ–‡
 	 * @param enable
-	 *            ·ÉĞĞÄ£Ê½µÄ×´Ì¬
-	 * @return ÉèÖÃÊÇ·ñ³É¹¦
+	 *            é£è¡Œæ¨¡å¼çš„çŠ¶æ€
+	 * @return è®¾ç½®æ˜¯å¦æˆåŠŸ
 	 */
 	@TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR1) @SuppressWarnings("deprecation")
 	public static boolean setAirplaneMode(Context context, boolean enable) {
 		boolean result = true;
-		// Èç¹û·ÉĞĞÄ£Ê½µ±Ç°µÄ×´Ì¬ÓëÒªÉèÖÃµÄ×´Ì¬²»Ò»Ñù
+		// å¦‚æœé£è¡Œæ¨¡å¼å½“å‰çš„çŠ¶æ€ä¸è¦è®¾ç½®çš„çŠ¶æ€ä¸ä¸€æ ·
 		if (isAirplaneModeOpen(context) != enable) {
 			if (Build.VERSION.SDK_INT < Build.VERSION_CODES.JELLY_BEAN_MR1) {
 				result = Settings.System.putInt(context.getContentResolver(),
@@ -245,7 +245,7 @@ public class DeviceStatusUtils {
 				result = Settings.Global.putInt(context.getContentResolver(),
 						Settings.Global.AIRPLANE_MODE_ON, enable ? 1 : 0);
 			}
-			// ·¢ËÍ·ÉĞĞÄ£Ê½ÒÑ¾­¸Ä±ä¹ã²¥
+			// å‘é€é£è¡Œæ¨¡å¼å·²ç»æ”¹å˜å¹¿æ’­
 			context.sendBroadcast(new Intent(
 					Intent.ACTION_AIRPLANE_MODE_CHANGED));
 		}
@@ -253,12 +253,12 @@ public class DeviceStatusUtils {
 	}
 
 	/**
-	 * »ñÈ¡À¶ÑÀµÄ×´Ì¬
+	 * è·å–è“ç‰™çš„çŠ¶æ€
 	 * 
-	 * @return È¡ÖµÎªBluetoothAdapterµÄËÄ¸ö¾²Ì¬×Ö¶Î£ºSTATE_OFF, STATE_TURNING_OFF,
+	 * @return å–å€¼ä¸ºBluetoothAdapterçš„å››ä¸ªé™æ€å­—æ®µï¼šSTATE_OFF, STATE_TURNING_OFF,
 	 *         STATE_ON, STATE_TURNING_ON
 	 * @throws Exception
-	 *             Ã»ÓĞÕÒµ½À¶ÑÀÉè±¸
+	 *             æ²¡æœ‰æ‰¾åˆ°è“ç‰™è®¾å¤‡
 	 */
 	public static int getBluetoothState() throws Exception {
 		BluetoothAdapter bluetoothAdapter = BluetoothAdapter
@@ -271,10 +271,10 @@ public class DeviceStatusUtils {
 	}
 
 	/**
-	 * ÅĞ¶ÏÀ¶ÑÀÊÇ·ñ´ò¿ª
+	 * åˆ¤æ–­è“ç‰™æ˜¯å¦æ‰“å¼€
 	 * 
-	 * @return true£ºÒÑ¾­´ò¿ª»òÕßÕıÔÚ´ò¿ª£»false£ºÒÑ¾­¹Ø±Õ»òÕßÕıÔÚ¹Ø±Õ
-	 *             Ã»ÓĞÕÒµ½À¶ÑÀÉè±¸
+	 * @return trueï¼šå·²ç»æ‰“å¼€æˆ–è€…æ­£åœ¨æ‰“å¼€ï¼›falseï¼šå·²ç»å…³é—­æˆ–è€…æ­£åœ¨å…³é—­
+	 *             æ²¡æœ‰æ‰¾åˆ°è“ç‰™è®¾å¤‡
 	 */
 	public static boolean isBluetoothOpen() throws Exception {
 		int bluetoothStateCode = getBluetoothState();
@@ -284,16 +284,16 @@ public class DeviceStatusUtils {
 	}
 
 	/**
-	 * ÉèÖÃÀ¶ÑÀ×´Ì¬
+	 * è®¾ç½®è“ç‰™çŠ¶æ€
 	 * 
 	 * @param enable
-	 *            ´ò¿ª
-	 *             Ã»ÓĞÕÒµ½À¶ÑÀÉè±¸
+	 *            æ‰“å¼€
+	 *             æ²¡æœ‰æ‰¾åˆ°è“ç‰™è®¾å¤‡
 	 */
 	public static void setBluetooth(boolean enable) throws Exception {
-		// Èç¹ûµ±Ç°À¶ÑÀµÄ×´Ì¬ÓëÒªÉèÖÃµÄ×´Ì¬²»Ò»Ñù
+		// å¦‚æœå½“å‰è“ç‰™çš„çŠ¶æ€ä¸è¦è®¾ç½®çš„çŠ¶æ€ä¸ä¸€æ ·
 		if (isBluetoothOpen() != enable) {
-			// Èç¹ûÊÇÒª´ò¿ª¾Í´ò¿ª£¬·ñÔò¹Ø±Õ
+			// å¦‚æœæ˜¯è¦æ‰“å¼€å°±æ‰“å¼€ï¼Œå¦åˆ™å…³é—­
 			if (enable) {
 				BluetoothAdapter.getDefaultAdapter().enable();
 			} else {
@@ -303,11 +303,11 @@ public class DeviceStatusUtils {
 	}
 
 	/**
-	 * »ñÈ¡Ã½ÌåÒôÁ¿£¬ĞèÒªWRITE_APN_SETTINGSÈ¨ÏŞ
+	 * è·å–åª’ä½“éŸ³é‡ï¼Œéœ€è¦WRITE_APN_SETTINGSæƒé™
 	 * 
 	 * @param context
-	 *            ÉÏÏÂÎÄ
-	 * @return Ã½ÌåÒôÁ¿£¬È¡Öµ·¶Î§Îª0-15£»Ä¬ÈÏ0
+	 *            ä¸Šä¸‹æ–‡
+	 * @return åª’ä½“éŸ³é‡ï¼Œå–å€¼èŒƒå›´ä¸º0-15ï¼›é»˜è®¤0
 	 */
 	public static int getMediaVolume(Context context) {
 		return Settings.System.getInt(context.getContentResolver(),
@@ -315,11 +315,11 @@ public class DeviceStatusUtils {
 	}
 
 	/**
-	 * »ñÈ¡Ã½ÌåÒôÁ¿£¬ĞèÒªWRITE_APN_SETTINGSÈ¨ÏŞ
+	 * è·å–åª’ä½“éŸ³é‡ï¼Œéœ€è¦WRITE_APN_SETTINGSæƒé™
 	 * 
 	 * @param context
-	 *            ÉÏÏÂÎÄ
-	 * @return Ã½ÌåÒôÁ¿£¬È¡Öµ·¶Î§Îª0-15
+	 *            ä¸Šä¸‹æ–‡
+	 * @return åª’ä½“éŸ³é‡ï¼Œå–å€¼èŒƒå›´ä¸º0-15
 	 */
 	public static boolean setMediaVolume(Context context, int mediaVloume) {
 		if (mediaVloume < 0) {
@@ -335,22 +335,22 @@ public class DeviceStatusUtils {
 	}
 
 	/**
-	 * »ñÈ¡ÁåÉùÒôÁ¿£¬ĞèÒªWRITE_APN_SETTINGSÈ¨ÏŞ
+	 * è·å–é“ƒå£°éŸ³é‡ï¼Œéœ€è¦WRITE_APN_SETTINGSæƒé™
 	 * 
 	 * @param context
-	 *            ÉÏÏÂÎÄ
-	 * @return ÁåÉùÒôÁ¿£¬È¡Öµ·¶Î§Îª0-7£»Ä¬ÈÏÎª0
+	 *            ä¸Šä¸‹æ–‡
+	 * @return é“ƒå£°éŸ³é‡ï¼Œå–å€¼èŒƒå›´ä¸º0-7ï¼›é»˜è®¤ä¸º0
 	 */
 	public static int getRingVolume(Context context) {
 		return ((AudioManager) context.getSystemService(Context.AUDIO_SERVICE)).getStreamVolume(AudioManager.STREAM_RING);
 	}
 
 	/**
-	 * »ñÈ¡Ã½ÌåÒôÁ¿
+	 * è·å–åª’ä½“éŸ³é‡
 	 * 
 	 * @param context
-	 *            ÉÏÏÂÎÄ
-	 * @return Ã½ÌåÒôÁ¿£¬È¡Öµ·¶Î§Îª0-7
+	 *            ä¸Šä¸‹æ–‡
+	 * @return åª’ä½“éŸ³é‡ï¼Œå–å€¼èŒƒå›´ä¸º0-7
 	 */
 	public static void setRingVolume(Context context, int ringVloume) {
 		if (ringVloume < 0) {
@@ -367,7 +367,7 @@ public class DeviceStatusUtils {
 	}
 
 	// /**
-	// * ÕÒ²»µ½Éè±¸Òì³£
+	// * æ‰¾ä¸åˆ°è®¾å¤‡å¼‚å¸¸
 	// */
 	// public static class DeviceNotFoundException extends Exception{
 	// private static final long serialVersionUID = 1L;
@@ -382,7 +382,7 @@ public class DeviceStatusUtils {
 	private static final String STATUS_BAR_HEIGHT_RES_NAME = "status_bar_height";
 	
 	/**
-     * ¼ÆËã×´Ì¬À¸¸ß¶È¸ß¶È
+     * è®¡ç®—çŠ¶æ€æ é«˜åº¦é«˜åº¦
      * getStatusBarHeight
      * @return
      */

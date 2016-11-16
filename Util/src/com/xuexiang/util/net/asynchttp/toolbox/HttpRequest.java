@@ -1,7 +1,7 @@
 /**
  * @FILE:HuiHenDuoRequest.java
  * @AUTHOR:xq
- * @DATE:2014-7-30 下午3:12:49
+ * @DATE:2014-7-30 涓嬪崍3:12:49
  **/
 package com.xuexiang.util.net.asynchttp.toolbox;
 
@@ -15,7 +15,7 @@ import com.loopj.android.http.RequestParams;
  * @DESCRIPTION:
  * @AUTHOR:hc
  * @VERSION:v1.0
- * @DATE:2014-7-30 下午3:12:49
+ * @DATE:2014-7-30 涓嬪崍3:12:49
  *******************************************/
 public abstract class HttpRequest {
 
@@ -24,7 +24,7 @@ public abstract class HttpRequest {
 	public String mUrlString;
 	
 	/**
-	 * @description: 获取参数
+	 * @description: 鑾峰彇鍙傛暟
 	 * @author:hc
 	 * @return:RequestParams
 	 * @return

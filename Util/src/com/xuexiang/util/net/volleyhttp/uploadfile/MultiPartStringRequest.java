@@ -92,14 +92,14 @@ public class MultiPartStringRequest extends Request<String> implements MultiPart
     }
     
     /**
-     * 要上传的文件
+     * 瑕佷笂浼犵殑鏂囦欢
      */
     public Map<String, File> getFileUploads() {
     	return fileUploads;
     }
     
     /**
-     * 要上传的参数
+     * 瑕佷笂浼犵殑鍙傛暟
      */
     public Map<String, String> getStringUploads() {
     	return stringUploads;
@@ -125,14 +125,14 @@ public class MultiPartStringRequest extends Request<String> implements MultiPart
 	}
 	
 	/**
-	 * 空表示不上传
+	 * 绌鸿〃绀轰笉涓婁紶
 	 */
     public String getBodyContentType() {
         return null;
     }
     
     /**
-     * requestBuilder  使用方法参见httpClientRequest
+     * requestBuilder  浣跨敤鏂规硶鍙傝httpClientRequest
      */
     public static class RequestBuilder {
         private int method = Method.GET;

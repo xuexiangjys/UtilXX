@@ -31,9 +31,9 @@ import com.xuexiang.view.margicbutton.MagicButton;
 import com.xuexiang.view.materialspinner.MaterialSpinner;
 
 /**
- * ´´½¨Ê±¼ä£º2016-5-29 ÏÂÎç6:37:39 ÏîÄ¿Ãû³Æ£ºTestUtil
+ * åˆ›å»ºæ—¶é—´ï¼š2016-5-29 ä¸‹åˆ6:37:39 é¡¹ç›®åç§°ï¼šTestUtil
  * 
- * @author xuexiang ÎÄ¼şÃû³Æ£ºAndroidSegmentedControlViewActivity.java
+ * @author xuexiang æ–‡ä»¶åç§°ï¼šAndroidSegmentedControlViewActivity.java
  **/
 public class CustomViewActivity extends BaseActivity implements OnLikeListener{
 	private Button btnPosition, btnColour, btnAnim1, btnAnim2, btnCustom,
@@ -54,7 +54,7 @@ public class CustomViewActivity extends BaseActivity implements OnLikeListener{
 	public void onCreateActivity() {
 		setContentView(R.layout.activity_customview);
 
-		initActionBar("¿ª¹Ø");
+		initActionBar("å¼€å…³");
 
 		initview();
 	}
@@ -136,14 +136,14 @@ public class CustomViewActivity extends BaseActivity implements OnLikeListener{
 		switch_notification.setSlideListener(new SlideListener() {
 			@Override
 			public void open() {
-				Toast("ÏûÏ¢ÍÆËÍ£º¿ª");
+				Toast("æ¶ˆæ¯æ¨é€ï¼šå¼€");
 
 			}
 
 			@Override
 			public void close() {
 
-				Toast("ÏûÏ¢ÍÆËÍ£º¹Ø");
+				Toast("æ¶ˆæ¯æ¨é€ï¼šå…³");
 			}
 		});
 
@@ -156,9 +156,9 @@ public class CustomViewActivity extends BaseActivity implements OnLikeListener{
 			@Override
 			public void onToggle(boolean isOpen) {
 				if (isOpen) {
-					Toast("ÏûÏ¢ÍÆËÍ£º¿ª");
+					Toast("æ¶ˆæ¯æ¨é€ï¼šå¼€");
 				} else {
-					Toast("ÏûÏ¢ÍÆËÍ£º¹Ø");
+					Toast("æ¶ˆæ¯æ¨é€ï¼šå…³");
 				}
 			}
 		});
@@ -307,15 +307,15 @@ public class CustomViewActivity extends BaseActivity implements OnLikeListener{
 
 			@Override
 			public void onClick(View v) {
-				mToastUtil.showToast("µã»÷ÁËGithub£¡");
+				mToastUtil.showToast("ç‚¹å‡»äº†Githubï¼");
 			}
 		});
 	}
 
 	private void initListEditText() {
 		mListEditText = (ListEditText) findViewById(R.id.listedittext);
-		String[] mValuesHuman = { "1", "2", "3" }; // ÓÃÓÚÏÔÊ¾µÄÖµ
-		String[] mValuesMachine = { "a", "b", "c" }; // ×îÖÕµã»÷ºó¶ÔÓ¦µÄÖµ
+		String[] mValuesHuman = { "1", "2", "3" }; // ç”¨äºæ˜¾ç¤ºçš„å€¼
+		String[] mValuesMachine = { "a", "b", "c" }; // æœ€ç»ˆç‚¹å‡»åå¯¹åº”çš„å€¼
 		mListEditText.init(mContext, mValuesHuman, mValuesMachine,
 						R.string.ListEditText_title,
 						R.string.ListEditText_cancel, true);
@@ -391,7 +391,7 @@ public class CustomViewActivity extends BaseActivity implements OnLikeListener{
 		btn_getStarNum.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				Toast("ĞÇ¼¶Êı£º" + sbv_starbar.getStarRating());
+				Toast("æ˜Ÿçº§æ•°ï¼š" + sbv_starbar.getStarRating());
 			}
 		});
 	}

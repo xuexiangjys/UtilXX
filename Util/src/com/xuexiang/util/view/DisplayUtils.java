@@ -24,7 +24,7 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 
 /**
- * ÏµÍ³ÏÔÊ¾Ïà¹Ø¹¤¾ßÀà
+ * ç³»ç»Ÿæ˜¾ç¤ºç›¸å…³å·¥å…·ç±»
  *
  * @author jingle1267@163.com
  */
@@ -38,11 +38,11 @@ public final class DisplayUtils {
     }
 
     /**
-     * ¸ù¾İÊÖ»úµÄ·Ö±æÂÊ´Ó dp µÄµ¥Î» ×ª³ÉÎª px(ÏñËØ)
+     * æ ¹æ®æ‰‹æœºçš„åˆ†è¾¨ç‡ä» dp çš„å•ä½ è½¬æˆä¸º px(åƒç´ )
      *
-     * @param context ÉÏÏÂÎÄ
-     * @param dpValue ³ß´çdip
-     * @return ÏñËØÖµ
+     * @param context ä¸Šä¸‹æ–‡
+     * @param dpValue å°ºå¯¸dip
+     * @return åƒç´ å€¼
      */
     public static int dip2px(Context context, float dpValue) {
         final float scale = context.getResources().getDisplayMetrics().density;
@@ -50,11 +50,11 @@ public final class DisplayUtils {
     }
 
     /**
-     * ¸ù¾İÊÖ»úµÄ·Ö±æÂÊ´Ó px(ÏñËØ) µÄµ¥Î» ×ª³ÉÎª dp
+     * æ ¹æ®æ‰‹æœºçš„åˆ†è¾¨ç‡ä» px(åƒç´ ) çš„å•ä½ è½¬æˆä¸º dp
      *
-     * @param context ÉÏÏÂÎÄ
-     * @param pxValue ³ß´çÏñËØ
-     * @return DIPÖµ
+     * @param context ä¸Šä¸‹æ–‡
+     * @param pxValue å°ºå¯¸åƒç´ 
+     * @return DIPå€¼
      */
     public static int px2dip(Context context, float pxValue) {
         final float scale = context.getResources().getDisplayMetrics().density;
@@ -62,11 +62,11 @@ public final class DisplayUtils {
     }
 
     /**
-     * ¸ù¾İÊÖ»úµÄ·Ö±æÂÊ´Ó px(ÏñËØ) µÄµ¥Î» ×ª³ÉÎª sp
+     * æ ¹æ®æ‰‹æœºçš„åˆ†è¾¨ç‡ä» px(åƒç´ ) çš„å•ä½ è½¬æˆä¸º sp
      *
-     * @param context ÉÏÏÂÎÄ
-     * @param pxValue ³ß´çÏñËØ
-     * @return SPÖµ
+     * @param context ä¸Šä¸‹æ–‡
+     * @param pxValue å°ºå¯¸åƒç´ 
+     * @return SPå€¼
      */
     public static int px2sp(Context context, float pxValue) {
         float fontScale = context.getResources().getDisplayMetrics().scaledDensity;
@@ -74,11 +74,11 @@ public final class DisplayUtils {
     }
 
     /**
-     * ¸ù¾İÊÖ»úµÄ·Ö±æÂÊ´Ó sp µÄµ¥Î» ×ª³ÉÎª px
+     * æ ¹æ®æ‰‹æœºçš„åˆ†è¾¨ç‡ä» sp çš„å•ä½ è½¬æˆä¸º px
      *
-     * @param context ÉÏÏÂÎÄ
-     * @param spValue SPÖµ
-     * @return ÏñËØÖµ
+     * @param context ä¸Šä¸‹æ–‡
+     * @param spValue SPå€¼
+     * @return åƒç´ å€¼
      */
     public static int sp2px(Context context, float spValue) {
         float fontScale = context.getResources().getDisplayMetrics().scaledDensity;
@@ -121,10 +121,10 @@ public final class DisplayUtils {
     }
 
     /**
-     * »ñÈ¡dialog¿í¶È
+     * è·å–dialogå®½åº¦
      *
      * @param activity Activity
-     * @return Dialog¿í¶È
+     * @return Dialogå®½åº¦
      */
     public static int getDialogW(Activity activity) {
         DisplayMetrics dm = new DisplayMetrics();
@@ -135,10 +135,10 @@ public final class DisplayUtils {
     }
 
     /**
-     * »ñÈ¡ÆÁÄ»¿í¶È
+     * è·å–å±å¹•å®½åº¦
      *
      * @param activity Activity
-     * @return ÆÁÄ»¿í¶È
+     * @return å±å¹•å®½åº¦
      */
     public static int getScreenW(Context context) {
         DisplayMetrics dm = new DisplayMetrics();
@@ -149,10 +149,10 @@ public final class DisplayUtils {
     }
 
     /**
-     * »ñÈ¡ÆÁÄ»¸ß¶È
+     * è·å–å±å¹•é«˜åº¦
      *
      * @param activity Activity
-     * @return ÆÁÄ»¸ß¶È
+     * @return å±å¹•é«˜åº¦
      */
     public static int getScreenH(Activity activity) {
         DisplayMetrics dm = new DisplayMetrics();
@@ -163,10 +163,10 @@ public final class DisplayUtils {
     }
     
     /**
-     * »ñÈ¡ÆÁÄ»¸ß¶È
+     * è·å–å±å¹•é«˜åº¦
      *
      * @param activity Activity
-     * @return ÆÁÄ»¸ß¶È
+     * @return å±å¹•é«˜åº¦
      */
     public static int getScreenH(Context context) {
         DisplayMetrics dm = new DisplayMetrics();
@@ -177,10 +177,10 @@ public final class DisplayUtils {
     }
     
     /**
-     * »ñÈ¡ÆÁÄ»·Ö±æÂÊ
+     * è·å–å±å¹•åˆ†è¾¨ç‡
      *
      * @param Context context
-     * @return ÆÁÄ»·Ö±æÂÊÄ»¸ß¶È
+     * @return å±å¹•åˆ†è¾¨ç‡å¹•é«˜åº¦
      */
     public static int getScreenDpi(Context context) {
         DisplayMetrics dm = new DisplayMetrics();
@@ -189,21 +189,21 @@ public final class DisplayUtils {
     }
     
     /**
-	 * µÃµ½Éè±¸ÆÁÄ»µÄ¿í¶È
+	 * å¾—åˆ°è®¾å¤‡å±å¹•çš„å®½åº¦
 	 */
 	public static int getScreenWidth(Context context) {
 		return context.getResources().getDisplayMetrics().widthPixels;
 	}
 
 	/**
-	 * µÃµ½Éè±¸ÆÁÄ»µÄ¸ß¶È
+	 * å¾—åˆ°è®¾å¤‡å±å¹•çš„é«˜åº¦
 	 */
 	public static int getScreenHeight(Context context) {
 		return context.getResources().getDisplayMetrics().heightPixels;
 	}
 
 	/**
-	 * µÃµ½Éè±¸µÄÃÜ¶È
+	 * å¾—åˆ°è®¾å¤‡çš„å¯†åº¦
 	 */
 	public static float getScreenDensity(Context context) {
 		return context.getResources().getDisplayMetrics().density;
@@ -213,7 +213,7 @@ public final class DisplayUtils {
      * Toggle keyboard If the keyboard is visible,then hidden it,if it's
      * invisible,then show it
      *
-     * @param context ÉÏÏÂÎÄ
+     * @param context ä¸Šä¸‹æ–‡
      */
     public static void toggleKeyboard(Context context) {
         InputMethodManager imm = (InputMethodManager) context

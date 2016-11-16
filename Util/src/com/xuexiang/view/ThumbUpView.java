@@ -503,7 +503,7 @@ public class ThumbUpView extends View {
         valueAnimator = ValueAnimator.ofFloat(startF, endF);
         valueAnimator.setDuration(time);
         valueAnimator.setInterpolator(new LinearInterpolator());
-        valueAnimator.setRepeatCount(0);//无限循环
+        valueAnimator.setRepeatCount(0);//鏃犻檺寰幆
         valueAnimator.setRepeatMode(ValueAnimator.RESTART);
         valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override

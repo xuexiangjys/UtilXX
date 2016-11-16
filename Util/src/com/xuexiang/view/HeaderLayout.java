@@ -24,7 +24,7 @@ public class HeaderLayout extends LinearLayout {
 	private ImageButton mLeftImageButton;
 	private onLeftImageButtonClickListener mLeftImageButtonClickListener;
 
-	public enum HeaderStyle {// Í·²¿ÕûÌåÑùÊ½
+	public enum HeaderStyle {// å¤´éƒ¨æ•´ä½“æ ·å¼
 		DEFAULT_TITLE, TITLE_LIFT_IMAGEBUTTON, TITLE_RIGHT_IMAGEBUTTON, TITLE_DOUBLE_IMAGEBUTTON;
 	}
 
@@ -48,7 +48,7 @@ public class HeaderLayout extends LinearLayout {
 	public void initViews() {
 		mLayoutLeftContainer = (LinearLayout) findViewByHeaderId(RUtils.getId(getContext(), "header_layout_leftview_container"));
 		// mLayoutMiddleContainer = (LinearLayout)
-		// findViewByHeaderId(R.id.header_layout_middleview_container);ÖĞ¼ä²¿·ÖÌí¼ÓËÑË÷»òÕßÆäËû°´Å¥Ê±¿É´ò¿ª
+		// findViewByHeaderId(R.id.header_layout_middleview_container);ä¸­é—´éƒ¨åˆ†æ·»åŠ æœç´¢æˆ–è€…å…¶ä»–æŒ‰é’®æ—¶å¯æ‰“å¼€
 		mLayoutRightContainer = (LinearLayout) findViewByHeaderId(RUtils.getId(getContext(), "header_layout_rightview_container"));
 		mHtvSubTitle = (HandyTextView) findViewByHeaderId(RUtils.getId(getContext(), "header_htv_subtitle"));
 
@@ -82,13 +82,13 @@ public class HeaderLayout extends LinearLayout {
 		}
 	}
 
-	// Ä¬ÈÏÎÄ×Ö±êÌâ
+	// é»˜è®¤æ–‡å­—æ ‡é¢˜
 	private void defaultTitle() {
 		mLayoutLeftContainer.removeAllViews();
 		mLayoutRightContainer.removeAllViews();
 	}
 
-	// ×ó²à×Ô¶¨Òå°´Å¥
+	// å·¦ä¾§è‡ªå®šä¹‰æŒ‰é’®
 	private void titleLeftImageButton() {
 		View mleftImageButtonView = mInflater.inflate(RUtils.getLayout(getContext(), "include_header_imagebutton"), null);
 		mLayoutLeftContainer.addView(mleftImageButtonView);
@@ -105,7 +105,7 @@ public class HeaderLayout extends LinearLayout {
 		});
 	}
 
-	// ÓÒ²à×Ô¶¨Òå°´Å¥
+	// å³ä¾§è‡ªå®šä¹‰æŒ‰é’®
 	private void titleRightImageButton() {
 		View mRightImageButtonView = mInflater.inflate(RUtils.getLayout(getContext(), "include_header_imagebutton"), null);
 		mLayoutRightContainer.addView(mRightImageButtonView);

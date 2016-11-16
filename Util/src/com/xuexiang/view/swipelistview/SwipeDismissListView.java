@@ -22,50 +22,50 @@ import com.nineoldandroids.view.ViewPropertyAnimator;
  */
 public class SwipeDismissListView extends ListView {
 	/**
-	 * ÈÏÎªÊÇÓÃ»§»¬¶¯µÄ×îÐ¡¾àÀë
+	 * è®¤ä¸ºæ˜¯ç”¨æˆ·æ»‘åŠ¨çš„æœ€å°è·ç¦»
 	 */
 	private int mSlop;
 	/**
-	 * »¬¶¯µÄ×îÐ¡ËÙ¶È
+	 * æ»‘åŠ¨çš„æœ€å°é€Ÿåº¦
 	 */
 	private int mMinFlingVelocity;
 	/**
-	 * »¬¶¯µÄ×î´óËÙ¶È
+	 * æ»‘åŠ¨çš„æœ€å¤§é€Ÿåº¦
 	 */
 	private int mMaxFlingVelocity;
 	/**
-	 * Ö´ÐÐ¶¯»­µÄÊ±¼ä
+	 * æ‰§è¡ŒåŠ¨ç”»çš„æ—¶é—´
 	 */
 	protected long mAnimationTime = 150;
 	/**
-	 * ÓÃÀ´±ê¼ÇÓÃ»§ÊÇ·ñÕýÔÚ»¬¶¯ÖÐ
+	 * ç”¨æ¥æ ‡è®°ç”¨æˆ·æ˜¯å¦æ­£åœ¨æ»‘åŠ¨ä¸­
 	 */
 	private boolean mSwiping;
 	/**
-	 * »¬¶¯ËÙ¶È¼ì²âÀà
+	 * æ»‘åŠ¨é€Ÿåº¦æ£€æµ‹ç±»
 	 */
 	private VelocityTracker mVelocityTracker;
 	/**
-	 * ÊÖÖ¸°´ÏÂµÄposition
+	 * æ‰‹æŒ‡æŒ‰ä¸‹çš„position
 	 */
 	private int mDownPosition;
 	/**
-	 * °´ÏÂµÄitem¶ÔÓ¦µÄView
+	 * æŒ‰ä¸‹çš„itemå¯¹åº”çš„View
 	 */
 	private View mDownView;
 	private float mDownX;
 	private float mDownY;
 	/**
-	 * itemµÄ¿í¶È
+	 * itemçš„å®½åº¦
 	 */
 	private int mViewWidth;
 	/**
-	 * µ±ListViewµÄItem»¬³ö½çÃæ»Øµ÷µÄ½Ó¿Ú
+	 * å½“ListViewçš„Itemæ»‘å‡ºç•Œé¢å›žè°ƒçš„æŽ¥å£
 	 */
 	private OnDismissCallback onDismissCallback;
 
 	/**
-	 * ÉèÖÃ¶¯»­Ê±¼ä
+	 * è®¾ç½®åŠ¨ç”»æ—¶é—´
 	 * 
 	 * @param mAnimationTime
 	 */
@@ -74,7 +74,7 @@ public class SwipeDismissListView extends ListView {
 	}
 
 	/**
-	 * ÉèÖÃÉ¾³ý»Øµ÷½Ó¿Ú
+	 * è®¾ç½®åˆ é™¤å›žè°ƒæŽ¥å£
 	 * 
 	 * @param onDismissCallback
 	 */
@@ -96,8 +96,8 @@ public class SwipeDismissListView extends ListView {
 
 		ViewConfiguration vc = ViewConfiguration.get(context);
 		mSlop = vc.getScaledTouchSlop();
-		mMinFlingVelocity = vc.getScaledMinimumFlingVelocity() * 8; //»ñÈ¡»¬¶¯µÄ×îÐ¡ËÙ¶È
-		mMaxFlingVelocity = vc.getScaledMaximumFlingVelocity();  //»ñÈ¡»¬¶¯µÄ×î´óËÙ¶È
+		mMinFlingVelocity = vc.getScaledMinimumFlingVelocity() * 8; //èŽ·å–æ»‘åŠ¨çš„æœ€å°é€Ÿåº¦
+		mMaxFlingVelocity = vc.getScaledMaximumFlingVelocity();  //èŽ·å–æ»‘åŠ¨çš„æœ€å¤§é€Ÿåº¦
 	}
 
 	
@@ -117,7 +117,7 @@ public class SwipeDismissListView extends ListView {
 	}
 
 	/**
-	 * °´ÏÂÊÂ¼þ´¦Àí
+	 * æŒ‰ä¸‹äº‹ä»¶å¤„ç†
 	 * 
 	 * @param ev
 	 * @return
@@ -138,14 +138,14 @@ public class SwipeDismissListView extends ListView {
 			mViewWidth = mDownView.getWidth();
 		}
 
-		//¼ÓÈëËÙ¶È¼ì²â
+		//åŠ å…¥é€Ÿåº¦æ£€æµ‹
 		mVelocityTracker = VelocityTracker.obtain();
 		mVelocityTracker.addMovement(ev);
 	}
 	
 
 	/**
-	 * ´¦ÀíÊÖÖ¸»¬¶¯µÄ·½·¨
+	 * å¤„ç†æ‰‹æŒ‡æ»‘åŠ¨çš„æ–¹æ³•
 	 * 
 	 * @param ev
 	 * @return
@@ -158,11 +158,11 @@ public class SwipeDismissListView extends ListView {
 		float deltaX = ev.getX() - mDownX;
 		float deltaY = ev.getY() - mDownY;
 
-		// X·½Ïò»¬¶¯µÄ¾àÀë´óÓÚmSlop²¢ÇÒY·½Ïò»¬¶¯µÄ¾àÀëÐ¡ÓÚmSlop£¬±íÊ¾¿ÉÒÔ»¬¶¯
+		// Xæ–¹å‘æ»‘åŠ¨çš„è·ç¦»å¤§äºŽmSlopå¹¶ä¸”Yæ–¹å‘æ»‘åŠ¨çš„è·ç¦»å°äºŽmSlopï¼Œè¡¨ç¤ºå¯ä»¥æ»‘åŠ¨
 		if (Math.abs(deltaX) > mSlop && Math.abs(deltaY) < mSlop) {
 			mSwiping = true;
 			
-			//µ±ÊÖÖ¸»¬¶¯item,È¡ÏûitemµÄµã»÷ÊÂ¼þ£¬²»È»ÎÒÃÇ»¬¶¯ItemÒ²°éËæ×Åitemµã»÷ÊÂ¼þµÄ·¢Éú
+			//å½“æ‰‹æŒ‡æ»‘åŠ¨item,å–æ¶ˆitemçš„ç‚¹å‡»äº‹ä»¶ï¼Œä¸ç„¶æˆ‘ä»¬æ»‘åŠ¨Itemä¹Ÿä¼´éšç€itemç‚¹å‡»äº‹ä»¶çš„å‘ç”Ÿ
 			MotionEvent cancelEvent = MotionEvent.obtain(ev);
             cancelEvent.setAction(MotionEvent.ACTION_CANCEL |
                        (ev.getActionIndex()<< MotionEvent.ACTION_POINTER_INDEX_SHIFT));
@@ -170,12 +170,12 @@ public class SwipeDismissListView extends ListView {
 		}
 
 		if (mSwiping) {
-			// ¸úË­ÊÖÖ¸ÒÆ¶¯item
+			// è·Ÿè°æ‰‹æŒ‡ç§»åŠ¨item
 			ViewHelper.setTranslationX(mDownView, deltaX);
-			// Í¸Ã÷¶È½¥±ä
+			// é€æ˜Žåº¦æ¸å˜
 			ViewHelper.setAlpha(mDownView, Math.max(0f, Math.min(1f, 1f - 2f * Math.abs(deltaX)/ mViewWidth)));
 
-			// ÊÖÖ¸»¬¶¯µÄÊ±ºò,·µ»Øtrue£¬±íÊ¾SwipeDismissListView×Ô¼º´¦ÀíonTouchEvent,ÆäËûµÄ¾Í½»¸ø¸¸ÀàÀ´´¦Àí
+			// æ‰‹æŒ‡æ»‘åŠ¨çš„æ—¶å€™,è¿”å›žtrueï¼Œè¡¨ç¤ºSwipeDismissListViewè‡ªå·±å¤„ç†onTouchEvent,å…¶ä»–çš„å°±äº¤ç»™çˆ¶ç±»æ¥å¤„ç†
 			return true;
 		}
 
@@ -184,7 +184,7 @@ public class SwipeDismissListView extends ListView {
 	}
 
 	/**
-	 * ÊÖÖ¸Ì§ÆðµÄÊÂ¼þ´¦Àí
+	 * æ‰‹æŒ‡æŠ¬èµ·çš„äº‹ä»¶å¤„ç†
 	 * @param ev
 	 */
 	private void handleActionUp(MotionEvent ev) {
@@ -194,20 +194,20 @@ public class SwipeDismissListView extends ListView {
 
 		float deltaX = ev.getX() - mDownX;
 		
-		//Í¨¹ý»¬¶¯µÄ¾àÀë¼ÆËã³öX,Y·½ÏòµÄËÙ¶È
+		//é€šè¿‡æ»‘åŠ¨çš„è·ç¦»è®¡ç®—å‡ºX,Yæ–¹å‘çš„é€Ÿåº¦
 		mVelocityTracker.computeCurrentVelocity(1000);
 		float velocityX = Math.abs(mVelocityTracker.getXVelocity());
 		float velocityY = Math.abs(mVelocityTracker.getYVelocity());
 		
-		boolean dismiss = false; //itemÊÇ·ñÒª»¬³öÆÁÄ»
-		boolean dismissRight = false;//ÊÇ·ñÍùÓÒ±ßÉ¾³ý
+		boolean dismiss = false; //itemæ˜¯å¦è¦æ»‘å‡ºå±å¹•
+		boolean dismissRight = false;//æ˜¯å¦å¾€å³è¾¹åˆ é™¤
 		
-		//µ±ÍÏ¶¯itemµÄ¾àÀë´óÓÚitemµÄÒ»°ë£¬item»¬³öÆÁÄ»
+		//å½“æ‹–åŠ¨itemçš„è·ç¦»å¤§äºŽitemçš„ä¸€åŠï¼Œitemæ»‘å‡ºå±å¹•
 		if (Math.abs(deltaX) > mViewWidth / 2) {
 			dismiss = true;
 			dismissRight = deltaX > 0;
 			
-			//ÊÖÖ¸ÔÚÆÁÄ»»¬¶¯µÄËÙ¶ÈÔÚÄ³¸ö·¶Î§ÄÚ£¬Ò²Ê¹µÃitem»¬³öÆÁÄ»
+			//æ‰‹æŒ‡åœ¨å±å¹•æ»‘åŠ¨çš„é€Ÿåº¦åœ¨æŸä¸ªèŒƒå›´å†…ï¼Œä¹Ÿä½¿å¾—itemæ»‘å‡ºå±å¹•
 		} else if (mMinFlingVelocity <= velocityX
 				&& velocityX <= mMaxFlingVelocity && velocityY < velocityX) {
 			dismiss = true;
@@ -223,31 +223,31 @@ public class SwipeDismissListView extends ListView {
 //			set.addListener(new AnimatorListenerAdapter() {
 //						@Override
 //						public void onAnimationEnd(Animator animation) {
-//							//Item»¬³ö½çÃæÖ®ºóÖ´ÐÐÉ¾³ý
+//							//Itemæ»‘å‡ºç•Œé¢ä¹‹åŽæ‰§è¡Œåˆ é™¤
 //							performDismiss(mDownView, mDownPosition);
 //						}
 //					});
 			
 			ViewPropertyAnimator.animate(mDownView)
-					.translationX(dismissRight ? mViewWidth : -mViewWidth)//XÖá·½ÏòµÄÒÆ¶¯¾àÀë
+					.translationX(dismissRight ? mViewWidth : -mViewWidth)//Xè½´æ–¹å‘çš„ç§»åŠ¨è·ç¦»
 					.alpha(0)
 					.setDuration(mAnimationTime)
 					.setListener(new AnimatorListenerAdapter() {
 						@Override
 						public void onAnimationEnd(Animator animation) {
-							//Item»¬³ö½çÃæÖ®ºóÖ´ÐÐÉ¾³ý
+							//Itemæ»‘å‡ºç•Œé¢ä¹‹åŽæ‰§è¡Œåˆ é™¤
 							performDismiss(mDownView, mDownPosition);
 						}
 					});
 		} else {
-			//½«item»¬¶¯ÖÁ¿ªÊ¼Î»ÖÃ
+			//å°†itemæ»‘åŠ¨è‡³å¼€å§‹ä½ç½®
 			ViewPropertyAnimator.animate(mDownView)
 			.translationX(0)
 			.alpha(1)	
 			.setDuration(mAnimationTime).setListener(null);
 		}
 		
-		//ÒÆ³ýËÙ¶È¼ì²â
+		//ç§»é™¤é€Ÿåº¦æ£€æµ‹
 		if(mVelocityTracker != null){
 			mVelocityTracker.recycle();
 			mVelocityTracker = null;
@@ -259,13 +259,13 @@ public class SwipeDismissListView extends ListView {
 
 	
 	/**
-	 * ÔÚ´Ë·½·¨ÖÐÖ´ÐÐitemÉ¾³ýÖ®ºó£¬ÆäËûµÄitemÏòÉÏ»òÕßÏòÏÂ¹ö¶¯µÄ¶¯»­£¬²¢ÇÒ½«position»Øµ÷µ½·½·¨onDismiss()ÖÐ
+	 * åœ¨æ­¤æ–¹æ³•ä¸­æ‰§è¡Œitemåˆ é™¤ä¹‹åŽï¼Œå…¶ä»–çš„itemå‘ä¸Šæˆ–è€…å‘ä¸‹æ»šåŠ¨çš„åŠ¨ç”»ï¼Œå¹¶ä¸”å°†positionå›žè°ƒåˆ°æ–¹æ³•onDismiss()ä¸­
 	 * @param dismissView
 	 * @param dismissPosition
 	 */
 	private void performDismiss(final View dismissView, final int dismissPosition) {
-		final ViewGroup.LayoutParams lp = dismissView.getLayoutParams();//»ñÈ¡itemµÄ²¼¾Ö²ÎÊý
-		final int originalHeight = dismissView.getHeight();//itemµÄ¸ß¶È
+		final ViewGroup.LayoutParams lp = dismissView.getLayoutParams();//èŽ·å–itemçš„å¸ƒå±€å‚æ•°
+		final int originalHeight = dismissView.getHeight();//itemçš„é«˜åº¦
 
 		ValueAnimator animator = ValueAnimator.ofInt(originalHeight, 0).setDuration(mAnimationTime);
 		animator.start();
@@ -278,8 +278,8 @@ public class SwipeDismissListView extends ListView {
 					onDismissCallback.onDismiss(dismissPosition);
 				}
 
-				//Õâ¶Î´úÂëºÜÖØÒª£¬ÒòÎªÎÒÃÇ²¢Ã»ÓÐ½«item´ÓListViewÖÐÒÆ³ý£¬¶øÊÇ½«itemµÄ¸ß¶ÈÉèÖÃÎª0
-				//ËùÒÔÎÒÃÇÔÚ¶¯»­Ö´ÐÐÍê±ÏÖ®ºó½«itemÉèÖÃ»ØÀ´
+				//è¿™æ®µä»£ç å¾ˆé‡è¦ï¼Œå› ä¸ºæˆ‘ä»¬å¹¶æ²¡æœ‰å°†itemä»ŽListViewä¸­ç§»é™¤ï¼Œè€Œæ˜¯å°†itemçš„é«˜åº¦è®¾ç½®ä¸º0
+				//æ‰€ä»¥æˆ‘ä»¬åœ¨åŠ¨ç”»æ‰§è¡Œå®Œæ¯•ä¹‹åŽå°†itemè®¾ç½®å›žæ¥
 				ViewHelper.setAlpha(dismissView, 1f);
 				ViewHelper.setTranslationX(dismissView, 0);
 				ViewGroup.LayoutParams lp = dismissView.getLayoutParams();
@@ -292,7 +292,7 @@ public class SwipeDismissListView extends ListView {
 		animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
 			@Override
 			public void onAnimationUpdate(ValueAnimator valueAnimator) {
-				//Õâ¶Î´úÂëµÄÐ§¹ûÊÇListViewÉ¾³ýÄ³itemÖ®ºó£¬ÆäËûµÄitemÏòÉÏ»¬¶¯µÄÐ§¹û
+				//è¿™æ®µä»£ç çš„æ•ˆæžœæ˜¯ListViewåˆ é™¤æŸitemä¹‹åŽï¼Œå…¶ä»–çš„itemå‘ä¸Šæ»‘åŠ¨çš„æ•ˆæžœ
 				lp.height = (Integer) valueAnimator.getAnimatedValue();
 				dismissView.setLayoutParams(lp);
 			}
@@ -301,7 +301,7 @@ public class SwipeDismissListView extends ListView {
 	}
 
 	/**
-	 * É¾³ýµÄ»Øµ÷½Ó¿Ú
+	 * åˆ é™¤çš„å›žè°ƒæŽ¥å£
 	 * 
 	 * @author xiaanming
 	 * 

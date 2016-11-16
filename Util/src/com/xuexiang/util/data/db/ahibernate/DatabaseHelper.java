@@ -36,7 +36,7 @@ public class DatabaseHelper<T> extends SQLiteOpenHelper {
     }
     
     /**
-     * 根据注解获取表名
+     * 鏍规嵁娉ㄨВ鑾峰彇琛ㄥ悕
      * @return
      */
     public String getTableName(){
@@ -62,7 +62,7 @@ public class DatabaseHelper<T> extends SQLiteOpenHelper {
     }
     
     /**
-     * 如果表不存在就创建表
+     * 濡傛灉琛ㄤ笉瀛樺湪灏卞垱寤鸿〃
      */
     public void createTableIfNotExist(){
     	String tableName = getTableName();

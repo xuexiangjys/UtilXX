@@ -102,7 +102,7 @@ public class SwipeMenuListView extends ListView {
 
     @Override
     public boolean onInterceptTouchEvent(MotionEvent ev) {
-        //ÔÚÀ¹½Ø´¦´¦Àí£¬ÔÚ»¬¶¯ÉèÖÃÁËµã»÷ÊÂ¼şµÄµØ·½Ò²ÄÜswip£¬µã»÷Ê±ÓÖ²»ÄÜÓ°ÏìÔ­À´µÄµã»÷ÊÂ¼ş
+        //åœ¨æ‹¦æˆªå¤„å¤„ç†ï¼Œåœ¨æ»‘åŠ¨è®¾ç½®äº†ç‚¹å‡»äº‹ä»¶çš„åœ°æ–¹ä¹Ÿèƒ½swipï¼Œç‚¹å‡»æ—¶åˆä¸èƒ½å½±å“åŸæ¥çš„ç‚¹å‡»äº‹ä»¶
         int action = ev.getAction();
         switch (action) {
             case MotionEvent.ACTION_DOWN:
@@ -113,16 +113,16 @@ public class SwipeMenuListView extends ListView {
                 mTouchPosition = pointToPosition((int) ev.getX(), (int) ev.getY());
                 View view = getChildAt(mTouchPosition - getFirstVisiblePosition());
 
-                //Ö»ÔÚ¿ÕµÄÊ±ºò¸³Öµ ÒÔÃâÃ¿´Î´¥Ãş¶¼¸³Öµ£¬»áÓĞ¶à¸öopen×´Ì¬
+                //åªåœ¨ç©ºçš„æ—¶å€™èµ‹å€¼ ä»¥å…æ¯æ¬¡è§¦æ‘¸éƒ½èµ‹å€¼ï¼Œä¼šæœ‰å¤šä¸ªopençŠ¶æ€
                 if (view instanceof SwipeMenuLayout) {
-                    //Èç¹ûÓĞ´ò¿ªÁË ¾ÍÀ¹½Ø.
+                    //å¦‚æœæœ‰æ‰“å¼€äº† å°±æ‹¦æˆª.
                     if (mTouchView != null && mTouchView.isOpen() && !inRangeOfView(mTouchView.getMenuView(), ev)) {
                         return true;
                     }
                     mTouchView = (SwipeMenuLayout) view;
                     mTouchView.setSwipeDirection(mDirection);
                 }
-                //Èç¹ûÃşÔÚÁíÍâ¸öview
+                //å¦‚æœæ‘¸åœ¨å¦å¤–ä¸ªview
                 if (mTouchView != null && mTouchView.isOpen() && view != mTouchView) {
                     handled = true;
                 }
@@ -135,7 +135,7 @@ public class SwipeMenuListView extends ListView {
                 float dy = Math.abs((ev.getY() - mDownY));
                 float dx = Math.abs((ev.getX() - mDownX));
                 if (Math.abs(dy) > MAX_Y || Math.abs(dx) > MAX_X) {
-                    //Ã¿´ÎÀ¹½ØµÄdown¶¼°Ñ´¥Ãş×´Ì¬ÉèÖÃ³ÉÁËTOUCH_STATE_NONE Ö»ÓĞ·µ»Øtrue²Å»á×ßonTouchEvent ËùÒÔĞ´ÔÚÕâÀï¾Í¹»ÁË
+                    //æ¯æ¬¡æ‹¦æˆªçš„downéƒ½æŠŠè§¦æ‘¸çŠ¶æ€è®¾ç½®æˆäº†TOUCH_STATE_NONE åªæœ‰è¿”å›trueæ‰ä¼šèµ°onTouchEvent æ‰€ä»¥å†™åœ¨è¿™é‡Œå°±å¤Ÿäº†
                     if (mTouchState == TOUCH_STATE_NONE) {
                         if (Math.abs(dy) > MAX_Y) {
                             mTouchState = TOUCH_STATE_Y;
@@ -197,10 +197,10 @@ public class SwipeMenuListView extends ListView {
                 }
                 break;
             case MotionEvent.ACTION_MOVE:
-                //ÓĞĞ©¿ÉÄÜÓĞheader,Òª¼õÈ¥headerÔÙÅĞ¶Ï
+                //æœ‰äº›å¯èƒ½æœ‰header,è¦å‡å»headerå†åˆ¤æ–­
                 mTouchPosition = pointToPosition((int) ev.getX(), (int) ev.getY()) - getHeaderViewsCount();
-                //Èç¹û»¬¶¯ÁËÒ»ÏÂÃ»ÍêÈ«Õ¹ÏÖ£¬¾ÍÊÕ»ØÈ¥£¬ÕâÊ±ºòmTouchViewÒÑ¾­¸³Öµ£¬ÔÙ»¬¶¯ÁíÍâÒ»¸ö²»¿ÉÒÔswipµÄview
-                //»áµ¼ÖÂmTouchView swip ¡£ ËùÒÔÒªÓÃÎ»ÖÃÅĞ¶ÏÊÇ·ñ»¬¶¯µÄÊÇÒ»¸öview
+                //å¦‚æœæ»‘åŠ¨äº†ä¸€ä¸‹æ²¡å®Œå…¨å±•ç°ï¼Œå°±æ”¶å›å»ï¼Œè¿™æ—¶å€™mTouchViewå·²ç»èµ‹å€¼ï¼Œå†æ»‘åŠ¨å¦å¤–ä¸€ä¸ªä¸å¯ä»¥swipçš„view
+                //ä¼šå¯¼è‡´mTouchView swip ã€‚ æ‰€ä»¥è¦ç”¨ä½ç½®åˆ¤æ–­æ˜¯å¦æ»‘åŠ¨çš„æ˜¯ä¸€ä¸ªview
                 if (!mTouchView.getSwipEnable() || mTouchPosition != mTouchView.getPosition()) {
                     break;
                 }
@@ -320,7 +320,7 @@ public class SwipeMenuListView extends ListView {
     }
 
     /**
-     * ÅĞ¶Ïµã»÷ÊÂ¼şÊÇ·ñÔÚÄ³¸öviewÄÚ
+     * åˆ¤æ–­ç‚¹å‡»äº‹ä»¶æ˜¯å¦åœ¨æŸä¸ªviewå†…
      *
      * @param view
      * @param ev

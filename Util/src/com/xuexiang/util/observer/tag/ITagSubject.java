@@ -4,27 +4,27 @@ import java.util.List;
 
 
 /**  
- * ´´½¨Ê±¼ä£º2016-6-5 ÏÂÎç2:17:04  
+ * åˆ›å»ºæ—¶é—´ï¼š2016-6-5 ä¸‹åˆ2:17:04  
  * @author xuexiang
  **/
 public interface ITagSubject {
 
 	/**
-	 * Ôö¼Ó¹Û²ìÕß
-	 * @param observer ÊµÏÖITagObserver½Ó¿ÚµÄ¶ÔÏó
-	 * @param eventTagList ×¢²áÊÂ¼ş±êÖ¾µÄ¼¯ºÏ
+	 * å¢åŠ è§‚å¯Ÿè€…
+	 * @param observer å®ç°ITagObserveræ¥å£çš„å¯¹è±¡
+	 * @param eventTagList æ³¨å†Œäº‹ä»¶æ ‡å¿—çš„é›†åˆ
 	 */
 	public void register(ITagObserver observer, List<String> eventTagList);
 	
 	/**
-	 * É¾³ı¹Û²ìÕß
-	 * @param observer ÊµÏÖITagObserver½Ó¿ÚµÄ¶ÔÏó
+	 * åˆ é™¤è§‚å¯Ÿè€…
+	 * @param observer å®ç°ITagObserveræ¥å£çš„å¯¹è±¡
 	 */
 	public void unregister(ITagObserver observer);
 	
 	/**
-	 * Í¨Öª·ûºÏÒªÇóµÄ¹Û²ìÕß
-	 * @param event Í¬Ê±µÄ¾ßÌåÊÂ¼ş
+	 * é€šçŸ¥ç¬¦åˆè¦æ±‚çš„è§‚å¯Ÿè€…
+	 * @param event åŒæ—¶çš„å…·ä½“äº‹ä»¶
 	 */
 	public void notify(Event event);
 }

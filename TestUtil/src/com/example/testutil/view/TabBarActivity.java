@@ -16,10 +16,10 @@ import com.xuexiang.view.tabbar.TabBarView;
 import com.xuexiang.view.tabbar.TabBarView.OnTabBarClickListener;
 
 /**  
- * ´´½¨Ê±¼ä£º2016-6-14 ÏÂÎç6:43:09  
- * ÏîÄ¿Ãû³Æ£ºUtilTest  
+ * åˆ›å»ºæ—¶é—´ï¼š2016-6-14 ä¸‹åˆ6:43:09  
+ * é¡¹ç›®åç§°ï¼šUtilTest  
  * @author xuexiang
- * ÎÄ¼şÃû³Æ£ºTabBarActivity.java  
+ * æ–‡ä»¶åç§°ï¼šTabBarActivity.java  
  **/
 public class TabBarActivity extends BaseActivity {
 

@@ -13,7 +13,7 @@ public class DataActivity extends BaseActivity implements OnClickListener {
 	@Override
 	public void onCreateActivity() {
 		setContentView(R.layout.activity_data);
-		initActionBar("Êı¾İ²Ù×÷Ö÷½çÃæ");
+		initActionBar("æ•°æ®æ“ä½œä¸»ç•Œé¢");
 	}
 
 	@Override
@@ -21,13 +21,13 @@ public class DataActivity extends BaseActivity implements OnClickListener {
 		Intent intent = new Intent();
 		switch (v.getId()) {
 		case R.id.btn_ahibernate:
-			mToastUtil.showToast("µã»÷ÁËAhibernateActivity");
+			mToastUtil.showToast("ç‚¹å‡»äº†AhibernateActivity");
         	intent.setClass(this, AhibernateActivity.class);
             startActivity(intent);
 			break;
 			
 		case R.id.btn_ormlite:
-			mToastUtil.showToast("µã»÷ÁËOrmliteActivity");
+			mToastUtil.showToast("ç‚¹å‡»äº†OrmliteActivity");
         	intent.setClass(this, OrmliteActivity.class);
             startActivity(intent);
 			break;

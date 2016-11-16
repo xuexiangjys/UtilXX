@@ -15,26 +15,26 @@ import android.view.MotionEvent;
 import android.view.View;
 
 /**
- * ÏÔÊ¾ĞÇĞÇÆÀÂÛÊı¿Ø¼ş
+ * æ˜¾ç¤ºæ˜Ÿæ˜Ÿè¯„è®ºæ•°æ§ä»¶
  * Created by CaptionDeng on 2016/8/30.
  */
 public class StarBarView extends View {
-    //ĞÇĞÇË®Æ½ÅÅÁĞ
+    //æ˜Ÿæ˜Ÿæ°´å¹³æ’åˆ—
     public static final int HORIZONTAL = 0;
-    //ĞÇĞÇ´¹Ö±ÅÅÁĞ
+    //æ˜Ÿæ˜Ÿå‚ç›´æ’åˆ—
     public static final int VERTICAL = 1;
-    //ÊµĞÄÍ¼Æ¬
+    //å®å¿ƒå›¾ç‰‡
     private Bitmap mSolidBitmap;
-    //¿ÕĞÄÍ¼Æ¬
+    //ç©ºå¿ƒå›¾ç‰‡
     private Bitmap mHollowBitmap;
-    //×î´óµÄÊıÁ¿
+    //æœ€å¤§çš„æ•°é‡
     private int starMaxNumber;
     private float starRating;
     private Paint paint;
-    private int mSpaceWidth;//ĞÇĞÇ¼ä¸ô
-    private int mStarWidth;//ĞÇĞÇ¿í¶È
-    private int mStarHeight;//ĞÇĞÇ¸ß¶È
-    private boolean isIndicator;//ÊÇ·ñÊÇÒ»¸öÖ¸Ê¾Æ÷£¨ÓÃ»§ÎŞ·¨½øĞĞ¸ü¸Ä£©
+    private int mSpaceWidth;//æ˜Ÿæ˜Ÿé—´éš”
+    private int mStarWidth;//æ˜Ÿæ˜Ÿå®½åº¦
+    private int mStarHeight;//æ˜Ÿæ˜Ÿé«˜åº¦
+    private boolean isIndicator;//æ˜¯å¦æ˜¯ä¸€ä¸ªæŒ‡ç¤ºå™¨ï¼ˆç”¨æˆ·æ— æ³•è¿›è¡Œæ›´æ”¹ï¼‰
     private int mOrientation;
 
     public StarBarView(Context context, AttributeSet attrs) {
@@ -62,9 +62,9 @@ public class StarBarView extends View {
         if (mHollowBitmap == null || mSolidBitmap == null) {
             return;
         }
-        //»æÖÆÊµĞÄ½ø¶È
+        //ç»˜åˆ¶å®å¿ƒè¿›åº¦
         int solidStarNum = (int) starRating;
-        //»æÖÆÊµĞÄµÄÆğµãÎ»ÖÃ
+        //ç»˜åˆ¶å®å¿ƒçš„èµ·ç‚¹ä½ç½®
         int solidStartPoint = 0;
         if (mOrientation == HORIZONTAL)
             for (int i = 1; i <= solidStarNum; i++) {
@@ -76,11 +76,11 @@ public class StarBarView extends View {
                 canvas.drawBitmap(mSolidBitmap, 0, solidStartPoint, paint);
                 solidStartPoint = solidStartPoint + mSpaceWidth + mSolidBitmap.getHeight();
             }
-        //ĞéĞÄ¿ªÊ¼Î»ÖÃ
+        //è™šå¿ƒå¼€å§‹ä½ç½®
         int hollowStartPoint = solidStartPoint;
-        //¶à³öµÄÊµĞÄ²¿·ÖÆğµã
+        //å¤šå‡ºçš„å®å¿ƒéƒ¨åˆ†èµ·ç‚¹
         int extraSolidStarPoint = hollowStartPoint;
-        //ĞéĞÄÊıÁ¿
+        //è™šå¿ƒæ•°é‡
         int hollowStarNum = starMaxNumber - solidStarNum;
         if (mOrientation == HORIZONTAL)
             for (int j = 1; j <= hollowStarNum; j++) {
@@ -92,7 +92,7 @@ public class StarBarView extends View {
                 canvas.drawBitmap(mHollowBitmap, 0, hollowStartPoint, paint);
                 hollowStartPoint = hollowStartPoint + mSpaceWidth + mHollowBitmap.getWidth();
             }
-        //¶à³öµÄÊµĞÄ³¤¶È
+        //å¤šå‡ºçš„å®å¿ƒé•¿åº¦
         int extraSolidLength = (int) ((starRating - solidStarNum) * mHollowBitmap.getWidth());
         Rect rectSrc = new Rect(0, 0, extraSolidLength, mHollowBitmap.getHeight());
         Rect dstF = new Rect(extraSolidStarPoint, 0, extraSolidStarPoint + extraSolidLength, mHollowBitmap.getHeight());
@@ -135,7 +135,7 @@ public class StarBarView extends View {
     }
 
     /**
-     * ÉèÖÃĞÇĞÇµÄ½ø¶È
+     * è®¾ç½®æ˜Ÿæ˜Ÿçš„è¿›åº¦
      *
      * @param starRating
      */
@@ -150,7 +150,7 @@ public class StarBarView extends View {
 
 
     /**
-     * »ñÈ¡Ëõ·ÅÍ¼Æ¬
+     * è·å–ç¼©æ”¾å›¾ç‰‡
      *
      * @param bitmap
      * @return
@@ -159,20 +159,20 @@ public class StarBarView extends View {
         if (mStarWidth == 0 || mStarHeight == 0) {
             return bitmap;
         }
-        // »ñµÃÍ¼Æ¬µÄ¿í¸ß
+        // è·å¾—å›¾ç‰‡çš„å®½é«˜
         int width = bitmap.getWidth();
         int height = bitmap.getHeight();
 
-        // ÉèÖÃÏëÒªµÄ´óĞ¡
+        // è®¾ç½®æƒ³è¦çš„å¤§å°
         int newWidth = mStarWidth;
         int newHeight = mStarHeight;
-        // ¼ÆËãËõ·Å±ÈÀı
+        // è®¡ç®—ç¼©æ”¾æ¯”ä¾‹
         float scaleWidth = ((float) newWidth) / width;
         float scaleHeight = ((float) newHeight) / height;
-        // È¡µÃÏëÒªËõ·ÅµÄmatrix²ÎÊı
+        // å–å¾—æƒ³è¦ç¼©æ”¾çš„matrixå‚æ•°
         Matrix matrix = new Matrix();
         matrix.postScale(scaleWidth, scaleHeight);
-        // µÃµ½ĞÂµÄÍ¼Æ¬
+        // å¾—åˆ°æ–°çš„å›¾ç‰‡
         Bitmap newbm = Bitmap.createBitmap(bitmap, 0, 0, width, height, matrix, true);
         return newbm;
     }
@@ -180,7 +180,7 @@ public class StarBarView extends View {
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         if (mOrientation == HORIZONTAL) {
-            //ÅĞ¶ÏÊÇºáÏò»¹ÊÇ×İÏò£¬²âÁ¿³¤¶È
+            //åˆ¤æ–­æ˜¯æ¨ªå‘è¿˜æ˜¯çºµå‘ï¼Œæµ‹é‡é•¿åº¦
             setMeasuredDimension(measureLong(widthMeasureSpec), measureShort(heightMeasureSpec));
         } else {
             setMeasuredDimension(measureShort(widthMeasureSpec), measureLong(heightMeasureSpec));
@@ -225,7 +225,7 @@ public class StarBarView extends View {
 
     public void setStarMaxNumber(int starMaxNumber) {
         this.starMaxNumber = starMaxNumber;
-        //ÀûÓÃinvalidate()£»Ë¢ĞÂ½çÃæ
+        //åˆ©ç”¨invalidate()ï¼›åˆ·æ–°ç•Œé¢
         invalidate();
     }
 

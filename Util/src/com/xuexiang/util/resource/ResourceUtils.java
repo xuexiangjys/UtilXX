@@ -172,7 +172,7 @@ public final class ResourceUtils {
     }
     
     /**
-    * ´ÓAssetsÖĞ¶ÁÈ¡Í¼Æ¬  
+    * ä»Assetsä¸­è¯»å–å›¾ç‰‡  
     */  
     public static Bitmap getImageFromAssetsFile(Context context, String fileName) {  
        Bitmap image = null;  
@@ -189,7 +189,7 @@ public final class ResourceUtils {
     
     
     /**
-     * ´ÓAssetsÖĞ¶ÁÈ¡Í¼Æ¬  
+     * ä»Assetsä¸­è¯»å–å›¾ç‰‡  
      */  
      public static Bitmap getImageFromAssets(Context context, String fileName) {  
         Bitmap image = null;  
@@ -205,7 +205,7 @@ public final class ResourceUtils {
     }  
      
     /**
-     * ´ÓAssetsÖĞ¶ÁÈ¡Í¼Æ¬  
+     * ä»Assetsä¸­è¯»å–å›¾ç‰‡  
      */  
     public static Drawable getImageDrawableFromAssets(Context context, String fileName) {  
         Drawable drawable = null;
@@ -221,29 +221,29 @@ public final class ResourceUtils {
      }  
     
     /** 
-     *  ´ÓassetsÄ¿Â¼ÖĞ¸´ÖÆÕû¸öÎÄ¼ş¼ĞÄÚÈİ 
-     *  @param  context  Context Ê¹ÓÃCopyFilesÀàµÄActivity
-     *  @param  oldPath  String  Ô­ÎÄ¼şÂ·¾¶  Èç£º/aa 
-     *  @param  newPath  String  ¸´ÖÆºóÂ·¾¶  Èç£ºxx:/bb/cc 
+     *  ä»assetsç›®å½•ä¸­å¤åˆ¶æ•´ä¸ªæ–‡ä»¶å¤¹å†…å®¹ 
+     *  @param  context  Context ä½¿ç”¨CopyFilesç±»çš„Activity
+     *  @param  oldPath  String  åŸæ–‡ä»¶è·¯å¾„  å¦‚ï¼š/aa 
+     *  @param  newPath  String  å¤åˆ¶åè·¯å¾„  å¦‚ï¼šxx:/bb/cc 
      */
     public static void copyFilesFromAssets(Context context,String oldPath,String newPath) {                    
            try {
-            String fileNames[] = context.getAssets().list(oldPath);//»ñÈ¡assetsÄ¿Â¼ÏÂµÄËùÓĞÎÄ¼ş¼°Ä¿Â¼Ãû
-            if (fileNames.length > 0) {//Èç¹ûÊÇÄ¿Â¼
+            String fileNames[] = context.getAssets().list(oldPath);//è·å–assetsç›®å½•ä¸‹çš„æ‰€æœ‰æ–‡ä»¶åŠç›®å½•å
+            if (fileNames.length > 0) {//å¦‚æœæ˜¯ç›®å½•
                 File file = new File(newPath);
-                file.mkdirs();//Èç¹ûÎÄ¼ş¼Ğ²»´æÔÚ£¬Ôòµİ¹é
+                file.mkdirs();//å¦‚æœæ–‡ä»¶å¤¹ä¸å­˜åœ¨ï¼Œåˆ™é€’å½’
                 for (String fileName : fileNames) {
                    copyFilesFromAssets(context,oldPath + "/" + fileName,newPath+"/"+fileName);
                 }
-            } else {//Èç¹ûÊÇÎÄ¼ş
+            } else {//å¦‚æœæ˜¯æ–‡ä»¶
                 InputStream is = context.getAssets().open(oldPath);
                 FileOutputStream fos = new FileOutputStream(new File(newPath));
                 byte[] buffer = new byte[1024];
                 int byteCount=0;               
-                while((byteCount=is.read(buffer))!=-1) {//Ñ­»·´ÓÊäÈëÁ÷¶ÁÈ¡ buffer×Ö½Ú        
-                    fos.write(buffer, 0, byteCount);//½«¶ÁÈ¡µÄÊäÈëÁ÷Ğ´Èëµ½Êä³öÁ÷
+                while((byteCount=is.read(buffer))!=-1) {//å¾ªç¯ä»è¾“å…¥æµè¯»å– bufferå­—èŠ‚        
+                    fos.write(buffer, 0, byteCount);//å°†è¯»å–çš„è¾“å…¥æµå†™å…¥åˆ°è¾“å‡ºæµ
                 }
-                fos.flush();//Ë¢ĞÂ»º³åÇø
+                fos.flush();//åˆ·æ–°ç¼“å†²åŒº
                 is.close();
                 fos.close();
             }
@@ -253,7 +253,7 @@ public final class ResourceUtils {
     }
     
     /**
-     * ´ÓAssetsÖĞ¶ÁÈ¡apkÎÄ¼ş  
+     * ä»Assetsä¸­è¯»å–apkæ–‡ä»¶  
      */  
      public static boolean copyAPKFromAssets(Context context, String fileName) {  
     	String apkfilepath =  APK + "/" + fileName;

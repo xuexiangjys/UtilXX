@@ -8,7 +8,7 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 /**
- * @Description:ÄÜ¹»×ÔÊÊÅäµÄImageView
+ * @Description:èƒ½å¤Ÿè‡ªé€‚é…çš„ImageView
  */ 
 public class ScaleImageView extends ImageView {
     private Bitmap currentBitmap;

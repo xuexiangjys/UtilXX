@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.os.IBinder;
 
 /**
- * Ğü¸¡¿ò·şÎñ
+ * æ‚¬æµ®æ¡†æœåŠ¡
  * @author xx
  *
  */

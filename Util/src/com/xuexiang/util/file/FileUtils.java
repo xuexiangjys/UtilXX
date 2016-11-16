@@ -42,7 +42,7 @@ import android.provider.MediaStore;
 import android.text.TextUtils;
 
 /**
- * ÎÄ¼ş²Ù×÷¹¤¾ßÀà
+ * æ–‡ä»¶æ“ä½œå·¥å…·ç±»
  * <p/>
  * <ul>
  * Read or write file
@@ -100,10 +100,10 @@ public final class FileUtils {
     }
 
     /**
-     * É¾³ıÎÄ¼ş»òÕß¿ÕµÄÎÄ¼ş¼Ğ
+     * åˆ é™¤æ–‡ä»¶æˆ–è€…ç©ºçš„æ–‡ä»¶å¤¹
      *
-     * @param file File¶ÔÏó
-     * @return Ö´ĞĞ½á¹û
+     * @param file Fileå¯¹è±¡
+     * @return æ‰§è¡Œç»“æœ
      */
     public static boolean deleteFile(File file) {
 
@@ -111,9 +111,9 @@ public final class FileUtils {
     }
 
     /**
-     * µİ¹éÉ¾³ıÎÄ¼şºÍÎÄ¼ş¼Ğ
+     * é€’å½’åˆ é™¤æ–‡ä»¶å’Œæ–‡ä»¶å¤¹
      *
-     * @param file ÒªÉ¾³ıµÄ¸ùÄ¿Â¼
+     * @param file è¦åˆ é™¤çš„æ ¹ç›®å½•
      */
     public static void DeleteFile(File file) {
         if (file.exists() == false) {
@@ -138,11 +138,11 @@ public final class FileUtils {
     }
 
     /**
-     * ÖØÃüÃûÎÄ¼şºÍÎÄ¼ş¼Ğ
+     * é‡å‘½åæ–‡ä»¶å’Œæ–‡ä»¶å¤¹
      *
-     * @param file        File¶ÔÏó
-     * @param newFileName ĞÂµÄÎÄ¼şÃû
-     * @return Ö´ĞĞ½á¹û
+     * @param file        Fileå¯¹è±¡
+     * @param newFileName æ–°çš„æ–‡ä»¶å
+     * @return æ‰§è¡Œç»“æœ
      */
     public static boolean renameFile(File file, String newFileName) {
         if (newFileName.matches(FILENAME_REGIX)) {
@@ -163,10 +163,10 @@ public final class FileUtils {
     }
 
     /**
-     * ÎÄ¼ş´óĞ¡»ñÈ¡
+     * æ–‡ä»¶å¤§å°è·å–
      *
-     * @param file File¶ÔÏó
-     * @return ÎÄ¼ş´óĞ¡×Ö·û´®
+     * @param file Fileå¯¹è±¡
+     * @return æ–‡ä»¶å¤§å°å­—ç¬¦ä¸²
      */
     public static String getFileSize(File file) {
         FileInputStream fis = null;
@@ -189,11 +189,11 @@ public final class FileUtils {
                 e.printStackTrace();
             }
         }
-        return "Î´Öª";
+        return "æœªçŸ¥";
     }
 
     /**
-     * Ê¹ÓÃÏµÍ³³ÌĞò´ò¿ªÎÄ¼ş
+     * ä½¿ç”¨ç³»ç»Ÿç¨‹åºæ‰“å¼€æ–‡ä»¶
      *
      * @param activity Activity
      * @param file     File
@@ -208,11 +208,11 @@ public final class FileUtils {
     }
 
     /**
-     * »ñÈ¡ÒÔºó×ºÃûÎªIDµÄÖµ
+     * è·å–ä»¥åç¼€åä¸ºIDçš„å€¼
      *
      * @param file     File
      * @param activity Activity
-     * @return MimeType×Ö·û´®
+     * @return MimeTypeå­—ç¬¦ä¸²
      * @throws Exception
      */
     public static String getMimeType(File file, Activity activity)
@@ -223,7 +223,7 @@ public final class FileUtils {
         int id = activity.getResources().getIdentifier(
                 activity.getPackageName() + ":string/" + name, null, null);
 
-        // ÌØÊâ´¦Àí
+        // ç‰¹æ®Šå¤„ç†
         if ("class".equals(name)) {
             return "application/octet-stream";
         }
@@ -234,42 +234,42 @@ public final class FileUtils {
             return "image/vnd.nok-oplogo-color";
         }
         if (id == 0) {
-            throw new Exception("Î´ÕÒµ½·ÖÏí¸Ã¸ñÊ½µÄÓ¦ÓÃ");
+            throw new Exception("æœªæ‰¾åˆ°åˆ†äº«è¯¥æ ¼å¼çš„åº”ç”¨");
         }
         return activity.getString(id);
     }
 
     /**
-     * ÓÃÓÚµİ¹é²éÕÒÎÄ¼ş¼ĞÏÂÃæµÄ·ûºÏÌõ¼şµÄÎÄ¼ş
+     * ç”¨äºé€’å½’æŸ¥æ‰¾æ–‡ä»¶å¤¹ä¸‹é¢çš„ç¬¦åˆæ¡ä»¶çš„æ–‡ä»¶
      *
-     * @param folder ÎÄ¼ş¼Ğ
-     * @param filter ÎÄ¼ş¹ıÂËÆ÷
-     * @return ·ûºÏÌõ¼şµÄÎÄ¼şList
+     * @param folder æ–‡ä»¶å¤¹
+     * @param filter æ–‡ä»¶è¿‡æ»¤å™¨
+     * @return ç¬¦åˆæ¡ä»¶çš„æ–‡ä»¶List
      */
     public static List<HashMap<String, Object>> recursionFolder(File folder,
                                                                 FileFilter filter) {
 
         List<HashMap<String, Object>> list = new ArrayList<HashMap<String, Object>>();
 
-        // »ñµÃÎÄ¼ş¼ĞÏÂµÄËùÓĞÄ¿Â¼ºÍÎÄ¼ş¼¯ºÏ
+        // è·å¾—æ–‡ä»¶å¤¹ä¸‹çš„æ‰€æœ‰ç›®å½•å’Œæ–‡ä»¶é›†åˆ
         File[] files = folder.listFiles();
-        /** Èç¹ûÎÄ¼ş¼ĞÏÂÃ»ÄÚÈİ,»á·µ»ØÒ»¸önull **/
-        // ÅĞ¶ÏÊÊÅäÆ÷ÊÇ·ñÎª¿Õ
+        /** å¦‚æœæ–‡ä»¶å¤¹ä¸‹æ²¡å†…å®¹,ä¼šè¿”å›ä¸€ä¸ªnull **/
+        // åˆ¤æ–­é€‚é…å™¨æ˜¯å¦ä¸ºç©º
         if (filter != null) {
             files = folder.listFiles(filter);
         }
-        // ÕÒµ½ºÏÊÊµÄÎÄ¼ş·µ»Ø
+        // æ‰¾åˆ°åˆé€‚çš„æ–‡ä»¶è¿”å›
         if (files != null) {
             for (int m = 0; m < files.length; m++) {
                 File file = files[m];
                 if (file.isDirectory()) {
-                    // ÊÇ·ñµİ¹éµ÷ÓÃ
+                    // æ˜¯å¦é€’å½’è°ƒç”¨
                     list.addAll(recursionFolder(file, filter));
 
                 } else {
                     HashMap<String, Object> map = new HashMap<String, Object>();
                     map.put("file", file);
-                    // ÉèÖÃÍ¼±êÖÖÀà
+                    // è®¾ç½®å›¾æ ‡ç§ç±»
                     if (file.getAbsolutePath().toLowerCase().matches(MP3_REG)) {
                         map.put("iconType", 3);
                     } else if (file.getAbsolutePath().toLowerCase()
@@ -289,16 +289,16 @@ public final class FileUtils {
     }
 
     /**
-     * ×ÊÔ´¹ÜÀíÆ÷,²éÕÒ¸ÃÎÄ¼ş¼ĞÏÂµÄÎÄ¼şºÍÄ¿Â¼
+     * èµ„æºç®¡ç†å™¨,æŸ¥æ‰¾è¯¥æ–‡ä»¶å¤¹ä¸‹çš„æ–‡ä»¶å’Œç›®å½•
      *
-     * @param folder ÎÄ¼ş¼Ğ
-     * @param filter ÎÄ¼ş¹ıÂËÆ÷
-     * @return ·ûºÏÌõ¼şµÄList
+     * @param folder æ–‡ä»¶å¤¹
+     * @param filter æ–‡ä»¶è¿‡æ»¤å™¨
+     * @return ç¬¦åˆæ¡ä»¶çš„List
      */
     public static List<HashMap<String, Object>> unrecursionFolder(File folder,
                                                                   FileFilter filter) {
         List<HashMap<String, Object>> list = new ArrayList<HashMap<String, Object>>();
-        // Èç¹ûÊÇSD¿¨Â·¾¶,²»Ìí¼Ó¸¸Â·¾¶
+        // å¦‚æœæ˜¯SDå¡è·¯å¾„,ä¸æ·»åŠ çˆ¶è·¯å¾„
         if (!folder.getAbsolutePath().equals(
                 Environment.getExternalStorageDirectory().getAbsolutePath())) {
             HashMap<String, Object> map = new HashMap<String, Object>();
@@ -306,10 +306,10 @@ public final class FileUtils {
             map.put("iconType", ICON_TYPE_ROOT);
             list.add(map);
         }
-        // »ñµÃÎÄ¼ş¼ĞÏÂµÄËùÓĞÄ¿Â¼ºÍÎÄ¼ş¼¯ºÏ
+        // è·å¾—æ–‡ä»¶å¤¹ä¸‹çš„æ‰€æœ‰ç›®å½•å’Œæ–‡ä»¶é›†åˆ
         File[] files = folder.listFiles();
-        /** Èç¹ûÎÄ¼ş¼ĞÏÂÃ»ÄÚÈİ,»á·µ»ØÒ»¸önull **/
-        // ÅĞ¶ÏÊÊÅäÆ÷ÊÇ·ñÎª¿Õ
+        /** å¦‚æœæ–‡ä»¶å¤¹ä¸‹æ²¡å†…å®¹,ä¼šè¿”å›ä¸€ä¸ªnull **/
+        // åˆ¤æ–­é€‚é…å™¨æ˜¯å¦ä¸ºç©º
         if (filter != null) {
             files = folder.listFiles(filter);
         }
@@ -317,7 +317,7 @@ public final class FileUtils {
             for (File p : files) {
                 HashMap<String, Object> map = new HashMap<String, Object>();
                 map.put("file", p);
-                // ÉèÖÃÍ¼±êÖÖÀà
+                // è®¾ç½®å›¾æ ‡ç§ç±»
                 if (p.isDirectory()) {
                     map.put("iconType", ICON_TYPE_FOLDER);
                 } else {
@@ -333,7 +333,7 @@ public final class FileUtils {
                         map.put("iconType", ICON_TYPE_FILE);
                     }
                 }
-                // Ìí¼Ó
+                // æ·»åŠ 
                 list.add(map);
             }
         }
@@ -341,10 +341,10 @@ public final class FileUtils {
     }
 
     /**
-     * Ê¾Àı:"^.*\\.(mp3|mp4|3gp)$"
+     * ç¤ºä¾‹:"^.*\\.(mp3|mp4|3gp)$"
      *
-     * @param reg Ä¿Ç°ÔÊĞíÈ¡Öµ REG_MTV, REG_MP3, REG_JPGÈıÖÖ
-     * @return ÎÄ¼ş¹ıÂËÆ÷
+     * @param reg ç›®å‰å…è®¸å–å€¼ REG_MTV, REG_MP3, REG_JPGä¸‰ç§
+     * @return æ–‡ä»¶è¿‡æ»¤å™¨
      */
     public static FileFilter getFileFilter(final String reg, boolean isdir) {
         if (isdir) {
@@ -375,7 +375,7 @@ public final class FileUtils {
     /**
      * read file
      *
-     * @param filePath    ÎÄ¼şÂ·¾¶
+     * @param filePath    æ–‡ä»¶è·¯å¾„
      * @param charsetName The name of a supported {@link java.nio.charset.Charset
      *                    </code>charset<code>}
      * @return if file not exist, return null, else return content of file
@@ -418,8 +418,8 @@ public final class FileUtils {
     /**
      * write file
      *
-     * @param filePath ÎÄ¼şÂ·¾¶
-     * @param content  ÄÚÈİ
+     * @param filePath æ–‡ä»¶è·¯å¾„
+     * @param content  å†…å®¹
      * @param append   is append, if true, write to the end of file, else clear
      *                 content of file and write into it
      * @return return false if content is empty, true otherwise
@@ -454,8 +454,8 @@ public final class FileUtils {
     /**
      * write file
      *
-     * @param filePath    ÎÄ¼şÂ·¾¶
-     * @param contentList ÄÚÈİList
+     * @param filePath    æ–‡ä»¶è·¯å¾„
+     * @param contentList å†…å®¹List
      * @param append      is append, if true, write to the end of file, else clear
      *                    content of file and write into it
      * @return return false if contentList is empty, true otherwise
@@ -496,9 +496,9 @@ public final class FileUtils {
     /**
      * write file, the string will be written to the begin of the file
      *
-     * @param filePath ÎÄ¼şÂ·¾¶
-     * @param content  ÄÚÈİ
-     * @return Ö´ĞĞ½á¹û
+     * @param filePath æ–‡ä»¶è·¯å¾„
+     * @param content  å†…å®¹
+     * @return æ‰§è¡Œç»“æœ
      */
     public static boolean writeFile(String filePath, String content) {
         return writeFile(filePath, content, false);
@@ -507,9 +507,9 @@ public final class FileUtils {
     /**
      * write file, the string list will be written to the begin of the file
      *
-     * @param filePath    ÎÄ¼şÂ·¾¶
-     * @param contentList ÄÚÈİList
-     * @return Ö´ĞĞ½á¹û
+     * @param filePath    æ–‡ä»¶è·¯å¾„
+     * @param contentList å†…å®¹List
+     * @return æ‰§è¡Œç»“æœ
      */
     public static boolean writeFile(String filePath, List<String> contentList) {
         return writeFile(filePath, contentList, false);
@@ -518,9 +518,9 @@ public final class FileUtils {
     /**
      * write file, the bytes will be written to the begin of the file
      *
-     * @param filePath ÎÄ¼şÂ·¾¶
+     * @param filePath æ–‡ä»¶è·¯å¾„
      * @param stream   InputStream
-     * @return Ö´ĞĞ½á¹û
+     * @return æ‰§è¡Œç»“æœ
      * @see {@link #writeFile(String, InputStream, boolean)}
      */
     public static boolean writeFile(String filePath, InputStream stream) {
@@ -546,7 +546,7 @@ public final class FileUtils {
     /**
      * write file, the bytes will be written to the begin of the file
      *
-     * @param file   File¶ÔÏó
+     * @param file   Fileå¯¹è±¡
      * @param stream InputStream
      * @return
      * @see {@link #writeFile(File, InputStream, boolean)}
@@ -597,9 +597,9 @@ public final class FileUtils {
     /**
      * copy file
      *
-     * @param sourceFilePath Ô´ÎÄ¼şÂ·¾¶
-     * @param destFilePath   Ä¿±êÎÄ¼şÂ·¾¶
-     * @return Ö´ĞĞ½á¹û
+     * @param sourceFilePath æºæ–‡ä»¶è·¯å¾„
+     * @param destFilePath   ç›®æ ‡æ–‡ä»¶è·¯å¾„
+     * @return æ‰§è¡Œç»“æœ
      * @throws RuntimeException if an error occurs while operator FileOutputStream
      */
     public static boolean copyFile(String sourceFilePath, String destFilePath) {
@@ -613,10 +613,10 @@ public final class FileUtils {
     }
 
     /**
-     * ÊäÈëÁ÷×ªbyte[]
+     * è¾“å…¥æµè½¬byte[]
      *
      * @param inStream InputStream
-     * @return ByteÊı×é
+     * @return Byteæ•°ç»„
      */
     public static final byte[] input2byte(InputStream inStream) {
         if (inStream == null)
@@ -637,8 +637,8 @@ public final class FileUtils {
     /**
      * read file to string list, a element of list is a line
      *
-     * @param filePath    ÎÄ¼şÂ·¾¶
-     * @param charsetName ±àÂë·½Ê½
+     * @param filePath    æ–‡ä»¶è·¯å¾„
+     * @param charsetName ç¼–ç æ–¹å¼
      *                    The name of a supported {@link java.nio.charset.Charset
      *                    </code>charset<code>}
      * @return if file not exist, return null, else return content of file
@@ -694,7 +694,7 @@ public final class FileUtils {
      *      getFileNameWithoutExtension("/home/admin/a.txt/b.mp3")  =   "b"
      * </pre>
      *
-     * @param filePath ÎÄ¼şÂ·¾¶
+     * @param filePath æ–‡ä»¶è·¯å¾„
      * @return file name from path, not include suffix
      * @see
      */
@@ -734,7 +734,7 @@ public final class FileUtils {
      *      getFileName("/home/admin/a.txt/b.mp3")  =   "b.mp3"
      * </pre>
      *
-     * @param filePath ÎÄ¼şÂ·¾¶
+     * @param filePath æ–‡ä»¶è·¯å¾„
      * @return file name from path, include suffix
      */
     public static String getFileName(String filePath) {
@@ -765,8 +765,8 @@ public final class FileUtils {
      *      getFolderName("/home/admin/a.txt/b.mp3")  =   "/home/admin/a.txt"
      * </pre>
      *
-     * @param filePath ÎÄ¼şÂ·¾¶
-     * @return ÎÄ¼ş¼ĞÃû³Æ
+     * @param filePath æ–‡ä»¶è·¯å¾„
+     * @return æ–‡ä»¶å¤¹åç§°
      */
     public static String getFolderName(String filePath) {
 
@@ -797,7 +797,7 @@ public final class FileUtils {
      *      getFileExtension("/home/admin/a.txt/b.mp3")  =   "mp3"
      * </pre>
      *
-     * @param filePath ÎÄ¼şÂ·¾¶
+     * @param filePath æ–‡ä»¶è·¯å¾„
      * @return
      */
     public static String getFileExtension(String filePath) {
@@ -823,7 +823,7 @@ public final class FileUtils {
      * <li>makeFolder("C:\\Users\\Trinea\\") can create Trinea folder</li>
      * </ul>
      *
-     * @param filePath ÎÄ¼şÂ·¾¶
+     * @param filePath æ–‡ä»¶è·¯å¾„
      * @return true if the necessary directories have been created or the target
      * directory already exists, false one of the directories can not be
      * created.
@@ -846,8 +846,8 @@ public final class FileUtils {
     }
 
     /**
-     * @param filePath ÎÄ¼şÂ·¾¶
-     * @return Ö´ĞĞ½á¹û
+     * @param filePath æ–‡ä»¶è·¯å¾„
+     * @return æ‰§è¡Œç»“æœ
      * @see #makeDirs(String)
      */
     public static boolean makeFolders(String filePath) {
@@ -857,8 +857,8 @@ public final class FileUtils {
     /**
      * Indicates if this file represents a file on the underlying file system.
      *
-     * @param filePath ÎÄ¼şÂ·¾¶
-     * @return ÊÇ·ñ´æÔÚÎÄ¼ş
+     * @param filePath æ–‡ä»¶è·¯å¾„
+     * @return æ˜¯å¦å­˜åœ¨æ–‡ä»¶
      */
     public static boolean isFileExist(String filePath) {
         if (TextUtils.isEmpty(filePath)) {
@@ -873,8 +873,8 @@ public final class FileUtils {
      * Indicates if this file represents a directory on the underlying file
      * system.
      *
-     * @param directoryPath ÎÄ¼ş¼ĞÂ·¾¶
-     * @return ÎÄ¼ş¼ĞÊÇ·ñ´æÔÚ
+     * @param directoryPath æ–‡ä»¶å¤¹è·¯å¾„
+     * @return æ–‡ä»¶å¤¹æ˜¯å¦å­˜åœ¨
      */
     public static boolean isFolderExist(String directoryPath) {
         if (TextUtils.isEmpty(directoryPath)) {
@@ -893,8 +893,8 @@ public final class FileUtils {
      * <li>if path exist, delete recursion. return true</li>
      * <ul>
      *
-     * @param path ÎÄ¼şÂ·¾¶
-     * @return ÊÇ·ñÉ¾³ı³É¹¦
+     * @param path æ–‡ä»¶è·¯å¾„
+     * @return æ˜¯å¦åˆ é™¤æˆåŠŸ
      */
     public static boolean deleteFile(String path) {
         if (TextUtils.isEmpty(path)) {
@@ -928,7 +928,7 @@ public final class FileUtils {
      * <li>if path exist and it is a file, return file size, else return -1</li>
      * <ul>
      *
-     * @param path ÎÄ¼şÂ·¾¶
+     * @param path æ–‡ä»¶è·¯å¾„
      * @return returns the length of this file in bytes. returns -1 if the file
      * does not exist.
      */
@@ -942,15 +942,15 @@ public final class FileUtils {
     }
 
     /**
-     * °Ñuri×ªÎªFile¶ÔÏó
+     * æŠŠuriè½¬ä¸ºFileå¯¹è±¡
      *
      * @param activity Activity
-     * @param uri      ÎÄ¼şUri
-     * @return File¶ÔÏó
+     * @param uri      æ–‡ä»¶Uri
+     * @return Fileå¯¹è±¡
      */
     public static File uri2File(Activity activity, Uri uri) {
         if (Build.VERSION.SDK_INT < 11) {
-            // ÔÚAPI11ÒÔÏÂ¿ÉÒÔÊ¹ÓÃ£ºmanagedQuery
+            // åœ¨API11ä»¥ä¸‹å¯ä»¥ä½¿ç”¨ï¼šmanagedQuery
             String[] proj = {MediaStore.Images.Media.DATA};
             @SuppressWarnings("deprecation")
             Cursor actualimagecursor = activity.managedQuery(uri, proj, null, null,
@@ -962,7 +962,7 @@ public final class FileUtils {
                     .getString(actual_image_column_index);
             return new File(img_path);
         } else {
-            // ÔÚAPI11ÒÔÉÏ£ºÒª×ªÎªÊ¹ÓÃCursorLoader,²¢Ê¹ÓÃloadInBackgroundÀ´·µ»Ø
+            // åœ¨API11ä»¥ä¸Šï¼šè¦è½¬ä¸ºä½¿ç”¨CursorLoader,å¹¶ä½¿ç”¨loadInBackgroundæ¥è¿”å›
             String[] projection = {MediaStore.Images.Media.DATA};
             CursorLoader loader = new CursorLoader(activity, uri, projection, null,
                     null, null);
@@ -975,7 +975,7 @@ public final class FileUtils {
     }
     
     /**
-	 * ÅĞ¶ÏSDÊÇ·ñ¿ÉÒÔ
+	 * åˆ¤æ–­SDæ˜¯å¦å¯ä»¥
 	 * 
 	 * @return
 	 */
@@ -988,10 +988,10 @@ public final class FileUtils {
 	}
 
 	/**
-	 * ´´½¨¸ùÄ¿Â¼
+	 * åˆ›å»ºæ ¹ç›®å½•
 	 * 
 	 * @param path
-	 *            Ä¿Â¼Â·¾¶
+	 *            ç›®å½•è·¯å¾„
 	 */
 	public static void createDirFile(String path) {
 		File dir = new File(path);
@@ -1001,11 +1001,11 @@ public final class FileUtils {
 	}
 
 	/**
-	 * ´´½¨ÎÄ¼ş
+	 * åˆ›å»ºæ–‡ä»¶
 	 * 
 	 * @param path
-	 *            ÎÄ¼şÂ·¾¶
-	 * @return ´´½¨µÄÎÄ¼ş
+	 *            æ–‡ä»¶è·¯å¾„
+	 * @return åˆ›å»ºçš„æ–‡ä»¶
 	 */
 	public static File createNewFile(String path) {
 		File file = new File(path);

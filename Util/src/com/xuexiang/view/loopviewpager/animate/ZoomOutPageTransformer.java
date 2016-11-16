@@ -10,7 +10,7 @@ import android.view.View;
  * loop_style:2
  *
  * @USER Edwin
- * @DATE 16/6/13 œ¬ŒÁ9:44
+ * @DATE 16/6/13 ‰∏ãÂçà9:44
  */
 
 public class ZoomOutPageTransformer implements ViewPager.PageTransformer {
@@ -28,7 +28,7 @@ public class ZoomOutPageTransformer implements ViewPager.PageTransformer {
             // This page is way off-screen to the left.
             view.setAlpha(0);
 
-        } else if (position <= 1) //a“≥ª¨∂Ø÷¡b“≥ £ª a“≥¥” 0.0 -1 £ªb“≥¥”1 ~ 0.0
+        } else if (position <= 1) //aÈ°µÊªëÂä®Ëá≥bÈ°µ Ôºõ aÈ°µ‰ªé 0.0 -1 ÔºõbÈ°µ‰ªé1 ~ 0.0
         { // [-1,1]
             // Modify the default slide transition to shrink the page as well
             float scaleFactor = Math.max(MIN_SCALE, 1 - Math.abs(position));

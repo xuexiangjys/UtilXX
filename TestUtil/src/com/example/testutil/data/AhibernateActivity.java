@@ -10,10 +10,10 @@ import android.widget.Button;
 import com.example.testutil.R;
 
 /**  
- * ´´½¨Ê±¼ä£º2016-5-31 ÏÂÎç3:50:00  
- * ÏîÄ¿Ãû³Æ£ºUtilTest  
+ * åˆ›å»ºæ—¶é—´ï¼š2016-5-31 ä¸‹åˆ3:50:00  
+ * é¡¹ç›®åç§°ï¼šUtilTest  
  * @author xuexiang
- * ÎÄ¼şÃû³Æ£ºOrmliteActivity.java  
+ * æ–‡ä»¶åç§°ï¼šOrmliteActivity.java  
  **/
 public class AhibernateActivity extends Activity{
 

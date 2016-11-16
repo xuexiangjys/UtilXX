@@ -85,7 +85,7 @@ public class CustomDataAdapter extends BaseContentAdapter<Student> {
 		Student student = getItem(position);        
 		student.setUsername("xxxx");
 		student.setAge(19);
-		student.setSex("Ů");
+		student.setSex("女");
 		mDatabaseService.updateData(student);
 		dataList = mDatabaseService.queryAllData();
 	    notifyDataSetChanged();

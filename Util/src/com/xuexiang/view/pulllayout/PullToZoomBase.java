@@ -5,10 +5,10 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 
 /**  
- * ´´½¨Ê±¼ä£º2016-6-12 ÏÂÎç11:18:09  
- * ÏîÄ¿Ãû³Æ£ºUtil  
+ * åˆ›å»ºæ—¶é—´ï¼š2016-6-12 ä¸‹åˆ11:18:09  
+ * é¡¹ç›®åç§°ï¼šUtil  
  * @author xuexiang
- * ÎÄ¼şÃû³Æ£ºPullToZoomBase.java  
+ * æ–‡ä»¶åç§°ï¼šPullToZoomBase.java  
  **/
 public abstract class PullToZoomBase extends PullBase {
 	  private float downY = 0F;

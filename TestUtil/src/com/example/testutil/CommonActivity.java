@@ -24,7 +24,7 @@ import com.xuexiang.app.BaseActivity;
 
 
 /**
- * Bitmap测试
+ * Bitmap娴嬭瘯
  *
  * @author jingle1267@163.com
  */
@@ -33,7 +33,7 @@ public class CommonActivity extends BaseActivity implements OnClickListener{
 	@Override
 	public void onCreateActivity() {
 		setContentView(R.layout.activity_common);
-		initActionBar("普通工具类界面");
+		initActionBar("鏅�氬伐鍏风被鐣岄潰");
 	}
 
 	@Override
@@ -41,7 +41,7 @@ public class CommonActivity extends BaseActivity implements OnClickListener{
 		Intent intent = new Intent();
 		switch ( v.getId()) {
 		case R.id.btn_imageview:
-			mToastUtil.showToast("点击了ImageViewActivity");
+			mToastUtil.showToast("鐐瑰嚮浜咺mageViewActivity");
         	intent.setClass(this, ImageViewActivity.class);
             startActivity(intent);			
 			break;

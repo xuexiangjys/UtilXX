@@ -22,7 +22,7 @@ import com.xuexiang.util.resource.ResourceUtils;
 
 
 /**
- * ÃèÊö£ºÒ»¸öÓÃÓÚ¡°Ó¦ÓÃÐÂÌØÐÔ¡±µÄÓÃ»§Ö¸Òýview
+ * æè¿°ï¼šä¸€ä¸ªç”¨äºŽâ€œåº”ç”¨æ–°ç‰¹æ€§â€çš„ç”¨æˆ·æŒ‡å¼•view
  * Created by zhaohl on 2015-11-26.
  */
 public class UserGuideView extends View {

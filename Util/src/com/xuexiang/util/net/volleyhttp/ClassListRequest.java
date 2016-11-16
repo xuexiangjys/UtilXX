@@ -140,21 +140,21 @@ public class ClassListRequest<T>  extends Request<List<T>> {
 	@Override
     protected Response<List<T>> parseNetworkResponse(NetworkResponse response) {
 		try {
-			//½«×Ö·ûÁ÷×ª³É×Ö·û´®£¬²¢ÇÒÉèÖÃ ×Ö·û±àÂë £¬À´×ÔÏìÓ¦ĞÅÏ¢µÄ±¨ÎÄ¶¼²»ĞÅÏ¢
+			//å°†å­—ç¬¦æµè½¬æˆå­—ç¬¦ä¸²ï¼Œå¹¶ä¸”è®¾ç½® å­—ç¬¦ç¼–ç  ï¼Œæ¥è‡ªå“åº”ä¿¡æ¯çš„æŠ¥æ–‡éƒ½ä¸ä¿¡æ¯
 			String jsonString = new String(response.data,HttpHeaderParser.parseCharset(response.headers, HTTP.UTF_8));
-			//·µ»ØĞÅÏ¢ Ê¹ÓÃ gson Ö±½Ó×ª ¶ÔÏó£¬µÚ¶ş¸ö²ÎÊı ÉèÖÃ±àÂë
+			//è¿”å›ä¿¡æ¯ ä½¿ç”¨ gson ç›´æ¥è½¬ å¯¹è±¡ï¼Œç¬¬äºŒä¸ªå‚æ•° è®¾ç½®ç¼–ç 
 			Type listType = new TypeToken<List<T>>(){}.getType(); 
 		    List<T> list = mGson.fromJson(jsonString, listType);
 			return Response.success(list, HttpHeaderParser.parseCacheHeaders(response));
 		
 		} catch (UnsupportedEncodingException e) {
-			// ³ö´íµÄÊ±ºò£¬½«´íÎóĞÅÏ¢ÖØĞÂµ÷³ö
+			// å‡ºé”™çš„æ—¶å€™ï¼Œå°†é”™è¯¯ä¿¡æ¯é‡æ–°è°ƒå‡º
 			return Response.error(new ParseError(e));
 		}
     }
 
     /**
-     * requestBuilder  Ê¹ÓÃ·½·¨²Î¼ûhttpClientRequest
+     * requestBuilder  ä½¿ç”¨æ–¹æ³•å‚è§httpClientRequest
      */
     public static class RequestBuilder<T> {
         private int method = Method.GET;

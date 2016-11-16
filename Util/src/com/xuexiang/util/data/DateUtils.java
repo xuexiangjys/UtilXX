@@ -25,29 +25,29 @@ import android.text.TextUtils;
 import com.xuexiang.util.common.StringUtils;
 
 /**
- * »’∆⁄π§æﬂ¿‡
+ * Êó•ÊúüÂ∑•ÂÖ∑Á±ª
  *
  * @author jingle1267@163.com
  */
 public final class DateUtils {
 
     /**
-     * »’∆⁄¿‡–Õ *
+     * Êó•ÊúüÁ±ªÂûã *
      */
     public static final String yyyyMMDD = "yyyy-MM-dd";
     public static final String yyyyMMddHHmmss = "yyyy-MM-dd HH:mm:ss";
     public static final String HHmmss = "HH:mm:ss";
     public static final String hhmmss = "HH:mm:ss";
-    public static final String LOCALE_DATE_FORMAT = "yyyyƒÍM‘¬d»’ HH:mm:ss";
+    public static final String LOCALE_DATE_FORMAT = "yyyyÂπ¥MÊúàdÊó• HH:mm:ss";
     public static final String DB_DATA_FORMAT = "yyyy-MM-DD HH:mm:ss";
-    public static final String NEWS_ITEM_DATE_FORMAT = "hh:mm M‘¬d»’ yyyy";
+    public static final String NEWS_ITEM_DATE_FORMAT = "hh:mm MÊúàdÊó• yyyy";
 
     /**
-     * Ω´Date¿‡–Õ◊™ªªŒ™»’∆⁄◊÷∑˚¥Æ
+     * Â∞ÜDateÁ±ªÂûãËΩ¨Êç¢‰∏∫Êó•ÊúüÂ≠óÁ¨¶‰∏≤
      *
-     * @param date Date∂‘œÛ
-     * @param type –Ë“™µƒ»’∆⁄∏Ò Ω
-     * @return ∞¥’’–Ë«Û∏Ò Ωµƒ»’∆⁄◊÷∑˚¥Æ
+     * @param date DateÂØπË±°
+     * @param type ÈúÄË¶ÅÁöÑÊó•ÊúüÊ†ºÂºè
+     * @return ÊåâÁÖßÈúÄÊ±ÇÊ†ºÂºèÁöÑÊó•ÊúüÂ≠óÁ¨¶‰∏≤
      */
     public static String formatDate(Date date, String type) {
         try {
@@ -60,11 +60,11 @@ public final class DateUtils {
     }
 
     /**
-     * Ω´»’∆⁄◊÷∑˚¥Æ◊™ªªŒ™Date¿‡–Õ
+     * Â∞ÜÊó•ÊúüÂ≠óÁ¨¶‰∏≤ËΩ¨Êç¢‰∏∫DateÁ±ªÂûã
      *
-     * @param dateStr »’∆⁄◊÷∑˚¥Æ
-     * @param type    »’∆⁄◊÷∑˚¥Æ∏Ò Ω
-     * @return Date∂‘œÛ
+     * @param dateStr Êó•ÊúüÂ≠óÁ¨¶‰∏≤
+     * @param type    Êó•ÊúüÂ≠óÁ¨¶‰∏≤Ê†ºÂºè
+     * @return DateÂØπË±°
      */
     public static Date parseDate(String dateStr, String type) {
         SimpleDateFormat df = new SimpleDateFormat(type);
@@ -78,10 +78,10 @@ public final class DateUtils {
     }
     
     /**
-     * »’∆⁄∏Ò Ω◊™ªØ   oldFormat --->  newFormat
+     * Êó•ÊúüÊ†ºÂºèËΩ¨Âåñ   oldFormat --->  newFormat
      * @param dateStr
-     * @param oldFormat æ…∏Ò Ω
-     * @param newFormat –¬∏Ò Ω
+     * @param oldFormat ÊóßÊ†ºÂºè
+     * @param newFormat Êñ∞Ê†ºÂºè
      * @return
      */
     public static String dateFormatChange(String dateStr, SimpleDateFormat oldFormat, SimpleDateFormat newFormat) {
@@ -99,10 +99,10 @@ public final class DateUtils {
     }
     
     /**
-     * »’∆⁄∏Ò Ω◊™ªØ   oldFormatType --->  newFormatType
+     * Êó•ÊúüÊ†ºÂºèËΩ¨Âåñ   oldFormatType --->  newFormatType
      * @param dateStr
-     * @param oldFormatType æ…∏Ò Ω
-     * @param newFormatType –¬∏Ò Ω
+     * @param oldFormatType ÊóßÊ†ºÂºè
+     * @param newFormatType Êñ∞Ê†ºÂºè
      * @return
      */
     public static String dateFormatChange(String dateStr, String oldFormatType, String newFormatType) {
@@ -113,20 +113,20 @@ public final class DateUtils {
         if (date != null) {
         	String newDateString = formatDate(date, newFormatType);
         	if (TextUtils.isEmpty(newDateString)) {
-        		return dateStr;      //◊™ªØ ß∞‹
+        		return dateStr;      //ËΩ¨ÂåñÂ§±Ë¥•
         	} else {
-        		return newDateString;  //◊™ªØ≥…π¶
+        		return newDateString;  //ËΩ¨ÂåñÊàêÂäü
         	}
         } else {
-        	return dateStr;      //◊™ªØ ß∞‹
+        	return dateStr;      //ËΩ¨ÂåñÂ§±Ë¥•
         }
     }
     
     /**
-     * µ√µΩƒÍ
+     * ÂæóÂà∞Âπ¥
      *
-     * @param date Date∂‘œÛ
-     * @return ƒÍ
+     * @param date DateÂØπË±°
+     * @return Âπ¥
      */
     public static int getYear(Date date) {
         Calendar c = Calendar.getInstance();
@@ -135,10 +135,10 @@ public final class DateUtils {
     }
 
     /**
-     * µ√µΩ‘¬
+     * ÂæóÂà∞Êúà
      *
-     * @param date Date∂‘œÛ
-     * @return ‘¬
+     * @param date DateÂØπË±°
+     * @return Êúà
      */
     public static int getMonth(Date date) {
         Calendar c = Calendar.getInstance();
@@ -148,10 +148,10 @@ public final class DateUtils {
     }
 
     /**
-     * µ√µΩ»’
+     * ÂæóÂà∞Êó•
      *
-     * @param date Date∂‘œÛ
-     * @return »’
+     * @param date DateÂØπË±°
+     * @return Êó•
      */
     public static int getDay(Date date) {
         Calendar c = Calendar.getInstance();
@@ -160,20 +160,20 @@ public final class DateUtils {
     }
 
     /**
-     * ◊™ªª»’∆⁄ Ω´»’∆⁄◊™Œ™ΩÒÃÏ, ◊ÚÃÏ, «∞ÃÏ, XXXX-XX-XX, ...
+     * ËΩ¨Êç¢Êó•Êúü Â∞ÜÊó•ÊúüËΩ¨‰∏∫‰ªäÂ§©, Êò®Â§©, ÂâçÂ§©, XXXX-XX-XX, ...
      *
-     * @param time  ±º‰
-     * @return µ±«∞»’∆⁄◊™ªªŒ™∏¸»›“◊¿ÌΩ‚µƒ∑Ω Ω
+     * @param time Êó∂Èó¥
+     * @return ÂΩìÂâçÊó•ÊúüËΩ¨Êç¢‰∏∫Êõ¥ÂÆπÊòìÁêÜËß£ÁöÑÊñπÂºè
      */
     public static String translateDate(Long time) {
         long oneDay = 24 * 60 * 60 * 1000;
         Calendar current = Calendar.getInstance();
-        Calendar today = Calendar.getInstance();    //ΩÒÃÏ
+        Calendar today = Calendar.getInstance();    //‰ªäÂ§©
 
         today.set(Calendar.YEAR, current.get(Calendar.YEAR));
         today.set(Calendar.MONTH, current.get(Calendar.MONTH));
         today.set(Calendar.DAY_OF_MONTH, current.get(Calendar.DAY_OF_MONTH));
-        //  Calendar.HOUR°™°™12–° ±÷∆µƒ–° ± ˝ Calendar.HOUR_OF_DAY°™°™24–° ±÷∆µƒ–° ± ˝
+        //  Calendar.HOUR‚Äî‚Äî12Â∞èÊó∂Âà∂ÁöÑÂ∞èÊó∂Êï∞ Calendar.HOUR_OF_DAY‚Äî‚Äî24Â∞èÊó∂Âà∂ÁöÑÂ∞èÊó∂Êï∞
         today.set(Calendar.HOUR_OF_DAY, 0);
         today.set(Calendar.MINUTE, 0);
         today.set(Calendar.SECOND, 0);
@@ -181,13 +181,13 @@ public final class DateUtils {
         long todayStartTime = today.getTimeInMillis();
 
         if (time >= todayStartTime && time < todayStartTime + oneDay) { // today
-            return "ΩÒÃÏ";
+            return "‰ªäÂ§©";
         } else if (time >= todayStartTime - oneDay && time < todayStartTime) { // yesterday
-            return "◊ÚÃÏ";
+            return "Êò®Â§©";
         } else if (time >= todayStartTime - oneDay * 2 && time < todayStartTime - oneDay) { // the day before yesterday
-            return "«∞ÃÏ";
+            return "ÂâçÂ§©";
         } else if (time > todayStartTime + oneDay) { // future
-            return "Ω´¿¥ƒ≥“ªÃÏ";
+            return "Â∞ÜÊù•Êüê‰∏ÄÂ§©";
         } else {
             SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
             Date date = new Date(time);
@@ -196,14 +196,14 @@ public final class DateUtils {
     }
 
     /**
-     * ◊™ªª»’∆⁄ ◊™ªªŒ™∏¸Œ™»À–‘ªØµƒ ±º‰
+     * ËΩ¨Êç¢Êó•Êúü ËΩ¨Êç¢‰∏∫Êõ¥‰∏∫‰∫∫ÊÄßÂåñÁöÑÊó∂Èó¥
      *
-     * @param time  ±º‰
+     * @param time Êó∂Èó¥
      * @return
      */
     public static String translateDate(long time, long curTime) {
         long oneDay = 24 * 60 * 60;
-        Calendar today = Calendar.getInstance();    //ΩÒÃÏ
+        Calendar today = Calendar.getInstance();    //‰ªäÂ§©
         today.setTimeInMillis(curTime * 1000);
         today.set(Calendar.HOUR_OF_DAY, 0);
         today.set(Calendar.MINUTE, 0);
@@ -212,15 +212,15 @@ public final class DateUtils {
         if (time >= todayStartTime) {
             long d = curTime - time;
             if (d <= 60) {
-                return "1∑÷÷”«∞";
+                return "1ÂàÜÈíüÂâç";
             } else if (d <= 60 * 60) {
                 long m = d / 60;
                 if (m <= 0) {
                     m = 1;
                 }
-                return m + "∑÷÷”«∞";
+                return m + "ÂàÜÈíüÂâç";
             } else {
-                SimpleDateFormat dateFormat = new SimpleDateFormat("ΩÒÃÏ HH:mm");
+                SimpleDateFormat dateFormat = new SimpleDateFormat("‰ªäÂ§© HH:mm");
                 Date date = new Date(time * 1000);
                 String dateStr = dateFormat.format(date);
                 if (!TextUtils.isEmpty(dateStr) && dateStr.contains(" 0")) {
@@ -230,7 +230,7 @@ public final class DateUtils {
             }
         } else {
             if (time < todayStartTime && time > todayStartTime - oneDay) {
-                SimpleDateFormat dateFormat = new SimpleDateFormat("◊ÚÃÏ HH:mm");
+                SimpleDateFormat dateFormat = new SimpleDateFormat("Êò®Â§© HH:mm");
                 Date date = new Date(time * 1000);
                 String dateStr = dateFormat.format(date);
                 if (!TextUtils.isEmpty(dateStr) && dateStr.contains(" 0")) {
@@ -239,7 +239,7 @@ public final class DateUtils {
                 }
                 return dateStr;
             } else  if (time < todayStartTime - oneDay && time > todayStartTime - 2 * oneDay){
-                SimpleDateFormat dateFormat = new SimpleDateFormat("«∞ÃÏ HH:mm");
+                SimpleDateFormat dateFormat = new SimpleDateFormat("ÂâçÂ§© HH:mm");
                 Date date = new Date(time * 1000);
                 String dateStr = dateFormat.format(date);
                 if (!TextUtils.isEmpty(dateStr) && dateStr.contains(" 0")) {
@@ -260,43 +260,43 @@ public final class DateUtils {
     
     public final static String FORMAT_DATE_TIME = "yyyy-MM-dd HH:mm";
     private static SimpleDateFormat sdf = new SimpleDateFormat();
-    private static final int YEAR = 365 * 24 * 60 * 60;// ƒÍ
-	private static final int MONTH = 30 * 24 * 60 * 60;// ‘¬
-	private static final int DAY = 24 * 60 * 60;// ÃÏ
-	private static final int HOUR = 60 * 60;// –° ±
-	private static final int MINUTE = 60;// ∑÷÷”
+    private static final int YEAR = 365 * 24 * 60 * 60;// Âπ¥
+	private static final int MONTH = 30 * 24 * 60 * 60;// Êúà
+	private static final int DAY = 24 * 60 * 60;// Â§©
+	private static final int HOUR = 60 * 60;// Â∞èÊó∂
+	private static final int MINUTE = 60;// ÂàÜÈíü
     
     /**
-	 * ∏˘æ› ±º‰¥¡ªÒ»°√Ë ˆ–‘ ±º‰£¨»Á3∑÷÷”«∞£¨1ÃÏ«∞
+	 * Ê†πÊçÆÊó∂Èó¥Êà≥Ëé∑ÂèñÊèèËø∞ÊÄßÊó∂Èó¥ÔºåÂ¶Ç3ÂàÜÈíüÂâçÔºå1Â§©Ââç
 	 * 
 	 * @param timestamp
-	 *             ±º‰¥¡ µ•ŒªŒ™∫¡√Î
-	 * @return  ±º‰◊÷∑˚¥Æ
+	 *            Êó∂Èó¥Êà≥ Âçï‰Ωç‰∏∫ÊØ´Áßí
+	 * @return Êó∂Èó¥Â≠óÁ¨¶‰∏≤
 	 */
 	public static String getDescriptionTimeFromTimestamp(long timestamp) {
 		long currentTime = System.currentTimeMillis();
-		long timeGap = (currentTime - timestamp) / 1000;// ”Îœ÷‘⁄ ±º‰œ‡≤Ó√Î ˝
+		long timeGap = (currentTime - timestamp) / 1000;// ‰∏éÁé∞Âú®Êó∂Èó¥Áõ∏Â∑ÆÁßíÊï∞
 		String timeStr = null;
 		if (timeGap > YEAR) {
-			timeStr = timeGap / YEAR + "ƒÍ«∞";
+			timeStr = timeGap / YEAR + "Âπ¥Ââç";
 		} else if (timeGap > MONTH) {
-			timeStr = timeGap / MONTH + "∏ˆ‘¬«∞";
-		} else if (timeGap > DAY) {// 1ÃÏ“‘…œ
-			timeStr = timeGap / DAY + "ÃÏ«∞";
-		} else if (timeGap > HOUR) {// 1–° ±-24–° ±
-			timeStr = timeGap / HOUR + "–° ±«∞";
-		} else if (timeGap > MINUTE) {// 1∑÷÷”-59∑÷÷”
-			timeStr = timeGap / MINUTE + "∑÷÷”«∞";
-		} else {// 1√Î÷”-59√Î÷”
-			timeStr = "∏’∏’";
+			timeStr = timeGap / MONTH + "‰∏™ÊúàÂâç";
+		} else if (timeGap > DAY) {// 1Â§©‰ª•‰∏ä
+			timeStr = timeGap / DAY + "Â§©Ââç";
+		} else if (timeGap > HOUR) {// 1Â∞èÊó∂-24Â∞èÊó∂
+			timeStr = timeGap / HOUR + "Â∞èÊó∂Ââç";
+		} else if (timeGap > MINUTE) {// 1ÂàÜÈíü-59ÂàÜÈíü
+			timeStr = timeGap / MINUTE + "ÂàÜÈíüÂâç";
+		} else {// 1ÁßíÈíü-59ÁßíÈíü
+			timeStr = "ÂàöÂàö";
 		}
 		return timeStr;
 	}
 	
 	/**
-	 * ∏˘æ› ±º‰¥¡ªÒ»°√Ë ˆ–‘ ±º‰£¨»Á3∑÷÷”«∞£¨1ÃÏ«∞
-	 * @param strTime “™◊™ªªµƒString¿‡–Õµƒ ±º‰
-	 * @param formatType  ±º‰∏Ò Ω
+	 * Ê†πÊçÆÊó∂Èó¥Êà≥Ëé∑ÂèñÊèèËø∞ÊÄßÊó∂Èó¥ÔºåÂ¶Ç3ÂàÜÈíüÂâçÔºå1Â§©Ââç
+	 * @param strTime Ë¶ÅËΩ¨Êç¢ÁöÑStringÁ±ªÂûãÁöÑÊó∂Èó¥
+	 * @param formatType Êó∂Èó¥Ê†ºÂºè
 	 * @return
 	 */
 	public static String getDescriptionTimeFromTimestamp(String strTime, String formatType) {
@@ -304,10 +304,10 @@ public final class DateUtils {
 	}
 	
 	/**
-	 * ªÒ»°µ±«∞»’∆⁄µƒ÷∏∂®∏Ò Ωµƒ◊÷∑˚¥Æ
+	 * Ëé∑ÂèñÂΩìÂâçÊó•ÊúüÁöÑÊåáÂÆöÊ†ºÂºèÁöÑÂ≠óÁ¨¶‰∏≤
 	 * 
 	 * @param format
-	 *            ÷∏∂®µƒ»’∆⁄ ±º‰∏Ò Ω£¨»ÙŒ™nullªÚ""‘Ú π”√÷∏∂®µƒ∏Ò Ω"yyyy-MM-dd HH:MM"
+	 *            ÊåáÂÆöÁöÑÊó•ÊúüÊó∂Èó¥Ê†ºÂºèÔºåËã•‰∏∫nullÊàñ""Âàô‰ΩøÁî®ÊåáÂÆöÁöÑÊ†ºÂºè"yyyy-MM-dd HH:MM"
 	 * @return
 	 */
 	public static String getCurrentTime(String format) {
@@ -320,9 +320,9 @@ public final class DateUtils {
 	}
 	
  	/**
- 	 * date¿‡–Õ◊™ªªŒ™String¿‡–Õ
- 	 * @param data Date¿‡–Õµƒ ±º‰
- 	 * @param formatType ∏Ò ΩŒ™yyyy-MM-dd HH:mm:ss//yyyyƒÍMM‘¬dd»’ HH ±mm∑÷ss√Î
+ 	 * dateÁ±ªÂûãËΩ¨Êç¢‰∏∫StringÁ±ªÂûã
+ 	 * @param data DateÁ±ªÂûãÁöÑÊó∂Èó¥
+ 	 * @param formatType Ê†ºÂºè‰∏∫yyyy-MM-dd HH:mm:ss//yyyyÂπ¥MMÊúàddÊó• HHÊó∂mmÂàÜssÁßí
  	 * @return
  	 */
  	public static String dateToString(Date data, String formatType) {
@@ -330,9 +330,9 @@ public final class DateUtils {
  	}
  	
  	/**
- 	 * string¿‡–Õ◊™ªªŒ™date¿‡–Õ
- 	 * @param strTime “™◊™ªªµƒstring¿‡–Õµƒ ±º‰£¨formatType“™◊™ªªµƒ∏Ò Ωyyyy-MM-dd HH:mm:ss//yyyyƒÍMM‘¬dd»’
- 	 * @param formatType  ±º‰∏Ò Ω±ÿ–Î“™”ÎformatTypeµƒ ±º‰∏Ò Ωœ‡Õ¨
+ 	 * stringÁ±ªÂûãËΩ¨Êç¢‰∏∫dateÁ±ªÂûã
+ 	 * @param strTime Ë¶ÅËΩ¨Êç¢ÁöÑstringÁ±ªÂûãÁöÑÊó∂Èó¥ÔºåformatTypeË¶ÅËΩ¨Êç¢ÁöÑÊ†ºÂºèyyyy-MM-dd HH:mm:ss//yyyyÂπ¥MMÊúàddÊó•
+ 	 * @param formatType Êó∂Èó¥Ê†ºÂºèÂøÖÈ°ªË¶Å‰∏éformatTypeÁöÑÊó∂Èó¥Ê†ºÂºèÁõ∏Âêå
  	 * @return
  	 */
  	public static Date stringToDate(String strTime, String formatType){
@@ -347,24 +347,24 @@ public final class DateUtils {
  	}
  	
  	/**
- 	 * string¿‡–Õ◊™ªªŒ™long¿‡–Õ
- 	 * @param strTime “™◊™ªªµƒString¿‡–Õµƒ ±º‰ ,strTimeµƒ ±º‰∏Ò Ω∫ÕformatTypeµƒ ±º‰∏Ò Ω±ÿ–Îœ‡Õ¨
- 	 * @param formatType  ±º‰∏Ò Ω
+ 	 * stringÁ±ªÂûãËΩ¨Êç¢‰∏∫longÁ±ªÂûã
+ 	 * @param strTime Ë¶ÅËΩ¨Êç¢ÁöÑStringÁ±ªÂûãÁöÑÊó∂Èó¥ ,strTimeÁöÑÊó∂Èó¥Ê†ºÂºèÂíåformatTypeÁöÑÊó∂Èó¥Ê†ºÂºèÂøÖÈ°ªÁõ∏Âêå
+ 	 * @param formatType Êó∂Èó¥Ê†ºÂºè
  	 * @return
  	 */
  	public static long stringToLong(String strTime, String formatType){
- 		Date date = stringToDate(strTime, formatType); // String¿‡–Õ◊™≥…date¿‡–Õ
+ 		Date date = stringToDate(strTime, formatType); // StringÁ±ªÂûãËΩ¨ÊàêdateÁ±ªÂûã
  		if (date == null) {
  			return 0;
  		} else {
- 			long currentTime = dateToLong(date); // date¿‡–Õ◊™≥…long¿‡–Õ
+ 			long currentTime = dateToLong(date); // dateÁ±ªÂûãËΩ¨ÊàêlongÁ±ªÂûã
  			return currentTime;
  		}
  	}
  	
  	/**
- 	 * date¿‡–Õ◊™ªªŒ™long¿‡–Õ
- 	 * @param date “™◊™ªªµƒdate¿‡–Õµƒ ±º‰
+ 	 * dateÁ±ªÂûãËΩ¨Êç¢‰∏∫longÁ±ªÂûã
+ 	 * @param date Ë¶ÅËΩ¨Êç¢ÁöÑdateÁ±ªÂûãÁöÑÊó∂Èó¥
  	 * @return
  	 */
  	public static long dateToLong(Date date) {
@@ -372,7 +372,7 @@ public final class DateUtils {
  	}
  	
  	/**
-	 * ∏¸–¬À¢–¬ ±º‰
+	 * Êõ¥Êñ∞Âà∑Êñ∞Êó∂Èó¥
 	 * @param created
 	 * @return
 	 */
@@ -386,30 +386,30 @@ public final class DateUtils {
 		long curTime = System.currentTimeMillis();
 		difference_months = (int) (((curTime / 2592000) % 12) - ((created / 2592000) % 12));
 		if (difference_months > 0) {
-			when.append(difference_months + "‘¬");
+			when.append(difference_months + "Êúà");
 		}
 
 		difference_days = (int) (((curTime / 86400) % 30) - ((created / 86400) % 30));
 		if (difference_days > 0) {
-			when.append(difference_days + "ÃÏ");
+			when.append(difference_days + "Â§©");
 		}
 
 		difference_hours = (int) (((curTime / 3600) % 24) - ((created / 3600) % 24));
 		if (difference_hours > 0) {
-			when.append(difference_hours + "–° ±");
+			when.append(difference_hours + "Â∞èÊó∂");
 		}
 
 		difference_minutes = (int) (((curTime / 60) % 60) - ((created / 60) % 60));
 		if (difference_minutes > 0) {
-			when.append(difference_minutes + "∑÷÷”");
+			when.append(difference_minutes + "ÂàÜÈíü");
 		}
 
 		difference_seconds = (int) ((curTime % 60) - (created % 60));
 		if (difference_seconds > 0) {
-			when.append(difference_seconds + "√Î");
+			when.append(difference_seconds + "Áßí");
 		}
 
-		return when.append("«∞").toString();
+		return when.append("Ââç").toString();
 	}
 
 

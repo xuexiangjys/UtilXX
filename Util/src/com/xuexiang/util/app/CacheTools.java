@@ -9,17 +9,17 @@ import java.io.ObjectOutputStream;
 import android.content.Context;
 
 /**
- * »º´æ¹¤¾ß
+ * ç¼“å­˜å·¥å…·
  * 
  * @author ving
  *
  */
 public class CacheTools {
-	public final static int MAX_FAILCOUNT = 3; // ×î´óÊ§°Ü´ÎÊı£¬³¬¹ı¼´²»ÔÙÖØĞÂ×¥È¡
+	public final static int MAX_FAILCOUNT = 3; // æœ€å¤§å¤±è´¥æ¬¡æ•°ï¼Œè¶…è¿‡å³ä¸å†é‡æ–°æŠ“å–
 	public final static String TAG = "CacheTools";
 
 	/**
-	 * ±£´æHTTP»º´æ
+	 * ä¿å­˜HTTPç¼“å­˜
 	 * 
 	 * @param cacheDir
 	 * @param cacheKey
@@ -50,7 +50,7 @@ public class CacheTools {
 	}
 
 	/**
-	 * ¶ÁÈ¡ HTTP »º´æ
+	 * è¯»å– HTTP ç¼“å­˜
 	 * 
 	 * @param cacheDir
 	 * @param cacheKey
@@ -86,18 +86,18 @@ public class CacheTools {
 		context.deleteDatabase("webviewCache.db");
 		context.deleteDatabase("webviewCache.db-shm");
 		context.deleteDatabase("webviewCache.db-wal");
-		// Çå³ıÊı¾İ»º´æ
+		// æ¸…é™¤æ•°æ®ç¼“å­˜
 		clearFolder(context.getFilesDir(), System.currentTimeMillis());
 		clearFolder(context.getCacheDir(), System.currentTimeMillis());
 	}
 
 	/**
-	 * Çå³ıÎÄ¼ş´æÄ¿Â¼
+	 * æ¸…é™¤æ–‡ä»¶å­˜ç›®å½•
 	 * 
 	 * @param dir
-	 *            Ä¿Â¼
+	 *            ç›®å½•
 	 * @param numDays
-	 *            µ±Ç°ÏµÍ³Ê±¼ä
+	 *            å½“å‰ç³»ç»Ÿæ—¶é—´
 	 * @return
 	 */
 	public static int clearFolder(File dir, long curTime) {
@@ -126,13 +126,13 @@ public class CacheTools {
 	}
 
 	/**
-	 * ¼ÆËã»º´æ´óĞ¡
+	 * è®¡ç®—ç¼“å­˜å¤§å°
 	 * 
 	 * @param context
 	 * @return
 	 */
 	public static String getHttpCacheSize(Context context) {
-		// ¼ÆËã»º´æ´óĞ¡
+		// è®¡ç®—ç¼“å­˜å¤§å°
 		long fileSize = 0;
 		String cacheSize = "0KB";
 		File filesDir = context.getFilesDir();
@@ -148,7 +148,7 @@ public class CacheTools {
 	}
 
 	/**
-	 * »ñÈ¡Ä¿Â¼ÎÄ¼ş´óĞ¡
+	 * è·å–ç›®å½•æ–‡ä»¶å¤§å°
 	 * 
 	 * @param dir
 	 * @return
@@ -167,14 +167,14 @@ public class CacheTools {
 				dirSize += file.length();
 			} else if (file.isDirectory()) {
 				dirSize += file.length();
-				dirSize += getDirSize(file); // µİ¹éµ÷ÓÃ¼ÌĞøÍ³¼Æ
+				dirSize += getDirSize(file); // é€’å½’è°ƒç”¨ç»§ç»­ç»Ÿè®¡
 			}
 		}
 		return dirSize;
 	}
 
 	/**
-	 * ×ª»»ÎÄ¼ş´óĞ¡
+	 * è½¬æ¢æ–‡ä»¶å¤§å°
 	 * 
 	 * @param fileS
 	 * @return B/KB/MB/GB

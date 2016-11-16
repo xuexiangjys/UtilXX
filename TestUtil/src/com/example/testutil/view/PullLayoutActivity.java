@@ -9,10 +9,10 @@ import com.example.testutil.view.pulllayout.ZoomListActivity;
 import com.xuexiang.app.BaseActivity;
 
 /**  
- * ´´½¨Ê±¼ä£º2016-6-13 ÉÏÎç12:00:21  
- * ÏîÄ¿Ãû³Æ£ºUtilTest  
+ * åˆ›å»ºæ—¶é—´ï¼š2016-6-13 ä¸Šåˆ12:00:21  
+ * é¡¹ç›®åç§°ï¼šUtilTest  
  * @author xuexiang
- * ÎÄ¼şÃû³Æ£ºPullLayoutActivity.java  
+ * æ–‡ä»¶åç§°ï¼šPullLayoutActivity.java  
  **/
 public class PullLayoutActivity extends BaseActivity {
 

@@ -17,19 +17,19 @@ import com.xuexiang.util.file.LocalFileUtil;
 import com.xuexiang.util.net.uploadfile.HttpClientUtil.ProgressListener;
 
 /**
- * ÎÄ¼şÏÂÔØÀà
+ * æ–‡ä»¶ä¸‹è½½ç±»
  * 
  * @author xx
  */
 public class FileDownloadThread extends Thread {
 
-	/** ÏÂÔØµÄÎÄ¼şÃû */
+	/** ä¸‹è½½çš„æ–‡ä»¶å */
 	private String mFileName;
-	/** ÎÄ¼şÏÂÔØÂ·¾¶ */
+	/** æ–‡ä»¶ä¸‹è½½è·¯å¾„ */
 	private String mDownloadUrl;
-	/** ÏÂÔØÁ¿*/
+	/** ä¸‹è½½é‡*/
 	private long transferred = 0;
-	/** ÏÂÔØ½ø¶È*/
+	/** ä¸‹è½½è¿›åº¦*/
 	private int progress = 0;
 	
 	private static final int DOWN_UPDATE = 1;
@@ -57,9 +57,9 @@ public class FileDownloadThread extends Thread {
 
 	/**
 	 * 
-	 * @param downloadUrl:ÎÄ¼şÏÂÔØµØÖ·
-	 * @param fileName:ÏÂÔØÎÄ¼şÃû
-	 * @param listener:ÏÂÔØÊı¾İ¼àÌı
+	 * @param downloadUrl:æ–‡ä»¶ä¸‹è½½åœ°å€
+	 * @param fileName:ä¸‹è½½æ–‡ä»¶å
+	 * @param listener:ä¸‹è½½æ•°æ®ç›‘å¬
 	 */
 	public FileDownloadThread(String downloadUrl, String fileName, ProgressListener progressListener, DownLoadFinishedListener downLoadFinishedListener) {
 		mDownloadUrl = downloadUrl;
@@ -97,16 +97,16 @@ public class FileDownloadThread extends Thread {
 				int numread = is.read(buf);
 				transferred += numread;
 				progress = (int) (((float) transferred / length) * 100);
-				// ¸üĞÂ½ø¶È
+				// æ›´æ–°è¿›åº¦
 				if (numread <= 0) {
-					// ÏÂÔØÍê³ÉÍ¨Öª°²×°
+					// ä¸‹è½½å®Œæˆé€šçŸ¥å®‰è£…
 					mHandler.sendEmptyMessage(DOWN_UPDATE);
 					mHandler.sendEmptyMessage(DOWN_OVER);
 					mTimer.cancel();
 					break;
 				}
 				fos.write(buf, 0, numread);
-			} while (true);// µã»÷È¡Ïû¾ÍÍ£Ö¹ÏÂÔØ.
+			} while (true);// ç‚¹å‡»å–æ¶ˆå°±åœæ­¢ä¸‹è½½.
 			mTimer.cancel();
 			fos.close();
 			is.close();
@@ -118,7 +118,7 @@ public class FileDownloadThread extends Thread {
 	}
 	
 	/**
-	 * ÎÄ¼şÏÂÔØÍê±ÏµÄÊÂ¼ş¼àÌı
+	 * æ–‡ä»¶ä¸‹è½½å®Œæ¯•çš„äº‹ä»¶ç›‘å¬
 	 */
 	public interface DownLoadFinishedListener {
 		void onFinish(long totalSize);

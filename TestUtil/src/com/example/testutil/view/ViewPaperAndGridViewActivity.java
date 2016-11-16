@@ -14,16 +14,16 @@ import com.xuexiang.view.ViewpaperAndGridView.bean.ChannelItem.onGridViewItemCli
 import com.xuexiang.view.ViewpaperAndGridView.view.GridViewGallery;
 
 /**  
- * ´´½¨Ê±¼ä£º2016-8-1 ÉÏÎç9:12:14  
- * ÏîÄ¿Ãû³Æ£ºUtilTest  
+ * åˆ›å»ºæ—¶é—´ï¼š2016-8-1 ä¸Šåˆ9:12:14  
+ * é¡¹ç›®åç§°ï¼šUtilTest  
  * @author xuexiang
- * ÎÄ¼şÃû³Æ£ºViewPaperAndGridViewActivity.java  
+ * æ–‡ä»¶åç§°ï¼šViewPaperAndGridViewActivity.java  
  **/
 public class ViewPaperAndGridViewActivity extends BaseActivity {
 
-	private GridViewGallery mGallery;//´æ·Å²¼¾ÖµÄÊÓÍ¼ÈİÆ÷
+	private GridViewGallery mGallery;//å­˜æ”¾å¸ƒå±€çš„è§†å›¾å®¹å™¨
 	private LinearLayout mLayout;
-	private List<ChannelItem> list;//Êı¾İ
+	private List<ChannelItem> list;//æ•°æ®
 	
 	@Override
 	public void onCreateActivity() {
@@ -33,7 +33,7 @@ public class ViewPaperAndGridViewActivity extends BaseActivity {
 		initViews();
 	}
 	
-	//ÊÓÍ¼³õÊ¼»¯
+	//è§†å›¾åˆå§‹åŒ–
 	private void initViews() {
 		mGallery = new GridViewGallery(this, list);
 		mLayout = (LinearLayout) findViewById(R.id.ll_gallery);
@@ -45,12 +45,12 @@ public class ViewPaperAndGridViewActivity extends BaseActivity {
 		list = new ArrayList<ChannelItem>();
 		
 		for(int i= 0;i<48;i++){
-			ChannelItem data = new ChannelItem(i+"Ïî",R.drawable.ic_launcher,(i+100));
+			ChannelItem data = new ChannelItem(i+"é¡¹",R.drawable.ic_launcher,(i+100));
 			list.add(data);
 			data.setOnClickListener(new onGridViewItemClickListener(){
 				@Override
 				public void ongvItemClickListener(int position) {
-					Toast.makeText(getApplicationContext(), "µã»÷ÁË:"+position+"Ïî", Toast.LENGTH_SHORT).show();
+					Toast.makeText(getApplicationContext(), "ç‚¹å‡»äº†:"+position+"é¡¹", Toast.LENGTH_SHORT).show();
 				}});
 		}
 		return list;

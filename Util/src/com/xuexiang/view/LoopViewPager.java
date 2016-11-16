@@ -23,18 +23,18 @@ import com.xuexiang.view.loopviewpager.animate.DepthPageTransformer;
 import com.xuexiang.view.loopviewpager.animate.ZoomOutPageTransformer;
 
 /**
- * ViewPagerÎŞÏŞÂÖ²¥
+ * ViewPageræ— é™è½®æ’­
  *
  * @USER Edwin
- * @DATE 16/6/11 ÏÂÎç5:56
+ * @DATE 16/6/11 ä¸‹åˆ5:56
  */
 public class LoopViewPager extends ViewPager implements View.OnTouchListener {
     private static final int MESSAGE_LOOP = 5;
     private Context context;
-    private static int loop_ms = 4000;//ÂÖ²¥µÄÊ±¼ä(ºÁÃë)
+    private static int loop_ms = 4000;//è½®æ’­çš„æ—¶é—´(æ¯«ç§’)
 
     public int getLoop_ms() {
-        //Ì«¿ìÒ²ÊÜ²»ÁË,ÂıÂıÀ´
+        //å¤ªå¿«ä¹Ÿå—ä¸äº†,æ…¢æ…¢æ¥
         if (loop_ms < 1000)
             loop_ms = 1000;
         return loop_ms;
@@ -59,25 +59,25 @@ public class LoopViewPager extends ViewPager implements View.OnTouchListener {
         int loop_style = typedArray.getInteger(MResource.getIdByName(context, "styleable", "LoopViewPager_loop_style"), -1);
         setLoop_ms(loop_ms);
 
-        //TODO ·ÀÖ¹»¨ÆÁ
+        //TODO é˜²æ­¢èŠ±å±
         if (loop_duration > loop_ms)
             loop_duration = loop_ms;
 
-        //TODO ÉèÖÃ»¬¶¯µÄËÙÂÊ
+        //TODO è®¾ç½®æ»‘åŠ¨çš„é€Ÿç‡
         try {
             Field mField = ViewPager.class.getDeclaredField("mScroller");
             mField.setAccessible(true);
 
             LoopScroller mScroller = new LoopScroller(context,
                     new AccelerateInterpolator());
-            //¿ÉÒÔÓÃsetDurationµÄ·½Ê½µ÷ÕûËÙÂÊ
+            //å¯ä»¥ç”¨setDurationçš„æ–¹å¼è°ƒæ•´é€Ÿç‡
             mScroller.setmDuration(loop_duration);
             mField.set(this, mScroller);
         } catch (Exception e) {
             e.printStackTrace();
         }
 
-        // TODO ÉèÖÃÑùÊ½
+        // TODO è®¾ç½®æ ·å¼
         if (loop_style == 1) {
             setPageTransformer(true, new DepthPageTransformer());
         } else if (loop_style == 2) {
@@ -123,62 +123,62 @@ public class LoopViewPager extends ViewPager implements View.OnTouchListener {
 
 
     /**
-     * ¿ªÊ¼Ñ­»·
+     * å¼€å§‹å¾ªç¯
      */
     public void startLoop() {
         handler.removeCallbacksAndMessages(MESSAGE_LOOP);
         handler.sendEmptyMessageDelayed(MESSAGE_LOOP, getLoop_ms());
-        LogUtils.e("¿ªÊ¼Ñ­»· startLoop");
+        LogUtils.e("å¼€å§‹å¾ªç¯ startLoop");
     }
 
     /**
-     * Í£Ö¹Ñ­»·
-     * Îñ±ØÔÚonDestoryÖ´ĞĞ
+     * åœæ­¢å¾ªç¯
+     * åŠ¡å¿…åœ¨onDestoryæ‰§è¡Œ
      */
     public void stopLoop() {
         handler.removeMessages(MESSAGE_LOOP);
-        LogUtils.e("Í£Ö¹Ñ­»· stopLoop");
+        LogUtils.e("åœæ­¢å¾ªç¯ stopLoop");
     }
 
 
     /**
-     * Ñ¹ËõÍ¼Æ¬
+     * å‹ç¼©å›¾ç‰‡
      *
-     * @param res       ×ÊÔ´
-     * @param resId     Í¼Æ¬ID
-     * @param reqWidth  0±íÊ¾»ñÈ¡ViewPagerµÄ¿í
-     * @param reqHeight 0±íÊ¾»ñÈ¡ViewPagerµÄ¸ß
+     * @param res       èµ„æº
+     * @param resId     å›¾ç‰‡ID
+     * @param reqWidth  0è¡¨ç¤ºè·å–ViewPagerçš„å®½
+     * @param reqHeight 0è¡¨ç¤ºè·å–ViewPagerçš„é«˜
      * @return
      */
     public Bitmap decodeSampledBitmapFromResource(Resources res, int resId,
                                                   int reqWidth, int reqHeight) {
-        // µÚÒ»´Î½âÂëinJustDecodeBounds = true¼ì²é³ß´ç
+        // ç¬¬ä¸€æ¬¡è§£ç inJustDecodeBounds = trueæ£€æŸ¥å°ºå¯¸
         final BitmapFactory.Options options = new BitmapFactory.Options();
         options.inJustDecodeBounds = true;
         BitmapFactory.decodeResource(res, resId, options);
 
-        // ¼ÆËãinSampleSize
+        // è®¡ç®—inSampleSize
         options.inSampleSize = calculateInSampleSize(options, reqWidth, reqHeight);
 
-        // ½âÂëÓëinSampleSizeÉèÖÃÎ»Í¼
+        // è§£ç ä¸inSampleSizeè®¾ç½®ä½å›¾
         options.inJustDecodeBounds = false;
         return BitmapFactory.decodeResource(res, resId, options);
     }
 
     /**
-     * Ëã·¨
-     * ¼ÙÈçÄãÒªÇó¿í¸ß200*200
-     * Í¼Æ¬Êµ¼Ê¿í¸ß1000*1000£¬³ıÒÔ2ÒÔºó±ä³É500*500
-     * ·¢ÏÖ±ÈÒªÇóµÄ»¹ÊÇ´ó£¬¾ÍÔÙ³ıÒÔ2.¡£Ö±µ½´ïµ½ÒªÇó
+     * ç®—æ³•
+     * å‡å¦‚ä½ è¦æ±‚å®½é«˜200*200
+     * å›¾ç‰‡å®é™…å®½é«˜1000*1000ï¼Œé™¤ä»¥2ä»¥åå˜æˆ500*500
+     * å‘ç°æ¯”è¦æ±‚çš„è¿˜æ˜¯å¤§ï¼Œå°±å†é™¤ä»¥2.ã€‚ç›´åˆ°è¾¾åˆ°è¦æ±‚
      *
      * @param options
      * @param reqWidth
      * @param reqHeight
-     * @return Ñ¹Ëõ±ÈÀı
+     * @return å‹ç¼©æ¯”ä¾‹
      */
     public int calculateInSampleSize(
             BitmapFactory.Options options, int reqWidth, int reqHeight) {
-        // Ô­Ê¼Í¼ÏñµÄ¸ß¶ÈºÍ¿í¶È
+        // åŸå§‹å›¾åƒçš„é«˜åº¦å’Œå®½åº¦
         final int height = options.outHeight;
         final int width = options.outWidth;
         int inSampleSize = 1;
@@ -187,7 +187,7 @@ public class LoopViewPager extends ViewPager implements View.OnTouchListener {
             final int halfHeight = height / 2;
             final int halfWidth = width / 2;
 
-            // ¼ÆËã×î´óinSampleSizeÖµÊÇ2µÄÃİ,ÈÃÁ½Õß¸ß¶ÈºÍ¿í¶È´óÓÚÇëÇóµÄ¸ß¶ÈºÍ¿í¶È¡£
+            // è®¡ç®—æœ€å¤§inSampleSizeå€¼æ˜¯2çš„å¹‚,è®©ä¸¤è€…é«˜åº¦å’Œå®½åº¦å¤§äºè¯·æ±‚çš„é«˜åº¦å’Œå®½åº¦ã€‚
             while ((halfHeight / inSampleSize) > reqHeight
                     && (halfWidth / inSampleSize) > reqWidth) {
                 inSampleSize *= 2;

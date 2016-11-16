@@ -15,55 +15,55 @@ import android.util.Log;
 import android.view.View;
 
 /**
- * ·Âiphone´ø½ø¶ÈµÄ½ø¶ÈÌõ£¬Ïß³Ì°²È«µÄView£¬¿ÉÖ±½ÓÔÚÏß³ÌÖĞ¸üĞÂ½ø¶È
+ * ä»¿iphoneå¸¦è¿›åº¦çš„è¿›åº¦æ¡ï¼Œçº¿ç¨‹å®‰å…¨çš„Viewï¼Œå¯ç›´æ¥åœ¨çº¿ç¨‹ä¸­æ›´æ–°è¿›åº¦
  */
 public class RoundProgressBar extends View {
 	/**
-	 * »­±Ê¶ÔÏóµÄÒıÓÃ
+	 * ç”»ç¬”å¯¹è±¡çš„å¼•ç”¨
 	 */
 	private Paint paint;
 	
 	/**
-	 * Ô²»·µÄÑÕÉ«
+	 * åœ†ç¯çš„é¢œè‰²
 	 */
 	private int roundColor;
 	
 	/**
-	 * Ô²»·½ø¶ÈµÄÑÕÉ«
+	 * åœ†ç¯è¿›åº¦çš„é¢œè‰²
 	 */
 	private int roundProgressColor;
 	
 	/**
-	 * ÖĞ¼ä½ø¶È°Ù·Ö±ÈµÄ×Ö·û´®µÄÑÕÉ«
+	 * ä¸­é—´è¿›åº¦ç™¾åˆ†æ¯”çš„å­—ç¬¦ä¸²çš„é¢œè‰²
 	 */
 	private int textColor;
 	
 	/**
-	 * ÖĞ¼ä½ø¶È°Ù·Ö±ÈµÄ×Ö·û´®µÄ×ÖÌå
+	 * ä¸­é—´è¿›åº¦ç™¾åˆ†æ¯”çš„å­—ç¬¦ä¸²çš„å­—ä½“
 	 */
 	private float textSize;
 	
 	/**
-	 * Ô²»·µÄ¿í¶È
+	 * åœ†ç¯çš„å®½åº¦
 	 */
 	private float roundWidth;
 	
 	/**
-	 * ×î´ó½ø¶È
+	 * æœ€å¤§è¿›åº¦
 	 */
 	private int max;
 	
 	/**
-	 * µ±Ç°½ø¶È
+	 * å½“å‰è¿›åº¦
 	 */
 	private int progress;
 	/**
-	 * ÊÇ·ñÏÔÊ¾ÖĞ¼äµÄ½ø¶È
+	 * æ˜¯å¦æ˜¾ç¤ºä¸­é—´çš„è¿›åº¦
 	 */
 	private boolean textIsDisplayable;
 	
 	/**
-	 * ½ø¶ÈµÄ·ç¸ñ£¬ÊµĞÄ»òÕß¿ÕĞÄ
+	 * è¿›åº¦çš„é£æ ¼ï¼Œå®å¿ƒæˆ–è€…ç©ºå¿ƒ
 	 */
 	private int style;
 	
@@ -87,7 +87,7 @@ public class RoundProgressBar extends View {
 		TypedArray mTypedArray = context.obtainStyledAttributes(attrs,
 				RUtils.getStyleable(context, "RoundProgressBar"));
 		
-		//»ñÈ¡×Ô¶¨ÒåÊôĞÔºÍÄ¬ÈÏÖµ
+		//è·å–è‡ªå®šä¹‰å±æ€§å’Œé»˜è®¤å€¼
 		roundColor = mTypedArray.getColor(MResource.getIdByName(context, "styleable", "RoundProgressBar_roundColor"), Color.RED);
 		roundProgressColor = mTypedArray.getColor(MResource.getIdByName(context, "styleable", "RoundProgressBar_roundProgressColor"), Color.GREEN);
 		textColor = mTypedArray.getColor(MResource.getIdByName(context, "styleable", "RoundProgressBar_textColor"), Color.GREEN);
@@ -106,53 +106,53 @@ public class RoundProgressBar extends View {
 		super.onDraw(canvas);
 		
 		/**
-		 * »­×îÍâ²ãµÄ´óÔ²»·
+		 * ç”»æœ€å¤–å±‚çš„å¤§åœ†ç¯
 		 */
-		int centre = getWidth()/2; //»ñÈ¡Ô²ĞÄµÄx×ø±ê
-		int radius = (int) (centre - roundWidth/2); //Ô²»·µÄ°ë¾¶
-		paint.setColor(roundColor); //ÉèÖÃÔ²»·µÄÑÕÉ«
-		paint.setStyle(Paint.Style.STROKE); //ÉèÖÃ¿ÕĞÄ
-		paint.setStrokeWidth(roundWidth); //ÉèÖÃÔ²»·µÄ¿í¶È
-		paint.setAntiAlias(true);  //Ïû³ı¾â³İ 
-		canvas.drawCircle(centre, centre, radius, paint); //»­³öÔ²»·
+		int centre = getWidth()/2; //è·å–åœ†å¿ƒçš„xåæ ‡
+		int radius = (int) (centre - roundWidth/2); //åœ†ç¯çš„åŠå¾„
+		paint.setColor(roundColor); //è®¾ç½®åœ†ç¯çš„é¢œè‰²
+		paint.setStyle(Paint.Style.STROKE); //è®¾ç½®ç©ºå¿ƒ
+		paint.setStrokeWidth(roundWidth); //è®¾ç½®åœ†ç¯çš„å®½åº¦
+		paint.setAntiAlias(true);  //æ¶ˆé™¤é”¯é½¿ 
+		canvas.drawCircle(centre, centre, radius, paint); //ç”»å‡ºåœ†ç¯
 		
 		Log.e("log", centre + "");
 		
 		/**
-		 * »­½ø¶È°Ù·Ö±È
+		 * ç”»è¿›åº¦ç™¾åˆ†æ¯”
 		 */
 		paint.setStrokeWidth(0); 
 		paint.setColor(textColor);
 		paint.setTextSize(textSize);
-		paint.setTypeface(Typeface.DEFAULT_BOLD); //ÉèÖÃ×ÖÌå
-		int percent = (int)(((float)progress / (float)max) * 100);  //ÖĞ¼äµÄ½ø¶È°Ù·Ö±È£¬ÏÈ×ª»»³ÉfloatÔÚ½øĞĞ³ı·¨ÔËËã£¬²»È»¶¼Îª0
-		float textWidth = paint.measureText(percent + "%");   //²âÁ¿×ÖÌå¿í¶È£¬ÎÒÃÇĞèÒª¸ù¾İ×ÖÌåµÄ¿í¶ÈÉèÖÃÔÚÔ²»·ÖĞ¼ä
+		paint.setTypeface(Typeface.DEFAULT_BOLD); //è®¾ç½®å­—ä½“
+		int percent = (int)(((float)progress / (float)max) * 100);  //ä¸­é—´çš„è¿›åº¦ç™¾åˆ†æ¯”ï¼Œå…ˆè½¬æ¢æˆfloatåœ¨è¿›è¡Œé™¤æ³•è¿ç®—ï¼Œä¸ç„¶éƒ½ä¸º0
+		float textWidth = paint.measureText(percent + "%");   //æµ‹é‡å­—ä½“å®½åº¦ï¼Œæˆ‘ä»¬éœ€è¦æ ¹æ®å­—ä½“çš„å®½åº¦è®¾ç½®åœ¨åœ†ç¯ä¸­é—´
 		
 		if(textIsDisplayable && percent != 0 && style == STROKE){
-			canvas.drawText(percent + "%", centre - textWidth / 2, centre + textSize/2, paint); //»­³ö½ø¶È°Ù·Ö±È
+			canvas.drawText(percent + "%", centre - textWidth / 2, centre + textSize/2, paint); //ç”»å‡ºè¿›åº¦ç™¾åˆ†æ¯”
 		}
 		
 		
 		/**
-		 * »­Ô²»¡ £¬»­Ô²»·µÄ½ø¶È
+		 * ç”»åœ†å¼§ ï¼Œç”»åœ†ç¯çš„è¿›åº¦
 		 */
 		
-		//ÉèÖÃ½ø¶ÈÊÇÊµĞÄ»¹ÊÇ¿ÕĞÄ
-		paint.setStrokeWidth(roundWidth); //ÉèÖÃÔ²»·µÄ¿í¶È
-		paint.setColor(roundProgressColor);  //ÉèÖÃ½ø¶ÈµÄÑÕÉ«
+		//è®¾ç½®è¿›åº¦æ˜¯å®å¿ƒè¿˜æ˜¯ç©ºå¿ƒ
+		paint.setStrokeWidth(roundWidth); //è®¾ç½®åœ†ç¯çš„å®½åº¦
+		paint.setColor(roundProgressColor);  //è®¾ç½®è¿›åº¦çš„é¢œè‰²
 		RectF oval = new RectF(centre - radius, centre - radius, centre
-				+ radius, centre + radius);  //ÓÃÓÚ¶¨ÒåµÄÔ²»¡µÄĞÎ×´ºÍ´óĞ¡µÄ½çÏŞ
+				+ radius, centre + radius);  //ç”¨äºå®šä¹‰çš„åœ†å¼§çš„å½¢çŠ¶å’Œå¤§å°çš„ç•Œé™
 		
 		switch (style) {
 		case STROKE:{
 			paint.setStyle(Paint.Style.STROKE);
-			canvas.drawArc(oval, 0, 360 * progress / max, false, paint);  //¸ù¾İ½ø¶È»­Ô²»¡
+			canvas.drawArc(oval, 0, 360 * progress / max, false, paint);  //æ ¹æ®è¿›åº¦ç”»åœ†å¼§
 			break;
 		}
 		case FILL:{
 			paint.setStyle(Paint.Style.FILL_AND_STROKE);
 			if(progress !=0)
-				canvas.drawArc(oval, 0, 360 * progress / max, true, paint);  //¸ù¾İ½ø¶È»­Ô²»¡
+				canvas.drawArc(oval, 0, 360 * progress / max, true, paint);  //æ ¹æ®è¿›åº¦ç”»åœ†å¼§
 			break;
 		}
 		}
@@ -165,7 +165,7 @@ public class RoundProgressBar extends View {
 	}
 
 	/**
-	 * ÉèÖÃ½ø¶ÈµÄ×î´óÖµ
+	 * è®¾ç½®è¿›åº¦çš„æœ€å¤§å€¼
 	 * @param max
 	 */
 	public synchronized void setMax(int max) {
@@ -176,7 +176,7 @@ public class RoundProgressBar extends View {
 	}
 
 	/**
-	 * »ñÈ¡½ø¶È.ĞèÒªÍ¬²½
+	 * è·å–è¿›åº¦.éœ€è¦åŒæ­¥
 	 * @return
 	 */
 	public synchronized int getProgress() {
@@ -184,8 +184,8 @@ public class RoundProgressBar extends View {
 	}
 
 	/**
-	 * ÉèÖÃ½ø¶È£¬´ËÎªÏß³Ì°²È«¿Ø¼ş£¬ÓÉÓÚ¿¼ÂÇ¶àÏßµÄÎÊÌâ£¬ĞèÒªÍ¬²½
-	 * Ë¢ĞÂ½çÃæµ÷ÓÃpostInvalidate()ÄÜÔÚ·ÇUIÏß³ÌË¢ĞÂ
+	 * è®¾ç½®è¿›åº¦ï¼Œæ­¤ä¸ºçº¿ç¨‹å®‰å…¨æ§ä»¶ï¼Œç”±äºè€ƒè™‘å¤šçº¿çš„é—®é¢˜ï¼Œéœ€è¦åŒæ­¥
+	 * åˆ·æ–°ç•Œé¢è°ƒç”¨postInvalidate()èƒ½åœ¨éUIçº¿ç¨‹åˆ·æ–°
 	 * @param progress
 	 */
 	public synchronized void setProgress(int progress) {

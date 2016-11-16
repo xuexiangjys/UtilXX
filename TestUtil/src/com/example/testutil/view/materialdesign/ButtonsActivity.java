@@ -33,7 +33,7 @@ public class ButtonsActivity extends Activity {
         mButtonFloat.setOnClickListener(new OnClickListener(){
 			@Override
 			public void onClick(View v) {
-				Toast.makeText(ButtonsActivity.this, "µã»÷ÊÂ¼þ", Toast.LENGTH_SHORT).show();
+				Toast.makeText(ButtonsActivity.this, "ç‚¹å‡»äº‹ä»¶", Toast.LENGTH_SHORT).show();
 			}
 		});
     }  

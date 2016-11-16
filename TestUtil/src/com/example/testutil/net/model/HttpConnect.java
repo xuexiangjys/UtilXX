@@ -1,18 +1,18 @@
 package com.example.testutil.net.model;
 
 /**  
- * ´´½¨Ê±¼ä£º2016-2-28 ÏÂÎç7:26:12  
- * ÏîÄ¿Ãû³Æ£ºhelpertest  
+ * åˆ›å»ºæ—¶é—´ï¼š2016-2-28 ä¸‹åˆ7:26:12  
+ * é¡¹ç›®åç§°ï¼šhelpertest  
  * @author xuexiang
- * ÎÄ¼şÃû³Æ£ºHttpConnect.java  
+ * æ–‡ä»¶åç§°ï¼šHttpConnect.java  
  **/
 public class HttpConnect {
 
-	/** ÇëÇóÒ³Êı*/
+	/** è¯·æ±‚é¡µæ•°*/
 	private int pageNum;
-	/** ÅÅĞòÌõ¼ş*/
+	/** æ’åºæ¡ä»¶*/
 	private String sortCondition;
-	/** É¸Ñ¡Ìõ¼ş*/
+	/** ç­›é€‰æ¡ä»¶*/
 	private String filtrate;
 
 	public int getPageNum() {

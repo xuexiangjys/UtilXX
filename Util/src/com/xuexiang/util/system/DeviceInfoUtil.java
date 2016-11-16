@@ -14,7 +14,7 @@ import android.text.format.Formatter;
 import android.util.DisplayMetrics;
 import android.view.WindowManager;
 /**
- * @Description:ÊÖ»úÉè±¸µÄÏà¹ØĞÅÏ¢
+ * @Description:æ‰‹æœºè®¾å¤‡çš„ç›¸å…³ä¿¡æ¯
  */ 
 public class DeviceInfoUtil
 {
@@ -123,7 +123,7 @@ public class DeviceInfoUtil
         }
     }
     /** 
-     * »ñµÃSD¿¨×Ü´óĞ¡ 
+     * è·å¾—SDå¡æ€»å¤§å° 
      *  
      * @return 
      */  
@@ -136,7 +136,7 @@ public class DeviceInfoUtil
     }  
   
     /** 
-     * »ñµÃsd¿¨Ê£ÓàÈİÁ¿£¬¼´¿ÉÓÃ´óĞ¡ 
+     * è·å¾—sdå¡å‰©ä½™å®¹é‡ï¼Œå³å¯ç”¨å¤§å° 
      *  
      * @return 
      */  
@@ -149,7 +149,7 @@ public class DeviceInfoUtil
     }  
   
     /** 
-     * »ñµÃ»úÉíÄÚ´æ×Ü´óĞ¡ 
+     * è·å¾—æœºèº«å†…å­˜æ€»å¤§å° 
      *  
      * @return 
      */  
@@ -162,7 +162,7 @@ public class DeviceInfoUtil
     }  
   
     /** 
-     * »ñµÃ»úÉí¿ÉÓÃÄÚ´æ 
+     * è·å¾—æœºèº«å¯ç”¨å†…å­˜ 
      *  
      * @return 
      */  

@@ -20,7 +20,7 @@ public class ChannelUtil {
     private static String mChannel;
 
     /**
-     * ·µ»ØÊĞ³¡¡£  Èç¹û»ñÈ¡Ê§°Ü·µ»Ø""
+     * è¿”å›å¸‚åœºã€‚  å¦‚æœè·å–å¤±è´¥è¿”å›""
      *
      * @param context
      * @return
@@ -30,45 +30,45 @@ public class ChannelUtil {
     }
 
     /**
-     * ·µ»ØÊĞ³¡¡£  Èç¹û»ñÈ¡Ê§°Ü·µ»ØdefaultChannel
+     * è¿”å›å¸‚åœºã€‚  å¦‚æœè·å–å¤±è´¥è¿”å›defaultChannel
      *
      * @param context
      * @param defaultChannel
      * @return
      */
     public static String getChannel(Context context, String defaultChannel) {
-        //ÄÚ´æÖĞ»ñÈ¡
+        //å†…å­˜ä¸­è·å–
         if (!TextUtils.isEmpty(mChannel)) {
             return mChannel;
         }
-        //spÖĞ»ñÈ¡
+        //spä¸­è·å–
         mChannel = getChannelBySharedPreferences(context);
         if (!TextUtils.isEmpty(mChannel)) {
             return mChannel;
         }
-        //´ÓapkÖĞ»ñÈ¡
+        //ä»apkä¸­è·å–
         mChannel = getChannelFromApk(context, CHANNEL_KEY);
         if (!TextUtils.isEmpty(mChannel)) {
-            //±£´æspÖĞ±¸ÓÃ
+            //ä¿å­˜spä¸­å¤‡ç”¨
             saveChannelBySharedPreferences(context, mChannel);
             return mChannel;
         }
-        //È«²¿»ñÈ¡Ê§°Ü
+        //å…¨éƒ¨è·å–å¤±è´¥
         return defaultChannel;
     }
 
     /**
-     * ´ÓapkÖĞ»ñÈ¡°æ±¾ĞÅÏ¢
+     * ä»apkä¸­è·å–ç‰ˆæœ¬ä¿¡æ¯
      *
      * @param context
      * @param channelKey
      * @return
      */
     private static String getChannelFromApk(Context context, String channelKey) {
-        //´Óapk°üÖĞ»ñÈ¡
+        //ä»apkåŒ…ä¸­è·å–
         ApplicationInfo appinfo = context.getApplicationInfo();
         String sourceDir = appinfo.sourceDir;
-        //Ä¬ÈÏ·ÅÔÚmeta-inf/Àï£¬ ËùÒÔĞèÒªÔÙÆ´½ÓÒ»ÏÂ
+        //é»˜è®¤æ”¾åœ¨meta-inf/é‡Œï¼Œ æ‰€ä»¥éœ€è¦å†æ‹¼æ¥ä¸€ä¸‹
         String key = "META-INF/" + channelKey;
         String ret = "";
         ZipFile zipfile = null;
@@ -103,7 +103,7 @@ public class ChannelUtil {
     }
 
     /**
-     * ±¾µØ±£´æchannel & ¶ÔÓ¦°æ±¾ºÅ
+     * æœ¬åœ°ä¿å­˜channel & å¯¹åº”ç‰ˆæœ¬å·
      *
      * @param context
      * @param channel
@@ -117,22 +117,22 @@ public class ChannelUtil {
     }
 
     /**
-     * ´ÓspÖĞ»ñÈ¡channel
+     * ä»spä¸­è·å–channel
      *
      * @param context
-     * @return Îª¿Õ±íÊ¾»ñÈ¡Òì³£¡¢spÖĞµÄÖµÒÑ¾­Ê§Ğ§¡¢spÖĞÃ»ÓĞ´ËÖµ
+     * @return ä¸ºç©ºè¡¨ç¤ºè·å–å¼‚å¸¸ã€spä¸­çš„å€¼å·²ç»å¤±æ•ˆã€spä¸­æ²¡æœ‰æ­¤å€¼
      */
     private static String getChannelBySharedPreferences(Context context) {
         SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(context);
         int currentVersionCode = getVersionCode(context);
         if (currentVersionCode == -1) {
-            //»ñÈ¡´íÎó
+            //è·å–é”™è¯¯
             return "";
         }
         int versionCodeSaved = sp.getInt(CHANNEL_VERSION_KEY, -1);
         if (versionCodeSaved == -1) {
-            //±¾µØÃ»ÓĞ´æ´¢µÄchannel¶ÔÓ¦µÄ°æ±¾ºÅ
-            //µÚÒ»´ÎÊ¹ÓÃ  »òÕß Ô­ÏÈ´æ´¢°æ±¾ºÅÒì³£
+            //æœ¬åœ°æ²¡æœ‰å­˜å‚¨çš„channelå¯¹åº”çš„ç‰ˆæœ¬å·
+            //ç¬¬ä¸€æ¬¡ä½¿ç”¨  æˆ–è€… åŸå…ˆå­˜å‚¨ç‰ˆæœ¬å·å¼‚å¸¸
             return "";
         }
         if (currentVersionCode != versionCodeSaved) {
@@ -142,7 +142,7 @@ public class ChannelUtil {
     }
 
     /**
-     * ´Ó°üĞÅÏ¢ÖĞ»ñÈ¡°æ±¾ºÅ
+     * ä»åŒ…ä¿¡æ¯ä¸­è·å–ç‰ˆæœ¬å·
      *
      * @param context
      * @return

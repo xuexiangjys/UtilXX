@@ -11,10 +11,10 @@ import com.example.testutil.ViewActivity;
 import com.xuexiang.view.ProgressButton;
 
 /**  
- * ´´½¨Ê±¼ä£º2016-6-26 ÏÂÎç4:44:56  
- * ÏîÄ¿Ãû³Æ£ºUtilTest  
+ * åˆ›å»ºæ—¶é—´ï¼š2016-6-26 ä¸‹åˆ4:44:56  
+ * é¡¹ç›®åç§°ï¼šUtilTest  
  * @author xuexiang
- * ÎÄ¼şÃû³Æ£ºProgressButtonActivity.java  
+ * æ–‡ä»¶åç§°ï¼šProgressButtonActivity.java  
  **/
 public class ProgressButtonActivity extends Activity implements View.OnClickListener{
 

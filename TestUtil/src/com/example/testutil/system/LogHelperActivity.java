@@ -16,10 +16,10 @@ import com.xuexiang.util.view.DialogUtil;
 import com.xuexiang.view.SlideSwitch;
 import com.xuexiang.view.SlideSwitch.SlideListener;
 /**  
- * ´´½¨Ê±¼ä£º2016-7-31 ÏÂÎç9:26:18  
- * ÏîÄ¿Ãû³Æ£ºUtilTest  
+ * åˆ›å»ºæ—¶é—´ï¼š2016-7-31 ä¸‹åˆ9:26:18  
+ * é¡¹ç›®åç§°ï¼šUtilTest  
  * @author xuexiang
- * ÎÄ¼şÃû³Æ£ºLogInfoActivity.java  
+ * æ–‡ä»¶åç§°ï¼šLogInfoActivity.java  
  **/
 public class LogHelperActivity extends BaseActivity implements OnClickListener{
 	private SlideSwitch switch_loghelper;
@@ -46,7 +46,7 @@ public class LogHelperActivity extends BaseActivity implements OnClickListener{
 			public void open() {
 				File pDebugLogDir = new File(LocalFileUtil.LOG_DIR + "debug_log/");
 				if (pDebugLogDir.exists() && pDebugLogDir.listFiles().length > 0) {
-					DialogUtil.showChangePrompt(mContext, "ÊÇ·ñÇå¿Õ¾ÉµÄÈÕÖ¾£¿",
+					DialogUtil.showChangePrompt(mContext, "æ˜¯å¦æ¸…ç©ºæ—§çš„æ—¥å¿—ï¼Ÿ",
 							new DialogInterface.OnClickListener(){
 
 								@Override
@@ -64,12 +64,12 @@ public class LogHelperActivity extends BaseActivity implements OnClickListener{
 				} else {
 					LogHelper.open(mContext, false);
 				}					
-				LogHelper.trace("µ÷ÊÔÄ£Ê½±»:¡¾´ò¿ª¡¿");
+				LogHelper.trace("è°ƒè¯•æ¨¡å¼è¢«:ã€æ‰“å¼€ã€‘");
 				mSettingSPUtil.setDebugMode(true);
 			}
 			@Override
 			public void close() {			
-				LogHelper.trace("µ÷ÊÔÄ£Ê½±»:¡¾¹Ø±Õ¡¿");
+				LogHelper.trace("è°ƒè¯•æ¨¡å¼è¢«:ã€å…³é—­ã€‘");
 				LogHelper.close();
 				mSettingSPUtil.setDebugMode(false);
 		}});
@@ -82,7 +82,7 @@ public class LogHelperActivity extends BaseActivity implements OnClickListener{
 	public void onClick(View v) {
 		switch (v.getId()) {
 		case R.id.btn_commonloginfo:
-			LogHelper.trace("ÕâÊÇÒ»ÌõÆÕÍ¨µÄĞÅÏ¢ÈÕÖ¾£¡");			
+			LogHelper.trace("è¿™æ˜¯ä¸€æ¡æ™®é€šçš„ä¿¡æ¯æ—¥å¿—ï¼");			
 			break;
 			
 		case R.id.btn_errorloginfo:
@@ -91,7 +91,7 @@ public class LogHelperActivity extends BaseActivity implements OnClickListener{
 			} catch (Exception e) {
 				LogHelper.saveExceptionStackInfo(e);
 			}	
-//			LogHelper.saveExceptionStackInfo(new Throwable("´íÎóĞÅÏ¢"));
+//			LogHelper.saveExceptionStackInfo(new Throwable("é”™è¯¯ä¿¡æ¯"));
 			break;
 		case R.id.btn_crashloginfo:
 			Button button = (Button)findViewById(R.id.textView1);

@@ -45,11 +45,11 @@ public class ScaleViewAttacher implements IScaleView, View.OnTouchListener, Vers
 	static final int EDGE_RIGHT = 1;
 	static final int EDGE_BOTH = 2;
 
-	/** 放大的最大�?�?*/
+	/** 鏀惧ぇ鐨勬渶澶у?鏁?*/
 	public static final float DEFAULT_MAX_SCALE = 3.0f;
-	/** 放大的中间�?�?*/
+	/** 鏀惧ぇ鐨勪腑闂村?鏁?*/
 	public static final float DEFAULT_MID_SCALE = 1.75f;
-	/** 放大的最小�?�?*/
+	/** 鏀惧ぇ鐨勬渶灏忓?鏁?*/
 	public static final float DEFAULT_MIN_SCALE = 1.0f;
 
 	private float mMinScale = DEFAULT_MIN_SCALE;

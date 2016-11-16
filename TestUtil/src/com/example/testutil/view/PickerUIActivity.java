@@ -15,10 +15,10 @@ import com.xuexiang.view.uipicker.picker.PickerUI;
 import com.xuexiang.view.uipicker.picker.PickerUISettings;
 
 /**  
- * ´´½¨Ê±¼ä£º2016-6-12 ÏÂÎç4:27:59  
- * ÏîÄ¿Ãû³Æ£ºUtilTest  
+ * åˆ›å»ºæ—¶é—´ï¼š2016-6-12 ä¸‹åˆ4:27:59  
+ * é¡¹ç›®åç§°ï¼šUtilTest  
  * @author xuexiang
- * ÎÄ¼şÃû³Æ£ºPickerUIActivity.java  
+ * æ–‡ä»¶åç§°ï¼šPickerUIActivity.java  
  **/
 public class PickerUIActivity extends BaseActivity {
 

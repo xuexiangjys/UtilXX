@@ -13,12 +13,12 @@ import android.widget.Toast;
 /**
  *
  * @ClassName: FlexibleToast
- * @Description: È«¾ÖToast£º
- * 1. Ö§³ÖÄ¬ÈÏ¸ñÊ½£¬×ÔÉÏÏòÏÂ²¼¾ÖÎªImageView£¬TextView£¬TextView£¬Èı¸ö¿Ø¼ş¿ÉÒÔ×ÔÓÉ×éºÏÏÔÊ¾»òÒş²Ø
- * 2. Ö§³ÖTop£¬Center£¬BottomµÄÎ»ÖÃÏÔÊ¾
- * 3. Ö§³Ö¶àÑùµÄÏÔÊ¾¸ñÊ½£¬¿ÉÒÔ´«Èë×Ô¶¨ÒåµÄlayoutµÄView
- * 4. ¹²ÓÃÒ»¸öToast¶ÔÏó£¬·ÀÖ¹¶à´ÎToastÖØµş²¢ÏÔÊ¾Ê±¼äÀÛ¼Ó£¬¸Ã¿Ø¼ş½ü±£Áô×îºóÒ»´ÎµÄÉèÖÃºÍÏÔÊ¾¡£
- * 5. ×îºÃÔÚ×Ô¶¨ÒåµÄApplicationÖĞnew¸ÃToast£¬Activity£¬Fragment£¬AdapterÖĞ¶¼¿ÉÒÔÖ±½Óµ÷ÓÃ¡£
+ * @Description: å…¨å±€Toastï¼š
+ * 1. æ”¯æŒé»˜è®¤æ ¼å¼ï¼Œè‡ªä¸Šå‘ä¸‹å¸ƒå±€ä¸ºImageViewï¼ŒTextViewï¼ŒTextViewï¼Œä¸‰ä¸ªæ§ä»¶å¯ä»¥è‡ªç”±ç»„åˆæ˜¾ç¤ºæˆ–éšè—
+ * 2. æ”¯æŒTopï¼ŒCenterï¼ŒBottomçš„ä½ç½®æ˜¾ç¤º
+ * 3. æ”¯æŒå¤šæ ·çš„æ˜¾ç¤ºæ ¼å¼ï¼Œå¯ä»¥ä¼ å…¥è‡ªå®šä¹‰çš„layoutçš„View
+ * 4. å…±ç”¨ä¸€ä¸ªToastå¯¹è±¡ï¼Œé˜²æ­¢å¤šæ¬¡Toasté‡å å¹¶æ˜¾ç¤ºæ—¶é—´ç´¯åŠ ï¼Œè¯¥æ§ä»¶è¿‘ä¿ç•™æœ€åä¸€æ¬¡çš„è®¾ç½®å’Œæ˜¾ç¤ºã€‚
+ * 5. æœ€å¥½åœ¨è‡ªå®šä¹‰çš„Applicationä¸­newè¯¥Toastï¼ŒActivityï¼ŒFragmentï¼ŒAdapterä¸­éƒ½å¯ä»¥ç›´æ¥è°ƒç”¨ã€‚
  *
  *
  */
@@ -64,7 +64,7 @@ public class FlexibleToast {
     }
 
     /**
-     * ¿ØÖÆToastµÄÏÔÊ¾ÑùÊ½
+     * æ§åˆ¶Toastçš„æ˜¾ç¤ºæ ·å¼
      */
     public static class Builder {
         private View mDefaultView;
@@ -78,11 +78,11 @@ public class FlexibleToast {
 
         private int mDuration = Toast.LENGTH_SHORT;// 0 short, 1 long
         private int mGravity = 0;
-        private boolean hasCustomerView = false; // ÊÇ·ñÊ¹ÓÃ×Ô¶¨Òålayout
+        private boolean hasCustomerView = false; // æ˜¯å¦ä½¿ç”¨è‡ªå®šä¹‰layout
 
 
         /**
-         * Ê¹ÓÃÈ«¾ÖµÄApplicationContext½øĞĞ³õÊ¼»¯
+         * ä½¿ç”¨å…¨å±€çš„ApplicationContextè¿›è¡Œåˆå§‹åŒ–
          * @param context
          */
         public Builder(Context context) {
@@ -125,7 +125,7 @@ public class FlexibleToast {
         }
 
         /**
-         * ÎªToastÖ¸¶¨×Ô¶¨ÒåµÄlayout£¬´ËÊ±ÉÏÃæ¶ÔImageViewºÍTextViewµÄÉèÖÃÊ§Ğ§¡£
+         * ä¸ºToastæŒ‡å®šè‡ªå®šä¹‰çš„layoutï¼Œæ­¤æ—¶ä¸Šé¢å¯¹ImageViewå’ŒTextViewçš„è®¾ç½®å¤±æ•ˆã€‚
          * @param customerView
          * @return
          */

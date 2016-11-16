@@ -24,7 +24,7 @@ import com.xuexiang.util.common.StringUtils;
 import java.util.*;
 
 /**
- * Json½âÎö¹¤¾ßÀà ÍÆ¼öÊ¹ÓÃGoogleµÄGSON
+ * Jsonè§£æå·¥å…·ç±» æ¨èä½¿ç”¨Googleçš„GSON
  *
  * Created by zhenguo on 4/17/15.
  */

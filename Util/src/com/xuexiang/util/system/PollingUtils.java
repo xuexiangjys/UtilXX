@@ -26,7 +26,7 @@ import android.os.SystemClock;
 import android.text.TextUtils;
 
 /**
- * ÂÖÑ¯·şÎñ¹¤¾ßÀà
+ * è½®è¯¢æœåŠ¡å·¥å…·ç±»
  *
  * @author jingle1267@163.com
  */
@@ -43,9 +43,9 @@ public final class PollingUtils {
     }
 
     /**
-     * ÅĞ¶ÏÊÇ·ñ´æÔÚÂÖÑ¯·şÎñ
+     * åˆ¤æ–­æ˜¯å¦å­˜åœ¨è½®è¯¢æœåŠ¡
      *
-     * @param context ÉÏÏÂÎÄ
+     * @param context ä¸Šä¸‹æ–‡
      * @param cls     Class
      * @return
      */
@@ -62,10 +62,10 @@ public final class PollingUtils {
     }
 
     /**
-     * ¿ªÆôÂÖÑ¯·şÎñ
+     * å¼€å¯è½®è¯¢æœåŠ¡
      *
-     * @param context  ÉÏÏÂÎÄ
-     * @param interval Ê±¼ä¼ä¸ô£¬µ¥Î»ÎªÃë
+     * @param context  ä¸Šä¸‹æ–‡
+     * @param interval æ—¶é—´é—´éš”ï¼Œå•ä½ä¸ºç§’
      * @param cls      Class
      */
     public static void startPollingService(Context context, int interval,
@@ -74,10 +74,10 @@ public final class PollingUtils {
     }
 
     /**
-     * ¿ªÆôÂÖÑ¯·şÎñ
+     * å¼€å¯è½®è¯¢æœåŠ¡
      *
-     * @param context  ÉÏÏÂÎÄ
-     * @param interval Ê±¼ä¼ä¸ô£¬µ¥Î»ÎªÃë
+     * @param context  ä¸Šä¸‹æ–‡
+     * @param interval æ—¶é—´é—´éš”ï¼Œå•ä½ä¸ºç§’
      * @param cls      Class
      * @param action   Action
      */
@@ -97,9 +97,9 @@ public final class PollingUtils {
     }
 
     /**
-     * Í£Ö¹ÂÖÑ¯·şÎñ
+     * åœæ­¢è½®è¯¢æœåŠ¡
      *
-     * @param context ÉÏÏÂÎÄ
+     * @param context ä¸Šä¸‹æ–‡
      * @param cls     Class
      */
     public static void stopPollingService(Context context, Class<?> cls) {
@@ -107,9 +107,9 @@ public final class PollingUtils {
     }
 
     /**
-     * Í£Ö¹ÂÖÑ¯·şÎñ
+     * åœæ­¢è½®è¯¢æœåŠ¡
      *
-     * @param context ÉÏÏÂÎÄ
+     * @param context ä¸Šä¸‹æ–‡
      * @param cls     Class
      * @param action  Action
      */

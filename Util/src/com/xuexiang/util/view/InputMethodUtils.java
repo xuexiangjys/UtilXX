@@ -6,11 +6,11 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 
 /**
- * Created by ´óµÆÅİ on 2016/1/14.
- * ÏÔÊ¾¼üÅÌd¹¤¾ßÀà
+ * Created by å¤§ç¯æ³¡ on 2016/1/14.
+ * æ˜¾ç¤ºé”®ç›˜då·¥å…·ç±»
  */
 public class InputMethodUtils {
-    /** ÏÔÊ¾Èí¼üÅÌ */
+    /** æ˜¾ç¤ºè½¯é”®ç›˜ */
     public static void showInputMethod(View view) {
         InputMethodManager imm = (InputMethodManager) view.getContext()
                                                           .getSystemService(Context.INPUT_METHOD_SERVICE);
@@ -19,16 +19,16 @@ public class InputMethodUtils {
         }
     }
 
-    /** ÏÔÊ¾Èí¼üÅÌ */
+    /** æ˜¾ç¤ºè½¯é”®ç›˜ */
     public static void showInputMethod(Context context) {
         InputMethodManager imm = (InputMethodManager) context
             .getSystemService(Context.INPUT_METHOD_SERVICE);
         imm.toggleSoftInput(0, InputMethodManager.HIDE_NOT_ALWAYS);
     }
 
-    /** ¶àÉÙÊ±¼äºóÏÔÊ¾Èí¼üÅÌ */
+    /** å¤šå°‘æ—¶é—´åæ˜¾ç¤ºè½¯é”®ç›˜ */
     public static void showInputMethod(final View view, long delayMillis) {
-        // ÏÔÊ¾ÊäÈë·¨
+        // æ˜¾ç¤ºè¾“å…¥æ³•
         new Handler().postDelayed(new Runnable() {
 
             @Override

@@ -18,26 +18,26 @@ import android.widget.ImageView;
 
 public class ZoomImageView extends ImageView implements OnGlobalLayoutListener, OnScaleGestureListener , OnTouchListener {
 	
-	//--ÊÖÖ¸¿ØÖÆËõ·ÅµÄ³ÉÔ±±äÁ¿---------------------------------------------------
+	//--æ‰‹æŒ‡æ§åˆ¶ç¼©æ”¾çš„æˆå‘˜å˜é‡---------------------------------------------------
 	private boolean mOnce = false;
-	//³õÊ¼»¯Ê±Ëõ·ÅµÄÖµ
+	//åˆå§‹åŒ–æ—¶ç¼©æ”¾çš„å€¼
 	private float mInitScale;
-	//Ë«»÷·Å´óÊ±µ½´ïµÄÖµ
+	//åŒå‡»æ”¾å¤§æ—¶åˆ°è¾¾çš„å€¼
 	private float mMidScale;
-	//·Å´óµÄ¼«ÏŞ
+	//æ”¾å¤§çš„æé™
 	private float mMaxScale;
 	
 	private Matrix mScaleMatrix = null;
 	
-	//ÓÃÓÚ¶àµã´¥¿ØµÄÀà¶ÔÏó
+	//ç”¨äºå¤šç‚¹è§¦æ§çš„ç±»å¯¹è±¡
 	private ScaleGestureDetector mScaleGestureDetector = null;
 	
-	//--×ÔÓÉÒÆ¶¯Ïà¹ØµÄ³ÉÔ±±äÁ¿---------------------------------------------------
+	//--è‡ªç”±ç§»åŠ¨ç›¸å…³çš„æˆå‘˜å˜é‡---------------------------------------------------
 	
-	//¼ÇÂ¼ÉÏÒ»´Î¶àµã´¥¿ØµÄÊıÁ¿
+	//è®°å½•ä¸Šä¸€æ¬¡å¤šç‚¹è§¦æ§çš„æ•°é‡
 	private int mLastPointerCount;
 	
-	//×îºóÒ»´ÎµÄÎ»ÖÃ
+	//æœ€åä¸€æ¬¡çš„ä½ç½®
 	private float mLastX;
 	private float mLastY;
 	
@@ -48,7 +48,7 @@ public class ZoomImageView extends ImageView implements OnGlobalLayoutListener, 
 	private boolean isCheckLeftAndRight;
 	private boolean isCheckTopAndBottom;
 	
-	//--Ë«»÷·Å´óËõĞ¡µÄ³ÉÔ±±äÁ¿---------------------------------------------------
+	//--åŒå‡»æ”¾å¤§ç¼©å°çš„æˆå‘˜å˜é‡---------------------------------------------------
 	private GestureDetector mGestureDetector = null;
 	private boolean isAutoScale;
 	
@@ -83,12 +83,12 @@ public class ZoomImageView extends ImageView implements OnGlobalLayoutListener, 
 						float x = e.getX();
 						float y = e.getY();
 						
-						//Èç¹ûµ±Ç°Ëõ·Å´óĞ¡<2±¶£¬¾Í·Å´óµ½2±¶
+						//å¦‚æœå½“å‰ç¼©æ”¾å¤§å°<2å€ï¼Œå°±æ”¾å¤§åˆ°2å€
 						if(getCurrentScale() < mMidScale) {
 							postDelayed(new AutoScaleRunnable(mMidScale, x, y) , 16);
 							isAutoScale = true;
 						}
-						else { //Èç¹ûµ±Ç°Ëõ·Å´óĞ¡>2±¶£¬¾ÍËõĞ¡µ½1±¶
+						else { //å¦‚æœå½“å‰ç¼©æ”¾å¤§å°>2å€ï¼Œå°±ç¼©å°åˆ°1å€
 							postDelayed(new AutoScaleRunnable(mInitScale, x, y) , 16);
 							isAutoScale = true;
 						}
@@ -100,18 +100,18 @@ public class ZoomImageView extends ImageView implements OnGlobalLayoutListener, 
 
 	
 	/**
-	 * »ñÈ¡ImageView¼ÓÔØÍê³ÉµÄÍ¼Æ¬
-	 * ÒòÎªÍ¼Æ¬ÓĞµÄ´ó£¬ÓĞµÄĞ¡£¬ËùÒÔĞèÒª¾­¹ıµ÷ÕûÊ¹µÃÕıºÃ´óĞ¡ÊÊÅäµ½ÆÁÄ»ÉÏ£¬²¢¾ÓÖĞÏÔÊ¾
+	 * è·å–ImageViewåŠ è½½å®Œæˆçš„å›¾ç‰‡
+	 * å› ä¸ºå›¾ç‰‡æœ‰çš„å¤§ï¼Œæœ‰çš„å°ï¼Œæ‰€ä»¥éœ€è¦ç»è¿‡è°ƒæ•´ä½¿å¾—æ­£å¥½å¤§å°é€‚é…åˆ°å±å¹•ä¸Šï¼Œå¹¶å±…ä¸­æ˜¾ç¤º
 	 */
 	@Override
 	public void onGlobalLayout() {
-		//È«¾ÖµÄ²¼¾ÖÍê³ÉÒÔºó£¬»áµ÷ÓÃÕâ¸ö·½·¨
+		//å…¨å±€çš„å¸ƒå±€å®Œæˆä»¥åï¼Œä¼šè°ƒç”¨è¿™ä¸ªæ–¹æ³•
 		if(mOnce == false) {
-			//¿Ø¼şµÄ¿íºÍ¸ß
+			//æ§ä»¶çš„å®½å’Œé«˜
 			int width = getWidth();
 			int height = getHeight();
 			
-			//µÃµ½ÎÒÃÇµÄÍ¼Æ¬£¬ÒÔ¼°¿íºÍ¸ß
+			//å¾—åˆ°æˆ‘ä»¬çš„å›¾ç‰‡ï¼Œä»¥åŠå®½å’Œé«˜
 			Drawable drawable = getDrawable();
 			if(drawable == null) {
 				return;
@@ -119,35 +119,35 @@ public class ZoomImageView extends ImageView implements OnGlobalLayoutListener, 
 			int drawableWidth = drawable.getIntrinsicWidth();
 			int drawableHeight = drawable.getIntrinsicHeight();
 			
-			//ÏÂÃæ½øĞĞËõ·Å
+			//ä¸‹é¢è¿›è¡Œç¼©æ”¾
 			float scale = 1.0f;
-			if(drawableWidth > width && drawableHeight < height) { //Èç¹ûÍ¼Æ¬ºÜ¿í£¬µ«¸ß¶ÈµÍ
+			if(drawableWidth > width && drawableHeight < height) { //å¦‚æœå›¾ç‰‡å¾ˆå®½ï¼Œä½†é«˜åº¦ä½
 				scale = width * 1.0f / drawableWidth;
 			}
-			if(drawableWidth < width && drawableHeight > height) { //Èç¹ûÍ¼Æ¬ºÜÕ­£¬µ«ÊÇ¸ß¶ÈºÜ¸ß
+			if(drawableWidth < width && drawableHeight > height) { //å¦‚æœå›¾ç‰‡å¾ˆçª„ï¼Œä½†æ˜¯é«˜åº¦å¾ˆé«˜
 				scale = height * 1.0f / drawableHeight;
 			}
-			if(drawableWidth > width && drawableHeight > height) { //Èç¹ûÍ¼Æ¬µÄ¿íºÍ¸ß¶¼ºÜ´ó
+			if(drawableWidth > width && drawableHeight > height) { //å¦‚æœå›¾ç‰‡çš„å®½å’Œé«˜éƒ½å¾ˆå¤§
 				scale = Math.min(width * 1.0f / drawableWidth , height * 1.0f / drawableHeight);
 			}
-			if(drawableWidth < width && drawableHeight < height) { //Èç¹ûÍ¼Æ¬µÄ¿íºÍ¸ß¶¼ºÜĞ¡
+			if(drawableWidth < width && drawableHeight < height) { //å¦‚æœå›¾ç‰‡çš„å®½å’Œé«˜éƒ½å¾ˆå°
 				scale = Math.min(width * 1.0f / drawableWidth , height * 1.0f / drawableHeight);
 			}
 			
-			//µÃµ½ÁË³õÊ¼»¯Ê±Ëõ·ÅµÄ±ÈÀı
+			//å¾—åˆ°äº†åˆå§‹åŒ–æ—¶ç¼©æ”¾çš„æ¯”ä¾‹
 			mInitScale = scale;
 			mMidScale = mInitScale * 2;
 			mMaxScale = mInitScale * 4;
 			
-			//½«Í¼Æ¬ÒÆ¶¯µ½¿Ø¼şµÄÖĞĞÄ
+			//å°†å›¾ç‰‡ç§»åŠ¨åˆ°æ§ä»¶çš„ä¸­å¿ƒ
 			int dx = width / 2 - drawableWidth / 2;
 			int dy = height / 2 - drawableHeight / 2;
 			
-			//½øĞĞÆ½ÒÆ
+			//è¿›è¡Œå¹³ç§»
 			mScaleMatrix.postTranslate(dx, dy);
-			//½øĞĞËõ·Å
+			//è¿›è¡Œç¼©æ”¾
 			mScaleMatrix.postScale(mInitScale , mInitScale , width / 2 , height / 2);
-			//ÉèÖÃÕâ¸ö¾ØÕó
+			//è®¾ç½®è¿™ä¸ªçŸ©é˜µ
 			setImageMatrix(mScaleMatrix);
 			
 			mOnce = true;
@@ -173,7 +173,7 @@ public class ZoomImageView extends ImageView implements OnGlobalLayoutListener, 
 	
 	
 	/**
-	 * µÃµ½µ±Ç°µÄËõ·Å±ÈÀı
+	 * å¾—åˆ°å½“å‰çš„ç¼©æ”¾æ¯”ä¾‹
 	 */
 	public float getCurrentScale() {
 		float[] values = new float[9];
@@ -187,24 +187,24 @@ public class ZoomImageView extends ImageView implements OnGlobalLayoutListener, 
 	@Override
 	public boolean onScale(ScaleGestureDetector detector) {
 		float scale = getCurrentScale();
-		//ÄÃµ½ÊÖÖ¸´¥¿ØºóµÃµ½µÄËõ·ÅµÄÖµ£¬¿ÉÄÜÊÇ1µã¼¸£¬Ò²¿ÉÄÜÊÇ0µã¼¸
+		//æ‹¿åˆ°æ‰‹æŒ‡è§¦æ§åå¾—åˆ°çš„ç¼©æ”¾çš„å€¼ï¼Œå¯èƒ½æ˜¯1ç‚¹å‡ ï¼Œä¹Ÿå¯èƒ½æ˜¯0ç‚¹å‡ 
 		float scaleFactor = detector.getScaleFactor();
 		
 		if(getDrawable() == null) {
 			return true;
 		}
 		
-		//Ç°ÃæÊÇ¡°Ïë·Å´ó¡±£¬ºóÃæÊÇ¡°ÏëËõĞ¡¡±£¬ÕâÀï½øĞĞµÄÊÇËõ·Å·¶Î§µÄ¿ØÖÆ
+		//å‰é¢æ˜¯â€œæƒ³æ”¾å¤§â€ï¼Œåé¢æ˜¯â€œæƒ³ç¼©å°â€ï¼Œè¿™é‡Œè¿›è¡Œçš„æ˜¯ç¼©æ”¾èŒƒå›´çš„æ§åˆ¶
 		if( (scale < mMaxScale && scaleFactor > 1.0f) || (scale > mInitScale && scaleFactor < 1.0f) ) {
 			if(scale * scaleFactor < mInitScale) {
-				scaleFactor = mInitScale / scale; //Ò²¾ÍÊÇÈÃscale*scaleFactor=mInitScale
+				scaleFactor = mInitScale / scale; //ä¹Ÿå°±æ˜¯è®©scale*scaleFactor=mInitScale
 			}
 			if(scale * scaleFactor > mMaxScale) {
-				scaleFactor = mMaxScale / scale; //Ò²¾ÍÊÇÈÃscale*scaleFactor=mMaxScale
+				scaleFactor = mMaxScale / scale; //ä¹Ÿå°±æ˜¯è®©scale*scaleFactor=mMaxScale
 			}
 		}
 		
-		//½øĞĞËõ·Ådetector.getFocusX()ºÍdetector.getFocusY()ÊÇÒÔÊÖÖ¸´¥¿ØµÄÖĞĞÄµã
+		//è¿›è¡Œç¼©æ”¾detector.getFocusX()å’Œdetector.getFocusY()æ˜¯ä»¥æ‰‹æŒ‡è§¦æ§çš„ä¸­å¿ƒç‚¹
 		mScaleMatrix.postScale(scaleFactor , scaleFactor , detector.getFocusX() , detector.getFocusY());
 		
 		checkBorderAndCenterWhenScale();
@@ -216,7 +216,7 @@ public class ZoomImageView extends ImageView implements OnGlobalLayoutListener, 
 	
 	
 	/**
-	 * »ñµÃÍ¼Æ¬·Å´ó»òËõĞ¡ÒÔºóµÄ¿íºÍ¸ß£¬ÒÔ¼°left¡¢right¡¢top¡¢bottom
+	 * è·å¾—å›¾ç‰‡æ”¾å¤§æˆ–ç¼©å°ä»¥åçš„å®½å’Œé«˜ï¼Œä»¥åŠleftã€rightã€topã€bottom
 	 */
 	private RectF getMatrixRectF() {
 		Matrix matrix = mScaleMatrix;
@@ -232,27 +232,27 @@ public class ZoomImageView extends ImageView implements OnGlobalLayoutListener, 
 	
 
 	/**
-	 * ÔÚËõ·ÅµÄÊ±ºò£¬½øĞĞ±ß½çµÄ¿ØÖÆ£¬ÒÔ¼°ÎÒÃÇµÄÎ»ÖÃµÄ¿ØÖÆ
+	 * åœ¨ç¼©æ”¾çš„æ—¶å€™ï¼Œè¿›è¡Œè¾¹ç•Œçš„æ§åˆ¶ï¼Œä»¥åŠæˆ‘ä»¬çš„ä½ç½®çš„æ§åˆ¶
 	 */
 	private void checkBorderAndCenterWhenScale() {
 		
 		RectF rect = getMatrixRectF();
 		
-		//²îÖµ
+		//å·®å€¼
 		float deltaX = 0.0f;
 		float deltaY = 0.0f;
 		
-		//¿Ø¼şµÄ¿í¶ÈºÍ¸ß¶È
+		//æ§ä»¶çš„å®½åº¦å’Œé«˜åº¦
 		int width = getWidth();
 		int height = getHeight();
 		
-		//ÓĞ°×±ß³öÏÖ¾ÍÓÃÆ½ÒÆ²¹°×±ß
+		//æœ‰ç™½è¾¹å‡ºç°å°±ç”¨å¹³ç§»è¡¥ç™½è¾¹
 		if(rect.width() >= width) {
-			if(rect.left > 0) { //Èç¹û×ó±ßÓĞ¿ÕÏ¶£¬½ÓÏÂÀ´¾ÍÒªÃÖ²¹
-				deltaX = -rect.left; //¸ºÖµ£¬±íÊ¾Ó¦¸ÃÏò×óÒÆ¶¯
+			if(rect.left > 0) { //å¦‚æœå·¦è¾¹æœ‰ç©ºéš™ï¼Œæ¥ä¸‹æ¥å°±è¦å¼¥è¡¥
+				deltaX = -rect.left; //è´Ÿå€¼ï¼Œè¡¨ç¤ºåº”è¯¥å‘å·¦ç§»åŠ¨
 			}
-			if(rect.right < width) { //Èç¹ûÓÒ±ßÓĞ¿ÕÏ¶£¬½ÓÏÂÀ´¾ÍÒªÃÖ²¹
-				deltaX = width - rect.right; //ÕıÖµ£¬±íÊ¾Ó¦¸ÃÏòÓÒÒÆ¶¯
+			if(rect.right < width) { //å¦‚æœå³è¾¹æœ‰ç©ºéš™ï¼Œæ¥ä¸‹æ¥å°±è¦å¼¥è¡¥
+				deltaX = width - rect.right; //æ­£å€¼ï¼Œè¡¨ç¤ºåº”è¯¥å‘å³ç§»åŠ¨
 			}
 		}
 		if(rect.height() >= height) {
@@ -264,7 +264,7 @@ public class ZoomImageView extends ImageView implements OnGlobalLayoutListener, 
 			}
 		}
 		
-		//Èç¹û¿í¶È»ò¸ß¶ÈĞ¡ÓÚ¿Ø¼şµÄ¿í¶È»ò¸ß¶È£¬¾Í¾ÓÖĞ
+		//å¦‚æœå®½åº¦æˆ–é«˜åº¦å°äºæ§ä»¶çš„å®½åº¦æˆ–é«˜åº¦ï¼Œå°±å±…ä¸­
 		if(rect.width() < width) {
 			deltaX = width / 2f - rect.right + rect.width() / 2f;
 		}
@@ -272,14 +272,14 @@ public class ZoomImageView extends ImageView implements OnGlobalLayoutListener, 
 			deltaY = height / 2f - rect.bottom + rect.height() / 2f;
 		}
 		
-		//°ÑÖ®Ç°µÃµ½µÄÆ½ÒÆÊı¾İ¸üĞÂµ½mScaleMatrixÖĞ
+		//æŠŠä¹‹å‰å¾—åˆ°çš„å¹³ç§»æ•°æ®æ›´æ–°åˆ°mScaleMatrixä¸­
 		mScaleMatrix.postTranslate(deltaX, deltaY);
 	}
 
 	@Override
 	public boolean onScaleBegin(ScaleGestureDetector detector) {
 		
-		//ÔÚÕâÀïÒ»¶¨Òª¸ÄÎª·µ»Øtrue
+		//åœ¨è¿™é‡Œä¸€å®šè¦æ”¹ä¸ºè¿”å›true
 		return true;
 	}
 
@@ -298,20 +298,20 @@ public class ZoomImageView extends ImageView implements OnGlobalLayoutListener, 
 		
 		mScaleGestureDetector.onTouchEvent(event);
 		
-		//¼ÇÂ¼ÖĞĞÄµãµÄÎ»ÖÃ
+		//è®°å½•ä¸­å¿ƒç‚¹çš„ä½ç½®
 		float x = 0;
 		float y = 0;
 		
-		//ÄÃµ½¶àµã´¥¿ØµÄÊıÁ¿
+		//æ‹¿åˆ°å¤šç‚¹è§¦æ§çš„æ•°é‡
 		int pointerCount = event.getPointerCount();
 		
 		for(int i = 0; i < pointerCount ; i++) {
-			//ÕâÀïÖ®ËùÒÔÒªÀÛ¼ÓÊÇÎªÁËÏÂÃæ¼ÆËãÆ½¾ùÖµ
+			//è¿™é‡Œä¹‹æ‰€ä»¥è¦ç´¯åŠ æ˜¯ä¸ºäº†ä¸‹é¢è®¡ç®—å¹³å‡å€¼
 			x += event.getX(i);
 			y += event.getY(i);
 		}
 		
-		//×îÖÕÖĞĞÄµãµÄÎ»ÖÃÊÇÍ¨¹ı¼ÆËãÆ½¾ùÖµÔ¼µÈÓÚ³öÀ´µÄ
+		//æœ€ç»ˆä¸­å¿ƒç‚¹çš„ä½ç½®æ˜¯é€šè¿‡è®¡ç®—å¹³å‡å€¼çº¦ç­‰äºå‡ºæ¥çš„
 		x /= pointerCount;
 		y /= pointerCount;
 		
@@ -327,7 +327,7 @@ public class ZoomImageView extends ImageView implements OnGlobalLayoutListener, 
 		case MotionEvent.ACTION_DOWN:
 			if(rectF.width() > getWidth() + 0.01 || rectF.height() > getHeight() + 0.01) {
 				if(getParent() instanceof ViewPager) {
-					//ÇëÇó¸¸¿Ø¼ş²»±»ÔÊĞíÀ¹½Øµ±Ç°µÄ¿Ø¼ş
+					//è¯·æ±‚çˆ¶æ§ä»¶ä¸è¢«å…è®¸æ‹¦æˆªå½“å‰çš„æ§ä»¶
 					getParent().requestDisallowInterceptTouchEvent(true);
 				}
 			}
@@ -335,7 +335,7 @@ public class ZoomImageView extends ImageView implements OnGlobalLayoutListener, 
 		case MotionEvent.ACTION_MOVE:
 			if(rectF.width() > getWidth() + 0.01 || rectF.height() > getHeight() + 0.01) {
 				if(getParent() instanceof ViewPager) {
-					//ÇëÇó¸¸¿Ø¼ş²»±»ÔÊĞíÀ¹½Øµ±Ç°µÄ¿Ø¼ş
+					//è¯·æ±‚çˆ¶æ§ä»¶ä¸è¢«å…è®¸æ‹¦æˆªå½“å‰çš„æ§ä»¶
 					getParent().requestDisallowInterceptTouchEvent(true);
 				}
 			}
@@ -345,21 +345,21 @@ public class ZoomImageView extends ImageView implements OnGlobalLayoutListener, 
 				isCanDrag = isMoveAction(deltaX , deltaY);
 			}
 			if(isCanDrag == true) {
-				//ÔÚÕâÀïÃæÍê³ÉÍ¼Æ¬µÄÒÆ¶¯
+				//åœ¨è¿™é‡Œé¢å®Œæˆå›¾ç‰‡çš„ç§»åŠ¨
 				if(getDrawable() != null) {
 					isCheckLeftAndRight = true;
 					isCheckTopAndBottom = true;
-					if(rectF.width() < getWidth()) { //Èç¹ûÍ¼Æ¬µÄ¿í¶È<¿Ø¼şµÄ¿í¶È
+					if(rectF.width() < getWidth()) { //å¦‚æœå›¾ç‰‡çš„å®½åº¦<æ§ä»¶çš„å®½åº¦
 						isCheckLeftAndRight = false;
-						deltaX = 0; //¾Í²»ÔÊĞíºáÏòÒÆ¶¯
+						deltaX = 0; //å°±ä¸å…è®¸æ¨ªå‘ç§»åŠ¨
 					}
-					if(rectF.height() < getHeight()) { //Èç¹ûÍ¼Æ¬µÄ¸ß¶È<¿Ø¼şµÄ¸ß¶È
+					if(rectF.height() < getHeight()) { //å¦‚æœå›¾ç‰‡çš„é«˜åº¦<æ§ä»¶çš„é«˜åº¦
 						isCheckTopAndBottom = false;
-						deltaY = 0; //¾Í²»ÔÊĞíÊúÏòÒÆ¶¯
+						deltaY = 0; //å°±ä¸å…è®¸ç«–å‘ç§»åŠ¨
 					}
-					//Ö®ËùÒÔÒªÕâÑù°²ÅÅ£¬ÊÇÒòÎªÒÆ¶¯µÄÄ¿µÄÊÇÎªÁËÏÔÊ¾³öÃ»ÓĞÔÚ¿Ø¼şÄÚÏÔÊ¾µÄ¶«Î÷
+					//ä¹‹æ‰€ä»¥è¦è¿™æ ·å®‰æ’ï¼Œæ˜¯å› ä¸ºç§»åŠ¨çš„ç›®çš„æ˜¯ä¸ºäº†æ˜¾ç¤ºå‡ºæ²¡æœ‰åœ¨æ§ä»¶å†…æ˜¾ç¤ºçš„ä¸œè¥¿
 					mScaleMatrix.postTranslate(deltaX, deltaY);
-					//¿ØÖÆÒÆ¶¯µÄ±ß½ç
+					//æ§åˆ¶ç§»åŠ¨çš„è¾¹ç•Œ
 					checkBorderWhenTranslate();
 					setImageMatrix(mScaleMatrix);
 				}
@@ -381,7 +381,7 @@ public class ZoomImageView extends ImageView implements OnGlobalLayoutListener, 
 	
 	
 	/**
-	 * ¿ØÖÆÆ½ÒÆÍ¼Æ¬µÄ±ß½ç
+	 * æ§åˆ¶å¹³ç§»å›¾ç‰‡çš„è¾¹ç•Œ
 	 */
 	private void checkBorderWhenTranslate() {
 		
@@ -390,7 +390,7 @@ public class ZoomImageView extends ImageView implements OnGlobalLayoutListener, 
 		float deltaX = 0;
 		float deltaY = 0;
 		
-		//¿Ø¼şµÄ¿íºÍ¸ß
+		//æ§ä»¶çš„å®½å’Œé«˜
 		int width = getWidth();
 		int height = getHeight();
 		
@@ -412,7 +412,7 @@ public class ZoomImageView extends ImageView implements OnGlobalLayoutListener, 
 	
 
 	/**
-	 * ÅĞ¶ÏÊÇ·ñÒÆ¶¯ÁË
+	 * åˆ¤æ–­æ˜¯å¦ç§»åŠ¨äº†
 	 */
 	private boolean isMoveAction(float deltaX, float deltaY) {
 		
@@ -422,20 +422,20 @@ public class ZoomImageView extends ImageView implements OnGlobalLayoutListener, 
 	
 	
 	/**
-	 * ×Ô¶¯·Å´óÓëËõĞ¡
+	 * è‡ªåŠ¨æ”¾å¤§ä¸ç¼©å°
 	 */
 	private class AutoScaleRunnable implements Runnable {
 		
-		//Ëõ·ÅµÄÄ¿±êÖµ
+		//ç¼©æ”¾çš„ç›®æ ‡å€¼
 		private float mTargetScale;
-		//Ëõ·ÅµÄÖĞĞÄµã
+		//ç¼©æ”¾çš„ä¸­å¿ƒç‚¹
 		private float x;
 		private float y;
 		
 		private final float BIGGER = 1.07f;
 		private final float SMALL = 0.93f;
 		
-		//ÁÙÊ±µÄ±äÁ¿
+		//ä¸´æ—¶çš„å˜é‡
 		private float tmpScale;
 		
 		
@@ -446,10 +446,10 @@ public class ZoomImageView extends ImageView implements OnGlobalLayoutListener, 
 			this.y = y;
 			
 			if(getCurrentScale() < mTargetScale) {
-				tmpScale = BIGGER; //Ä¿±êÊÇÏë·Å´ó
+				tmpScale = BIGGER; //ç›®æ ‡æ˜¯æƒ³æ”¾å¤§
 			}
 			else if(getCurrentScale() > mTargetScale) {
-				tmpScale = SMALL; //Ä¿±êÊÇÏëËõĞ¡
+				tmpScale = SMALL; //ç›®æ ‡æ˜¯æƒ³ç¼©å°
 			}
 		}
 
@@ -457,18 +457,18 @@ public class ZoomImageView extends ImageView implements OnGlobalLayoutListener, 
 
 		@Override
 		public void run() {
-			//½øĞĞËõ·Å
+			//è¿›è¡Œç¼©æ”¾
 			mScaleMatrix.postScale(tmpScale , tmpScale , x , y);
 			checkBorderAndCenterWhenScale();
 			setImageMatrix(mScaleMatrix);
 			
 			float currentScale = getCurrentScale();
-			//ifÖĞµÄ×÷ÓÃÊÇ£¬Èç¹ûÃ»ÓĞ´ïµ½Ä¿±êÖµ£¬¾ÍÒ»Ö±Í¨¹ıpostDelayed()Ö´ĞĞrun()·½·¨£¬Ö±µ½½øÈëelseÎªÖ¹
+			//ifä¸­çš„ä½œç”¨æ˜¯ï¼Œå¦‚æœæ²¡æœ‰è¾¾åˆ°ç›®æ ‡å€¼ï¼Œå°±ä¸€ç›´é€šè¿‡postDelayed()æ‰§è¡Œrun()æ–¹æ³•ï¼Œç›´åˆ°è¿›å…¥elseä¸ºæ­¢
 			if( (tmpScale > 1.0f && currentScale < mTargetScale) || (tmpScale < 1.0f && currentScale > mTargetScale) ) {
-				postDelayed(this , 16); //´«this¾ÍÊÇ´«×Ô¼º
+				postDelayed(this , 16); //ä¼ thiså°±æ˜¯ä¼ è‡ªå·±
 			}
 			else {
-				//¾ÍÉèÖÃÎªÎÒÃÇµÄÄ¿±êÖµ
+				//å°±è®¾ç½®ä¸ºæˆ‘ä»¬çš„ç›®æ ‡å€¼
 				float scale = mTargetScale / currentScale;
 				mScaleMatrix.postScale(scale, scale, x, y);
 				checkBorderAndCenterWhenScale();

@@ -7,10 +7,10 @@ import com.xuexiang.util.view.DisplayUtils;
 import com.xuexiang.view.CustomTextView;
 
 /**  
- * ´´½¨Ê±¼ä£º2016-6-26 ÏÂÎç9:46:07  
- * ÏîÄ¿Ãû³Æ£ºUtilTest  
+ * åˆ›å»ºæ—¶é—´ï¼š2016-6-26 ä¸‹åˆ9:46:07  
+ * é¡¹ç›®åç§°ï¼šUtilTest  
  * @author xuexiang
- * ÎÄ¼şÃû³Æ£ºCustomTextViewActivity.java  
+ * æ–‡ä»¶åç§°ï¼šCustomTextViewActivity.java  
  **/
 public class CustomTextViewActivity extends BaseActivity {
 	private CustomTextView mTextView1;

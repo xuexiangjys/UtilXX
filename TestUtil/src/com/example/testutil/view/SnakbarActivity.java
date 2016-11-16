@@ -14,7 +14,7 @@ import com.xuexiang.view.snack.SnackBar.OnVisibilityChangeListener;
 
 /**
  * @author xx
- * @Date 2016-9-28 上午12:44:13
+ * @Date 2016-9-28 涓婂崍12:44:13
  * @Copyright (c) 2016, xuexiangjys@163.com All Rights Reserved.
  */
 public class SnakbarActivity extends BaseActivity implements OnClickListener {
@@ -30,22 +30,22 @@ public class SnakbarActivity extends BaseActivity implements OnClickListener {
 		switch (v.getId()) {
 		case R.id.sample_message:
 			new SnackBar.Builder(this)
-			.withMessage("提示信息")
+			.withMessage("鎻愮ず淇℃伅")
 			.withDuration(SnackBar.MED_SNACK)
 			.show();
 			break;
 		case R.id.message_click:
 			new SnackBar.Builder(this)
-			.withMessage("在子线程中显示Toast")
+			.withMessage("鍦ㄥ瓙绾跨▼涓樉绀篢oast")
 			.withDuration(SnackBar.LONG_SNACK)
-			.withActionMessage("确定")
+			.withActionMessage("纭畾")
 			.withOnClickListener(new OnMessageClickListener() {
 				@Override
 				public void onMessageClick(Parcelable token) {
 					 new Thread(new Runnable() {
 		                    @Override
 		                    public void run() {
-		                    	FlexibleToast.Builder builder = new FlexibleToast.Builder(mContext).setGravity(FlexibleToast.GRAVITY_CENTER).setFirstText("中部Toast").setSecondText("点击了snackBar");
+		                    	FlexibleToast.Builder builder = new FlexibleToast.Builder(mContext).setGravity(FlexibleToast.GRAVITY_CENTER).setFirstText("涓儴Toast").setSecondText("鐐瑰嚮浜唖nackBar");
 		                        BaseApplication.toastShowByBuilder(builder);
 		                    }
 		                }).start();
@@ -56,14 +56,14 @@ public class SnakbarActivity extends BaseActivity implements OnClickListener {
 			break;
 		case R.id.actionIcon_click:
 			new SnackBar.Builder(this)
-			.withMessage("提示信息")
+			.withMessage("鎻愮ず淇℃伅")
 			.withDuration(SnackBar.LONG_SNACK)
-			.withActionMessage("确定")
+			.withActionMessage("纭畾")
 			.withActionIconId(R.drawable.icn_switch)
 			.withOnClickListener(new OnMessageClickListener() {
 				@Override
 				public void onMessageClick(Parcelable token) {
-					Toast("点击了snackBar");
+					Toast("鐐瑰嚮浜唖nackBar");
 				}
 			})
 			.withVisibilityChangeListener(new OnVisibilityChangeListener(){

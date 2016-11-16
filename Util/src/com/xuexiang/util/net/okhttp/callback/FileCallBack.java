@@ -15,11 +15,11 @@ import com.xuexiang.util.net.okhttp.OkHttpUtils;
 public abstract class FileCallBack extends Callback<File>
 {
     /**
-     * 目标文件存储的文件夹路径
+     * 鐩爣鏂囦欢瀛樺偍鐨勬枃浠跺す璺緞
      */
     private String destFileDir;
     /**
-     * 目标文件存储的文件名
+     * 鐩爣鏂囦欢瀛樺偍鐨勬枃浠跺悕
      */
     private String destFileName;
 

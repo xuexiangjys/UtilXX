@@ -119,7 +119,7 @@ public class LoadingView extends FrameLayout {
     }
 
     /**
-     * 上抛
+     * 涓婃姏
      */
     public void upThrow() {
 
@@ -187,7 +187,7 @@ public class LoadingView extends FrameLayout {
     public float factor = 1.2f;
 
     /**
-     * 下落
+     * 涓嬭惤
      */
     public void freeFall() {
 

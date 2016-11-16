@@ -31,25 +31,25 @@ public class AssetsManager {
 	 
 	/**
 	 * @param mContext
-	 * @param assetpath  assetÏÂµÄÂ·¾¶
-	 * @param sdpath     SDpathÏÂ±£´æÂ·¾¶
+	 * @param assetpath  assetä¸‹çš„è·¯å¾„
+	 * @param sdpath     SDpathä¸‹ä¿å­˜è·¯å¾„
 	 */
 	public void copyFileFromAssetToSD(String assetpath,String sdpath ) {
 		
-		//Ñ­»·µÄ¶ÁÈ¡assetÏÂµÄÎÄ¼ş£¬²¢ÇÒĞ´Èëµ½SD¿¨
+		//å¾ªç¯çš„è¯»å–assetä¸‹çš„æ–‡ä»¶ï¼Œå¹¶ä¸”å†™å…¥åˆ°SDå¡
 		String[] filenames = null;
 		FileOutputStream out = null;  
 		InputStream in = null;
 		try {
 			filenames = mAssetManager.list(assetpath);
-			if (filenames.length > 0) {//ËµÃ÷ÊÇÄ¿Â¼
-				//´´½¨Ä¿Â¼
+			if (filenames.length > 0) {//è¯´æ˜æ˜¯ç›®å½•
+				//åˆ›å»ºç›®å½•
 				getDirectory(assetpath);
 				
 				for(String fileName:filenames){
 					copyFileFromAssetToSD(assetpath + "/" + fileName, sdpath + "/" + fileName);
 				}
-			} else {//ËµÃ÷ÊÇÎÄ¼ş£¬Ö±½Ó¸´ÖÆµ½SD¿¨
+			} else {//è¯´æ˜æ˜¯æ–‡ä»¶ï¼Œç›´æ¥å¤åˆ¶åˆ°SDå¡
 				File sdFlie = new File(sdpath);
 				String  path = assetpath.substring(0, assetpath.lastIndexOf("/"));
 				getDirectory(path);
@@ -57,7 +57,7 @@ public class AssetsManager {
 				if (!sdFlie.exists()) {
 					sdFlie.createNewFile();
 				}
-				//½«ÄÚÈİĞ´Èëµ½ÎÄ¼şÖĞ
+				//å°†å†…å®¹å†™å…¥åˆ°æ–‡ä»¶ä¸­
 				in = mAssetManager.open(assetpath);
 				out = new FileOutputStream(sdFlie);  
 				byte[] buffer = new byte[1024];
@@ -74,9 +74,9 @@ public class AssetsManager {
 		} 
 	}
 	
-	//·Ö¼¶½¨Á¢ÎÄ¼ş¼Ğ
+	//åˆ†çº§å»ºç«‹æ–‡ä»¶å¤¹
 	public void getDirectory(String path){
-		//¶ÔSDpath½øĞĞ´¦Àí£¬·Ö²ã¼¶½¨Á¢ÎÄ¼ş¼Ğ
+		//å¯¹SDpathè¿›è¡Œå¤„ç†ï¼Œåˆ†å±‚çº§å»ºç«‹æ–‡ä»¶å¤¹
 	    String[] s = path.split("/");
 	    String str = Environment.getExternalStorageDirectory().toString();
 	      for (int i = 0; i < s.length; i++) {
@@ -107,14 +107,14 @@ public class AssetsManager {
 			InputStream is = mAssetManager.open(name);
 			str = streamToString(is);
 		} catch (IOException e) {
-			Log.d("xuexiang", "»ñÈ¡ÎÄ±¾Òì³££º"+e.getMessage());
+			Log.d("xuexiang", "è·å–æ–‡æœ¬å¼‚å¸¸ï¼š"+e.getMessage());
 		}
 		return str;
 	}
 
 	
 	/**
-	 * ½«ÊäÈëÁ÷×ª»»³Éstring
+	 * å°†è¾“å…¥æµè½¬æ¢æˆstring
 	 * @param is
 	 * @return
 	 */

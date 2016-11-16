@@ -3,7 +3,7 @@ package com.example.testutil.net.model;
 import java.io.Serializable;
 
 /**
- * ¸öÈËĞÅÏ¢Àà
+ * ä¸ªäººä¿¡æ¯ç±»
  * @author xx
  */
 public class UserInfo implements Serializable{
@@ -13,25 +13,25 @@ public class UserInfo implements Serializable{
 	 */
 	private static final long serialVersionUID = 1L;
 	
-	/** ÓÃ»§Ãû*/
+	/** ç”¨æˆ·å*/
 	private String loginname;	
-	/** °ó¶¨ÊÖ»úºÅ*/
+	/** ç»‘å®šæ‰‹æœºå·*/
 	private String phone;
-	/** ÃÜÂë*/
+	/** å¯†ç */
 	private String password;
-	/** Í·Ïñ*/
+	/** å¤´åƒ*/
 	private String headphoto;
-	/** êÇ³Æ*/
+	/** æ˜µç§°*/
 	private String nickname;
-	/** ĞÔ±ğ*/
+	/** æ€§åˆ«*/
 	private String sex;
-	/** ¸öĞÔÇ©Ãû*/
+	/** ä¸ªæ€§ç­¾å*/
 	private String signature;
-	/** ÕæÊµĞÕÃû*/
+	/** çœŸå®å§“å*/
 	private String realname;
-	/** Éí·İÖ¤*/
+	/** èº«ä»½è¯*/
 	private String identitycard;
-	/** ÊÇ·ñÊµÃûÈÏÖ¤*/
+	/** æ˜¯å¦å®åè®¤è¯*/
 	private String ischeck;
 	
 	

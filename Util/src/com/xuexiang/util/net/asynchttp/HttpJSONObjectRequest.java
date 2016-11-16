@@ -1,7 +1,7 @@
 /**
  * @FILE:HttpJsonObjectRequest.java
  * @AUTHOR:hc
- * @DATE:2014-7-30 ÏÂÎç3:12:35
+ * @DATE:2014-7-30 ä¸‹åˆ3:12:35
  **/
 package com.xuexiang.util.net.asynchttp;
 
@@ -23,7 +23,7 @@ import com.xuexiang.util.net.asynchttp.toolbox.HttpSuccess;
  * @DESCRIPTION:
  * @AUTHOR:xx
  * @VERSION:v1.0
- * @DATE:2014-7-30 ÏÂÎç3:12:35
+ * @DATE:2014-7-30 ä¸‹åˆ3:12:35
  *******************************************/
 public class HttpJSONObjectRequest extends HttpRequest {
 
@@ -46,7 +46,7 @@ public class HttpJSONObjectRequest extends HttpRequest {
 	}
 
 	/**
-	 * @description: »ñÈ¡²ÎÊı
+	 * @description: è·å–å‚æ•°
 	 * @author:xx
 	 * @return:RequestParams
 	 * @return
@@ -68,7 +68,7 @@ public class HttpJSONObjectRequest extends HttpRequest {
 			String val = mParams.get(key);
 			stringBuilder.append("&" + key + "=" + val);
 		}
-		CustomLog.d("Ìá½»²ÎÊıÎª: %s", "=" + stringBuilder.toString());
+		CustomLog.d("æäº¤å‚æ•°ä¸º: %s", "=" + stringBuilder.toString());
 		return requestParams;
 	}
 
@@ -85,7 +85,7 @@ public class HttpJSONObjectRequest extends HttpRequest {
 	}
 
 	/**
-	 * @description:Ê§°Üºóµ÷ÓÃ
+	 * @description:å¤±è´¥åè°ƒç”¨
 	 * @author:xx
 	 * @return:void
 	 * @param arg3
@@ -98,7 +98,7 @@ public class HttpJSONObjectRequest extends HttpRequest {
 	}
 
 	/**
-	 * @description:³É¹¦ºóµ÷ÓÃ
+	 * @description:æˆåŠŸåè°ƒç”¨
 	 * @author:xx
 	 * @return:void
 	 * @param arg2
@@ -106,7 +106,7 @@ public class HttpJSONObjectRequest extends HttpRequest {
 
 	@Override
 	public void onSuccess(String result) {
-		CustomLog.d("½á¹ûÊÇ£º%s", result);
+		CustomLog.d("ç»“æœæ˜¯ï¼š%s", result);
 		try {
 			JSONObject jsonObject = new JSONObject();
 	        jsonObject.put(JSONObjectData, result);

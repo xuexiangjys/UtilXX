@@ -34,7 +34,7 @@ public class HttpClassRequest<T> extends HttpRequest {
 	}
 
 	/**
-	 * @description: »ñÈ¡²ÎÊı
+	 * @description: è·å–å‚æ•°
 	 * @author:hc
 	 * @return:RequestParams
 	 * @return
@@ -54,7 +54,7 @@ public class HttpClassRequest<T> extends HttpRequest {
 			String val = mParams.get(key);
 			stringBuilder.append("&" + key + "=" + val);
 		}
-		CustomLog.d("Ìá½»²ÎÊıÎª   %s", "=" + stringBuilder.toString());
+		CustomLog.d("æäº¤å‚æ•°ä¸º   %s", "=" + stringBuilder.toString());
 		return requestParams;
 	}
 
@@ -93,7 +93,7 @@ public class HttpClassRequest<T> extends HttpRequest {
 	@Override
 	public void onSuccess(String result) {
 		Gson gson = new Gson();
-		CustomLog.d("½á¹ûÊÇ=%s", result);
+		CustomLog.d("ç»“æœæ˜¯=%s", result);
 		try {
 			if (mHttpSuccess != null)
 				mHttpSuccess.onSuccess(gson.fromJson(result, mClass));

@@ -14,7 +14,7 @@ public class ChannelItem implements Comparable<ChannelItem>{
     private int iconID;  
     private String describtion;  
     private int type;  
-    // 排序标记  
+    // 鎺掑簭鏍囪  
     private int order;  
     private onGridViewItemClickListener onClickListener;  
       
@@ -138,7 +138,7 @@ public class ChannelItem implements Comparable<ChannelItem>{
     }  
       
   
-    //得到排序的List  
+    //寰楀埌鎺掑簭鐨凩ist  
     public static List<ChannelItem> getOrderList(List<ChannelItem> list) {  
         Collections.sort(list);  
         return list;  

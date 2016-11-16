@@ -72,10 +72,10 @@ public class PwdInputView extends EditText {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
 //        setLayerType(LAYER_TYPE_SOFTWARE, null);
-        // 背景
+        // 鑳屾櫙
         RectF rectIn = new RectF(mPadding, mPadding, getMeasuredWidth() - mPadding, getMeasuredHeight() - mPadding);
         canvas.drawRoundRect(rectIn, radiusBg, radiusBg, mPaintContent);
-        // 边框
+        // 杈规
         RectF rect = new RectF(mPadding, mPadding, getMeasuredWidth() - mPadding, getMeasuredHeight() - mPadding);
         mPaint.setStrokeWidth(0.8f);
         canvas.drawRoundRect(rect, radiusBg, radiusBg, mPaint);

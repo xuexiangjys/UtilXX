@@ -68,8 +68,8 @@ public final class RandomUtils {
     /**
      * get a fixed-length random string, its a mixture of uppercase, lowercase letters and numbers
      *
-     * @param length ³¤¶È
-     * @return Ëæ»ú×Ö·û´®
+     * @param length é•¿åº¦
+     * @return éšæœºå­—ç¬¦ä¸²
      * @see RandomUtils#getRandom(String source, int length)
      */
     public static String getRandomNumbersAndLetters(int length) {
@@ -79,8 +79,8 @@ public final class RandomUtils {
     /**
      * get a fixed-length random string, its a mixture of numbers
      *
-     * @param length ³¤¶È
-     * @return Ëæ»úÊı×Ö·û´®
+     * @param length é•¿åº¦
+     * @return éšæœºæ•°å­—ç¬¦ä¸²
      * @see RandomUtils#getRandom(String source, int length)
      */
     public static String getRandomNumbers(int length) {
@@ -90,8 +90,8 @@ public final class RandomUtils {
     /**
      * get a fixed-length random string, its a mixture of uppercase and lowercase letters
      *
-     * @param length ³¤¶È
-     * @return Ëæ»ú×ÖÄ¸×Ö·û´®
+     * @param length é•¿åº¦
+     * @return éšæœºå­—æ¯å­—ç¬¦ä¸²
      * @see RandomUtils#getRandom(String source, int length)
      */
     public static String getRandomLetters(int length) {
@@ -101,8 +101,8 @@ public final class RandomUtils {
     /**
      * get a fixed-length random string, its a mixture of uppercase letters
      *
-     * @param length ³¤¶È
-     * @return Ëæ»ú×Ö·û´® °üÀ¨´óĞ´×ÖÄ¸
+     * @param length é•¿åº¦
+     * @return éšæœºå­—ç¬¦ä¸² åŒ…æ‹¬å¤§å†™å­—æ¯
      * @see RandomUtils#getRandom(String source, int length)
      */
     public static String getRandomCapitalLetters(int length) {
@@ -112,8 +112,8 @@ public final class RandomUtils {
     /**
      * get a fixed-length random string, its a mixture of lowercase letters
      *
-     * @param length ³¤¶È
-     * @return Ëæ»ú×Ö·û´® °üÀ¨Ğ¡Ğ´×ÖÄ¸
+     * @param length é•¿åº¦
+     * @return éšæœºå­—ç¬¦ä¸² åŒ…æ‹¬å°å†™å­—æ¯
      * @see RandomUtils#getRandom(String source, int length)
      */
     public static String getRandomLowerCaseLetters(int length) {
@@ -123,8 +123,8 @@ public final class RandomUtils {
     /**
      * get a fixed-length random string, its a mixture of chars in source
      *
-     * @param source Ô´×Ö·û´®
-     * @param length ³¤¶È
+     * @param source æºå­—ç¬¦ä¸²
+     * @param length é•¿åº¦
      * @return <ul>
      * <li>if source is null or empty, return null</li>
      * <li>else see {@link RandomUtils#getRandom(char[] sourceChar, int length)}</li>
@@ -137,8 +137,8 @@ public final class RandomUtils {
     /**
      * get a fixed-length random string, its a mixture of chars in sourceChar
      *
-     * @param sourceChar Ô´
-     * @param length     ³¤¶È
+     * @param sourceChar æº
+     * @param length     é•¿åº¦
      * @return <ul>
      * <li>if sourceChar is null or empty, return null</li>
      * <li>if length less than 0, return null</li>
@@ -160,7 +160,7 @@ public final class RandomUtils {
     /**
      * get random int between 0 and max
      *
-     * @param max ×î´óËæ»úÊı
+     * @param max æœ€å¤§éšæœºæ•°
      * @return <ul>
      * <li>if max <= 0, return 0</li>
      * <li>else return random int between 0 and max</li>
@@ -173,8 +173,8 @@ public final class RandomUtils {
     /**
      * get random int between min and max
      *
-     * @param min ×îĞ¡Ëæ»úÊı
-     * @param max ×î´óËæ»úÊı
+     * @param min æœ€å°éšæœºæ•°
+     * @param max æœ€å¤§éšæœºæ•°
      * @return <ul>
      * <li>if min > max, return 0</li>
      * <li>if min == max, return min</li>

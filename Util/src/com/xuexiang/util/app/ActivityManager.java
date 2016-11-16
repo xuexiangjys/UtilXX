@@ -10,21 +10,21 @@ import android.app.Activity;
 import android.content.Context;
 
 /**  
- * ´´½¨Ê±¼ä£º2016-2-3 ÉÏÎç9:43:00  
+ * åˆ›å»ºæ—¶é—´ï¼š2016-2-3 ä¸Šåˆ9:43:00  
  * @author xuexiang
- * ÎÄ¼şÃû³Æ£ºActivityManager.java  
+ * æ–‡ä»¶åç§°ï¼šActivityManager.java  
  **/
 public class ActivityManager {
-	 // ActivityÕ»  
+	 // Activityæ ˆ  
     private static Stack<Activity> activityStack;  
-    // µ¥ÀıÄ£Ê½  
+    // å•ä¾‹æ¨¡å¼  
     private static ActivityManager instance;  
    
     private ActivityManager() {  
     }  
    
     /** 
-     * µ¥Ò»ÊµÀı 
+     * å•ä¸€å®ä¾‹ 
      */ 
     public static ActivityManager getInstance() {  
         if (instance == null) {  
@@ -34,7 +34,7 @@ public class ActivityManager {
     }  
    
     /** 
-     * Ìí¼ÓActivityµ½¶ÑÕ» 
+     * æ·»åŠ Activityåˆ°å †æ ˆ 
      */ 
     public void addActivity(Activity activity) {  
         if (activityStack == null) {  
@@ -44,7 +44,7 @@ public class ActivityManager {
     }  
    
     /** 
-     * »ñÈ¡µ±Ç°Activity£¨¶ÑÕ»ÖĞ×îºóÒ»¸öÑ¹ÈëµÄ£© 
+     * è·å–å½“å‰Activityï¼ˆå †æ ˆä¸­æœ€åä¸€ä¸ªå‹å…¥çš„ï¼‰ 
      */ 
     public Activity currentActivity() {  
         Activity activity = activityStack.lastElement();  
@@ -52,7 +52,7 @@ public class ActivityManager {
     }  
    
     /** 
-     * ½áÊøµ±Ç°Activity£¨¶ÑÕ»ÖĞ×îºóÒ»¸öÑ¹ÈëµÄ£© 
+     * ç»“æŸå½“å‰Activityï¼ˆå †æ ˆä¸­æœ€åä¸€ä¸ªå‹å…¥çš„ï¼‰ 
      */ 
     public void finishActivity() {  
         Activity activity = activityStack.lastElement();  
@@ -60,7 +60,7 @@ public class ActivityManager {
     }  
    
     /** 
-     * ½áÊøÖ¸¶¨µÄActivity 
+     * ç»“æŸæŒ‡å®šçš„Activity 
      */ 
     public void finishActivity(Activity activity) {  
         if (activity != null) {  
@@ -71,7 +71,7 @@ public class ActivityManager {
     }  
    
     /** 
-     * ½áÊøÖ¸¶¨ÀàÃûµÄActivity 
+     * ç»“æŸæŒ‡å®šç±»åçš„Activity 
      */ 
     public void finishActivity(Class<?> cls) {  
         for (Activity activity : activityStack) {  
@@ -82,7 +82,7 @@ public class ActivityManager {
     }  
    
     /** 
-     * ½áÊøËùÓĞActivity 
+     * ç»“æŸæ‰€æœ‰Activity 
      */ 
     public void finishAllActivity() {  
         for (int i = 0; i < activityStack.size(); i++) {  
@@ -94,7 +94,7 @@ public class ActivityManager {
     }  
    
     /** 
-     * ÍË³öÓ¦ÓÃ³ÌĞò 
+     * é€€å‡ºåº”ç”¨ç¨‹åº 
      */ 
     public void AppExit() {  
         try {  
@@ -108,20 +108,20 @@ public class ActivityManager {
     }  
         
     /** 
-     * Ë«»÷ÍË³öº¯Êı  */
+     * åŒå‡»é€€å‡ºå‡½æ•°  */
 	private static Boolean isExit = false;  
 	
 	public void exitBy2Click(Context context) {  		
 	   Timer tExit = null;  
 	   if (isExit == false) {  
-		   isExit = true; // ×¼±¸ÍË³ö  
-		   ToastUtil.getInstance(context).showToast("ÔÙ°´Ò»´ÎÍË³ö³ÌĞò"); 
+		   isExit = true; // å‡†å¤‡é€€å‡º  
+		   ToastUtil.getInstance(context).showToast("å†æŒ‰ä¸€æ¬¡é€€å‡ºç¨‹åº"); 
 		   tExit = new Timer(); 
 		   tExit.schedule(new TimerTask() {  
 			   @Override 
 			   public void run() {   
-				   isExit = false; // È¡ÏûÍË³ö 
-				   }  }, 2000); // Èç¹û2ÃëÖÓÄÚÃ»ÓĞ°´ÏÂ·µ»Ø¼ü£¬ÔòÆô¶¯¶¨Ê±Æ÷È¡Ïûµô¸Õ²ÅÖ´ĞĞµÄÈÎÎñ   
+				   isExit = false; // å–æ¶ˆé€€å‡º 
+				   }  }, 2000); // å¦‚æœ2ç§’é’Ÿå†…æ²¡æœ‰æŒ‰ä¸‹è¿”å›é”®ï¼Œåˆ™å¯åŠ¨å®šæ—¶å™¨å–æ¶ˆæ‰åˆšæ‰æ‰§è¡Œçš„ä»»åŠ¡   
 		   } else {  
 			   AppExit();			   			  
 			   android.os.Process.killProcess(android.os.Process.myPid());

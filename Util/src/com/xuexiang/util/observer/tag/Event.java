@@ -1,7 +1,7 @@
 package com.xuexiang.util.observer.tag;
 
 /**  
- * ´´½¨Ê±¼ä£º2016-6-5 ÏÂÎç2:18:06  
+ * åˆ›å»ºæ—¶é—´ï¼š2016-6-5 ä¸‹åˆ2:18:06  
  * @author xuexiang
  **/
 public class Event {
@@ -9,8 +9,8 @@ public class Event {
     private String mMessage;
 
 	/**
-	 * @param tag ÏûÏ¢ÊÂ¼ş±êÖ¾
-	 * @param msg ÏûÏ¢ÊÂ¼şÄÚÈİ
+	 * @param tag æ¶ˆæ¯äº‹ä»¶æ ‡å¿—
+	 * @param msg æ¶ˆæ¯äº‹ä»¶å†…å®¹
 	 */
 	public Event (String tag, String msg) {
 		mTag = tag;

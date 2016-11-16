@@ -23,11 +23,11 @@ public class DefaultDatabase implements IDataBase {
 
 	@Override
 	public void onUpgrade(SQLiteDatabase database, ConnectionSource connectionSource, int oldVersion, int newVersion) {
-//		Log.e("xx", "¸üĞÂÊı¾İ¿â");
-//		String sql = "ALTER TABLE student add column score interger default 0";  //¼ì²éĞÅÏ¢±íÔö¼Ó±¾µØ±¨¸æ×´Ì¬
+//		Log.e("xx", "æ›´æ–°æ•°æ®åº“");
+//		String sql = "ALTER TABLE student add column score interger default 0";  //æ£€æŸ¥ä¿¡æ¯è¡¨å¢åŠ æœ¬åœ°æŠ¥å‘ŠçŠ¶æ€
 //		database.execSQL(sql);		
-		Log.i("xx", "Êı¾İ¿â¾É°æ±¾=======" + oldVersion);
-		Log.i("xx", "Êı¾İ¿âĞÂ°æ±¾=======" + newVersion);
+		Log.i("xx", "æ•°æ®åº“æ—§ç‰ˆæœ¬=======" + oldVersion);
+		Log.i("xx", "æ•°æ®åº“æ–°ç‰ˆæœ¬=======" + newVersion);
 	}
 
 }

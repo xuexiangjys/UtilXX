@@ -69,7 +69,7 @@ public class FlipShareViewActivity extends BaseActivity implements View.OnClickL
                         .addItem(new ShareItem("Facebook", Color.WHITE, 0xff43549C, BitmapFactory.decodeResource(getResources(), R.drawable.ic_facebook)))
                         .addItem(new ShareItem("Wangyuwei", Color.WHITE, 0xff4999F0))
                         .addItem(new ShareItem("Wangyuweiwangyuwei", Color.WHITE, 0xffD9392D))
-                        .addItem(new ShareItem("纯文字也可以", Color.WHITE, 0xff57708A))
+                        .addItem(new ShareItem("绾枃瀛椾篃鍙互", Color.WHITE, 0xff57708A))
                         .setAnimType(FlipShareView.TYPE_HORIZONTAL)
                         .create();
                 break;

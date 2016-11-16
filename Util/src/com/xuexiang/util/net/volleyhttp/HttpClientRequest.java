@@ -80,15 +80,15 @@ public class HttpClientRequest {
         getRequestQueue().add(request);
     }
     
-    /****************************************************·µ»ØµÄÊÇÒ»¸öÀà¶ÔÏó************************************************************************************************************************/		
+    /****************************************************è¿”å›çš„æ˜¯ä¸€ä¸ªç±»å¯¹è±¡************************************************************************************************************************/		
 	/**
-	 * ×Ô¶¨ÒåÍøÂçÇëÇó
-	 * @param clazz ·µ»ØÀàÀàÃû
-	 * @param url ÇëÇó·şÎñµØÖ·
-	 * @param mode ÇëÇó·½·¨
-	 * @param Json json×Ö·û´®
-	 * @param listener ÇëÇó³É¹¦µÄÏìÓ¦
-	 * @param errorListener ÇëÇóÊ§°ÜµÄÏìÓ¦
+	 * è‡ªå®šä¹‰ç½‘ç»œè¯·æ±‚
+	 * @param clazz è¿”å›ç±»ç±»å
+	 * @param url è¯·æ±‚æœåŠ¡åœ°å€
+	 * @param mode è¯·æ±‚æ–¹æ³•
+	 * @param Json jsonå­—ç¬¦ä¸²
+	 * @param listener è¯·æ±‚æˆåŠŸçš„å“åº”
+	 * @param errorListener è¯·æ±‚å¤±è´¥çš„å“åº”
 	 * @return
 	 */
 	public <T> CustomRequest<T> getClassRequest(Class<T> clazz, 
@@ -98,25 +98,25 @@ public class HttpClientRequest {
                                    Response.Listener<T> listener, 
                                    Response.ErrorListener errorListener) {
 	    CustomRequest<T> request = new CustomRequest.RequestBuilder<T>()
-		                .post()//²»ÉèÖÃµÄ»°Ä¬ÈÏGET µ«ÊÇÉèÖÃÁË²ÎÊı¾Í²»ĞèÒªÁË¡£¡£¡£
-		                .url(url)//url»áÍ³Ò»ÅäÖÃµ½requestUrlÀàÖĞ ±ØÌî
-		                .addParams("mode", mode)//Ìí¼Ó²ÎÊı1
-		                .addParams("Json", Json)//Ìí¼Ó²ÎÊı2
-		                .clazz(clazz) //Èç¹ûÉèÖÃÁË·µ»ØÀàĞÍ£¬»á×Ô¶¯½âÎö·µ»Ømodel(Gson½âÎö) Èç¹û²»ÉèÖÃ»áÖ±½Ó·µ»ØjsonÊı¾İ;
-		                .successListener(listener)//»ñÈ¡Êı¾İ³É¹¦µÄlistener
-		                .errorListener(errorListener)//»ñÈ¡Êı¾İÒì³£µÄlistener
+		                .post()//ä¸è®¾ç½®çš„è¯é»˜è®¤GET ä½†æ˜¯è®¾ç½®äº†å‚æ•°å°±ä¸éœ€è¦äº†ã€‚ã€‚ã€‚
+		                .url(url)//urlä¼šç»Ÿä¸€é…ç½®åˆ°requestUrlç±»ä¸­ å¿…å¡«
+		                .addParams("mode", mode)//æ·»åŠ å‚æ•°1
+		                .addParams("Json", Json)//æ·»åŠ å‚æ•°2
+		                .clazz(clazz) //å¦‚æœè®¾ç½®äº†è¿”å›ç±»å‹ï¼Œä¼šè‡ªåŠ¨è§£æè¿”å›model(Gsonè§£æ) å¦‚æœä¸è®¾ç½®ä¼šç›´æ¥è¿”å›jsonæ•°æ®;
+		                .successListener(listener)//è·å–æ•°æ®æˆåŠŸçš„listener
+		                .errorListener(errorListener)//è·å–æ•°æ®å¼‚å¸¸çš„listener
 		                .build();       
 		return request;
 	}
 	
 	/**
-	 * ×Ô¶¨ÒåÍøÂçÇëÇó
-	 * @param clazz ·µ»ØÀàÀàÃû
-	 * @param url ÇëÇó·şÎñµØÖ·
-	 * @param mode ÇëÇó·½·¨
-	 * @param Json json×Ö·û´®
-	 * @param listener ÇëÇó³É¹¦µÄÏìÓ¦
-	 * @param errorListener ÇëÇóÊ§°ÜµÄÏìÓ¦
+	 * è‡ªå®šä¹‰ç½‘ç»œè¯·æ±‚
+	 * @param clazz è¿”å›ç±»ç±»å
+	 * @param url è¯·æ±‚æœåŠ¡åœ°å€
+	 * @param mode è¯·æ±‚æ–¹æ³•
+	 * @param Json jsonå­—ç¬¦ä¸²
+	 * @param listener è¯·æ±‚æˆåŠŸçš„å“åº”
+	 * @param errorListener è¯·æ±‚å¤±è´¥çš„å“åº”
 	 * @return
 	 */
 	public <T> void executeClassRequest(Class<T> clazz, String url, String mode, String Json,  Response.Listener<T> listener, Response.ErrorListener errorListener) {
@@ -124,11 +124,11 @@ public class HttpClientRequest {
 	}
 	
 	/**
-	 * ÎŞ²ÎÊıÍøÂçÇëÇó
-	 * @param clazz ·µ»ØÀàÀàÃû
-	 * @param url ÇëÇó·şÎñµØÖ·
-	 * @param listener ÇëÇó³É¹¦µÄÏìÓ¦
-	 * @param errorListener ÇëÇóÊ§°ÜµÄÏìÓ¦
+	 * æ— å‚æ•°ç½‘ç»œè¯·æ±‚
+	 * @param clazz è¿”å›ç±»ç±»å
+	 * @param url è¯·æ±‚æœåŠ¡åœ°å€
+	 * @param listener è¯·æ±‚æˆåŠŸçš„å“åº”
+	 * @param errorListener è¯·æ±‚å¤±è´¥çš„å“åº”
 	 * @return
 	 */
 	public <T> CustomRequest<T> getClassRequest(Class<T> clazz, 
@@ -136,20 +136,20 @@ public class HttpClientRequest {
 						            Response.Listener<T> listener, 
 						            Response.ErrorListener errorListener) {
 		CustomRequest<T> request = new CustomRequest.RequestBuilder<T>()
-						.url(url)//url»áÍ³Ò»ÅäÖÃµ½requestUrlÀàÖĞ ±ØÌî
-						.clazz(clazz) //Èç¹ûÉèÖÃÁË·µ»ØÀàĞÍ£¬»á×Ô¶¯½âÎö·µ»Ømodel(Gson½âÎö) Èç¹û²»ÉèÖÃ»áÖ±½Ó·µ»ØjsonÊı¾İ;
-						.successListener(listener)//»ñÈ¡Êı¾İ³É¹¦µÄlistener
-						.errorListener(errorListener)//»ñÈ¡Êı¾İÒì³£µÄlistener
+						.url(url)//urlä¼šç»Ÿä¸€é…ç½®åˆ°requestUrlç±»ä¸­ å¿…å¡«
+						.clazz(clazz) //å¦‚æœè®¾ç½®äº†è¿”å›ç±»å‹ï¼Œä¼šè‡ªåŠ¨è§£æè¿”å›model(Gsonè§£æ) å¦‚æœä¸è®¾ç½®ä¼šç›´æ¥è¿”å›jsonæ•°æ®;
+						.successListener(listener)//è·å–æ•°æ®æˆåŠŸçš„listener
+						.errorListener(errorListener)//è·å–æ•°æ®å¼‚å¸¸çš„listener
 						.build();       
 		return request;
     }
 	
 	/**
-	 * ÎŞ²ÎÊıÍøÂçÇëÇó
-	 * @param clazz ·µ»ØÀàÀàÃû
-	 * @param url ÇëÇó·şÎñµØÖ·
-	 * @param listener ÇëÇó³É¹¦µÄÏìÓ¦
-	 * @param errorListener ÇëÇóÊ§°ÜµÄÏìÓ¦
+	 * æ— å‚æ•°ç½‘ç»œè¯·æ±‚
+	 * @param clazz è¿”å›ç±»ç±»å
+	 * @param url è¯·æ±‚æœåŠ¡åœ°å€
+	 * @param listener è¯·æ±‚æˆåŠŸçš„å“åº”
+	 * @param errorListener è¯·æ±‚å¤±è´¥çš„å“åº”
 	 * @return
 	 */
 	public <T> void executeClassRequest(Class<T> clazz, String url, Response.Listener<T> listener, Response.ErrorListener errorListener) {
@@ -157,12 +157,12 @@ public class HttpClientRequest {
 	}
 	
 	/**
-	 * map²ÎÊıÇëÇó
-	 * @param clazz ·µ»ØÀàÀàÃû
-	 * @param url ÇëÇó·şÎñµØÖ·
-	 * @param params ÇëÇó²ÎÊı¼¯ºÏ
-	 * @param listener ÇëÇó³É¹¦µÄÏìÓ¦
-	 * @param errorListener ÇëÇóÊ§°ÜµÄÏìÓ¦
+	 * mapå‚æ•°è¯·æ±‚
+	 * @param clazz è¿”å›ç±»ç±»å
+	 * @param url è¯·æ±‚æœåŠ¡åœ°å€
+	 * @param params è¯·æ±‚å‚æ•°é›†åˆ
+	 * @param listener è¯·æ±‚æˆåŠŸçš„å“åº”
+	 * @param errorListener è¯·æ±‚å¤±è´¥çš„å“åº”
 	 * @return
 	 */
 	public <T> CustomRequest<T> getClassRequest(Class<T> clazz, 
@@ -171,36 +171,36 @@ public class HttpClientRequest {
 						            Response.Listener<T> listener, 
 						            Response.ErrorListener errorListener) {
 		CustomRequest<T> request = new CustomRequest.RequestBuilder<T>()
-						.url(url)//url»áÍ³Ò»ÅäÖÃµ½requestUrlÀàÖĞ ±ØÌî
-						.clazz(clazz) //Èç¹ûÉèÖÃÁË·µ»ØÀàĞÍ£¬»á×Ô¶¯½âÎö·µ»Ømodel(Gson½âÎö) Èç¹û²»ÉèÖÃ»áÖ±½Ó·µ»ØjsonÊı¾İ;
-						.params(params) //Ìí¼Ó²ÎÊı·½·¨, ÊÊÓÃ²ÎÊı±È½Ï¶àµÄÇé¿öÏÂ
-						.successListener(listener)//»ñÈ¡Êı¾İ³É¹¦µÄlistener
-						.errorListener(errorListener)//»ñÈ¡Êı¾İÒì³£µÄlistener
+						.url(url)//urlä¼šç»Ÿä¸€é…ç½®åˆ°requestUrlç±»ä¸­ å¿…å¡«
+						.clazz(clazz) //å¦‚æœè®¾ç½®äº†è¿”å›ç±»å‹ï¼Œä¼šè‡ªåŠ¨è§£æè¿”å›model(Gsonè§£æ) å¦‚æœä¸è®¾ç½®ä¼šç›´æ¥è¿”å›jsonæ•°æ®;
+						.params(params) //æ·»åŠ å‚æ•°æ–¹æ³•, é€‚ç”¨å‚æ•°æ¯”è¾ƒå¤šçš„æƒ…å†µä¸‹
+						.successListener(listener)//è·å–æ•°æ®æˆåŠŸçš„listener
+						.errorListener(errorListener)//è·å–æ•°æ®å¼‚å¸¸çš„listener
 						.build();   
 		return request;
     }
 	
 	/**
-	 * map²ÎÊıÇëÇó
-	 * @param clazz ·µ»ØÀàÀàÃû
-	 * @param url ÇëÇó·şÎñµØÖ·
-	 * @param params ÇëÇó²ÎÊı¼¯ºÏ
-	 * @param listener ÇëÇó³É¹¦µÄÏìÓ¦
-	 * @param errorListener ÇëÇóÊ§°ÜµÄÏìÓ¦
+	 * mapå‚æ•°è¯·æ±‚
+	 * @param clazz è¿”å›ç±»ç±»å
+	 * @param url è¯·æ±‚æœåŠ¡åœ°å€
+	 * @param params è¯·æ±‚å‚æ•°é›†åˆ
+	 * @param listener è¯·æ±‚æˆåŠŸçš„å“åº”
+	 * @param errorListener è¯·æ±‚å¤±è´¥çš„å“åº”
 	 * @return
 	 */
 	public <T> void executeClassRequest(Class<T> clazz, String url, HashMap<String, String> params, Response.Listener<T> listener, Response.ErrorListener errorListener) {
 		addRequest(getClassRequest(clazz, url, params, listener, errorListener), clazz.getSimpleName());	
 	}
 	
-	/****************************************************·µ»ØµÄÊÇÒ»¸öÀà¶ÔÏóµÄ¼¯ºÏ************************************************************************************************************************/			
+	/****************************************************è¿”å›çš„æ˜¯ä¸€ä¸ªç±»å¯¹è±¡çš„é›†åˆ************************************************************************************************************************/			
 	/**
-	 * ×Ô¶¨ÒåÍøÂçÇëÇó
-	 * @param url ÇëÇó·şÎñµØÖ·
-	 * @param mode ÇëÇó·½·¨
-	 * @param Json json×Ö·û´®
-	 * @param listener ÇëÇó³É¹¦µÄÏìÓ¦
-	 * @param errorListener ÇëÇóÊ§°ÜµÄÏìÓ¦
+	 * è‡ªå®šä¹‰ç½‘ç»œè¯·æ±‚
+	 * @param url è¯·æ±‚æœåŠ¡åœ°å€
+	 * @param mode è¯·æ±‚æ–¹æ³•
+	 * @param Json jsonå­—ç¬¦ä¸²
+	 * @param listener è¯·æ±‚æˆåŠŸçš„å“åº”
+	 * @param errorListener è¯·æ±‚å¤±è´¥çš„å“åº”
 	 * @return
 	 */
 	public <T> ClassListRequest<T> getClassListRequest(String url, 
@@ -209,23 +209,23 @@ public class HttpClientRequest {
                                    Response.Listener<List<T>> listener, 
                                    Response.ErrorListener errorListener) {
 		ClassListRequest<T> request = new ClassListRequest.RequestBuilder<T>()
-		                .post()//²»ÉèÖÃµÄ»°Ä¬ÈÏGET µ«ÊÇÉèÖÃÁË²ÎÊı¾Í²»ĞèÒªÁË¡£¡£¡£
-		                .url(url)//url»áÍ³Ò»ÅäÖÃµ½requestUrlÀàÖĞ ±ØÌî
-		                .addParams("mode", mode)//Ìí¼Ó²ÎÊı1
-		                .addParams("Json", Json)//Ìí¼Ó²ÎÊı2
-		                .successListener(listener)//»ñÈ¡Êı¾İ³É¹¦µÄlistener
-		                .errorListener(errorListener)//»ñÈ¡Êı¾İÒì³£µÄlistener
+		                .post()//ä¸è®¾ç½®çš„è¯é»˜è®¤GET ä½†æ˜¯è®¾ç½®äº†å‚æ•°å°±ä¸éœ€è¦äº†ã€‚ã€‚ã€‚
+		                .url(url)//urlä¼šç»Ÿä¸€é…ç½®åˆ°requestUrlç±»ä¸­ å¿…å¡«
+		                .addParams("mode", mode)//æ·»åŠ å‚æ•°1
+		                .addParams("Json", Json)//æ·»åŠ å‚æ•°2
+		                .successListener(listener)//è·å–æ•°æ®æˆåŠŸçš„listener
+		                .errorListener(errorListener)//è·å–æ•°æ®å¼‚å¸¸çš„listener
 		                .build();       
 		return request;
 	}
 	
 	/**
-	 * ×Ô¶¨ÒåÍøÂçÇëÇó
-	 * @param url ÇëÇó·şÎñµØÖ·
-	 * @param mode ÇëÇó·½·¨
-	 * @param Json json×Ö·û´®
-	 * @param listener ÇëÇó³É¹¦µÄÏìÓ¦
-	 * @param errorListener ÇëÇóÊ§°ÜµÄÏìÓ¦
+	 * è‡ªå®šä¹‰ç½‘ç»œè¯·æ±‚
+	 * @param url è¯·æ±‚æœåŠ¡åœ°å€
+	 * @param mode è¯·æ±‚æ–¹æ³•
+	 * @param Json jsonå­—ç¬¦ä¸²
+	 * @param listener è¯·æ±‚æˆåŠŸçš„å“åº”
+	 * @param errorListener è¯·æ±‚å¤±è´¥çš„å“åº”
 	 * @return
 	 */
 	public <T> void executeClassListRequest(String url, String mode, String Json,  Response.Listener<List<T>> listener, Response.ErrorListener errorListener) {
@@ -233,28 +233,28 @@ public class HttpClientRequest {
 	}
 	
 	/**
-	 * ÎŞ²ÎÊıÍøÂçÇëÇó
-	 * @param url ÇëÇó·şÎñµØÖ·
-	 * @param listener ÇëÇó³É¹¦µÄÏìÓ¦
-	 * @param errorListener ÇëÇóÊ§°ÜµÄÏìÓ¦
+	 * æ— å‚æ•°ç½‘ç»œè¯·æ±‚
+	 * @param url è¯·æ±‚æœåŠ¡åœ°å€
+	 * @param listener è¯·æ±‚æˆåŠŸçš„å“åº”
+	 * @param errorListener è¯·æ±‚å¤±è´¥çš„å“åº”
 	 * @return
 	 */
 	public <T> ClassListRequest<T> getClassListRequest(String url, 
 						            Response.Listener<List<T>> listener, 
 						            Response.ErrorListener errorListener) {
 		ClassListRequest<T> request = new ClassListRequest.RequestBuilder<T>()
-						.url(url)//url»áÍ³Ò»ÅäÖÃµ½requestUrlÀàÖĞ ±ØÌî
-						.successListener(listener)//»ñÈ¡Êı¾İ³É¹¦µÄlistener
-						.errorListener(errorListener)//»ñÈ¡Êı¾İÒì³£µÄlistener
+						.url(url)//urlä¼šç»Ÿä¸€é…ç½®åˆ°requestUrlç±»ä¸­ å¿…å¡«
+						.successListener(listener)//è·å–æ•°æ®æˆåŠŸçš„listener
+						.errorListener(errorListener)//è·å–æ•°æ®å¼‚å¸¸çš„listener
 						.build();       
 		return request;
     }
 	
 	/**
-	 * ÎŞ²ÎÊıÍøÂçÇëÇó
-	 * @param url ÇëÇó·şÎñµØÖ·
-	 * @param listener ÇëÇó³É¹¦µÄÏìÓ¦
-	 * @param errorListener ÇëÇóÊ§°ÜµÄÏìÓ¦
+	 * æ— å‚æ•°ç½‘ç»œè¯·æ±‚
+	 * @param url è¯·æ±‚æœåŠ¡åœ°å€
+	 * @param listener è¯·æ±‚æˆåŠŸçš„å“åº”
+	 * @param errorListener è¯·æ±‚å¤±è´¥çš„å“åº”
 	 * @return
 	 */
 	public <T> void executeClassListRequest(String url, Response.Listener<List<T>> listener, Response.ErrorListener errorListener) {
@@ -262,11 +262,11 @@ public class HttpClientRequest {
 	}
 	
 	/**
-	 * map²ÎÊıÇëÇó
-	 * @param url ÇëÇó·şÎñµØÖ·
-	 * @param params ÇëÇó²ÎÊı¼¯ºÏ
-	 * @param listener ÇëÇó³É¹¦µÄÏìÓ¦
-	 * @param errorListener ÇëÇóÊ§°ÜµÄÏìÓ¦
+	 * mapå‚æ•°è¯·æ±‚
+	 * @param url è¯·æ±‚æœåŠ¡åœ°å€
+	 * @param params è¯·æ±‚å‚æ•°é›†åˆ
+	 * @param listener è¯·æ±‚æˆåŠŸçš„å“åº”
+	 * @param errorListener è¯·æ±‚å¤±è´¥çš„å“åº”
 	 * @return
 	 */
 	public <T> ClassListRequest<T> getClassListRequest(String url, 
@@ -274,34 +274,34 @@ public class HttpClientRequest {
 						            Response.Listener<List<T>> listener, 
 						            Response.ErrorListener errorListener) {
 		ClassListRequest<T> request = new ClassListRequest.RequestBuilder<T>()
-						.url(url)//url»áÍ³Ò»ÅäÖÃµ½requestUrlÀàÖĞ ±ØÌî
-						.params(params) //Ìí¼Ó²ÎÊı·½·¨, ÊÊÓÃ²ÎÊı±È½Ï¶àµÄÇé¿öÏÂ
-						.successListener(listener)//»ñÈ¡Êı¾İ³É¹¦µÄlistener
-						.errorListener(errorListener)//»ñÈ¡Êı¾İÒì³£µÄlistener
+						.url(url)//urlä¼šç»Ÿä¸€é…ç½®åˆ°requestUrlç±»ä¸­ å¿…å¡«
+						.params(params) //æ·»åŠ å‚æ•°æ–¹æ³•, é€‚ç”¨å‚æ•°æ¯”è¾ƒå¤šçš„æƒ…å†µä¸‹
+						.successListener(listener)//è·å–æ•°æ®æˆåŠŸçš„listener
+						.errorListener(errorListener)//è·å–æ•°æ®å¼‚å¸¸çš„listener
 						.build();   
 		return request;
     }
 	
 	/**
-	 * map²ÎÊıÇëÇó
-	 * @param url ÇëÇó·şÎñµØÖ·
-	 * @param params ÇëÇó²ÎÊı¼¯ºÏ
-	 * @param listener ÇëÇó³É¹¦µÄÏìÓ¦
-	 * @param errorListener ÇëÇóÊ§°ÜµÄÏìÓ¦
+	 * mapå‚æ•°è¯·æ±‚
+	 * @param url è¯·æ±‚æœåŠ¡åœ°å€
+	 * @param params è¯·æ±‚å‚æ•°é›†åˆ
+	 * @param listener è¯·æ±‚æˆåŠŸçš„å“åº”
+	 * @param errorListener è¯·æ±‚å¤±è´¥çš„å“åº”
 	 * @return
 	 */
 	public <T> void executeClassListRequest(String url, HashMap<String, String> params, Response.Listener<List<T>> listener, Response.ErrorListener errorListener) {
 		addRequest(getClassListRequest(url, params, listener, errorListener));	
 	}
 		
-	/****************************************************·µ»ØµÄÊÇÒ»¸ö×Ö·û´®************************************************************************************************************************/			
+	/****************************************************è¿”å›çš„æ˜¯ä¸€ä¸ªå­—ç¬¦ä¸²************************************************************************************************************************/			
 	/**
-	 * ×Ô¶¨ÒåÍøÂçÇëÇó
-	 * @param url ÇëÇó·şÎñµØÖ·
-	 * @param mode ÇëÇó·½·¨
-	 * @param Json json×Ö·û´®
-	 * @param listener ÇëÇó³É¹¦µÄÏìÓ¦
-	 * @param errorListener ÇëÇóÊ§°ÜµÄÏìÓ¦
+	 * è‡ªå®šä¹‰ç½‘ç»œè¯·æ±‚
+	 * @param url è¯·æ±‚æœåŠ¡åœ°å€
+	 * @param mode è¯·æ±‚æ–¹æ³•
+	 * @param Json jsonå­—ç¬¦ä¸²
+	 * @param listener è¯·æ±‚æˆåŠŸçš„å“åº”
+	 * @param errorListener è¯·æ±‚å¤±è´¥çš„å“åº”
 	 * @return
 	 */
 	public MyStringRequest getStringRequest(String url, 
@@ -310,8 +310,8 @@ public class HttpClientRequest {
 		                                  Response.ErrorListener errorListener) {
 		MyStringRequest request = new MyStringRequest.RequestBuilder()
 					        .url(url)
-					        .addParams("mode", mode)//Ìí¼Ó²ÎÊı1
-					        .addParams("Json", Json)//Ìí¼Ó²ÎÊı2
+					        .addParams("mode", mode)//æ·»åŠ å‚æ•°1
+					        .addParams("Json", Json)//æ·»åŠ å‚æ•°2
 					        .successListener(listener)
 					        .errorListener(errorListener)
 					        .build();            
@@ -319,12 +319,12 @@ public class HttpClientRequest {
 	}
 	
 	/**
-	 * ×Ô¶¨ÒåÍøÂçÇëÇó
-	 * @param url ÇëÇó·şÎñµØÖ·
-	 * @param mode ÇëÇó·½·¨
-	 * @param Json json×Ö·û´®
-	 * @param listener ÇëÇó³É¹¦µÄÏìÓ¦
-	 * @param errorListener ÇëÇóÊ§°ÜµÄÏìÓ¦
+	 * è‡ªå®šä¹‰ç½‘ç»œè¯·æ±‚
+	 * @param url è¯·æ±‚æœåŠ¡åœ°å€
+	 * @param mode è¯·æ±‚æ–¹æ³•
+	 * @param Json jsonå­—ç¬¦ä¸²
+	 * @param listener è¯·æ±‚æˆåŠŸçš„å“åº”
+	 * @param errorListener è¯·æ±‚å¤±è´¥çš„å“åº”
 	 * @return
 	 */
 	public void executeStringRequest(String url, String mode, String Json, Response.Listener<String> listener, Response.ErrorListener errorListener) {       
@@ -332,10 +332,10 @@ public class HttpClientRequest {
 	}
 	
 	/**
-	 * ÎŞ²ÎÊıÍøÂçÇëÇó
-	 * @param url ÇëÇó·şÎñµØÖ·
-	 * @param httpSuccess ÇëÇó³É¹¦µÄÏìÓ¦
-	 * @param httpError ÇëÇóÊ§°ÜµÄÏìÓ¦
+	 * æ— å‚æ•°ç½‘ç»œè¯·æ±‚
+	 * @param url è¯·æ±‚æœåŠ¡åœ°å€
+	 * @param httpSuccess è¯·æ±‚æˆåŠŸçš„å“åº”
+	 * @param httpError è¯·æ±‚å¤±è´¥çš„å“åº”
 	 * @return
 	 */
 	public MyStringRequest getStringRequest(String url, 
@@ -350,10 +350,10 @@ public class HttpClientRequest {
 	}
 	
 	/**
-	 * ÎŞ²ÎÊıÍøÂçÇëÇó
-	 * @param url ÇëÇó·şÎñµØÖ·
-	 * @param httpSuccess ÇëÇó³É¹¦µÄÏìÓ¦
-	 * @param httpError ÇëÇóÊ§°ÜµÄÏìÓ¦
+	 * æ— å‚æ•°ç½‘ç»œè¯·æ±‚
+	 * @param url è¯·æ±‚æœåŠ¡åœ°å€
+	 * @param httpSuccess è¯·æ±‚æˆåŠŸçš„å“åº”
+	 * @param httpError è¯·æ±‚å¤±è´¥çš„å“åº”
 	 * @return
 	 */
 	public void executeStringRequest(String url, Response.Listener<String> listener, Response.ErrorListener errorListener) {       
@@ -361,10 +361,10 @@ public class HttpClientRequest {
 	}
 	
 	/**
-	 * map²ÎÊıÇëÇó
-	 * @param url ÇëÇó·şÎñµØÖ·
-	 * @param httpSuccess ÇëÇó³É¹¦µÄÏìÓ¦
-	 * @param httpError ÇëÇóÊ§°ÜµÄÏìÓ¦
+	 * mapå‚æ•°è¯·æ±‚
+	 * @param url è¯·æ±‚æœåŠ¡åœ°å€
+	 * @param httpSuccess è¯·æ±‚æˆåŠŸçš„å“åº”
+	 * @param httpError è¯·æ±‚å¤±è´¥çš„å“åº”
 	 * @return
 	 */
 	public MyStringRequest getStringRequest(String url, 
@@ -381,24 +381,24 @@ public class HttpClientRequest {
 	}
 	
 	/**
-	 * map²ÎÊıÇëÇó
-	 * @param url ÇëÇó·şÎñµØÖ·
-	 * @param httpSuccess ÇëÇó³É¹¦µÄÏìÓ¦
-	 * @param httpError ÇëÇóÊ§°ÜµÄÏìÓ¦
+	 * mapå‚æ•°è¯·æ±‚
+	 * @param url è¯·æ±‚æœåŠ¡åœ°å€
+	 * @param httpSuccess è¯·æ±‚æˆåŠŸçš„å“åº”
+	 * @param httpError è¯·æ±‚å¤±è´¥çš„å“åº”
 	 * @return
 	 */
 	public void executeStringRequest(String url, HashMap<String, String> params, Response.Listener<String> listener, Response.ErrorListener errorListener) {
 		addRequest(getStringRequest(url, params, listener, errorListener));		
 	}
 	
-	/****************************************************·µ»ØµÄÊÇÒ»¸öJSONObject************************************************************************************************************************/			
+	/****************************************************è¿”å›çš„æ˜¯ä¸€ä¸ªJSONObject************************************************************************************************************************/			
 	/**
-	 * ×Ô¶¨ÒåÍøÂçÇëÇó
-	 * @param url ÇëÇó·şÎñµØÖ·
-	 * @param mode ÇëÇó·½·¨
-	 * @param Json json×Ö·û´®
-	 * @param listener ÇëÇó³É¹¦µÄÏìÓ¦
-	 * @param errorListener ÇëÇóÊ§°ÜµÄÏìÓ¦
+	 * è‡ªå®šä¹‰ç½‘ç»œè¯·æ±‚
+	 * @param url è¯·æ±‚æœåŠ¡åœ°å€
+	 * @param mode è¯·æ±‚æ–¹æ³•
+	 * @param Json jsonå­—ç¬¦ä¸²
+	 * @param listener è¯·æ±‚æˆåŠŸçš„å“åº”
+	 * @param errorListener è¯·æ±‚å¤±è´¥çš„å“åº”
 	 * @return
 	 */
 	public MyJsonObjectRequest getJsonObjectRequest(String url, 
@@ -408,9 +408,9 @@ public class HttpClientRequest {
                                      Response.ErrorListener errorListener) {
 		MyJsonObjectRequest request = new MyJsonObjectRequest.RequestBuilder()
 					        .url(url)
-					        .addParams("mode", mode)//Ìí¼Ó²ÎÊı1
-		                    .addParams("Json", Json)//Ìí¼Ó²ÎÊı2
-		                    .toJSONString() //½«²ÎÊı×ª»»ÎªString
+					        .addParams("mode", mode)//æ·»åŠ å‚æ•°1
+		                    .addParams("Json", Json)//æ·»åŠ å‚æ•°2
+		                    .toJSONString() //å°†å‚æ•°è½¬æ¢ä¸ºString
 					        .successListener(listener)
 					        .errorListener(errorListener)
 					        .build();       
@@ -418,13 +418,13 @@ public class HttpClientRequest {
 	}
 	
 	/**
-	 * ×Ô¶¨ÒåÍøÂçÇëÇó
-	 * @param clazz ·µ»ØÀàÀàÃû
-	 * @param url ÇëÇó·şÎñµØÖ·
-	 * @param mode ÇëÇó·½·¨
-	 * @param Json json×Ö·û´®
-	 * @param listener ÇëÇó³É¹¦µÄÏìÓ¦
-	 * @param errorListener ÇëÇóÊ§°ÜµÄÏìÓ¦
+	 * è‡ªå®šä¹‰ç½‘ç»œè¯·æ±‚
+	 * @param clazz è¿”å›ç±»ç±»å
+	 * @param url è¯·æ±‚æœåŠ¡åœ°å€
+	 * @param mode è¯·æ±‚æ–¹æ³•
+	 * @param Json jsonå­—ç¬¦ä¸²
+	 * @param listener è¯·æ±‚æˆåŠŸçš„å“åº”
+	 * @param errorListener è¯·æ±‚å¤±è´¥çš„å“åº”
 	 * @return
 	 */
 	public void executeJsonObjectRequest(String url, String mode, String Json, Response.Listener<JSONObject> listener, Response.ErrorListener errorListener) {
@@ -432,10 +432,10 @@ public class HttpClientRequest {
 	}
 	
 	/**
-	 * ÎŞ²ÎÊıÍøÂçÇëÇó
-	 * @param url ÇëÇó·şÎñµØÖ·
-	 * @param listener ÇëÇó³É¹¦µÄÏìÓ¦
-	 * @param errorListener ÇëÇóÊ§°ÜµÄÏìÓ¦
+	 * æ— å‚æ•°ç½‘ç»œè¯·æ±‚
+	 * @param url è¯·æ±‚æœåŠ¡åœ°å€
+	 * @param listener è¯·æ±‚æˆåŠŸçš„å“åº”
+	 * @param errorListener è¯·æ±‚å¤±è´¥çš„å“åº”
 	 * @return
 	 */
 	public MyJsonObjectRequest getJsonObjectRequest(String url, 
@@ -450,10 +450,10 @@ public class HttpClientRequest {
 	}
 	
 	/**
-	 * ÎŞ²ÎÊıÍøÂçÇëÇó
-	 * @param url ÇëÇó·şÎñµØÖ·
-	 * @param listener ÇëÇó³É¹¦µÄÏìÓ¦
-	 * @param errorListener ÇëÇóÊ§°ÜµÄÏìÓ¦
+	 * æ— å‚æ•°ç½‘ç»œè¯·æ±‚
+	 * @param url è¯·æ±‚æœåŠ¡åœ°å€
+	 * @param listener è¯·æ±‚æˆåŠŸçš„å“åº”
+	 * @param errorListener è¯·æ±‚å¤±è´¥çš„å“åº”
 	 * @return
 	 */
 	public void executeJsonObjectRequest(String url, Response.Listener<JSONObject> listener, Response.ErrorListener errorListener) {
@@ -461,11 +461,11 @@ public class HttpClientRequest {
 	}
 	
 	/**
-	 * map²ÎÊıÇëÇó
-	 * @param url ÇëÇó·şÎñµØÖ·
-	 * @param params ÇëÇó²ÎÊı¼¯ºÏ
-	 * @param listener ÇëÇó³É¹¦µÄÏìÓ¦
-	 * @param errorListener ÇëÇóÊ§°ÜµÄÏìÓ¦
+	 * mapå‚æ•°è¯·æ±‚
+	 * @param url è¯·æ±‚æœåŠ¡åœ°å€
+	 * @param params è¯·æ±‚å‚æ•°é›†åˆ
+	 * @param listener è¯·æ±‚æˆåŠŸçš„å“åº”
+	 * @param errorListener è¯·æ±‚å¤±è´¥çš„å“åº”
 	 * @return
 	 */
 	public MyJsonObjectRequest getJsonObjectRequest(String url, 
@@ -483,11 +483,11 @@ public class HttpClientRequest {
 	}
 	
 	/**
-	 * map²ÎÊıÇëÇó
-	 * @param url ÇëÇó·şÎñµØÖ·
-	 * @param params ÇëÇó²ÎÊı¼¯ºÏ
-	 * @param listener ÇëÇó³É¹¦µÄÏìÓ¦
-	 * @param errorListener ÇëÇóÊ§°ÜµÄÏìÓ¦
+	 * mapå‚æ•°è¯·æ±‚
+	 * @param url è¯·æ±‚æœåŠ¡åœ°å€
+	 * @param params è¯·æ±‚å‚æ•°é›†åˆ
+	 * @param listener è¯·æ±‚æˆåŠŸçš„å“åº”
+	 * @param errorListener è¯·æ±‚å¤±è´¥çš„å“åº”
 	 * @return
 	 */
 	public void executeJsonObjectRequest(String url, HashMap<String, String> params, Response.Listener<JSONObject> listener, Response.ErrorListener errorListener) {

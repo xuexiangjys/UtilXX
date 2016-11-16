@@ -19,22 +19,22 @@ import com.xuexiang.view.swipelistview.pop.ActionItem;
 import com.xuexiang.view.swipelistview.pop.QuickAction;
 
 /**  
- * ´´½¨Ê±¼ä£º2016-8-3 ÉÏÎç8:26:40  
- * ÏîÄ¿Ãû³Æ£ºUtilTest  
+ * åˆ›å»ºæ—¶é—´ï¼š2016-8-3 ä¸Šåˆ8:26:40  
+ * é¡¹ç›®åç§°ï¼šUtilTest  
  * @author xuexiang
- * ÎÄ¼şÃû³Æ£ºSwipeListViewActivity.java  
+ * æ–‡ä»¶åç§°ï¼šSwipeListViewActivity.java  
  **/
 public class SwipeListViewActivity extends BaseActivity {
 
-	//listviewµÄÊÊÅäÆ÷
+	//listviewçš„é€‚é…å™¨
 	private RecentAdapter mAdapter;
-	//listviewÊı¾İÔ´
+	//listviewæ•°æ®æº
 	public  LinkedList<RecentItem> mRecentDatas;
-	//×Ô¶¨ÒåµÄlistview
+	//è‡ªå®šä¹‰çš„listview
 	private SwipeListView mRecentListView;
 	private TextView mEmpty;
 	private int mClickItem = -1;
-	// µã»÷itemµ¯³ö
+	// ç‚¹å‡»itemå¼¹å‡º
 	protected QuickAction mItemClickQuickAction = null;
 	@Override
 	public void onCreateActivity() {
@@ -44,13 +44,13 @@ public class SwipeListViewActivity extends BaseActivity {
 		initPop();
 	}
 	
-	//µ¥»÷listviewÄ³Ò»ÏîÊ±£¬¿ÉÒÔµ¯³öpop¡£QuickActionÊµÏÖÀàÊÇ¼Ì³ĞPopupWindows
+	//å•å‡»listviewæŸä¸€é¡¹æ—¶ï¼Œå¯ä»¥å¼¹å‡ºpopã€‚QuickActionå®ç°ç±»æ˜¯ç»§æ‰¿PopupWindows
 	private void initPop() {
-		// ÉèÖÃAction
+		// è®¾ç½®Action
 		mItemClickQuickAction = new QuickAction(this, QuickAction.VERTICAL);
 		
-		ActionItem pointItem = new ActionItem(1, "ÏêÏ¸ĞÅÏ¢", null);
-		ActionItem areaItem = new ActionItem(2, "ĞÅÏ¢2", null);
+		ActionItem pointItem = new ActionItem(1, "è¯¦ç»†ä¿¡æ¯", null);
+		ActionItem areaItem = new ActionItem(2, "ä¿¡æ¯2", null);
 		pointItem.setIcon(null);
 		areaItem.setIcon(null);
 		
@@ -71,7 +71,7 @@ public class SwipeListViewActivity extends BaseActivity {
 					intent.putExtras(bundle);
 					startActivity(intent);					
 				}
-				//µ¯³ö¿òÏûÊ§
+				//å¼¹å‡ºæ¡†æ¶ˆå¤±
 				mItemClickQuickAction.dismiss();
 			}
 		});
@@ -91,13 +91,13 @@ public class SwipeListViewActivity extends BaseActivity {
 					@Override
 					public void onClickFrontView(View view, int position) {
 						mClickItem = position;
-						//´¥·¢µ¯³ö
+						//è§¦å‘å¼¹å‡º
 						mItemClickQuickAction.show(view);
 					}
 
 					@Override
 					public void onClickBackView(int position) {
-						mRecentListView.closeOpenedItems();// ¹Ø±Õ´ò¿ªµÄÏî
+						mRecentListView.closeOpenedItems();// å…³é—­æ‰“å¼€çš„é¡¹
 					}
 
 					@Override
@@ -110,7 +110,7 @@ public class SwipeListViewActivity extends BaseActivity {
 				});
 	}
 	
-	//¾²Ì¬Êı¾İÔ´µÄ»ñÈ¡
+	//é™æ€æ•°æ®æºçš„è·å–
 	public LinkedList<RecentItem> getRecentList() {
 		LinkedList<RecentItem> list = new LinkedList<RecentItem>();
 		nameArray = getResources().getStringArray(R.array.jazzy_effects_ch);
@@ -121,7 +121,7 @@ public class SwipeListViewActivity extends BaseActivity {
 			RecentItem item = new RecentItem(name, icon, num);
 			list.add(item);
 		}
-		Collections.sort(list);// ½µĞò
+		Collections.sort(list);// é™åº
 		return list;
 	}
 	

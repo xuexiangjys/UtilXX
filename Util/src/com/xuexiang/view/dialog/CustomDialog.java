@@ -12,7 +12,7 @@ import com.xuexiang.util.resource.RUtils;
 
 
 /**
- * ×Ô¶¨ÒåÍ¸Ã÷µÄdialog
+ * è‡ªå®šä¹‰é€æ˜çš„dialog
  */
 public class CustomDialog extends AlertDialog{
     private String mLoadingText;
@@ -57,7 +57,7 @@ public class CustomDialog extends AlertDialog{
        
         mLoadingTextView = (TextView)findViewById(RUtils.getId(getContext(), "loadingText"));
         if (TextUtils.isEmpty(mLoadingText)) {
-        	mLoadingTextView.setText("ÕıÔÚ¼ÓÔØÖĞ...");
+        	mLoadingTextView.setText("æ­£åœ¨åŠ è½½ä¸­...");
 	     } else {
 	    	 mLoadingTextView.setText(mLoadingText);
 	     }

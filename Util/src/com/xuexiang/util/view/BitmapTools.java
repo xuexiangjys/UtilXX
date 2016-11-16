@@ -27,7 +27,7 @@ import com.xuexiang.util.file.LocalFileUtil;
 
 
 public class BitmapTools {
-	// ±£´æ bitmap µ½SD¿¨F
+	// ä¿å­˜ bitmap åˆ°SDå¡F
 	public static boolean saveBitmapToSDCard(Bitmap bitmap, String filePath,
 			String fileName) {
 		boolean flag = false;
@@ -80,32 +80,32 @@ public class BitmapTools {
 	}
 
 	public static Bitmap drawableToBitmap(Drawable drawable) {
-		// È¡ drawable µÄ³¤¿í
+		// å– drawable çš„é•¿å®½
 		int w = drawable.getIntrinsicWidth();
 		int h = drawable.getIntrinsicHeight();
 
-		// È¡ drawable µÄÑÕÉ«¸ñÊ½
+		// å– drawable çš„é¢œè‰²æ ¼å¼
 		Bitmap.Config config = drawable.getOpacity() != PixelFormat.OPAQUE ? Bitmap.Config.ARGB_8888
 				: Bitmap.Config.RGB_565;
-		// ½¨Á¢¶ÔÓ¦ bitmap
+		// å»ºç«‹å¯¹åº” bitmap
 		Bitmap bitmap = Bitmap.createBitmap(w, h, config);
-		// ½¨Á¢¶ÔÓ¦ bitmap µÄ»­²¼
+		// å»ºç«‹å¯¹åº” bitmap çš„ç”»å¸ƒ
 		Canvas canvas = new Canvas(bitmap);
 		drawable.setBounds(0, 0, w, h);
-		// °Ñ drawable ÄÚÈİ»­µ½»­²¼ÖĞ
+		// æŠŠ drawable å†…å®¹ç”»åˆ°ç”»å¸ƒä¸­
 		drawable.draw(canvas);
 		return bitmap;
 	}
 
 	/**
-	 * @return ·µ»ØÖ¸¶¨±ÊºÍÖ¸¶¨×Ö·û´®µÄ³¤¶È
+	 * @return è¿”å›æŒ‡å®šç¬”å’ŒæŒ‡å®šå­—ç¬¦ä¸²çš„é•¿åº¦
 	 */
 	public static float getFontlength(Paint paint, String str) {
 		return paint.measureText(str);
 	}
 
 	/**
-	 * @return ·µ»ØÖ¸¶¨±ÊµÄÎÄ×Ö¸ß¶È
+	 * @return è¿”å›æŒ‡å®šç¬”çš„æ–‡å­—é«˜åº¦
 	 */
 	public static float getFontHeight(Paint paint) {
 		FontMetrics fm = paint.getFontMetrics();
@@ -113,7 +113,7 @@ public class BitmapTools {
 	}
 
 	/**
-	 * @return ·µ»ØÖ¸¶¨±ÊÀëÎÄ×Ö¶¥²¿µÄ»ù×¼¾àÀë
+	 * @return è¿”å›æŒ‡å®šç¬”ç¦»æ–‡å­—é¡¶éƒ¨çš„åŸºå‡†è·ç¦»
 	 */
 	public static float getFontLeading(Paint paint) {
 		FontMetrics fm = paint.getFontMetrics();
@@ -121,7 +121,7 @@ public class BitmapTools {
 	}
 
 	/**
-	 * »ñÈ¡Ô²½ÇÍ¼Æ¬
+	 * è·å–åœ†è§’å›¾ç‰‡
 	 * 
 	 * @param bitmap
 	 * @param pixels
@@ -151,10 +151,10 @@ public class BitmapTools {
 	}
 
 	/**
-	 * ±£´æÍ¼Æ¬µ½SD¿¨
+	 * ä¿å­˜å›¾ç‰‡åˆ°SDå¡
 	 * 
 	 * @param bitmap
-	 *            Í¼Æ¬µÄbitmap¶ÔÏó
+	 *            å›¾ç‰‡çš„bitmapå¯¹è±¡
 	 * @return
 	 */
 	public static String savePhotoToSDCard(Bitmap bitmap) {
@@ -188,7 +188,7 @@ public class BitmapTools {
 	
 
 	/**
-     * Çå¿ÕÍ¼Æ¬µÄÄÚ´æ
+     * æ¸…ç©ºå›¾ç‰‡çš„å†…å­˜
      */
 	public static void clearImgMemory(ImageView imageView) {
         Drawable d = imageView.getDrawable();

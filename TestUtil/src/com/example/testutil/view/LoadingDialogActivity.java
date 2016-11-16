@@ -28,10 +28,10 @@ import com.xuexiang.view.dialog.confirmdialog.OnDialogClickListener;
 
 
 /**  
- * ´´½¨Ê±¼ä£º2016-5-31 ÏÂÎç9:21:32  
- * ÏîÄ¿Ãû³Æ£ºUtilTest  
+ * åˆ›å»ºæ—¶é—´ï¼š2016-5-31 ä¸‹åˆ9:21:32  
+ * é¡¹ç›®åç§°ï¼šUtilTest  
  * @author xuexiang
- * ÎÄ¼şÃû³Æ£ºLoadingDialog.java  
+ * æ–‡ä»¶åç§°ï¼šLoadingDialog.java  
  **/
 public class LoadingDialogActivity extends BaseActivity implements OnClickListener, OnDialogClickListener{
 
@@ -54,7 +54,7 @@ public class LoadingDialogActivity extends BaseActivity implements OnClickListen
 	public void onCreateActivity() {
 		setContentView(R.layout.activity_loadingdialog);
         
-	    initActionBar("¼ÓÔØ¿òÖ÷½çÃæ");
+	    initActionBar("åŠ è½½æ¡†ä¸»ç•Œé¢");
 	    
 	    initView();
 	}
@@ -63,8 +63,8 @@ public class LoadingDialogActivity extends BaseActivity implements OnClickListen
 		loadingview = (LoadingView) findViewById(R.id.loadView);
 		loadingview.setVisibility(View.GONE);
 		
-		mShapeLoadingDialog = new ShapeLoadingDialog(this, "¼ÓÔØÖĞ..");
-		//mShapeLoadingDialog.setLoadingText("¼ÓÔØÖĞ..");
+		mShapeLoadingDialog = new ShapeLoadingDialog(this, "åŠ è½½ä¸­..");
+		//mShapeLoadingDialog.setLoadingText("åŠ è½½ä¸­..");
 		mHandler = new Handler();
 	}
 
@@ -72,64 +72,64 @@ public class LoadingDialogActivity extends BaseActivity implements OnClickListen
 	public void onClick(View v) {
 		switch (v.getId()) {
 		case R.id.btn_confirmdialog:
-			mConfirmDialog = new ConfirmDialog(mContext, "È·¶¨ÍË³öÏµÍ³");
+			mConfirmDialog = new ConfirmDialog(mContext, "ç¡®å®šé€€å‡ºç³»ç»Ÿ");
 			mConfirmDialog.showDialog();
 			
 			mConfirmDialog.setOnClickListener(new onConfirmDialogClickListener(){
 				@Override
 				public void onClick(int mode) {
 					if(mode == ConfirmDialog.CONFIRM){
-						Toast("È·¶¨");
+						Toast("ç¡®å®š");
 					} else{
-						Toast( "È¡Ïû");
+						Toast( "å–æ¶ˆ");
 					}
 			}});
 			break;
 		case R.id.btn_confirmdialog1:
-			mDialog = new com.xuexiang.view.dialog.confirmdialog.ConfirmDialog(mContext, "±êÌâ", "ÕâÀïÊÇConfirmDialogµÄÄÚÈİ", new OnDialogClickListener(){					
+			mDialog = new com.xuexiang.view.dialog.confirmdialog.ConfirmDialog(mContext, "æ ‡é¢˜", "è¿™é‡Œæ˜¯ConfirmDialogçš„å†…å®¹", new OnDialogClickListener(){					
 				@Override
 				public void onSubmit() {
-					Toast("µã»÷È·¶¨");
+					Toast("ç‚¹å‡»ç¡®å®š");
 				}
 				@Override
 				public void onCancel() {
-					Toast("µã»÷È¡Ïû");						
+					Toast("ç‚¹å‡»å–æ¶ˆ");						
 				}
 			});
 			mDialog.show();
 			break;
 			
 		case R.id.btn_confirmpopwindowdialog:
-			mPopupWindow = new ConfirmPopWindow(mContext, "±êÌâ", "ÕâÀïÊÇConfirmPopWindowµÄÄÚÈİ", new OnDialogClickListener(){
+			mPopupWindow = new ConfirmPopWindow(mContext, "æ ‡é¢˜", "è¿™é‡Œæ˜¯ConfirmPopWindowçš„å†…å®¹", new OnDialogClickListener(){
 				
 				@Override
 				public void onSubmit() {
-					Toast("µã»÷È·¶¨");
+					Toast("ç‚¹å‡»ç¡®å®š");
 				}
 				@Override
 				public void onCancel() {
-					Toast("µã»÷È¡Ïû");						
+					Toast("ç‚¹å‡»å–æ¶ˆ");						
 				}
 			});
 			mPopupWindow.showAtBottom(v);
 			break;
 			
 		case R.id.btn_confirmlayoutdialog:
-			mConfirmLayout = new ConfirmLayout(mContext, "±êÌâ", "ÕâÀïÊÇConfirmLayoutµÄÄÚÈİ", new OnDialogClickListener(){					
+			mConfirmLayout = new ConfirmLayout(mContext, "æ ‡é¢˜", "è¿™é‡Œæ˜¯ConfirmLayoutçš„å†…å®¹", new OnDialogClickListener(){					
 				@Override
 				public void onSubmit() {
-					Toast("µã»÷È·¶¨");
+					Toast("ç‚¹å‡»ç¡®å®š");
 				}
 				@Override
 				public void onCancel() {
-					Toast("µã»÷È¡Ïû");						
+					Toast("ç‚¹å‡»å–æ¶ˆ");						
 				}
 			});
 			mConfirmLayout.show();
 			break;
 			
 		case R.id.btn_confirmfragmentdialog:
-			mConfirmFragment = new ConfirmFragment().newInstance("±êÌâ", "ÕâÀïÊÇConfirmFragmentµÄÄÚÈİ");
+			mConfirmFragment = new ConfirmFragment().newInstance("æ ‡é¢˜", "è¿™é‡Œæ˜¯ConfirmFragmentçš„å†…å®¹");
 			mConfirmFragment.show(getSupportFragmentManager(), "ConfirmFragment");
 			break;
 			
@@ -143,14 +143,14 @@ public class LoadingDialogActivity extends BaseActivity implements OnClickListen
 			break;
 			
 		case R.id.btn_loading_Animator_dialog:
-			final LoadingAnimatorDialog dialog = new LoadingAnimatorDialog(this, "ÕıÔÚ·è¿ñ¼ÓÔØÖĞ...");
+			final LoadingAnimatorDialog dialog = new LoadingAnimatorDialog(this, "æ­£åœ¨ç–¯ç‹‚åŠ è½½ä¸­...");
 			dialog.setCanceledOnTouchOutside(false);
 			dialog.show();			
 			ThreadPoolManager.getInstance().addTask(new Runnable() {  				  
 		            @Override  
 		            public void run() {  
 		                try {  
-		                    Thread.sleep(10000);  //10Ãëºó¹Ø±Õ  
+		                    Thread.sleep(10000);  //10ç§’åå…³é—­  
 		                    mActivityManager.currentActivity().runOnUiThread(new Runnable() {    
 		                        public void run() {    
 		                        	dialog.dismiss();  
@@ -164,7 +164,7 @@ public class LoadingDialogActivity extends BaseActivity implements OnClickListen
 			break;
 			
 		case R.id.btn_SpotsDialog:
-			mAlertDialog = new SpotsDialog(this,"Êı¾İÕıÔÚ·è¿ñ¼ÓÔØÖĞ£¡");
+			mAlertDialog = new SpotsDialog(this,"æ•°æ®æ­£åœ¨ç–¯ç‹‚åŠ è½½ä¸­ï¼");
 			mAlertDialog.show();
 			mHandler.postDelayed(new Runnable() {
 				
@@ -177,8 +177,8 @@ public class LoadingDialogActivity extends BaseActivity implements OnClickListen
 			
 		case R.id.btn_MonIndicatorDialog:
 //			mAlertDialog = new MonIndicatorDialog(this);
-//			mAlertDialog = new MonIndicatorDialog(this, "ÕıÔÚ·è¿ñ¼ÓÔØÖĞ£¡");
-			mAlertDialog = new MonIndicatorDialog(this, "ÕıÔÚ·è¿ñ¼ÓÔØÖĞ£¡", new int[]{Colors.BLACK, Colors.GOLD, Colors.GREEN_LIGHT, Colors.YELLOW, Colors.RED_DARK});
+//			mAlertDialog = new MonIndicatorDialog(this, "æ­£åœ¨ç–¯ç‹‚åŠ è½½ä¸­ï¼");
+			mAlertDialog = new MonIndicatorDialog(this, "æ­£åœ¨ç–¯ç‹‚åŠ è½½ä¸­ï¼", new int[]{Colors.BLACK, Colors.GOLD, Colors.GREEN_LIGHT, Colors.YELLOW, Colors.RED_DARK});
 			mAlertDialog.show();
             mHandler.postDelayed(new Runnable() {
 				
@@ -190,7 +190,7 @@ public class LoadingDialogActivity extends BaseActivity implements OnClickListen
 			break;
 		case R.id.btn_CircularProgressDialog:
 			mAlertDialog = new CircularProgressDialog(this);
-//			mAlertDialog = new CircularProgressDialog(this, "ÕıÔÚ·è¿ñ¼ÓÔØÖĞ£¡");
+//			mAlertDialog = new CircularProgressDialog(this, "æ­£åœ¨ç–¯ç‹‚åŠ è½½ä¸­ï¼");
 			mAlertDialog.show();
             mHandler.postDelayed(new Runnable() {
 				
@@ -243,13 +243,13 @@ public class LoadingDialogActivity extends BaseActivity implements OnClickListen
 			break;
 			
 		case R.id.btn_CustomDialog:
-			mAlertDialog = new CustomDialog(this, "ÎÒÊÇÍ¸Ã÷µÄxxxxxxxxxxxxxxxxxxxxxxx");
+			mAlertDialog = new CustomDialog(this, "æˆ‘æ˜¯é€æ˜çš„xxxxxxxxxxxxxxxxxxxxxxx");
 			mAlertDialog = new CustomDialog(this);
 			mAlertDialog.show();
 			
 			if (mAlertDialog instanceof CustomDialog) {
 				((CustomDialog) mAlertDialog).setCanceledByBackEvent(true);	     
-//		        ((CustomDialog) mAlertDialog).setLoadingText("ÎÒÕıÔÚ·è¿ñ¼ÓÔØ...");
+//		        ((CustomDialog) mAlertDialog).setLoadingText("æˆ‘æ­£åœ¨ç–¯ç‹‚åŠ è½½...");
 			}		   
 
 			break;
@@ -262,12 +262,12 @@ public class LoadingDialogActivity extends BaseActivity implements OnClickListen
 
 	@Override
 	public void onCancel() {
-		Toast("µã»÷È¡Ïû");
+		Toast("ç‚¹å‡»å–æ¶ˆ");
 	}
 
 	@Override
 	public void onSubmit() {
-		Toast("µã»÷È·¶¨");
+		Toast("ç‚¹å‡»ç¡®å®š");
 	}
 
 }

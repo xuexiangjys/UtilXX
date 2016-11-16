@@ -5,24 +5,24 @@ import android.database.sqlite.SQLiteDatabase;
 import com.j256.ormlite.support.ConnectionSource;
 
 /**
- * Êı¾İ¿â²Ù×÷½Ó¿Ú
+ * æ•°æ®åº“æ“ä½œæ¥å£
  * @author xx
  */
 public interface IDataBase {
 
 	/**
-	 * Êı¾İ¿â´´½¨
+	 * æ•°æ®åº“åˆ›å»º
 	 * @param database
 	 * @param connectionSource
 	 */
 	public void onCreate(SQLiteDatabase database, ConnectionSource connectionSource);
 	
 	/**
-	 * Êı¾İ¿âÉı¼¶ºÍ½µ¼¶²Ù×÷
+	 * æ•°æ®åº“å‡çº§å’Œé™çº§æ“ä½œ
 	 * @param database
 	 * @param connectionSource 
-	 * @param oldVersion ¾É°æ±¾
-	 * @param newVersion ĞÂ°æ±¾
+	 * @param oldVersion æ—§ç‰ˆæœ¬
+	 * @param newVersion æ–°ç‰ˆæœ¬
 	 */
 	public void onUpgrade(SQLiteDatabase database, ConnectionSource connectionSource, int oldVersion, int newVersion);
 }

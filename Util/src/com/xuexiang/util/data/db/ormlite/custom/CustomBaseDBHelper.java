@@ -7,21 +7,21 @@ import com.j256.ormlite.android.apptools.OrmLiteSqliteOpenHelper;
 import com.j256.ormlite.support.ConnectionSource;
 
 /**
- * Êı¾İ¿â¿ò¼Ü»ù´¡DBHelperÀà
+ * æ•°æ®åº“æ¡†æ¶åŸºç¡€DBHelperç±»
  * @author xx
  */
 public class CustomBaseDBHelper extends OrmLiteSqliteOpenHelper {
    
-	/** Êı¾İ¿âÂ·¾¶*/
+	/** æ•°æ®åº“è·¯å¾„*/
 	private String mDatabasePath;	
-	/** ¾ßÌåÄ³¸öÓ¦ÓÃ³ÌĞòÊı¾İ¿âµÄ*/
+	/** å…·ä½“æŸä¸ªåº”ç”¨ç¨‹åºæ•°æ®åº“çš„*/
 	private ICustomDataBase mIDataBase;
 	
     /**
      * @param context
-     * @param databasePath  Êı¾İ¿âÍêÕûÂ·¾¶
-     * @param databaseVersion  Êı¾İ¿â°æ±¾ºÅ
-     * @param idatabase  db²Ù×÷½Ó¿ÚÀà
+     * @param databasePath  æ•°æ®åº“å®Œæ•´è·¯å¾„
+     * @param databaseVersion  æ•°æ®åº“ç‰ˆæœ¬å·
+     * @param idatabase  dbæ“ä½œæ¥å£ç±»
      */
     public CustomBaseDBHelper(Context context, String databasePath, int databaseVersion, ICustomDataBase idatabase) {
     	super(context, null, null, databaseVersion);

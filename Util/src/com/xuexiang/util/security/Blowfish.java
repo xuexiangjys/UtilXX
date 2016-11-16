@@ -480,15 +480,15 @@ public class Blowfish {
 	}
 
 	/**
-	 * 将byte数组转换为表�?6进制值的字符串， 如：byte[]{8,18}转换为：0813�?和public static byte[]
-	 * hexStr2ByteArr(String strIn) 互为可�?的转换过�?	 * 
+	 * 将byte数组转换为表礿6进制值的字符串， 如：byte[]{8,18}转换为：0813＿和public static byte[]
+	 * hexStr2ByteArr(String strIn) 互为可ꀧڄ转换过稿	 * 
 	 * @param arrB
-	 *            �?��转换的byte数组
-	 * @return 转换后的字符�?	 * @throws Exception
-	 *             本方法不处理任何异常，所有异常全部抛�?	 */
+	 *            霿Ɓ转换的byte数组
+	 * @return 转换后的字符丿	 * @throws Exception
+	 *             本方法不处理任何异常，所有异常全部抛凿	 */
 	public static String byteArr2HexStr(byte[] arrB) {
 		int iLen = arrB.length;
-		// 每个byte用两个字符才能表示，�?��字符串的长度是数组长度的两�?
+		// 每个byte用两个字符才能表示，承ۥ字符串的长度是数组长度的两忍
 		StringBuffer sb = new StringBuffer(iLen * 2);
 		for (int i = 0; i < iLen; i++) {
 			int intTmp = arrB[i];
@@ -496,7 +496,7 @@ public class Blowfish {
 			while (intTmp < 0) {
 				intTmp = intTmp + 256;
 			}
-			// 小于0F的数�?��在前面补0
+			// 小于0F的数霿Ɓ在前面补0
 			if (intTmp < 16) {
 				sb.append("0");
 			}
@@ -506,19 +506,19 @@ public class Blowfish {
 	}
 
 	/**
-	 * 将表�?6进制值的字符串转换为byte数组�?和public static String byteArr2HexStr(byte[] arrB)
-	 * 互为可�?的转换过�?	 * 
+	 * 将表礿6进制值的字符串转换为byte数组＿和public static String byteArr2HexStr(byte[] arrB)
+	 * 互为可ꀧڄ转换过稿	 * 
 	 * @param strIn
-	 *            �?��转换的字符串
+	 *            霿Ɓ转换的字符串
 	 * @return 转换后的byte数组
 	 * @throws Exception
-	 *             本方法不处理任何异常，所有异常全部抛�?	 * @author <a href="mailto:leo841001@163.com">LiGuoQing</a>
+	 *             本方法不处理任何异常，所有异常全部抛凿	 * @author <a href="mailto:leo841001@163.com">LiGuoQing</a>
 	 */
 	public static byte[] hexStr2ByteArr(String strIn) throws Exception{
 		byte[] arrB = strIn.getBytes();
 		int iLen = arrB.length;
 
-		// 两个字符表示�?��字节，所以字节数组长度是字符串长度除�?
+		// 两个字符表示丿ت字节，所以字节数组长度是字符串长度除仿
 		byte[] arrOut = new byte[iLen / 2];
 		for (int i = 0; i < iLen; i = i + 2) {
 			String strTmp = new String(arrB, i, 2);
@@ -533,7 +533,7 @@ public class Blowfish {
 //		String key = "ih";
 //		byte[] keyByte = key.getBytes();
 //
-//		// 要加密的字符�?//		String str = "tuwgtuwg";
+//		// 要加密的字符丿//		String str = "tuwgtuwg";
 //
 //		Blowfish bf1 = new Blowfish();
 //

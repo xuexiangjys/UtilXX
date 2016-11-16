@@ -12,7 +12,7 @@ import android.view.LayoutInflater;
 import android.view.inputmethod.InputMethodManager;
 
 /**
- * @Description:»ñµÃÏµÍ³·şÎñ¹ÜÀíÆ÷
+ * @Description:è·å¾—ç³»ç»ŸæœåŠ¡ç®¡ç†å™¨
  * @author http://blog.csdn.net/finddreams
  */ 
 public class ServiceManager {
@@ -24,13 +24,13 @@ public class ServiceManager {
     private static Vibrator vibrator;
     private static SensorManager sensorManager;
     private static Sensor accelerometerSensor;
-    private static Sensor lightSensor;//¹âÏß´«¸ĞÆ÷ÒıÓÃ
+    private static Sensor lightSensor;//å…‰çº¿ä¼ æ„Ÿå™¨å¼•ç”¨
     private static LayoutInflater inflater;
 
     private ServiceManager(){};
 
     /**
-     * »ñµÃConnectivityManager
+     * è·å¾—ConnectivityManager
      * @param context
      * @return
      */
@@ -47,7 +47,7 @@ public class ServiceManager {
     }
 
     /**
-     * »ñµÃLocationManager
+     * è·å¾—LocationManager
      * @param context
      * @return
      */
@@ -62,7 +62,7 @@ public class ServiceManager {
         return locationManager;
     }
     /**
-     * »ñµÃTelephonyManager
+     * è·å¾—TelephonyManager
      * @param context
      * @return
      */
@@ -77,7 +77,7 @@ public class ServiceManager {
         return telephonyManager;
     }
     /**
-     * »ñµÃInputMethodManager
+     * è·å¾—InputMethodManager
      * @param context
      * @return
      */
@@ -93,7 +93,7 @@ public class ServiceManager {
     }
 
     /**
-     * »ñµÃÕğ¶¯µÄ¿ØÖÆÆ÷
+     * è·å¾—éœ‡åŠ¨çš„æ§åˆ¶å™¨
      * @param context
      * @return
      */
@@ -108,7 +108,7 @@ public class ServiceManager {
     	return vibrator;
     }
     /**
-     * »ñµÃ´«¸ĞÆ÷¹ÜÀíÆ÷
+     * è·å¾—ä¼ æ„Ÿå™¨ç®¡ç†å™¨
      * @param context
      * @return
      */
@@ -123,7 +123,7 @@ public class ServiceManager {
     	return sensorManager;
     }
     /**
-     * »ñµÃ¼ÓËÙ¹ÜÀíÆ÷
+     * è·å¾—åŠ é€Ÿç®¡ç†å™¨
      * @param context
      * @return
      */

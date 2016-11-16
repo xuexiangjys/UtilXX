@@ -23,7 +23,7 @@ import java.util.Locale;
 import android.text.TextUtils;
 
 /**
- * ×Ö·û´®²Ù×÷¹¤¾ß°ü ½áºÏandroid.text.TextUtilsÊ¹ÓÃ
+ * å­—ç¬¦ä¸²æ“ä½œå·¥å…·åŒ… ç»“åˆandroid.text.TextUtilsä½¿ç”¨
  *
  * @author jingle1267@163.com
  */
@@ -48,7 +48,7 @@ public final class StringUtils{
     }
 
     /**
-     * ×Ö·û´®×ªÕûÊı
+     * å­—ç¬¦ä¸²è½¬æ•´æ•°
      *
      * @param str
      * @param defValue
@@ -63,10 +63,10 @@ public final class StringUtils{
     }
 
     /**
-     * byte[]Êı×é×ª»»Îª16½øÖÆµÄ×Ö·û´®
+     * byte[]æ•°ç»„è½¬æ¢ä¸º16è¿›åˆ¶çš„å­—ç¬¦ä¸²
      *
-     * @param data Òª×ª»»µÄ×Ö½ÚÊı×é
-     * @return ×ª»»ºóµÄ½á¹û
+     * @param data è¦è½¬æ¢çš„å­—èŠ‚æ•°ç»„
+     * @return è½¬æ¢åçš„ç»“æœ
      */
     public static final String byteArrayToHexString(byte[] data) {
         StringBuilder sb = new StringBuilder(data.length * 2);
@@ -81,16 +81,16 @@ public final class StringUtils{
     }
 
     /**
-     * 16½øÖÆ±íÊ¾µÄ×Ö·û´®×ª»»Îª×Ö½ÚÊı×é
+     * 16è¿›åˆ¶è¡¨ç¤ºçš„å­—ç¬¦ä¸²è½¬æ¢ä¸ºå­—èŠ‚æ•°ç»„
      *
-     * @param s 16½øÖÆ±íÊ¾µÄ×Ö·û´®
-     * @return byte[] ×Ö½ÚÊı×é
+     * @param s 16è¿›åˆ¶è¡¨ç¤ºçš„å­—ç¬¦ä¸²
+     * @return byte[] å­—èŠ‚æ•°ç»„
      */
     public static byte[] hexStringToByteArray(String s) {
         int len = s.length();
         byte[] d = new byte[len / 2];
         for (int i = 0; i < len; i += 2) {
-            // Á½Î»Ò»×é£¬±íÊ¾Ò»¸ö×Ö½Ú,°ÑÕâÑù±íÊ¾µÄ16½øÖÆ×Ö·û´®£¬»¹Ô­³ÉÒ»¸ö½øÖÆ×Ö½Ú
+            // ä¸¤ä½ä¸€ç»„ï¼Œè¡¨ç¤ºä¸€ä¸ªå­—èŠ‚,æŠŠè¿™æ ·è¡¨ç¤ºçš„16è¿›åˆ¶å­—ç¬¦ä¸²ï¼Œè¿˜åŸæˆä¸€ä¸ªè¿›åˆ¶å­—èŠ‚
             d[i / 2] = (byte) ((Character.digit(s.charAt(i), 16) << 4) + Character
                     .digit(s.charAt(i + 1), 16));
         }
@@ -98,11 +98,11 @@ public final class StringUtils{
     }
 
     /**
-     * ½«¸ø¶¨µÄ×Ö·û´®ÖĞËùÓĞ¸ø¶¨µÄ¹Ø¼ü×Ö±êºì
+     * å°†ç»™å®šçš„å­—ç¬¦ä¸²ä¸­æ‰€æœ‰ç»™å®šçš„å…³é”®å­—æ ‡çº¢
      *
-     * @param sourceString ¸ø¶¨µÄ×Ö·û´®
-     * @param keyword      ¸ø¶¨µÄ¹Ø¼ü×Ö
-     * @return ·µ»ØµÄÊÇ´øHtml±êÇ©µÄ×Ö·û´®£¬ÔÚÊ¹ÓÃÊ±ÒªÍ¨¹ıHtml.fromHtml()×ª»»ÎªSpanned¶ÔÏóÔÙ´«µİ¸øTextView¶ÔÏó
+     * @param sourceString ç»™å®šçš„å­—ç¬¦ä¸²
+     * @param keyword      ç»™å®šçš„å…³é”®å­—
+     * @return è¿”å›çš„æ˜¯å¸¦Htmlæ ‡ç­¾çš„å­—ç¬¦ä¸²ï¼Œåœ¨ä½¿ç”¨æ—¶è¦é€šè¿‡Html.fromHtml()è½¬æ¢ä¸ºSpannedå¯¹è±¡å†ä¼ é€’ç»™TextViewå¯¹è±¡
      */
     public static String keywordMadeRed(String sourceString, String keyword) {
         String result = "";
@@ -118,9 +118,9 @@ public final class StringUtils{
     }
 
     /**
-     * Îª¸ø¶¨µÄ×Ö·û´®Ìí¼ÓHTMLºìÉ«±ê¼Ç£¬µ±Ê¹ÓÃHtml.fromHtml()·½Ê½ÏÔÊ¾µ½TextView µÄÊ±ºòÆä½«ÊÇºìÉ«µÄ
+     * ä¸ºç»™å®šçš„å­—ç¬¦ä¸²æ·»åŠ HTMLçº¢è‰²æ ‡è®°ï¼Œå½“ä½¿ç”¨Html.fromHtml()æ–¹å¼æ˜¾ç¤ºåˆ°TextView çš„æ—¶å€™å…¶å°†æ˜¯çº¢è‰²çš„
      *
-     * @param string ¸ø¶¨µÄ×Ö·û´®
+     * @param string ç»™å®šçš„å­—ç¬¦ä¸²
      * @return
      */
     public static String addHtmlRedFlag(String string) {
@@ -128,9 +128,9 @@ public final class StringUtils{
     }
     
     /**
-	 * ¸ù¾İ·Ö¸ô·û½«String×ª»»ÎªList
+	 * æ ¹æ®åˆ†éš”ç¬¦å°†Stringè½¬æ¢ä¸ºList
 	 * @param str
-	 * @param separator ·Ö¸ô·û
+	 * @param separator åˆ†éš”ç¬¦
 	 * @return
 	 */
 	public List<String> StringToList(String str, String separator){
@@ -140,7 +140,7 @@ public final class StringUtils{
 	}
 	
 	/**
-	 * ¸ù¾İ·Ö¸ô·û½«List×ª»»ÎªString
+	 * æ ¹æ®åˆ†éš”ç¬¦å°†Listè½¬æ¢ä¸ºString
 	 * @param list
 	 * @param separator
 	 * @return
@@ -155,7 +155,7 @@ public final class StringUtils{
 	
 	
 	/** 
-	 * JavaÎÄ¼ş²Ù×÷ »ñÈ¡ÎÄ¼şÀ©Õ¹Ãû 
+	 * Javaæ–‡ä»¶æ“ä½œ è·å–æ–‡ä»¶æ‰©å±•å 
 	 * 
 	 *  Created on: 2011-8-2 
 	 *      Author: blueeagle 

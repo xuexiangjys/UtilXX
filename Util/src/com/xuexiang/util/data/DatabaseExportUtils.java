@@ -23,7 +23,7 @@ import android.os.Environment;
 import android.text.TextUtils;
 
 /**
- * Ó¦ÓÃÊı¾İ¿âµ¼³ö¹¤¾ßÀà
+ * åº”ç”¨æ•°æ®åº“å¯¼å‡ºå·¥å…·ç±»
  *
  * @author jingle1267@163.com
  */
@@ -40,12 +40,12 @@ public final class DatabaseExportUtils {
     }
 
     /**
-     * ¿ªÊ¼µ¼³öÊı¾İ ´Ë²Ù×÷±È½ÏºÄÊ±,½¨ÒéÔÚÏß³ÌÖĞ½øĞĞ
+     * å¼€å§‹å¯¼å‡ºæ•°æ® æ­¤æ“ä½œæ¯”è¾ƒè€—æ—¶,å»ºè®®åœ¨çº¿ç¨‹ä¸­è¿›è¡Œ
      *
-     * @param context      ÉÏÏÂÎÄ
-     * @param targetFile   Ä¿±êÎÄ¼ş
-     * @param databaseName Òª¿½±´µÄÊı¾İ¿âÎÄ¼şÃû
-     * @return ÊÇ·ñµ¹³ö³É¹¦
+     * @param context      ä¸Šä¸‹æ–‡
+     * @param targetFile   ç›®æ ‡æ–‡ä»¶
+     * @param databaseName è¦æ‹·è´çš„æ•°æ®åº“æ–‡ä»¶å
+     * @return æ˜¯å¦å€’å‡ºæˆåŠŸ
      */
     public boolean startExportDatabase(Context context, String targetFile,
                                        String databaseName) {

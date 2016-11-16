@@ -12,26 +12,26 @@ import android.widget.EditText;
 /**
  * 
  * @ClassName: com.example.sharkdemo.EditTextShakeHelper
- * @Description:ÊäÈë¿òÕğ¶¯Ğ§¹û°ïÖúÀà
+ * @Description:è¾“å…¥æ¡†éœ‡åŠ¨æ•ˆæœå¸®åŠ©ç±»
  * @author zhaokaiqiang
- * @date 2014-11-21 ÉÏÎç9:56:15
+ * @date 2014-11-21 ä¸Šåˆ9:56:15
  * 
  */
 public class EditTextShakeHelper {
 
-	// Õğ¶¯¶¯»­
+	// éœ‡åŠ¨åŠ¨ç”»
 	private Animation shakeAnimation;
-	// ²åÖµÆ÷
+	// æ’å€¼å™¨
 	private CycleInterpolator cycleInterpolator;
-	// Õñ¶¯Æ÷
+	// æŒ¯åŠ¨å™¨
 	private Vibrator shakeVibrator;
 
 	public EditTextShakeHelper(Context context) {
 
-		// ³õÊ¼»¯Õñ¶¯Æ÷
+		// åˆå§‹åŒ–æŒ¯åŠ¨å™¨
 		shakeVibrator = (Vibrator) context
 				.getSystemService(Service.VIBRATOR_SERVICE);
-		// ³õÊ¼»¯Õğ¶¯¶¯»­
+		// åˆå§‹åŒ–éœ‡åŠ¨åŠ¨ç”»
 		shakeAnimation = new TranslateAnimation(0, 10, 0, 0);
 		shakeAnimation.setDuration(300);
 		cycleInterpolator = new CycleInterpolator(8);
@@ -40,7 +40,7 @@ public class EditTextShakeHelper {
 	}
 
 	/**
-	 * ¿ªÊ¼Õğ¶¯
+	 * å¼€å§‹éœ‡åŠ¨
 	 * 
 	 * @param editTexts
 	 */

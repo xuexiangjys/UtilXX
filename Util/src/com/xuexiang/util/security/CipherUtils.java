@@ -28,19 +28,19 @@ import com.xuexiang.util.common.StringUtils;
 
 
 /**
- * ¼ÓÃÜÓë½âÃÜµÄ¹¤¾ßÀà
+ * åŠ å¯†ä¸è§£å¯†çš„å·¥å…·ç±»
  *
  * @author jingle1267@163.com
  */
 public final class CipherUtils {
 
     /**
-     * MD5¼ÓÃÜ
+     * MD5åŠ å¯†
      * <br>http://stackoverflow.com/questions/1057041/difference-between-java-and-php5-md5-hash
      * <br>http://code.google.com/p/roboguice/issues/detail?id=89
      *
-     * @param string Ô´×Ö·û´®
-     * @return ¼ÓÃÜºóµÄ×Ö·û´®
+     * @param string æºå­—ç¬¦ä¸²
+     * @return åŠ å¯†åçš„å­—ç¬¦ä¸²
      */
     public static String md5(String string) {
         byte[] hash = null;
@@ -63,10 +63,10 @@ public final class CipherUtils {
     }
 
     /**
-     * ·µ»Ø¿ÉÄæËã·¨DESµÄÃÜÔ¿
+     * è¿”å›å¯é€†ç®—æ³•DESçš„å¯†é’¥
      *
-     * @param key Ç°8×Ö½Ú½«±»ÓÃÀ´Éú³ÉÃÜÔ¿¡£
-     * @return Éú³ÉµÄÃÜÔ¿
+     * @param key å‰8å­—èŠ‚å°†è¢«ç”¨æ¥ç”Ÿæˆå¯†é’¥ã€‚
+     * @return ç”Ÿæˆçš„å¯†é’¥
      * @throws Exception
      */
     public static Key getDESKey(byte[] key) throws Exception {
@@ -76,12 +76,12 @@ public final class CipherUtils {
     }
 
     /**
-     * ¸ù¾İÖ¸¶¨µÄÃÜÔ¿¼°Ëã·¨£¬½«×Ö·û´®½øĞĞ½âÃÜ¡£
+     * æ ¹æ®æŒ‡å®šçš„å¯†é’¥åŠç®—æ³•ï¼Œå°†å­—ç¬¦ä¸²è¿›è¡Œè§£å¯†ã€‚
      *
-     * @param data      Òª½øĞĞ½âÃÜµÄÊı¾İ£¬ËüÊÇÓÉÔ­À´µÄbyte[]Êı×é×ª»¯Îª×Ö·û´®µÄ½á¹û¡£
-     * @param key       ÃÜÔ¿¡£
-     * @param algorithm Ëã·¨¡£
-     * @return ½âÃÜºóµÄ½á¹û¡£ËüÓÉ½âÃÜºóµÄbyte[]ÖØĞÂ´´½¨ÎªString¶ÔÏó¡£Èç¹û½âÃÜÊ§°Ü£¬½«·µ»Ønull¡£
+     * @param data      è¦è¿›è¡Œè§£å¯†çš„æ•°æ®ï¼Œå®ƒæ˜¯ç”±åŸæ¥çš„byte[]æ•°ç»„è½¬åŒ–ä¸ºå­—ç¬¦ä¸²çš„ç»“æœã€‚
+     * @param key       å¯†é’¥ã€‚
+     * @param algorithm ç®—æ³•ã€‚
+     * @return è§£å¯†åçš„ç»“æœã€‚å®ƒç”±è§£å¯†åçš„byte[]é‡æ–°åˆ›å»ºä¸ºStringå¯¹è±¡ã€‚å¦‚æœè§£å¯†å¤±è´¥ï¼Œå°†è¿”å›nullã€‚
      * @throws Exception
      */
     public static String decrypt(String data, Key key, String algorithm)
@@ -94,12 +94,12 @@ public final class CipherUtils {
     }
 
     /**
-     * ¸ù¾İÖ¸¶¨µÄÃÜÔ¿¼°Ëã·¨¶ÔÖ¸¶¨×Ö·û´®½øĞĞ¿ÉÄæ¼ÓÃÜ¡£
+     * æ ¹æ®æŒ‡å®šçš„å¯†é’¥åŠç®—æ³•å¯¹æŒ‡å®šå­—ç¬¦ä¸²è¿›è¡Œå¯é€†åŠ å¯†ã€‚
      *
-     * @param data      Òª½øĞĞ¼ÓÃÜµÄ×Ö·û´®¡£
-     * @param key       ÃÜÔ¿¡£
-     * @param algorithm Ëã·¨¡£
-     * @return ¼ÓÃÜºóµÄ½á¹û½«ÓÉbyte[]Êı×é×ª»»Îª16½øÖÆ±íÊ¾µÄÊı×é¡£Èç¹û¼ÓÃÜ¹ı³ÌÊ§°Ü£¬½«·µ»Ønull¡£
+     * @param data      è¦è¿›è¡ŒåŠ å¯†çš„å­—ç¬¦ä¸²ã€‚
+     * @param key       å¯†é’¥ã€‚
+     * @param algorithm ç®—æ³•ã€‚
+     * @return åŠ å¯†åçš„ç»“æœå°†ç”±byte[]æ•°ç»„è½¬æ¢ä¸º16è¿›åˆ¶è¡¨ç¤ºçš„æ•°ç»„ã€‚å¦‚æœåŠ å¯†è¿‡ç¨‹å¤±è´¥ï¼Œå°†è¿”å›nullã€‚
      */
     public static String encrypt(String data, Key key, String algorithm)
             throws Exception {

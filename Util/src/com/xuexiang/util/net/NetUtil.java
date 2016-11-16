@@ -32,17 +32,17 @@ import android.net.NetworkInfo.State;
 import android.telephony.TelephonyManager;
 
 /**
- * ÍøÂç¹¤¾ßÀà
+ * ç½‘ç»œå·¥å…·ç±»
  *
  * @author jingle1267@163.com
  */
 public final class NetUtil {
 
     /**
-     * ÅĞ¶ÏÍøÂçÁ¬½ÓÊÇ·ñ´ò¿ª,°üÀ¨ÒÆ¶¯Êı¾İÁ¬½Ó
+     * åˆ¤æ–­ç½‘ç»œè¿æ¥æ˜¯å¦æ‰“å¼€,åŒ…æ‹¬ç§»åŠ¨æ•°æ®è¿æ¥
      *
-     * @param context ÉÏÏÂÎÄ
-     * @return ÊÇ·ñÁªÍø
+     * @param context ä¸Šä¸‹æ–‡
+     * @return æ˜¯å¦è”ç½‘
      */
     public static boolean isNetworkAvailable(Context context) {
         boolean netstate = false;
@@ -66,10 +66,10 @@ public final class NetUtil {
     }
 
     /**
-     * GPSÊÇ·ñ´ò¿ª
+     * GPSæ˜¯å¦æ‰“å¼€
      *
-     * @param context ÉÏÏÂÎÄ
-     * @return GpsÊÇ·ñ¿ÉÓÃ
+     * @param context ä¸Šä¸‹æ–‡
+     * @return Gpsæ˜¯å¦å¯ç”¨
      */
     public static boolean isGpsEnabled(Context context) {
         LocationManager lm = (LocationManager) context
@@ -78,10 +78,10 @@ public final class NetUtil {
     }
 
     /**
-     * ¼ì²âµ±Ç°´ò¿ªµÄÍøÂçÀàĞÍÊÇ·ñWIFI
+     * æ£€æµ‹å½“å‰æ‰“å¼€çš„ç½‘ç»œç±»å‹æ˜¯å¦WIFI
      *
-     * @param context ÉÏÏÂÎÄ
-     * @return ÊÇ·ñÊÇWifiÉÏÍø
+     * @param context ä¸Šä¸‹æ–‡
+     * @return æ˜¯å¦æ˜¯Wifiä¸Šç½‘
      */
     public static boolean isWifi(Context context) {
         ConnectivityManager connectivityManager = (ConnectivityManager) context
@@ -95,10 +95,10 @@ public final class NetUtil {
     }
 
     /**
-     * ¼ì²âµ±Ç°´ò¿ªµÄÍøÂçÀàĞÍÊÇ·ñ3G
+     * æ£€æµ‹å½“å‰æ‰“å¼€çš„ç½‘ç»œç±»å‹æ˜¯å¦3G
      *
-     * @param context ÉÏÏÂÎÄ
-     * @return ÊÇ·ñÊÇ3GÉÏÍø
+     * @param context ä¸Šä¸‹æ–‡
+     * @return æ˜¯å¦æ˜¯3Gä¸Šç½‘
      */
     public static boolean is3G(Context context) {
         ConnectivityManager connectivityManager = (ConnectivityManager) context
@@ -112,10 +112,10 @@ public final class NetUtil {
     }
 
     /**
-     * ¼ì²âµ±Ç°¿ª´òµÄÍøÂçÀàĞÍÊÇ·ñ4G
+     * æ£€æµ‹å½“å‰å¼€æ‰“çš„ç½‘ç»œç±»å‹æ˜¯å¦4G
      *
-     * @param context ÉÏÏÂÎÄ
-     * @return ÊÇ·ñÊÇ4GÉÏÍø
+     * @param context ä¸Šä¸‹æ–‡
+     * @return æ˜¯å¦æ˜¯4Gä¸Šç½‘
      */
     public static boolean is4G(Context context) {
         ConnectivityManager connectivityManager = (ConnectivityManager) context
@@ -130,10 +130,10 @@ public final class NetUtil {
     }
 
     /**
-     * Ö»ÊÇÅĞ¶ÏWIFI
+     * åªæ˜¯åˆ¤æ–­WIFI
      *
-     * @param context ÉÏÏÂÎÄ
-     * @return ÊÇ·ñ´ò¿ªWifi
+     * @param context ä¸Šä¸‹æ–‡
+     * @return æ˜¯å¦æ‰“å¼€Wifi
      */
     public static boolean isWiFi(Context context) {
         ConnectivityManager manager = (ConnectivityManager) context
@@ -147,10 +147,10 @@ public final class NetUtil {
     }
 
     /**
-     * IPµØÖ·Ğ£Ñé
+     * IPåœ°å€æ ¡éªŒ
      *
-     * @param ip ´ıĞ£ÑéÊÇ·ñÊÇIPµØÖ·µÄ×Ö·û´®
-     * @return ÊÇ·ñÊÇIPµØÖ·
+     * @param ip å¾…æ ¡éªŒæ˜¯å¦æ˜¯IPåœ°å€çš„å­—ç¬¦ä¸²
+     * @return æ˜¯å¦æ˜¯IPåœ°å€
      */
     public static boolean isIP(String ip) {
         Pattern pattern = Pattern
@@ -160,9 +160,9 @@ public final class NetUtil {
     }
 
     /**
-     * IP×ª»¯³ÉintÊı×Ö
+     * IPè½¬åŒ–æˆintæ•°å­—
      *
-     * @param addr IPµØÖ·
+     * @param addr IPåœ°å€
      * @return Integer
      */
     public static int ipToInt(String addr) {
@@ -177,8 +177,8 @@ public final class NetUtil {
     }
 
     /**
-     * Ã¶¾ÙÍøÂç×´Ì¬ NET_NO£ºÃ»ÓĞÍøÂç NET_2G:2gÍøÂç NET_3G£º3gÍøÂç NET_4G£º4gÍøÂç NET_WIFI£ºwifi
-     * NET_UNKNOWN£ºÎ´ÖªÍøÂç
+     * æšä¸¾ç½‘ç»œçŠ¶æ€ NET_NOï¼šæ²¡æœ‰ç½‘ç»œ NET_2G:2gç½‘ç»œ NET_3Gï¼š3gç½‘ç»œ NET_4Gï¼š4gç½‘ç»œ NET_WIFIï¼šwifi
+     * NET_UNKNOWNï¼šæœªçŸ¥ç½‘ç»œ
      */
     public static enum NetState {
         NET_NO, NET_2G, NET_3G, NET_4G, NET_WIFI, NET_UNKNOWN
@@ -187,10 +187,10 @@ public final class NetUtil {
     ;
 
     /**
-     * ÅĞ¶Ïµ±Ç°ÊÇ·ñÍøÂçÁ¬½Ó
+     * åˆ¤æ–­å½“å‰æ˜¯å¦ç½‘ç»œè¿æ¥
      *
-     * @param context ÉÏÏÂÎÄ
-     * @return ×´Ì¬Âë
+     * @param context ä¸Šä¸‹æ–‡
+     * @return çŠ¶æ€ç 
      */
     public NetState isConnected(Context context) {
         NetState stateCode = NetState.NET_NO;
@@ -204,14 +204,14 @@ public final class NetUtil {
                     break;
                 case ConnectivityManager.TYPE_MOBILE:
                     switch (ni.getSubtype()) {
-                        case TelephonyManager.NETWORK_TYPE_GPRS: // ÁªÍ¨2g
-                        case TelephonyManager.NETWORK_TYPE_CDMA: // µçĞÅ2g
-                        case TelephonyManager.NETWORK_TYPE_EDGE: // ÒÆ¶¯2g
+                        case TelephonyManager.NETWORK_TYPE_GPRS: // è”é€š2g
+                        case TelephonyManager.NETWORK_TYPE_CDMA: // ç”µä¿¡2g
+                        case TelephonyManager.NETWORK_TYPE_EDGE: // ç§»åŠ¨2g
                         case TelephonyManager.NETWORK_TYPE_1xRTT:
                         case TelephonyManager.NETWORK_TYPE_IDEN:
                             stateCode = NetState.NET_2G;
                             break;
-                        case TelephonyManager.NETWORK_TYPE_EVDO_A: // µçĞÅ3g
+                        case TelephonyManager.NETWORK_TYPE_EVDO_A: // ç”µä¿¡3g
                         case TelephonyManager.NETWORK_TYPE_UMTS:
                         case TelephonyManager.NETWORK_TYPE_EVDO_0:
                         case TelephonyManager.NETWORK_TYPE_HSDPA:
@@ -238,7 +238,7 @@ public final class NetUtil {
     }
 
     /**
-     * »ñÈ¡URLÖĞ²ÎÊı ²¢·µ»ØMap
+     * è·å–URLä¸­å‚æ•° å¹¶è¿”å›Map
      * @param url
      * @return
      */
@@ -266,7 +266,7 @@ public final class NetUtil {
     }
 
     /**
-     * ÊÇ·ñÊÇÍøÂçÁ´½Ó
+     * æ˜¯å¦æ˜¯ç½‘ç»œé“¾æ¥
      * @param url
      * @return
      */

@@ -18,7 +18,7 @@ import com.xuexiang.util.net.NetImageUtil;
 import com.xuexiang.util.resource.RUtils;
 
 /**
- * @Description:×Ô¶¯²¥·ÅµÄ¹ã¸æÌõ£¬viewpager£¬´ø±êÌâºÍ¹ö¶¯µÄĞ¡Ô²µã£¬ÓĞµã»÷ÊÂ¼ş
+ * @Description:è‡ªåŠ¨æ’­æ”¾çš„å¹¿å‘Šæ¡ï¼Œviewpagerï¼Œå¸¦æ ‡é¢˜å’Œæ»šåŠ¨çš„å°åœ†ç‚¹ï¼Œæœ‰ç‚¹å‡»äº‹ä»¶
  */ 
 public class RollViewPager extends ViewPager {
 	private Context mContext;
@@ -36,9 +36,9 @@ public class RollViewPager extends ViewPager {
 	private ViewPagerTask mViewPagerTask;
 	private PagerAdapter mAdapter;
 
-	/** ´¥ÃşÊ±°´ÏÂµÄµã **/
+	/** è§¦æ‘¸æ—¶æŒ‰ä¸‹çš„ç‚¹ **/
 	PointF downP = new PointF();
-	/** ´¥ÃşÊ±µ±Ç°µÄµã **/
+	/** è§¦æ‘¸æ—¶å½“å‰çš„ç‚¹ **/
 	PointF curP = new PointF();
 	private int abc = 1;
 	private float mLastMotionX;
@@ -169,7 +169,7 @@ public class RollViewPager extends ViewPager {
 	private boolean hasSetAdapter = false;
 
 	/**
-	 * ¿ªÊ¼¹ö¶¯
+	 * å¼€å§‹æ»šåŠ¨
 	 */
 	public void startRoll() {
 		if (!hasSetAdapter) {

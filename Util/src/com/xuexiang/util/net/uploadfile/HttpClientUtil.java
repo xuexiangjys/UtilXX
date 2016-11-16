@@ -23,31 +23,31 @@ import org.apache.http.util.EntityUtils;
 
 
 /**
- * HTTP 请求处理工具
- * @author MSD_小谢
+ * HTTP 璇锋眰澶勭悊宸ュ叿
+ * @author MSD_灏忚阿
  *
  */
 public class HttpClientUtil {
 	
 	/**
-	 * 连接超时
+	 * 杩炴帴瓒呮椂
 	 */
 	public static final int CONNECTION_TIME_OUT = 1000 * 30;
 	
 	
 	/**
-	 * 响应超时
+	 * 鍝嶅簲瓒呮椂
 	 */
 	public static final int SO_TIMEOUT = 1000 *30 ;
 	
 	
 	/**
-	 * 默认编码
+	 * 榛樿缂栫爜
 	 */
 	public static final String DEFAULT_ENCODING = "UTF-8";
 	
 	/**
-	 * 请进度监听
+	 * 璇疯繘搴︾洃鍚�
 	 * @author Tercel
 	 *
 	 */
@@ -60,34 +60,34 @@ public class HttpClientUtil {
 	
 	
 	/**
-	 * 发起一个post请求,以表单文件上传,并返回服务器返回的字符串
-	 * @param url		本次请求的URL路径
-	 * @param map		请求的参数,该Map集合中Value值只会取两种类型,String & File<br>
-	 * <B>注意:</B><br> 
-	 * <li>1. 如果Value不是File类型,则会调用Value.toString(),如果你保存的是个POJO对象的话,请重写toString()<br>
-	 * <li>2. 如果Value是File类型,并且文件不存在的话,会抛出 FileNotFoundException 异常<br>
-	 * @param encoding	请求和接收字符串的编码 格式,如果因为编码不正确,则会默认使用UTF-8进行编码
-	 * @param listener 请用进度监听器
-	 * @return			返回请求的结果字符串
-	 * @throws Exception	可能抛出多种网络或IO异常
+	 * 鍙戣捣涓�涓猵ost璇锋眰,浠ヨ〃鍗曟枃浠朵笂浼�,骞惰繑鍥炴湇鍔″櫒杩斿洖鐨勫瓧绗︿覆
+	 * @param url		鏈璇锋眰鐨刄RL璺緞
+	 * @param map		璇锋眰鐨勫弬鏁�,璇ap闆嗗悎涓璙alue鍊煎彧浼氬彇涓ょ绫诲瀷,String & File<br>
+	 * <B>娉ㄦ剰:</B><br> 
+	 * <li>1. 濡傛灉Value涓嶆槸File绫诲瀷,鍒欎細璋冪敤Value.toString(),濡傛灉浣犱繚瀛樼殑鏄釜POJO瀵硅薄鐨勮瘽,璇烽噸鍐檛oString()<br>
+	 * <li>2. 濡傛灉Value鏄疐ile绫诲瀷,骞朵笖鏂囦欢涓嶅瓨鍦ㄧ殑璇�,浼氭姏鍑� FileNotFoundException 寮傚父<br>
+	 * @param encoding	璇锋眰鍜屾帴鏀跺瓧绗︿覆鐨勭紪鐮� 鏍煎紡,濡傛灉鍥犱负缂栫爜涓嶆纭�,鍒欎細榛樿浣跨敤UTF-8杩涜缂栫爜
+	 * @param listener 璇风敤杩涘害鐩戝惉鍣�
+	 * @return			杩斿洖璇锋眰鐨勭粨鏋滃瓧绗︿覆
+	 * @throws Exception	鍙兘鎶涘嚭澶氱缃戠粶鎴朓O寮傚父
 	 */	
 	public static String post(String url,Map<String,Object> map,String encoding,ProgressListener listener) throws Exception{
-		HttpParams params = new BasicHttpParams();												//实例化Post参数对象
-		HttpConnectionParams.setConnectionTimeout(params, CONNECTION_TIME_OUT);  				//设置请求超时
-        HttpConnectionParams.setSoTimeout(params, SO_TIMEOUT); 									//设置响应超时
-        HttpClient client = new DefaultHttpClient(params);										//实例化一个连接对象
-        HttpPost post = new HttpPost(url);														//根据Post参数,实例化一个Post对象
+		HttpParams params = new BasicHttpParams();												//瀹炰緥鍖朠ost鍙傛暟瀵硅薄
+		HttpConnectionParams.setConnectionTimeout(params, CONNECTION_TIME_OUT);  				//璁剧疆璇锋眰瓒呮椂
+        HttpConnectionParams.setSoTimeout(params, SO_TIMEOUT); 									//璁剧疆鍝嶅簲瓒呮椂
+        HttpClient client = new DefaultHttpClient(params);										//瀹炰緥鍖栦竴涓繛鎺ュ璞�
+        HttpPost post = new HttpPost(url);														//鏍规嵁Post鍙傛暟,瀹炰緥鍖栦竴涓狿ost瀵硅薄
         
         CustomMultipartEntity entity = new CustomMultipartEntity(HttpMultipartMode.BROWSER_COMPATIBLE,
-                null, Charset.forName(DEFAULT_ENCODING));								//实例化请求实体,请求正文
-        entity.setProgressListener(listener);													//设置进度回调接口
+                null, Charset.forName(DEFAULT_ENCODING));								//瀹炰緥鍖栬姹傚疄浣�,璇锋眰姝ｆ枃
+        entity.setProgressListener(listener);													//璁剧疆杩涘害鍥炶皟鎺ュ彛
 		if(map != null && !map.isEmpty()){															
-			for(Map.Entry<String, Object> entry : map.entrySet()){								//迭代Map集合
-				Object obj = entry.getValue();													//获取集合中的值
+			for(Map.Entry<String, Object> entry : map.entrySet()){								//杩唬Map闆嗗悎
+				Object obj = entry.getValue();													//鑾峰彇闆嗗悎涓殑鍊�
 				ContentBody body = null;
 				
-				//*获取集合中的Value,如果当前的Value是File类型,则new 一个FileBody,如果是字符串类型,则new一个StringBody
-				//*并将该对象保存到请求实体中 
+				//*鑾峰彇闆嗗悎涓殑Value,濡傛灉褰撳墠鐨刅alue鏄疐ile绫诲瀷,鍒檔ew 涓�涓狥ileBody,濡傛灉鏄瓧绗︿覆绫诲瀷,鍒檔ew涓�涓猄tringBody
+				//*骞跺皢璇ュ璞′繚瀛樺埌璇锋眰瀹炰綋涓� 
 				 
 				if (obj != null) {
 					if (obj instanceof File){														
@@ -100,27 +100,27 @@ public class HttpClientUtil {
 					} else {													
 						body = new StringBody(entry.getValue().toString(),Charset.forName(encoding));
 					}
-					entity.addPart(entry.getKey(),body);										//将正文保存到请求实体类中
+					entity.addPart(entry.getKey(),body);										//灏嗘鏂囦繚瀛樺埌璇锋眰瀹炰綋绫讳腑
 				}
 			}
 		}
-		post.setEntity(entity);																	//将请求实体保存到Post的实体参数中
+		post.setEntity(entity);																	//灏嗚姹傚疄浣撲繚瀛樺埌Post鐨勫疄浣撳弬鏁颁腑
 		try {
-			HttpResponse response = client.execute(post);										//执行Post方法	
-			return EntityUtils.toString(response.getEntity(), encoding);						//根据字符编码返回字符串
+			HttpResponse response = client.execute(post);										//鎵цPost鏂规硶	
+			return EntityUtils.toString(response.getEntity(), encoding);						//鏍规嵁瀛楃缂栫爜杩斿洖瀛楃涓�
 		} catch (Exception e) {
 			throw e;
 		} finally{
-			client.getConnectionManager().shutdown();											//释放连接所有资源
+			client.getConnectionManager().shutdown();											//閲婃斁杩炴帴鎵�鏈夎祫婧�
 		}
 	}	
 	
 	
 	/**
-	 * 发一起个Post请求,简单的Text方式
-	 * @param url			请求URL
-	 * @param parameters	请求参数
-	 * @param encoding		字符编码
+	 * 鍙戜竴璧蜂釜Post璇锋眰,绠�鍗曠殑Text鏂瑰紡
+	 * @param url			璇锋眰URL
+	 * @param parameters	璇锋眰鍙傛暟
+	 * @param encoding		瀛楃缂栫爜
 	 * @return
 	 * @throws Exception
 	 */
@@ -145,10 +145,10 @@ public class HttpClientUtil {
 	
 	
 	/**
-	 * 发一起个Post请求,简单的Text方式,请求数据和返回数据均以UTF-8编码,
-	 * @param url			请求URL
-	 * @param parameters	请求参数
-	 * @return	Json格式字符器
+	 * 鍙戜竴璧蜂釜Post璇锋眰,绠�鍗曠殑Text鏂瑰紡,璇锋眰鏁版嵁鍜岃繑鍥炴暟鎹潎浠TF-8缂栫爜,
+	 * @param url			璇锋眰URL
+	 * @param parameters	璇锋眰鍙傛暟
+	 * @return	Json鏍煎紡瀛楃鍣�
 	 * @throws Exception
 	 */
 	public static String post(String url,List<NameValuePair> parameters)throws Exception{
@@ -161,15 +161,15 @@ public class HttpClientUtil {
 	
 	
 	/**
-	 * 发起一个post请求,以表单文件上传,并返回服务器返回的字符串
-	 * @param url		本次请求的URL路径
-	 * @param map		请求的参数,该Map集合中Value值只会取两种类型,String & File<br>
-	 * <B>注意:</B><br> 
-	 * <li>1. 如果Value不是File类型,则会调用Value.toString(),如果你保存的是个POJO对象的话,请重写toString()<br>
-	 * <li>2. 如果Value是File类型,并且文件不存在的话,会抛出 FileNotFoundException 异常<br>
-	 * @param listener 请用进度监听器
-	 * @return			返回请求的结果字符串
-	 * @throws Exception	可能抛出多种网络或IO异常
+	 * 鍙戣捣涓�涓猵ost璇锋眰,浠ヨ〃鍗曟枃浠朵笂浼�,骞惰繑鍥炴湇鍔″櫒杩斿洖鐨勫瓧绗︿覆
+	 * @param url		鏈璇锋眰鐨刄RL璺緞
+	 * @param map		璇锋眰鐨勫弬鏁�,璇ap闆嗗悎涓璙alue鍊煎彧浼氬彇涓ょ绫诲瀷,String & File<br>
+	 * <B>娉ㄦ剰:</B><br> 
+	 * <li>1. 濡傛灉Value涓嶆槸File绫诲瀷,鍒欎細璋冪敤Value.toString(),濡傛灉浣犱繚瀛樼殑鏄釜POJO瀵硅薄鐨勮瘽,璇烽噸鍐檛oString()<br>
+	 * <li>2. 濡傛灉Value鏄疐ile绫诲瀷,骞朵笖鏂囦欢涓嶅瓨鍦ㄧ殑璇�,浼氭姏鍑� FileNotFoundException 寮傚父<br>
+	 * @param listener 璇风敤杩涘害鐩戝惉鍣�
+	 * @return			杩斿洖璇锋眰鐨勭粨鏋滃瓧绗︿覆
+	 * @throws Exception	鍙兘鎶涘嚭澶氱缃戠粶鎴朓O寮傚父
 	 */	
 	public static String post(String url, Map<String, Object> map, ProgressListener listener) throws Exception {
 		return post(url, map, DEFAULT_ENCODING, listener);
@@ -177,14 +177,14 @@ public class HttpClientUtil {
 	
 	
 	/**
-	 * 发起一个post请求,以表单文件上传,并返回服务器返回的字符串
-	 * @param url		本次请求的URL路径
-	 * @param map		请求的参数,该Map集合中Value值只会取两种类型,String & File<br>
-	 * <B>注意:</B><br> 
-	 * <li>1. 如果Value不是File类型,则会调用Value.toString(),如果你保存的是个POJO对象的话,请重写toString()<br>
-	 * <li>2. 如果Value是File类型,并且文件不存在的话,会抛出 FileNotFoundException 异常<br>
-	 * @return				返回请求的结果字符串
-	 * @throws Exception	可能抛出多种网络或IO异常
+	 * 鍙戣捣涓�涓猵ost璇锋眰,浠ヨ〃鍗曟枃浠朵笂浼�,骞惰繑鍥炴湇鍔″櫒杩斿洖鐨勫瓧绗︿覆
+	 * @param url		鏈璇锋眰鐨刄RL璺緞
+	 * @param map		璇锋眰鐨勫弬鏁�,璇ap闆嗗悎涓璙alue鍊煎彧浼氬彇涓ょ绫诲瀷,String & File<br>
+	 * <B>娉ㄦ剰:</B><br> 
+	 * <li>1. 濡傛灉Value涓嶆槸File绫诲瀷,鍒欎細璋冪敤Value.toString(),濡傛灉浣犱繚瀛樼殑鏄釜POJO瀵硅薄鐨勮瘽,璇烽噸鍐檛oString()<br>
+	 * <li>2. 濡傛灉Value鏄疐ile绫诲瀷,骞朵笖鏂囦欢涓嶅瓨鍦ㄧ殑璇�,浼氭姏鍑� FileNotFoundException 寮傚父<br>
+	 * @return				杩斿洖璇锋眰鐨勭粨鏋滃瓧绗︿覆
+	 * @throws Exception	鍙兘鎶涘嚭澶氱缃戠粶鎴朓O寮傚父
 	 */	
 	public static String post(String url, Map<String, Object> map) throws Exception {
 		return post(url, map, DEFAULT_ENCODING, null);

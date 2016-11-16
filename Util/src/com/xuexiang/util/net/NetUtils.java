@@ -18,7 +18,7 @@ import org.apache.http.params.BasicHttpParams;
 import org.apache.http.params.HttpConnectionParams;
 
 /**
- * ·ÃÎÊ·şÎñÆ÷µÄ¹¤¾ßÀà
+ * è®¿é—®æœåŠ¡å™¨çš„å·¥å…·ç±»
  *
  */
 public class NetUtils {
@@ -89,7 +89,7 @@ public class NetUtils {
 		}catch (IllegalArgumentException e) {
 			e.printStackTrace();
 			return Result.ERROR_RECEIVE_EXCEPTION;
-		}catch (SocketTimeoutException e) {//ÇëÇóÊı¾İ³¬Ê±¡£
+		}catch (SocketTimeoutException e) {//è¯·æ±‚æ•°æ®è¶…æ—¶ã€‚
 			e.printStackTrace();
 			long endTime=System.currentTimeMillis()-begintime;
 			return Result.ERROR_ACCESS_TIMEOUT;
@@ -99,7 +99,7 @@ public class NetUtils {
 		} catch (IOException e) {
 			e.printStackTrace();
 			return Result.ERROR_RECEIVE_EXCEPTION;
-		}catch (OutOfMemoryError e) {//ÄÚ´æÒç³ö
+		}catch (OutOfMemoryError e) {//å†…å­˜æº¢å‡º
 			e.printStackTrace();
 			return Result.ERROR_RECEIVE_EXCEPTION;
 		}
@@ -141,7 +141,7 @@ public class NetUtils {
              e.printStackTrace();
          } finally {
              if (conn != null) {
-                 conn.disconnect();// ¹Ø±ÕÁ¬½Ó
+                 conn.disconnect();// å…³é—­è¿æ¥
              }
          }
 
@@ -151,7 +151,7 @@ public class NetUtils {
      public static String get(String url) {
          HttpURLConnection conn = null;
          try {
-             // ÀûÓÃstring url¹¹½¨URL¶ÔÏó
+             // åˆ©ç”¨string urlæ„å»ºURLå¯¹è±¡
              URL mURL = new URL(url);
              conn = (HttpURLConnection) mURL.openConnection();
 
@@ -190,14 +190,14 @@ public class NetUtils {
              os.write(buffer, 0, len);
          }
          is.close();
-         String state = os.toString();// °ÑÁ÷ÖĞµÄÊı¾İ×ª»»³É×Ö·û´®,²ÉÓÃµÄ±àÂëÊÇutf-8(Ä£ÄâÆ÷Ä¬ÈÏ±àÂë)
+         String state = os.toString();// æŠŠæµä¸­çš„æ•°æ®è½¬æ¢æˆå­—ç¬¦ä¸²,é‡‡ç”¨çš„ç¼–ç æ˜¯utf-8(æ¨¡æ‹Ÿå™¨é»˜è®¤ç¼–ç )
          os.close();
          return state;
      }
 	
 	
 	/**
-	 * ÅĞ¶Ï¹ÜÀíÄ£¿éÊÇ·ñÁªÍø
+	 * åˆ¤æ–­ç®¡ç†æ¨¡å—æ˜¯å¦è”ç½‘
 	 * @param context
 	 * @return
 	 */
@@ -220,7 +220,7 @@ public class NetUtils {
 	}
 
 	/**
-	 * ÅĞ¶Ï3GÍøÂçºÍwifiÍøÂçÊÇ·ñÁ¬½Ó
+	 * åˆ¤æ–­3Gç½‘ç»œå’Œwifiç½‘ç»œæ˜¯å¦è¿æ¥
 	 * 
 	 * @param context
 	 */
@@ -236,7 +236,7 @@ public class NetUtils {
 //		State wifi = conMan.getNetworkInfo(ConnectivityManager.TYPE_WIFI)
 //				.getState();
 
-		// Èç¹û3GÍøÂçºÍwifiÍøÂç¶¼Î´Á¬½Ó£¬ÇÒ²»ÊÇ´¦ÓÚÕıÔÚÁ¬½Ó×´Ì¬ Ôò½øÈëNetwork Setting½çÃæ ÓÉÓÃ»§ÅäÖÃÍøÂçÁ¬½Ó
+		// å¦‚æœ3Gç½‘ç»œå’Œwifiç½‘ç»œéƒ½æœªè¿æ¥ï¼Œä¸”ä¸æ˜¯å¤„äºæ­£åœ¨è¿æ¥çŠ¶æ€ åˆ™è¿›å…¥Network Settingç•Œé¢ ç”±ç”¨æˆ·é…ç½®ç½‘ç»œè¿æ¥
 		if (mobile!=null && mobile == State.CONNECTED)// ||mobile==State.CONNECTING
 			return true;
 //		if (wifi == State.CONNECTED)// ||wifi==State.CONNECTING
@@ -244,13 +244,13 @@ public class NetUtils {
 
 		return false;
 		// context.startActivity(new Intent());startActivity(new
-		// Intent(Settings.ACTION_WIRELESS_SETTINGS));//½øÈëÎŞÏßÍøÂçÅäÖÃ½çÃæ
+		// Intent(Settings.ACTION_WIRELESS_SETTINGS));//è¿›å…¥æ— çº¿ç½‘ç»œé…ç½®ç•Œé¢
 		// startActivity(new Intent(Settings.ACTION_WIFI_SETTINGS));
-		// //½øÈëÊÖ»úÖĞµÄwifiÍøÂçÉèÖÃ½çÃæ
+		// //è¿›å…¥æ‰‹æœºä¸­çš„wifiç½‘ç»œè®¾ç½®ç•Œé¢
 	}
 
 	/**
-	 * ÊÇ·ñ´ò¿ªÁËWiFiÁ¬½Ó
+	 * æ˜¯å¦æ‰“å¼€äº†WiFiè¿æ¥
 	 * 
 	 * @param context
 	 */
@@ -270,8 +270,8 @@ public class NetUtils {
 	}
 
 	public static boolean pingServer() {
-		int timeOut = 3000; // ¶¨Òå³¬Ê±£¬±íÃ÷¸ÃÊ±¼äÄÚÁ¬²»ÉÏ¼´ÈÏ¶¨Îª²»¿É´ï£¬³¬Ê±Öµ²»ÄÜÌ«Ğ¡¡£
-		try {// ping¹¦ÄÜ
+		int timeOut = 3000; // å®šä¹‰è¶…æ—¶ï¼Œè¡¨æ˜è¯¥æ—¶é—´å†…è¿ä¸ä¸Šå³è®¤å®šä¸ºä¸å¯è¾¾ï¼Œè¶…æ—¶å€¼ä¸èƒ½å¤ªå°ã€‚
+		try {// pingåŠŸèƒ½
 			boolean status = InetAddress.getByName("www.baidu.com")
 					.isReachable(timeOut);
 			Log.d("UDP", "Status = " + status);
@@ -293,7 +293,7 @@ public class NetUtils {
 		public static final String ERROR_READ_DATA="com.xuexiang.util.consts.Error.ERROR_READ_DATA";
 		public static final String ERROR_ACCESS_TIMEOUT="com.xuexiang.util.consts.Error.ERROR_ACCESS_TIMEOUT";
 		public static final String ERROR_ACCESS_OUT_OF_MEMORY="com.xuexiang.util.consts.Error.ERROR_OUT_OF_MEMORY";
-		public static final String ERROR_REQUEST_SERVER_FAIL="ERROR_REQUEST_SERVER_FAIL";//ÇëÇóÊ§°Ü
+		public static final String ERROR_REQUEST_SERVER_FAIL="ERROR_REQUEST_SERVER_FAIL";//è¯·æ±‚å¤±è´¥
 		public static final String ERROR_ADDRESS_FORMAT="ERROR_ADDRESS_FORMAT";
 		public static final String ERROR_RECEIVE_EXCEPTION="com.xuexiang.util.consts.Error.ERROR_RECEIVE_EXCEPTION";
 		

@@ -16,7 +16,7 @@
 package com.xuexiang.util.view;
 
 /**
- * ÑÕÉ«¹¤¾ßÀà °üÀ¨³£ÓÃµÄÉ«Öµ
+ * é¢œè‰²å·¥å…·ç±» åŒ…æ‹¬å¸¸ç”¨çš„è‰²å€¼
  *
  * @author jingle1267@163.com
  */
@@ -30,347 +30,347 @@ public final class Colors {
     }
 
     /**
-     * °×É«
+     * ç™½è‰²
      */
     public static final int WHITE = 0xffffffff;
 
     /**
-     * °×É« - °ëÍ¸Ã÷
+     * ç™½è‰² - åŠé€æ˜
      */
     public static final int WHITE_TRANSLUCENT = 0x80ffffff;
 
     /**
-     * ºÚÉ«
+     * é»‘è‰²
      */
     public static final int BLACK = 0xff000000;
 
     /**
-     * ºÚÉ« - °ëÍ¸Ã÷
+     * é»‘è‰² - åŠé€æ˜
      */
     public static final int BLACK_TRANSLUCENT = 0x80000000;
 
     /**
-     * Í¸Ã÷
+     * é€æ˜
      */
     public static final int TRANSPARENT = 0x00000000;
 
     /**
-     * ºìÉ«
+     * çº¢è‰²
      */
     public static final int RED = 0xffff0000;
 
     /**
-     * ºìÉ« - °ëÍ¸Ã÷
+     * çº¢è‰² - åŠé€æ˜
      */
     public static final int RED_TRANSLUCENT = 0x80ff0000;
 
     /**
-     * ºìÉ« - ÉîµÄ
+     * çº¢è‰² - æ·±çš„
      */
     public static final int RED_DARK = 0xff8b0000;
 
     /**
-     * ºìÉ« - ÉîµÄ - °ëÍ¸Ã÷
+     * çº¢è‰² - æ·±çš„ - åŠé€æ˜
      */
     public static final int RED_DARK_TRANSLUCENT = 0x808b0000;
 
     /**
-     * ÂÌÉ«
+     * ç»¿è‰²
      */
     public static final int GREEN = 0xff00ff00;
 
     /**
-     * ÂÌÉ« - °ëÍ¸Ã÷
+     * ç»¿è‰² - åŠé€æ˜
      */
     public static final int GREEN_TRANSLUCENT = 0x8000ff00;
 
     /**
-     * ÂÌÉ« - ÉîµÄ
+     * ç»¿è‰² - æ·±çš„
      */
     public static final int GREEN_DARK = 0xff003300;
 
     /**
-     * ÂÌÉ« - ÉîµÄ - °ëÍ¸Ã÷
+     * ç»¿è‰² - æ·±çš„ - åŠé€æ˜
      */
     public static final int GREEN_DARK_TRANSLUCENT = 0x80003300;
 
     /**
-     * ÂÌÉ« - Ç³µÄ
+     * ç»¿è‰² - æµ…çš„
      */
     public static final int GREEN_LIGHT = 0xffccffcc;
 
     /**
-     * ÂÌÉ« - Ç³µÄ - °ëÍ¸Ã÷
+     * ç»¿è‰² - æµ…çš„ - åŠé€æ˜
      */
     public static final int GREEN_LIGHT_TRANSLUCENT = 0x80ccffcc;
 
     /**
-     * À¶É«
+     * è“è‰²
      */
     public static final int BLUE = 0xff0000ff;
 
     /**
-     * À¶É« - °ëÍ¸Ã÷
+     * è“è‰² - åŠé€æ˜
      */
     public static final int BLUE_TRANSLUCENT = 0x800000ff;
 
     /**
-     * À¶É« - ÉîµÄ
+     * è“è‰² - æ·±çš„
      */
     public static final int BLUE_DARK = 0xff00008b;
 
     /**
-     * À¶É« - ÉîµÄ - °ëÍ¸Ã÷
+     * è“è‰² - æ·±çš„ - åŠé€æ˜
      */
     public static final int BLUE_DARK_TRANSLUCENT = 0x8000008b;
 
     /**
-     * À¶É« - Ç³µÄ
+     * è“è‰² - æµ…çš„
      */
     public static final int BLUE_LIGHT = 0xff36a5E3;
 
     /**
-     * À¶É« - Ç³µÄ - °ëÍ¸Ã÷
+     * è“è‰² - æµ…çš„ - åŠé€æ˜
      */
     public static final int BLUE_LIGHT_TRANSLUCENT = 0x8036a5E3;
 
     /**
-     * ÌìÀ¶
+     * å¤©è“
      */
     public static final int SKYBLUE = 0xff87ceeb;
 
     /**
-     * ÌìÀ¶ - °ëÍ¸Ã÷
+     * å¤©è“ - åŠé€æ˜
      */
     public static final int SKYBLUE_TRANSLUCENT = 0x8087ceeb;
 
     /**
-     * ÌìÀ¶ - ÉîµÄ
+     * å¤©è“ - æ·±çš„
      */
     public static final int SKYBLUE_DARK = 0xff00bfff;
 
     /**
-     * ÌìÀ¶ - ÉîµÄ - °ëÍ¸Ã÷
+     * å¤©è“ - æ·±çš„ - åŠé€æ˜
      */
     public static final int SKYBLUE_DARK_TRANSLUCENT = 0x8000bfff;
 
     /**
-     * ÌìÀ¶ - Ç³µÄ
+     * å¤©è“ - æµ…çš„
      */
     public static final int SKYBLUE_LIGHT = 0xff87cefa;
 
     /**
-     * ÌìÀ¶ - Ç³µÄ - °ëÍ¸Ã÷
+     * å¤©è“ - æµ…çš„ - åŠé€æ˜
      */
     public static final int SKYBLUE_LIGHT_TRANSLUCENT = 0x8087cefa;
 
     /**
-     * »ÒÉ«
+     * ç°è‰²
      */
     public static final int GRAY = 0xff969696;
 
     /**
-     * »ÒÉ« - °ëÍ¸Ã÷
+     * ç°è‰² - åŠé€æ˜
      */
     public static final int GRAY_TRANSLUCENT = 0x80969696;
 
     /**
-     * »ÒÉ« - ÉîµÄ
+     * ç°è‰² - æ·±çš„
      */
     public static final int GRAY_DARK = 0xffa9a9a9;
 
     /**
-     * »ÒÉ« - ÉîµÄ - °ëÍ¸Ã÷
+     * ç°è‰² - æ·±çš„ - åŠé€æ˜
      */
     public static final int GRAY_DARK_TRANSLUCENT = 0x80a9a9a9;
 
     /**
-     * »ÒÉ« - °µµÄ
+     * ç°è‰² - æš—çš„
      */
     public static final int GRAY_DIM = 0xff696969;
 
     /**
-     * »ÒÉ« - °µµÄ - °ëÍ¸Ã÷
+     * ç°è‰² - æš—çš„ - åŠé€æ˜
      */
     public static final int GRAY_DIM_TRANSLUCENT = 0x80696969;
 
     /**
-     * »ÒÉ« - Ç³µÄ
+     * ç°è‰² - æµ…çš„
      */
     public static final int GRAY_LIGHT = 0xffd3d3d3;
 
     /**
-     * »ÒÉ« - Ç³µÄ - °ëÍ¸Ã÷
+     * ç°è‰² - æµ…çš„ - åŠé€æ˜
      */
     public static final int GRAY_LIGHT_TRANSLUCENT = 0x80d3d3d3;
 
     /**
-     * ³ÈÉ«
+     * æ©™è‰²
      */
     public static final int ORANGE = 0xffffa500;
 
     /**
-     * ³ÈÉ« - °ëÍ¸Ã÷
+     * æ©™è‰² - åŠé€æ˜
      */
     public static final int ORANGE_TRANSLUCENT = 0x80ffa500;
 
     /**
-     * ³ÈÉ« - ÉîµÄ
+     * æ©™è‰² - æ·±çš„
      */
     public static final int ORANGE_DARK = 0xffff8800;
 
     /**
-     * ³ÈÉ« - ÉîµÄ - °ëÍ¸Ã÷
+     * æ©™è‰² - æ·±çš„ - åŠé€æ˜
      */
     public static final int ORANGE_DARK_TRANSLUCENT = 0x80ff8800;
 
     /**
-     * ³ÈÉ« - Ç³µÄ
+     * æ©™è‰² - æµ…çš„
      */
     public static final int ORANGE_LIGHT = 0xffffbb33;
 
     /**
-     * ³ÈÉ« - Ç³µÄ - °ëÍ¸Ã÷
+     * æ©™è‰² - æµ…çš„ - åŠé€æ˜
      */
     public static final int ORANGE_LIGHT_TRANSLUCENT = 0x80ffbb33;
 
     /**
-     * ½ğÉ«
+     * é‡‘è‰²
      */
     public static final int GOLD = 0xffffd700;
 
     /**
-     * ½ğÉ« - °ëÍ¸Ã÷
+     * é‡‘è‰² - åŠé€æ˜
      */
     public static final int GOLD_TRANSLUCENT = 0x80ffd700;
 
     /**
-     * ·ÛÉ«
+     * ç²‰è‰²
      */
     public static final int PINK = 0xffffc0cb;
 
     /**
-     * ·ÛÉ« - °ëÍ¸Ã÷
+     * ç²‰è‰² - åŠé€æ˜
      */
     public static final int PINK_TRANSLUCENT = 0x80ffc0cb;
 
     /**
-     * ×ÏºìÉ«
+     * ç´«çº¢è‰²
      */
     public static final int FUCHSIA = 0xffff00ff;
 
     /**
-     * ×ÏºìÉ« - °ëÍ¸Ã÷
+     * ç´«çº¢è‰² - åŠé€æ˜
      */
     public static final int FUCHSIA_TRANSLUCENT = 0x80ff00ff;
 
     /**
-     * »Ò°×É«
+     * ç°ç™½è‰²
      */
     public static final int GRAYWHITE = 0xfff2f2f2;
 
     /**
-     * »Ò°×É« - °ëÍ¸Ã÷
+     * ç°ç™½è‰² - åŠé€æ˜
      */
     public static final int GRAYWHITE_TRANSLUCENT = 0x80f2f2f2;
 
     /**
-     * ×ÏÉ«
+     * ç´«è‰²
      */
     public static final int PURPLE = 0xff800080;
 
     /**
-     * ×ÏÉ« - °ëÍ¸Ã÷
+     * ç´«è‰² - åŠé€æ˜
      */
     public static final int PURPLE_TRANSLUCENT = 0x80800080;
 
     /**
-     * ÇàÉ«
+     * é’è‰²
      */
     public static final int CYAN = 0xff00ffff;
 
     /**
-     * ÇàÉ« - °ëÍ¸Ã÷
+     * é’è‰² - åŠé€æ˜
      */
     public static final int CYAN_TRANSLUCENT = 0x8000ffff;
 
     /**
-     * ÇàÉ« - ÉîµÄ
+     * é’è‰² - æ·±çš„
      */
     public static final int CYAN_DARK = 0xff008b8b;
 
     /**
-     * ÇàÉ« - ÉîµÄ - °ëÍ¸Ã÷
+     * é’è‰² - æ·±çš„ - åŠé€æ˜
      */
     public static final int CYAN_DARK_TRANSLUCENT = 0x80008b8b;
 
     /**
-     * »ÆÉ«
+     * é»„è‰²
      */
     public static final int YELLOW = 0xffffff00;
 
     /**
-     * »ÆÉ« - °ëÍ¸Ã÷
+     * é»„è‰² - åŠé€æ˜
      */
     public static final int YELLOW_TRANSLUCENT = 0x80ffff00;
 
     /**
-     * »ÆÉ« - Ç³µÄ
+     * é»„è‰² - æµ…çš„
      */
     public static final int YELLOW_LIGHT = 0xffffffe0;
 
     /**
-     * »ÆÉ« - Ç³µÄ - °ëÍ¸Ã÷
+     * é»„è‰² - æµ…çš„ - åŠé€æ˜
      */
     public static final int YELLOW_LIGHT_TRANSLUCENT = 0x80ffffe0;
 
     /**
-     * ÇÉ¿ËÁ¦É«
+     * å·§å…‹åŠ›è‰²
      */
     public static final int CHOCOLATE = 0xffd2691e;
 
     /**
-     * ÇÉ¿ËÁ¦É« - °ëÍ¸Ã÷
+     * å·§å…‹åŠ›è‰² - åŠé€æ˜
      */
     public static final int CHOCOLATE_TRANSLUCENT = 0x80d2691e;
 
     /**
-     * ·¬ÇÑÉ«
+     * ç•ªèŒ„è‰²
      */
     public static final int TOMATO = 0xffff6347;
 
     /**
-     * ·¬ÇÑÉ« - °ëÍ¸Ã÷
+     * ç•ªèŒ„è‰² - åŠé€æ˜
      */
     public static final int TOMATO_TRANSLUCENT = 0x80ff6347;
 
     /**
-     * ³ÈºìÉ«
+     * æ©™çº¢è‰²
      */
     public static final int ORANGERED = 0xffff4500;
 
     /**
-     * ³ÈºìÉ« - °ëÍ¸Ã÷
+     * æ©™çº¢è‰² - åŠé€æ˜
      */
     public static final int ORANGERED_TRANSLUCENT = 0x80ff4500;
 
     /**
-     * Òø°×É«
+     * é“¶ç™½è‰²
      */
     public static final int SILVER = 0xffc0c0c0;
 
     /**
-     * Òø°×É« - °ëÍ¸Ã÷
+     * é“¶ç™½è‰² - åŠé€æ˜
      */
     public static final int SILVER_TRANSLUCENT = 0x80c0c0c0;
 
     /**
-     * ¸ß¹â
+     * é«˜å…‰
      */
     public static final int HIGHLIGHT = 0x33ffffff;
 
     /**
-     * µÍ¹â
+     * ä½å…‰
      */
     public static final int LOWLIGHT = 0x33000000;
 

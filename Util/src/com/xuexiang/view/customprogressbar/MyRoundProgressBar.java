@@ -44,11 +44,11 @@ public class MyRoundProgressBar extends MyHoriztalProgressBar {
     @Override
     protected synchronized void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
 
-        int diameter = mRadius * 2 + getPaddingLeft() + getPaddingRight() + mMaxPaintWidth; //控件宽度 默认四个padding�?��
+        int diameter = mRadius * 2 + getPaddingLeft() + getPaddingRight() + mMaxPaintWidth; //鎺т欢瀹藉害 榛樿鍥涗釜padding涓?嚧
         int width = resolveSize(diameter, widthMeasureSpec);
         int height = resolveSize(diameter, heightMeasureSpec);
 
-        int realWidth = Math.min(width, height);//当宽高设置不�?��，取小的那个
+        int realWidth = Math.min(width, height);//褰撳楂樿缃笉涓?嚧锛屽彇灏忕殑閭ｄ釜
         mRadius = (realWidth - getPaddingLeft() - getPaddingRight() - mMaxPaintWidth) / 2;
         mRectf = new RectF(0, 0, mRadius * 2, mRadius * 2);
         setMeasuredDimension(realWidth, realWidth);
@@ -58,13 +58,13 @@ public class MyRoundProgressBar extends MyHoriztalProgressBar {
     protected synchronized void onDraw(Canvas canvas) {
 
         canvas.save();
-        // mMaxPaintWidth / 加上这个只是为了能让已完成的bar完整显示出来
+        // mMaxPaintWidth / 鍔犱笂杩欎釜鍙槸涓轰簡鑳借宸插畬鎴愮殑bar瀹屾暣鏄剧ず鍑烘潵
         canvas.translate(getPaddingLeft() + mMaxPaintWidth / 2, getPaddingTop() + mMaxPaintWidth / 2);
         //draw unreachbar
         mPaint.setStyle(Paint.Style.STROKE);
         mPaint.setColor(mUnReachColor);
         mPaint.setStrokeWidth(mUnReachHeight);
-        //从圆点开始画�?        canvas.drawCircle(mRadius, mRadius, mRadius, mPaint);
+        //浠庡渾鐐瑰紑濮嬬敾鍦?        canvas.drawCircle(mRadius, mRadius, mRadius, mPaint);
         //draw reachbar
         mPaint.setStyle(Paint.Style.STROKE);
         mPaint.setColor(mReachColor);

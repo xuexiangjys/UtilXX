@@ -10,10 +10,10 @@ import com.example.testutil.view.swipemenu.SimpleActivity;
 import com.xuexiang.app.BaseActivity;
 
 /**  
- * ´´½¨Ê±¼ä£º2016-6-14 ÏÂÎç3:35:26  
- * ÏîÄ¿Ãû³Æ£ºUtilTest  
+ * åˆ›å»ºæ—¶é—´ï¼š2016-6-14 ä¸‹åˆ3:35:26  
+ * é¡¹ç›®åç§°ï¼šUtilTest  
  * @author xuexiang
- * ÎÄ¼şÃû³Æ£ºSwipeMenuActivity.java  
+ * æ–‡ä»¶åç§°ï¼šSwipeMenuActivity.java  
  **/
 public class SwipeMenuActivity extends BaseActivity implements OnClickListener{
 

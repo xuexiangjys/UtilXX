@@ -78,7 +78,7 @@ public class MenuWithFABActivity extends Activity {
         rlSub1.setOnClickListener(new OnClickListener() {		
 			@Override
 			public void onClick(View v) {
-				Toast.makeText(getApplicationContext(), "µã»÷ÁË°´Å¥1", Toast.LENGTH_SHORT).show();
+				Toast.makeText(getApplicationContext(), "ç‚¹å‡»äº†æŒ‰é’®1", Toast.LENGTH_SHORT).show();
 			}
 		});
 
@@ -162,7 +162,7 @@ public class MenuWithFABActivity extends Activity {
         leftCenterMenu.setMenuItemOnClickListener(new MenuItemOnClickListener() {			
 			@Override
 			public void onMenuItemClick(View v, int position) {
-				Toast.makeText(getApplicationContext(), "µã»÷ÁËµÚ" + (position + 1) + "¸ö°´Å¥", Toast.LENGTH_SHORT).show();
+				Toast.makeText(getApplicationContext(), "ç‚¹å‡»äº†ç¬¬" + (position + 1) + "ä¸ªæŒ‰é’®", Toast.LENGTH_SHORT).show();
 			}
 		});
         

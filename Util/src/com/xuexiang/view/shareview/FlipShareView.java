@@ -29,8 +29,8 @@ import android.view.WindowManager;
 import android.view.animation.LinearInterpolator;
 
 /**
- * 自定义popwindow
- * 作者：xx on 16/9/1 21:38
+ * 鑷畾涔塸opwindow
+ * 浣滆�咃細xx on 16/9/1 21:38
  */
 public class FlipShareView extends View {
 
@@ -144,11 +144,11 @@ public class FlipShareView extends View {
         if (location[1] < mScreenHeight / 2) {
             mStatus = STATUS_DOWN;
             mItemTop = parentBottom + dip2px(5);
-            mFirstItemTop = mItemTop + dip2px(6); //这是小箭头的高度
+            mFirstItemTop = mItemTop + dip2px(6); //杩欐槸灏忕澶寸殑楂樺害
         } else {
             mStatus = STATUS_UP;
             mItemTop = parentTop - dip2px(5);
-            mFirstItemTop = mItemTop - dip2px(6); //这是小箭头的高度
+            mFirstItemTop = mItemTop - dip2px(6); //杩欐槸灏忕澶寸殑楂樺害
         }
 
         if (parentMiddleX + mItemWidth / 2 > mScreenWidth) {
