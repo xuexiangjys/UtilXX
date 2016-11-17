@@ -43,7 +43,9 @@ public class CustomTextView extends TextView {
 
 
     private void setAttributeSet(Context context, AttributeSet attrs) {
-
+    	if (isInEditMode()) { 
+    		return; 
+    	}
         TypedArray a = context.obtainStyledAttributes(attrs, RUtils.getStyleable(context, "customTextView"));
         int normalSolidColor = a.getColor(MResource.getIdByName(context, "styleable", "customTextView_textSolidColor"), Color.TRANSPARENT);
         int selectedSolidColor = a.getColor(MResource.getIdByName(context, "styleable", "customTextView_textSelectedSolidColor"), Color.TRANSPARENT);

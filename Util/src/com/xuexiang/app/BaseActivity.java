@@ -109,7 +109,19 @@ public abstract class BaseActivity extends FragmentActivity {
 	/**
 	 * 利用TitleBar初始化ActionBar
 	 */
-	public void initTitleBar(String title){
+	public void initTitleBar(String title) {
+		initTitleBar(title, new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });          
+	}
+	
+	/**
+	 * 利用TitleBar初始化ActionBar
+	 */
+	public void initTitleBar(String title, OnClickListener listener){
 		mTitleBar = (TitleBar) findViewById(RUtils.getId(mContext, "title_bar"));
 		mTitleBar.setImmersive(false);
 
@@ -118,12 +130,7 @@ public abstract class BaseActivity extends FragmentActivity {
 		mTitleBar.setLeftImageResource(RUtils.getDrawable(mContext, "back_white"));
         mTitleBar.setLeftText("返回");
         mTitleBar.setLeftTextColor(Color.WHITE);
-        mTitleBar.setLeftClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });        
+        mTitleBar.setLeftClickListener(listener);        
         mTitleBar.setTitle(title);
         mTitleBar.setTitleColor(Color.WHITE);
         mTitleBar.setSubTitleColor(Color.WHITE);

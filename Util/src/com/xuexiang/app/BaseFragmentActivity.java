@@ -122,7 +122,19 @@ public abstract class BaseFragmentActivity extends FragmentActivity {
 	/**
 	 * 利用TitleBar初始化ActionBar
 	 */
-	public void initTitleBar(String title){
+	public void initTitleBar(String title) {
+		initTitleBar(title, new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });          
+	}
+	
+	/**
+	 * 利用TitleBar初始化ActionBar
+	 */
+	public void initTitleBar(String title, OnClickListener listener){
 		mTitleBar = (TitleBar) findViewById(RUtils.getId(mContext, "title_bar"));
 		mTitleBar.setImmersive(false);
 
@@ -131,12 +143,7 @@ public abstract class BaseFragmentActivity extends FragmentActivity {
 		mTitleBar.setLeftImageResource(RUtils.getDrawable(mContext, "back_white"));
         mTitleBar.setLeftText("返回");
         mTitleBar.setLeftTextColor(Color.WHITE);
-        mTitleBar.setLeftClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });        
+        mTitleBar.setLeftClickListener(listener);        
         mTitleBar.setTitle(title);
         mTitleBar.setTitleColor(Color.WHITE);
         mTitleBar.setSubTitleColor(Color.WHITE);
@@ -168,7 +175,7 @@ public abstract class BaseFragmentActivity extends FragmentActivity {
 	 * @param msg 为空时的提示文字
 	 * @return
 	 */
-	public boolean IsEditTextEmpty(EditText et,String msg){
+	public boolean IsEditTextEmpty(EditText et, String msg){
 		boolean result = false;
 		if(TextUtils.isEmpty(et.getText().toString())){
 			if(mSettingManager.isAllowVibrate()){

@@ -27,5 +27,19 @@
         <item name="android:activityCloseEnterAnimation">@anim/slide_left_in</item>
         <item name="android:activityCloseExitAnimation">@anim/slide_right_out</item>
     </style>
+    
+    <style name="CustomButtonStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">18sp</item>
+        <item name="textSolidColor">@color/colorPrimary</item>
+        <item name="textSelectedSolidColor">@color/colorPrimaryDark</item>
+        <item name="textRadius">10dp</item>
+        <item name="android:onClick">onClick</item>
+    </style>
 
 </resources>

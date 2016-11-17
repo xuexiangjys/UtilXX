@@ -3,17 +3,52 @@ package com.xuexiang.util.app;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import com.xuexiang.util.resource.RUtils;
-
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+
+import com.xuexiang.util.resource.RUtils;
+import com.xuexiang.view.TitleBar;
 /**
  * @Description: Activity的工具类
  */ 
 public class ActivityUtil {
 	
+	/**
+	 * 利用TitleBar初始化ActionBar
+	 */
+	public static void initTitleBar(final Activity activity, String title){
+		initTitleBar(activity, title, new OnClickListener() {
+			@Override
+			public void onClick(View arg0) {
+				activity.finish();
+			}
+		});
+	}
+	
+	/**
+	 * 利用TitleBar初始化ActionBar
+	 */
+	public static void initTitleBar(final Activity activity, String title, OnClickListener listener) {
+		TitleBar mTitleBar = (TitleBar) activity.findViewById(RUtils.getId(activity, "title_bar"));
+		mTitleBar.setImmersive(false);
+
+		mTitleBar.setBackgroundColor(Color.parseColor("#64b4ff"));
+
+		mTitleBar.setLeftImageResource(RUtils.getDrawable(activity, "back_white"));
+        mTitleBar.setLeftText("返回");
+        mTitleBar.setLeftTextColor(Color.WHITE);
+        mTitleBar.setLeftClickListener(listener);        
+        mTitleBar.setTitle(title);
+        mTitleBar.setTitleColor(Color.WHITE);
+        mTitleBar.setSubTitleColor(Color.WHITE);
+        mTitleBar.setDividerColor(Color.GRAY);
+        mTitleBar.setActionTextColor(Color.WHITE);
+	}
 	
 	/**
 	 * 延迟去往新的Activity

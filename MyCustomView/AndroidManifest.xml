@@ -4,7 +4,7 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="8"
+        android:minSdkVersion="14"
         android:targetSdkVersion="21" />
 
     <application
@@ -13,7 +13,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.example.mycustomview.circlemenu.CircleMenuActivity"
+            android:name="com.example.mycustomview.SplashActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,6 +21,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="com.example.mycustomview.MainActivity"/>
+        <activity android:name="com.example.mycustomview.custom.CircleMenuActivity"/>
+        <activity android:name="com.example.mycustomview.custom.StateButtonActivity"
+            android:theme="@style/AppCompatTheme"/>
     </application>
 
 </manifest>
