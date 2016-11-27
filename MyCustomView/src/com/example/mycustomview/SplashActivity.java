@@ -7,8 +7,15 @@ public class SplashActivity extends BaseSplashActivity {
 
 	@Override
 	public void onCreateActivity() {
-		initSplashView(R.drawable.splash);
-		startSplashAnim();
+	    if (mSettingManager.getIsfirst()) {
+	    	mSettingManager.setIsfirst(false);
+	    	ActivityUtil.startActivity(SplashActivity.this, GuideActivity.class);
+			finish();
+	    	
+	    }  else {
+	    	initSplashView(R.drawable.splash);
+			startSplashAnim();
+	    }
 	}
 
 	@Override

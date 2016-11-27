@@ -32,7 +32,6 @@ public class BroadcastHelper {
 		if (action != null) {
 			intent.setAction(action);
 		}
-        intent.addCategory(Intent.CATEGORY_DEFAULT);
         if (value1 != null) {
         	intent.putExtra(key, value1);
         } else if (value3 != null) {
@@ -43,6 +42,10 @@ public class BroadcastHelper {
         	intent.putExtra(key, value2);
         }       
         context.sendBroadcast(intent);
+	}
+	
+	public static void sendBroadCast(Context context, String action) {
+		sendBroadCast(context, null, action, null, null, 0, null);
 	}
 	
 	public static void sendBroadCast(Context context, Class<?> cls, String key, String value) {
@@ -101,7 +104,6 @@ public class BroadcastHelper {
 		if (action != null) {
 			intent.setAction(action);
 		}
-        intent.addCategory(Intent.CATEGORY_DEFAULT);
         Bundle bundle = new Bundle();
         for (String key : map.keySet()) {
         	bundle.putSerializable(key, map.get(key));

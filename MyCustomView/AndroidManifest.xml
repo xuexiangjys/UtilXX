@@ -22,6 +22,7 @@
             </intent-filter>
         </activity>
         <activity android:name="com.example.mycustomview.MainActivity"/>
+        <activity android:name="com.example.mycustomview.GuideActivity"/>
         <activity android:name="com.example.mycustomview.custom.CircleMenuActivity"/>
         <activity android:name="com.example.mycustomview.custom.StateButtonActivity"
             android:theme="@style/AppCompatTheme"/>

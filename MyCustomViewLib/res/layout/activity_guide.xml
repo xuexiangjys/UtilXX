@@ -1,0 +1,15 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:banner="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.xuexiang.view.flycobanner.samples.SimpleGuideBanner
+        android:id="@+id/sgb"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        banner:bb_barPaddingLeft="8dp"
+        banner:bb_isLoopEnable="false"/>
+
+</RelativeLayout>

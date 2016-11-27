@@ -8,8 +8,10 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.example.testutil.R;
+import com.xuexiang.util.system.SystemKeyboard;
 import com.xuexiang.view.circularfloatingactionmenu.FloatingActionButton;
 import com.xuexiang.view.circularfloatingactionmenu.FloatingActionMenu;
 import com.xuexiang.view.circularfloatingactionmenu.SubActionButton;
@@ -157,8 +159,7 @@ public class SystemOverlayMenuService extends Service {
         SubActionButton tcSub4 = tCSubBuilder.setContentView(tcIcon4, blueContentParams).build();
         SubActionButton tcSub5 = tCSubBuilder.setContentView(tcIcon5, blueContentParams).build();
         SubActionButton tcSub6 = tCRedBuilder.setContentView(tcIcon6, blueContentParams).build();
-
-
+        
         // Build another menu with custom options
         topCenterMenu = new FloatingActionMenu.Builder(this, true)
                 .addSubActionView(tcSub1, tcSub1.getLayoutParams().width, tcSub1.getLayoutParams().height)
@@ -187,6 +188,42 @@ public class SystemOverlayMenuService extends Service {
                 }
             }
         });
+
+        tcSub1.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				SystemKeyboard.toHome(getApplicationContext());
+				Toast.makeText(getApplicationContext(), "toHome", Toast.LENGTH_SHORT).show();
+			}
+		});
+        tcSub2.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				SystemKeyboard.toBack();
+				Toast.makeText(getApplicationContext(), "toBack", Toast.LENGTH_SHORT).show();
+			}
+		});
+        tcSub3.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				SystemKeyboard.toMenu();
+				Toast.makeText(getApplicationContext(), "toMenu", Toast.LENGTH_SHORT).show();
+			}
+		});
+        tcSub4.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				SystemKeyboard.toRecent();
+				Toast.makeText(getApplicationContext(), "toRecent", Toast.LENGTH_SHORT).show();
+			}
+		});
+        tcSub5.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				SystemKeyboard.volumeAdjustment(getApplicationContext(), false);
+				Toast.makeText(getApplicationContext(), "volumeAdjustment", Toast.LENGTH_SHORT).show();
+			}
+		});
 
         // make the red button terminate the service
         tcSub6.setOnClickListener(new View.OnClickListener() {
