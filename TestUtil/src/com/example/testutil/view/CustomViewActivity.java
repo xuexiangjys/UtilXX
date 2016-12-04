@@ -1,6 +1,7 @@
 package com.example.testutil.view;
 
 import android.graphics.Color;
+import android.os.Handler;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.animation.BounceInterpolator;
@@ -16,6 +17,7 @@ import com.xuexiang.view.AndroidSegmentedControlView.OnSelectionChangedListener;
 import com.xuexiang.view.BadgeView;
 import com.xuexiang.view.CompareIndicator;
 import com.xuexiang.view.ListEditText;
+import com.xuexiang.view.RippleButton;
 import com.xuexiang.view.ShoppingView;
 import com.xuexiang.view.SlideSwitch;
 import com.xuexiang.view.SlideSwitch.SlideListener;
@@ -49,7 +51,6 @@ public class CustomViewActivity extends BaseActivity implements OnLikeListener{
 	      "Cupcake", "Donut", "Eclair", "Froyo", "Gingerbread", "Honeycomb", "Ice Cream Sandwich", "Jelly Bean", "KitKat",
 	      "Lollipop", "Marshmallow"
 	};
-
 	@Override
 	public void onCreateActivity() {
 		setContentView(R.layout.activity_customview);
@@ -87,6 +88,8 @@ public class CustomViewActivity extends BaseActivity implements OnLikeListener{
 		initExpandTextView();
 		
 		initCompareIndicator();
+		
+		initRippleButton();
 	}
 
 	private void initAndroidSegmentedControlView() {
@@ -450,5 +453,26 @@ public class CustomViewActivity extends BaseActivity implements OnLikeListener{
         CompareIndicator3.updateView(70,30);		
 	}
 
+	private void initRippleButton() {
+		final RippleButton rippleButton = (RippleButton) findViewById(R.id.rippleButton);
+		mHandler = new Handler();
+        rippleButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mHandler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        rippleButton.showRight();
+                    }
+                }, 2000);
+                mHandler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        rippleButton.showError();
+                    }
+                }, 4000);
+            }
+        });		
+	}
 
 }

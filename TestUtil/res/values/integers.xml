@@ -9,4 +9,7 @@
 
     <!-- Animations -->
     <integer name="animation_time">400</integer>
+    
+    <integer name="SINGLE_IMAGE_MODE_RELATIVE_TO_SELF">1</integer>
+    <integer name="SINGLE_IMAGE_MODE_SPECIFIED_RATIO">2</integer>
 </resources>

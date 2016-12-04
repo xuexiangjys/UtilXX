@@ -44,7 +44,7 @@ import com.example.testutil.net.model.UserInfo;
 import com.example.testutil.net.model.VisitInfo;
 import com.google.gson.reflect.TypeToken;
 import com.xuexiang.app.BaseActivity;
-import com.xuexiang.app.BaseApplication;
+import com.xuexiang.app.SampleApplication;
 import com.xuexiang.util.file.FileUtils;
 import com.xuexiang.util.net.JsonUtil;
 import com.xuexiang.util.net.NetImageUtil;
@@ -531,7 +531,7 @@ public class VolleyHttpActivity extends BaseActivity implements OnClickListener{
 		
 	@Override
 	protected void onStop() {
-		BaseApplication.getVolleyRequestQueue().cancelAll("strReqGet");
+		SampleApplication.getVolleyRequestQueue().cancelAll("strReqGet");
 		super.onStop();
 	}
 }

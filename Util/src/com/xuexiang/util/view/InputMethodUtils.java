@@ -37,4 +37,23 @@ public class InputMethodUtils {
             }
         }, delayMillis);
     }
+    
+    /**
+	 * 隐藏键盘
+	 * @param v
+	 */
+	public static void hideKeyboard(View v) {
+		InputMethodManager imm = ( InputMethodManager ) v.getContext( ).getSystemService( Context.INPUT_METHOD_SERVICE );     
+	    if (imm.isActive()) {     
+	        imm.hideSoftInputFromWindow( v.getApplicationWindowToken( ) , InputMethodManager.HIDE_NOT_ALWAYS );   	          
+	    } 
+    }
+	
+	/**
+	 * 显示键盘
+	 */
+	public static void showKeyboard(Context context){
+		InputMethodManager m=(InputMethodManager) context.getSystemService(Context.INPUT_METHOD_SERVICE);
+		m.toggleSoftInput(0, InputMethodManager.HIDE_NOT_ALWAYS); 
+	}
 }

@@ -84,10 +84,8 @@
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
-    <uses-permission android:name="android.permission.INJECT_EVENTS" />
-
     <application
-            android:name="com.xuexiang.app.BaseApplication"
+            android:name="com.xuexiang.app.SampleApplication"
             android:allowBackup="true"
             android:icon="@drawable/ic_launcher"
             android:label="@string/app_name"
@@ -252,8 +250,14 @@
         <activity android:name="com.example.testutil.view.morphingbutton.ProgressButtonIndeterminateActivity"/>
         <activity android:name="com.example.testutil.view.MaterialishProgressActivity"/>
         <activity android:name="com.example.testutil.view.SweetAlertActivity"/>
+        <activity android:name="com.example.testutil.view.ninegridview.NinegridviewActivity" />
+        <activity android:name="com.example.testutil.view.ninegridview.NinegridviewListViewActivity" />
+        <activity android:name="com.example.testutil.view.ninegridview.HackyViewPagerActivity" />
+        <activity android:name="com.example.testutil.view.CoolAnimActivity" />
+        
         <activity android:name="com.example.testutil.resource.PlugLoadActivity"/>
         <activity android:name="androidx.pluginmgr.DynamicActivity" />
+        
         
         
         <service android:name="com.xuexiang.service.FloatViewService"/>

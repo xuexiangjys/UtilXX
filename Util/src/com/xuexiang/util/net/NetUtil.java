@@ -46,16 +46,12 @@ public final class NetUtil {
      */
     public static boolean isNetworkAvailable(Context context) {
         boolean netstate = false;
-        ConnectivityManager connectivity = (ConnectivityManager) context
-                .getSystemService(Context.CONNECTIVITY_SERVICE);
+        ConnectivityManager connectivity = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
         if (connectivity != null) {
-
             NetworkInfo[] info = connectivity.getAllNetworkInfo();
             if (info != null) {
                 for (int i = 0; i < info.length; i++) {
-
                     if (info[i].getState() == NetworkInfo.State.CONNECTED) {
-
                         netstate = true;
                         break;
                     }
@@ -64,18 +60,59 @@ public final class NetUtil {
         }
         return netstate;
     }
-
+    
     /**
-     * GPS是否打开
-     *
-     * @param context 上下文
-     * @return Gps是否可用
-     */
-    public static boolean isGpsEnabled(Context context) {
-        LocationManager lm = (LocationManager) context
-                .getSystemService(Context.LOCATION_SERVICE);
-        return lm.isProviderEnabled(LocationManager.GPS_PROVIDER);
-    }
+	 * 判断是否有网
+	 * @param context
+	 * @return
+	 */
+	public static boolean IsHaveInternet(Context context){
+		try {
+			ConnectivityManager connectivity = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
+			if (connectivity != null) {
+				NetworkInfo info = connectivity.getActiveNetworkInfo();
+				if (info != null && info.isConnected()) {
+					if (info.getState() == NetworkInfo.State.CONNECTED) {
+						return true;
+					}
+				}
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+			return false;
+		}
+		return false;
+	}
+	
+	/**
+	 * Gps是否打开
+	 * 需要<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />权限
+	 *
+	 * @param context the context
+	 * @return true, if is gps enabled
+	 */
+	public static boolean isGpsEnabled(Context context) {
+		LocationManager lm = (LocationManager) context.getSystemService(Context.LOCATION_SERVICE);  
+	    return lm.isProviderEnabled(LocationManager.GPS_PROVIDER);
+	}
+
+
+	/**
+	 * 判断当前网络是否是移动数据网络.
+	 *
+	 * @param context the context
+	 * @return boolean
+	 */
+	public static boolean isMobile(Context context) {
+		ConnectivityManager connectivityManager = (ConnectivityManager) context
+				.getSystemService(Context.CONNECTIVITY_SERVICE);
+		NetworkInfo activeNetInfo = connectivityManager.getActiveNetworkInfo();
+		if (activeNetInfo != null
+				&& activeNetInfo.getType() == ConnectivityManager.TYPE_MOBILE) {
+			return true;
+		}
+		return false;
+	}
 
     /**
      * 检测当前打开的网络类型是否WIFI
@@ -84,11 +121,9 @@ public final class NetUtil {
      * @return 是否是Wifi上网
      */
     public static boolean isWifi(Context context) {
-        ConnectivityManager connectivityManager = (ConnectivityManager) context
-                .getSystemService(Context.CONNECTIVITY_SERVICE);
+        ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo activeNetInfo = connectivityManager.getActiveNetworkInfo();
-        if (activeNetInfo != null
-                && activeNetInfo.getType() == ConnectivityManager.TYPE_WIFI) {
+        if (activeNetInfo != null && activeNetInfo.getType() == ConnectivityManager.TYPE_WIFI) {
             return true;
         }
         return false;
@@ -101,11 +136,9 @@ public final class NetUtil {
      * @return 是否是3G上网
      */
     public static boolean is3G(Context context) {
-        ConnectivityManager connectivityManager = (ConnectivityManager) context
-                .getSystemService(Context.CONNECTIVITY_SERVICE);
+        ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo activeNetInfo = connectivityManager.getActiveNetworkInfo();
-        if (activeNetInfo != null
-                && activeNetInfo.getType() == ConnectivityManager.TYPE_MOBILE) {
+        if (activeNetInfo != null && activeNetInfo.getType() == ConnectivityManager.TYPE_MOBILE) {
             return true;
         }
         return false;
@@ -118,8 +151,7 @@ public final class NetUtil {
      * @return 是否是4G上网
      */
     public static boolean is4G(Context context) {
-        ConnectivityManager connectivityManager = (ConnectivityManager) context
-                .getSystemService(Context.CONNECTIVITY_SERVICE);
+        ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo activeNetInfo = connectivityManager.getActiveNetworkInfo();
         if (activeNetInfo != null && activeNetInfo.isConnectedOrConnecting()) {
             if (activeNetInfo.getType() == TelephonyManager.NETWORK_TYPE_LTE) {
@@ -136,14 +168,13 @@ public final class NetUtil {
      * @return 是否打开Wifi
      */
     public static boolean isWiFi(Context context) {
-        ConnectivityManager manager = (ConnectivityManager) context
-                .getSystemService(Context.CONNECTIVITY_SERVICE);
-        State wifi = manager.getNetworkInfo(ConnectivityManager.TYPE_WIFI)
-                .getState();
-        if (wifi == State.CONNECTED || wifi == State.CONNECTING)
-            return true;
-        return false;
-
+        ConnectivityManager manager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
+        State wifi = manager.getNetworkInfo(ConnectivityManager.TYPE_WIFI).getState();
+        if (wifi == State.CONNECTED || wifi == State.CONNECTING) {
+        	return true;
+        } else {
+        	return false;
+        }
     }
 
     /**
@@ -153,8 +184,7 @@ public final class NetUtil {
      * @return 是否是IP地址
      */
     public static boolean isIP(String ip) {
-        Pattern pattern = Pattern
-                .compile("\\b((?!\\d\\d\\d)\\d+|1\\d\\d|2[0-4]\\d|25[0-5])\\.((?!\\d\\d\\d)\\d+|1\\d\\d|2[0-4]\\d|25[0-5])\\.((?!\\d\\d\\d)\\d+|1\\d\\d|2[0-4]\\d|25[0-5])\\.((?!\\d\\d\\d)\\d+|1\\d\\d|2[0-4]\\d|25[0-5])\\b");
+        Pattern pattern = Pattern.compile("\\b((?!\\d\\d\\d)\\d+|1\\d\\d|2[0-4]\\d|25[0-5])\\.((?!\\d\\d\\d)\\d+|1\\d\\d|2[0-4]\\d|25[0-5])\\.((?!\\d\\d\\d)\\d+|1\\d\\d|2[0-4]\\d|25[0-5])\\.((?!\\d\\d\\d)\\d+|1\\d\\d|2[0-4]\\d|25[0-5])\\b");
         Matcher matcher = pattern.matcher(ip);
         return matcher.matches();
     }
@@ -170,21 +200,18 @@ public final class NetUtil {
         int num = 0;
         for (int i = 0; i < addrArray.length; i++) {
             int power = 3 - i;
-            num += ((Integer.parseInt(addrArray[i]) % 256 * Math
-                    .pow(256, power)));
+            num += ((Integer.parseInt(addrArray[i]) % 256 * Math.pow(256, power)));
         }
         return num;
     }
 
     /**
-     * 枚举网络状态 NET_NO：没有网络 NET_2G:2g网络 NET_3G：3g网络 NET_4G：4g网络 NET_WIFI：wifi
-     * NET_UNKNOWN：未知网络
+     * 枚举网络状态  NET_NO：没有网络 , NET_2G:2g网络 , NET_3G：3g网络, NET_4G：4g网络, NET_WIFI：wifi, NET_ETHERNET：有线网络, NET_UNKNOWN：未知网络
      */
     public static enum NetState {
-        NET_NO, NET_2G, NET_3G, NET_4G, NET_WIFI, NET_UNKNOWN
+        NET_NO, NET_2G, NET_3G, NET_4G, NET_WIFI, NET_ETHERNET, NET_UNKNOWN
     }
 
-    ;
 
     /**
      * 判断当前是否网络连接
@@ -194,8 +221,7 @@ public final class NetUtil {
      */
     public NetState isConnected(Context context) {
         NetState stateCode = NetState.NET_NO;
-        ConnectivityManager cm = (ConnectivityManager) context
-                .getSystemService(Context.CONNECTIVITY_SERVICE);
+        ConnectivityManager cm = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo ni = cm.getActiveNetworkInfo();
         if (ni != null && ni.isConnectedOrConnecting()) {
             switch (ni.getType()) {
@@ -227,10 +253,15 @@ public final class NetUtil {
                             break;
                         default:
                             stateCode = NetState.NET_UNKNOWN;
+                            break;
                     }
+                    break;
+                case ConnectivityManager.TYPE_ETHERNET:
+                	stateCode = NetState.NET_ETHERNET;
                     break;
                 default:
                     stateCode = NetState.NET_UNKNOWN;
+                    break;
             }
 
         }

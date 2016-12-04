@@ -5,7 +5,11 @@ import android.view.View;
 import android.view.View.OnClickListener;
 
 import com.example.mycustomview.custom.CircleMenuActivity;
+import com.example.mycustomview.custom.FaboptionsActivity;
 import com.example.mycustomview.custom.StateButtonActivity;
+import com.example.mycustomview.custom.WebViewMainActivity;
+import com.example.mycustomview.jptabbar.JpTabbarActivity;
+import com.example.mycustomview.pageslidingtab.ui.activity.PageSlidingTabActivity;
 import com.xuexiang.app.BaseActivity;
 
 public class MainActivity extends BaseActivity implements OnClickListener {
@@ -32,6 +36,22 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 		case R.id.statebutton:
 			mToastUtil.showToast("点击了StateButtonActivity");
 			startActivity(StateButtonActivity.class);
+			break;
+		case R.id.webview:
+			mToastUtil.showToast("点击了WebViewMainActivity");
+			startActivity(WebViewMainActivity.class);
+			break;
+		case R.id.jptabbar:
+			mToastUtil.showToast("点击了JpTabbarActivity");
+			startActivity(JpTabbarActivity.class);
+			break;
+		case R.id.faboptions:
+			mToastUtil.showToast("点击了FaboptionsActivity");
+			startActivity(FaboptionsActivity.class);
+			break;
+		case R.id.pageslidingtab:
+			mToastUtil.showToast("点击了PageSlidingTabActivity");
+			startActivity(PageSlidingTabActivity.class);
 			break;
 
 		default:

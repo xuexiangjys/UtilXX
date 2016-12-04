@@ -562,35 +562,42 @@
                 android:paddingRight="8dp"
                 android:text="@string/test_expandtext"
                 android:textSize="14sp" />
+
+            <com.xuexiang.view.CompareIndicator
+                android:id="@+id/CompareIndicator1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                app:approve_res="@drawable/bad"
+                app:opposite_res="@drawable/good" />
+
+            <com.xuexiang.view.CompareIndicator
+                android:id="@+id/CompareIndicator2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                app:approve_line_color="@color/lightgreen"
+                app:approve_res="@drawable/approve"
+                app:oppose_line_color="@color/darkred"
+                app:opposite_res="@drawable/opposite" />
+
+            <com.xuexiang.view.CompareIndicator
+                android:id="@+id/CompareIndicator3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                app:approve_res="@drawable/approve_x"
+                app:opposite_res="@drawable/disapprove" />
+
+            <com.xuexiang.view.RippleButton
+                android:id="@+id/rippleButton"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:background="#23BB71"
+                android:text="SEND"
+                android:textColor="@color/white"
+                android:textSize="18dp" />
             
-            
-             <com.xuexiang.view.CompareIndicator
-		        android:id="@+id/CompareIndicator1"
-		        android:layout_width="match_parent"
-		        android:layout_height="wrap_content"
-		        android:layout_marginTop="50dp"
-		        app:approve_res="@drawable/bad"
-		        app:opposite_res="@drawable/good"
-		        />
-		
-		    <com.xuexiang.view.CompareIndicator
-		        android:id="@+id/CompareIndicator2"
-		        android:layout_width="match_parent"
-		        android:layout_height="wrap_content"
-		        android:layout_marginTop="50dp"
-		        app:approve_line_color="@color/lightgreen"
-		        app:approve_res="@drawable/approve"
-		        app:oppose_line_color="@color/darkred"
-		        app:opposite_res="@drawable/opposite"
-		        />
-		    <com.xuexiang.view.CompareIndicator
-		        android:id="@+id/CompareIndicator3"
-		        android:layout_width="match_parent"
-		        android:layout_height="wrap_content"
-		        android:layout_marginTop="50dp"
-		        app:approve_res="@drawable/approve_x"
-		        app:opposite_res="@drawable/disapprove"
-		        />
         </LinearLayout>
     </ScrollView>
 

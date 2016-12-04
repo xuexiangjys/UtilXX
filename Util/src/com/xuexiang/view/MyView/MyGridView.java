@@ -1,4 +1,4 @@
-package com.xuexiang.view.MyView;
+package com.xuexiang.view.myview;
 
 import android.content.Context;
 import android.util.AttributeSet;

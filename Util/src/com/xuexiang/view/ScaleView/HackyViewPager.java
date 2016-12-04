@@ -1,4 +1,4 @@
-package com.xuexiang.view.ScaleView;
+package com.xuexiang.view.scaleview;
 
 import android.content.Context;
 import android.support.v4.view.ViewPager;

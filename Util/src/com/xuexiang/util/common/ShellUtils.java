@@ -18,6 +18,7 @@ package com.xuexiang.util.common;
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.List;
 
@@ -61,7 +62,7 @@ public final class ShellUtils {
     public static boolean checkRootPermission() {
         return execCommand("echo root", true, false).result == 0;
     }
-
+    
     /**
      * execute shell command, default return result msg
      *

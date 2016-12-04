@@ -1,4 +1,4 @@
-package com.xuexiang.view.ScaleView;
+package com.xuexiang.view.scaleview;
 
 import android.os.Build.VERSION;
 import android.os.Build.VERSION_CODES;

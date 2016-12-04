@@ -12,7 +12,7 @@ import com.android.volley.Request.Method;
 import com.android.volley.Response.ErrorListener;
 import com.android.volley.Response.Listener;
 import com.android.volley.toolbox.StringRequest;
-import com.xuexiang.app.BaseApplication;
+import com.xuexiang.app.SampleApplication;
 
 
 /**  
@@ -57,7 +57,7 @@ public class VolleyHttpManager<T> {
 	 * @return
 	 */
 	public void httpClassRequest(int requestMode, String url, Listener<T> listener,ErrorListener errorlistener) {
-		BaseApplication.getVolleyRequestQueue().add(getHttpRequest(requestMode, url, listener, errorlistener));
+		SampleApplication.getVolleyRequestQueue().add(getHttpRequest(requestMode, url, listener, errorlistener));
 	}
 	
 	
@@ -108,7 +108,7 @@ public class VolleyHttpManager<T> {
 	 * @return
 	 */
 	public void httpStringRequest(int requestMode, String url, Listener<String> listener,ErrorListener errorlistener) {
-		BaseApplication.getVolleyRequestQueue().add(getStringHttpRequest(requestMode, url, listener, errorlistener));
+		SampleApplication.getVolleyRequestQueue().add(getStringHttpRequest(requestMode, url, listener, errorlistener));
 	}
 	
 	
@@ -159,7 +159,7 @@ public class VolleyHttpManager<T> {
 	 * @return
 	 */
 	public void httpJsonObjectRequest(int requestMode, String url, Listener<JSONObject> listener, ErrorListener errorlistener) {
-		BaseApplication.getVolleyRequestQueue().add(getJsonObjectHttpRequest(requestMode, url, listener, errorlistener));
+		SampleApplication.getVolleyRequestQueue().add(getJsonObjectHttpRequest(requestMode, url, listener, errorlistener));
 	}
 	
 	

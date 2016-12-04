@@ -8,6 +8,7 @@ import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.ImageLoader.ImageListener;
 import com.android.volley.toolbox.NetworkImageView;
 import com.xuexiang.app.BaseApplication;
+import com.xuexiang.app.SampleApplication;
 import com.xuexiang.util.resource.RUtils;
 
 /**  
@@ -23,7 +24,7 @@ public class NetImageUtil {
 	
     public static void getImage(String url,ImageView imageView){
 		
-		ImageLoader imageLoader = new ImageLoader(BaseApplication.getVolleyRequestQueue(),BitmapCache.instance());
+		ImageLoader imageLoader = new ImageLoader(SampleApplication.getVolleyRequestQueue(),BitmapCache.instance());
 		// 图片监听 （默认图片，错误图片） 和 imageView
 		ImageListener imageListener = ImageLoader.getImageListener(imageView, RUtils.getDrawable(BaseApplication.getContext(), "noimg"), RUtils.getDrawable(BaseApplication.getContext(), "noimg"));		
 		//加载图片
@@ -33,7 +34,7 @@ public class NetImageUtil {
     
     
     public static void getNetImage(String url, NetworkImageView imageView) {
-        ImageLoader imageLoader = new ImageLoader(BaseApplication.getVolleyRequestQueue(),BitmapCache.instance());		
+        ImageLoader imageLoader = new ImageLoader(SampleApplication.getVolleyRequestQueue(),BitmapCache.instance());		
         imageView.setDefaultImageResId(RUtils.getDrawable(BaseApplication.getContext(), "noimg"));
         imageView.setErrorImageResId(RUtils.getDrawable(BaseApplication.getContext(), "noimg"));
         imageView.setImageUrl(url, imageLoader);

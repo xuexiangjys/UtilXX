@@ -1,6 +1,6 @@
 package com.example.testutil.net.model;
 
-import com.xuexiang.app.BaseApplication;
+import com.xuexiang.app.SampleApplication;
 
 /**
  * 常量类
@@ -10,23 +10,23 @@ public class HttpConsts {
 	
 	public static final String TEST_URL = "http://www.weather.com.cn/adat/sk/101010100.html";	
 	/** 用户信息管理服务的地址*/
-	public static String app_user_url = BaseApplication.app_url + "helper/User";
+	public static String app_user_url = SampleApplication.app_url + "helper/User";
 	/** 上门服务信息处理请求地址*/
-	public static String app_visitservice_url = BaseApplication.app_url + "helper/VisitService";
-	public static String visitservice_pic_bath_url  = BaseApplication.app_url + "helper/User/VisitService/";
+	public static String app_visitservice_url = SampleApplication.app_url + "helper/VisitService";
+	public static String visitservice_pic_bath_url  = SampleApplication.app_url + "helper/User/VisitService/";
 	
-	public static String student_url = BaseApplication.app_url + "jsonweb/SendStudentInfoServlet";
+	public static String student_url = SampleApplication.app_url + "jsonweb/SendStudentInfoServlet";
 	
-	public static String UPLPAD_URL = BaseApplication.app_url + "UploadFileServer/UploadFileServlet";
-	public static String APK_UPDATE_URL = BaseApplication.app_url + "helper/APK/1.3/helper.apk";
+	public static String UPLPAD_URL = SampleApplication.app_url + "UploadFileServer/UploadFileServlet";
+	public static String APK_UPDATE_URL = SampleApplication.app_url + "helper/APK/1.3/helper.apk";
 	public static void setAppUrl(String url) {
-		BaseApplication.app_url = url;
-		app_user_url = BaseApplication.app_url + "helper/User";
-		app_visitservice_url = BaseApplication.app_url + "helper/VisitService";
-		visitservice_pic_bath_url  = BaseApplication.app_url + "helper/User/VisitService/";
-		student_url = BaseApplication.app_url + "jsonweb/SendStudentInfoServlet";
-		UPLPAD_URL = BaseApplication.app_url + "UploadFileServer/UploadFileServlet";
-		APK_UPDATE_URL = BaseApplication.app_url + "helper/APK/1.3/helper.apk";
+		SampleApplication.app_url = url;
+		app_user_url = SampleApplication.app_url + "helper/User";
+		app_visitservice_url = SampleApplication.app_url + "helper/VisitService";
+		visitservice_pic_bath_url  = SampleApplication.app_url + "helper/User/VisitService/";
+		student_url = SampleApplication.app_url + "jsonweb/SendStudentInfoServlet";
+		UPLPAD_URL = SampleApplication.app_url + "UploadFileServer/UploadFileServlet";
+		APK_UPDATE_URL = SampleApplication.app_url + "helper/APK/1.3/helper.apk";
 	}
 	
 	public static final class User{

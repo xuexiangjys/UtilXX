@@ -3,125 +3,126 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
-    
-     <include layout="@layout/top_menu_bar" />
 
-     <ScrollView
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       android:scrollbars="none">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="5dp">
-     <TextView
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:text="get picture from asset:" />
+    <include layout="@layout/top_menu_bar" />
 
-     <LinearLayout
-         android:layout_width="match_parent"
-         android:layout_height="wrap_content" >
-          <com.xuexiang.view.ScaleView.ScaleView
-	         android:id="@+id/assets_scaleViewimg"
-	         android:layout_width="wrap_content"
-	         android:layout_height="wrap_content" />
-     
-	     <com.xuexiang.view.imageview.ZoomImageView
-	         android:id="@+id/assets_zoomimageviewimg"
-	         android:layout_marginLeft="20dp"
-	         android:layout_width="wrap_content"
-	         android:layout_height="wrap_content" />
-     </LinearLayout>
-     
-      <LinearLayout
-         android:layout_width="match_parent"
-         android:layout_height="wrap_content" >
-          <com.xuexiang.view.imageview.FlippingImageView
-	         android:id="@+id/assets_FlippingImageView"
-	         android:layout_width="wrap_content"
-	         android:layout_height="wrap_content" />
-     
-	     <com.xuexiang.view.imageview.ScaleImageView
-	         android:id="@+id/assets_ScaleImageView"
-	         android:layout_marginLeft="20dp"
-	         android:layout_width="wrap_content"
-	         android:layout_height="wrap_content" />
-     </LinearLayout>
-     
-     <Button
-        android:id="@+id/btn_copyfilefromasset"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="onClick"
-        android:text="Copy Asset File" />
-     
-     <Button
-        android:id="@+id/btn_custom_intall_apk"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="onClick"
-        android:text="Custom Install APK From Asset" />
-     
-     <Button
-        android:id="@+id/btn_system_intall_apk"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="onClick"
-        android:text="System Install APK From Asset" />
-     
-     <Button
-        android:id="@+id/btn_plugload"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="onClick"
-        android:text="PlugLoad Demo" />
-     
-     <Button
-        android:id="@+id/btn_getfilestring"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="onClick"
-        android:text="Get Text From Asset" />
-     
-      <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="10dp"
-        android:orientation="vertical" >
+        android:scrollbars="none" >
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:orientation="vertical" >
+            android:orientation="vertical"
+            android:padding="5dp" >
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="get picture from asset:" />
 
-
-            <View
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="#dddddd" />
+                android:layout_height="wrap_content" >
 
-            <ScrollView
+                <com.xuexiang.view.scaleview.ScaleView
+                    android:id="@+id/assets_scaleViewimg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <com.xuexiang.view.imageview.ZoomImageView
+                    android:id="@+id/assets_zoomimageviewimg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <com.xuexiang.view.imageview.FlippingImageView
+                    android:id="@+id/assets_FlippingImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <com.xuexiang.view.imageview.ScaleImageView
+                    android:id="@+id/assets_ScaleImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_copyfilefromasset"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClick"
+                android:text="Copy Asset File" />
+
+            <Button
+                android:id="@+id/btn_custom_intall_apk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClick"
+                android:text="Custom Install APK From Asset" />
+
+            <Button
+                android:id="@+id/btn_system_intall_apk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClick"
+                android:text="System Install APK From Asset" />
+
+            <Button
+                android:id="@+id/btn_plugload"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClick"
+                android:text="PlugLoad Demo" />
+
+            <Button
+                android:id="@+id/btn_getfilestring"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClick"
+                android:text="Get Text From Asset" />
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:fadingEdge="vertical"
-                android:scrollbars="vertical" >
+                android:layout_margin="10dp"
+                android:orientation="vertical" >
 
-                <TextView
-                    android:id="@+id/content"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:scrollbars="vertical"
-                    android:singleLine="false" />
-            </ScrollView>
+                    android:layout_margin="5dp"
+                    android:orientation="vertical" >
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#dddddd" />
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fadingEdge="vertical"
+                        android:scrollbars="vertical" >
+
+                        <TextView
+                            android:id="@+id/content"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:scrollbars="vertical"
+                            android:singleLine="false" />
+                    </ScrollView>
+                </LinearLayout>
+            </LinearLayout>
         </LinearLayout>
-    </LinearLayout>
-    
-      </LinearLayout>
-   </ScrollView>
+    </ScrollView>
 
 </LinearLayout>

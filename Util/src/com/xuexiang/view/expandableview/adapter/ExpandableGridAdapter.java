@@ -15,8 +15,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.xuexiang.util.resource.RUtils;
-import com.xuexiang.view.MyView.MyGridView;
 import com.xuexiang.view.expandableview.entity.IconItem;
+import com.xuexiang.view.myview.MyGridView;
 
 public class ExpandableGridAdapter extends BaseExpandableListAdapter implements OnItemClickListener {
 

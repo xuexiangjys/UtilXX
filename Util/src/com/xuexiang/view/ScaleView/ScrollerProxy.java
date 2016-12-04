@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *******************************************************************************/
-package com.xuexiang.view.ScaleView;
+package com.xuexiang.view.scaleview;
 
 import android.annotation.TargetApi;
 import android.content.Context;

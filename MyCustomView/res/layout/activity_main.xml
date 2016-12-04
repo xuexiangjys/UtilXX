@@ -23,13 +23,32 @@
             <com.xuexiang.view.CustomTextView
                 android:id="@+id/circlemenu"
                 style="@style/CustomButtonStyle"
-                android:text="CircleMenu Demo"/>
-            
+                android:text="CircleMenu Demo" />
+
             <com.xuexiang.view.CustomTextView
                 android:id="@+id/statebutton"
                 style="@style/CustomButtonStyle"
-                android:text="StateButton Demo"/>
+                android:text="StateButton Demo" />
+
+            <com.xuexiang.view.CustomTextView
+                android:id="@+id/webview"
+                style="@style/CustomButtonStyle"
+                android:text="Webview Demo" />
+
+            <com.xuexiang.view.CustomTextView
+                android:id="@+id/jptabbar"
+                style="@style/CustomButtonStyle"
+                android:text="JpTabbar Demo" />
+
+            <com.xuexiang.view.CustomTextView
+                android:id="@+id/faboptions"
+                style="@style/CustomButtonStyle"
+                android:text="Faboptions Demo" />
             
+            <com.xuexiang.view.CustomTextView
+                android:id="@+id/pageslidingtab"
+                style="@style/CustomButtonStyle"
+                android:text="PageSlidingTab Demo" />
         </LinearLayout>
     </ScrollView>
 

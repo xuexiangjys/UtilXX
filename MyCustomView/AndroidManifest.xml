@@ -7,7 +7,16 @@
         android:minSdkVersion="14"
         android:targetSdkVersion="21" />
 
+    <!--网络-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!--选择照片所需权限-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    
     <application
+        android:name="com.xuexiang.app.BaseApplication"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
@@ -26,6 +35,18 @@
         <activity android:name="com.example.mycustomview.custom.CircleMenuActivity"/>
         <activity android:name="com.example.mycustomview.custom.StateButtonActivity"
             android:theme="@style/AppCompatTheme"/>
+        <activity android:name="com.example.mycustomview.custom.WebViewMainActivity"/>
+        <activity android:name="com.xuexiang.view.webview.WebViewActivity"
+            android:theme="@style/AppCompatTheme"
+            android:configChanges="orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.example.mycustomview.jptabbar.JpTabbarActivity"/>
+        <activity android:name="com.example.mycustomview.custom.FaboptionsActivity"
+             android:theme="@style/AppCompatTheme"/>
+        <activity android:name="com.example.mycustomview.pageslidingtab.ui.activity.PageSlidingTabActivity"
+             android:theme="@style/AppCompatTheme"/>
+        
     </application>
 
 </manifest>

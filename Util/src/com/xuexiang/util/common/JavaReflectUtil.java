@@ -5,8 +5,11 @@ import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
+import android.app.Activity;
+
 /**
  * java反射工具
+ * 
  * @author xx
  */
 public class JavaReflectUtil {
@@ -81,8 +84,8 @@ public class JavaReflectUtil {
 	 * @return
 	 * @throws Exception
 	 */
-	public static Object invokeStaticMethod(String className, String methodName,
-			Object[] args) throws Exception {
+	public static Object invokeStaticMethod(String className,
+			String methodName, Object[] args) throws Exception {
 		Class<?> ownerClass = Class.forName(className);
 		Class<?>[] argsClass = new Class[args.length];
 		for (int i = 0, j = args.length; i < j; i++) {
@@ -102,7 +105,8 @@ public class JavaReflectUtil {
 	 * @return
 	 * @throws Exception
 	 */
-	public static Object newInstance(String className, Object[] args) throws Exception {
+	public static Object newInstance(String className, Object[] args)
+			throws Exception {
 		Class<?> newoneClass = Class.forName(className);
 		Class<?>[] argsClass = new Class[args.length];
 		for (int i = 0, j = args.length; i < j; i++) {
@@ -137,7 +141,7 @@ public class JavaReflectUtil {
 	public static Object getByArray(Object array, int index) {
 		return Array.get(array, index);
 	}
-	
+
 	/**
 	 * 得到某个类公共属性（public）的个数
 	 * 
@@ -146,12 +150,21 @@ public class JavaReflectUtil {
 	 * @return
 	 * @throws Exception
 	 */
-	public static int getPropertyNum(String className)
-			throws Exception {
+	public static int getPropertyNum(String className) throws Exception {
 		Class<?> ownerClass = Class.forName(className);
 		Field[] fields = ownerClass.getFields();
 		return fields.length;
 	}
 
+	/**
+	 * 获取activity的名称
+	 * 
+	 * @param activity
+	 * @return
+	 * @throws Exception
+	 */
+	public static String getActivityTag(Activity activity) throws Exception {
+		return activity.getClass().getSimpleName();
+	}
 
 }

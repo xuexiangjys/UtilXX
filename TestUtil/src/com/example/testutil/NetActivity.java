@@ -13,7 +13,7 @@ import com.example.testutil.net.OkHttpActivity;
 import com.example.testutil.net.VolleyHttpActivity;
 import com.example.testutil.net.model.HttpConsts;
 import com.xuexiang.app.BaseActivity;
-import com.xuexiang.app.BaseApplication;
+import com.xuexiang.app.SampleApplication;
 import com.xuexiang.util.view.DialogUtil;
 
 /**  
@@ -38,7 +38,7 @@ public class NetActivity extends BaseActivity implements OnClickListener{
 			@Override
 			public void onClick(View v) {
 				final EditText edit = new EditText(mContext);
-				DialogUtil.showFilloutDialog(mContext, "修改网络", edit, BaseApplication.app_url, 
+				DialogUtil.showFilloutDialog(mContext, "修改网络", edit, SampleApplication.app_url, 
 				new DialogInterface.OnClickListener() {
 					public void onClick(DialogInterface dialog,
 							int which) {

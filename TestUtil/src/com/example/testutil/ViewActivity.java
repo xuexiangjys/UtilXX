@@ -6,6 +6,7 @@ import android.view.View.OnClickListener;
 
 import com.example.testutil.view.ActionSheetActivity;
 import com.example.testutil.view.CircularFloatingActionMenuActivity;
+import com.example.testutil.view.CoolAnimActivity;
 import com.example.testutil.view.CustomProgressBarActivity;
 import com.example.testutil.view.CustomTextViewActivity;
 import com.example.testutil.view.CustomViewActivity;
@@ -49,6 +50,7 @@ import com.example.testutil.view.avloadingindicatorview.AVLoadingIndicatorViewAc
 import com.example.testutil.view.fadingactionbar.FadingActionbarHomeActivity;
 import com.example.testutil.view.ioniconview.IonIconViewActivity;
 import com.example.testutil.view.morphingbutton.MorphingButtonActivity;
+import com.example.testutil.view.ninegridview.NinegridviewActivity;
 import com.example.testutil.view.residemenu.ResideMenuMainFragmentPagerActivity;
 import com.example.testutil.view.systembartint.SystemBarTintManagerActivity;
 import com.xuexiang.app.BaseActivity;
@@ -326,6 +328,17 @@ public class ViewActivity extends BaseActivity implements OnClickListener{
         	intent.setClass(this, SweetAlertActivity.class);
             startActivity(intent);			
 			break;
+		case R.id.btn_ninegridview:
+			mToastUtil.showToast("点击了NinegridviewActivity");
+        	intent.setClass(this, NinegridviewActivity.class);
+            startActivity(intent);			
+			break;
+		case R.id.btn_coolanim:
+			mToastUtil.showToast("点击了CoolAnimActivity");
+        	intent.setClass(this, CoolAnimActivity.class);
+            startActivity(intent);			
+			break;
+
 
 
 		default:

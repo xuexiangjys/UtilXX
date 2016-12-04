@@ -6,7 +6,7 @@ import android.view.View.OnClickListener;
 
 import com.example.testutil.R;
 import com.xuexiang.app.BaseActivity;
-import com.xuexiang.app.BaseApplication;
+import com.xuexiang.app.SampleApplication;
 import com.xuexiang.util.view.FlexibleToast;
 import com.xuexiang.view.snack.SnackBar;
 import com.xuexiang.view.snack.SnackBar.OnMessageClickListener;
@@ -46,7 +46,7 @@ public class SnakbarActivity extends BaseActivity implements OnClickListener {
 		                    @Override
 		                    public void run() {
 		                    	FlexibleToast.Builder builder = new FlexibleToast.Builder(mContext).setGravity(FlexibleToast.GRAVITY_CENTER).setFirstText("中部Toast").setSecondText("点击了snackBar");
-		                        BaseApplication.toastShowByBuilder(builder);
+		                    	SampleApplication.toastShowByBuilder(builder);
 		                    }
 		                }).start();
 				}

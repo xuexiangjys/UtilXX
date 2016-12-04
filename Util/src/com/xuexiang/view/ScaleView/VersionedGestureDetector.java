@@ -1,4 +1,4 @@
-package com.xuexiang.view.ScaleView;
+package com.xuexiang.view.scaleview;
 
 /*******************************************************************************
  * Copyright 2011, 2012 Chris Banes.

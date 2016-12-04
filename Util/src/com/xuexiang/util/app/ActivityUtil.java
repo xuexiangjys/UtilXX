@@ -6,12 +6,20 @@ import java.util.TimerTask;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.EditText;
+import android.widget.Toast;
 
+import com.xuexiang.app.BaseApplication;
+import com.xuexiang.util.data.sharedPreferences.SettingSharePreferenceUtil;
 import com.xuexiang.util.resource.RUtils;
+import com.xuexiang.util.system.EditTextShakeHelper;
 import com.xuexiang.view.TitleBar;
 /**
  * @Description: Activity的工具类
@@ -250,6 +258,82 @@ public class ActivityUtil {
 	 */
 	public static void startActivity(Context context, Class<?> cls, StartAnim startAnim) {
 		startActivity(context, cls, null, startAnim);
+	}
+	
+	//=================================================全局的UI========================================================================//
+	/**
+	 * 在主线程中运行
+	 * @param r
+	 */
+	public static void runOnUIThread(Runnable r){
+		BaseApplication.getAppHandler().post(r);
+	}
+	
+	/**
+	 * 获取resources对象
+	 * @return
+	 */
+	public static Resources getResources(){
+		return BaseApplication.getContext().getResources();
+	}
+	
+	/**
+	 * 获取字符串
+	 * @param resId
+	 * @return
+	 */
+	public static String getString(int resId){
+		return getResources().getString(resId);
+	}
+
+	/**
+	 * 获取资源图片
+	 * @param resId
+	 * @return
+     */
+	public static Drawable getDrawable(int resId){
+		return getResources().getDrawable(resId);
+	}
+	
+	/**
+	 * 获取dimes值
+	 * @param resId
+	 * @return
+	 */
+	public static float getDimens(int resId){
+		return getResources().getDimension(resId);
+	}
+	
+	/**
+	 * 获取字符串的数组
+	 * @param resId
+	 * @return
+	 */
+	public static String[] getStringArray(int resId){
+		return getResources().getStringArray(resId);
+	}
+	
+	//=================================================BaseActivity========================================================================//
+	public void Toast(CharSequence hint){
+	    Toast.makeText(BaseApplication.getContext(), hint , Toast.LENGTH_SHORT).show();
+	}	
+	
+	/**
+	 * 检验EditText内容是否为空
+	 * @param et  EditText控件
+	 * @param msg 为空时的提示文字
+	 * @return
+	 */
+	public boolean IsEditTextEmpty(EditText et, String msg){
+		boolean result = false;
+		if(TextUtils.isEmpty(et.getText().toString())){
+			if(SettingSharePreferenceUtil.getInstance(BaseApplication.getContext()).isAllowVibrate()){
+			  new EditTextShakeHelper(BaseApplication.getContext()).shake(et);
+			}
+			Toast(msg);
+			result = true;
+		}
+		return result;
 	}
 	
 }
