@@ -19,4 +19,15 @@
         <item>第九页</item>
         <item>第十页</item>
     </string-array>
+    
+    <string name="conversation1">扫一扫</string>
+    <string name="conversation2">建讨论组</string>
+    <string name="conversation3">面对面</string>
+    <string name="conversation4">多人通话</string>
+    <string name="conversation5">我的电脑</string>
+    <string name="conversation6">加好友</string>
+    
+    <string name="small_snow">小雪</string>
+    <string name="middle_snow">中雪</string>
+    <string name="heavy_snow">大雪</string>
 </resources>

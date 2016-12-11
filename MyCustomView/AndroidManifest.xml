@@ -46,7 +46,11 @@
              android:theme="@style/AppCompatTheme"/>
         <activity android:name="com.example.mycustomview.pageslidingtab.ui.activity.PageSlidingTabActivity"
              android:theme="@style/AppCompatTheme"/>
-        
+        <activity android:name="com.example.mycustomview.custom.DraglayoutExpandActivity"/>
+        <activity android:name="com.example.mycustomview.custom.SnowActivity"/>
+        <activity android:name="com.example.mycustomview.custom.SlideMenuActivity"/>
+        <activity android:name="com.example.mycustomview.custom.CalendarActivity"
+             android:theme="@style/AppCompatTheme"/>
     </application>
 
 </manifest>

@@ -69,12 +69,12 @@ public class TitleBarActivity extends BaseActivity implements OnClickListener {
 //	            }
 //	        });
 
-	        mTitleBar.addAction(new TitleBar.TextAction("发布") {
-	            @Override
-	            public void performAction(View view) {
-	                Toast("点击了发布");
-	            }
-	        });
+//	        mTitleBar.addAction(new TitleBar.TextAction("发布") {
+//	            @Override
+//	            public void performAction(View view) {
+//	                Toast("点击了发布");
+//	            }
+//	        });
 	}
 	
 	 private List<ActionItem> getShareInfo() {

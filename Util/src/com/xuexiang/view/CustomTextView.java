@@ -10,10 +10,12 @@ import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
+import android.os.Build;
 import android.text.SpannableString;
 import android.text.Spanned;
 import android.text.style.ImageSpan;
 import android.util.AttributeSet;
+import android.view.MotionEvent;
 import android.widget.TextView;
 
 
@@ -24,7 +26,9 @@ import android.widget.TextView;
  */
 public class CustomTextView extends TextView {
 
-    private GradientDrawable drawable;
+    private GradientDrawable gradientDrawable;
+    
+    private int mNormalSolidColor, mSelectedSolidColor;
 
     public CustomTextView(Context context) {
         super(context);
@@ -47,8 +51,8 @@ public class CustomTextView extends TextView {
     		return; 
     	}
         TypedArray a = context.obtainStyledAttributes(attrs, RUtils.getStyleable(context, "customTextView"));
-        int normalSolidColor = a.getColor(MResource.getIdByName(context, "styleable", "customTextView_textSolidColor"), Color.TRANSPARENT);
-        int selectedSolidColor = a.getColor(MResource.getIdByName(context, "styleable", "customTextView_textSelectedSolidColor"), Color.TRANSPARENT);
+        mNormalSolidColor = a.getColor(MResource.getIdByName(context, "styleable", "customTextView_textSolidColor"), Color.TRANSPARENT);
+        mSelectedSolidColor = a.getColor(MResource.getIdByName(context, "styleable", "customTextView_textSelectedSolidColor"), Color.TRANSPARENT);
         int strokeColor = a.getColor(MResource.getIdByName(context, "styleable", "customTextView_textStrokeColor"), Color.TRANSPARENT);
         int radius = a.getDimensionPixelSize(MResource.getIdByName(context, "styleable", "customTextView_textRadius"), 0);
         int leftTopRadius = a.getDimensionPixelSize(MResource.getIdByName(context, "styleable", "customTextView_textLeftTopRadius"), 0);
@@ -63,29 +67,31 @@ public class CustomTextView extends TextView {
 
         a.recycle();
 
-        drawable = new GradientDrawable();
-        drawable.setStroke(strokeWidth, strokeColor);
+        gradientDrawable = new GradientDrawable();
+        gradientDrawable.setStroke(strokeWidth, strokeColor);
         
-        if (normalSolidColor != 0 && selectedSolidColor != 0) {
-            //璁剧疆state_selected鐘舵�佹椂锛屽拰姝ｅ父鐘舵�佹椂鏂囧瓧鐨勯鑹�
-            int[][] states = new int[3][1];
-            states[0] = new int[]{android.R.attr.state_selected};
-            states[1] = new int[]{android.R.attr.state_pressed};
-            states[2] = new int[]{};
-            ColorStateList textColorSelect = new ColorStateList(states, new int[]{selectedSolidColor, selectedSolidColor, normalSolidColor});
-            drawable.setColor(textColorSelect);
-        } else if (normalSolidColor != 0 ) {
-        	drawable.setColor(normalSolidColor);
-        }
+        if (Build.VERSION.SDK_INT > Build.VERSION_CODES.KITKAT) {
+        	if (mNormalSolidColor != 0 && mSelectedSolidColor != 0) {
+                int[][] states = new int[3][1];
+                states[0] = new int[]{android.R.attr.state_selected};
+                states[1] = new int[]{android.R.attr.state_pressed};
+                states[2] = new int[]{};
+                ColorStateList textColorSelect = new ColorStateList(states, new int[]{mSelectedSolidColor, mSelectedSolidColor, mNormalSolidColor});
+                gradientDrawable.setColor(textColorSelect);
+            } else if (mNormalSolidColor != 0 ) {
+            	gradientDrawable.setColor(mNormalSolidColor);
+            }
+		} else {
+			gradientDrawable.setColor(mNormalSolidColor);
+		}
         
         if (radius > 0) {
-            drawable.setCornerRadius(radius);
+            gradientDrawable.setCornerRadius(radius);
         } else if (leftTopRadius > 0 || leftBottomRadius > 0 || rightTopRadius > 0 || rightBottomRadius > 0) {
-            drawable.setCornerRadii(new float[]{leftTopRadius, leftTopRadius, rightTopRadius, rightTopRadius, rightBottomRadius, rightBottomRadius, leftBottomRadius, leftBottomRadius});
+            gradientDrawable.setCornerRadii(new float[]{leftTopRadius, leftTopRadius, rightTopRadius, rightTopRadius, rightBottomRadius, rightBottomRadius, leftBottomRadius, leftBottomRadius});
         }
 
-        setBackgroundDrawable(drawable);
-
+        setBackgroundDrawable(gradientDrawable);
 
         if (textDrawable != null) {
             BitmapDrawable bd = (BitmapDrawable) textDrawable;
@@ -98,9 +104,7 @@ public class CustomTextView extends TextView {
             setText(ss);
         }
 
-
         if (normalTextColor != 0 && selectedTextColor != 0) {
-            //璁剧疆state_selected鐘舵�佹椂锛屽拰姝ｅ父鐘舵�佹椂鏂囧瓧鐨勯鑹�
             int[][] states = new int[3][1];
             states[0] = new int[]{android.R.attr.state_selected};
             states[1] = new int[]{android.R.attr.state_pressed};
@@ -109,7 +113,7 @@ public class CustomTextView extends TextView {
             setTextColor(textColorSelect);
         } 
         
-        if (selectedTextColor != 0 || selectedSolidColor != 0) {
+        if (selectedTextColor != 0 || mSelectedSolidColor != 0) {
         	setClickable(true);
         } else {
         	setClickable(false);
@@ -118,10 +122,11 @@ public class CustomTextView extends TextView {
 
 
     /**
-     * 璁剧疆濉厖鍥剧墖
-     *
-     * @param drawableId  drawable id
-     */
+	 * 设置填充图片
+	 * 
+	 * @param drawableId
+	 *            drawable id
+	 */
     public void setTextDrawable(int drawableId) {
         if (drawableId != 0) {
             Drawable textdrwable = getResources().getDrawable(drawableId);
@@ -137,51 +142,60 @@ public class CustomTextView extends TextView {
     }
 
     /**
-     *
-     * 璁剧疆濉厖棰滆壊
-     *
-     * @param colorId   棰滆壊id
-     */
+	 * 
+	 * 设置填充颜色
+	 * 
+	 * @param colorId
+	 *            颜色id
+	 */
     public void setSolidColor(int colorId) {
-        drawable.setColor(colorId);
-        setBackgroundDrawable(drawable);
+        gradientDrawable.setColor(colorId);
+        setBackgroundDrawable(gradientDrawable);
     }
 
     /**
-     * 璁剧疆鍦嗚寮у害
-     *
-     * @param leftTopRadius         宸︿笂瑙掑姬搴�
-     * @param leftBottomRadius      宸︿笅瑙掑姬搴�
-     * @param rightTopRadius        鍙充笂瑙掑姬搴�
-     * @param rightBottomRadius     鍙充笅瑙掑姬搴�
-     */
+	 * 设置圆角弧度
+	 * 
+	 * @param leftTopRadius
+	 *            左上角弧度
+	 * @param leftBottomRadius
+	 *            左下角弧度
+	 * @param rightTopRadius
+	 *            右上角弧度
+	 * @param rightBottomRadius
+	 *            右下角弧度
+	 */
     public void setRadius(int leftTopRadius, int leftBottomRadius, int rightTopRadius, int rightBottomRadius) {
-        drawable.setCornerRadii(new float[]{leftTopRadius, leftTopRadius, rightTopRadius, rightTopRadius, rightBottomRadius, rightBottomRadius, leftBottomRadius, leftBottomRadius});
-        setBackgroundDrawable(drawable);
+        gradientDrawable.setCornerRadii(new float[]{leftTopRadius, leftTopRadius, rightTopRadius, rightTopRadius, rightBottomRadius, rightBottomRadius, leftBottomRadius, leftBottomRadius});
+        setBackgroundDrawable(gradientDrawable);
     }
 
-    /**
-     * 璁剧疆杈规棰滆壊鍙婂搴�
-     *
-     * @param strokeWidth      杈规瀹藉害
-     * @param colorId          杈规棰滆壊 id
-     */
+	/**
+	 * 设置边框颜色及宽度
+	 * 
+	 * @param strokeWidth
+	 *            边框宽度
+	 * @param colorId
+	 *            边框颜色 id
+	 */
     public void setStrokeColorAndWidth(int strokeWidth,int colorId){
-        drawable.setStroke(strokeWidth, colorId);
+        gradientDrawable.setStroke(strokeWidth, colorId);
     }
 
 
 
     /**
-     * 璁剧疆textView閫変腑鐘舵�侀鑹�
-     *
-     * @param normalTextColor     姝ｅ父鐘舵�侀鑹�
-     * @param selectedTextColor   鎸変笅鐘舵�侀鑹�
-     */
+	 * 设置textView选中状态颜色
+	 * 
+	 * @param normalTextColor
+	 *            正常状态颜色
+	 * @param selectedTextColor
+	 *            按下状态颜色
+	 */
     public void setSelectedTextColor(int normalTextColor,int selectedTextColor) {
     	
         if (normalTextColor != 0 && selectedTextColor != 0) {
-            //璁剧疆state_selected鐘舵�佹椂锛屽拰姝ｅ父鐘舵�佹椂鏂囧瓧鐨勯鑹�
+        	// 设置state_selected状态时，和正常状态时文字的颜色
             setClickable(true);
             int[][] states = new int[3][1];
             states[0] = new int[]{android.R.attr.state_selected};
@@ -196,24 +210,49 @@ public class CustomTextView extends TextView {
     }
     
     /**
-     * 璁剧疆textView閫変腑鐘舵�侀鑹�
-     *
-     * @param normalTextColor     姝ｅ父鐘舵�侀鑹�
-     * @param selectedTextColor   鎸変笅鐘舵�侀鑹�
-     */
+	 * 设置textView选中状态颜色
+	 * 
+	 * @param normalTextColor
+	 *            正常状态颜色
+	 * @param selectedTextColor
+	 *            按下状态颜色
+	 */
     public void setSelectedSolidColor(int normalSolidColor,int selectedSolidColor) {
     	if (normalSolidColor != 0 && selectedSolidColor != 0) {
-            //璁剧疆state_selected鐘舵�佹椂锛屽拰姝ｅ父鐘舵�佹椂鏂囧瓧鐨勯鑹�
-            setClickable(true);
-            int[][] states = new int[3][1];
-            states[0] = new int[]{android.R.attr.state_selected};
-            states[1] = new int[]{android.R.attr.state_pressed};
-            states[2] = new int[]{};
-            ColorStateList textColorSelect = new ColorStateList(states, new int[]{selectedSolidColor, selectedSolidColor, normalSolidColor});
-            drawable.setColor(textColorSelect);
-        } else {
-            setClickable(false);
-        }
+    		if (Build.VERSION.SDK_INT > Build.VERSION_CODES.KITKAT) {
+	            setClickable(true);
+	            int[][] states = new int[3][1];
+	            states[0] = new int[]{android.R.attr.state_selected};
+	            states[1] = new int[]{android.R.attr.state_pressed};
+	            states[2] = new int[]{};
+	            ColorStateList textColorSelect = new ColorStateList(states, new int[]{selectedSolidColor, selectedSolidColor, normalSolidColor});
+	            gradientDrawable.setColor(textColorSelect);
+    		} else {
+    			setClickable(true);
+    			mNormalSolidColor = normalSolidColor;
+    			mSelectedSolidColor = selectedSolidColor;
+	        }
+    	} else {
+    		 setClickable(false);
+    	}
     }
+    
+    @Override
+	public boolean onTouchEvent(MotionEvent event) {
+		if (event.getAction() == MotionEvent.ACTION_DOWN) {
+			if (mSelectedSolidColor != Color.TRANSPARENT) {
+				gradientDrawable.setColor(mSelectedSolidColor);
+				setBackgroundDrawable(gradientDrawable);
+				postInvalidate();
+			}
+		} else if (event.getAction() == MotionEvent.ACTION_UP
+				|| event.getAction() == MotionEvent.ACTION_CANCEL) {
+			if (mSelectedSolidColor != Color.TRANSPARENT) {
+				gradientDrawable.setColor(mNormalSolidColor);
+				setBackgroundDrawable(gradientDrawable);
+			}
+		}
+		return super.onTouchEvent(event);
+	}
 
 }

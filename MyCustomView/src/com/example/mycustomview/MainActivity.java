@@ -4,8 +4,12 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 
+import com.example.mycustomview.custom.CalendarActivity;
 import com.example.mycustomview.custom.CircleMenuActivity;
+import com.example.mycustomview.custom.DraglayoutExpandActivity;
 import com.example.mycustomview.custom.FaboptionsActivity;
+import com.example.mycustomview.custom.SlideMenuActivity;
+import com.example.mycustomview.custom.SnowActivity;
 import com.example.mycustomview.custom.StateButtonActivity;
 import com.example.mycustomview.custom.WebViewMainActivity;
 import com.example.mycustomview.jptabbar.JpTabbarActivity;
@@ -52,6 +56,22 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 		case R.id.pageslidingtab:
 			mToastUtil.showToast("点击了PageSlidingTabActivity");
 			startActivity(PageSlidingTabActivity.class);
+			break;
+		case R.id.draglayoutexpand:
+			mToastUtil.showToast("点击了DraglayoutExpandActivity");
+			startActivity(DraglayoutExpandActivity.class);
+			break;
+		case R.id.snow:
+			mToastUtil.showToast("点击了SnowActivity");
+			startActivity(SnowActivity.class);
+			break;
+		case R.id.slidemenu:
+			mToastUtil.showToast("点击了SlideMenuActivity");
+			startActivity(SlideMenuActivity.class);
+			break;
+		case R.id.calendar:
+			mToastUtil.showToast("点击了CalendarActivity");
+			startActivity(CalendarActivity.class);
 			break;
 
 		default:

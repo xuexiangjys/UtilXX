@@ -49,6 +49,26 @@
                 android:id="@+id/pageslidingtab"
                 style="@style/CustomButtonStyle"
                 android:text="PageSlidingTab Demo" />
+            
+            <com.xuexiang.view.CustomTextView
+                android:id="@+id/draglayoutexpand"
+                style="@style/CustomButtonStyle"
+                android:text="DraglayoutExpand Demo" />
+            
+            <com.xuexiang.view.CustomTextView
+                android:id="@+id/snow"
+                style="@style/CustomButtonStyle"
+                android:text="Snow Demo" />
+            
+            <com.xuexiang.view.CustomTextView
+                android:id="@+id/slidemenu"
+                style="@style/CustomButtonStyle"
+                android:text="SlideMenu Demo" />
+            
+            <com.xuexiang.view.CustomTextView
+                android:id="@+id/calendar"
+                style="@style/CustomButtonStyle"
+                android:text="Calendar Demo" />
         </LinearLayout>
     </ScrollView>
 

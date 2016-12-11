@@ -41,5 +41,13 @@
         <item name="textRadius">10dp</item>
         <item name="android:onClick">onClick</item>
     </style>
+    
+    <style name="StyleMenuRight" parent="android:Widget.TextView">
+        <item name="android:gravity">center</item>
+        <item name="android:padding">3dp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
 
 </resources>

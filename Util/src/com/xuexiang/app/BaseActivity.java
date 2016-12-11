@@ -61,7 +61,7 @@ public abstract class BaseActivity extends FragmentActivity {
 	
 	public TextView mTitle;
 	public ImageView mLeftMenu,mRightMenu;
-	public TitleBar mTitleBar;
+	private TitleBar mTitleBar;
 	public ImageView mTitleBarRightMenu;
     private TitlePopup mTitlePopup;
 	
@@ -113,19 +113,20 @@ public abstract class BaseActivity extends FragmentActivity {
 	/**
 	 * 利用TitleBar初始化ActionBar
 	 */
-	public void initTitleBar(String title) {
+	public TitleBar initTitleBar(String title) {
 		initTitleBar(title, new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 finish();
             }
-        });          
+        });  
+		return mTitleBar;
 	}
 	
 	/**
 	 * 利用TitleBar初始化ActionBar
 	 */
-	public void initTitleBar(String title, OnClickListener listener){
+	public TitleBar initTitleBar(String title, OnClickListener listener){
 		mTitleBar = (TitleBar) findViewById(RUtils.getId(mContext, "title_bar"));
 		mTitleBar.setImmersive(false);
 
@@ -140,13 +141,32 @@ public abstract class BaseActivity extends FragmentActivity {
         mTitleBar.setSubTitleColor(Color.WHITE);
         mTitleBar.setDividerColor(Color.GRAY);
         mTitleBar.setActionTextColor(Color.WHITE);
-        
+        return mTitleBar;
 	}
 	
 	/**
 	 * 利用TitleBar初始化ActionBar
 	 */
-	public void initTitleBarWithRightMenu(String title, ArrayList<ActionItem> actionItemlist, OnItemOnClickListener rightMenuAction ){
+	public TitleBar initTitleBar(String title, OnClickListener leftClickListener, TitleBar.ImageAction imageAction) {
+		initTitleBar(title, leftClickListener);
+		mTitleBarRightMenu = (ImageView) mTitleBar.addAction(imageAction); 
+		return mTitleBar;
+	}
+	
+	/**
+	 * 利用TitleBar初始化ActionBar
+	 */
+	public TitleBar initTitleBarWithRightMenu(String title, TitleBar.ImageAction imageAction) {
+		initTitleBar(title);
+		mTitleBarRightMenu = (ImageView) mTitleBar.addAction(imageAction);
+		return mTitleBar;
+	}
+	
+	
+	/**
+	 * 利用TitleBar初始化ActionBar
+	 */
+	public TitleBar initTitleBarWithRightMenu(String title, ArrayList<ActionItem> actionItemlist, OnItemOnClickListener rightMenuAction ){
 		initTitleBar(title);
 		
 		mTitlePopup = new TitlePopup(mContext, LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
@@ -157,6 +177,7 @@ public abstract class BaseActivity extends FragmentActivity {
 			public void performAction(View view) {
 				mTitlePopup.show(view);
 		}});   
+		return mTitleBar;
 	}
 	
 	

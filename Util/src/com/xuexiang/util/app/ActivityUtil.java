@@ -29,19 +29,20 @@ public class ActivityUtil {
 	/**
 	 * 利用TitleBar初始化ActionBar
 	 */
-	public static void initTitleBar(final Activity activity, String title){
-		initTitleBar(activity, title, new OnClickListener() {
+	public static TitleBar initTitleBar(final Activity activity, String title){
+		TitleBar mTitleBar = initTitleBar(activity, title, new OnClickListener() {
 			@Override
 			public void onClick(View arg0) {
 				activity.finish();
 			}
 		});
+		return mTitleBar;
 	}
 	
 	/**
 	 * 利用TitleBar初始化ActionBar
 	 */
-	public static void initTitleBar(final Activity activity, String title, OnClickListener listener) {
+	public static TitleBar initTitleBar(final Activity activity, String title, OnClickListener listener) {
 		TitleBar mTitleBar = (TitleBar) activity.findViewById(RUtils.getId(activity, "title_bar"));
 		mTitleBar.setImmersive(false);
 
@@ -56,6 +57,23 @@ public class ActivityUtil {
         mTitleBar.setSubTitleColor(Color.WHITE);
         mTitleBar.setDividerColor(Color.GRAY);
         mTitleBar.setActionTextColor(Color.WHITE);
+        return mTitleBar;
+	}
+	
+	/**
+	 * 利用TitleBar初始化ActionBar
+	 */
+	public static void initTitleBar(final Activity activity, String title, OnClickListener leftClickListener, TitleBar.ImageAction imageAction) {
+		TitleBar mTitleBar = initTitleBar(activity, title, leftClickListener);
+	    mTitleBar.addAction(imageAction);  
+	}
+	
+	/**
+	 * 利用TitleBar初始化ActionBar
+	 */
+	public static void initTitleBarWithRightMenu(final Activity activity, String title, TitleBar.ImageAction imageAction) {
+		TitleBar mTitleBar = initTitleBar(activity, title);
+		mTitleBar.addAction(imageAction);  
 	}
 	
 	/**

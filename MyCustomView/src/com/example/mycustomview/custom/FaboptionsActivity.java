@@ -22,7 +22,6 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.example.mycustomview.R;
-import com.xuexiang.app.BaseActivity;
 import com.xuexiang.util.app.ActivityUtil;
 import com.xuexiang.view.faboptions.FabOptions;
 

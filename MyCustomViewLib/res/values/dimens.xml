@@ -24,4 +24,6 @@
     <dimen name="faboptions_icon_size">30dp</dimen>
     <dimen name="faboptions_radius">20dp</dimen>
     <dimen name="faboptions_vector_dimensions">24dp</dimen>
+    
+    <dimen name="snow_edge">20dp</dimen>
 </resources>

@@ -42,6 +42,14 @@ public final class DateUtils {
     public static final String DB_DATA_FORMAT = "yyyy-MM-DD HH:mm:ss";
     public static final String NEWS_ITEM_DATE_FORMAT = "hh:mm M月d日 yyyy";
 
+    public static Date getCurrentDate() {
+        return new Date(System.currentTimeMillis());
+    }
+
+    public static long getCurrentTimeMills() {
+        return System.currentTimeMillis();
+    }
+    
     /**
      * 将Date类型转换为日期字符串
      *
@@ -50,13 +58,16 @@ public final class DateUtils {
      * @return 按照需求格式的日期字符串
      */
     public static String formatDate(Date date, String type) {
+    	if (date == null) {
+    		return StringUtils.EMPTY;
+    	}
         try {
             SimpleDateFormat df = new SimpleDateFormat(type);
             return df.format(date);
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return null;
+        return StringUtils.EMPTY;
     }
 
     /**
@@ -67,6 +78,9 @@ public final class DateUtils {
      * @return Date对象
      */
     public static Date parseDate(String dateStr, String type) {
+    	if (TextUtils.isEmpty(dateStr)) {
+    		return null;
+    	}
         SimpleDateFormat df = new SimpleDateFormat(type);
         Date date = null;
         try {
@@ -76,6 +90,25 @@ public final class DateUtils {
         }
         return date;
     }
+    
+    /**
+	 * 判断解析时间是否成功
+	 * @param dateString 解析的时间
+	 * @param format 解析的格式
+	 * @return
+	 */
+	public static boolean isDateVaild(String dateString, SimpleDateFormat format) {
+		if (TextUtils.isEmpty(dateString)) {
+			return false;
+		}
+        try {
+        	Date date = format.parse(dateString);
+        } catch (ParseException e) {
+            e.printStackTrace();
+            return false;
+        }
+        return true;
+	}
     
     /**
      * 日期格式转化   oldFormat --->  newFormat
@@ -121,6 +154,33 @@ public final class DateUtils {
         	return dateStr;      //转化失败
         }
     }
+    
+    /**
+	 * 计算距离今天的天数
+	 * @param date 比较的时间
+	 * @return
+	 */
+	public static int calculateNumberofDays(Date date) {
+		Date now = getCurrentDate();
+		int dayCount = (int) ((now.getTime() - date.getTime()) / (1000 * 3600 * 24));
+		return dayCount;
+	}
+	
+	/**
+	 * 比较两个时间的大小
+	 * @param d1
+	 * @param d2
+	 * @return
+	 */
+	public static int compareDate(Date d1, Date d2) {
+		if (d1.getTime() > d2.getTime()) {
+			return 1;
+		} else if (d1.getTime() < d2.getTime()) {
+			return -1;
+		} else {// 相等
+			return 0;
+		}
+	}
     
     /**
      * 得到年
