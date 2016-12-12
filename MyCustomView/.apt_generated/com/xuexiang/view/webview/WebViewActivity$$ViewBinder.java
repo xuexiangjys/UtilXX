@@ -10,15 +10,15 @@ public class WebViewActivity$$ViewBinder<T extends com.xuexiang.view.webview.Web
     View view;
     view = finder.findRequiredView(source, 2131034265, "field 'videoFullView'");
     target.videoFullView = finder.castView(view, 2131034265, "field 'videoFullView'");
-    view = finder.findRequiredView(source, 2131034267, "field 'mProgressBar'");
-    target.mProgressBar = finder.castView(view, 2131034267, "field 'mProgressBar'");
     view = finder.findRequiredView(source, 2131034266, "field 'webView'");
     target.webView = finder.castView(view, 2131034266, "field 'webView'");
+    view = finder.findRequiredView(source, 2131034267, "field 'mProgressBar'");
+    target.mProgressBar = finder.castView(view, 2131034267, "field 'mProgressBar'");
   }
 
   @Override public void unbind(T target) {
     target.videoFullView = null;
-    target.mProgressBar = null;
     target.webView = null;
+    target.mProgressBar = null;
   }
 }

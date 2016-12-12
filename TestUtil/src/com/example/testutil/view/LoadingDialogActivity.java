@@ -10,6 +10,8 @@ import com.example.testutil.R;
 import com.xuexiang.app.BaseActivity;
 import com.xuexiang.util.app.ThreadPoolManager;
 import com.xuexiang.util.view.Colors;
+import com.xuexiang.util.view.DialogUtil;
+import com.xuexiang.util.view.DialogUtil.LoadingStyle;
 import com.xuexiang.view.dialog.CircularProgressDialog;
 import com.xuexiang.view.dialog.ConfirmDialog;
 import com.xuexiang.view.dialog.ConfirmDialog.onConfirmDialogClickListener;
@@ -19,7 +21,6 @@ import com.xuexiang.view.dialog.LoadingAnimatorDialog;
 import com.xuexiang.view.dialog.LoadingView;
 import com.xuexiang.view.dialog.MonIndicatorDialog;
 import com.xuexiang.view.dialog.RoundProgressBarDialog;
-import com.xuexiang.view.dialog.ShapeLoadingDialog;
 import com.xuexiang.view.dialog.SpotsDialog;
 import com.xuexiang.view.dialog.confirmdialog.ConfirmFragment;
 import com.xuexiang.view.dialog.confirmdialog.ConfirmLayout;
@@ -44,8 +45,6 @@ public class LoadingDialogActivity extends BaseActivity implements OnClickListen
 	private ConfirmLayout mConfirmLayout;
 	private ConfirmFragment mConfirmFragment;
 	
-	
-	private ShapeLoadingDialog mShapeLoadingDialog;
 	private AlertDialog mAlertDialog;
 	private RoundProgressBarDialog mRoundProgressBarDialog;
 	private HoriztalProgressBarDialog mHoriztalProgressBarDialog;
@@ -63,7 +62,6 @@ public class LoadingDialogActivity extends BaseActivity implements OnClickListen
 		loadingview = (LoadingView) findViewById(R.id.loadView);
 		loadingview.setVisibility(View.GONE);
 		
-		mShapeLoadingDialog = new ShapeLoadingDialog(this, "加载中..");
 		//mShapeLoadingDialog.setLoadingText("加载中..");
 		mHandler = new Handler();
 	}
@@ -133,8 +131,11 @@ public class LoadingDialogActivity extends BaseActivity implements OnClickListen
 			mConfirmFragment.show(getSupportFragmentManager(), "ConfirmFragment");
 			break;
 			
-		case R.id.btn_loading_dialog:			
-			mShapeLoadingDialog.show();
+		case R.id.btn_loading_dialog:	
+//			mAlertDialog = new ShapeLoadingDialog(this, "加载中..");
+//			mAlertDialog.show();
+			mAlertDialog = DialogUtil.createLoadingDialog(mContext, "加载中..", LoadingStyle.ShapeLoading);
+			mAlertDialog.show();
 			break;
 			
 		case R.id.btn_loading_view:
@@ -164,7 +165,9 @@ public class LoadingDialogActivity extends BaseActivity implements OnClickListen
 			break;
 			
 		case R.id.btn_SpotsDialog:
-			mAlertDialog = new SpotsDialog(this,"数据正在疯狂加载中！");
+//			mAlertDialog = new SpotsDialog(this,"数据正在疯狂加载中！");
+//			mAlertDialog.show();
+			mAlertDialog = DialogUtil.createLoadingDialog(mContext, "数据正在疯狂加载中！", LoadingStyle.Spots);
 			mAlertDialog.show();
 			mHandler.postDelayed(new Runnable() {
 				
@@ -178,7 +181,9 @@ public class LoadingDialogActivity extends BaseActivity implements OnClickListen
 		case R.id.btn_MonIndicatorDialog:
 //			mAlertDialog = new MonIndicatorDialog(this);
 //			mAlertDialog = new MonIndicatorDialog(this, "正在疯狂加载中！");
-			mAlertDialog = new MonIndicatorDialog(this, "正在疯狂加载中！", new int[]{Colors.BLACK, Colors.GOLD, Colors.GREEN_LIGHT, Colors.YELLOW, Colors.RED_DARK});
+//			mAlertDialog = new MonIndicatorDialog(this, "正在疯狂加载中！", new int[]{Colors.BLACK, Colors.GOLD, Colors.GREEN_LIGHT, Colors.YELLOW, Colors.RED_DARK});
+//			mAlertDialog.show();
+			mAlertDialog = DialogUtil.createLoadingDialog(mContext, "数据正在疯狂加载中！", LoadingStyle.MonIndicator);
 			mAlertDialog.show();
             mHandler.postDelayed(new Runnable() {
 				
@@ -189,8 +194,10 @@ public class LoadingDialogActivity extends BaseActivity implements OnClickListen
 			}, 5000);
 			break;
 		case R.id.btn_CircularProgressDialog:
-			mAlertDialog = new CircularProgressDialog(this);
+//			mAlertDialog = new CircularProgressDialog(this);
 //			mAlertDialog = new CircularProgressDialog(this, "正在疯狂加载中！");
+//			mAlertDialog.show();
+			mAlertDialog = DialogUtil.createLoadingDialog(mContext, "数据正在疯狂加载中！", LoadingStyle.Circular);
 			mAlertDialog.show();
             mHandler.postDelayed(new Runnable() {
 				
@@ -243,8 +250,10 @@ public class LoadingDialogActivity extends BaseActivity implements OnClickListen
 			break;
 			
 		case R.id.btn_CustomDialog:
-			mAlertDialog = new CustomDialog(this, "我是透明的xxxxxxxxxxxxxxxxxxxxxxx");
-			mAlertDialog = new CustomDialog(this);
+//			mAlertDialog = new CustomDialog(this, "我是透明的xxxxxxxxxxxxxxxxxxxxxxx");
+//			mAlertDialog = new CustomDialog(this);
+//			mAlertDialog.show();
+			mAlertDialog = DialogUtil.createLoadingDialog(mContext, "数据正在疯狂加载中！", LoadingStyle.Transparent);
 			mAlertDialog.show();
 			
 			if (mAlertDialog instanceof CustomDialog) {

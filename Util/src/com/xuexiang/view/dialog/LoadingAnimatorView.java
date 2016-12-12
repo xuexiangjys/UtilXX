@@ -194,8 +194,9 @@ public class LoadingAnimatorView extends SurfaceView implements
     }
     
     public void close(){
-    	 if(isLoading)
-         	isLoading = false;
+    	 if (isLoading) {
+    		 isLoading = false;
+    	 }
     }
     
     @Override

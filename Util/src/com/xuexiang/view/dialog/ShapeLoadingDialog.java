@@ -1,69 +1,47 @@
 package com.xuexiang.view.dialog;
 
-import com.xuexiang.util.resource.RUtils;
-
-import android.app.Dialog;
+import android.app.AlertDialog;
 import android.content.Context;
 import android.graphics.drawable.GradientDrawable;
-import android.view.LayoutInflater;
-import android.view.View;
+import android.os.Bundle;
+import android.text.TextUtils;
+
+import com.xuexiang.util.resource.RUtils;
 
 /**
  * Created by zzz40500 on 15/6/15.
  */
-public class ShapeLoadingDialog {
-
-
-
-    private Context mContext;
-    private Dialog mDialog;
+public class ShapeLoadingDialog extends AlertDialog {
     private LoadingView mLoadingView;
-    private View mDialogContentView;
-
-
+    private String mLoadingText;
+    
     public ShapeLoadingDialog(Context context) {
-        mContext = context;
-        init();
+    	super(context, RUtils.getStyle(context, "custom_dialog"));
     }
     
-    public ShapeLoadingDialog(Context context, CharSequence loadingText) {
-        mContext = context;
-        init();
-        setLoadingText(loadingText);
+    public ShapeLoadingDialog(Context context, String loadingText) {
+    	super(context, RUtils.getStyle(context, "custom_dialog"));
+    	mLoadingText = loadingText;
     }
-
-    private void init() {
-        mDialog = new Dialog(mContext, RUtils.getStyle(mContext, "custom_dialog"));
-        mDialogContentView= LayoutInflater.from(mContext).inflate(RUtils.getLayout(mContext, "dialog_shapeloading"),null);
-
-
-        mLoadingView= (LoadingView) mDialogContentView.findViewById(RUtils.getId(mContext, "loadView"));
-        mDialog.setContentView(mDialogContentView);
+    
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(RUtils.getLayout(getContext(), "dialog_shapeloading"));
+        mLoadingView = (LoadingView) findViewById(RUtils.getId(getContext(), "loadView"));
+        setLoadingText(mLoadingText);
+        setCanceledOnTouchOutside(false);
     }
 
     public void setBackground(int color){
-        GradientDrawable gradientDrawable= (GradientDrawable) mDialogContentView.getBackground();
+        GradientDrawable gradientDrawable= (GradientDrawable) getCurrentFocus().getBackground();
         gradientDrawable.setColor(color);
     }
 
-    public void setLoadingText(CharSequence charSequence){
-        mLoadingView.setLoadingText(charSequence);
+    public void setLoadingText(String loadingText) {
+    	if (mLoadingView != null && !TextUtils.isEmpty(loadingText)) {
+    		mLoadingView.setLoadingText(loadingText);
+    	}
     }
 
-    public void show(){
-        mDialog.show();
-
-    }
-
-    public void dismiss(){
-        mDialog.dismiss();
-    }
-
-    public Dialog getDialog(){
-        return  mDialog;
-    }
-
-    public void setCanceledOnTouchOutside(boolean cancel){
-        mDialog.setCanceledOnTouchOutside(cancel);
-    }
 }

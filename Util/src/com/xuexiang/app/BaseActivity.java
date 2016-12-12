@@ -38,6 +38,7 @@ import com.xuexiang.util.data.sharedPreferences.UserSharePreferenceUtil;
 import com.xuexiang.util.resource.MResource;
 import com.xuexiang.util.resource.RUtils;
 import com.xuexiang.util.system.EditTextShakeHelper;
+import com.xuexiang.util.view.InputMethodUtils;
 import com.xuexiang.view.TitleBar;
 import com.xuexiang.view.popwindow.ActionItem;
 import com.xuexiang.view.popwindow.TitlePopup;
@@ -296,7 +297,7 @@ public abstract class BaseActivity extends FragmentActivity {
     	mActivitySwitcher.processTouchEvent(ev);
         if (ev.getAction() == MotionEvent.ACTION_DOWN) {
             View v = getCurrentFocus();  
-            if (isShouldHideInput(v, ev)) {  
+            if (InputMethodUtils.isShouldHideInput(v, ev)) {  
                 InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);  
                 if (imm != null) {  
                     imm.hideSoftInputFromWindow(v.getWindowToken(), 0);  
@@ -311,23 +312,4 @@ public abstract class BaseActivity extends FragmentActivity {
         return onTouchEvent(ev);  
     }  
     
-    public  boolean isShouldHideInput(View v, MotionEvent event) {  
-        if (v != null && (v instanceof EditText)) {  
-            int[] leftTop = { 0, 0 };  
-            //获取输入框当前的location位置  
-            v.getLocationInWindow(leftTop);  
-            int left = leftTop[0];  
-            int top = leftTop[1];  
-            int bottom = top + v.getHeight();  
-            int right = left + v.getWidth();  
-            if (event.getX() > left && event.getX() < right  
-                    && event.getY() > top && event.getY() < bottom) {  
-                // 点击的是输入框区域，保留点击EditText的事件  
-                return false;  
-            } else {  
-                return true;  
-            }  
-        }  
-        return false;  
-    }
 }
