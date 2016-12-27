@@ -215,6 +215,20 @@ public final class AppUtils {
         }
         return ret;
     }
+    
+    /**
+     * 停止指定应用的所以运行的服务
+     * @param context
+     */
+    public static void StopAllRunningService(Context context) {
+        ActivityManager activityManager = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
+        List<RunningServiceInfo> servicesList = activityManager.getRunningServices(Integer.MAX_VALUE);
+        for (RunningServiceInfo si : servicesList) {
+            if (context.getPackageName().equals(si.service.getPackageName())) {
+            	stopRunningService(context, si.service.getClassName());
+            }
+        }
+    }
 
     /**
      * 得到CPU核心数

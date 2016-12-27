@@ -69,6 +69,11 @@
                 android:id="@+id/calendar"
                 style="@style/CustomButtonStyle"
                 android:text="Calendar Demo" />
+            
+            <com.xuexiang.view.CustomTextView
+                android:id="@+id/citypicker"
+                style="@style/CustomButtonStyle"
+                android:text="CityPicker Demo" />
         </LinearLayout>
     </ScrollView>
 

@@ -3,11 +3,12 @@ package com.xuexiang.app.swipeback;
 import android.support.v4.app.FragmentActivity;
 import android.view.MotionEvent;
 
-
 /**
- * Created by fhf11991 on 2016/7/25.
+ * 右滑滑动结束Activity
+ * @author xx
+ *
  */
-public class BaseActivity extends FragmentActivity {
+public class SwipebackActivity extends FragmentActivity {
 
     private SwipeWindowHelper mSwipeWindowHelper;
 

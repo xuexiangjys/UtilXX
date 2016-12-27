@@ -6,6 +6,7 @@ import android.view.View.OnClickListener;
 
 import com.example.mycustomview.custom.CalendarActivity;
 import com.example.mycustomview.custom.CircleMenuActivity;
+import com.example.mycustomview.custom.CityPickerActivity;
 import com.example.mycustomview.custom.DraglayoutExpandActivity;
 import com.example.mycustomview.custom.FaboptionsActivity;
 import com.example.mycustomview.custom.SlideMenuActivity;
@@ -72,6 +73,10 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 		case R.id.calendar:
 			mToastUtil.showToast("点击了CalendarActivity");
 			startActivity(CalendarActivity.class);
+			break;
+		case R.id.citypicker:
+			mToastUtil.showToast("点击了CityPickerActivity");
+			startActivity(CityPickerActivity.class);
 			break;
 
 		default:

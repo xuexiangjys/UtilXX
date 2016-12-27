@@ -17,6 +17,7 @@ import com.xuexiang.view.customprogressbar.MyHoriztalProgressBar;
 import com.xuexiang.view.customprogressbar.MyHoriztalProgressBar2;
 import com.xuexiang.view.customprogressbar.MyRoundProgressBar;
 import com.xuexiang.view.customprogressbar.MyRoundProgressBar2;
+import com.xuexiang.view.customprogressbar.ZYDownloading;
 
 /**  
  * 创建时间：2016-6-26 下午5:29:17  
@@ -33,15 +34,17 @@ public class CustomProgressBarActivity extends BaseActivity {
     private Button mStartBtn;
     private LoadingButton mDefaultLButton;
     
-    private static final int UPDATE_PROGRESS = 0;
+    private static final int UPDATE_CBPROGRESSBAR = 0;
 	boolean isDownloading;
 	boolean stop;
 	private Button btnDownload;
 	private CBProgressBar cbProgress,cbProgress2,cbProgress3 ;
-	Handler handler = new Handler(){
+	
+	private ZYDownloading zyDownloading;
+	private Handler handler = new Handler() {
 		public void handleMessage(Message msg) {
 			switch (msg.what) {
-			case UPDATE_PROGRESS:
+			case UPDATE_CBPROGRESSBAR:
 				cbProgress.setProgress(msg.arg1);
 				cbProgress2.setProgress(msg.arg1);
 				cbProgress3.setProgress(msg.arg1);
@@ -50,7 +53,6 @@ public class CustomProgressBarActivity extends BaseActivity {
 					btnDownload.setText("下载");
 				}
 				break;
-
 			default:
 				break;
 			}
@@ -68,6 +70,8 @@ public class CustomProgressBarActivity extends BaseActivity {
 		initLoadingButton();
 		
 		initCBProgressBar();
+		
+		initZYDownloading();
 	}
 
 	private void initView() {
@@ -187,8 +191,7 @@ public class CustomProgressBarActivity extends BaseActivity {
 		});
 	}
 	
-private void downloading(CBProgressBar cbProgress){
-		
+	private void downloading(CBProgressBar cbProgress){
 	    new Thread(new Runnable() {
 			@Override
 			public void run() {
@@ -204,7 +207,7 @@ private void downloading(CBProgressBar cbProgress){
 						e.printStackTrace();
 					}
 					progress+=1;
-					msg.what= UPDATE_PROGRESS;
+					msg.what= UPDATE_CBPROGRESSBAR;
 					msg.arg1 = progress;
 					msg.sendToTarget();
 				}
@@ -212,6 +215,29 @@ private void downloading(CBProgressBar cbProgress){
 			}
 		}).start();
 		
+	}
+
+	private void initZYDownloading() {
+		zyDownloading = (ZYDownloading) findViewById(R.id.acd_zydownloading);
+        zyDownloading.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+			    if (!zyDownloading.isDownloading()) {
+                    zyDownloading.startDownload();
+				    new Timer().schedule(new TimerTask() {
+			            int i = 0;
+			            @Override
+			            public void run() {
+			            	runOnUiThread(new Runnable() {
+								public void run() {
+									zyDownloading.setProgress(++i);
+								}
+							});
+			            }
+			        }, 1500, 100);
+                }
+			}
+		});
 	}
 
 }

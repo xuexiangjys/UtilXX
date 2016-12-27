@@ -268,7 +268,7 @@ public class SnowView extends View {
 
                     break;
                 case MSG_INVALIDATE_VIEW:
-                	if (mSnowView != null) {
+                	if (mSnowView != null && mSnowView.get() != null) {
                 		mSnowView.get().postInvalidateOnAnimation();
                 		removeMessages(MSG_INVALIDATE_VIEW);
                         sendMessageDelayed(obtainMessage(MSG_INVALIDATE_VIEW), mSnowView.get().REFRESH_VIEW_INTERVAL);

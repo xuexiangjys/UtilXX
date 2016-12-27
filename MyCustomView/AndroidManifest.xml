@@ -51,6 +51,7 @@
         <activity android:name="com.example.mycustomview.custom.SlideMenuActivity"/>
         <activity android:name="com.example.mycustomview.custom.CalendarActivity"
              android:theme="@style/AppCompatTheme"/>
+        <activity android:name="com.example.mycustomview.custom.CityPickerActivity"/>
     </application>
 
 </manifest>
