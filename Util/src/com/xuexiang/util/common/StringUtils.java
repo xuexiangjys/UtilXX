@@ -19,6 +19,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Locale;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import android.text.TextUtils;
 
@@ -153,6 +155,50 @@ public final class StringUtils{
 		return sb.toString().substring(0,sb.toString().length()-1);
 	}
 	
+	/**
+	 * 过滤字符串中所有的特殊字符
+	 * @param str
+	 * @return
+	 */
+	public static String replaceSpecialCharacter(String str) {
+        String dest = "";
+        if (str != null) {
+        	String regEx="[`~!@#$%^&*()+=|{}':;',\\[\\].<>/?~！@#￥%……&*（）——+|{}【】‘；：”“’。，、？]"; 
+            Pattern p = Pattern.compile(regEx);
+            Matcher m = p.matcher(str);
+            dest = m.replaceAll("").trim();
+        }
+        return dest;
+    }
+	
+	/**
+	 * 过滤字符串中的[和]
+	 * @param str
+	 * @return
+	 */
+	public static String replaceBracket(String str) {
+        String dest = "";
+        if (str != null) {
+        	String regEx="[\\[\\]]"; 
+            Pattern p = Pattern.compile(regEx);
+            Matcher m = p.matcher(str);
+            dest = m.replaceAll("").trim();
+        }
+        return dest;
+    }
+	
+	/**
+	 * 截取字符串中[]中的内容，返回符合字符串的集合
+	 * "aaa[bbb|ccc|ddd]eee[ffff|ggg|hhh]iii" --> [bbb|ccc|ddd, ffff|ggg|hhh]
+	 */
+	public static List<String> matchStringbyBracket(String str) {
+        List<String> results = new ArrayList<String>();
+        while (str.indexOf("]") != -1) {
+			results.add(str.substring(str.indexOf("[") + 1 ,str.indexOf("]")));
+			str = str.substring(str.indexOf("]") + 1, str.length());
+		}
+        return results;
+	}
 	
 	/** 
 	 * Java文件操作 获取文件扩展名 

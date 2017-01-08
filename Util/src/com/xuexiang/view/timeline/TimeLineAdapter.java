@@ -32,7 +32,7 @@ public class TimeLineAdapter extends BaseContentAdapter<TimeItem> {
 	@Override
 	public View getConvertView(int position, View convertView, ViewGroup parent) {
 		ViewHolder holder = null;
-		TimeItem item = dataList.get(position);		
+		TimeItem item = mDataList.get(position);		
 		
 		if (convertView == null) {
 			convertView = mInflater.inflate(

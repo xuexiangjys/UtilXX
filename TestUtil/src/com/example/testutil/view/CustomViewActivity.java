@@ -2,6 +2,8 @@ package com.example.testutil.view;
 
 import android.graphics.Color;
 import android.os.Handler;
+import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.animation.BounceInterpolator;
@@ -23,6 +25,7 @@ import com.xuexiang.view.SlideSwitch;
 import com.xuexiang.view.SlideSwitch.SlideListener;
 import com.xuexiang.view.SmoothCheckBox;
 import com.xuexiang.view.StarBarView;
+import com.xuexiang.view.StepsView;
 import com.xuexiang.view.ThumbUpView;
 import com.xuexiang.view.ToggleButton;
 import com.xuexiang.view.ToggleButton.OnToggleChanged;
@@ -51,6 +54,10 @@ public class CustomViewActivity extends BaseActivity implements OnLikeListener{
 	      "Cupcake", "Donut", "Eclair", "Froyo", "Gingerbread", "Honeycomb", "Ice Cream Sandwich", "Jelly Bean", "KitKat",
 	      "Lollipop", "Marshmallow"
 	};
+	
+    private StepsView stepsView;
+    private Button btn_next, btn_back, btn_reset;
+    private float eventX = 0.0f;
 	@Override
 	public void onCreateActivity() {
 		setContentView(R.layout.activity_customview);
@@ -90,6 +97,8 @@ public class CustomViewActivity extends BaseActivity implements OnLikeListener{
 		initCompareIndicator();
 		
 		initRippleButton();
+		
+		initStepsView();
 	}
 
 	private void initAndroidSegmentedControlView() {
@@ -474,5 +483,58 @@ public class CustomViewActivity extends BaseActivity implements OnLikeListener{
             }
         });		
 	}
+	
+	private void initStepsView() {
+	    stepsView = (StepsView) findViewById(R.id.stepsView);
+        stepsView.setTitle(new String[]{"填写邮箱", "验证邮箱", "填写密码", "完善个人信息"});
+        btn_next = (Button) findViewById(R.id.btn_next);
+        btn_back = (Button) findViewById(R.id.btn_back);
+        btn_reset = (Button) findViewById(R.id.btn_reset);
+
+        btn_next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                stepsView.next();
+            }
+        });
+
+        btn_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                stepsView.back();
+            }
+        });
+
+        btn_reset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                stepsView.reset();
+            }
+        });		
+	}
+	
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        //获取手指在屏幕上的坐标
+        int action = event.getAction();
+        switch (action) {
+            case MotionEvent.ACTION_DOWN://按下
+                eventX = event.getX();
+                break;
+            case MotionEvent.ACTION_MOVE://移动
+                break;
+            case MotionEvent.ACTION_UP://松开
+                if (event.getX() - eventX > 0) {
+                    Log.e("sss", "右");
+                    stepsView.back();
+                } else if (event.getX() - eventX < 0) {
+                    Log.e("sss", "左");
+                    stepsView.next();
+                }
+                break;
+        }
+        return true;
+    }
+
 
 }

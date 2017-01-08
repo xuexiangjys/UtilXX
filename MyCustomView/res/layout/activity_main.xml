@@ -44,36 +44,66 @@
                 android:id="@+id/faboptions"
                 style="@style/CustomButtonStyle"
                 android:text="Faboptions Demo" />
-            
+
             <com.xuexiang.view.CustomTextView
                 android:id="@+id/pageslidingtab"
                 style="@style/CustomButtonStyle"
                 android:text="PageSlidingTab Demo" />
-            
+
             <com.xuexiang.view.CustomTextView
                 android:id="@+id/draglayoutexpand"
                 style="@style/CustomButtonStyle"
                 android:text="DraglayoutExpand Demo" />
-            
+
             <com.xuexiang.view.CustomTextView
                 android:id="@+id/snow"
                 style="@style/CustomButtonStyle"
                 android:text="Snow Demo" />
-            
+
             <com.xuexiang.view.CustomTextView
                 android:id="@+id/slidemenu"
                 style="@style/CustomButtonStyle"
                 android:text="SlideMenu Demo" />
-            
+
             <com.xuexiang.view.CustomTextView
                 android:id="@+id/calendar"
                 style="@style/CustomButtonStyle"
                 android:text="Calendar Demo" />
-            
+
             <com.xuexiang.view.CustomTextView
                 android:id="@+id/citypicker"
                 style="@style/CustomButtonStyle"
                 android:text="CityPicker Demo" />
+
+            <com.xuexiang.view.CustomTextView
+                android:id="@+id/bottomdialog"
+                style="@style/CustomButtonStyle"
+                android:text="BottomDialog Demo" />
+
+            <com.xuexiang.view.CustomTextView
+                android:id="@+id/floatingview"
+                style="@style/CustomButtonStyle"
+                android:text="FloatingView Demo" />
+
+            <com.xuexiang.view.CustomTextView
+                android:id="@+id/customview"
+                style="@style/CustomButtonStyle"
+                android:text="CustomView Demo" />
+
+            <com.xuexiang.view.CustomTextView
+                android:id="@+id/floatball"
+                style="@style/CustomButtonStyle"
+                android:text="FloatBall Demo" />
+            
+            <com.xuexiang.view.CustomTextView
+                android:id="@+id/labelview"
+                style="@style/CustomButtonStyle"
+                android:text="LabelView Demo" />
+            
+            <com.xuexiang.view.CustomTextView
+                android:id="@+id/marqueen"
+                style="@style/CustomButtonStyle"
+                android:text="Marqueen Demo" />
         </LinearLayout>
     </ScrollView>
 

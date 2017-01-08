@@ -19,7 +19,6 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup.LayoutParams;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -34,6 +33,7 @@ import com.xuexiang.util.data.sharedPreferences.UserSharePreferenceUtil;
 import com.xuexiang.util.resource.MResource;
 import com.xuexiang.util.resource.RUtils;
 import com.xuexiang.util.system.EditTextShakeHelper;
+import com.xuexiang.util.view.InputMethodUtils;
 import com.xuexiang.view.TitleBar;
 import com.xuexiang.view.popwindow.ActionItem;
 import com.xuexiang.view.popwindow.TitlePopup;
@@ -256,41 +256,12 @@ public abstract class BaseFragmentActivity extends FragmentActivity {
     /**-------------------------------------点击非输入区域键盘消失--------------------------------------------**/       
     @Override  
     public boolean dispatchTouchEvent(MotionEvent ev) {  
-        if (ev.getAction() == MotionEvent.ACTION_DOWN) {
+    	if (ev.getAction() == MotionEvent.ACTION_DOWN) {
             View v = getCurrentFocus();  
-            if (isShouldHideInput(v, ev)) {  
-                InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);  
-                if (imm != null) {  
-                    imm.hideSoftInputFromWindow(v.getWindowToken(), 0);  
-                }  
+            if (InputMethodUtils.isShouldHideInput(v, ev)) {  
+            	InputMethodUtils.hideKeyboard(v);
             }  
-            return super.dispatchTouchEvent(ev);  
         }  
-        // 必不可少，否则所有的组件都不会有TouchEvent了  
-        if (getWindow().superDispatchTouchEvent(ev)) {  
-            return true;  
-        }  
-        return onTouchEvent(ev);  
+    	return super.dispatchTouchEvent(ev);  
     }  
-    
-    public  boolean isShouldHideInput(View v, MotionEvent event) {  
-        if (v != null && (v instanceof EditText)) {  
-            int[] leftTop = { 0, 0 };  
-            //获取输入框当前的location位置  
-            v.getLocationInWindow(leftTop);  
-            int left = leftTop[0];  
-            int top = leftTop[1];  
-            int bottom = top + v.getHeight();  
-            int right = left + v.getWidth();  
-            if (event.getX() > left && event.getX() < right  
-                    && event.getY() > top && event.getY() < bottom) {  
-                // 点击的是输入框区域，保留点击EditText的事件  
-                return false;  
-            } else {  
-                return true;  
-            }  
-        }  
-        return false;  
-    }
-
 }

@@ -185,8 +185,19 @@ public final class RegUtils {
      * @return 是否是期望长度
      */
     public static boolean isLength(String data, int length) {
-
         return data != null && data.length() == length;
+    }
+    
+    /**
+     * url是否有效合法
+     * @param url
+     * 匹配 http://www.allkins.com | http://255.255.255.255 | http://allkins.com/page.asp?action=1
+     * 不匹配 http://test.testing
+     * @return
+     */
+    public static boolean isUrl(String url) {
+        String expr = "^(http|https|ftp)\\://(((25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])\\.){3}(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])|([a-zA-Z0-9_\\-\\.])+\\.(com|net|org|edu|int|mil|gov|arpa|biz|aero|name|coop|info|pro|museum|uk|me))((:[a-zA-Z0-9]*)?/?([a-zA-Z0-9\\-\\._\\?\\,\\'/\\\\\\+&%\\$#\\=~])*)$";
+        return url.matches(expr);
     }
     
 }

@@ -183,5 +183,51 @@
         <attr name="shouldExpand" format="boolean" />
         <attr name="pst_textAllCaps" format="boolean" />
     </declare-styleable>
+    <declare-styleable name="Rotate3dAnimation">
+        <attr name="rollType" format="enum">
+            <enum name="x" value="0" />
+            <enum name="y" value="1" />
+            <enum name="z" value="2" />
+        </attr>
+        <attr name="fromDeg" format="float" />
+        <attr name="toDeg" format="float" />
+        <attr name="pivotX" format="fraction" />
+        <attr name="pivotY" format="fraction" />
+    </declare-styleable>
+    
+    <declare-styleable name="LabelView">
+        <attr name="backgroundColor" format="color" />
+        <attr name="textTitleColor" format="color" />
+        <attr name="textContentColor" format="color" />
+        <attr name="textTitle" format="string" />
+        <attr name="textContent" format="string" />
+        <attr name="textTitleSize" format="dimension" />
+        <attr name="textContentSize" format="dimension" />
+        <attr name="labelTopPadding" format="dimension" />
+        <attr name="labelCenterPadding" format="dimension" />
+        <attr name="labelBottomPadding" format="dimension" />
+        <attr name="labelTopDistance" format="dimension" />
+        <attr name="textTitleStyle">
+            <enum name="normal" value="0" />
+            <enum name="italic" value="1" />
+            <enum name="bold" value="2" />
+        </attr>
+        <attr name="textContentStyle">
+            <enum name="normal" value="0" />
+            <enum name="italic" value="1" />
+            <enum name="bold" value="2" />
+        </attr>
+        <attr name="direction">
+            <enum name="leftTop" value="-45" />
+            <enum name="rightTop" value="45" />
+        </attr>
+    </declare-styleable>
+    
+    <declare-styleable name="MarqueeView">
+        <attr name="marqueeInterval" format="integer" />
+        <attr name="marqueeAnimDuration" format="integer" />
+        <attr name="marqueeAnimIn" format="reference" />
+        <attr name="marqueeAnimOut" format="reference" />
+    </declare-styleable>
 
 </resources>

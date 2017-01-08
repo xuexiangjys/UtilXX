@@ -20,30 +20,12 @@ public class PatientAdapter extends BaseContentAdapter<Patient> {
 
 	private  DatabaseService<Patient> mDatabaseService;
 	public void setData(List<Patient> data) {
-		dataList = data;
+		mDataList = data;
 		notifyDataSetChanged();
 	}
 	public PatientAdapter(Context context,List<Patient> list,DatabaseService<Patient> databaseService) {
 		super(context, list);
 		mDatabaseService = databaseService;
-	}
-	
-	@Override
-	public int getCount() {
-		
-		return dataList.size();
-	}
-
-	@Override
-	public Patient getItem(int position) {
-		
-		return dataList.get(position);
-	}
-
-	@Override
-	public long getItemId(int position) {
-		
-		return position;
 	}
 
 	@Override
@@ -94,7 +76,7 @@ public class PatientAdapter extends BaseContentAdapter<Patient> {
 		map.put("id", p.getId()+"");
 		p.setName("hhaha");
 		mDatabaseService.update(p, map);
-		dataList = mDatabaseService.getObjectsByWhere(null);
+		mDataList = mDatabaseService.getObjectsByWhere(null);
 	    notifyDataSetChanged();
 	}
 
@@ -105,7 +87,7 @@ public class PatientAdapter extends BaseContentAdapter<Patient> {
 //		map.put("id", p.getId()+"");
 //		mDatabaseService.delete(map);
 		mDatabaseService.delete(p);
-		dataList = mDatabaseService.getObjectsByWhere(null);
+		mDataList = mDatabaseService.getObjectsByWhere(null);
 	    notifyDataSetChanged();
 	}
 	

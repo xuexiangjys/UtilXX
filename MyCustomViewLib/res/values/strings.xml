@@ -12,4 +12,8 @@
     <string name="nothing_found">没有搜索结果~</string>
     <string name="locating">正在定位…</string>
     <string name="located_failed">定位失败</string>
+    
+    <string name="loading">请稍后...</string>
+    
+    <string name="accessibility">开启悬浮球辅助功能</string>
 </resources>

@@ -20,7 +20,7 @@ public class AutoDataAdapter extends BaseContentAdapter<Student> {
 
 	private  AutoDBService<Student> mDatabaseService;
 	public void setData(List<Student> data) {
-		dataList = data;
+		mDataList = data;
 		notifyDataSetChanged();
 	}
 	public AutoDataAdapter(Context context, List<Student> list, AutoDBService<Student> databaseService) {
@@ -87,14 +87,14 @@ public class AutoDataAdapter extends BaseContentAdapter<Student> {
 		student.setAge(19);
 		student.setSex("女");
 		mDatabaseService.updateData(student);
-		dataList = mDatabaseService.queryAllData();
+		mDataList = mDatabaseService.queryAllData();
 	    notifyDataSetChanged();
 	}
 
 	public void delete(int position) throws IOException, SQLException {		
 		Student student = getItem(position);
 		mDatabaseService.deleteData(student);
-		dataList = mDatabaseService.queryAllData();	
+		mDataList = mDatabaseService.queryAllData();	
 	    notifyDataSetChanged();
 	}
 	

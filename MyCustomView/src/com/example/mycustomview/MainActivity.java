@@ -4,11 +4,17 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 
+import com.example.mycustomview.custom.BottomDialogActivity;
 import com.example.mycustomview.custom.CalendarActivity;
 import com.example.mycustomview.custom.CircleMenuActivity;
 import com.example.mycustomview.custom.CityPickerActivity;
+import com.example.mycustomview.custom.CustomViewActivity;
 import com.example.mycustomview.custom.DraglayoutExpandActivity;
 import com.example.mycustomview.custom.FaboptionsActivity;
+import com.example.mycustomview.custom.FloatBallActivity;
+import com.example.mycustomview.custom.FloatingViewActivity;
+import com.example.mycustomview.custom.LabelActivity;
+import com.example.mycustomview.custom.MarqueenActivity;
 import com.example.mycustomview.custom.SlideMenuActivity;
 import com.example.mycustomview.custom.SnowActivity;
 import com.example.mycustomview.custom.StateButtonActivity;
@@ -77,6 +83,30 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 		case R.id.citypicker:
 			mToastUtil.showToast("点击了CityPickerActivity");
 			startActivity(CityPickerActivity.class);
+			break;
+		case R.id.bottomdialog:
+			mToastUtil.showToast("点击了BottomDialogActivity");
+			startActivity(BottomDialogActivity.class);
+			break;
+		case R.id.floatingview:
+			mToastUtil.showToast("点击了FloatingViewActivity");
+			startActivity(FloatingViewActivity.class);
+			break;
+		case R.id.customview:
+			mToastUtil.showToast("点击了CustomViewActivity");
+			startActivity(CustomViewActivity.class);
+			break;
+		case R.id.floatball:
+			mToastUtil.showToast("点击了FloatBallActivity");
+			startActivity(FloatBallActivity.class);
+			break;
+		case R.id.labelview:
+			mToastUtil.showToast("点击了LabelActivity");
+			startActivity(LabelActivity.class);
+			break;
+		case R.id.marqueen:
+			mToastUtil.showToast("点击了MarqueenActivity");
+			startActivity(MarqueenActivity.class);
 			break;
 
 		default:

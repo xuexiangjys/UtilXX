@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.xuexiang.view.TitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    
+    <com.xuexiang.view.marqueen.MarqueeView
+        android:id="@+id/marqueeView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="#88dddddd" />
+
+    <com.xuexiang.view.marqueen.MarqueeView
+        android:id="@+id/marqueeView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="#88dddddd"
+        app:marqueeAnimDuration="2000"
+        app:marqueeAnimIn="@anim/marquee_right_in"
+        app:marqueeAnimOut="@anim/marquee_left_out"
+        app:marqueeInterval="2500" />
+
+    <com.xuexiang.view.marqueen.MarqueeView
+        android:id="@+id/marqueeView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="#88dddddd" />
+
+    <com.xuexiang.view.marqueen.MarqueeView
+        android:id="@+id/marqueeView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="#88dddddd" />
+
+    <com.xuexiang.view.marqueen.MarqueeView
+        android:id="@+id/marqueeView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="#88dddddd" />
+
+</LinearLayout>

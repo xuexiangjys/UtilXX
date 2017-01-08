@@ -461,7 +461,6 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
                 android:orientation="horizontal" >
 
                 <com.xuexiang.view.LikeButton.LikeButton
@@ -597,7 +596,39 @@
                 android:text="SEND"
                 android:textColor="@color/white"
                 android:textSize="18dp" />
-            
+
+            <com.xuexiang.view.StepsView
+                android:id="@+id/stepsView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/btn_next"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="下一步" />
+
+                <Button
+                    android:id="@+id/btn_reset"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="重置" />
+
+                <Button
+                    android:id="@+id/btn_back"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="上一步" />
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 

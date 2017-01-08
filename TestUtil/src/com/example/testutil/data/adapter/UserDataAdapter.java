@@ -25,27 +25,12 @@ public class UserDataAdapter extends  BaseContentAdapter<User>{
 	private  DatabaseService<User> mDatabaseService;
 	
 	public void setData(List<User> data) {
-		dataList = data;
+		mDataList = data;
 		notifyDataSetChanged();
 	}
 	public UserDataAdapter(Context context,List<User> list,DatabaseService<User> databaseService) {
 		super(context, list);
 		mDatabaseService = databaseService;
-	}
-
-	@Override
-	public int getCount() {
-		return dataList.size();
-	}
-
-	@Override
-	public User getItem(int position) {
-		return dataList.get(position);
-	}
-
-	@Override
-	public long getItemId(int position) {
-		return position;
 	}
 	
 	@Override
@@ -82,7 +67,7 @@ public class UserDataAdapter extends  BaseContentAdapter<User>{
 		map.put("id", user.getId().toString());
 		mDatabaseService.delete(map);*/
 		mDatabaseService.delete(user);
-		dataList = mDatabaseService.getObjectsByWhere(null);
+		mDataList = mDatabaseService.getObjectsByWhere(null);
 	    notifyDataSetChanged();
 	}
 

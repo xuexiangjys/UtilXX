@@ -17,6 +17,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.xuexiang.app.BaseApplication;
+import com.xuexiang.util.common.ToastUtil;
 import com.xuexiang.util.data.sharedPreferences.SettingSharePreferenceUtil;
 import com.xuexiang.util.resource.RUtils;
 import com.xuexiang.util.system.EditTextShakeHelper;
@@ -285,6 +286,19 @@ public class ActivityUtil {
 	 */
 	public static void runOnUIThread(Runnable r){
 		BaseApplication.getAppHandler().post(r);
+	}
+	
+	/**
+	 * 在主线程中Toast
+	 * @param msg
+	 */
+	public static void toastOnUIThread(final String msg){
+		BaseApplication.getAppHandler().post(new Runnable() {
+			@Override
+			public void run() {
+				ToastUtil.getInstance(BaseApplication.getContext()).showToast(msg);
+			}
+		});
 	}
 	
 	/**

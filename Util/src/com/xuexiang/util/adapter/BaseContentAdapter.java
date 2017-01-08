@@ -9,64 +9,86 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.Toast;
+
+import com.xuexiang.util.app.ActivityUtil;
 
 /**
  * 基类适配器
+ * 
  * @author xx
  * @param <T>
- * TODO
  */
 
-public abstract class BaseContentAdapter<T> extends BaseAdapter{
+public abstract class BaseContentAdapter<T> extends BaseAdapter {
 
 	protected Context mContext;
-	protected List<T> dataList ;
+	protected List<T> mDataList;
 	protected LayoutInflater mInflater;
-	
-	
-	
+
 	public List<T> getDataList() {
-		return dataList;
+		return mDataList;
 	}
 
 	public void setDataList(List<T> dataList) {
-		this.dataList = dataList;
+		if (dataList != null) {
+			mDataList = dataList;
+			notifyDataSetChanged();
+		}
 	}
 
-	public BaseContentAdapter(Context context,List<T> list){
-		mContext = context;
-		dataList = list;
+	public BaseContentAdapter(Context context, List<T> list) {
+		mContext = context.getApplicationContext();
 		mInflater = LayoutInflater.from(mContext);
+		mDataList = list;
 	}
-	
+
 	@Override
 	public int getCount() {
-		// TODO Auto-generated method stub
-		return dataList.size();
+		return mDataList == null ? 0 : mDataList.size();
 	}
 
 	@Override
 	public T getItem(int position) {
-		// TODO Auto-generated method stub
-		return dataList.get(position);
+		return mDataList == null ? null : mDataList.get(position);
 	}
 
 	@Override
 	public long getItemId(int position) {
-		// TODO Auto-generated method stub
 		return position;
 	}
-
-	@Override
-	public View getView(int position, View convertView, ViewGroup parent) {
-		// TODO Auto-generated method stub
-		
-		return getConvertView(position,convertView,parent);
+	
+	public boolean existsData(){
+		return mDataList != null && mDataList.size() > 0;
 	}
 	
+	public void clear() {
+		if (existsData()) {
+			mDataList.clear();
+		}
+	}
+
+	public void add(int position, T item) {
+		if (item != null) {
+			mDataList.add(position, item);
+		}
+	}
+	
+	public void add(T item) {
+		if (item != null) {
+			mDataList.add(item);
+		}
+	}
+	
+	@Override
+	public View getView(int position, View convertView, ViewGroup parent) {
+		return getConvertView(position, convertView, parent);
+	}
+
 	public abstract View getConvertView(int position, View convertView, ViewGroup parent);
 
+	public void Toast(String msg) {
+		ActivityUtil.toastOnUIThread(msg);
+	}
 	
 	/**
 	 * 根据分隔符将String转换为List
@@ -90,12 +112,9 @@ public abstract class BaseContentAdapter<T> extends BaseAdapter{
 		StringBuilder sb = new StringBuilder();    
 		for (int i = 0; i < list.size(); i++) {        
 			sb.append(list.get(i)).append(separator);    
-			}    
+		}    
 		return sb.toString().substring(0,sb.toString().length()-1);
 	}
-
-	
-	public void Toast(CharSequence hint){
-	    Toast.makeText(mContext, hint , Toast.LENGTH_SHORT).show();
-	}
 }
+	
+	
