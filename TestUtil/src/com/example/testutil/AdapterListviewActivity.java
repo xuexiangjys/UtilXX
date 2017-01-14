@@ -1,45 +1,26 @@
 package com.example.testutil;
 
-import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.List;
 
-import android.app.ListActivity;
 import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
 
 import com.example.testutil.adapter.MultiAdapterActivity;
 import com.example.testutil.adapter.SimpleAdapterActivity;
+import com.xuexiang.app.ActivityItem;
+import com.xuexiang.app.ListSampleActivity;
 
-public class AdapterListviewActivity extends ListActivity
-{
-
+public class AdapterListviewActivity extends ListSampleActivity {
 	@Override
-	protected void onCreate(Bundle savedInstanceState)
-	{
-		super.onCreate(savedInstanceState);
-
-		getListView().setAdapter(
-				new ArrayAdapter<String>(this,
-						android.R.layout.simple_list_item_1, Arrays.asList(
-								"Simple Adapter Text", "MultiItemStyleText")));
+	protected List<ActivityItem> initSampleActivityData() {
+		List<ActivityItem> list = new ArrayList<ActivityItem>();
+		list.add(new ActivityItem("Simple Adapter Text", SimpleAdapterActivity.class));
+		list.add(new ActivityItem("MultiItemStyleText", MultiAdapterActivity.class));
+		return list;
 	}
 
 	@Override
-	protected void onListItemClick(ListView l, View v, int position, long id)
-	{
-		Intent intent = null;
-		switch (position)
-		{
-		case 0:
-			intent = new Intent(this, SimpleAdapterActivity.class);
-			break;
-		case 1:
-			intent = new Intent(this, MultiAdapterActivity.class);
-			break;
-		}
-		if (intent != null)
-			startActivity(intent);
+	protected void startActivityForSample(Intent intent) {
+		startActivity(intent);
 	}
 }

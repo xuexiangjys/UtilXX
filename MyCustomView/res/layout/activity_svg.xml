@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <com.xuexiang.view.TitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <com.xuexiang.view.CustomTextView
+            android:id="@+id/view1"
+            style="@style/CustomButtonStyle"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="view1" />
+
+        <com.xuexiang.view.CustomTextView
+            android:id="@+id/view2"
+            style="@style/CustomButtonStyle"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="view2" />
+
+        <com.xuexiang.view.CustomTextView
+            android:id="@+id/view3"
+            style="@style/CustomButtonStyle"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="view3" />
+
+        <com.xuexiang.view.CustomTextView
+            android:id="@+id/view4"
+            style="@style/CustomButtonStyle"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="view4" />
+
+        <com.xuexiang.view.CustomTextView
+            android:id="@+id/view5"
+            style="@style/CustomButtonStyle"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="view5" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <com.xuexiang.view.CustomTextView
+            android:id="@+id/view6"
+            style="@style/CustomButtonStyle"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="view6" />
+
+        <com.xuexiang.view.CustomTextView
+            android:id="@+id/view7"
+            style="@style/CustomButtonStyle"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="view7" />
+
+        <com.xuexiang.view.CustomTextView
+            android:id="@+id/view8"
+            style="@style/CustomButtonStyle"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="view8" />
+
+        <com.xuexiang.view.CustomTextView
+            android:id="@+id/view9"
+            style="@style/CustomButtonStyle"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="view9" />
+
+        <com.xuexiang.view.CustomTextView
+            android:id="@+id/view10"
+            style="@style/CustomButtonStyle"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="view10" />
+    </LinearLayout>
+
+    <com.xuexiang.view.pathanim.PathAnimView
+        android:id="@+id/storeView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/cube_holo_purple"
+        android:padding="5dp" />
+
+</LinearLayout>

@@ -33,8 +33,7 @@ import static com.xuexiang.util.adapter.baseadapterhelper.BaseAdapterHelper.get;
  *            The type of the items in the list.
  */
 public abstract class QuickAdapter<T> extends
-		BaseQuickAdapter<T, BaseAdapterHelper>
-{
+		BaseQuickAdapter<T, BaseAdapterHelper> {
 
 	/**
 	 * Create a QuickAdapter.
@@ -44,8 +43,7 @@ public abstract class QuickAdapter<T> extends
 	 * @param layoutResId
 	 *            The layout resource id of each item.
 	 */
-	public QuickAdapter(Context context, int layoutResId)
-	{
+	public QuickAdapter(Context context, int layoutResId) {
 		super(context, layoutResId);
 	}
 
@@ -60,31 +58,26 @@ public abstract class QuickAdapter<T> extends
 	 * @param data
 	 *            A new list is created out of this one to avoid mutable list
 	 */
-	public QuickAdapter(Context context, int layoutResId, List<T> data)
-	{
+	public QuickAdapter(Context context, int layoutResId, List<T> data) {
 		super(context, layoutResId, data);
 	}
 
 	public QuickAdapter(Context context, ArrayList<T> data,
-			MultiItemTypeSupport<T> multiItemSupport)
-	{
+			MultiItemTypeSupport<T> multiItemSupport) {
 		super(context, data, multiItemSupport);
 	}
 
 	protected BaseAdapterHelper getAdapterHelper(int position,
-			View convertView, ViewGroup parent)
-	{
+			View convertView, ViewGroup parent) {
 
-		if (mMultiItemSupport != null)
-		{
+		if (mMultiItemSupport != null) {
 			return get(
 					mContext,
 					convertView,
 					parent,
 					mMultiItemSupport.getLayoutId(position, mData.get(position)),
 					position);
-		} else
-		{
+		} else {
 			return get(mContext, convertView, parent, mLayoutResId, position);
 		}
 	}

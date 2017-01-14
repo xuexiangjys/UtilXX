@@ -1,5 +1,7 @@
 package com.xuexiang.util.data.sharedPreferences;
 
+import java.util.Map;
+
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.preference.ListPreference;
@@ -15,6 +17,7 @@ public class BaseSharedPreferencesUtil {
 	public SharedPreferences mSharedPreferences;
 	public Context mContext;
 	
+	//=======================================初始化构造==================================================//
 	/**
 	 * 获取自定义的SharedPreferences
 	 * @param context
@@ -36,7 +39,7 @@ public class BaseSharedPreferencesUtil {
 	    mEditor = mSharedPreferences.edit();
 	}
 	
-	
+	//=======================================键值保存==================================================//
 	/**
 	 * 自定义sharedpreferences设置boolean值
 	 * @param key
@@ -87,22 +90,29 @@ public class BaseSharedPreferencesUtil {
 	    mEditor.commit();  
 	}
 	
+   /**
+    * 保存数据的方法，我们需要拿到保存数据的具体类型，然后根据类型调用不同的保存方法
+    * @param key
+    * @param object
+    */
+	public void put(String key, Object object) {
+        if (object instanceof String) {
+        	mEditor.putString(key, (String) object);
+        } else if (object instanceof Integer) {
+        	mEditor.putInt(key, (Integer) object);
+        } else if (object instanceof Boolean) {
+        	mEditor.putBoolean(key, (Boolean) object);
+        } else if (object instanceof Float) {
+        	mEditor.putFloat(key, (Float) object);
+        } else if (object instanceof Long) {
+        	mEditor.putLong(key, (Long) object);
+        } else {
+        	mEditor.putString(key, object.toString());
+        }
+        mEditor.commit();  
+    }
 
-	public void remove(String key) {
-		mEditor.remove(key);
-	    mEditor.commit();  
-	}	
-	
-	/**
-	 * 清空销毁
-	 */
-	public void clear() {
-		mEditor.clear();
-    	mEditor.commit();
-	}
-
-/*****************************************************************************************************************************************************************/
-	
+	//=======================================键值获取==================================================//
 	/**
 	 * 根据key获取boolean值
 	 * @param key
@@ -153,7 +163,61 @@ public class BaseSharedPreferencesUtil {
 		return mSharedPreferences.getInt(key, defValue);
 	}
 	
-	
+	/**
+     * 得到保存数据的方法，我们根据默认值得到保存的数据的具体类型，然后调用相对于的方法获取值
+     *
+     * @param key
+     * @param defaultObject
+     * @return
+     */
+    public Object get(String key, Object defaultObject) {
+        if (defaultObject instanceof String) {
+            return mSharedPreferences.getString(key, (String) defaultObject);
+        } else if (defaultObject instanceof Integer) {
+            return mSharedPreferences.getInt(key, (Integer) defaultObject);
+        } else if (defaultObject instanceof Boolean) {
+            return mSharedPreferences.getBoolean(key, (Boolean) defaultObject);
+        } else if (defaultObject instanceof Float) {
+            return mSharedPreferences.getFloat(key, (Float) defaultObject);
+        } else if (defaultObject instanceof Long) {
+            return mSharedPreferences.getLong(key, (Long) defaultObject);
+        }
+        return null;
+    }
+    
+  //=======================================公共方法==================================================//
+    /**
+     * 查询某个key是否已经存在
+     * @param key
+     * @return
+     */
+    public boolean contains(String key) {
+        return mSharedPreferences.contains(key);
+    }
+    
+    /**
+     * 返回所有的键值对
+     *
+     * @param context
+     * @return
+     */
+    public Map<String, ?> getAll() {
+        return mSharedPreferences.getAll();
+    }
+    
+    public void remove(String key) {
+		mEditor.remove(key);
+	    mEditor.commit();  
+	}	
+    
+	/**
+	 * 清空销毁
+	 */
+	public void clear() {
+		mEditor.clear();
+    	mEditor.commit();
+	}
+    
 	/**
 	 * 根据资源id获取String值
 	 * @param resourceid 资源id

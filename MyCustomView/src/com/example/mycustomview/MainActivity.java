@@ -4,6 +4,8 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 
+import com.example.mycustomview.custom.AddressPickerActivity;
+import com.example.mycustomview.custom.AddressWheelActivity;
 import com.example.mycustomview.custom.BottomDialogActivity;
 import com.example.mycustomview.custom.CalendarActivity;
 import com.example.mycustomview.custom.CircleMenuActivity;
@@ -14,6 +16,7 @@ import com.example.mycustomview.custom.FaboptionsActivity;
 import com.example.mycustomview.custom.FloatBallActivity;
 import com.example.mycustomview.custom.FloatingViewActivity;
 import com.example.mycustomview.custom.LabelActivity;
+import com.example.mycustomview.custom.LoadingLayoutActivity;
 import com.example.mycustomview.custom.MarqueenActivity;
 import com.example.mycustomview.custom.SlideMenuActivity;
 import com.example.mycustomview.custom.SnowActivity;
@@ -21,6 +24,7 @@ import com.example.mycustomview.custom.StateButtonActivity;
 import com.example.mycustomview.custom.WebViewMainActivity;
 import com.example.mycustomview.jptabbar.JpTabbarActivity;
 import com.example.mycustomview.pageslidingtab.ui.activity.PageSlidingTabActivity;
+import com.example.mycustomview.pathanim.PathAnimActivity;
 import com.xuexiang.app.BaseActivity;
 
 public class MainActivity extends BaseActivity implements OnClickListener {
@@ -107,6 +111,22 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 		case R.id.marqueen:
 			mToastUtil.showToast("点击了MarqueenActivity");
 			startActivity(MarqueenActivity.class);
+			break;
+		case R.id.addresspicker:
+			mToastUtil.showToast("点击了AddressPickerActivity");
+			startActivity(AddressPickerActivity.class);
+			break;
+		case R.id.addresswheel:
+			mToastUtil.showToast("点击了AddressWheelActivity");
+			startActivity(AddressWheelActivity.class);
+			break;
+		case R.id.loadinglayout:
+			mToastUtil.showToast("点击了LoadingLayoutActivity");
+			startActivity(LoadingLayoutActivity.class);
+			break;
+		case R.id.pathanim:
+			mToastUtil.showToast("点击了PathAnimActivity");
+			startActivity(PathAnimActivity.class);
 			break;
 
 		default:

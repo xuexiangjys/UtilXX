@@ -46,8 +46,7 @@ import com.squareup.picasso.RequestCreator;
  * 		.setText(R.id.tvNumbers, contact.getNumbers().toString()).getView();
  * </pre>
  */
-public class BaseAdapterHelper
-{
+public class BaseAdapterHelper {
 
 	/** Views indexed with their IDs */
 	private final SparseArray<View> mViews;
@@ -67,8 +66,7 @@ public class BaseAdapterHelper
 	Object associatedObject;
 
 	protected BaseAdapterHelper(Context context, ViewGroup parent,
-			int layoutId, int position)
-	{
+			int layoutId, int position) {
 		this.mContext = context;
 		this.mPosition = position;
 		this.mLayoutId = layoutId;
@@ -90,17 +88,14 @@ public class BaseAdapterHelper
 	 * @return A BaseAdapterHelper instance.
 	 */
 	public static BaseAdapterHelper get(Context context, View convertView,
-			ViewGroup parent, int layoutId)
-	{
+			ViewGroup parent, int layoutId) {
 		return get(context, convertView, parent, layoutId, -1);
 	}
 
 	/** This method is package private and should only be used by QuickAdapter. */
 	static BaseAdapterHelper get(Context context, View convertView,
-			ViewGroup parent, int layoutId, int position)
-	{
-		if (convertView == null)
-		{
+			ViewGroup parent, int layoutId, int position) {
+		if (convertView == null) {
 			return new BaseAdapterHelper(context, parent, layoutId, position);
 		}
 
@@ -108,8 +103,7 @@ public class BaseAdapterHelper
 		BaseAdapterHelper existingHelper = (BaseAdapterHelper) convertView
 				.getTag();
 
-		if (existingHelper.mLayoutId != layoutId)
-		{
+		if (existingHelper.mLayoutId != layoutId) {
 			return new BaseAdapterHelper(context, parent, layoutId, position);
 		}
 
@@ -126,17 +120,14 @@ public class BaseAdapterHelper
 	 * @param viewId
 	 *            The id of the view you want to retrieve.
 	 */
-	public <T extends View> T getView(int viewId)
-	{
+	public <T extends View> T getView(int viewId) {
 		return retrieveView(viewId);
 	}
 
 	@SuppressWarnings("unchecked")
-	protected <T extends View> T retrieveView(int viewId)
-	{
+	protected <T extends View> T retrieveView(int viewId) {
 		View view = mViews.get(viewId);
-		if (view == null)
-		{
+		if (view == null) {
 			view = mConvertView.findViewById(viewId);
 			mViews.put(viewId, view);
 		}
@@ -152,8 +143,7 @@ public class BaseAdapterHelper
 	 *            The text to put in the text view.
 	 * @return The BaseAdapterHelper for chaining.
 	 */
-	public BaseAdapterHelper setText(int viewId, String value)
-	{
+	public BaseAdapterHelper setText(int viewId, String value) {
 		TextView view = retrieveView(viewId);
 		view.setText(value);
 		return this;
@@ -168,8 +158,7 @@ public class BaseAdapterHelper
 	 *            The image resource id.
 	 * @return The BaseAdapterHelper for chaining.
 	 */
-	public BaseAdapterHelper setImageResource(int viewId, int imageResId)
-	{
+	public BaseAdapterHelper setImageResource(int viewId, int imageResId) {
 		ImageView view = retrieveView(viewId);
 		view.setImageResource(imageResId);
 		return this;
@@ -184,8 +173,7 @@ public class BaseAdapterHelper
 	 *            A color, not a resource id.
 	 * @return The BaseAdapterHelper for chaining.
 	 */
-	public BaseAdapterHelper setBackgroundColor(int viewId, int color)
-	{
+	public BaseAdapterHelper setBackgroundColor(int viewId, int color) {
 		View view = retrieveView(viewId);
 		view.setBackgroundColor(color);
 		return this;
@@ -200,8 +188,7 @@ public class BaseAdapterHelper
 	 *            A resource to use as a background.
 	 * @return The BaseAdapterHelper for chaining.
 	 */
-	public BaseAdapterHelper setBackgroundRes(int viewId, int backgroundRes)
-	{
+	public BaseAdapterHelper setBackgroundRes(int viewId, int backgroundRes) {
 		View view = retrieveView(viewId);
 		view.setBackgroundResource(backgroundRes);
 		return this;
@@ -216,8 +203,7 @@ public class BaseAdapterHelper
 	 *            The text color (not a resource id).
 	 * @return The BaseAdapterHelper for chaining.
 	 */
-	public BaseAdapterHelper setTextColor(int viewId, int textColor)
-	{
+	public BaseAdapterHelper setTextColor(int viewId, int textColor) {
 		TextView view = retrieveView(viewId);
 		view.setTextColor(textColor);
 		return this;
@@ -232,8 +218,7 @@ public class BaseAdapterHelper
 	 *            The text color resource id.
 	 * @return The BaseAdapterHelper for chaining.
 	 */
-	public BaseAdapterHelper setTextColorRes(int viewId, int textColorRes)
-	{
+	public BaseAdapterHelper setTextColorRes(int viewId, int textColorRes) {
 		TextView view = retrieveView(viewId);
 		view.setTextColor(mContext.getResources().getColor(textColorRes));
 		return this;
@@ -248,8 +233,7 @@ public class BaseAdapterHelper
 	 *            The image drawable.
 	 * @return The BaseAdapterHelper for chaining.
 	 */
-	public BaseAdapterHelper setImageDrawable(int viewId, Drawable drawable)
-	{
+	public BaseAdapterHelper setImageDrawable(int viewId, Drawable drawable) {
 		ImageView view = retrieveView(viewId);
 		view.setImageDrawable(drawable);
 		return this;
@@ -269,8 +253,7 @@ public class BaseAdapterHelper
 	 *            The image URL.
 	 * @return The BaseAdapterHelper for chaining.
 	 */
-	public BaseAdapterHelper setImageUrl(int viewId, String imageUrl)
-	{
+	public BaseAdapterHelper setImageUrl(int viewId, String imageUrl) {
 		ImageView view = retrieveView(viewId);
 		Picasso.with(mContext).load(imageUrl).into(view);
 		return this;
@@ -287,8 +270,7 @@ public class BaseAdapterHelper
 	 * @return The BaseAdapterHelper for chaining.
 	 */
 	public BaseAdapterHelper setImageBuilder(int viewId,
-			RequestCreator requestBuilder)
-	{
+			RequestCreator requestBuilder) {
 		ImageView view = retrieveView(viewId);
 		requestBuilder.into(view);
 		return this;
@@ -298,8 +280,7 @@ public class BaseAdapterHelper
 	 * Add an action to set the image of an image view. Can be called multiple
 	 * times.
 	 */
-	public BaseAdapterHelper setImageBitmap(int viewId, Bitmap bitmap)
-	{
+	public BaseAdapterHelper setImageBitmap(int viewId, Bitmap bitmap) {
 		ImageView view = retrieveView(viewId);
 		view.setImageBitmap(bitmap);
 		return this;
@@ -310,13 +291,10 @@ public class BaseAdapterHelper
 	 * Alpha between 0-1.
 	 */
 	@SuppressLint("NewApi")
-	public BaseAdapterHelper setAlpha(int viewId, float value)
-	{
-		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB)
-		{
+	public BaseAdapterHelper setAlpha(int viewId, float value) {
+		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
 			retrieveView(viewId).setAlpha(value);
-		} else
-		{
+		} else {
 			// Pre-honeycomb hack to set Alpha value
 			AlphaAnimation alpha = new AlphaAnimation(value, value);
 			alpha.setDuration(0);
@@ -335,8 +313,7 @@ public class BaseAdapterHelper
 	 *            True for VISIBLE, false for GONE.
 	 * @return The BaseAdapterHelper for chaining.
 	 */
-	public BaseAdapterHelper setVisible(int viewId, boolean visible)
-	{
+	public BaseAdapterHelper setVisible(int viewId, boolean visible) {
 		View view = retrieveView(viewId);
 		view.setVisibility(visible ? View.VISIBLE : View.GONE);
 		return this;
@@ -349,16 +326,14 @@ public class BaseAdapterHelper
 	 *            The id of the TextView to linkify.
 	 * @return The BaseAdapterHelper for chaining.
 	 */
-	public BaseAdapterHelper linkify(int viewId)
-	{
+	public BaseAdapterHelper linkify(int viewId) {
 		TextView view = retrieveView(viewId);
 		Linkify.addLinks(view, Linkify.ALL);
 		return this;
 	}
 
 	/** Apply the typeface to the given viewId, and enable subpixel rendering. */
-	public BaseAdapterHelper setTypeface(int viewId, Typeface typeface)
-	{
+	public BaseAdapterHelper setTypeface(int viewId, Typeface typeface) {
 		TextView view = retrieveView(viewId);
 		view.setTypeface(typeface);
 		view.setPaintFlags(view.getPaintFlags() | Paint.SUBPIXEL_TEXT_FLAG);
@@ -369,10 +344,8 @@ public class BaseAdapterHelper
 	 * Apply the typeface to all the given viewIds, and enable subpixel
 	 * rendering.
 	 */
-	public BaseAdapterHelper setTypeface(Typeface typeface, int... viewIds)
-	{
-		for (int viewId : viewIds)
-		{
+	public BaseAdapterHelper setTypeface(Typeface typeface, int... viewIds) {
+		for (int viewId : viewIds) {
 			TextView view = retrieveView(viewId);
 			view.setTypeface(typeface);
 			view.setPaintFlags(view.getPaintFlags() | Paint.SUBPIXEL_TEXT_FLAG);
@@ -389,8 +362,7 @@ public class BaseAdapterHelper
 	 *            The progress.
 	 * @return The BaseAdapterHelper for chaining.
 	 */
-	public BaseAdapterHelper setProgress(int viewId, int progress)
-	{
+	public BaseAdapterHelper setProgress(int viewId, int progress) {
 		ProgressBar view = retrieveView(viewId);
 		view.setProgress(progress);
 		return this;
@@ -407,8 +379,7 @@ public class BaseAdapterHelper
 	 *            The max value of a ProgressBar.
 	 * @return The BaseAdapterHelper for chaining.
 	 */
-	public BaseAdapterHelper setProgress(int viewId, int progress, int max)
-	{
+	public BaseAdapterHelper setProgress(int viewId, int progress, int max) {
 		ProgressBar view = retrieveView(viewId);
 		view.setMax(max);
 		view.setProgress(progress);
@@ -424,8 +395,7 @@ public class BaseAdapterHelper
 	 *            The max value of a ProgressBar.
 	 * @return The BaseAdapterHelper for chaining.
 	 */
-	public BaseAdapterHelper setMax(int viewId, int max)
-	{
+	public BaseAdapterHelper setMax(int viewId, int max) {
 		ProgressBar view = retrieveView(viewId);
 		view.setMax(max);
 		return this;
@@ -440,8 +410,7 @@ public class BaseAdapterHelper
 	 *            The rating.
 	 * @return The BaseAdapterHelper for chaining.
 	 */
-	public BaseAdapterHelper setRating(int viewId, float rating)
-	{
+	public BaseAdapterHelper setRating(int viewId, float rating) {
 		RatingBar view = retrieveView(viewId);
 		view.setRating(rating);
 		return this;
@@ -458,8 +427,7 @@ public class BaseAdapterHelper
 	 *            The range of the RatingBar to 0...max.
 	 * @return The BaseAdapterHelper for chaining.
 	 */
-	public BaseAdapterHelper setRating(int viewId, float rating, int max)
-	{
+	public BaseAdapterHelper setRating(int viewId, float rating, int max) {
 		RatingBar view = retrieveView(viewId);
 		view.setMax(max);
 		view.setRating(rating);
@@ -475,8 +443,7 @@ public class BaseAdapterHelper
 	 *            The tag;
 	 * @return The BaseAdapterHelper for chaining.
 	 */
-	public BaseAdapterHelper setTag(int viewId, Object tag)
-	{
+	public BaseAdapterHelper setTag(int viewId, Object tag) {
 		View view = retrieveView(viewId);
 		view.setTag(tag);
 		return this;
@@ -493,8 +460,7 @@ public class BaseAdapterHelper
 	 *            The tag;
 	 * @return The BaseAdapterHelper for chaining.
 	 */
-	public BaseAdapterHelper setTag(int viewId, int key, Object tag)
-	{
+	public BaseAdapterHelper setTag(int viewId, int key, Object tag) {
 		View view = retrieveView(viewId);
 		view.setTag(key, tag);
 		return this;
@@ -509,8 +475,7 @@ public class BaseAdapterHelper
 	 *            The checked status;
 	 * @return The BaseAdapterHelper for chaining.
 	 */
-	public BaseAdapterHelper setChecked(int viewId, boolean checked)
-	{
+	public BaseAdapterHelper setChecked(int viewId, boolean checked) {
 		Checkable view = (Checkable) retrieveView(viewId);
 		view.setChecked(checked);
 		return this;
@@ -525,8 +490,7 @@ public class BaseAdapterHelper
 	 *            The adapter;
 	 * @return The BaseAdapterHelper for chaining.
 	 */
-	public BaseAdapterHelper setAdapter(int viewId, Adapter adapter)
-	{
+	public BaseAdapterHelper setAdapter(int viewId, Adapter adapter) {
 		AdapterView view = retrieveView(viewId);
 		view.setAdapter(adapter);
 		return this;
@@ -542,8 +506,7 @@ public class BaseAdapterHelper
 	 * @return The BaseAdapterHelper for chaining.
 	 */
 	public BaseAdapterHelper setOnClickListener(int viewId,
-			View.OnClickListener listener)
-	{
+			View.OnClickListener listener) {
 		View view = retrieveView(viewId);
 		view.setOnClickListener(listener);
 		return this;
@@ -559,8 +522,7 @@ public class BaseAdapterHelper
 	 * @return The BaseAdapterHelper for chaining.
 	 */
 	public BaseAdapterHelper setOnTouchListener(int viewId,
-			View.OnTouchListener listener)
-	{
+			View.OnTouchListener listener) {
 		View view = retrieveView(viewId);
 		view.setOnTouchListener(listener);
 		return this;
@@ -576,16 +538,14 @@ public class BaseAdapterHelper
 	 * @return The BaseAdapterHelper for chaining.
 	 */
 	public BaseAdapterHelper setOnLongClickListener(int viewId,
-			View.OnLongClickListener listener)
-	{
+			View.OnLongClickListener listener) {
 		View view = retrieveView(viewId);
 		view.setOnLongClickListener(listener);
 		return this;
 	}
 
 	/** Retrieve the convertView */
-	public View getView()
-	{
+	public View getView() {
 		return mConvertView;
 	}
 
@@ -596,8 +556,7 @@ public class BaseAdapterHelper
 	 *             If the position hasn't been set at the construction of the
 	 *             this helper.
 	 */
-	public int getPosition()
-	{
+	public int getPosition() {
 		if (mPosition == -1)
 			throw new IllegalStateException(
 					"Use BaseAdapterHelper constructor "
@@ -606,14 +565,12 @@ public class BaseAdapterHelper
 	}
 
 	/** Retrieves the last converted object on this view. */
-	public Object getAssociatedObject()
-	{
+	public Object getAssociatedObject() {
 		return associatedObject;
 	}
 
 	/** Should be called during convert */
-	public void setAssociatedObject(Object associatedObject)
-	{
+	public void setAssociatedObject(Object associatedObject) {
 		this.associatedObject = associatedObject;
 	}
 }

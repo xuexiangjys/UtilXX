@@ -104,6 +104,26 @@
                 android:id="@+id/marqueen"
                 style="@style/CustomButtonStyle"
                 android:text="Marqueen Demo" />
+            
+            <com.xuexiang.view.CustomTextView
+                android:id="@+id/addresspicker"
+                style="@style/CustomButtonStyle"
+                android:text="AddressPicker Demo" />
+            
+            <com.xuexiang.view.CustomTextView
+                android:id="@+id/addresswheel"
+                style="@style/CustomButtonStyle"
+                android:text="AddressWheel Demo" />
+            
+            <com.xuexiang.view.CustomTextView
+                android:id="@+id/loadinglayout"
+                style="@style/CustomButtonStyle"
+                android:text="LoadingLayout Demo" />
+            
+            <com.xuexiang.view.CustomTextView
+                android:id="@+id/pathanim"
+                style="@style/CustomButtonStyle"
+                android:text="PathAnim Demo" />
         </LinearLayout>
     </ScrollView>
 

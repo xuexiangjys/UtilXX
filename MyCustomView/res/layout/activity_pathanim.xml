@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <com.xuexiang.view.TitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.example.mycustomview.pathanim.LoadingPathAnimView
+        android:id="@+id/fillView1"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:background="@android:color/black"
+        android:padding="5dp" />
+
+    <com.example.mycustomview.pathanim.CstStoreHouseAnimView
+        android:id="@+id/storeView1"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginTop="5dp"
+        android:background="@android:color/black"
+        android:padding="5dp" />
+
+    <com.example.mycustomview.pathanim.LoadingPathAnimView
+        android:id="@+id/fillView2"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/yellow"
+        android:padding="5dp" />
+
+    <com.example.mycustomview.pathanim.CstStoreHouseAnimView
+        android:id="@+id/storeView2"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginTop="5dp"
+        android:background="@android:color/black"
+        android:padding="5dp" />
+
+    <com.xuexiang.view.pathanim.PathAnimView
+        android:id="@+id/pathAnimView1"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/blue"
+        android:padding="5dp" />
+
+    <com.xuexiang.view.pathanim.StoreHouseAnimView
+        android:id="@+id/storeView3"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/cube_holo_purple"
+        android:padding="5dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="start"
+            android:text="动起来" />
+
+        <Button
+            android:id="@+id/btn2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="stop"
+            android:text="控制自己" />
+
+        <Button
+            android:id="@+id/btn3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="reset"
+            android:text="重置" />
+
+        <Button
+            android:id="@+id/btnSvg"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="SVG" />
+    </LinearLayout>
+
+</LinearLayout>

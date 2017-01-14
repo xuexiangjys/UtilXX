@@ -1,16 +1,12 @@
 package com.xuexiang.util.view;
 
-import com.xuexiang.view.dialog.CircularProgressDialog;
-import com.xuexiang.view.dialog.CustomDialog;
-import com.xuexiang.view.dialog.LoadingAnimatorDialog;
-import com.xuexiang.view.dialog.MonIndicatorDialog;
-import com.xuexiang.view.dialog.RoundProgressBarDialog;
-import com.xuexiang.view.dialog.ShapeLoadingDialog;
-import com.xuexiang.view.dialog.SpotsDialog;
+import java.util.Calendar;
+import java.util.Date;
 
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
+import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -21,8 +17,20 @@ import android.text.TextUtils;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.xuexiang.util.common.ToastUtil;
+import com.xuexiang.util.data.DateUtils;
+import com.xuexiang.view.dialog.CircularProgressDialog;
+import com.xuexiang.view.dialog.CustomDialog;
+import com.xuexiang.view.dialog.LoadingAnimatorDialog;
+import com.xuexiang.view.dialog.MonIndicatorDialog;
+import com.xuexiang.view.dialog.RoundProgressBarDialog;
+import com.xuexiang.view.dialog.ShapeLoadingDialog;
+import com.xuexiang.view.dialog.SpotsDialog;
 
 /**
  * 对话框显示的工具类
@@ -295,6 +303,54 @@ public class DialogUtil {
 			TextView textview = (TextView) view;
 			textview.setText(msg);
 		}
+	}
+	
+	/**
+	 * 显示生日选择输入框
+	 * @param context
+	 * @param etPatBirth
+	 */
+	public static DatePickerDialog createBirthDatePickerDialog(final Context context, final EditText etPatBirth) {
+	    final Date durrentDate = new Date(System.currentTimeMillis());
+		Calendar calendar = Calendar.getInstance();
+		String birthday = etPatBirth.getText().toString();
+		calendar.setTime(DateUtils.parseStrDate(birthday));
+		DatePickerDialog dlg = new DatePickerDialog(context, DatePickerDialog.THEME_HOLO_LIGHT, new DatePickerDialog.OnDateSetListener() {
+			@Override
+			public void onDateSet(DatePicker arg0, int l1, int i2, int j2) {
+				StringBuilder stringbuilder = (new StringBuilder(String.valueOf(l1))).append("-");
+				stringbuilder.append((i2 + 1) < 10 ? "0" + (i2 + 1): (i2 + 1)).append("-").append(j2 < 10 ? "0" + j2 : j2);
+				Date selectDate = DateUtils.parseStrDate(stringbuilder.toString());
+				int result = DateUtils.compareDate(selectDate, durrentDate);
+				if (result == 1) {
+					ToastUtil.getInstance(context).showToast("出生日期不能是未来的时间!",Toast.LENGTH_SHORT);
+					return;
+				} else {
+					etPatBirth.setText(stringbuilder.toString());
+				}
+			}
+		}, calendar.get(1), calendar.get(2), calendar.get(5));
+		return dlg;
+	}
+	
+	
+	/**
+	 * 显示时间选择输入框
+	 * @param context
+	 * @param etPatBirth
+	 */
+	public static DatePickerDialog createDatePickerDialog(final Context context, final EditText editText) {
+		Calendar calendar = Calendar.getInstance();
+		String birthday = editText.getText().toString();
+		calendar.setTime(DateUtils.parseStrDate(birthday));
+		DatePickerDialog dlg = new DatePickerDialog(context, DatePickerDialog.THEME_HOLO_LIGHT, new DatePickerDialog.OnDateSetListener() {
+			@Override
+			public void onDateSet(DatePicker arg0, int l1, int i2, int j2) {
+				StringBuilder stringbuilder = (new StringBuilder(String.valueOf(l1))).append("-");
+				editText.setText(stringbuilder.append((i2 + 1) < 10 ? "0" + (i2 + 1) : (i2 + 1)).append("-").append(j2 < 10 ? "0" + j2 : j2).toString());
+			}
+		}, calendar.get(1), calendar.get(2), calendar.get(5));
+		return dlg;
 	}
 
 }

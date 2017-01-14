@@ -51,6 +51,45 @@ public final class ResourceUtils {
     }
 
     /**
+     * 读取assert下的txt文件
+     * @param context
+     * @param fileName 文件名
+     * @return
+     */
+    public static String readStringFromAssert(Context context, String fileName) {
+        String resultString = "";
+        try {
+            InputStream inputStream = context.getResources().getAssets().open(fileName);
+            byte[] buffer = new byte[inputStream.available()];
+            inputStream.read(buffer);
+            resultString = new String(buffer, "utf-8");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return resultString;
+    }
+    
+    /**
+     * 读取assert下的txt文件
+     * @param context
+     * @param fileName 文件名
+     * @param encodingCode 字符编码
+     * @return
+     */
+    public static String readStringFromAssert(Context context, String fileName, String encodingCode) {
+        String resultString = "";
+        try {
+            InputStream inputStream = context.getResources().getAssets().open(fileName);
+            byte[] buffer = new byte[inputStream.available()];
+            inputStream.read(buffer);
+            resultString = new String(buffer, encodingCode);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return resultString;
+    }
+    
+    /**
      * get an asset using ACCESS_STREAMING mode. This provides access to files that have been bundled with an
      * application as assets -- that is, files placed in to the "assets" directory.
      *

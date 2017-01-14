@@ -33,4 +33,19 @@
     <color name="red_btn_bg_pressed_color">#CD5B55</color>
     <color name="color_item_bg">#6086a3</color>
     <color name="blue_color">#00afff</color>
+    
+    <color name="cube_holo_blue_bright">#ff00ddff</color>
+    <color name="cube_holo_blue_dark">#ff0099cc</color>
+    <color name="cube_holo_blue_light">#ff33b5e5</color>
+    <color name="cube_holo_green_dark">#ff669900</color>
+    <color name="cube_holo_green_light">#ff99cc00</color>
+    <color name="cube_holo_orange_dark">#ffff8800</color>
+    <color name="cube_holo_orange_light">#ffffbb33</color>
+    <color name="cube_holo_purple">#ffaa66cc</color>
+    <color name="cube_holo_red_dark">#ffcc0000</color>
+    <color name="cube_holo_red_light">#ffff4444</color>
+    <color name="red">#FFC93437</color>
+    <color name="blue">#FF375BF1</color>
+    <color name="yellow">#FFF7D23E</color>
+    <color name="green">#FF34A350</color>
 </resources>

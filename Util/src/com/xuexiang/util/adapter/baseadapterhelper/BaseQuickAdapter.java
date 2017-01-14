@@ -35,8 +35,7 @@ import java.util.List;
  *            The type of the items in the list.
  */
 public abstract class BaseQuickAdapter<T, H extends BaseAdapterHelper> extends
-		BaseAdapter
-{
+		BaseAdapter {
 
 	protected static final String TAG = BaseQuickAdapter.class.getSimpleName();
 
@@ -56,8 +55,7 @@ public abstract class BaseQuickAdapter<T, H extends BaseAdapterHelper> extends
 	 * @param layoutResId
 	 *            The layout resource id of each item.
 	 */
-	public BaseQuickAdapter(Context context, int layoutResId)
-	{
+	public BaseQuickAdapter(Context context, int layoutResId) {
 		this(context, layoutResId, null);
 	}
 
@@ -72,8 +70,7 @@ public abstract class BaseQuickAdapter<T, H extends BaseAdapterHelper> extends
 	 * @param data
 	 *            A new list is created out of this one to avoid mutable list
 	 */
-	public BaseQuickAdapter(Context context, int layoutResId, List<T> data)
-	{
+	public BaseQuickAdapter(Context context, int layoutResId, List<T> data) {
 		this.mData = data == null ? new ArrayList<T>() : new ArrayList<T>(data);
 		this.mContext = context;
 		this.mLayoutResId = layoutResId;
@@ -82,52 +79,44 @@ public abstract class BaseQuickAdapter<T, H extends BaseAdapterHelper> extends
 	protected MultiItemTypeSupport<T> mMultiItemSupport;
 
 	public BaseQuickAdapter(Context context, ArrayList<T> data,
-			MultiItemTypeSupport<T> multiItemSupport)
-	{
+			MultiItemTypeSupport<T> multiItemSupport) {
 		this.mMultiItemSupport = multiItemSupport;
 		this.mData = data == null ? new ArrayList<T>() : new ArrayList<T>(data);
 		this.mContext = context;
 	}
 
 	@Override
-	public int getCount()
-	{
+	public int getCount() {
 		int extra = displayIndeterminateProgress ? 1 : 0;
 		return mData.size() + extra;
 	}
 
 	@Override
-	public T getItem(int position)
-	{
+	public T getItem(int position) {
 		if (position >= mData.size())
 			return null;
 		return mData.get(position);
 	}
 
 	@Override
-	public long getItemId(int position)
-	{
+	public long getItemId(int position) {
 		return position;
 	}
 
 	@Override
-	public int getViewTypeCount()
-	{
+	public int getViewTypeCount() {
 		if (mMultiItemSupport != null)
 			return mMultiItemSupport.getViewTypeCount() + 1;
 		return 2;
 	}
 
 	@Override
-	public int getItemViewType(int position)
-	{
-		if (displayIndeterminateProgress)
-		{
+	public int getItemViewType(int position) {
+		if (displayIndeterminateProgress) {
 			if (mMultiItemSupport != null)
 				return position >= mData.size() ? 0 : mMultiItemSupport
 						.getItemViewType(position, mData.get(position));
-		} else
-		{
+		} else {
 			if (mMultiItemSupport != null)
 				return mMultiItemSupport.getItemViewType(position,
 						mData.get(position));
@@ -138,10 +127,8 @@ public abstract class BaseQuickAdapter<T, H extends BaseAdapterHelper> extends
 	}
 
 	@Override
-	public View getView(int position, View convertView, ViewGroup parent)
-	{
-		if (getItemViewType(position) == 0)
-		{
+	public View getView(int position, View convertView, ViewGroup parent) {
+		if (getItemViewType(position) == 0) {
 			return createIndeterminateProgressView(convertView, parent);
 		}
 		final H helper = getAdapterHelper(position, convertView, parent);
@@ -153,10 +140,8 @@ public abstract class BaseQuickAdapter<T, H extends BaseAdapterHelper> extends
 	}
 
 	private View createIndeterminateProgressView(View convertView,
-			ViewGroup parent)
-	{
-		if (convertView == null)
-		{
+			ViewGroup parent) {
+		if (convertView == null) {
 			FrameLayout container = new FrameLayout(mContext);
 			container.setForegroundGravity(Gravity.CENTER);
 			ProgressBar progress = new ProgressBar(mContext);
@@ -167,67 +152,56 @@ public abstract class BaseQuickAdapter<T, H extends BaseAdapterHelper> extends
 	}
 
 	@Override
-	public boolean isEnabled(int position)
-	{
+	public boolean isEnabled(int position) {
 		return position < mData.size();
 	}
 
-	public void add(T elem)
-	{
+	public void add(T elem) {
 		mData.add(elem);
 		notifyDataSetChanged();
 	}
 
-	public void addAll(List<T> elem)
-	{
+	public void addAll(List<T> elem) {
 		mData.addAll(elem);
 		notifyDataSetChanged();
 	}
 
-	public void set(T oldElem, T newElem)
-	{
+	public void set(T oldElem, T newElem) {
 		set(mData.indexOf(oldElem), newElem);
 	}
 
-	public void set(int index, T elem)
-	{
+	public void set(int index, T elem) {
 		mData.set(index, elem);
 		notifyDataSetChanged();
 	}
 
-	public void remove(T elem)
-	{
+	public void remove(T elem) {
 		mData.remove(elem);
 		notifyDataSetChanged();
 	}
 
-	public void remove(int index)
-	{
+	public void remove(int index) {
 		mData.remove(index);
 		notifyDataSetChanged();
 	}
 
-	public void replaceAll(List<T> elem)
-	{
+	public void replaceAll(List<T> elem) {
 		mData.clear();
 		mData.addAll(elem);
 		notifyDataSetChanged();
 	}
 
-	public boolean contains(T elem)
-	{
+	public boolean contains(T elem) {
 		return mData.contains(elem);
 	}
 
 	/** Clear data list */
-	public void clear()
-	{
+	public void clear() {
 		mData.clear();
 		notifyDataSetChanged();
 	}
 
-	public void showIndeterminateProgress(boolean display)
-	{
+	public void showIndeterminateProgress(boolean display) {
 		if (display == displayIndeterminateProgress)
 			return;
 		displayIndeterminateProgress = display;

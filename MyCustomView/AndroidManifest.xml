@@ -70,7 +70,14 @@
         </service>
         <activity android:name="com.example.mycustomview.custom.LabelActivity"/>
         <activity android:name="com.example.mycustomview.custom.MarqueenActivity"/>
-        
+        <activity android:name="com.example.mycustomview.custom.AddressPickerActivity"/>
+        <activity android:name="com.example.mycustomview.custom.AddressWheelActivity"/>
+        <activity android:name="com.example.mycustomview.custom.LoadingLayoutActivity"
+             android:theme="@style/LoadingAppTheme"/>
+        <activity android:name="com.example.mycustomview.custom.LoadingActivity"
+             android:theme="@style/LoadingAppTheme"/>
+        <activity android:name="com.example.mycustomview.pathanim.PathAnimActivity"/>
+        <activity android:name="com.example.mycustomview.pathanim.SvgActivity"/>
     </application>
 
 </manifest>

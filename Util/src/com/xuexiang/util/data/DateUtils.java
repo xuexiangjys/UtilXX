@@ -51,6 +51,15 @@ public final class DateUtils {
     }
     
     /**
+     * 解析"yyyy-MM-dd"格式的日期
+     * @param d
+     * @return
+     */
+    public static Date parseStrDate(String d) {
+    	return parseDate(d, yyyyMMDD);
+    }
+    
+    /**
      * 将Date类型转换为日期字符串
      *
      * @param date Date对象

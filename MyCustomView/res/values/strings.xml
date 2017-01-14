@@ -50,7 +50,6 @@
     <string name="add_item">添加</string>
     <string name="source_on_github">Github位置</string>
     <string name="title_item">功能</string>
-
     <string name="tip">为保证悬浮球正常使用，请将其加入系统清理白名单</string>
-     
+
 </resources>
