@@ -2,6 +2,8 @@ package com.xuexiang.util.data.sharedPreferences;
 
 import java.util.Map;
 
+import com.xuexiang.util.common.JavaReflectUtil;
+
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.preference.ListPreference;
@@ -225,6 +227,14 @@ public class BaseSharedPreferencesUtil {
 	 */
 	public String getResourceString(int resourceId) {
 		return mContext.getResources().getString(resourceId);
+	}
+	
+	/**
+	 * apply方法
+	 * @throws Exception
+	 */
+	public void apply() throws Exception {
+		JavaReflectUtil.invokeMethod(mEditor, "apply", new Object[]{});
 	}
 	
 	/**

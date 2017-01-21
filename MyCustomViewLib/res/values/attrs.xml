@@ -194,7 +194,6 @@
         <attr name="pivotX" format="fraction" />
         <attr name="pivotY" format="fraction" />
     </declare-styleable>
-    
     <declare-styleable name="LabelView">
         <attr name="backgroundColor" format="color" />
         <attr name="textTitleColor" format="color" />
@@ -222,7 +221,6 @@
             <enum name="rightTop" value="45" />
         </attr>
     </declare-styleable>
-    
     <declare-styleable name="MarqueeView">
         <attr name="marqueeInterval" format="integer" />
         <attr name="marqueeAnimDuration" format="integer" />
@@ -230,38 +228,70 @@
         <attr name="marqueeAnimOut" format="reference" />
     </declare-styleable>
 
-    <attr name="styleLoadingLayout" format="reference"/>
-    
+    <attr name="styleLoadingLayout" format="reference" />
+
     <declare-styleable name="LoadingLayout">
+
         <!-- 空布局资源id -->
-        <attr name="llEmptyResId" format="reference"/>
+        <attr name="llEmptyResId" format="reference" />
         <!-- 加载中布局资源id -->
-        <attr name="llLoadingResId" format="reference"/>
+        <attr name="llLoadingResId" format="reference" />
         <!-- 错误布局资源id -->
-        <attr name="llErrorResId" format="reference"/>
+        <attr name="llErrorResId" format="reference" />
 
         <!-- 空布局图片 -->
-        <attr name="llEmptyImage" format="reference"/>
+        <attr name="llEmptyImage" format="reference" />
         <!-- 空布局文本 -->
-        <attr name="llEmptyText" format="string"/>
+        <attr name="llEmptyText" format="string" />
 
         <!-- 错误布局图片 -->
-        <attr name="llErrorImage" format="reference"/>
+        <attr name="llErrorImage" format="reference" />
         <!-- 错误布局文本 -->
-        <attr name="llErrorText" format="string"/>
+        <attr name="llErrorText" format="string" />
         <!-- 错误布局重试按钮文本 -->
-        <attr name="llRetryText" format="string"/>
+        <attr name="llRetryText" format="string" />
 
         <!-- 文本颜色 -->
-        <attr name="llTextColor" format="color"/>
+        <attr name="llTextColor" format="color" />
         <!-- 文本尺寸 -->
-        <attr name="llTextSize" format="dimension"/>
+        <attr name="llTextSize" format="dimension" />
 
         <!-- 按钮文本颜色 -->
-        <attr name="llButtonTextColor" format="color"/>
+        <attr name="llButtonTextColor" format="color" />
         <!-- 按钮文本尺寸 -->
-        <attr name="llButtonTextSize" format="dimension"/>
+        <attr name="llButtonTextSize" format="dimension" />
         <!-- 按钮背景 -->
-        <attr name="llButtonBackground" format="reference"/>
+        <attr name="llButtonBackground" format="reference" />
     </declare-styleable>
+
+    <!-- SwitchIconView -->
+    <declare-styleable name="SwitchIconView">
+        <attr name="si_tint_color" format="color" />
+        <attr name="si_animation_duration" format="integer" />
+        <attr name="si_disabled_alpha" format="float" />
+        <attr name="si_disabled_color" format="color" />
+        <attr name="si_enabled" format="boolean" />
+        <attr name="si_no_dash" format="boolean" />
+    </declare-styleable>
+    
+     <!-- PathView -->
+    <declare-styleable name="PathView">
+        <attr name="pathColor" format="color" />
+        <attr name="pathWidth" format="float" />
+        <attr name="svg" format="reference" />
+    </declare-styleable>
+
+    <!-- imagepicker -->
+    <declare-styleable name="CropImageView">
+        <attr name="cropMaskColor" format="color"/>
+        <attr name="cropBorderColor" format="color"/>
+        <attr name="cropBorderWidth" format="dimension"/>
+        <attr name="cropFocusWidth" format="dimension"/>
+        <attr name="cropFocusHeight" format="dimension"/>
+        <attr name="cropStyle" format="enum">
+            <enum name="rectangle" value="0"/>
+            <enum name="circle" value="1"/>
+        </attr>
+    </declare-styleable>
+    
 </resources>

@@ -15,12 +15,16 @@ import com.example.mycustomview.custom.DraglayoutExpandActivity;
 import com.example.mycustomview.custom.FaboptionsActivity;
 import com.example.mycustomview.custom.FloatBallActivity;
 import com.example.mycustomview.custom.FloatingViewActivity;
+import com.example.mycustomview.custom.ImagepickerActivity;
 import com.example.mycustomview.custom.LabelActivity;
 import com.example.mycustomview.custom.LoadingLayoutActivity;
 import com.example.mycustomview.custom.MarqueenActivity;
+import com.example.mycustomview.custom.SVGParseActivity;
 import com.example.mycustomview.custom.SlideMenuActivity;
 import com.example.mycustomview.custom.SnowActivity;
 import com.example.mycustomview.custom.StateButtonActivity;
+import com.example.mycustomview.custom.SwitchIconActivity;
+import com.example.mycustomview.custom.WeatherViewActivity;
 import com.example.mycustomview.custom.WebViewMainActivity;
 import com.example.mycustomview.jptabbar.JpTabbarActivity;
 import com.example.mycustomview.pageslidingtab.ui.activity.PageSlidingTabActivity;
@@ -127,6 +131,22 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 		case R.id.pathanim:
 			mToastUtil.showToast("点击了PathAnimActivity");
 			startActivity(PathAnimActivity.class);
+			break;
+		case R.id.weatherview:
+			mToastUtil.showToast("点击了WeatherViewActivity");
+			startActivity(WeatherViewActivity.class);
+			break;
+		case R.id.switchicon:
+			mToastUtil.showToast("点击了SwitchIconActivity");
+			startActivity(SwitchIconActivity.class);
+			break;
+		case R.id.svgparse:
+			mToastUtil.showToast("点击了SVGParseActivity");
+			startActivity(SVGParseActivity.class);
+			break;
+		case R.id.imagepicker:
+			mToastUtil.showToast("点击了ImagepickerActivity");
+			startActivity(ImagepickerActivity.class);
 			break;
 
 		default:

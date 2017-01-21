@@ -18,7 +18,6 @@
     
     <color name="gray_light">#f2f2f2</color>
     <color name="gray_font_dark">#646464</color>
-    <color name="black">#202020</color>
     
     <color name="success_stroke_color">#A5DC86</color>
     <color name="error_stroke_color">#F27474</color>
@@ -48,4 +47,10 @@
     <color name="blue">#FF375BF1</color>
     <color name="yellow">#FFF7D23E</color>
     <color name="green">#FF34A350</color>
+    
+    <color name="theme_body">#cc22292c</color>
+    <color name="black">#000000</color>
+    <color name="status_bar">#303135</color>
+    <color name="top_bar">#9f556061</color>
+    <color name="transparent">#00000000</color>
 </resources>

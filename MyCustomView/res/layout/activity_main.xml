@@ -124,6 +124,26 @@
                 android:id="@+id/pathanim"
                 style="@style/CustomButtonStyle"
                 android:text="PathAnim Demo" />
+            
+            <com.xuexiang.view.CustomTextView
+                android:id="@+id/weatherview"
+                style="@style/CustomButtonStyle"
+                android:text="WeatherView Demo" />
+            
+            <com.xuexiang.view.CustomTextView
+                android:id="@+id/switchicon"
+                style="@style/CustomButtonStyle"
+                android:text="SwitchIcon Demo" />
+            
+            <com.xuexiang.view.CustomTextView
+                android:id="@+id/svgparse"
+                style="@style/CustomButtonStyle"
+                android:text="SVGParse Demo" />
+            
+            <com.xuexiang.view.CustomTextView
+                android:id="@+id/imagepicker"
+                style="@style/CustomButtonStyle"
+                android:text="Imagepicker Demo" />
         </LinearLayout>
     </ScrollView>
 
