@@ -5,8 +5,8 @@ import android.view.View;
 import android.view.View.OnClickListener;
 
 import com.example.testutil.R;
-import com.xuexiang.app.BaseActivity;
 import com.xuexiang.app.SampleApplication;
+import com.xuexiang.app.activity.BaseActivity;
 import com.xuexiang.util.view.FlexibleToast;
 import com.xuexiang.view.snack.SnackBar;
 import com.xuexiang.view.snack.SnackBar.OnMessageClickListener;

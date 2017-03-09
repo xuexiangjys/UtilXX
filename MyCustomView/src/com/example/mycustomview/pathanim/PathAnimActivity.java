@@ -6,7 +6,7 @@ import android.graphics.Path;
 import android.view.View;
 
 import com.example.mycustomview.R;
-import com.xuexiang.app.BaseActivity;
+import com.xuexiang.app.activity.BaseActivity;
 import com.xuexiang.view.pathanim.PathAnimView;
 import com.xuexiang.view.pathanim.StoreHouseAnimView;
 import com.xuexiang.view.pathanim.SysLoadAnimHelper;

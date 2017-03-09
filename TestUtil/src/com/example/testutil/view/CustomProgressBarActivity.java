@@ -10,7 +10,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 
 import com.example.testutil.R;
-import com.xuexiang.app.BaseActivity;
+import com.xuexiang.app.activity.BaseActivity;
 import com.xuexiang.view.LoadingButton;
 import com.xuexiang.view.customprogressbar.CBProgressBar;
 import com.xuexiang.view.customprogressbar.MyHoriztalProgressBar;

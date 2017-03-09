@@ -3,7 +3,7 @@ package com.example.testutil.view;
 import android.widget.Toast;
 
 import com.example.testutil.R;
-import com.xuexiang.app.BaseActivity;
+import com.xuexiang.app.activity.BaseActivity;
 import com.xuexiang.view.PatternView;
 
 /**  

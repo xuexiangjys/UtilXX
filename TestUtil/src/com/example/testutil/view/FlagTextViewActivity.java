@@ -12,7 +12,7 @@ import android.widget.Toast;
 import android.widget.ToggleButton;
 
 import com.example.testutil.R;
-import com.xuexiang.app.BaseActivity;
+import com.xuexiang.app.activity.BaseActivity;
 import com.xuexiang.view.FluidLayout;
 
 /**  

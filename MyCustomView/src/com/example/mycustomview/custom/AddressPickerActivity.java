@@ -5,7 +5,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.mycustomview.R;
-import com.xuexiang.app.BaseActivity;
+import com.xuexiang.app.activity.BaseActivity;
 import com.xuexiang.view.addresspicker.bean.City;
 import com.xuexiang.view.addresspicker.bean.County;
 import com.xuexiang.view.addresspicker.bean.Province;

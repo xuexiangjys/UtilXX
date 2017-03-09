@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import android.widget.ListView;
 
 import com.example.testutil.R;
-import com.xuexiang.app.BaseActivity;
+import com.xuexiang.app.activity.BaseHeadActivity;
 import com.xuexiang.view.timeline.TimeItem;
 import com.xuexiang.view.timeline.TimeLineAdapter;
 
@@ -15,18 +15,18 @@ import com.xuexiang.view.timeline.TimeLineAdapter;
  * @author xuexiang
  * 文件名称：TimeLineActivity.java  
  **/
-public class TimeLineActivity extends BaseActivity {
+public class TimeLineActivity extends BaseHeadActivity {
 	private ListView uplevel_list;
 	private ArrayList<TimeItem> list;
 	private TimeLineAdapter adapter;
 
 	@Override
-	public void onCreateActivity() {
-        setContentView(R.layout.activity_timeline);
-        initView();
+	protected int getLayoutId() {
+		return R.layout.activity_timeline;
 	}
-	
-	private void initView() {
+
+	@Override
+	protected void init() {
 		uplevel_list = (ListView) findViewById(R.id.uplevel_list);
 		initData();
 	}
@@ -40,5 +40,7 @@ public class TimeLineActivity extends BaseActivity {
 		adapter = new TimeLineAdapter(this, list);
 		uplevel_list.setAdapter(adapter);
 	}
+
+	
 
 }

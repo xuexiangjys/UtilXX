@@ -7,7 +7,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.example.testutil.R;
-import com.xuexiang.app.BaseActivity;
+import com.xuexiang.app.activity.BaseActivity;
 import com.xuexiang.view.ProgressWheel;
 
 

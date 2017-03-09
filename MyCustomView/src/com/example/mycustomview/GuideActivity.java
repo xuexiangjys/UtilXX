@@ -1,5 +1,5 @@
 package com.example.mycustomview;
-import com.xuexiang.app.BaseGuideActivity;
+import com.xuexiang.app.activity.BaseGuideActivity;
 import com.xuexiang.view.AppConsts;
 
 

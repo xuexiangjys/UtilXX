@@ -6,7 +6,7 @@ import java.util.List;
 import android.view.View;
 
 import com.example.testutil.R;
-import com.xuexiang.app.BaseActivity;
+import com.xuexiang.app.activity.BaseActivity;
 import com.xuexiang.view.flowtaglayout.FlowTagLayout;
 import com.xuexiang.view.flowtaglayout.OnTagClickListener;
 import com.xuexiang.view.flowtaglayout.OnTagSelectListener;

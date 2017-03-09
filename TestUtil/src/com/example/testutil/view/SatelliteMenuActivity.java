@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.example.testutil.R;
-import com.xuexiang.app.BaseActivity;
+import com.xuexiang.app.activity.BaseActivity;
 import com.xuexiang.view.satellitemenu.SatelliteMenu;
 import com.xuexiang.view.satellitemenu.SatelliteMenu.SateliteClickedListener;
 import com.xuexiang.view.satellitemenu.SatelliteMenuItem;

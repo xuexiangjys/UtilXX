@@ -18,7 +18,7 @@ public class ThreadPoolManager {
 
 	private static ThreadPoolManager manager;
 
-	public static ThreadPoolManager getInstance() {
+	public synchronized static ThreadPoolManager getInstance() {
 		if (manager == null) {
 			manager = new ThreadPoolManager();
 		}

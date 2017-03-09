@@ -35,7 +35,7 @@ import com.example.testutil.net.model.Student;
 import com.example.testutil.net.model.UserInfo;
 import com.example.testutil.net.model.VisitInfo;
 import com.google.gson.reflect.TypeToken;
-import com.xuexiang.app.BaseActivity;
+import com.xuexiang.app.activity.BaseActivity;
 import com.xuexiang.util.file.FileUtils;
 import com.xuexiang.util.file.LocalFileUtil;
 import com.xuexiang.util.net.JsonUtil;

@@ -8,7 +8,7 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 
 import com.example.testutil.R;
-import com.xuexiang.app.BaseActivity;
+import com.xuexiang.app.activity.BaseActivity;
 import com.xuexiang.util.adapter.commonadapter.CommonAdapter;
 import com.xuexiang.util.adapter.commonadapter.ViewHolder;
 import com.xuexiang.view.dragview.entity.GridCutItem;

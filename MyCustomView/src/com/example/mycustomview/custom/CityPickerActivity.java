@@ -2,7 +2,6 @@ package com.example.mycustomview.custom;
 
 import java.util.List;
 
-import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
@@ -16,7 +15,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.mycustomview.R;
-import com.xuexiang.app.BaseActivity;
+import com.xuexiang.app.activity.BaseActivity;
 import com.xuexiang.view.citypicker.adapter.CityListAdapter;
 import com.xuexiang.view.citypicker.adapter.ResultListAdapter;
 import com.xuexiang.view.citypicker.db.DBManager;

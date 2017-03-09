@@ -4,7 +4,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.example.mycustomview.R;
-import com.xuexiang.app.BaseActivity;
+import com.xuexiang.app.activity.BaseActivity;
 import com.xuexiang.view.custom.BottomDialog;
 import com.xuexiang.view.custom.BottomDialog.ActionItem;
 import com.xuexiang.view.custom.BottomDialog.OnItemClickListener;

@@ -1,7 +1,7 @@
 package com.example.testutil.view;
 
 import com.example.testutil.R;
-import com.xuexiang.app.BaseActivity;
+import com.xuexiang.app.activity.BaseActivity;
 import com.xuexiang.util.view.Colors;
 import com.xuexiang.util.view.DisplayUtils;
 import com.xuexiang.view.CustomTextView;

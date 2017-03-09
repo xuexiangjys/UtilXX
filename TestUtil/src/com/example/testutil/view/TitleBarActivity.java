@@ -9,8 +9,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.testutil.R;
-import com.xuexiang.app.BaseActivity;
-import com.xuexiang.view.TitleBar;
+import com.xuexiang.app.activity.BaseActivity;
 import com.xuexiang.view.popwindow.ActionItem;
 import com.xuexiang.view.popwindow.PopWindow;
 import com.xuexiang.view.popwindow.PopWindow.OnItemSelectedListerner;

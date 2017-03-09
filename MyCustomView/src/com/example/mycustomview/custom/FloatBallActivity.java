@@ -8,7 +8,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.mycustomview.R;
-import com.xuexiang.app.BaseActivity;
+import com.xuexiang.app.activity.BaseActivity;
 import com.xuexiang.view.floatball.AccessibilityUtil;
 import com.xuexiang.view.floatball.FloatBallService;
 

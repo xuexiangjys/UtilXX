@@ -1,17 +1,5 @@
 <resources>
 
-    <!--
-        Base application theme, dependent on API level. This theme is replaced
-        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
-    -->
-    <style name="AppBaseTheme" parent="android:Theme.Light">
-        <!--
-            Theme customizations available in newer API levels can go in
-            res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
-        -->
-    </style>
-
     <!-- Application theme. -->
     <style name="AppTheme" parent="AppBaseTheme">
 
@@ -29,17 +17,26 @@
         <item name="android:activityCloseExitAnimation">@anim/slide_right_out</item>
     </style>
 
-    <style name="custom_dialog" parent="@android:style/Theme.Dialog">
-        <item name="android:windowFrame">@null</item>
+    <!-- BaseDialog -->
+    <style name="BaseDialog" parent="@android:style/Theme.Dialog">
+
         <!-- Dialog的windowFrame框为无 -->
-        <item name="android:windowIsFloating">true</item>
-        <!-- 是否漂现在activity上 -->
-        <item name="android:windowIsTranslucent">true</item>
-        <!-- 是否半透明 -->
+        <item name="android:windowFrame">@null</item>
         <item name="android:windowNoTitle">true</item>
-        <item name="android:background">@android:color/transparent</item>
-        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 是否漂现在activity上 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 是否半透明 -->
+        <item name="android:windowIsTranslucent">false</item>
         <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:windowSoftInputMode">adjustPan</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="custom_dialog" parent="BaseDialog">
+
+        <!-- 是否半透明 -->
+        <item name="android:background">@android:color/transparent</item>
         <!-- 去除黑色边框的关键设置项 -->
         <item name="android:backgroundDimEnabled">true</item>
         <!-- 屏幕背景是否变暗 -->
@@ -356,6 +353,7 @@
     </style>
 
     <style name="AppTheme.TranslucentActionBar" parent="Theme.AppCompat.Light">
+
         <!-- 设置透明风格 -->
         <item name="android:actionBarStyle">@style/Widget.ActionBar.Transparent</item>
         <!-- 设置悬浮风格 -->

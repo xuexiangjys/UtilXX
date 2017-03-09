@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.xuexiang.view.TitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.xuexiang.view.tabview.TabView
+        android:id="@+id/tabView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:imageViewTextViewMargin="2dip"
+        app:tab_imageViewHeight="30dip"
+        app:tab_imageViewWidth="30dip"
+        app:tab_tabViewBackgroundColor="#0000ff"
+        app:tab_tabViewDefaultPosition="1"
+        app:tab_tabViewGravity="right"
+        app:tab_tabViewHeight="52dip"
+        app:tab_textViewSelColor="#ff0000"
+        app:tab_textViewSize="14sp"
+        app:tab_textViewUnSelColor="#00ff00"
+        app:tab_isNeedSplitLine="true"
+        app:tab_splitLineColor="@color/red" >
+    </com.xuexiang.view.tabview.TabView>
+
+</LinearLayout>

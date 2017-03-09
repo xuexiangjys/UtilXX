@@ -8,7 +8,7 @@ import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.example.testutil.R;
-import com.xuexiang.app.BaseActivity;
+import com.xuexiang.app.activity.BaseActivity;
 import com.xuexiang.view.coolanim.CoolAnimView;
 
 public class CoolAnimActivity extends BaseActivity {

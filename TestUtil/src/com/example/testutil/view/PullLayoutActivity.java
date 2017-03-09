@@ -6,7 +6,7 @@ import android.view.View;
 import com.example.testutil.R;
 import com.example.testutil.view.pulllayout.ZoomLayoutActivity;
 import com.example.testutil.view.pulllayout.ZoomListActivity;
-import com.xuexiang.app.BaseActivity;
+import com.xuexiang.app.activity.BaseActivity;
 
 /**  
  * 创建时间：2016-6-13 上午12:00:21  

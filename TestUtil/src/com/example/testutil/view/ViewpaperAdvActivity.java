@@ -3,7 +3,7 @@ package com.example.testutil.view;
 import java.util.ArrayList;
 
 import com.example.testutil.R;
-import com.xuexiang.app.BaseActivity;
+import com.xuexiang.app.activity.BaseActivity;
 import com.xuexiang.view.loopviewpager.LoopViewPagerLayout;
 import com.xuexiang.view.loopviewpager.LoopViewPagerLayout.BannerInfo;
 import com.xuexiang.view.loopviewpager.LoopViewPagerLayout.OnBannerItemClickListener;

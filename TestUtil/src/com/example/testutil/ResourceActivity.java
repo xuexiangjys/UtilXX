@@ -6,7 +6,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.testutil.resource.PlugLoadActivity;
-import com.xuexiang.app.BaseActivity;
+import com.xuexiang.app.activity.BaseActivity;
 import com.xuexiang.util.app.PackageUtils;
 import com.xuexiang.util.file.FileUtils;
 import com.xuexiang.util.file.LocalFileUtil;

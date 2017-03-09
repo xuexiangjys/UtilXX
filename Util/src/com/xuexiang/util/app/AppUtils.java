@@ -46,6 +46,7 @@ import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.pm.Signature;
 import android.content.res.Resources;
@@ -229,6 +230,36 @@ public final class AppUtils {
             }
         }
     }
+    
+    /**
+	 * 打开应用
+	 * 
+	 * @param context
+	 * @param packageName
+	 */
+	public static void openApp(Context context, String packageName) {
+		try {
+			PackageManager pm = context.getPackageManager();
+			PackageInfo pi = pm.getPackageInfo(packageName, 0);
+			Intent resolveIntent = new Intent(Intent.ACTION_MAIN, null);
+			resolveIntent.addCategory(Intent.CATEGORY_LAUNCHER);
+			resolveIntent.setPackage(pi.packageName);
+			List<ResolveInfo> apps = pm.queryIntentActivities(resolveIntent, 0);
+			ResolveInfo ri = apps.iterator().next();
+			if (ri != null) {
+				String packagename = ri.activityInfo.packageName;
+				String className = ri.activityInfo.name;
+				Intent intent = new Intent(Intent.ACTION_MAIN);
+				intent.addCategory(Intent.CATEGORY_LAUNCHER);
+				intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);// Intent.FLAG_ACTIVITY_RESET_TASK_IF_NEEDED
+				ComponentName cn = new ComponentName(packagename, className);
+				intent.setComponent(cn);
+				context.startActivity(intent);
+			}
+		} catch (NameNotFoundException e) {
+			e.printStackTrace();
+		}
+	}
 
     /**
      * 得到CPU核心数

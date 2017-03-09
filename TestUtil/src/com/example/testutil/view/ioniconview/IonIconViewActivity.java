@@ -3,7 +3,7 @@ package com.example.testutil.view.ioniconview;
 import android.widget.ListView;
 
 import com.example.testutil.R;
-import com.xuexiang.app.BaseActivity;
+import com.xuexiang.app.activity.BaseActivity;
 
 public class IonIconViewActivity extends BaseActivity {
 

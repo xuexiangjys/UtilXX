@@ -13,7 +13,7 @@ import com.example.testutil.R;
 import com.example.testutil.data.adapter.AutoDataAdapter;
 import com.example.testutil.data.dao.auto.AutoDBManager;
 import com.example.testutil.data.entity.Student;
-import com.xuexiang.app.BaseActivity;
+import com.xuexiang.app.activity.BaseActivity;
 import com.xuexiang.util.data.db.ormlite.auto.AutoDBService;
 
 public class AutoDataBaseActivity extends BaseActivity implements OnClickListener{

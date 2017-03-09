@@ -4,7 +4,7 @@ import android.graphics.Color;
 import android.view.Menu;
 
 import com.example.mycustomview.R;
-import com.xuexiang.app.BaseActivity;
+import com.xuexiang.app.activity.BaseActivity;
 import com.xuexiang.view.circlemenu.CircleMenu;
 import com.xuexiang.view.circlemenu.OnMenuSelectedListener;
 import com.xuexiang.view.circlemenu.OnMenuStatusChangeListener;

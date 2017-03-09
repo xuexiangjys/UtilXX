@@ -8,7 +8,7 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.example.testutil.R;
-import com.xuexiang.app.BaseActivity;
+import com.xuexiang.app.activity.BaseActivity;
 import com.xuexiang.view.ViewpaperAndGridView.bean.ChannelItem;
 import com.xuexiang.view.ViewpaperAndGridView.bean.ChannelItem.onGridViewItemClickListener;
 import com.xuexiang.view.ViewpaperAndGridView.view.GridViewGallery;

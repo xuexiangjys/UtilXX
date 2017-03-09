@@ -1,6 +1,6 @@
 package com.example.mycustomview;
 
-import com.xuexiang.app.BaseSplashActivity;
+import com.xuexiang.app.activity.BaseSplashActivity;
 import com.xuexiang.util.app.ActivityUtil;
 
 public class SplashActivity extends BaseSplashActivity {

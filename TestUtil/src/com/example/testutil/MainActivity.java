@@ -4,7 +4,7 @@ import android.content.Intent;
 import android.view.KeyEvent;
 import android.view.View;
 
-import com.xuexiang.app.BaseActivity;
+import com.xuexiang.app.activity.BaseActivity;
 
 /**
  * 测试代码

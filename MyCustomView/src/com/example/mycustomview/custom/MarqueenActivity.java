@@ -9,7 +9,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.mycustomview.R;
-import com.xuexiang.app.BaseActivity;
+import com.xuexiang.app.activity.BaseActivity;
 import com.xuexiang.view.marqueen.ComplexItemEntity;
 import com.xuexiang.view.marqueen.ComplexViewMF;
 import com.xuexiang.view.marqueen.MarqueeFactory;

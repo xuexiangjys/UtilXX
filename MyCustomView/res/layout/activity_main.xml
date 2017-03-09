@@ -144,6 +144,26 @@
                 android:id="@+id/imagepicker"
                 style="@style/CustomButtonStyle"
                 android:text="Imagepicker Demo" />
+            
+            <com.xuexiang.view.CustomTextView
+                android:id="@+id/tabview"
+                style="@style/CustomButtonStyle"
+                android:text="Tabview Demo" />
+            
+            <com.xuexiang.view.CustomTextView
+                android:id="@+id/toasty"
+                style="@style/CustomButtonStyle"
+                android:text="Toasty Demo" />
+            
+            <com.xuexiang.view.CustomTextView
+                android:id="@+id/styleabletoast"
+                style="@style/CustomButtonStyle"
+                android:text="StyleableToast Demo" />
+            
+            <com.xuexiang.view.CustomTextView
+                android:id="@+id/magicindicator"
+                style="@style/CustomButtonStyle"
+                android:text="Magicindicator Demo" />
         </LinearLayout>
     </ScrollView>
 

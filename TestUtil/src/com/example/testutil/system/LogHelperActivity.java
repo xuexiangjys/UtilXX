@@ -8,7 +8,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 
 import com.example.testutil.R;
-import com.xuexiang.app.BaseActivity;
+import com.xuexiang.app.activity.BaseActivity;
 import com.xuexiang.util.data.sharedPreferences.SettingSharePreferenceUtil;
 import com.xuexiang.util.file.LocalFileUtil;
 import com.xuexiang.util.log.LogHelper;

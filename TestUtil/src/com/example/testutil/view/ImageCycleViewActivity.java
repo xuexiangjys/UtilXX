@@ -9,25 +9,28 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.testutil.R;
-import com.xuexiang.app.BaseActivity;
+import com.xuexiang.app.activity.BaseHeadActivity;
 import com.xuexiang.util.net.NetImageUtil;
 import com.xuexiang.view.ImageCycleView;
 import com.xuexiang.view.ImageCycleView.ImageCycleViewListener;
 import com.xuexiang.view.RollViewPager;
 import com.xuexiang.view.RollViewPager.OnPagerClickCallback;
 
-public class ImageCycleViewActivity extends BaseActivity {
+public class ImageCycleViewActivity extends BaseHeadActivity {
 	private ImageCycleView mImageCycleView;
 	ArrayList<String> imageUrlList = new ArrayList<String>();
 	
 	private LinearLayout mAdvViewPagerLayout;
 	private TextView mNewsTitle;
 	private LinearLayout mDotsll;
+	
 	@Override
-	public void onCreateActivity() {   
-		setContentView(R.layout.activity_imagecycleview);
-		initTitleBar(TAG);
-		
+	protected int getLayoutId() {
+		return R.layout.activity_imagecycleview;
+	}
+
+	@Override
+	protected void init() {
 		initView();
 	}
 
@@ -84,5 +87,7 @@ public class ImageCycleViewActivity extends BaseActivity {
     	mAdvViewPagerLayout.addView(rollViewPager, params);
     	
 	}
+
+	
 
 }

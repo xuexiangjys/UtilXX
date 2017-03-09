@@ -6,7 +6,7 @@ import android.support.annotation.NonNull;
 import android.view.View;
 
 import com.example.testutil.R;
-import com.xuexiang.app.BaseActivity;
+import com.xuexiang.app.activity.BaseActivity;
 import com.xuexiang.view.morphingbutton.MorphingButton;
 
 public class MorphingButtonIconActivity extends BaseActivity {

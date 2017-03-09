@@ -4,7 +4,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.example.testutil.R;
-import com.xuexiang.app.BaseActivity;
+import com.xuexiang.app.activity.BaseActivity;
 import com.xuexiang.view.dialogeffects.Effectstype;
 import com.xuexiang.view.dialogeffects.NiftyDialogBuilder;
 

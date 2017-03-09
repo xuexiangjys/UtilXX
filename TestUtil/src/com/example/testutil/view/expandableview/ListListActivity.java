@@ -9,7 +9,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.example.testutil.R;
-import com.xuexiang.app.BaseActivity;
+import com.xuexiang.app.activity.BaseActivity;
 import com.xuexiang.view.expandableview.adapter.ClassifyMainAdapter;
 import com.xuexiang.view.expandableview.adapter.ClassifyMoreAdapter;
 import com.xuexiang.view.expandableview.entity.IconItem;

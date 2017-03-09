@@ -4,7 +4,7 @@ import android.os.Handler;
 import android.view.View;
 
 import com.example.mycustomview.R;
-import com.xuexiang.app.BaseActivity;
+import com.xuexiang.app.activity.BaseActivity;
 import com.xuexiang.view.custom.dialog.LoadingAlertDialog;
 import com.xuexiang.view.custom.toast.T;
 

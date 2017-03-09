@@ -4,10 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import com.example.mycustomview.R;
-import com.xuexiang.app.BaseActivity;
+import com.xuexiang.app.activity.BaseActivity;
 import com.xuexiang.view.weatherview.AirLevel;
 import com.xuexiang.view.weatherview.ViewUtil;
 import com.xuexiang.view.weatherview.WeatherItemView;

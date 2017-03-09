@@ -5,7 +5,7 @@ import android.view.View.OnClickListener;
 import android.widget.TextView;
 
 import com.example.mycustomview.R;
-import com.xuexiang.app.BaseActivity;
+import com.xuexiang.app.activity.BaseActivity;
 import com.xuexiang.util.net.JsonUtil;
 import com.xuexiang.util.resource.ResourceUtils;
 import com.xuexiang.util.view.InputMethodUtils;

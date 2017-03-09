@@ -5,7 +5,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 
 import com.example.testutil.service.FloatServiceActivity;
-import com.xuexiang.app.BaseActivity;
+import com.xuexiang.app.activity.BaseActivity;
 
 public class ServiceActivity extends BaseActivity implements OnClickListener{
 

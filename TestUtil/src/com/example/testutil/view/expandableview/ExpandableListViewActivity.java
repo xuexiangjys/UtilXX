@@ -9,7 +9,7 @@ import android.widget.ExpandableListView.OnGroupClickListener;
 import android.widget.Toast;
 
 import com.example.testutil.R;
-import com.xuexiang.app.BaseActivity;
+import com.xuexiang.app.activity.BaseActivity;
 import com.xuexiang.view.expandableview.adapter.ExpandableListAdapter;
 import com.xuexiang.view.expandableview.entity.IconItem;
 

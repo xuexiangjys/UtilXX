@@ -1,16 +1,6 @@
 <resources>
 
-    <!--
-        Base application theme, dependent on API level. This theme is replaced
-        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
-    -->
-    <style name="AppBaseTheme" parent="android:Theme.Light">
-        <!--
-            Theme customizations available in newer API levels can go in
-            res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
-        -->
-    </style>
+    <style name="AppBaseTheme" parent="android:Theme.Light"></style>
 
     <!-- Application theme. -->
     <style name="AppTheme" parent="AppBaseTheme">
@@ -179,6 +169,18 @@
         <item name="android:windowEnterAnimation">@anim/show_from_bottom</item>
         <!-- 指定消失的动画xml -->
         <item name="android:windowExitAnimation">@anim/hide_to_bottom</item>
+    </style>
+    <!-- StyleableToast -->
+    <style name="StyleableToast">
+        <item name="android:textColor">@color/red</item>
+        <item name="android:colorBackground">@color/gray</item>
+        <item name="android:fontFamily">fonts/jianti_songti.ttf"</item>
+        <item name="android:textStyle">bold</item>
+        <!-- <item name="android:strokeWidth">2</item> -->
+        <!-- <item name="android:strokeColor">@color/colorPrimary</item> -->
+        <!-- <item name="android:radius">@dimen/toastRadius</item> -->
+        <item name="android:alpha">255</item>
+        <!-- <item name="android:icon">@drawable/ic_file_download</item> -->
     </style>
 
 </resources>

@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 
 import com.example.testutil.R;
-import com.xuexiang.app.BaseActivity;
+import com.xuexiang.app.activity.BaseActivity;
 import com.xuexiang.view.uipicker.picker.PickerUI;
 import com.xuexiang.view.uipicker.picker.PickerUISettings;
 

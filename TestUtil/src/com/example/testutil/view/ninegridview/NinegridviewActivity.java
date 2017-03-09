@@ -7,7 +7,7 @@ import android.content.Intent;
 import android.view.View;
 
 import com.example.testutil.R;
-import com.xuexiang.app.BaseActivity;
+import com.xuexiang.app.activity.BaseActivity;
 import com.xuexiang.view.ninegridview.LGNineGrideView;
 
 public class NinegridviewActivity extends BaseActivity {

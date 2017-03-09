@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <item type="id" name="floating_decor" />
-
+    <item name="tabview_id" type="id" />
+    <item name="tabview_fragment_container" type="id" />
 </resources>

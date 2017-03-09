@@ -53,7 +53,7 @@ import com.example.testutil.view.morphingbutton.MorphingButtonActivity;
 import com.example.testutil.view.ninegridview.NinegridviewActivity;
 import com.example.testutil.view.residemenu.ResideMenuMainFragmentPagerActivity;
 import com.example.testutil.view.systembartint.SystemBarTintManagerActivity;
-import com.xuexiang.app.BaseActivity;
+import com.xuexiang.app.activity.BaseActivity;
 import com.xuexiang.util.view.Colors;
 import com.xuexiang.view.materialdesign.view.ButtonFloat;
 

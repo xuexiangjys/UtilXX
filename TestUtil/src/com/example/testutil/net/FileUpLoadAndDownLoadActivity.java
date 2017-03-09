@@ -21,7 +21,7 @@ import android.widget.TextView;
 
 import com.example.testutil.R;
 import com.example.testutil.net.model.HttpConsts;
-import com.xuexiang.app.BaseActivity;
+import com.xuexiang.app.activity.BaseActivity;
 import com.xuexiang.util.app.CacheTools;
 import com.xuexiang.util.app.UpdateManager;
 import com.xuexiang.util.file.FileUtils;

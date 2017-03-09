@@ -6,7 +6,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.example.mycustomview.R;
-import com.xuexiang.app.BaseActivity;
+import com.xuexiang.app.activity.BaseActivity;
 import com.xuexiang.util.view.Colors;
 import com.xuexiang.view.TitleBar;
 import com.xuexiang.view.shareview.FlipShareView;

@@ -1,4 +1,3 @@
-
 package com.xuexiang.util.system;
 
 import android.app.Service;
@@ -29,8 +28,7 @@ public class EditTextShakeHelper {
 	public EditTextShakeHelper(Context context) {
 
 		// 初始化振动器
-		shakeVibrator = (Vibrator) context
-				.getSystemService(Service.VIBRATOR_SERVICE);
+		shakeVibrator = (Vibrator) context.getSystemService(Service.VIBRATOR_SERVICE);
 		// 初始化震动动画
 		shakeAnimation = new TranslateAnimation(0, 10, 0, 0);
 		shakeAnimation.setDuration(300);

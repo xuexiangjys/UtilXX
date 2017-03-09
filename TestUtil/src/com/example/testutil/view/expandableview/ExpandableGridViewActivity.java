@@ -7,7 +7,7 @@ import android.widget.ExpandableListView;
 import android.widget.ExpandableListView.OnGroupClickListener;
 
 import com.example.testutil.R;
-import com.xuexiang.app.BaseActivity;
+import com.xuexiang.app.activity.BaseActivity;
 import com.xuexiang.view.expandableview.adapter.ExpandableGridAdapter;
 import com.xuexiang.view.expandableview.entity.IconItem;
 

@@ -4,7 +4,7 @@ import android.os.CountDownTimer;
 import android.view.View;
 
 import com.example.testutil.R;
-import com.xuexiang.app.BaseActivity;
+import com.xuexiang.app.activity.BaseActivity;
 import com.xuexiang.view.sweetalert.SweetAlertDialog;
 
 public class SweetAlertActivity extends BaseActivity implements View.OnClickListener {

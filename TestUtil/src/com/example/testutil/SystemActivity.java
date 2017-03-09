@@ -5,7 +5,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 
 import com.example.testutil.system.LogHelperActivity;
-import com.xuexiang.app.BaseActivity;
+import com.xuexiang.app.activity.BaseActivity;
 
 /**  
  * 创建时间：2016-5-30 下午6:57:59  

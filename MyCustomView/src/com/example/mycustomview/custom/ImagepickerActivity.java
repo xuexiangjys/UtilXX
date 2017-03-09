@@ -3,14 +3,11 @@ package com.example.mycustomview.custom;
 import java.util.ArrayList;
 
 import android.content.Intent;
-import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
 import com.example.mycustomview.R;
-import com.xuexiang.app.BaseActivity;
+import com.xuexiang.app.activity.BaseActivity;
 import com.xuexiang.view.imagepicker.ImagePicker;
 import com.xuexiang.view.imagepicker.bean.ImageItem;
 import com.xuexiang.view.imagepicker.ui.ImageGridActivity;

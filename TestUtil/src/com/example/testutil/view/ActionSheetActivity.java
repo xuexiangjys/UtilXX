@@ -5,10 +5,10 @@ import android.view.View.OnClickListener;
 import android.widget.Toast;
 
 import com.example.testutil.R;
-import com.xuexiang.app.BaseActivity;
+import com.xuexiang.app.activity.BaseActivity;
 import com.xuexiang.view.ActionSheet;
-import com.xuexiang.view.CompareIndicator;
 import com.xuexiang.view.ActionSheet.ActionSheetListener;
+import com.xuexiang.view.CompareIndicator;
 
 /**  
  * 创建时间：2016-5-29 下午7:17:49  

@@ -11,7 +11,7 @@ import android.view.animation.Transformation;
 import android.widget.ImageView;
 
 import com.example.testutil.R;
-import com.xuexiang.app.BaseActivity;
+import com.xuexiang.app.activity.BaseActivity;
 import com.xuexiang.view.tabbar.TabBarView;
 import com.xuexiang.view.tabbar.TabBarView.OnTabBarClickListener;
 

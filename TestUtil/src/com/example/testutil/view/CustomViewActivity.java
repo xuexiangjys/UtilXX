@@ -9,11 +9,13 @@ import android.view.View.OnClickListener;
 import android.view.animation.BounceInterpolator;
 import android.view.animation.TranslateAnimation;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.testutil.R;
-import com.xuexiang.app.BaseActivity;
+import com.xuexiang.app.activity.BaseActivity;
+import com.xuexiang.util.view.DialogUtil;
 import com.xuexiang.view.AndroidSegmentedControlView;
 import com.xuexiang.view.AndroidSegmentedControlView.OnSelectionChangedListener;
 import com.xuexiang.view.BadgeView;
@@ -40,7 +42,7 @@ import com.xuexiang.view.materialspinner.MaterialSpinner;
  * 
  * @author xuexiang 文件名称：AndroidSegmentedControlViewActivity.java
  **/
-public class CustomViewActivity extends BaseActivity implements OnLikeListener{
+public class CustomViewActivity extends BaseActivity implements OnLikeListener, OnClickListener{
 	private Button btnPosition, btnColour, btnAnim1, btnAnim2, btnCustom,
 			btnClick, btnTab, btnIncrement;
 	private BadgeView badge1, badge2, badge3, badge4, badge5, badge6, badge7,
@@ -535,6 +537,19 @@ public class CustomViewActivity extends BaseActivity implements OnLikeListener{
         }
         return true;
     }
+
+	@Override
+	public void onClick(View v) {
+		switch (v.getId()) {
+		case R.id.clearEditText:
+			DialogUtil.createDoubleDatePickerDialog(mContext, (EditText)v).show();
+			break;
+
+		default:
+			break;
+		}
+		
+	}
 
 
 }

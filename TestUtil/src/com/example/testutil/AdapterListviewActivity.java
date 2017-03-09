@@ -4,11 +4,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 import android.content.Intent;
+import android.view.View;
+import android.view.View.OnClickListener;
 
 import com.example.testutil.adapter.MultiAdapterActivity;
 import com.example.testutil.adapter.SimpleAdapterActivity;
-import com.xuexiang.app.ActivityItem;
-import com.xuexiang.app.ListSampleActivity;
+import com.xuexiang.app.activity.ActivityItem;
+import com.xuexiang.app.activity.ListSampleActivity;
+import com.xuexiang.util.app.ActivityUtil;
 
 public class AdapterListviewActivity extends ListSampleActivity {
 	@Override
@@ -22,5 +25,15 @@ public class AdapterListviewActivity extends ListSampleActivity {
 	@Override
 	protected void startActivityForSample(Intent intent) {
 		startActivity(intent);
+	}
+
+	@Override
+	protected void init() {
+		ActivityUtil.initTitleBarDynamic(this, "AdapterListviewActivity", new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				finish();
+			}
+		});
 	}
 }

@@ -13,7 +13,7 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.example.testutil.R;
-import com.xuexiang.app.BaseActivity;
+import com.xuexiang.app.activity.BaseActivity;
 
 public class ScrollGridActivity extends BaseActivity {
 

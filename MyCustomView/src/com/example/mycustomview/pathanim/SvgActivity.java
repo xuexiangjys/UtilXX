@@ -7,7 +7,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 
 import com.example.mycustomview.R;
-import com.xuexiang.app.BaseActivity;
+import com.xuexiang.app.activity.BaseActivity;
 import com.xuexiang.view.pathanim.PathAnimView;
 import com.xuexiang.view.pathanim.util.SvgPathParser;
 

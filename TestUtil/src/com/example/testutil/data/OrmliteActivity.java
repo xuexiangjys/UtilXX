@@ -5,7 +5,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 
 import com.example.testutil.R;
-import com.xuexiang.app.BaseActivity;
+import com.xuexiang.app.activity.BaseActivity;
 
 public class OrmliteActivity extends BaseActivity implements OnClickListener{
 

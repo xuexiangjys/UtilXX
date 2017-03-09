@@ -13,7 +13,7 @@ import com.example.testutil.R;
 import com.example.testutil.data.adapter.DataAdapter;
 import com.example.testutil.data.dao.default_.DBManager;
 import com.example.testutil.data.entity.Student;
-import com.xuexiang.app.BaseActivity;
+import com.xuexiang.app.activity.BaseActivity;
 import com.xuexiang.util.data.db.ormlite.default_.DBService;
 
 public class DefaultDataBaseActivity extends BaseActivity implements OnClickListener{

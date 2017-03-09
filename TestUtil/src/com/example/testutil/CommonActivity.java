@@ -20,7 +20,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 
 import com.example.testutil.common.ImageViewActivity;
-import com.xuexiang.app.BaseActivity;
+import com.xuexiang.app.activity.BaseActivity;
 
 
 /**

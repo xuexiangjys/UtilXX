@@ -4,9 +4,10 @@ import android.content.Intent;
 import android.view.View;
 import android.view.View.OnClickListener;
 
+import com.example.testutil.data.ACacheActivity;
 import com.example.testutil.data.AhibernateActivity;
 import com.example.testutil.data.OrmliteActivity;
-import com.xuexiang.app.BaseActivity;
+import com.xuexiang.app.activity.BaseActivity;
 
 public class DataActivity extends BaseActivity implements OnClickListener {
 
@@ -29,6 +30,12 @@ public class DataActivity extends BaseActivity implements OnClickListener {
 		case R.id.btn_ormlite:
 			mToastUtil.showToast("点击了OrmliteActivity");
         	intent.setClass(this, OrmliteActivity.class);
+            startActivity(intent);
+			break;
+			
+		case R.id.btn_acache:
+			mToastUtil.showToast("点击了ACacheActivity");
+        	intent.setClass(this, ACacheActivity.class);
             startActivity(intent);
 			break;
 

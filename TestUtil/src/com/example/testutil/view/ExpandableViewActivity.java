@@ -10,7 +10,7 @@ import com.example.testutil.view.expandableview.ExpandableGridViewActivity;
 import com.example.testutil.view.expandableview.ExpandableListViewActivity;
 import com.example.testutil.view.expandableview.ListListActivity;
 import com.example.testutil.view.expandableview.ScrollGridActivity;
-import com.xuexiang.app.BaseActivity;
+import com.xuexiang.app.activity.BaseActivity;
 
 /**  
  * 创建时间：2016-6-22 下午11:50:29  

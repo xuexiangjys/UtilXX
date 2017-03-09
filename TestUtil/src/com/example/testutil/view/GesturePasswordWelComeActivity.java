@@ -5,7 +5,7 @@ import android.util.Log;
 import android.widget.FrameLayout;
 
 import com.example.testutil.R;
-import com.xuexiang.app.BaseActivity;
+import com.xuexiang.app.activity.BaseActivity;
 import com.xuexiang.util.view.DisplayUtils;
 import com.xuexiang.view.GestureContentView;
 import com.xuexiang.view.Gesture.GestureDrawline.GestureCallBack;

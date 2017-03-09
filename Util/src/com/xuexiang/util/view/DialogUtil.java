@@ -12,6 +12,7 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
+import android.content.DialogInterface.OnDismissListener;
 import android.content.Intent;
 import android.text.TextUtils;
 import android.view.View;
@@ -23,7 +24,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.xuexiang.util.common.ToastUtil;
-import com.xuexiang.util.data.DateUtils;
+import com.xuexiang.util.data.DateUtil;
 import com.xuexiang.view.dialog.CircularProgressDialog;
 import com.xuexiang.view.dialog.CustomDialog;
 import com.xuexiang.view.dialog.LoadingAnimatorDialog;
@@ -31,6 +32,7 @@ import com.xuexiang.view.dialog.MonIndicatorDialog;
 import com.xuexiang.view.dialog.RoundProgressBarDialog;
 import com.xuexiang.view.dialog.ShapeLoadingDialog;
 import com.xuexiang.view.dialog.SpotsDialog;
+import com.xuexiang.view.dialog.datepicker.DoubleDatePickerDialog;
 
 /**
  * 对话框显示的工具类
@@ -42,19 +44,11 @@ public class DialogUtil {
 		ProgressDialog progressdialog = ProgressDialog.show(context, "Loading!", message);
 		return progressdialog;
 	}
-	
-	
 
-	public static void showDialog(Context context, String title, String msg,
-			String leftbtn, String rightbtn,
-			OnClickListener LeftOnClickListener,
-			OnClickListener RightOnClickListener, boolean cancelable) {
-		AlertDialog.Builder builder = new AlertDialog.Builder(context)
-				.setCancelable(cancelable);
-		builder.setTitle(title).setMessage(msg)
-				.setNegativeButton(leftbtn, LeftOnClickListener)
-				.setPositiveButton(rightbtn, RightOnClickListener).create()
-				.show();
+	public static void showDialog(Context context, String title, String msg, String leftbtn, String rightbtn, OnClickListener LeftOnClickListener, OnClickListener RightOnClickListener,
+			boolean cancelable) {
+		AlertDialog.Builder builder = new AlertDialog.Builder(context).setCancelable(cancelable);
+		builder.setTitle(title).setMessage(msg).setNegativeButton(leftbtn, LeftOnClickListener).setPositiveButton(rightbtn, RightOnClickListener).create().show();
 	}
 
 	/**
@@ -63,8 +57,7 @@ public class DialogUtil {
 	 * @param ctx
 	 * @param yesListener
 	 */
-	public static void showChangePrompt(Context ctx, String message,
-			OnClickListener yesListener, OnClickListener noListener) {
+	public static void showChangePrompt(Context ctx, String message, OnClickListener yesListener, OnClickListener noListener) {
 		AlertDialog.Builder builder = new Builder(ctx);
 		builder.setIcon(android.R.drawable.ic_dialog_info);
 		builder.setTitle("提示");
@@ -82,8 +75,7 @@ public class DialogUtil {
 	 * @param title
 	 * @param msg
 	 */
-	public static ProgressDialog progressDialog(Context context,
-			final int maxCount, String title, String msg) {
+	public static ProgressDialog progressDialog(Context context, final int maxCount, String title, String msg) {
 		final ProgressDialog dialog = new ProgressDialog(context);
 		dialog.setTitle(title);
 		dialog.setMessage(msg);
@@ -92,12 +84,11 @@ public class DialogUtil {
 		dialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
 		dialog.setMax(maxCount);
 		dialog.setIndeterminate(false);// 设置显示明确的进度
-		dialog.setButton(ProgressDialog.BUTTON_NEGATIVE, "取消",
-				new DialogInterface.OnClickListener() {
-					public void onClick(DialogInterface dialog, int whichButton) {
-						// 这里添加点击后的逻辑
-					}
-				});
+		dialog.setButton(ProgressDialog.BUTTON_NEGATIVE, "取消", new DialogInterface.OnClickListener() {
+			public void onClick(DialogInterface dialog, int whichButton) {
+				// 这里添加点击后的逻辑
+			}
+		});
 		dialog.show();
 		return dialog;
 	}
@@ -118,8 +109,7 @@ public class DialogUtil {
 
 			@Override
 			public void onClick(DialogInterface dialog, int which) {
-				Intent intent = new Intent(
-						android.provider.Settings.ACTION_SETTINGS);
+				Intent intent = new Intent(android.provider.Settings.ACTION_SETTINGS);
 				context.startActivity(intent);
 			}
 		});
@@ -136,8 +126,7 @@ public class DialogUtil {
 	 * @param message
 	 * @param yesListener
 	 */
-	public static AlertDialog getConfirmDialog(Context ctx, String message,
-			OnClickListener yesListener) {
+	public static AlertDialog getConfirmDialog(Context ctx, String message, OnClickListener yesListener) {
 		return getConfirmDialog(ctx, null, message, yesListener);
 	}
 
@@ -148,8 +137,7 @@ public class DialogUtil {
 	 * @param message
 	 * @param yesListener
 	 */
-	public static AlertDialog getConfirmDialog(Context ctx, String title,
-			String message, OnClickListener yesListener) {
+	public static AlertDialog getConfirmDialog(Context ctx, String title, String message, OnClickListener yesListener) {
 		AlertDialog.Builder builder = new Builder(ctx);
 		builder.setIcon(android.R.drawable.ic_dialog_info);
 		if (TextUtils.isEmpty(title)) {
@@ -171,9 +159,7 @@ public class DialogUtil {
 	 * @param ctx
 	 * @param yesListener
 	 */
-	public static void showCustomPrompt(Context ctx, String message,
-			String yesMsg, String noMsg, OnClickListener yesListener,
-			OnClickListener noListener) {
+	public static void showCustomPrompt(Context ctx, String message, String yesMsg, String noMsg, OnClickListener yesListener, OnClickListener noListener) {
 		AlertDialog.Builder builder = new Builder(ctx);
 		builder.setIcon(android.R.drawable.ic_delete);
 		builder.setTitle("删除");
@@ -197,35 +183,38 @@ public class DialogUtil {
 	 *            填写内容
 	 * @param yesListener
 	 */
-	public static void showFilloutDialog(Context ctx, String title,
-			EditText et, String edtcontent, OnClickListener yesListener) {
+	public static void showFilloutDialog(Context ctx, String title, EditText et, String edtcontent, OnClickListener yesListener) {
 		et.setText(edtcontent);
 		AlertDialog.Builder builder = new AlertDialog.Builder(ctx);
-		builder.setTitle(title).setIcon(android.R.drawable.ic_dialog_info)
-				.setView(et).setNegativeButton("取消", null);
+		builder.setTitle(title).setIcon(android.R.drawable.ic_dialog_info).setView(et).setNegativeButton("取消", null);
 		builder.setPositiveButton("确定", yesListener).create().show();
 	}
-	
-	//=======================================自定义loading================================================================================//
+
+	// =======================================自定义loading================================================================================//
 	/**
 	 * loading框的样式
+	 * 
 	 * @author xx
-	 *
+	 * 
 	 */
 	public enum LoadingStyle {
-		Circular, Spots , ShapeLoading, Transparent, RoundProgressBar, MonIndicator, LoadingAnimator
+		Circular, Spots, ShapeLoading, Transparent, RoundProgressBar, MonIndicator, LoadingAnimator
 	}
-	
-    /**
-     * 得到自定义的LoadingDialog 
-     * @param context
-     * @param msg loading信息
-     * @param style 【Circular, Spots , ShapeLoading, Transparent, RoundProgressBar, MonIndicator, LoadingAnimator】
-     * @return
-     */
-    public static AlertDialog createLoadingDialog(Context context, String msg, LoadingStyle loadingStyle) {
-    	AlertDialog dialog;
-    	switch (loadingStyle) {
+
+	/**
+	 * 得到自定义的LoadingDialog
+	 * 
+	 * @param context
+	 * @param msg
+	 *            loading信息
+	 * @param style
+	 *            【Circular, Spots , ShapeLoading, Transparent,
+	 *            RoundProgressBar, MonIndicator, LoadingAnimator】
+	 * @return
+	 */
+	public static AlertDialog createLoadingDialog(Context context, String msg, LoadingStyle loadingStyle) {
+		AlertDialog dialog;
+		switch (loadingStyle) {
 		case Circular:
 			dialog = new CircularProgressDialog(context, msg);
 			break;
@@ -251,18 +240,19 @@ public class DialogUtil {
 			dialog = new CircularProgressDialog(context, msg);
 			break;
 		}
-    	return dialog;
-    }  
-    
-	/** 
-     * 得到自定义的progressDialog 
-     * @param context 
-     * @param msg 
-     * @return 
-     */  
-    public static Dialog createLoadingDialog(Context context, String msg) {
-    	return new CircularProgressDialog(context, msg);
-    }  
+		return dialog;
+	}
+
+	/**
+	 * 得到自定义的progressDialog
+	 * 
+	 * @param context
+	 * @param msg
+	 * @return
+	 */
+	public static Dialog createLoadingDialog(Context context, String msg) {
+		return new CircularProgressDialog(context, msg);
+	}
 
 	/**
 	 * 改变LoadingDialog的状态
@@ -304,53 +294,100 @@ public class DialogUtil {
 			textview.setText(msg);
 		}
 	}
-	
+
 	/**
 	 * 显示生日选择输入框
+	 * 
 	 * @param context
 	 * @param etPatBirth
 	 */
 	public static DatePickerDialog createBirthDatePickerDialog(final Context context, final EditText etPatBirth) {
-	    final Date durrentDate = new Date(System.currentTimeMillis());
+		final Date durrentDate = new Date(System.currentTimeMillis());
 		Calendar calendar = Calendar.getInstance();
 		String birthday = etPatBirth.getText().toString();
-		calendar.setTime(DateUtils.parseStrDate(birthday));
-		DatePickerDialog dlg = new DatePickerDialog(context, DatePickerDialog.THEME_HOLO_LIGHT, new DatePickerDialog.OnDateSetListener() {
+		calendar.setTime(DateUtil.formatStrDate(birthday));
+		final DatePickerDialog dlg = new DatePickerDialog(context, DatePickerDialog.THEME_HOLO_LIGHT, new DatePickerDialog.OnDateSetListener() {
 			@Override
-			public void onDateSet(DatePicker arg0, int l1, int i2, int j2) {
-				StringBuilder stringbuilder = (new StringBuilder(String.valueOf(l1))).append("-");
-				stringbuilder.append((i2 + 1) < 10 ? "0" + (i2 + 1): (i2 + 1)).append("-").append(j2 < 10 ? "0" + j2 : j2);
-				Date selectDate = DateUtils.parseStrDate(stringbuilder.toString());
-				int result = DateUtils.compareDate(selectDate, durrentDate);
+			public void onDateSet(DatePicker datePicker, int l1, int i2, int j2) {
+				StringBuilder stringbuilder = getDateString(datePicker);
+				Date selectDate = DateUtil.formatStrDate(stringbuilder.toString());
+				int result = DateUtil.compareDate(selectDate, durrentDate);
 				if (result == 1) {
-					ToastUtil.getInstance(context).showToast("出生日期不能是未来的时间!",Toast.LENGTH_SHORT);
+					ToastUtil.getInstance(context).showToast("出生日期不能是未来的时间!", Toast.LENGTH_SHORT);
 					return;
 				} else {
 					etPatBirth.setText(stringbuilder.toString());
 				}
 			}
-		}, calendar.get(1), calendar.get(2), calendar.get(5));
+		}, calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DATE));
+		dlg.setOnDismissListener(new OnDismissListener() {
+
+			@Override
+			public void onDismiss(DialogInterface dialog) {
+				View v = dlg.getCurrentFocus();
+				InputMethodUtils.hideKeyboard(v);
+				InputMethodUtils.hideKeyboard(etPatBirth);
+			}
+		});
 		return dlg;
 	}
-	
-	
+
 	/**
 	 * 显示时间选择输入框
-	 * @param context
-	 * @param etPatBirth
 	 */
 	public static DatePickerDialog createDatePickerDialog(final Context context, final EditText editText) {
 		Calendar calendar = Calendar.getInstance();
 		String birthday = editText.getText().toString();
-		calendar.setTime(DateUtils.parseStrDate(birthday));
-		DatePickerDialog dlg = new DatePickerDialog(context, DatePickerDialog.THEME_HOLO_LIGHT, new DatePickerDialog.OnDateSetListener() {
+		calendar.setTime(DateUtil.formatStrDate(birthday));
+		final DatePickerDialog dlg = new DatePickerDialog(context, DatePickerDialog.THEME_HOLO_LIGHT, new DatePickerDialog.OnDateSetListener() {
 			@Override
-			public void onDateSet(DatePicker arg0, int l1, int i2, int j2) {
-				StringBuilder stringbuilder = (new StringBuilder(String.valueOf(l1))).append("-");
-				editText.setText(stringbuilder.append((i2 + 1) < 10 ? "0" + (i2 + 1) : (i2 + 1)).append("-").append(j2 < 10 ? "0" + j2 : j2).toString());
+			public void onDateSet(DatePicker datePicker, int l1, int i2, int j2) {
+				StringBuilder stringbuilder = getDateString(datePicker);
+				editText.setText(stringbuilder.toString());
 			}
-		}, calendar.get(1), calendar.get(2), calendar.get(5));
+		}, calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DATE));
+		dlg.setOnDismissListener(new OnDismissListener() {
+
+			@Override
+			public void onDismiss(DialogInterface dialog) {
+				View v = dlg.getCurrentFocus();
+				InputMethodUtils.hideKeyboard(v);
+				InputMethodUtils.hideKeyboard(editText);
+			}
+		});
 		return dlg;
 	}
 
+	/**
+	 * 获取日期
+	 * 
+	 * @param datePicker
+	 * @return
+	 */
+	private static StringBuilder getDateString(DatePicker datePicker) {
+		// 解决5.0以上系统手动编辑日期值无效的bug
+		datePicker.clearFocus();
+		int year = datePicker.getYear();
+		int month = datePicker.getMonth();
+		int day = datePicker.getDayOfMonth();
+
+		StringBuilder stringbuilder = (new StringBuilder(String.valueOf(year))).append("-");
+		stringbuilder.append((month + 1) < 10 ? "0" + (month + 1) : (month + 1)).append("-").append(day < 10 ? "0" + day : day);
+		return stringbuilder;
+	}
+
+	/**
+	 * 显示双时间选择输入框
+	 */
+	public static DoubleDatePickerDialog createDoubleDatePickerDialog(final Context context, final EditText editText) {
+		Calendar calendar = Calendar.getInstance();
+		DoubleDatePickerDialog dlg = new DoubleDatePickerDialog(context, 0, new DoubleDatePickerDialog.OnDateSetListener() {
+			@Override
+			public void onDateSet(DatePicker startDatePicker, int startYear, int startMonthOfYear, int startDayOfMonth, DatePicker endDatePicker, int endYear, int endMonthOfYear, int endDayOfMonth) {
+				String textString = String.format("开始时间：%d-%d-%d, 结束时间：%d-%d-%d", startYear, startMonthOfYear + 1, startDayOfMonth, endYear, endMonthOfYear + 1, endDayOfMonth);
+				editText.setText(textString);
+			}
+		}, calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DATE), false);
+		return dlg;
+	}
 }

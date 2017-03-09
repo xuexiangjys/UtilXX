@@ -13,7 +13,6 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 
 import com.example.mycustomview.R;
-import com.xuexiang.util.app.AbAppUtil;
 import com.xuexiang.util.view.InputMethodUtils;
 import com.xuexiang.view.jptabbar.JPTabBar;
 

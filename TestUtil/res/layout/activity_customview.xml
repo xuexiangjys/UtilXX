@@ -261,8 +261,10 @@
             </LinearLayout>
 
             <com.xuexiang.view.ClearEditText
+                 android:id="@+id/clearEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:onClick="onClick"
                 android:layout_margin="5dp" />
 
             <LinearLayout

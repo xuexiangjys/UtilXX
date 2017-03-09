@@ -7,7 +7,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 
 import com.example.testutil.R;
-import com.xuexiang.app.BaseActivity;
+import com.xuexiang.app.activity.BaseActivity;
 import com.xuexiang.service.FloatViewService;
 
 public class FloatServiceActivity extends BaseActivity implements OnClickListener{

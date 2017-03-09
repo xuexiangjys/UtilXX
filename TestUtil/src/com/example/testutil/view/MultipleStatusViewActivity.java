@@ -4,7 +4,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.example.testutil.R;
-import com.xuexiang.app.BaseActivity;
+import com.xuexiang.app.activity.BaseActivity;
 import com.xuexiang.view.MultipleStatusView;
 import com.xuexiang.view.floatingactionmenu.FloatingActionButton;
 import com.xuexiang.view.floatingactionmenu.FloatingActionMenu;

@@ -3,7 +3,7 @@ package com.example.mycustomview.custom;
 import android.view.View;
 
 import com.example.mycustomview.R;
-import com.xuexiang.app.BaseActivity;
+import com.xuexiang.app.activity.BaseActivity;
 import com.xuexiang.view.custom.SwitchIconView;
 
 public class SwitchIconActivity extends BaseActivity {

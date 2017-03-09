@@ -273,8 +273,8 @@
         <attr name="si_enabled" format="boolean" />
         <attr name="si_no_dash" format="boolean" />
     </declare-styleable>
-    
-     <!-- PathView -->
+
+    <!-- PathView -->
     <declare-styleable name="PathView">
         <attr name="pathColor" format="color" />
         <attr name="pathWidth" format="float" />
@@ -283,15 +283,35 @@
 
     <!-- imagepicker -->
     <declare-styleable name="CropImageView">
-        <attr name="cropMaskColor" format="color"/>
-        <attr name="cropBorderColor" format="color"/>
-        <attr name="cropBorderWidth" format="dimension"/>
-        <attr name="cropFocusWidth" format="dimension"/>
-        <attr name="cropFocusHeight" format="dimension"/>
+        <attr name="cropMaskColor" format="color" />
+        <attr name="cropBorderColor" format="color" />
+        <attr name="cropBorderWidth" format="dimension" />
+        <attr name="cropFocusWidth" format="dimension" />
+        <attr name="cropFocusHeight" format="dimension" />
         <attr name="cropStyle" format="enum">
-            <enum name="rectangle" value="0"/>
-            <enum name="circle" value="1"/>
+            <enum name="rectangle" value="0" />
+            <enum name="circle" value="1" />
         </attr>
     </declare-styleable>
-    
+    <!-- TabView -->
+    <declare-styleable name="TabView">
+        <attr name="tab_textViewSelColor" format="reference|color" />
+        <attr name="tab_textViewUnSelColor" format="reference|color" />
+        <attr name="tab_tabViewBackgroundColor" format="reference|color" />
+        <attr name="tab_tabViewHeight" format="dimension" />
+        <attr name="imageViewTextViewMargin" format="dimension" />
+        <attr name="tab_textViewSize" format="dimension" />
+        <attr name="tab_imageViewWidth" format="dimension" />
+        <attr name="tab_imageViewHeight" format="dimension" />
+        <attr name="tab_tabViewGravity">
+            <flag name="top" value="0x30" />
+            <flag name="bottom" value="0x50" />
+            <flag name="left" value="0x03" />
+            <flag name="right" value="0x05" />
+        </attr>
+        <attr name="tab_tabViewDefaultPosition" format="integer" />
+        <attr name="tab_isNeedSplitLine" format="boolean" />
+        <attr name="tab_splitLineColor" format="reference|color" />
+    </declare-styleable>
+
 </resources>

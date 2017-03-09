@@ -13,6 +13,11 @@ import java.util.Enumeration;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
 
+/**
+ * 渠道工具
+ * @author xx
+ *
+ */
 public class ChannelUtil {
 
     private static final String CHANNEL_KEY = "channel_key";

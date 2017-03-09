@@ -9,7 +9,7 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 
 import com.example.testutil.R;
-import com.xuexiang.app.BaseActivity;
+import com.xuexiang.app.activity.BaseActivity;
 import com.xuexiang.view.swipelistview.SwipeDismissListView;
 import com.xuexiang.view.swipelistview.SwipeDismissListView.OnDismissCallback;
 

@@ -7,7 +7,7 @@ import android.widget.Button;
 
 import com.example.testutil.R;
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
-import com.xuexiang.app.BaseActivity;
+import com.xuexiang.app.activity.BaseActivity;
 import com.xuexiang.view.HeaderLayout;
 import com.xuexiang.view.HeaderLayout.HeaderStyle;
 import com.xuexiang.view.HeaderLayout.onLeftImageButtonClickListener;

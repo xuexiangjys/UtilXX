@@ -1,6 +1,6 @@
 package com.example.testutil;
 
-import com.xuexiang.app.BaseActivity;
+import com.xuexiang.app.activity.BaseActivity;
 
 /**  
  * 创建时间：2016-5-30 下午6:53:12  

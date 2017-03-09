@@ -4,7 +4,7 @@ import android.content.Intent;
 import android.view.View;
 
 import com.example.testutil.R;
-import com.xuexiang.app.BaseActivity;
+import com.xuexiang.app.activity.BaseActivity;
 
 /**  
  * 创建时间：2016-5-29 下午11:36:48  

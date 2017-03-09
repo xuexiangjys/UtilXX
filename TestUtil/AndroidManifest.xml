@@ -111,6 +111,14 @@
         <activity android:name="com.example.testutil.data.DefaultDataBaseActivity"/>
         <activity android:name="com.example.testutil.data.CustomDataBaseActivity"/>
         <activity android:name="com.example.testutil.data.AutoDataBaseActivity"/>
+        <activity android:name="com.example.testutil.data.ACacheActivity"/>
+        <activity android:name="com.example.testutil.data.acache.SaveBitmapActivity"/>
+        <activity android:name="com.example.testutil.data.acache.SaveDrawableActivity"/>
+        <activity android:name="com.example.testutil.data.acache.SaveJsonArrayActivity"/>
+        <activity android:name="com.example.testutil.data.acache.SaveJsonObjectActivity"/>
+        <activity android:name="com.example.testutil.data.acache.SaveMediaActivity"/>
+        <activity android:name="com.example.testutil.data.acache.SaveObjectActivity"/>
+        <activity android:name="com.example.testutil.data.acache.SaveStringActivity"/>
         
         <activity android:name="com.example.testutil.AdapterListviewActivity"/>
         <activity android:name="com.example.testutil.adapter.MultiAdapterActivity"/>

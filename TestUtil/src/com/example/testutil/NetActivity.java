@@ -12,8 +12,8 @@ import com.example.testutil.net.FileUpLoadAndDownLoadActivity;
 import com.example.testutil.net.OkHttpActivity;
 import com.example.testutil.net.VolleyHttpActivity;
 import com.example.testutil.net.model.HttpConsts;
-import com.xuexiang.app.BaseActivity;
 import com.xuexiang.app.SampleApplication;
+import com.xuexiang.app.activity.BaseActivity;
 import com.xuexiang.util.view.DialogUtil;
 
 /**  

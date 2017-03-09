@@ -13,7 +13,7 @@ import com.example.testutil.R;
 import com.example.testutil.data.adapter.CustomDataAdapter;
 import com.example.testutil.data.dao.custom.CustomDBManager;
 import com.example.testutil.data.entity.Student;
-import com.xuexiang.app.BaseActivity;
+import com.xuexiang.app.activity.BaseActivity;
 import com.xuexiang.util.data.db.ormlite.custom.CustomDBService;
 
 public class CustomDataBaseActivity extends BaseActivity implements OnClickListener{

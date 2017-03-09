@@ -7,7 +7,7 @@ import android.view.View.OnClickListener;
 import com.example.testutil.R;
 import com.example.testutil.view.swipemenu.DifferentMenuActivity;
 import com.example.testutil.view.swipemenu.SimpleActivity;
-import com.xuexiang.app.BaseActivity;
+import com.xuexiang.app.activity.BaseActivity;
 
 /**  
  * 创建时间：2016-6-14 下午3:35:26  

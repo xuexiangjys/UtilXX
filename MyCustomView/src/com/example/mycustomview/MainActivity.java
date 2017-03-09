@@ -18,18 +18,22 @@ import com.example.mycustomview.custom.FloatingViewActivity;
 import com.example.mycustomview.custom.ImagepickerActivity;
 import com.example.mycustomview.custom.LabelActivity;
 import com.example.mycustomview.custom.LoadingLayoutActivity;
+import com.example.mycustomview.custom.MagicindicatorActivity;
 import com.example.mycustomview.custom.MarqueenActivity;
 import com.example.mycustomview.custom.SVGParseActivity;
 import com.example.mycustomview.custom.SlideMenuActivity;
 import com.example.mycustomview.custom.SnowActivity;
 import com.example.mycustomview.custom.StateButtonActivity;
+import com.example.mycustomview.custom.StyleabletToastActivity;
 import com.example.mycustomview.custom.SwitchIconActivity;
+import com.example.mycustomview.custom.ToastyActivity;
 import com.example.mycustomview.custom.WeatherViewActivity;
 import com.example.mycustomview.custom.WebViewMainActivity;
 import com.example.mycustomview.jptabbar.JpTabbarActivity;
 import com.example.mycustomview.pageslidingtab.ui.activity.PageSlidingTabActivity;
 import com.example.mycustomview.pathanim.PathAnimActivity;
-import com.xuexiang.app.BaseActivity;
+import com.example.mycustomview.tabview.TabViewActivity;
+import com.xuexiang.app.activity.BaseActivity;
 
 public class MainActivity extends BaseActivity implements OnClickListener {
 
@@ -147,6 +151,22 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 		case R.id.imagepicker:
 			mToastUtil.showToast("点击了ImagepickerActivity");
 			startActivity(ImagepickerActivity.class);
+			break;
+		case R.id.tabview:
+			mToastUtil.showToast("点击了TabViewActivity");
+			startActivity(TabViewActivity.class);
+			break;
+		case R.id.toasty:
+			mToastUtil.showToast("点击了ToastyActivity");
+			startActivity(ToastyActivity.class);
+			break;
+		case R.id.styleabletoast:
+			mToastUtil.showToast("点击了StyleableToastActivity");
+			startActivity(StyleabletToastActivity.class);
+			break;
+		case R.id.magicindicator:
+			mToastUtil.showToast("点击了MagicindicatorActivity");
+			startActivity(MagicindicatorActivity.class);
 			break;
 
 		default:

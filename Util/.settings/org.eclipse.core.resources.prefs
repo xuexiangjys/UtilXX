@@ -31,6 +31,7 @@ encoding//src/com/xuexiang/view/customprogressbar/CBbaseView.java=UTF-8
 encoding//src/com/xuexiang/view/dialog/ConfirmDialog.java=UTF-8
 encoding//src/com/xuexiang/view/dialog/ShapeLoadingView.java=UTF-8
 encoding//src/com/xuexiang/view/dialog/confirmdialog/ConfirmFragment.java=UTF-8
+encoding//src/com/xuexiang/view/dialog/datepicker/DoubleDatePickerDialog.java=GBK
 encoding//src/com/xuexiang/view/flowtaglayout/FlowTagLayout.java=GBK
 encoding//src/com/xuexiang/view/flowtaglayout/OnInitSelectedPosition.java=GBK
 encoding//src/com/xuexiang/view/flowtaglayout/OnTagClickListener.java=GBK

@@ -3,7 +3,7 @@ package com.example.testutil.view.avloadingindicatorview;
 import android.view.View;
 
 import com.example.testutil.R;
-import com.xuexiang.app.BaseActivity;
+import com.xuexiang.app.activity.BaseActivity;
 import com.xuexiang.view.avloadingindicatorview.AVLoadingIndicatorView;
 
 /**

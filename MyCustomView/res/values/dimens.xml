@@ -1,8 +1,11 @@
 <resources>
+
     <dimen name="status_bar_height">0dp</dimen>
     <dimen name="tool_bar_height">48dp</dimen>
     <dimen name="bottom_op_item_w">28dp</dimen>
     <dimen name="bottom_op_item_h">28dp</dimen>
-
     
+    <dimen name="navigator_margin">5dp</dimen>
+    <dimen name="navigator_common_height">40dp</dimen>
+
 </resources>

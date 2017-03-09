@@ -10,7 +10,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.ListView;
 
 import com.example.testutil.R;
-import com.xuexiang.app.BaseActivity;
+import com.xuexiang.app.activity.BaseActivity;
 import com.xuexiang.view.dropdownmenu.entity.DropdownItemObject;
 import com.xuexiang.view.dropdownmenu.entity.TopicLabelObject;
 import com.xuexiang.view.dropdownmenu.view.DropdownButton;

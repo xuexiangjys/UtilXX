@@ -25,7 +25,7 @@ import android.view.ViewGroup;
 import android.view.ViewGroup.LayoutParams;
 
 import com.example.testutil.R;
-import com.xuexiang.app.BaseActivity;
+import com.xuexiang.app.activity.BaseActivity;
 import com.xuexiang.view.ninegridview.MyImageLoader;
 import com.xuexiang.view.photoview.PhotoView;
 import com.xuexiang.view.scaleview.HackyViewPager;

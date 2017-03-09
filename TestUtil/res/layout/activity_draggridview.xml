@@ -2,30 +2,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="me.daei.touchlistenerconflict.MainFragment">
+    tools:context="me.daei.touchlistenerconflict.MainFragment" >
 
     <com.xuexiang.view.dragview.widget.ControlScrollView
         android:id="@+id/scroller"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:scrollbars="none"
-        >
+        android:scrollbars="none" >
+
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
             <LinearLayout
                 android:id="@+id/top_pane"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:background="#56abe4"
                 android:gravity="center"
-                android:orientation="horizontal">
+                android:orientation="horizontal" >
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="我是banner1"/>
+                    android:text="我是banner1" />
             </LinearLayout>
 
             <com.xuexiang.view.dragview.widget.DragGridView
@@ -34,23 +36,24 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:horizontalSpacing="1dp"
-                android:verticalSpacing="1dp"
+                android:listSelector="#ffffff"
                 android:numColumns="4"
                 android:scrollbars="none"
-                android:listSelector="#ffffff"
-                android:stretchMode="columnWidth"/>
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="1dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:background="#00bb9c"
                 android:gravity="center"
-                android:orientation="horizontal">
+                android:orientation="horizontal" >
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="我是banner2"/>
+                    android:text="我是banner2" />
             </LinearLayout>
         </LinearLayout>
     </com.xuexiang.view.dragview.widget.ControlScrollView>

@@ -13,7 +13,11 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.ViewGroup;
+import android.view.ViewGroup.LayoutParams;
 import android.widget.EditText;
+import android.widget.FrameLayout;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.xuexiang.app.BaseApplication;
@@ -22,16 +26,51 @@ import com.xuexiang.util.data.sharedPreferences.SettingSharePreferenceUtil;
 import com.xuexiang.util.resource.RUtils;
 import com.xuexiang.util.system.EditTextShakeHelper;
 import com.xuexiang.view.TitleBar;
+
 /**
  * @Description: Activity的工具类
- */ 
+ */
 public class ActivityUtil {
-	
+
 	/**
 	 * 利用TitleBar初始化ActionBar
 	 */
-	public static TitleBar initTitleBar(final Activity activity, String title){
+	public static TitleBar initTitleBar(final Activity activity, String title) {
 		TitleBar mTitleBar = initTitleBar(activity, title, new OnClickListener() {
+			@Override
+			public void onClick(View arg0) {
+				activity.finish();
+			}
+		});
+		return mTitleBar;
+	}
+
+	/**
+	 * 利用TitleBar初始化ActionBar
+	 */
+	public static TitleBar initTitleBar(final Activity activity, String title, OnClickListener listener) {
+		TitleBar titleBar = (TitleBar) activity.findViewById(RUtils.getId(activity, "title_bar"));
+		titleBar.setImmersive(false);
+
+		titleBar.setBackgroundColor(Color.parseColor("#64b4ff"));
+
+		titleBar.setLeftImageResource(RUtils.getDrawable(activity, "back_white"));
+		titleBar.setLeftText("返回");
+		titleBar.setLeftTextColor(Color.WHITE);
+		titleBar.setLeftClickListener(listener);
+		titleBar.setTitle(title);
+		titleBar.setTitleColor(Color.WHITE);
+		titleBar.setSubTitleColor(Color.WHITE);
+		titleBar.setDividerColor(Color.GRAY);
+		titleBar.setActionTextColor(Color.WHITE);
+		return titleBar;
+	}
+
+	/**
+	 * 利用TitleBar初始化ActionBar
+	 */
+	public static TitleBar initTitleBarDynamic(final Activity activity, String title) {
+		TitleBar mTitleBar = initTitleBarDynamic(activity, title, new OnClickListener() {
 			@Override
 			public void onClick(View arg0) {
 				activity.finish();
@@ -41,49 +80,61 @@ public class ActivityUtil {
 	}
 	
 	/**
-	 * 利用TitleBar初始化ActionBar
+	 * 动态生成TitleBar
 	 */
-	public static TitleBar initTitleBar(final Activity activity, String title, OnClickListener listener) {
-		TitleBar mTitleBar = (TitleBar) activity.findViewById(RUtils.getId(activity, "title_bar"));
-		mTitleBar.setImmersive(false);
+	public static TitleBar initTitleBarDynamic(Context context, String title, OnClickListener listener) {
+		TitleBar titleBar = new TitleBar(context);
+		RelativeLayout.LayoutParams titleBarParams = new RelativeLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
+		titleBarParams.addRule(RelativeLayout.ALIGN_PARENT_TOP);
+		titleBar.setLayoutParams(titleBarParams);
 
-		mTitleBar.setBackgroundColor(Color.parseColor("#64b4ff"));
+		titleBar.setImmersive(false);
 
-		mTitleBar.setLeftImageResource(RUtils.getDrawable(activity, "back_white"));
-        mTitleBar.setLeftText("返回");
-        mTitleBar.setLeftTextColor(Color.WHITE);
-        mTitleBar.setLeftClickListener(listener);        
-        mTitleBar.setTitle(title);
-        mTitleBar.setTitleColor(Color.WHITE);
-        mTitleBar.setSubTitleColor(Color.WHITE);
-        mTitleBar.setDividerColor(Color.GRAY);
-        mTitleBar.setActionTextColor(Color.WHITE);
-        return mTitleBar;
+		titleBar.setBackgroundColor(Color.parseColor("#64b4ff"));
+
+		titleBar.setLeftImageResource(RUtils.getDrawable(context, "back_white"));
+		titleBar.setLeftText("返回");
+		titleBar.setLeftTextColor(Color.WHITE);
+		titleBar.setLeftClickListener(listener);
+		titleBar.setTitle(title);
+		titleBar.setTitleColor(Color.WHITE);
+		titleBar.setSubTitleColor(Color.WHITE);
+		titleBar.setDividerColor(Color.GRAY);
+		titleBar.setActionTextColor(Color.WHITE);
+
+		return titleBar;
 	}
-	
+
+	public static ViewGroup getContentView(Activity activity) {
+		ViewGroup view = (ViewGroup) activity.getWindow().getDecorView();
+		FrameLayout content = (FrameLayout) view.findViewById(android.R.id.content);
+		return content;
+	}
+
 	/**
 	 * 利用TitleBar初始化ActionBar
 	 */
 	public static void initTitleBar(final Activity activity, String title, OnClickListener leftClickListener, TitleBar.ImageAction imageAction) {
 		TitleBar mTitleBar = initTitleBar(activity, title, leftClickListener);
-	    mTitleBar.addAction(imageAction);  
+		mTitleBar.addAction(imageAction);
 	}
-	
+
 	/**
 	 * 利用TitleBar初始化ActionBar
 	 */
 	public static void initTitleBarWithRightMenu(final Activity activity, String title, TitleBar.ImageAction imageAction) {
 		TitleBar mTitleBar = initTitleBar(activity, title);
-		mTitleBar.addAction(imageAction);  
+		mTitleBar.addAction(imageAction);
 	}
-	
+
 	/**
 	 * 延迟去往新的Activity
+	 * 
 	 * @param context
 	 * @param cls
 	 * @param delay
 	 */
-	public static void delayToActivity(final Context context,final Class<?> cls,long delay) {
+	public static void delayToActivity(final Context context, final Class<?> cls, long delay) {
 		Timer timer = new Timer();
 		timer.schedule(new TimerTask() {
 
@@ -93,8 +144,10 @@ public class ActivityUtil {
 			}
 		}, delay);
 	}
+
 	/**
 	 * 跳转到另一个Activity，不携带数据，不设置flag
+	 * 
 	 * @param context
 	 * @param cls
 	 */
@@ -103,9 +156,10 @@ public class ActivityUtil {
 		intent.setClass(context, cls);
 		context.startActivity(intent);
 	}
-	
+
 	/**
 	 * 跳转到另一个Activity，携带数据
+	 * 
 	 * @param context
 	 * @param cls
 	 */
@@ -118,60 +172,69 @@ public class ActivityUtil {
 		context.startActivity(intent);
 	}
 
-/***********************************************有动作的启动activity*****************************************************************/
+	/*********************************************** 有动作的启动activity *****************************************************************/
 	/**
 	 * go to activity,use animation
+	 * 
 	 * @param context
 	 * @param cls
 	 * @param enterAnim
 	 * @param exitAnim
 	 */
 	public static void startActivity(Context context, Class<?> cls, int enterAnim, int exitAnim, Bundle bundle) {
-		Activity activity = (Activity)context;
+		Activity activity = (Activity) context;
 		Intent intent = new Intent();
 		intent.setClass(activity, cls);
 		intent.putExtras(bundle);
 		activity.startActivity(intent);
 		activity.overridePendingTransition(enterAnim, exitAnim);
 	}
+
 	/**
 	 * to new activity,use animation from right to left
+	 * 
 	 * @param context
 	 * @param cls
 	 */
 	public static void startActivityFromLeft2Right(Context context, Class<?> cls) {
 		startActivityFromLeft2Right(context, cls, null);
 	}
+
 	/**
 	 * to new activity,use animation from right to left carry data
+	 * 
 	 * @param context
 	 * @param cls
 	 */
 	public static void startActivityFromLeft2Right(Context context, Class<?> cls, Bundle bundle) {
-		Activity activity = (Activity)context;
+		Activity activity = (Activity) context;
 		Intent intent = new Intent();
 		intent.setClass(activity, cls);
 		if (bundle != null) {
-		   intent.putExtras(bundle);
+			intent.putExtras(bundle);
 		}
 		activity.startActivity(intent);
 		activity.overridePendingTransition(RUtils.getAnim(context, "in_from_right"), RUtils.getAnim(context, "out_to_right"));
 	}
+
 	/**
 	 * to new activity,use animation from left to right
+	 * 
 	 * @param context
 	 * @param cls
 	 */
 	public static void startActivityFromRight2Left(Context context, Class<?> cls) {
 		startActivityFromRight2Left(context, cls, null);
 	}
+
 	/**
 	 * to new activity,use animation from left to right carry data
+	 * 
 	 * @param context
 	 * @param cls
 	 */
-	public static void startActivityFromRight2Left(Context context,Class<?> cls, Bundle bundle) {
-		Activity activity = (Activity)context;
+	public static void startActivityFromRight2Left(Context context, Class<?> cls, Bundle bundle) {
+		Activity activity = (Activity) context;
 		Intent intent = new Intent();
 		intent.setClass(activity, cls);
 		if (bundle != null) {
@@ -180,51 +243,55 @@ public class ActivityUtil {
 		activity.startActivity(intent);
 		activity.overridePendingTransition(RUtils.getAnim(context, "in_from_left"), RUtils.getAnim(context, "out_to_left"));
 	}
-	
+
 	/**
 	 * to new activity,use animation from bottom to top
+	 * 
 	 * @param context
 	 * @param cls
 	 * @param bundle
 	 */
-	public static void startActivityFromBottom2Top(Context context,Class<?> cls) {
+	public static void startActivityFromBottom2Top(Context context, Class<?> cls) {
 		startActivityFromBottom2Top(context, cls, null);
 	}
-	
+
 	/**
 	 * to new activity,use animation from bottom to top carry data
+	 * 
 	 * @param context
 	 * @param cls
 	 * @param bundle
 	 */
-	public static void startActivityFromBottom2Top(Context context,Class<?> cls,Bundle bundle) {
-		Activity activity = (Activity)context;
+	public static void startActivityFromBottom2Top(Context context, Class<?> cls, Bundle bundle) {
+		Activity activity = (Activity) context;
 		Intent intent = new Intent();
 		intent.setClass(activity, cls);
 		if (bundle != null) {
 			intent.putExtras(bundle);
 		}
 		activity.startActivity(intent);
-		activity.overridePendingTransition(RUtils.getAnim(context, "in_from_bottom"),RUtils.getAnim(context, "out_to_top"));
+		activity.overridePendingTransition(RUtils.getAnim(context, "in_from_bottom"), RUtils.getAnim(context, "out_to_top"));
 	}
-	
+
 	/**
 	 * to new activity,use animation form top to bottom
+	 * 
 	 * @param context
 	 * @param cls
 	 */
 	public static void startActivityFromTop2Bottom(Context context, Class<?> cls) {
 		startActivityFromTop2Bottom(context, cls, null);
 	}
-	
+
 	/**
 	 * to new activity,use animation from bottom to top carry data
+	 * 
 	 * @param context
 	 * @param cls
 	 * @param bundle
 	 */
-	public static void startActivityFromTop2Bottom(Context context,Class<?> cls,Bundle bundle) {
-		Activity activity = (Activity)context;
+	public static void startActivityFromTop2Bottom(Context context, Class<?> cls, Bundle bundle) {
+		Activity activity = (Activity) context;
 		Intent intent = new Intent();
 		intent.setClass(activity, cls);
 		if (bundle != null) {
@@ -233,17 +300,15 @@ public class ActivityUtil {
 		activity.startActivity(intent);
 		activity.overridePendingTransition(RUtils.getAnim(context, "in_from_top"), RUtils.getAnim(context, "out_to_bottom"));
 	}
-	
-/******************************************************启动动作归类********************************************************************************************/	
+
+	/****************************************************** 启动动作归类 ********************************************************************************************/
 	public enum StartAnim {
-		Left2Right,
-		Right2Left,
-		Bottom2Top,
-		Top2Bottom,	
+		Left2Right, Right2Left, Bottom2Top, Top2Bottom,
 	}
-	
+
 	/**
 	 * 跳转到另一个Activity，携带数据
+	 * 
 	 * @param context
 	 * @param cls
 	 */
@@ -262,37 +327,40 @@ public class ActivityUtil {
 			case Top2Bottom:
 				startActivityFromTop2Bottom(context, cls, bundle);
 				break;
-	
+
 			default:
 				startActivity(context, cls, bundle);
 				break;
 			}
 		}
 	}
-	
+
 	/**
 	 * 跳转到另一个Activity，携带数据
+	 * 
 	 * @param context
 	 * @param cls
 	 */
 	public static void startActivity(Context context, Class<?> cls, StartAnim startAnim) {
 		startActivity(context, cls, null, startAnim);
 	}
-	
-	//=================================================全局的UI========================================================================//
+
+	// =================================================全局的UI========================================================================//
 	/**
 	 * 在主线程中运行
+	 * 
 	 * @param r
 	 */
-	public static void runOnUIThread(Runnable r){
+	public static void runOnUIThread(Runnable r) {
 		BaseApplication.getAppHandler().post(r);
 	}
-	
+
 	/**
 	 * 在主线程中Toast
+	 * 
 	 * @param msg
 	 */
-	public static void toastOnUIThread(final String msg){
+	public static void toastOnUIThread(final String msg) {
 		BaseApplication.getAppHandler().post(new Runnable() {
 			@Override
 			public void run() {
@@ -300,72 +368,80 @@ public class ActivityUtil {
 			}
 		});
 	}
-	
+
 	/**
 	 * 获取resources对象
+	 * 
 	 * @return
 	 */
-	public static Resources getResources(){
+	public static Resources getResources() {
 		return BaseApplication.getContext().getResources();
 	}
-	
+
 	/**
 	 * 获取字符串
+	 * 
 	 * @param resId
 	 * @return
 	 */
-	public static String getString(int resId){
+	public static String getString(int resId) {
 		return getResources().getString(resId);
 	}
 
 	/**
 	 * 获取资源图片
+	 * 
 	 * @param resId
 	 * @return
-     */
-	public static Drawable getDrawable(int resId){
+	 */
+	public static Drawable getDrawable(int resId) {
 		return getResources().getDrawable(resId);
 	}
-	
+
 	/**
 	 * 获取dimes值
+	 * 
 	 * @param resId
 	 * @return
 	 */
-	public static float getDimens(int resId){
+	public static float getDimens(int resId) {
 		return getResources().getDimension(resId);
 	}
-	
+
 	/**
 	 * 获取字符串的数组
+	 * 
 	 * @param resId
 	 * @return
 	 */
-	public static String[] getStringArray(int resId){
+	public static String[] getStringArray(int resId) {
 		return getResources().getStringArray(resId);
 	}
-	
-	//=================================================BaseActivity========================================================================//
-	public void Toast(CharSequence hint){
-	    Toast.makeText(BaseApplication.getContext(), hint , Toast.LENGTH_SHORT).show();
-	}	
-	
+
+	// =================================================BaseActivity========================================================================//
+	public void Toast(CharSequence hint) {
+		Toast.makeText(BaseApplication.getContext(), hint, Toast.LENGTH_SHORT).show();
+	}
+
 	/**
 	 * 检验EditText内容是否为空
-	 * @param et  EditText控件
-	 * @param msg 为空时的提示文字
+	 * 
+	 * @param et
+	 *            EditText控件
+	 * @param msg
+	 *            为空时的提示文字
 	 * @return
 	 */
-	public boolean IsEditTextEmpty(EditText et, String msg){
+	public boolean IsEditTextEmpty(EditText et, String msg) {
 		boolean result = false;
-		if(TextUtils.isEmpty(et.getText().toString())){
-			if(SettingSharePreferenceUtil.getInstance(BaseApplication.getContext()).isAllowVibrate()){
-			  new EditTextShakeHelper(BaseApplication.getContext()).shake(et);
+		if (TextUtils.isEmpty(et.getText().toString())) {
+			if (SettingSharePreferenceUtil.getInstance(BaseApplication.getContext()).isAllowVibrate()) {
+				new EditTextShakeHelper(BaseApplication.getContext()).shake(et);
 			}
 			Toast(msg);
 			result = true;
 		}
 		return result;
 	}
-	
+
 }

@@ -5,7 +5,7 @@ import android.view.View;
 import android.view.animation.AccelerateDecelerateInterpolator;
 
 import com.example.mycustomview.R;
-import com.xuexiang.app.BaseActivity;
+import com.xuexiang.app.activity.BaseActivity;
 import com.xuexiang.view.svgparse.PathView;
 
 public class SVGParseActivity extends BaseActivity {
