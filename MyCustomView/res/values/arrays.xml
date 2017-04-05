@@ -19,7 +19,6 @@
         <item>206,0,228,30,</item>
         <item>176,30,202,30,</item>
     </string-array>
-
     <string-array name="storehouse">
         <item>0,35,12,42,</item>
         <item>12,42,24,35,</item>
@@ -43,4 +42,13 @@
         <item>@color/yellow</item>
         <item>@color/green</item>
     </integer-array>
+
+    <string-array name="interpolators">
+        <item>Accelerate</item>
+        <item>Linear</item>
+        <item>AccelerateDecelerate</item>
+        <item>Decelerate</item>
+        <item>FastOutSlowIn</item>
+    </string-array>
+
 </resources>

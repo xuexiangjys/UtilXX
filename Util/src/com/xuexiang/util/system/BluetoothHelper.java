@@ -13,9 +13,10 @@ import android.content.Intent;
 import android.content.IntentFilter;
 
 import com.xuexiang.util.app.ThreadPoolManager;
+import com.xuexiang.util.common.StringUtil;
 
 /**
- * 蓝牙连接辅助类
+ * 蓝牙匹配辅助类（单例）
  * 
  * @author xx
  * @Date 2016-12-21 下午10:27:02
@@ -24,14 +25,38 @@ public class BluetoothHelper {
 
 	private Context mContext;
 	private static volatile BluetoothHelper sBluetoothHelper;
-	private volatile BlueToothReceiver mReceiver = new BlueToothReceiver();
-
-	private BluetoothAdapter mBluetoothAdapter;
-	private List<BluetoothDevice> mBondedList = new ArrayList<BluetoothDevice>();
-	private List<BluetoothDevice> mNewList = new ArrayList<BluetoothDevice>();
+	/**
+	 * 蓝牙广播接收器
+	 */
+	private volatile BlueToothReceiver mReceiver;
+	/**
+	 * 是否需要注销广播
+	 */
 	private boolean mNeed2unRegister = false;
+
+	/**
+	 * 系统蓝牙适配器
+	 */
+	private BluetoothAdapter mBluetoothAdapter;
+	/**
+	 * 已绑定蓝牙设备集合
+	 */
+	private List<BluetoothDevice> mBondedList;
+	/**
+	 * 新发现的蓝牙设备集合（未绑定）
+	 */
+	private List<BluetoothDevice> mNewList;
+
+	/**
+	 * 蓝牙设备监听器
+	 */
 	private OnBluetoothDeviceListener mListener;
+	/**
+	 * 设备过滤器
+	 */
 	private DeviceFilter mDeviceFilter;
+
+	// ================================================初始化================================================//
 
 	public static BluetoothHelper getInstance(Context context) {
 		if (sBluetoothHelper == null) {
@@ -55,7 +80,7 @@ public class BluetoothHelper {
 	}
 
 	/**
-	 * 蓝牙广播接收器
+	 * 蓝牙广播接收器【接收绑定状态变化、发现新设备、扫描结束的广播】
 	 * 
 	 * @author xx
 	 * 
@@ -90,18 +115,6 @@ public class BluetoothHelper {
 		}
 	}
 
-	public boolean isCorrectDevice(BluetoothDevice device) {
-		boolean isCorrectDevice = true;
-		if (mDeviceFilter != null) {
-			isCorrectDevice = mDeviceFilter.isCorrect(device.getName());
-		}
-		return isCorrectDevice;
-	}
-	
-	public BluetoothAdapter getBluetoothAdapter() {
-		return mBluetoothAdapter;
-	}
-
 	// ================================================蓝牙开启================================================//
 	/**
 	 * 注册蓝牙广播接收器
@@ -116,15 +129,6 @@ public class BluetoothHelper {
 		intentFilter.addAction(BluetoothAdapter.ACTION_DISCOVERY_FINISHED);
 		context.getApplicationContext().registerReceiver(mReceiver, intentFilter);
 		mNeed2unRegister = true;
-	}
-
-	/**
-	 * 是否已经开启蓝牙
-	 * 
-	 * @return
-	 */
-	public boolean isOpenBluetooth() {
-		return mBluetoothAdapter.isEnabled();
 	}
 
 	/**
@@ -209,13 +213,8 @@ public class BluetoothHelper {
 	}
 
 	// ================================================蓝牙扫描================================================//
-
-	public void setOnBluetoothDeviceListener(OnBluetoothDeviceListener listener) {
-		mListener = listener;
-	}
-
 	/**
-	 * Start to search bluetooth device
+	 * 开始扫描蓝牙
 	 */
 	public void startSearch() {
 		stopSearch();
@@ -223,7 +222,7 @@ public class BluetoothHelper {
 	}
 
 	/**
-	 * stop to search bluetooth device
+	 * 停止扫描蓝牙
 	 */
 	public void stopSearch() {
 		if (mBluetoothAdapter == null) {
@@ -235,10 +234,10 @@ public class BluetoothHelper {
 	}
 
 	/**
-	 * discovery the devices.
+	 * 扫描蓝牙设备
 	 * 
 	 * @param listener
-	 *            listener for the process
+	 *            蓝牙设备监听器
 	 */
 	public void searchDevices(OnBluetoothDeviceListener listener) {
 		mListener = listener;
@@ -263,17 +262,6 @@ public class BluetoothHelper {
 	}
 
 	// ================================================蓝牙匹配================================================//
-	/**
-	 * 检验蓝牙地址的有效性
-	 * 
-	 * @param address
-	 *            蓝牙地址
-	 * @return true:有效，false:无效
-	 */
-	public boolean isBtAddressVaild(String address) {
-		return BluetoothAdapter.checkBluetoothAddress(address);
-	}
-
 	/**
 	 * 弹出蓝牙连接的方法
 	 * 
@@ -307,6 +295,7 @@ public class BluetoothHelper {
 	 * @return
 	 * @throws Exception
 	 */
+	@SuppressLint("NewApi")
 	public boolean pairBtDevice(String address) {
 		boolean result = false;
 		stopSearch();
@@ -314,7 +303,7 @@ public class BluetoothHelper {
 			mBluetoothAdapter.enable();
 		}
 		if (BluetoothAdapter.checkBluetoothAddress(address)) { // 检查蓝牙地址是否有效
-			BluetoothDevice device = mBluetoothAdapter.getRemoteDevice(address);
+			BluetoothDevice device = getBluetoothDevice(address);
 			if (isCorrectDevice(device)) {
 				if (device.getBondState() != BluetoothDevice.BOND_BONDED) {
 					result = device.createBond();
@@ -325,14 +314,60 @@ public class BluetoothHelper {
 		}
 		return result;
 	}
-	
+
+	// ================================================状态获取================================================//
+	/**
+	 * 是否已经开启蓝牙
+	 * 
+	 * @return
+	 */
+	public boolean isOpenBluetooth() {
+		return mBluetoothAdapter.isEnabled();
+	}
+
+	/**
+	 * 检验蓝牙地址的有效性
+	 * 
+	 * @param address
+	 *            蓝牙地址
+	 * @return true:有效，false:无效
+	 */
+	public boolean isBtAddressVaild(String address) {
+		return !StringUtil.isEmpty(address) && BluetoothAdapter.checkBluetoothAddress(address);
+	}
+
+	/**
+	 * 蓝牙设备是否正确
+	 * 
+	 * @param address
+	 * @return
+	 */
+	public boolean isCorrectDevice(String address) {
+		return isCorrectDevice(getBluetoothDevice(address));
+	}
+
+	/**
+	 * 是否是指定的蓝牙设备
+	 * 
+	 * @param device
+	 * @return
+	 */
+	public boolean isCorrectDevice(BluetoothDevice device) {
+		boolean isCorrectDevice = true;
+		if (mDeviceFilter != null) {
+			isCorrectDevice = mDeviceFilter.isCorrect(device.getName());
+		}
+		return isCorrectDevice;
+	}
+
 	/**
 	 * 蓝牙是否已绑定
+	 * 
 	 * @param address
 	 * @return
 	 */
 	public boolean isBlueToothBond(String address) {
-		BluetoothDevice device = mBluetoothAdapter.getRemoteDevice(address);
+		BluetoothDevice device = getBluetoothDevice(address);
 		if (device.getBondState() == BluetoothDevice.BOND_BONDED) {
 			return true;
 		} else {
@@ -363,15 +398,52 @@ public class BluetoothHelper {
 		mDeviceFilter = null;
 	}
 
+	// ================================================set/get================================================//
+
+	/**
+	 * 设备蓝牙设备监听
+	 * 
+	 * @param listener
+	 */
+	public void setOnBluetoothDeviceListener(OnBluetoothDeviceListener listener) {
+		mListener = listener;
+	}
+
+	/**
+	 * 设置蓝牙设备过滤器
+	 * 
+	 * @param deviceFilter
+	 */
 	public void setDeviceFilter(DeviceFilter deviceFilter) {
 		mDeviceFilter = deviceFilter;
+	}
+
+	public DeviceFilter getDeviceFilter() {
+		return mDeviceFilter;
+	}
+
+	public BluetoothAdapter getBluetoothAdapter() {
+		return mBluetoothAdapter;
+	}
+
+	/**
+	 * 根据地址获取蓝牙设备
+	 * 
+	 * @param address
+	 * @return
+	 */
+	public BluetoothDevice getBluetoothDevice(String address) {
+		if (mBluetoothAdapter != null) {
+			return mBluetoothAdapter.getRemoteDevice(address);
+		} else {
+			return BluetoothAdapter.getDefaultAdapter().getRemoteDevice(address);
+		}
 	}
 
 	/**
 	 * --------------------------------------------接口回调------------------------
 	 * --------------------------------
 	 **/
-
 	/**
 	 * 蓝牙设备监听器
 	 * 
@@ -395,6 +467,12 @@ public class BluetoothHelper {
 		void onBluetoothReOpened();
 	}
 
+	/**
+	 * 设备扫描的监听
+	 * 
+	 * @author xx
+	 * 
+	 */
 	public interface OnSearchDeviceListener {
 
 		/**
@@ -417,12 +495,19 @@ public class BluetoothHelper {
 	}
 
 	/**
-	 * 设备过滤器
+	 * 设备过滤器（过滤蓝牙设备名称）
 	 * 
 	 * @author xx
 	 * 
 	 */
 	public interface DeviceFilter {
+		/**
+		 * 是否是指定的蓝牙设备
+		 * 
+		 * @param deviceName
+		 *            蓝牙设备的名称
+		 * @return
+		 */
 		boolean isCorrect(String deviceName);
 
 	}

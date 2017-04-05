@@ -51,9 +51,74 @@
     <string name="source_on_github">Github位置</string>
     <string name="title_item">功能</string>
     <string name="tip">为保证悬浮球正常使用，请将其加入系统清理白名单</string>
-    
     <string name="sync">Sync</string>
     <string name="alarm">Alarm</string>
     <string name="camera">Camera</string>
+    <!-- picker -->
+    <string name="picker_time">时间选择器</string>
+    <string name="picker_province">条件选择器</string>
+    <string name="picker_custom_time">时间选择器自定义布局</string>
+    <string name="picker_custom_province">条件选择器自定义布局</string>
+
+    <!-- vflow -->
+    <string-array name="vflow_titles">
+        <item> 您的订单开始处理</item>
+        <item> 您的订单待配货</item>
+        <item> 您的包裹已经出库</item>
+        <item> 包裹正在等待揽收</item>
+        <item> [北京市]百世快递 MKT-北京翰林腾跃项目收件员已揽件</item>
+        <item> 北京市转运中心 已发出</item>
+        <item> [北京市]快件已到达北京转运中心</item>
+        <item> [石家庄市]快件已到达石家庄转运中心</item>
+        <item> [石家庄市]快件已到达正定</item>
+        <item> [石家庄市]正定派件员: 张某某 123456789正在为您派件</item>
+    </string-array>
+    <string-array name="vflow_times">
+        <item>2017–02-12 09:19:56</item>
+        <item>2017–02-12 09:50:43</item>
+        <item>2017–02-12 10:19:52</item>
+        <item>2017–02-12 10:30:23</item>
+        <item>2017–02-12 17:19:14</item>
+        <item>2017–02-13 03:23:51</item>
+        <item>2017–02-13 03:33:21</item>
+        <item>2017–02-13 15:23:51</item>
+        <item>2017–02-14 07:51:15</item>
+        <item>2017–02-14 09:37:26</item>
+    </string-array>
+    <string-array name="hflow">
+        <item>提交</item>
+        <item>接单</item>
+        <item>取件</item>
+        <item>配送</item>
+        <item>异常</item>
+    </string-array>
+    <string-array name="hflow6">
+        <item>提交</item>
+        <item>接单</item>
+        <item>取件</item>
+        <item>配送</item>
+        <item>完成</item>
+    </string-array>
+    <string-array name="htime5">
+        <item>15:20</item>
+        <item>15:37</item>
+        <item>15:12</item>
+        <item>15:24</item>
+    </string-array>
+    <string-array name="htime6">
+        <item>15:20</item>
+        <item>15:37</item>
+        <item>15:12</item>
+        <item>15:24</item>
+        <item>16:23</item>
+    </string-array>
+    <!-- alert -->
+    <string name="default_alert">Default Alert</string>
+    <string name="coloured_alert">Coloured Alert</string>
+    <string name="text_only_alert">Text Only Alert</string>
+    <string name="on_click_alert">On Click Alert</string>
+    <string name="verbose_alert">Verbose Alert</string>
+    <string name="custom_icon_alert">Custom Icon Alert</string>
+    <string name="callback_alert">Alert Callbacks</string>
 
 </resources>

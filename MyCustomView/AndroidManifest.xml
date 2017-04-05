@@ -120,6 +120,25 @@
         <activity android:name="com.example.mycustomview.custom.ToastyActivity" />
         <activity android:name="com.example.mycustomview.custom.StyleabletToastActivity" />
         <activity android:name="com.example.mycustomview.custom.MagicindicatorActivity" />
+        
+        <activity android:name="com.example.mycustomview.smoothprogressbar.MakeCustomActivity" />
+        <activity android:name="com.example.mycustomview.smoothprogressbar.SmoothProgressBarActivity" />
+        
+        <activity android:name="com.example.mycustomview.custom.SignatureActivity" />
+        <activity android:name="com.example.mycustomview.custom.AlertviewActivity" />
+        <activity android:name="com.example.mycustomview.custom.FlowlayoutActivity" />
+        <activity android:name="com.example.mycustomview.custom.SearchBoxDialogActivity"
+            android:theme="@style/SearchboxAppTheme" />
+        <activity android:name="com.example.mycustomview.custom.CustomDialogActivity" />
+        <activity android:name="com.example.mycustomview.custom.HintPopupWindowActivity" />
+        <activity android:name="com.example.mycustomview.custom.TimeLineActivity" />
+        <activity android:name="com.example.mycustomview.custom.StepViewHorizonalActivity" />
+        <activity android:name="com.example.mycustomview.custom.StepViewVerticalActivity" />
+        <activity android:name="com.example.mycustomview.custom.AlerterActivity"
+           android:theme="@style/SearchboxAppTheme" />
+        
+        <activity android:name="com.example.mycustomview.pickerview.PickerviewActivity" />
+        <activity android:name="com.example.mycustomview.pickerview.ProvinceJsonDataActivity" />
     </application>
 
 </manifest>

@@ -13,17 +13,6 @@
         <item>Option 3</item>
     </string-array>
 
-    <array name="circular_default_color_sequence">
-        <item>@color/circular_red</item>
-        <item>@color/circular_blue</item>
-        <item>@color/circular_yellow</item>
-        <item>@color/circular_green</item>
-    </array>
-
-    <integer name="circular_default_sweepAnimationDuration">900</integer>
-    <integer name="circular_default_angleAnimationDurationMillis">2000</integer>
-    <integer name="circular_default_miniSweepAngle">30</integer>
-
     <string name="slide_up">Slide up</string>
     <string name="slide">Slide</string>
     <string name="slide_down">Slide down</string>

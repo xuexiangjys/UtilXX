@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import android.os.Bundle;
+import android.os.Message;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -14,6 +15,8 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.testutil.R;
+import com.xuexiang.util.observer.handler.BaseHandlerOperate;
+import com.xuexiang.util.observer.handler.BaseHandlerUpDate;
 import com.xuexiang.util.observer.normal.EventManager;
 import com.xuexiang.util.observer.normal.IObserver;
 import com.xuexiang.util.observer.tag.Event;
@@ -22,11 +25,13 @@ import com.xuexiang.util.observer.tag.TagEventManager;
 
 import de.greenrobot.event.EventBus;
 
-public class Fragment1 extends Fragment implements OnClickListener, IObserver, ITagObserver {
+public class Fragment1 extends Fragment implements OnClickListener, IObserver, ITagObserver, BaseHandlerUpDate {
 
 	private TextView mTvEvent;
 	private Button btn_msg1, btn_msg2, btn_eventbus1, btn_eventbus2, btn_Tagmsg1, btn_Tagmsg2;
-
+	
+	private BaseHandlerOperate handler;
+	public final static int message1 = 1000;
 	public Fragment1() {
 		EventManager.getSubject("msg1").register(this);
 
@@ -35,8 +40,11 @@ public class Fragment1 extends Fragment implements OnClickListener, IObserver, I
 		TagEventManager.getTagSubject("msg1").register(this, eventTagList);
 
 		EventBus.getDefault().register(this);
+		
+		handler =  BaseHandlerOperate.getBaseHandlerOperate();
+		handler.addKeyHandler(getClass(), this);
 	}
-
+	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -74,9 +82,12 @@ public class Fragment1 extends Fragment implements OnClickListener, IObserver, I
 		switch (v.getId()) {
 		case R.id.btn_msg1:
 			EventManager.getSubject("msg1").notifyObservers();
+			handler.putMessageKey(getClass(), message1, "这是传给Fragment1的message1消息");
+			handler.putMessageKey(Fragment2.class, message1, "这是传给Fragment2的message1消息");
 			break;
 		case R.id.btn_msg2:
 			EventManager.getSubject("msg2").notifyObservers();
+			handler.putMessageKey(Fragment2.class, Fragment2.message2, "这是传给Fragment2的message2消息");
 			break;
 		case R.id.btn_Tagmsg1:
 			TagEventManager.getTagSubject("msg1").notify(new Event("Event2", "这个是要推送给Fragment3和Fragment4的消息"));
@@ -118,6 +129,18 @@ public class Fragment1 extends Fragment implements OnClickListener, IObserver, I
 	public void onChanged(Event event) {
 		Log.e("xx", "Fragment1收到消息, Event Tag:" + event.getTag() + ",消息内容：" + event.getMessage());
 	}
+	
+	@Override
+	public void handleMessage(Message message) {
+		switch (message.what) {
+		case message1:
+			Log.e("xx", "Fragment1收到handle消息, message.what:" + message.what + ", message：" + message.obj);
+			break;
+
+		default:
+			break;
+		}
+	}
 
 	@Override
 	public void onDestroy() {
@@ -125,6 +148,9 @@ public class Fragment1 extends Fragment implements OnClickListener, IObserver, I
 		EventManager.getSubject("msg1").unregister(this);
 		TagEventManager.getTagSubject("msg1").unregister(this);
 		EventBus.getDefault().unregister(this);
+		handler.removeKeyData(getClass());
 	}
+
+	
 
 }

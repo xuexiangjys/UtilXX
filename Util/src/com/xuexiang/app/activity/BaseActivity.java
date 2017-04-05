@@ -23,7 +23,6 @@ import android.view.ViewGroup;
 import android.view.ViewGroup.LayoutParams;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -40,6 +39,7 @@ import com.xuexiang.util.resource.MResource;
 import com.xuexiang.util.resource.RUtils;
 import com.xuexiang.util.system.EditTextShakeHelper;
 import com.xuexiang.util.view.InputMethodUtils;
+import com.xuexiang.util.view.ViewUtils;
 import com.xuexiang.view.TitleBar;
 import com.xuexiang.view.popwindow.ActionItem;
 import com.xuexiang.view.popwindow.TitlePopup;
@@ -236,19 +236,7 @@ public abstract class BaseActivity extends FragmentActivity {
 	 * @param listView
 	 */
 	public void setListViewHeightBasedOnChildren(ListView listView) {
-		ListAdapter listAdapter = listView.getAdapter();
-		if (listAdapter == null) {
-			return;
-		}
-		int totalHeight = 0;
-		for (int i = 0; i < listAdapter.getCount(); i++) {
-			View listItem = listAdapter.getView(i, null, listView);
-			listItem.measure(0, 0);
-			totalHeight += listItem.getMeasuredHeight();
-		}
-		ViewGroup.LayoutParams params = listView.getLayoutParams();
-		params.height = totalHeight + (listView.getDividerHeight() * (listAdapter.getCount() - 1));
-		listView.setLayoutParams(params);
+		ViewUtils.setListViewHeightBasedOnChildren(listView);
 	}
 
 	protected void exitBy2Click() {
@@ -291,6 +279,10 @@ public abstract class BaseActivity extends FragmentActivity {
 	public void onBackPressed() {
 		mActivitySwitcher.finishSwitch(this);
 	}
+	
+	public ViewGroup getContentView() {
+        return ActivityUtil.getContentView(this);
+    }
 
 	/**
 	 * -------------------------------------点击非输入区域键盘消失------------------------

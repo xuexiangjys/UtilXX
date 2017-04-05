@@ -12,45 +12,94 @@
   ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License.
-  -->
+-->
 
 <resources>
+
     <dimen name="faboptions_button_padding">10dp</dimen>
     <dimen name="faboptions_button_layout_height">44dp</dimen>
     <dimen name="faboptions_layout_height">98dp</dimen>
-
     <dimen name="faboptions_separator_margin">2dp</dimen>
-
     <dimen name="faboptions_icon_size">30dp</dimen>
     <dimen name="faboptions_radius">20dp</dimen>
     <dimen name="faboptions_vector_dimensions">24dp</dimen>
-    
     <dimen name="snow_edge">20dp</dimen>
-    
     <dimen name="side_letter_bar_letter_size">12sp</dimen>
     <dimen name="side_letter_bar_width">36dp</dimen>
     <dimen name="city_text_size">16sp</dimen>
-    
     <dimen name="app_normal_margin">10dp</dimen>
     <dimen name="app_plus_margin">12dp</dimen>
     <dimen name="app_tiny_margin">4dp</dimen>
-
     <dimen name="font_larger">16sp</dimen>
     <dimen name="font_normal">14sp</dimen>
     <dimen name="font_small">10sp</dimen>
-
     <dimen name="bottom_dialog_top_icon">38dp</dimen>
     <dimen name="bottom_dialog_left_icon">32dp</dimen>
-    
     <dimen name="common_circle_width">3dp</dimen>
     <dimen name="progress_circle_radius">34dp</dimen>
     <dimen name="alert_width">86dp</dimen>
     <dimen name="width">100dp</dimen>
     <dimen name="height">120dp</dimen>
     <dimen name="root_height">150dp</dimen>
-    
     <dimen name="default_label_title_size">10sp</dimen>
     <dimen name="default_label_content_size">12sp</dimen>
     <dimen name="default_label_top_padding">15dp</dimen>
     <dimen name="default_label_bottom_padding">10dp</dimen>
+
+    <!-- 标题文字大小 -->
+    <dimen name="textSize_alert_title">22sp</dimen>
+    <dimen name="textSize_actionsheet_title">14sp</dimen>
+    <!-- 标题文字高度 -->
+    <dimen name="height_alert_title">60dp</dimen>
+    <dimen name="height_actionsheet_title">40dp</dimen>
+    <!-- 消息文字大小 -->
+    <dimen name="textSize_alert_msg">15sp</dimen>
+    <dimen name="textSize_actionsheet_msg">14sp</dimen>
+    <!-- 消息距离底部间距 -->
+    <dimen name="marginBottom_alert_msg">25dp</dimen>
+    <dimen name="marginBottom_actionsheet_msg">14dp</dimen>
+    <!-- 窗口模式左右两边到屏幕的间距 -->
+    <dimen name="margin_alert_left_right">40dp</dimen>
+    <dimen name="margin_actionsheet_left_right">10dp</dimen>
+    <!-- 线条粗细 -->
+    <dimen name="size_divier">1dp</dimen>
+    <!-- 按钮的高度 -->
+    <dimen name="height_alert_button">48dp</dimen>
+    <!-- 按钮文字大小 -->
+    <dimen name="textSize_alert_button">18sp</dimen>
+    <!-- 圆角 -->
+    <dimen name="radius_alertview">15px</dimen>
+
+    <integer name="animation_default_duration">300</integer>
+
+    <!-- 顶部按钮栏高度 -->
+    <dimen name="pickerview_topbar_height">44dp</dimen>
+
+    <!-- 顶部按钮padding -->
+    <dimen name="pickerview_topbar_padding">20dp</dimen>
+
+    <!-- 顶部按钮文字大小 -->
+    <dimen name="pickerview_topbar_btn_textsize">17sp</dimen>
+    <dimen name="pickerview_topbar_title_textsize">18sp</dimen>
+    <!-- 选项文字大小 需要配合 bools.xml 的 pickerview_customTextSize 为 true 才有效果 -->
+    <dimen name="pickerview_textsize">20sp</dimen>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="alerter_activity_horizontal_margin">18dp</dimen>
+    <dimen name="alerter_activity_vertical_margin">16dp</dimen>
+    <dimen name="alerter_padding_small">4dp</dimen>
+    <dimen name="alerter_padding_half">8dp</dimen>
+    <dimen name="alerter_padding_default">16dp</dimen>
+    <dimen name="alerter_alert_padding">28dp</dimen>
+    <dimen name="alerter_alert_negative_margin_top">-24dp</dimen>
+
+    <!-- Alerts -->
+    <dimen name="alerter_alert_min_height">64dp</dimen>
+    <dimen name="alerter_alert_max_height">84dp</dimen>
+    <dimen name="alerter_alert_icn_size">38dp</dimen>
+
+    <!-- Text sizes -->
+    <dimen name="alerter_text_small">14sp</dimen>
+    <dimen name="alerter_text_medium">18sp</dimen>
+
 </resources>

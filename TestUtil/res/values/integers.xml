@@ -9,7 +9,11 @@
 
     <!-- Animations -->
     <integer name="animation_time">400</integer>
-    
     <integer name="SINGLE_IMAGE_MODE_RELATIVE_TO_SELF">1</integer>
     <integer name="SINGLE_IMAGE_MODE_SPECIFIED_RATIO">2</integer>
+    <!-- circular -->
+    <integer name="circular_default_sweepAnimationDuration">900</integer>
+    <integer name="circular_default_angleAnimationDurationMillis">2000</integer>
+    <integer name="circular_default_miniSweepAngle">30</integer>
+
 </resources>

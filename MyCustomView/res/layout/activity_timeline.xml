@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.xuexiang.view.custom.TimeLineView
+        android:id="@+id/timeLineView1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:TLV_lineWidth="5dp"
+        app:TLV_preStringColor="#00ff00"
+        app:TLV_radius="10dp"
+        app:TLV_startedStringColor="#ff0000" />
+
+    <com.xuexiang.view.custom.TimeLineView
+        android:id="@+id/timeLineView2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        app:TLV_preCircleColor="#2200dd"
+        app:TLV_startedCircleColor="#DD3333"
+        app:TLV_textSize="14sp" />
+
+    <com.xuexiang.view.custom.TimeLineView
+        android:id="@+id/timeLineView3"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="20dp"
+        app:TLV_preCircleColor="#0044ff"
+        app:TLV_preLineColor="#333333"
+        app:TLV_startedCircleColor="#880000"
+        app:TLV_startedLineColor="#ff0000"
+        app:TLV_textSize="12sp"
+        app:TLV_underwayCircleColor="#00ff00"
+        app:TLV_underwayStringColor="#770022" />
+
+    <Button
+        android:id="@+id/next"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:text="走你" />
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:text="回到第一步" />
+
+</LinearLayout>

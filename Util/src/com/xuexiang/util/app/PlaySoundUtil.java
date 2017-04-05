@@ -17,7 +17,7 @@ public class PlaySoundUtil {
         	synchronized (PlaySoundUtil.class) {
         		if (sp == null) {
         			sp = new SoundPool(10, AudioManager.STREAM_MUSIC, 5);
-        		//	notifySoundId = sp.load(context, R.raw.notify, 0);
+//        			notifySoundId = sp.load(context, R.raw.notify, 0);
         		//	waitSoundId = sp.load(context, R.raw.tone_wait, 0);
         		}
 			}

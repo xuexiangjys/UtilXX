@@ -20,6 +20,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 
 import com.example.testutil.common.ImageViewActivity;
+import com.example.testutil.common.XMLParserActivity;
 import com.xuexiang.app.activity.BaseActivity;
 
 
@@ -43,6 +44,11 @@ public class CommonActivity extends BaseActivity implements OnClickListener{
 		case R.id.btn_imageview:
 			mToastUtil.showToast("点击了ImageViewActivity");
         	intent.setClass(this, ImageViewActivity.class);
+            startActivity(intent);			
+			break;
+		case R.id.btn_XMLParser:
+			mToastUtil.showToast("点击了XMLParserActivity");
+        	intent.setClass(this, XMLParserActivity.class);
             startActivity(intent);			
 			break;
 		default:

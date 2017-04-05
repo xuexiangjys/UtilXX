@@ -5,13 +5,11 @@ import java.util.List;
 
 import android.graphics.Color;
 import android.graphics.Typeface;
-import android.graphics.drawable.Drawable;
 import android.widget.Toast;
 
 import com.example.mycustomview.R;
 import com.xuexiang.app.activity.ListSimpleActivity;
 import com.xuexiang.view.toast.styleabletoast.StyleableToast;
-import com.xuexiang.view.toast.toasty.Toasty;
 
 /**
  * 创建时间：2017-3-2 上午12:26:36 项目名称：MyCustomView

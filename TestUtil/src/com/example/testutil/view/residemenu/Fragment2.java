@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import android.os.Bundle;
+import android.os.Message;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -12,6 +13,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.testutil.R;
+import com.xuexiang.util.observer.handler.BaseHandlerOperate;
+import com.xuexiang.util.observer.handler.BaseHandlerUpDate;
 import com.xuexiang.util.observer.normal.EventManager;
 import com.xuexiang.util.observer.normal.IObserver;
 import com.xuexiang.util.observer.tag.Event;
@@ -20,10 +23,11 @@ import com.xuexiang.util.observer.tag.TagEventManager;
 
 import de.greenrobot.event.EventBus;
 
-public class Fragment2 extends Fragment implements IObserver, ITagObserver {
+public class Fragment2 extends Fragment implements IObserver, ITagObserver, BaseHandlerUpDate {
 
 	private TextView mTvEvent;
-
+	private BaseHandlerOperate handler;
+	public final static int message2 = 1001;
 	public Fragment2() {
 		EventManager.getSubject("msg2").register(this);
 
@@ -32,6 +36,9 @@ public class Fragment2 extends Fragment implements IObserver, ITagObserver {
 		TagEventManager.getTagSubject("msg2").register(this, eventTagList);
 
 		EventBus.getDefault().register(this);
+		
+		handler = BaseHandlerOperate.getBaseHandlerOperate();
+		handler.addKeyHandler(getClass(), this);
 	}
 
 	@Override
@@ -75,6 +82,20 @@ public class Fragment2 extends Fragment implements IObserver, ITagObserver {
 		Log.e("xx", "Fragment2收到消息, Event Tag:" + event.getTag() + ",消息内容：" + event.getMessage());
 
 	}
+	
+	@Override
+	public void handleMessage(Message message) {
+		switch (message.what) {
+		case Fragment1.message1:
+			Log.e("xx", "Fragment2收到handle消息, message.what:" + message.what + ", message：" + message.obj);
+			break;
+		case message2:
+			Log.e("xx", "Fragment2收到handle消息, message.what:" + message.what + ", message：" + message.obj);
+			break;
+		default:
+			break;
+		}
+	}
 
 	@Override
 	public void onDestroy() {
@@ -82,6 +103,10 @@ public class Fragment2 extends Fragment implements IObserver, ITagObserver {
 		EventManager.getSubject("msg2").unregister(this);
 		TagEventManager.getTagSubject("msg2").unregister(this);
 		EventBus.getDefault().unregister(this);
+		
+		handler.removeKeyData(getClass());
 	}
+
+	
 
 }

@@ -17,4 +17,11 @@
         <item>Linear Progress Button - Determinate</item>
         <item>Linear Progress Button - Indeterminate</item>
     </string-array>
+    
+     <array name="circular_default_color_sequence">
+        <item>@color/circular_red</item>
+        <item>@color/circular_blue</item>
+        <item>@color/circular_yellow</item>
+        <item>@color/circular_green</item>
+    </array>
 </resources>

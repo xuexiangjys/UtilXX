@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="600dp"
+    android:layout_height="360dp"
+    android:background="@drawable/bg_dialog_white_circular_15"
+    android:orientation="vertical"
+    android:padding="5dp" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <com.xuexiang.view.signature.SignatureView
+            android:id="@+id/signatureview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:background="@android:color/white"
+            app:BackColor="@android:color/white"
+            app:PenSize="5dp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@android:color/darker_gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center" >
+
+        <com.xuexiang.view.signature.ButtonView
+            android:id="@+id/btn_clear"
+            style="@style/ResetButtonStyle"
+            android:text="清 除" />
+
+        <com.xuexiang.view.signature.ButtonView
+            android:id="@+id/btn_submit"
+            style="@style/SubmitButtonStyle"
+            android:layout_marginLeft="60dp"
+            android:text="确 定" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -94,76 +94,131 @@
                 android:id="@+id/floatball"
                 style="@style/CustomButtonStyle"
                 android:text="FloatBall Demo" />
-            
+
             <com.xuexiang.view.CustomTextView
                 android:id="@+id/labelview"
                 style="@style/CustomButtonStyle"
                 android:text="LabelView Demo" />
-            
+
             <com.xuexiang.view.CustomTextView
                 android:id="@+id/marqueen"
                 style="@style/CustomButtonStyle"
                 android:text="Marqueen Demo" />
-            
+
             <com.xuexiang.view.CustomTextView
                 android:id="@+id/addresspicker"
                 style="@style/CustomButtonStyle"
                 android:text="AddressPicker Demo" />
-            
+
             <com.xuexiang.view.CustomTextView
                 android:id="@+id/addresswheel"
                 style="@style/CustomButtonStyle"
                 android:text="AddressWheel Demo" />
-            
+
+            <com.xuexiang.view.CustomTextView
+                android:id="@+id/pickerview"
+                style="@style/CustomButtonStyle"
+                android:text="Pickerview Demo" />
+
             <com.xuexiang.view.CustomTextView
                 android:id="@+id/loadinglayout"
                 style="@style/CustomButtonStyle"
                 android:text="LoadingLayout Demo" />
-            
+
             <com.xuexiang.view.CustomTextView
                 android:id="@+id/pathanim"
                 style="@style/CustomButtonStyle"
                 android:text="PathAnim Demo" />
-            
+
             <com.xuexiang.view.CustomTextView
                 android:id="@+id/weatherview"
                 style="@style/CustomButtonStyle"
                 android:text="WeatherView Demo" />
-            
+
             <com.xuexiang.view.CustomTextView
                 android:id="@+id/switchicon"
                 style="@style/CustomButtonStyle"
                 android:text="SwitchIcon Demo" />
-            
+
             <com.xuexiang.view.CustomTextView
                 android:id="@+id/svgparse"
                 style="@style/CustomButtonStyle"
                 android:text="SVGParse Demo" />
-            
+
             <com.xuexiang.view.CustomTextView
                 android:id="@+id/imagepicker"
                 style="@style/CustomButtonStyle"
                 android:text="Imagepicker Demo" />
-            
+
             <com.xuexiang.view.CustomTextView
                 android:id="@+id/tabview"
                 style="@style/CustomButtonStyle"
                 android:text="Tabview Demo" />
-            
+
             <com.xuexiang.view.CustomTextView
                 android:id="@+id/toasty"
                 style="@style/CustomButtonStyle"
                 android:text="Toasty Demo" />
-            
+
             <com.xuexiang.view.CustomTextView
                 android:id="@+id/styleabletoast"
                 style="@style/CustomButtonStyle"
                 android:text="StyleableToast Demo" />
-            
+
             <com.xuexiang.view.CustomTextView
                 android:id="@+id/magicindicator"
                 style="@style/CustomButtonStyle"
                 android:text="Magicindicator Demo" />
+
+            <com.xuexiang.view.CustomTextView
+                android:id="@+id/smoothprogressbar"
+                style="@style/CustomButtonStyle"
+                android:text="smoothprogressbar Demo" />
+
+            <com.xuexiang.view.CustomTextView
+                android:id="@+id/signature"
+                style="@style/CustomButtonStyle"
+                android:text="Signature Demo" />
+
+            <com.xuexiang.view.CustomTextView
+                android:id="@+id/alertview"
+                style="@style/CustomButtonStyle"
+                android:text="ios Alertview Demo" />
+
+            <com.xuexiang.view.CustomTextView
+                android:id="@+id/flowlayout"
+                style="@style/CustomButtonStyle"
+                android:text="Flowlayout Demo" />
+            
+            <com.xuexiang.view.CustomTextView
+                android:id="@+id/searchboxdialog"
+                style="@style/CustomButtonStyle"
+                android:text="SearchBoxDialog Demo" />
+            
+            <com.xuexiang.view.CustomTextView
+                android:id="@+id/customdialog"
+                style="@style/CustomButtonStyle"
+                android:text="CustomDialog Demo" />
+            
+            <com.xuexiang.view.CustomTextView
+                android:id="@+id/hintpopupwindow"
+                style="@style/CustomButtonStyle"
+                android:text="HintPopupWindow Demo" />
+            
+            <com.xuexiang.view.CustomTextView
+                android:id="@+id/timeline"
+                style="@style/CustomButtonStyle"
+                android:text="TimeLine Demo" />
+            
+            <com.xuexiang.view.CustomTextView
+                android:id="@+id/stepviewhorizonal"
+                style="@style/CustomButtonStyle"
+                android:text="Stepview Demo" />
+            
+            <com.xuexiang.view.CustomTextView
+                android:id="@+id/alerter"
+                style="@style/CustomButtonStyle"
+                android:text="AlertTipview Demo" />
         </LinearLayout>
     </ScrollView>
 

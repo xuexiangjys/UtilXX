@@ -105,7 +105,12 @@ public class ActivityUtil {
 		return titleBar;
 	}
 
-	public static ViewGroup getContentView(Activity activity) {
+	/**
+	 * 获取setContentView的父布局
+	 * @param activity
+	 * @return
+	 */
+	public static FrameLayout getContentView(Activity activity) {
 		ViewGroup view = (ViewGroup) activity.getWindow().getDecorView();
 		FrameLayout content = (FrameLayout) view.findViewById(android.R.id.content);
 		return content;

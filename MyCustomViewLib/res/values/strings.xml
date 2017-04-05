@@ -1,10 +1,8 @@
 <resources>
 
     <string name="app_name">MyCustomViewLib</string>
-
     <string name="faboptions_vector_overflow_path">M 6 12 L 6 12.1 M 12 12.1 L 12 12 M 18 12.1 L 18 12</string>
     <string name="faboptions_vector_close_path">M 6 6 L 18 18, M 12 12 L 12 12, M 6 18 L 18 6</string>
-    
     <string name="select_city">选择城市</string>
     <string name="hot_city">热门城市</string>
     <string name="located_city">定位城市</string>
@@ -12,9 +10,7 @@
     <string name="nothing_found">没有搜索结果~</string>
     <string name="locating">正在定位…</string>
     <string name="located_failed">定位失败</string>
-    
     <string name="loading">请稍后...</string>
-    
     <string name="accessibility">开启悬浮球辅助功能</string>
     <!-- imagepicker -->
     <string name="all_images">全部图片</string>
@@ -27,4 +23,17 @@
     <string name="photo_crop">图片裁剪</string>
     <string name="origin">原图</string>
     <string name="origin_size">原图(%1$s)</string>
+    <!-- pickerview -->
+    <string name="pickerview_cancel">取消</string>
+    <string name="pickerview_submit">确定</string>
+    <string name="pickerview_year">年</string>
+    <string name="pickerview_month">月</string>
+    <string name="pickerview_day">日</string>
+    <string name="pickerview_hours">时</string>
+    <string name="pickerview_minutes">分</string>
+    <string name="pickerview_seconds">秒</string>
+    <!-- alert -->
+    <string name="msg.alert_cleared">Alert Cleared</string>
+    <string name="msg.no_alert_showing">No Alert Showing</string>
+
 </resources>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Person>
+    <Name>王小丫</Name>    
+    <Gender>女</Gender>
+	<Age>12岁</Age>
+	<Address>南京市江宁区</Address>
+</Person>

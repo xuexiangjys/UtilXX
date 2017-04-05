@@ -339,8 +339,6 @@ public class ViewActivity extends BaseActivity implements OnClickListener{
             startActivity(intent);			
 			break;
 
-
-
 		default:
 			break;
 		}
