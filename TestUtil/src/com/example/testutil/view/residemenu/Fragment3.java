@@ -3,7 +3,10 @@ package com.example.testutil.view.residemenu;
 import java.util.ArrayList;
 import java.util.List;
 
+import rx.functions.Action1;
+
 import android.os.Bundle;
+import android.os.Looper;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -14,6 +17,7 @@ import android.widget.TextView;
 import com.example.testutil.R;
 import com.xuexiang.util.observer.normal.EventManager;
 import com.xuexiang.util.observer.normal.IObserver;
+import com.xuexiang.util.observer.rxbus.RxManager;
 import com.xuexiang.util.observer.tag.Event;
 import com.xuexiang.util.observer.tag.ITagObserver;
 import com.xuexiang.util.observer.tag.TagEventManager;
@@ -32,6 +36,22 @@ public class Fragment3 extends Fragment implements IObserver, ITagObserver {
 		TagEventManager.getTagSubject("msg1").register(this, eventTagList);
 
 		EventBus.getDefault().register(this);
+		
+		RxManager.get().on("msg2", new Action1<Object>() {
+			@Override
+			public void call(Object object) {
+				Event event = (Event) object;
+				Log.e("xx", "rxBus1: Fragment3收到RxBus消息, 是否在主线程： " + (Looper.myLooper() == Looper.getMainLooper()) + ", Event Tag:" + event.getTag() + ", 消息内容：" + event.getMessage());
+			}
+		});
+		
+		RxManager.get().onMainThread("msg2", new Action1<Object>() {
+			@Override
+			public void call(Object object) {
+				Event event = (Event) object;
+				Log.e("xx", "rxBus2: Fragment3收到RxBus消息, 是否在主线程： " + (Looper.myLooper() == Looper.getMainLooper()) + ", Event Tag:" + event.getTag() + ", 消息内容：" + event.getMessage());
+			}
+		});
 	}
 
 	@Override
@@ -82,6 +102,9 @@ public class Fragment3 extends Fragment implements IObserver, ITagObserver {
 		EventManager.getSubject("msg1").unregister(this);
 		TagEventManager.getTagSubject("msg1").unregister(this);
 		EventBus.getDefault().unregister(this);
+		
+		RxManager.get().clear("msg2");
+		Log.e("xx", "Fragment3 : onDestroy()");
 	}
 
 }

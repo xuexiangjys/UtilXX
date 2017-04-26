@@ -1,10 +1,12 @@
 package com.xuexiang.app;
 
-import com.xuexiang.app.activityswitcher.ActivitySwitcher;
-
 import android.app.Application;
 import android.content.Context;
 import android.os.Handler;
+
+import com.xuexiang.app.activityswitcher.ActivitySwitcher;
+import com.xuexiang.util.app.AppUtils;
+import com.xuexiang.util.log.LogHelper;
 
 /**
  * 捕获应用异常Application 在这里完成整个应用退出；在这里进行全局变量的传递；在这里完成低内存的释放；在这里捕获未抓住的异常；用于应用配置,
@@ -19,6 +21,8 @@ public class BaseApplication extends Application {
 
 	// 全局的 handler 对象
 	private static Handler mAppHandler;
+	// 全局对象
+	private static ActivityLifecycleHelper mActivityLifecycleHelper;
 
 	@Override
 	public void onCreate() {
@@ -26,20 +30,9 @@ public class BaseApplication extends Application {
 		mContext = this;
 		mAppHandler = new Handler();
 		mInstance = new BaseApplication();
+		mActivityLifecycleHelper = new ActivityLifecycleHelper();
+		registerActivityLifecycleCallbacks(mActivityLifecycleHelper);
 		ActivitySwitcher.getInstance().init(this);
-	}
-
-	@Override
-	public void onTerminate() {
-
-		super.onTerminate();
-
-	}
-
-	// 在内存低时,发送广播可以释放一些内存
-	@Override
-	public void onLowMemory() {
-		super.onLowMemory();
 	}
 
 	public static BaseApplication getInstance() {
@@ -54,6 +47,15 @@ public class BaseApplication extends Application {
 	public static Handler getAppHandler() {
 		return mAppHandler;
 	}
-
+	
+	/**
+	 * 退出程序
+	 */
+	public static void exitApp(Context context) {
+		AppUtils.stopAllRunningService(context);
+		mActivityLifecycleHelper.finishAllActivity();
+		LogHelper.close();
+		System.exit(0);
+	}
 
 }

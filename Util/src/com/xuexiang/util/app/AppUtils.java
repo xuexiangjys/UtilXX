@@ -221,7 +221,7 @@ public final class AppUtils {
      * 停止指定应用的所以运行的服务
      * @param context
      */
-    public static void StopAllRunningService(Context context) {
+    public static void stopAllRunningService(Context context) {
         ActivityManager activityManager = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
         List<RunningServiceInfo> servicesList = activityManager.getRunningServices(Integer.MAX_VALUE);
         for (RunningServiceInfo si : servicesList) {

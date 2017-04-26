@@ -3,7 +3,11 @@ package com.example.testutil.view.residemenu;
 import java.util.ArrayList;
 import java.util.List;
 
+import rx.Observable;
+import rx.functions.Action1;
+
 import android.os.Bundle;
+import android.os.Looper;
 import android.os.Message;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -15,10 +19,13 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.testutil.R;
+import com.xuexiang.util.app.ThreadPoolManager;
 import com.xuexiang.util.observer.handler.BaseHandlerOperate;
 import com.xuexiang.util.observer.handler.BaseHandlerUpDate;
 import com.xuexiang.util.observer.normal.EventManager;
 import com.xuexiang.util.observer.normal.IObserver;
+import com.xuexiang.util.observer.rxbus.RxBus;
+import com.xuexiang.util.observer.rxbus.RxManager;
 import com.xuexiang.util.observer.tag.Event;
 import com.xuexiang.util.observer.tag.ITagObserver;
 import com.xuexiang.util.observer.tag.TagEventManager;
@@ -28,10 +35,12 @@ import de.greenrobot.event.EventBus;
 public class Fragment1 extends Fragment implements OnClickListener, IObserver, ITagObserver, BaseHandlerUpDate {
 
 	private TextView mTvEvent;
-	private Button btn_msg1, btn_msg2, btn_eventbus1, btn_eventbus2, btn_Tagmsg1, btn_Tagmsg2;
+	private Button btn_msg1, btn_msg2, btn_eventbus1, btn_eventbus2, btn_Tagmsg1, btn_Tagmsg2, btn_clear;
 	
 	private BaseHandlerOperate handler;
 	public final static int message1 = 1000;
+	
+	private Observable<String> rxBusMsg1;
 	public Fragment1() {
 		EventManager.getSubject("msg1").register(this);
 
@@ -43,6 +52,15 @@ public class Fragment1 extends Fragment implements OnClickListener, IObserver, I
 		
 		handler =  BaseHandlerOperate.getBaseHandlerOperate();
 		handler.addKeyHandler(getClass(), this);
+		
+		rxBusMsg1 = RxBus.get().register("msg1");
+		rxBusMsg1.subscribe(new Action1<Object>() {
+			@Override
+			public void call(Object object) {
+				Event event = (Event) object;
+				Log.e("xx", "Fragment1收到RxBus消息, 是否在主线程： " + (Looper.myLooper() == Looper.getMainLooper()) + ", Event Tag:" + event.getTag() + ", 消息内容：" + event.getMessage());
+			}
+		});
 	}
 	
 	@Override
@@ -75,6 +93,9 @@ public class Fragment1 extends Fragment implements OnClickListener, IObserver, I
 		btn_eventbus2 = (Button) view.findViewById(R.id.btn_eventbus2);
 		btn_eventbus1.setOnClickListener(this);
 		btn_eventbus2.setOnClickListener(this);
+		
+		btn_clear = (Button) view.findViewById(R.id.clear);
+		btn_clear.setOnClickListener(this);
 	}
 
 	@Override
@@ -84,10 +105,24 @@ public class Fragment1 extends Fragment implements OnClickListener, IObserver, I
 			EventManager.getSubject("msg1").notifyObservers();
 			handler.putMessageKey(getClass(), message1, "这是传给Fragment1的message1消息");
 			handler.putMessageKey(Fragment2.class, message1, "这是传给Fragment2的message1消息");
+			ThreadPoolManager.getInstance().addTask(new Runnable() {
+				@Override
+				public void run() {
+					RxBus.get().post("msg1", new Event("Event1", "这是在子线程中推送给Fragment1和Fragment2的消息"));					
+				}
+			});
+			
 			break;
 		case R.id.btn_msg2:
 			EventManager.getSubject("msg2").notifyObservers();
 			handler.putMessageKey(Fragment2.class, Fragment2.message2, "这是传给Fragment2的message2消息");
+			ThreadPoolManager.getInstance().addTask(new Runnable() {
+				@Override
+				public void run() {
+					RxManager.get().post("msg2", new Event("Event2", "这是在子线程中推送给Fragment3的消息"));
+				}
+			});
+			
 			break;
 		case R.id.btn_Tagmsg1:
 			TagEventManager.getTagSubject("msg1").notify(new Event("Event2", "这个是要推送给Fragment3和Fragment4的消息"));
@@ -101,7 +136,9 @@ public class Fragment1 extends Fragment implements OnClickListener, IObserver, I
 		case R.id.btn_eventbus2:
 			EventBus.getDefault().post(new Event2("Event2 btn clicked"));
 			break;
-
+		case R.id.clear:
+			RxManager.get().clear("msg2");
+			break;
 		default:
 			break;
 		}
@@ -149,6 +186,7 @@ public class Fragment1 extends Fragment implements OnClickListener, IObserver, I
 		TagEventManager.getTagSubject("msg1").unregister(this);
 		EventBus.getDefault().unregister(this);
 		handler.removeKeyData(getClass());
+		RxBus.get().unregister("msg1", rxBusMsg1);
 	}
 
 	
