@@ -476,4 +476,6 @@
     <color name="progress_color_default">#00C5CD</color>
     <color name="progressbar_bg_color_1">#737373</color>
     <color name="progress_color_1">#3CB371</color>
+    
+    <color name="de0b02">#de0b02</color>
 </resources>

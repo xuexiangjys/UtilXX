@@ -103,6 +103,7 @@
         <activity android:name="com.example.testutil.CommonActivity"/>
         <activity android:name="com.example.testutil.common.ImageViewActivity"/>
         <activity android:name="com.example.testutil.common.XMLParserActivity"/>
+        <activity android:name="com.example.testutil.common.CompressorActivity"/>
         
         <activity android:name="com.example.testutil.DataActivity"/>
         <activity android:name="com.example.testutil.data.AhibernateActivity"/>
@@ -134,6 +135,7 @@
         <activity android:name="com.example.testutil.net.AsyncHttpActivity"/>
         <activity android:name="com.example.testutil.net.OkHttpActivity"/>
         <activity android:name="com.example.testutil.net.FileUpLoadAndDownLoadActivity"/>
+        <activity android:name="com.example.testutil.net.ImageLoaderActivity"/>
         
         <activity android:name="com.example.testutil.ResourceActivity"/>
         

@@ -189,36 +189,41 @@
                 android:id="@+id/flowlayout"
                 style="@style/CustomButtonStyle"
                 android:text="Flowlayout Demo" />
-            
+
             <com.xuexiang.view.CustomTextView
                 android:id="@+id/searchboxdialog"
                 style="@style/CustomButtonStyle"
                 android:text="SearchBoxDialog Demo" />
-            
+
             <com.xuexiang.view.CustomTextView
                 android:id="@+id/customdialog"
                 style="@style/CustomButtonStyle"
                 android:text="CustomDialog Demo" />
-            
+
             <com.xuexiang.view.CustomTextView
                 android:id="@+id/hintpopupwindow"
                 style="@style/CustomButtonStyle"
                 android:text="HintPopupWindow Demo" />
-            
+
             <com.xuexiang.view.CustomTextView
                 android:id="@+id/timeline"
                 style="@style/CustomButtonStyle"
                 android:text="TimeLine Demo" />
-            
+
             <com.xuexiang.view.CustomTextView
                 android:id="@+id/stepviewhorizonal"
                 style="@style/CustomButtonStyle"
                 android:text="Stepview Demo" />
-            
+
             <com.xuexiang.view.CustomTextView
                 android:id="@+id/alerter"
                 style="@style/CustomButtonStyle"
                 android:text="AlertTipview Demo" />
+
+            <com.xuexiang.view.CustomTextView
+                android:id="@+id/materialdialog"
+                style="@style/CustomButtonStyle"
+                android:text="MaterialDialog Demo" />
         </LinearLayout>
     </ScrollView>
 

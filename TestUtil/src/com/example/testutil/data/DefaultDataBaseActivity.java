@@ -5,6 +5,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import android.app.Dialog;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ListView;
@@ -14,7 +15,11 @@ import com.example.testutil.data.adapter.DataAdapter;
 import com.example.testutil.data.dao.default_.DBManager;
 import com.example.testutil.data.entity.Student;
 import com.xuexiang.app.activity.BaseActivity;
+import com.xuexiang.util.data.db.SQLiteToExcel;
 import com.xuexiang.util.data.db.ormlite.default_.DBService;
+import com.xuexiang.util.file.LocalFileUtil;
+import com.xuexiang.util.view.DialogUtil;
+import com.xuexiang.util.view.DialogUtil.LoadingStyle;
 
 public class DefaultDataBaseActivity extends BaseActivity implements OnClickListener{
     private DBService<Student> mDatabaseService;   
@@ -77,6 +82,27 @@ public class DefaultDataBaseActivity extends BaseActivity implements OnClickList
 				e.printStackTrace();
 			}
 	
+			break;
+		case R.id.export:
+			final Dialog loadingDialog = DialogUtil.createLoadingDialog(mContext, "正在导出数据库", LoadingStyle.Spots);
+			SQLiteToExcel sqliteToExcel = new SQLiteToExcel(getApplicationContext(), mDatabaseService.getDatabaseHelper().getDatabase().getPath(), LocalFileUtil.DATABASE_PATH);
+            sqliteToExcel.exportAllTables("Default_Students.xls", new SQLiteToExcel.ExportListener() {
+                @Override
+                public void onStart() {
+                	loadingDialog.show();
+                }
+
+                @Override
+                public void onCompleted(String filePath) {
+                	loadingDialog.dismiss();
+                    Toast("导出成功！，文件路径：" + filePath);
+                }
+
+                @Override
+                public void onError(Exception e) {
+                	loadingDialog.dismiss();
+                }
+            });
 			break;
 		default:
 			break;

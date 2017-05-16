@@ -58,6 +58,13 @@
 	        android:layout_height="wrap_content"
 	        android:onClick="onClick"
 	        android:text="FileUpLoadAndDownLoad Demo" />
+	    
+	    <Button
+	        android:id="@+id/btn_image_load"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:onClick="onClick"
+	        android:text="ImageLoader Demo" />
     
      </LinearLayout>
    </ScrollView>

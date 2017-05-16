@@ -8,8 +8,8 @@ import butterknife.ButterKnife.ViewBinder;
 public class SearchBoxDialogActivity$$ViewBinder<T extends com.example.mycustomview.custom.SearchBoxDialogActivity> implements ViewBinder<T> {
   @Override public void bind(final Finder finder, final T target, Object source) {
     View view;
-    view = finder.findRequiredView(source, 2131231005, "field 'searchInfo'");
-    target.searchInfo = finder.castView(view, 2131231005, "field 'searchInfo'");
+    view = finder.findRequiredView(source, 2131231012, "field 'searchInfo'");
+    target.searchInfo = finder.castView(view, 2131231012, "field 'searchInfo'");
     view = finder.findRequiredView(source, 2131230860, "field 'toolbar'");
     target.toolbar = finder.castView(view, 2131230860, "field 'toolbar'");
   }

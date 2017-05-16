@@ -5,12 +5,15 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileReader;
 import java.io.IOException;
+import java.math.BigDecimal;
 import java.text.DecimalFormat;
 
 import android.app.ActivityManager;
 import android.content.Context;
+import android.graphics.BitmapFactory;
 import android.os.Environment;
 import android.os.StatFs;
+import android.text.TextUtils;
 import android.util.Log;
 
 public class FileSizeUtil {
@@ -45,7 +48,7 @@ public class FileSizeUtil {
 			e.printStackTrace();
 			Log.e("获取文件大小", "获取失败!");
 		}
-		return FormetFileSize(blockSize, sizeType);
+		return FormatFileSize(blockSize, sizeType);
 	}
 
 	/**
@@ -68,7 +71,7 @@ public class FileSizeUtil {
 			e.printStackTrace();
 			Log.e("获取文件大小", "获取失败!");
 		}
-		return FormetFileSize(blockSize);
+		return FormatFileSize(blockSize);
 	}
 
 	/**
@@ -117,7 +120,7 @@ public class FileSizeUtil {
 	 * @param fileS
 	 * @return
 	 */
-	private static String FormetFileSize(long fileS) {
+	private static String FormatFileSize(long fileS) {
 		DecimalFormat df = new DecimalFormat("#.00");
 		String fileSizeString = "";
 		String wrongSize = "0B";
@@ -143,7 +146,7 @@ public class FileSizeUtil {
 	 * @param sizeType
 	 * @return
 	 */
-	public static double FormetFileSize(long fileS, int sizeType) {
+	public static double FormatFileSize(long fileS, int sizeType) {
 		DecimalFormat df = new DecimalFormat("#.00");
 		double fileSizeLong = 0;
 		switch (sizeType) {
@@ -157,117 +160,203 @@ public class FileSizeUtil {
 			fileSizeLong = Double.valueOf(df.format((double) fileS / 1048576));
 			break;
 		case SIZETYPE_GB:
-			fileSizeLong = Double.valueOf(df
-					.format((double) fileS / 1073741824));
+			fileSizeLong = Double.valueOf(df.format((double) fileS / 1073741824));
 			break;
 		default:
 			break;
 		}
 		return fileSizeLong;
 	}
-	
-	
+
 	private static final int ERROR = -1;
 
-    /**
-     * SDCARD是否存
-     */
-    public static boolean externalMemoryAvailable() {
-        return android.os.Environment.getExternalStorageState().equals(
-                android.os.Environment.MEDIA_MOUNTED);
-    }
-    
-	 /**
-     * 获取手机内部剩余存储空间
-     * 
-     * @return
-     */
-    public static long getAvailableInternalMemorySize() {
-        File path = Environment.getDataDirectory();
-        StatFs stat = new StatFs(path.getPath());
-        long blockSize = stat.getBlockSize();
-        long availableBlocks = stat.getAvailableBlocks();
-        return availableBlocks * blockSize;
-    }
+	/**
+	 * SDCARD是否存
+	 */
+	public static boolean externalMemoryAvailable() {
+		return android.os.Environment.getExternalStorageState().equals(android.os.Environment.MEDIA_MOUNTED);
+	}
 
-    /**
-     * 获取手机内部总的存储空间
-     * 
-     * @return
-     */
-    public static long getTotalInternalMemorySize() {
-        File path = Environment.getDataDirectory();
-        StatFs stat = new StatFs(path.getPath());
-        long blockSize = stat.getBlockSize();
-        long totalBlocks = stat.getBlockCount();
-        return totalBlocks * blockSize;
-    }
+	/**
+	 * 获取手机内部剩余存储空间
+	 * 
+	 * @return
+	 */
+	public static long getAvailableInternalMemorySize() {
+		File path = Environment.getDataDirectory();
+		StatFs stat = new StatFs(path.getPath());
+		long blockSize = stat.getBlockSize();
+		long availableBlocks = stat.getAvailableBlocks();
+		return availableBlocks * blockSize;
+	}
 
-    /**
-     * 获取SDCARD剩余存储空间
-     * 
-     * @return
-     */
-    public static long getAvailableExternalMemorySize() {
-        if (externalMemoryAvailable()) {
-            File path = Environment.getExternalStorageDirectory();
-            StatFs stat = new StatFs(path.getPath());
-            long blockSize = stat.getBlockSize();
-            long availableBlocks = stat.getAvailableBlocks();
-            return availableBlocks * blockSize;
-        } else {
-            return ERROR;
-        }
-    }
+	/**
+	 * 获取手机内部总的存储空间
+	 * 
+	 * @return
+	 */
+	public static long getTotalInternalMemorySize() {
+		File path = Environment.getDataDirectory();
+		StatFs stat = new StatFs(path.getPath());
+		long blockSize = stat.getBlockSize();
+		long totalBlocks = stat.getBlockCount();
+		return totalBlocks * blockSize;
+	}
 
-    /**
-     * 获取SDCARD总的存储空间
-     * 
-     * @return
-     */
-    public static long getTotalExternalMemorySize() {
-        if (externalMemoryAvailable()) {
-            File path = Environment.getExternalStorageDirectory();
-            StatFs stat = new StatFs(path.getPath());
-            long blockSize = stat.getBlockSize();
-            long totalBlocks = stat.getBlockCount();
-            return totalBlocks * blockSize;
-        } else {
-            return ERROR;
-        }
-    }
+	/**
+	 * 获取SDCARD剩余存储空间
+	 * 
+	 * @return
+	 */
+	public static long getAvailableExternalMemorySize() {
+		if (externalMemoryAvailable()) {
+			File path = Environment.getExternalStorageDirectory();
+			StatFs stat = new StatFs(path.getPath());
+			long blockSize = stat.getBlockSize();
+			long availableBlocks = stat.getAvailableBlocks();
+			return availableBlocks * blockSize;
+		} else {
+			return ERROR;
+		}
+	}
 
-    /**
-     * 获取系统总内存
-     * 
-     * @param context 可传入应用程序上下文。
-     * @return 总内存大单位为B。
-     */
-    public static long getTotalMemorySize(Context context) {
-        String dir = "/proc/meminfo";
-        try {
-            FileReader fr = new FileReader(dir);
-            BufferedReader br = new BufferedReader(fr, 2048);
-            String memoryLine = br.readLine();
-            String subMemoryLine = memoryLine.substring(memoryLine.indexOf("MemTotal:"));
-            br.close();
-            return Integer.parseInt(subMemoryLine.replaceAll("\\D+", "")) * 1024l;
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return 0;
-    }
+	/**
+	 * 获取SDCARD总的存储空间
+	 * 
+	 * @return
+	 */
+	public static long getTotalExternalMemorySize() {
+		if (externalMemoryAvailable()) {
+			File path = Environment.getExternalStorageDirectory();
+			StatFs stat = new StatFs(path.getPath());
+			long blockSize = stat.getBlockSize();
+			long totalBlocks = stat.getBlockCount();
+			return totalBlocks * blockSize;
+		} else {
+			return ERROR;
+		}
+	}
 
-    /**
-     * 获取当前可用内存，返回数据以字节为单位。
-     * 
-     * @param context 可传入应用程序上下文。
-     * @return 当前可用内存单位为B。
-     */
-    public static long getAvailableMemory(Context context) {
-        ActivityManager am = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
-        ActivityManager.MemoryInfo memoryInfo = new ActivityManager.MemoryInfo();
-        am.getMemoryInfo(memoryInfo);
-        return memoryInfo.availMem;
-    }
+	/**
+	 * 获取系统总内存
+	 * 
+	 * @param context
+	 *            可传入应用程序上下文。
+	 * @return 总内存大单位为B。
+	 */
+	public static long getTotalMemorySize(Context context) {
+		String dir = "/proc/meminfo";
+		try {
+			FileReader fr = new FileReader(dir);
+			BufferedReader br = new BufferedReader(fr, 2048);
+			String memoryLine = br.readLine();
+			String subMemoryLine = memoryLine.substring(memoryLine.indexOf("MemTotal:"));
+			br.close();
+			return Integer.parseInt(subMemoryLine.replaceAll("\\D+", "")) * 1024l;
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return 0;
+	}
+
+	/**
+	 * 获取当前可用内存，返回数据以字节为单位。
+	 * 
+	 * @param context
+	 *            可传入应用程序上下文。
+	 * @return 当前可用内存单位为B。
+	 */
+	public static long getAvailableMemory(Context context) {
+		ActivityManager am = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
+		ActivityManager.MemoryInfo memoryInfo = new ActivityManager.MemoryInfo();
+		am.getMemoryInfo(memoryInfo);
+		return memoryInfo.availMem;
+	}
+
+	/**
+	 * 获取指定文件夹内所有文件大小的和
+	 * 
+	 * @param file
+	 *            file
+	 * @return size
+	 * @throws Exception
+	 */
+	public static long getFolderSize(File file) throws Exception {
+		long size = 0;
+		try {
+			File[] fileList = file.listFiles();
+			for (File aFileList : fileList) {
+				if (aFileList.isDirectory()) {
+					size = size + getFolderSize(aFileList);
+				} else {
+					size = size + aFileList.length();
+				}
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return size;
+	}
+
+	/**
+	 * 格式化单位
+	 * 
+	 * @param size
+	 *            size
+	 * @return size
+	 */
+	public static String getFormatSize(double size) {
+
+		double kiloByte = size / 1024;
+		if (kiloByte < 1) {
+			return size + "Byte";
+		}
+
+		double megaByte = kiloByte / 1024;
+		if (megaByte < 1) {
+			BigDecimal result1 = new BigDecimal(Double.toString(kiloByte));
+			return result1.setScale(2, BigDecimal.ROUND_HALF_UP).toPlainString() + "KB";
+		}
+
+		double gigaByte = megaByte / 1024;
+		if (gigaByte < 1) {
+			BigDecimal result2 = new BigDecimal(Double.toString(megaByte));
+			return result2.setScale(2, BigDecimal.ROUND_HALF_UP).toPlainString() + "MB";
+		}
+
+		double teraBytes = gigaByte / 1024;
+		if (teraBytes < 1) {
+			BigDecimal result3 = new BigDecimal(Double.toString(gigaByte));
+			return result3.setScale(2, BigDecimal.ROUND_HALF_UP).toPlainString() + "GB";
+		}
+		BigDecimal result4 = new BigDecimal(teraBytes);
+
+		return result4.setScale(2, BigDecimal.ROUND_HALF_UP).toPlainString() + "TB";
+	}
+
+	public static String getPicType(String pathName) {
+		BitmapFactory.Options options = new BitmapFactory.Options();
+		options.inJustDecodeBounds = true;
+		BitmapFactory.decodeFile(pathName, options);
+		String type = options.outMimeType;
+		if (!TextUtils.isEmpty(type)) {
+			try {
+				type = type.substring(6, type.length());
+				if ("gif".equals(type)) {
+					return ".gif";
+				}
+			} catch (IndexOutOfBoundsException e) {
+				e.printStackTrace();
+			}
+		}
+		return ".jpg";
+	}
+
+	public static boolean isSDCardExist() {
+		String state = Environment.getExternalStorageState();
+		if (Environment.MEDIA_MOUNTED.equals(state)) {
+			return true;
+		}
+		return false;
+	}
 }

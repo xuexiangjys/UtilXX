@@ -37,5 +37,9 @@ public class BaseDBHelper<T> extends OrmLiteSqliteOpenHelper {
 	public void close() {		
 		super.close();
 	}
+	
+	public SQLiteDatabase getDatabase() {
+		return getWritableDatabase();
+	}
 
 }

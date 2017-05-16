@@ -1,0 +1,75 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="init"
+        android:layout_margin="16dp"
+        android:id="@+id/button"
+        android:onClick="init"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="show"
+        android:id="@+id/button2"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:onClick="show"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="progerssbar"
+        android:id="@+id/button_set_view"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:onClick="setView"
+        android:layout_gravity="center_horizontal"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="setContentView"
+        android:id="@+id/button_set_contentView"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:onClick="setView"
+        android:layout_gravity="center_horizontal"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="setContentView (by id)"
+        android:id="@+id/button_set_contentViewById"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:onClick="setView"
+        android:layout_gravity="center_horizontal"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="setBackground"
+        android:id="@+id/button_set_background"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:onClick="setView"
+        android:layout_gravity="center_horizontal"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="no set title"
+        android:id="@+id/button_set_notitile"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:onClick="setView"
+        android:layout_gravity="center_horizontal"/>
+
+</LinearLayout>

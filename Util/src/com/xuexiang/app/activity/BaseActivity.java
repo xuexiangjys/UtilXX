@@ -25,7 +25,6 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.xuexiang.app.BaseApplication;
 import com.xuexiang.app.activityswitcher.ActivitySwitcher;
@@ -180,6 +179,10 @@ public abstract class BaseActivity extends FragmentActivity {
 		});
 		return mTitleBar;
 	}
+	
+	protected <T extends View> T $(int resId) {
+        return (T) getContentView().findViewById(resId);
+    }
 
 	/**
 	 * 检验EditText内容是否为空
@@ -221,9 +224,14 @@ public abstract class BaseActivity extends FragmentActivity {
 		Log.e(TAG, msg);
 	}
 
-	public void Toast(CharSequence hint) {
-		Toast.makeText(this, hint, Toast.LENGTH_SHORT).show();
-	}
+	 /**
+     * Toast提示
+     *
+     * @param msg
+     */
+    public void Toast(String msg) {
+        ActivityUtil.toastOnUIThread(msg);
+    }
 
 	protected void onDestroy() {
 		mActivityManager.finishActivity(this);

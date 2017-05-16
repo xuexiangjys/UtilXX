@@ -9,6 +9,7 @@ import android.widget.ImageView;
 
 import com.example.testutil.net.AsyncHttpActivity;
 import com.example.testutil.net.FileUpLoadAndDownLoadActivity;
+import com.example.testutil.net.ImageLoaderActivity;
 import com.example.testutil.net.OkHttpActivity;
 import com.example.testutil.net.VolleyHttpActivity;
 import com.example.testutil.net.model.HttpConsts;
@@ -74,6 +75,11 @@ public class NetActivity extends BaseActivity implements OnClickListener{
         	intent.setClass(this, FileUpLoadAndDownLoadActivity.class);
             startActivity(intent);			
 			break;	
+		case R.id.btn_image_load:
+			mToastUtil.showToast("点击了ImageLoaderActivity");
+        	intent.setClass(this, ImageLoaderActivity.class);
+            startActivity(intent);			
+			break;
 		default:
 			break;
 		}

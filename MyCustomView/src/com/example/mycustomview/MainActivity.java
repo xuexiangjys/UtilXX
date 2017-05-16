@@ -25,6 +25,7 @@ import com.example.mycustomview.custom.LabelActivity;
 import com.example.mycustomview.custom.LoadingLayoutActivity;
 import com.example.mycustomview.custom.MagicindicatorActivity;
 import com.example.mycustomview.custom.MarqueenActivity;
+import com.example.mycustomview.custom.MaterialDialogActivity;
 import com.example.mycustomview.custom.SVGParseActivity;
 import com.example.mycustomview.custom.SearchBoxDialogActivity;
 import com.example.mycustomview.custom.SignatureActivity;
@@ -224,6 +225,11 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 		case R.id.alerter:
 			mToastUtil.showToast("点击了AlerterActivity");
 			startActivity(AlerterActivity.class);
+			break;
+			
+		case R.id.materialdialog:
+			mToastUtil.showToast("点击了MaterialDialogActivity");
+			startActivity(MaterialDialogActivity.class);
 			break;
 		default:
 			break;
