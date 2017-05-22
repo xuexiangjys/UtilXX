@@ -224,6 +224,16 @@
                 android:id="@+id/materialdialog"
                 style="@style/CustomButtonStyle"
                 android:text="MaterialDialog Demo" />
+            
+            <com.xuexiang.view.CustomTextView
+                android:id="@+id/settingitem"
+                style="@style/CustomButtonStyle"
+                android:text="SettingItem Demo" />
+            
+            <com.xuexiang.view.CustomTextView
+                android:id="@+id/pickers"
+                style="@style/CustomButtonStyle"
+                android:text="Pickers Demo" />
         </LinearLayout>
     </ScrollView>
 

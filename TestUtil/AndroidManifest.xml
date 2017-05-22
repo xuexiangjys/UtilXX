@@ -104,6 +104,7 @@
         <activity android:name="com.example.testutil.common.ImageViewActivity"/>
         <activity android:name="com.example.testutil.common.XMLParserActivity"/>
         <activity android:name="com.example.testutil.common.CompressorActivity"/>
+        <activity android:name="com.example.testutil.common.UpdateAppActivity"/>
         
         <activity android:name="com.example.testutil.DataActivity"/>
         <activity android:name="com.example.testutil.data.AhibernateActivity"/>

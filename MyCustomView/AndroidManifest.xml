@@ -137,9 +137,14 @@
         <activity android:name="com.example.mycustomview.custom.StepViewVerticalActivity" />
         <activity android:name="com.example.mycustomview.custom.AlerterActivity"
            android:theme="@style/SearchboxAppTheme" />
+        <activity android:name="com.example.mycustomview.custom.SettingItemActivity" 
+           android:theme="@style/AppCompatTheme" />
         
         <activity android:name="com.example.mycustomview.pickerview.PickerviewActivity" />
         <activity android:name="com.example.mycustomview.pickerview.ProvinceJsonDataActivity" />
+        
+        <activity android:name="com.example.mycustomview.pickers.PickersActivity" />
+        <activity android:name="com.example.mycustomview.pickers.NextActivity" />
     </application>
 
 </manifest>

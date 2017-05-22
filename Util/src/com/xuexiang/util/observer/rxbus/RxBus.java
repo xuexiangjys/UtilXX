@@ -80,8 +80,8 @@ public class RxBus {
 		}
 	}
 
-	public void post(@NonNull Object o) {
-		post(o.getClass().getSimpleName(), o);
+	public void post(@NonNull Object tag) {
+		post(tag, tag);
 	}
 
 	/**

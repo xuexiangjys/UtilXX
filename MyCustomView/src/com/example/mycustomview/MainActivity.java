@@ -28,6 +28,7 @@ import com.example.mycustomview.custom.MarqueenActivity;
 import com.example.mycustomview.custom.MaterialDialogActivity;
 import com.example.mycustomview.custom.SVGParseActivity;
 import com.example.mycustomview.custom.SearchBoxDialogActivity;
+import com.example.mycustomview.custom.SettingItemActivity;
 import com.example.mycustomview.custom.SignatureActivity;
 import com.example.mycustomview.custom.SlideMenuActivity;
 import com.example.mycustomview.custom.SnowActivity;
@@ -42,6 +43,7 @@ import com.example.mycustomview.custom.WebViewMainActivity;
 import com.example.mycustomview.jptabbar.JpTabbarActivity;
 import com.example.mycustomview.pageslidingtab.ui.activity.PageSlidingTabActivity;
 import com.example.mycustomview.pathanim.PathAnimActivity;
+import com.example.mycustomview.pickers.PickersActivity;
 import com.example.mycustomview.pickerview.PickerviewActivity;
 import com.example.mycustomview.smoothprogressbar.SmoothProgressBarActivity;
 import com.example.mycustomview.tabview.TabViewActivity;
@@ -230,6 +232,14 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 		case R.id.materialdialog:
 			mToastUtil.showToast("点击了MaterialDialogActivity");
 			startActivity(MaterialDialogActivity.class);
+			break;
+		case R.id.settingitem:
+			mToastUtil.showToast("点击了SettingItemActivity");
+			startActivity(SettingItemActivity.class);
+			break;
+		case R.id.pickers:
+			mToastUtil.showToast("点击了PickersActivity");
+			startActivity(PickersActivity.class);
 			break;
 		default:
 			break;

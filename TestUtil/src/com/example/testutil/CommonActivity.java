@@ -21,6 +21,7 @@ import android.view.View.OnClickListener;
 
 import com.example.testutil.common.CompressorActivity;
 import com.example.testutil.common.ImageViewActivity;
+import com.example.testutil.common.UpdateAppActivity;
 import com.example.testutil.common.XMLParserActivity;
 import com.xuexiang.app.activity.BaseActivity;
 
@@ -55,6 +56,11 @@ public class CommonActivity extends BaseActivity implements OnClickListener{
 		case R.id.btn_image_compressor:
 			mToastUtil.showToast("点击了CompressorActivity");
         	intent.setClass(this, CompressorActivity.class);
+            startActivity(intent);			
+			break;
+		case R.id.btn_updateapp:
+			mToastUtil.showToast("点击了UpdateAppActivity");
+        	intent.setClass(this, UpdateAppActivity.class);
             startActivity(intent);			
 			break;
 		default:

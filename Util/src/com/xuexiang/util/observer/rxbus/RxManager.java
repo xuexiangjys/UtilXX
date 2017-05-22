@@ -93,8 +93,8 @@ public class RxManager {
 	}
 
 	// 发送rxbus
-	public void post(Object content) {
-		mRxBus.post(content);
+	public void post(Object tag) {
+		mRxBus.post(tag);
 	}
 
 	// 发送rxbus

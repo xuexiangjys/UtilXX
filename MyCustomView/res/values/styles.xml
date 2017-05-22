@@ -2,13 +2,13 @@
 
     <!--
         Base application theme, dependent on API level. This theme is replaced
-        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
     -->
     <style name="AppBaseTheme" parent="android:Theme.Light">
         <!--
             Theme customizations available in newer API levels can go in
             res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
+            backward-compatibility can go here.
         -->
     </style>
 
@@ -33,7 +33,7 @@
         <item name="android:textColor">@android:color/white</item>
         <item name="android:layout_margin">@dimen/alerter_padding_small</item>
     </style>
-    
+
     <!-- Base application theme. -->
     <style name="SearchboxAppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
 
@@ -132,6 +132,22 @@
         <item name="spb_colors">@array/pocket_bar_colors</item>
         <item name="spb_progressiveStart_activated">true</item>
         <item name="spb_generate_background_with_colors">false</item>
+    </style>
+    <!-- settingItem -->
+    <style name="MyCheckBox" parent="AppTheme">
+        <item name="colorControlNormal">#CCCCCC</item>
+        <item name="colorControlActivated">#0099CC</item>
+    </style>
+    <!-- pickers -->
+    <style name="Button.Style" parent="@android:style/Widget.Button">
+        <item name="android:background">@color/blue</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:layout_marginTop">10dp</item>
+    </style>
+    
+     <style name="Animation.CustomPopup" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/popup_in</item>
+        <item name="android:windowExitAnimation">@anim/popup_out</item>
     </style>
 
 </resources>
