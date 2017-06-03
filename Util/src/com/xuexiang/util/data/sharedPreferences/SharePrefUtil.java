@@ -7,10 +7,21 @@ import android.text.TextUtils;
 import com.xuexiang.util.security.Base64Util;
 
 public class SharePrefUtil {
-	
+
 	private final static String SP_NAME = "SharePrefUtil";
 	private static SharedPreferences sp;
 
+	private static void checkSp(Context context) {
+		if (sp == null) {
+			sp = context.getSharedPreferences(SP_NAME, 0);
+		}
+	}
+	
+	public static void clear(Context context) {
+		checkSp(context);
+		sp.edit().clear().commit();
+	}
+	
 	/**
 	 * 保存布尔值
 	 * 
@@ -19,9 +30,8 @@ public class SharePrefUtil {
 	 * @param value
 	 */
 	public static void saveBoolean(Context context, String key, boolean value) {
-		if (sp == null)
-			sp = context.getSharedPreferences(SP_NAME, 0);
-		    sp.edit().putBoolean(key, value).commit();
+		checkSp(context);
+		sp.edit().putBoolean(key, value).commit();
 	}
 
 	/**
@@ -32,17 +42,12 @@ public class SharePrefUtil {
 	 * @param value
 	 */
 	public static void saveString(Context context, String key, String value) {
-		if (sp == null)
-			sp = context.getSharedPreferences(SP_NAME, 0);
+		checkSp(context);
 		sp.edit().putString(key, value).commit();
-		
+
 	}
+
 	
-	public static void clear(Context context){
-		if (sp == null)
-			sp = context.getSharedPreferences(SP_NAME, 0);
-		sp.edit().clear().commit();
-	}
 
 	/**
 	 * 保存long型
@@ -52,8 +57,7 @@ public class SharePrefUtil {
 	 * @param value
 	 */
 	public static void saveLong(Context context, String key, long value) {
-		if (sp == null)
-			sp = context.getSharedPreferences(SP_NAME, 0);
+		checkSp(context);
 		sp.edit().putLong(key, value).commit();
 	}
 
@@ -65,8 +69,7 @@ public class SharePrefUtil {
 	 * @param value
 	 */
 	public static void saveInt(Context context, String key, int value) {
-		if (sp == null)
-			sp = context.getSharedPreferences(SP_NAME, 0);
+		checkSp(context);
 		sp.edit().putInt(key, value).commit();
 	}
 
@@ -78,8 +81,7 @@ public class SharePrefUtil {
 	 * @param value
 	 */
 	public static void saveFloat(Context context, String key, float value) {
-		if (sp == null)
-			sp = context.getSharedPreferences(SP_NAME, 0);
+		checkSp(context);
 		sp.edit().putFloat(key, value).commit();
 	}
 
@@ -92,8 +94,7 @@ public class SharePrefUtil {
 	 * @return
 	 */
 	public static String getString(Context context, String key, String defValue) {
-		if (sp == null)
-			sp = context.getSharedPreferences(SP_NAME, 0);
+		checkSp(context);
 		return sp.getString(key, defValue);
 	}
 
@@ -106,8 +107,7 @@ public class SharePrefUtil {
 	 * @return
 	 */
 	public static int getInt(Context context, String key, int defValue) {
-		if (sp == null)
-			sp = context.getSharedPreferences(SP_NAME, 0);
+		checkSp(context);
 		return sp.getInt(key, defValue);
 	}
 
@@ -120,8 +120,7 @@ public class SharePrefUtil {
 	 * @return
 	 */
 	public static long getLong(Context context, String key, long defValue) {
-		if (sp == null)
-			sp = context.getSharedPreferences(SP_NAME, 0);
+		checkSp(context);
 		return sp.getLong(key, defValue);
 	}
 
@@ -134,8 +133,7 @@ public class SharePrefUtil {
 	 * @return
 	 */
 	public static float getFloat(Context context, String key, float defValue) {
-		if (sp == null)
-			sp = context.getSharedPreferences(SP_NAME, 0);
+		checkSp(context);
 		return sp.getFloat(key, defValue);
 	}
 
@@ -147,13 +145,11 @@ public class SharePrefUtil {
 	 * @param defValue
 	 * @return
 	 */
-	public static boolean getBoolean(Context context, String key,
-			boolean defValue) {
-		if (sp == null)
-			sp = context.getSharedPreferences(SP_NAME, 0);
+	public static boolean getBoolean(Context context, String key, boolean defValue) {
+		checkSp(context);
 		return sp.getBoolean(key, defValue);
 	}
-	
+
 	/**
 	 * 将对象进行base64编码后保存到SharePref中
 	 * 
@@ -162,11 +158,10 @@ public class SharePrefUtil {
 	 * @param object
 	 */
 	public static void saveObj(Context context, String key, Object object) {
-		if (sp == null)
-			sp = context.getSharedPreferences(SP_NAME, 0);		
+		checkSp(context);
 		// 将对象的转为base64码
 		String objBase64 = Base64Util.encode(object.toString(), "UTF-8");
-        sp.edit().putString(key,objBase64).commit();
+		sp.edit().putString(key, objBase64).commit();
 	}
 
 	/**
@@ -178,8 +173,7 @@ public class SharePrefUtil {
 	 * @return
 	 */
 	public static String getObj(Context context, String key) {
-		if (sp == null)
-			sp = context.getSharedPreferences(SP_NAME, 0);
+		checkSp(context);
 		String objBase64 = sp.getString(key, null);
 		if (TextUtils.isEmpty(objBase64))
 			return null;
@@ -189,5 +183,3 @@ public class SharePrefUtil {
 	}
 
 }
-
-

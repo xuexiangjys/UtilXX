@@ -40,6 +40,7 @@ import com.example.mycustomview.custom.TimeLineActivity;
 import com.example.mycustomview.custom.ToastyActivity;
 import com.example.mycustomview.custom.WeatherViewActivity;
 import com.example.mycustomview.custom.WebViewMainActivity;
+import com.example.mycustomview.indicatordialog.IndicatorDialogActivity;
 import com.example.mycustomview.jptabbar.JpTabbarActivity;
 import com.example.mycustomview.pageslidingtab.ui.activity.PageSlidingTabActivity;
 import com.example.mycustomview.pathanim.PathAnimActivity;
@@ -240,6 +241,10 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 		case R.id.pickers:
 			mToastUtil.showToast("点击了PickersActivity");
 			startActivity(PickersActivity.class);
+			break;
+		case R.id.indicatordialog:
+			mToastUtil.showToast("点击了IndicatorDialogActivity");
+			startActivity(IndicatorDialogActivity.class);
 			break;
 		default:
 			break;

@@ -15,12 +15,25 @@
  */
 package com.xuexiang.util.net;
 
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
+import java.net.HttpURLConnection;
+import java.net.InetAddress;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLDecoder;
+import java.net.UnknownHostException;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.Callable;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -212,7 +225,10 @@ public final class NetUtil {
         NET_NO, NET_2G, NET_3G, NET_4G, NET_WIFI, NET_ETHERNET, NET_UNKNOWN
     }
 
-
+    private static final int NETWORK_TYPE_GSM      = 16;
+    private static final int NETWORK_TYPE_TD_SCDMA = 17;
+    private static final int NETWORK_TYPE_IWLAN    = 18;
+    
     /**
      * 判断当前是否网络连接
      *
@@ -230,6 +246,7 @@ public final class NetUtil {
                     break;
                 case ConnectivityManager.TYPE_MOBILE:
                     switch (ni.getSubtype()) {
+                    	case NETWORK_TYPE_GSM:
                         case TelephonyManager.NETWORK_TYPE_GPRS: // 联通2g
                         case TelephonyManager.NETWORK_TYPE_CDMA: // 电信2g
                         case TelephonyManager.NETWORK_TYPE_EDGE: // 移动2g
@@ -237,6 +254,7 @@ public final class NetUtil {
                         case TelephonyManager.NETWORK_TYPE_IDEN:
                             stateCode = NetState.NET_2G;
                             break;
+                        case NETWORK_TYPE_TD_SCDMA:
                         case TelephonyManager.NETWORK_TYPE_EVDO_A: // 电信3g
                         case TelephonyManager.NETWORK_TYPE_UMTS:
                         case TelephonyManager.NETWORK_TYPE_EVDO_0:
@@ -248,11 +266,19 @@ public final class NetUtil {
                         case TelephonyManager.NETWORK_TYPE_HSPAP:
                             stateCode = NetState.NET_3G;
                             break;
+                        case NETWORK_TYPE_IWLAN:
                         case TelephonyManager.NETWORK_TYPE_LTE:
                             stateCode = NetState.NET_4G;
                             break;
                         default:
-                            stateCode = NetState.NET_UNKNOWN;
+                        	 String subtypeName = ni.getSubtypeName();
+                             if (subtypeName.equalsIgnoreCase("TD-SCDMA")
+                                     || subtypeName.equalsIgnoreCase("WCDMA")
+                                     || subtypeName.equalsIgnoreCase("CDMA2000")) {
+                            	 stateCode = NetState.NET_3G;
+                             } else {
+                            	 stateCode = NetState.NET_UNKNOWN;
+                             }
                             break;
                     }
                     break;
@@ -310,5 +336,119 @@ public final class NetUtil {
             return false;
         }
     }
+    
+    /**
+     * 获取域名ip地址
+     * <p>需添加权限 {@code <uses-permission android:name="android.permission.INTERNET"/>}</p>
+     *
+     * @param domain 域名
+     * @return ip地址
+     */
+    public static String getDomainAddress(final String domain) {
+        try {
+            ExecutorService exec = Executors.newCachedThreadPool();
+            Future<String> fs = exec.submit(new Callable<String>() {
+                @Override
+                public String call() throws Exception {
+                    InetAddress inetAddress;
+                    try {
+                        inetAddress = InetAddress.getByName(domain);
+                        return inetAddress.getHostAddress();
+                    } catch (UnknownHostException e) {
+                        e.printStackTrace();
+                    }
+                    return null;
+                }
+            });
+            return fs.get();
+        } catch (InterruptedException | ExecutionException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+    
+    /**
+     * 获取移动运营商
+     * @param context
+     * @return
+     */
+    public static String getNetworkOperatorName(Context context) {
+    	String networkOperatorName = "未知";
+	    TelephonyManager telManager = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
+	    String operator = telManager.getSimOperator();
+	    if (operator != null) {
+	    	if (operator.equals("46000") || operator.equals("46002")|| operator.equals("46007")){
+	    		networkOperatorName = "中国移动";
+		    } else if (operator.equals("46001") || operator.equals("46006")) {
+		    	networkOperatorName = "中国联通";
+		    } else if (operator.equals("46003") || operator.equals("46005") || operator.equals("46011")){
+		    	networkOperatorName = "中国电信";
+		    }
+	    }
+    	return networkOperatorName;
+    }
+    
+    /**
+     * url是否有效合法
+     * @param url
+     * 匹配 http://www.allkins.com | http://255.255.255.255 | http://allkins.com/page.asp?action=1
+     * 不匹配 http://test.testing
+     * @return
+     */
+    public static boolean isUrlVaild(String url) {
+        String expr = "^(http|https|ftp)\\://(((25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])\\.){3}(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])|([a-zA-Z0-9_\\-\\.])+\\.(com|cn|net|org|edu|int|mil|gov|arpa|biz|aero|name|coop|info|pro|museum|uk|me))((:[a-zA-Z0-9]*)?/?([a-zA-Z0-9\\-\\._\\?\\,\\'/\\\\\\+&%\\$#\\=~])*)$";
+        return url.matches(expr);
+    }
+    
+    /**
+	 * 从Url中下载文件
+	 * @param urlStr 资源地址
+     * @param fileName 文件名
+     * @param savePath 文件保存路径
+	 */
+    public static void downLoadFileByUrl(String urlStr, String fileName, String savePath) throws IOException{
+	   URL url = new URL(urlStr);
+	   HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+	   // 设置超时间为3秒
+	   conn.setConnectTimeout(3 * 1000);
+	   // 防止屏蔽程序抓取而返回403错误
+	   conn.setRequestProperty("Content-Type", "text/plain; charset=utf-8");
+	   // 得到输入流
+	   InputStream inputStream = conn.getInputStream();
+	   // 获取自己数组
+	   byte[] getData = readInputStream(inputStream);
+	   // 文件保存位置
+	   File saveDir = new File(savePath);
+	   if (!saveDir.exists()) {
+		   saveDir.mkdirs();
+	   }
+	   File file = new File(saveDir + File.separator + fileName);
+	   FileOutputStream fos = new FileOutputStream(file);
+	   fos.write(getData);
+	   if (fos != null) {
+		   fos.close();
+	   }
+	   if (inputStream != null) {
+		   inputStream.close();
+	   } 
+   }
+   
+   /**
+  	 * 从输入流中获取字节数组
+  	 * 
+  	 * @param inputStream
+  	 * @return
+  	 * @throws IOException
+  	 */
+  	private static byte[] readInputStream(InputStream inputStream) throws IOException {
+  		byte[] buffer = new byte[1024];
+  		int len = 0;
+  		ByteArrayOutputStream bos = new ByteArrayOutputStream();
+  		while ((len = inputStream.read(buffer)) != -1) {
+  			bos.write(buffer, 0, len);
+  		}
+  		bos.close();
+  		return bos.toByteArray();
+  	}
 
 }

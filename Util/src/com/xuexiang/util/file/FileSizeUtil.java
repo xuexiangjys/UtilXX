@@ -101,7 +101,7 @@ public class FileSizeUtil {
 	 * @return
 	 * @throws Exception
 	 */
-	private static long getFileSizes(File f) throws Exception {
+	public static long getFileSizes(File f) throws Exception {
 		long size = 0;
 		File flist[] = f.listFiles();
 		for (int i = 0; i < flist.length; i++) {
@@ -120,7 +120,7 @@ public class FileSizeUtil {
 	 * @param fileS
 	 * @return
 	 */
-	private static String FormatFileSize(long fileS) {
+	public static String FormatFileSize(long fileS) {
 		DecimalFormat df = new DecimalFormat("#.00");
 		String fileSizeString = "";
 		String wrongSize = "0B";

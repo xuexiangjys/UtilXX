@@ -43,7 +43,7 @@ public abstract class BaseGuideActivity extends Activity {
 	 * @param guidesResIdList  引导图片
 	 * @param cls  点击后跳转的Activity类
 	 */
-	public void initGuideView(ArrayList<Integer> guidesResIdList, final Class<?> cls) {
+	public void initGuideView(ArrayList<Integer> guidesResIdList, final Class<? extends Activity> cls) {
 		initGuideView(guidesResIdList, AppConsts.transformers[0], cls);
 	}
 	
@@ -53,7 +53,7 @@ public abstract class BaseGuideActivity extends Activity {
 	 * @param transformerClass  引导图片切换的效果
 	 * @param cls  点击后跳转的Activity类
 	 */
-	public void initGuideView(ArrayList<Integer> guidesResIdList, Class<? extends ViewPager.PageTransformer> transformerClass, final Class<?> cls) {
+	public void initGuideView(ArrayList<Integer> guidesResIdList, Class<? extends ViewPager.PageTransformer> transformerClass, final Class<? extends Activity> cls) {
 		SimpleGuideBanner sgb = ViewFindUtils.find(mDecorView, RUtils.getId(mContext, "sgb"));
 
 		sgb.setIndicatorWidth(6).setIndicatorHeight(6).setIndicatorGap(12)

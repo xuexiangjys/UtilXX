@@ -2,6 +2,7 @@ package com.xuexiang.app.activity;
 
 import java.util.ArrayList;
 
+import android.app.Activity;
 import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -267,19 +268,19 @@ public abstract class BaseActivity extends FragmentActivity {
 		return getResources().getDrawable(resId);
 	}
 
-	public void startActivity(Class<?> cls) {
+	public void startActivity(Class<? extends Activity> cls) {
 		ActivityUtil.startActivity(mContext, cls);
 	}
 
-	public void startActivity(Class<?> cls, Bundle bundle) {
+	public void startActivity(Class<? extends Activity> cls, Bundle bundle) {
 		ActivityUtil.startActivity(mContext, cls, bundle);
 	}
 
-	public void startActivity(Class<?> cls, Bundle bundle, StartAnim startAnim) {
+	public void startActivity(Class<? extends Activity> cls, Bundle bundle, StartAnim startAnim) {
 		ActivityUtil.startActivity(mContext, cls, bundle, startAnim);
 	}
 
-	public void startActivity(Class<?> cls, StartAnim startAnim) {
+	public void startActivity(Class<? extends Activity> cls, StartAnim startAnim) {
 		ActivityUtil.startActivity(mContext, cls, startAnim);
 	}
 

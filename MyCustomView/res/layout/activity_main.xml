@@ -234,6 +234,11 @@
                 android:id="@+id/pickers"
                 style="@style/CustomButtonStyle"
                 android:text="Pickers Demo" />
+            
+            <com.xuexiang.view.CustomTextView
+                android:id="@+id/indicatordialog"
+                style="@style/CustomButtonStyle"
+                android:text="IndicatorDialog Demo" />
         </LinearLayout>
     </ScrollView>
 

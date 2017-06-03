@@ -41,6 +41,14 @@ public final class LogUtils {
      */
     public static boolean DEBUG_SYSOUT = false;
     
+    public static void setDebugMode(boolean isDebug) {
+    	if (isDebug) {
+    		DEBUG_LEVEL = 0;
+    	} else {
+    		DEBUG_LEVEL = 10;
+    	}	    	
+    }
+    
     public static void setDebugLevel(int level) {
     	DEBUG_LEVEL = level;
     }

@@ -187,6 +187,16 @@ public class BaseSharedPreferencesUtil {
         return null;
     }
     
+    /**
+	 * 得到保存数据的方法
+	 * 
+	 * @param key
+	 * @return
+	 */
+	public Object get(String key) {
+		return getAll().get(key);
+	}
+    
   //=======================================公共方法==================================================//
     /**
      * 查询某个key是否已经存在

@@ -7,8 +7,11 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
 import android.app.Activity;
+import android.util.Log;
 
 /**
  * java反射工具
@@ -16,6 +19,7 @@ import android.app.Activity;
  * @author xx
  */
 public class JavaReflectUtil {
+	private static final String TAG = "JavaReflectUtil";
 	/**
 	 * 得到某个对象的属性
 	 * 
@@ -202,5 +206,87 @@ public class JavaReflectUtil {
 	public static String getActivityTag(Activity activity) throws Exception {
 		return activity.getClass().getSimpleName();
 	}
+	
+	 /**
+	   * 获取类里面的所在字段
+	   */
+	  public static Field[] getFields(Class clazz) {
+	    Field[] fields = null;
+	    fields = clazz.getDeclaredFields();
+	    if (fields == null || fields.length == 0) {
+	      Class superClazz = clazz.getSuperclass();
+	      if (superClazz != null) {
+	        fields = getFields(superClazz);
+	      }
+	    }
+	    return fields;
+	  }
+
+	  /**
+	   * 获取所有字段，包括父类的字段
+	   */
+	  public static List<Field> getAllFields(Class clazz) {
+	    List<Field> fields = new ArrayList<>();
+	    Class personClazz = clazz.getSuperclass();
+	    if (personClazz != null) {
+	      Collections.addAll(fields, personClazz.getDeclaredFields());
+	    }
+	    Collections.addAll(fields, clazz.getDeclaredFields());
+	    return fields;
+	  }
+
+	  /**
+	   * 获取类里面的指定对象，如果该类没有则从父类查询
+	   */
+	  public static Field getField(Class clazz, String name) {
+	    Field field = null;
+	    try {
+	      field = clazz.getDeclaredField(name);
+	    } catch (NoSuchFieldException e) {
+	      try {
+	        field = clazz.getField(name);
+	      } catch (NoSuchFieldException e1) {
+	        if (clazz.getSuperclass() == null) {
+	          return field;
+	        } else {
+	          field = getField(clazz.getSuperclass(), name);
+	        }
+	      }
+	    }
+	    if (field != null) {
+	      field.setAccessible(true);
+	    }
+	    return field;
+	  }
+
+	  /**
+	   * 利用递归找一个类的指定方法，如果找不到，去父亲里面找直到最上层Object对象为止。
+	   *
+	   * @param clazz 目标类
+	   * @param methodName 方法名
+	   * @param params 方法参数类型数组
+	   * @return 方法对象
+	   */
+	  public static Method getMethod(Class clazz, String methodName, final Class<?>... params) {
+	    Method method = null;
+	    try {
+	      method = clazz.getDeclaredMethod(methodName, params);
+	    } catch (NoSuchMethodException e) {
+	      try {
+	        method = clazz.getMethod(methodName, params);
+	      } catch (NoSuchMethodException ex) {
+	        if (clazz.getSuperclass() == null) {
+	          Log.e(TAG, "无法找到" + methodName + "方法");
+	          return method;
+	        } else {
+	          method = getMethod(clazz.getSuperclass(), methodName, params);
+	        }
+	      }
+	    }
+	    if (method != null) {
+	      method.setAccessible(true);
+	    }
+	    return method;
+	  }
 
 }

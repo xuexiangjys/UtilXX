@@ -64,7 +64,7 @@ public class DateUtil {
 		}
 	};
 	/**
-	 * yyyy-MM-dd HH:mm:ss
+	 * yyyy-MM-dd HH:mm:ss 【网络请求获得的统一时间格式】
 	 */
 	private static final ThreadLocal<DateFormat> yyyyMMddHHmmss = new ThreadLocal<DateFormat>() {
 		@Override
@@ -136,6 +136,15 @@ public class DateUtil {
 		}
 	};
 	/**
+	 * HH:mm
+	 */
+	private static final ThreadLocal<DateFormat> HM = new ThreadLocal<DateFormat>() {
+		@Override
+		protected DateFormat initialValue() {
+			return new SimpleDateFormat("HH:mm");
+		}
+	};
+	/**
 	 * yyyy/MM/dd HH:mm:ss
 	 */
 	private static final ThreadLocal<DateFormat> printDateFormat = new ThreadLocal<DateFormat>() {
@@ -169,6 +178,27 @@ public class DateUtil {
 			return dateStr;
 		}
 		return newFormat.format(date);
+	}
+
+	/**
+	 * 【网络请求获得的统一时间格式】yyyy-MM-dd HH:mm:ss---> ? 新的的时间格式
+	 *
+	 * @param netDateStr
+	 * @param newFormat
+	 * @return
+	 */
+	public static String translateNetDateToNewFormat(String netDateStr, DateFormat newFormat) {
+		return dateFormatChange(netDateStr, yyyyMMddHHmmss.get(), newFormat);
+	}
+
+	/**
+	 * 【网络请求获得的统一时间格式】yyyy-MM-dd HH:mm:ss---> HH:mm 的时间格式
+	 *
+	 * @param netDateStr
+	 * @return
+	 */
+	public static String translateNetDateToHM(String netDateStr) {
+		return dateFormatChange(netDateStr, yyyyMMddHHmmss.get(), HM.get());
 	}
 
 	/**
@@ -245,7 +275,7 @@ public class DateUtil {
 	/**
 	 * 将yyyy/MM/dd HH:mm:ss类型的事件改为 HH:mm:ss类型
 	 * 
-	 * @param time
+	 * @param datetime
 	 * @return
 	 */
 	public static String formatTime(String datetime) {
@@ -528,7 +558,7 @@ public class DateUtil {
 	/**
 	 * 解析"yyyy-MM-dd HH:mm"格式的日期
 	 * 
-	 * @param strTime
+	 * @param d
 	 * @return
 	 */
 	public static Date formatStrDateTime2(String d) {
@@ -738,15 +768,15 @@ public class DateUtil {
 	}
 
 	/**
-	 * 当前日期加减n天后的日期，返回String (yyyy-MM-dd HH:mm:ss)
+	 * 获取当前日期n天前的日期，返回String (yyyy-MM-dd HH:mm:ss)
 	 * 
-	 * @param n
+	 * @param day 【-1：1天前， 1：1天后】
 	 * @return
 	 */
-	public static String nDaysAftertoday(int n) {
+	public static String nDaysAftertoday(int day) {
 		Calendar rightNow = Calendar.getInstance();
 		rightNow.setTimeInMillis(System.currentTimeMillis());
-		rightNow.add(Calendar.DAY_OF_MONTH, -(n - 1));
+		rightNow.add(Calendar.DAY_OF_MONTH, -(day - 1));
 		return DateUtil.formatDate(rightNow.getTime()) + " 00:00:00";
 	}
 
@@ -771,7 +801,7 @@ public class DateUtil {
 	public static String getDate(String str) {
 		String s;
 		try {
-			java.util.Date d = yyyyMMddHHmmss.get().parse(str);
+			Date d = yyyyMMddHHmmss.get().parse(str);
 			s = formatDateTime(d);
 			if (s.indexOf("00:00:00") != -1) {
 				return s.substring(0, s.indexOf("00:00:00")).trim();
@@ -1063,9 +1093,40 @@ public class DateUtil {
 	 * @return
 	 */
 	public static int calculateNumberofDays(Date date) {
-		Date now = DateUtil.getCurrentDate();
-		int dayCount = (int) ((now.getTime() - date.getTime()) / (1000 * 3600 * 24));
-		return dayCount;
+		return calculateTimeDistance(date, 1000 * 3600 * 24);
+	}
+
+	/**
+	 * 计算距离现在多少分钟
+	 *
+	 * @param dateString
+	 *            比较的时间 【格式：yyyy-MM-dd HH:mm:ss】
+	 * @return
+	 */
+	public static int calculateNumberofMinutes(String dateString) {
+		return calculateNumberofMinutes(DateUtil.formatStrDateTime(dateString));
+	}
+
+	/**
+	 * 计算距离现在多少分钟
+	 *
+	 * @param date
+	 *            比较的时间
+	 * @return
+	 */
+	public static int calculateNumberofMinutes(Date date) {
+		return calculateTimeDistance(date, 1000 * 60);
+	}
+
+	/**
+	 * 计算时间距离
+	 * @param date 时间
+	 * @param unitInterval 单位时间
+	 * @return
+	 */
+	public static int calculateTimeDistance(Date date, int unitInterval) {
+		int result = (int) ((getCurrentDate().getTime() - date.getTime()) / unitInterval);
+		return result;
 	}
 
 }

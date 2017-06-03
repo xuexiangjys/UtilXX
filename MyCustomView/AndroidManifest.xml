@@ -145,6 +145,8 @@
         
         <activity android:name="com.example.mycustomview.pickers.PickersActivity" />
         <activity android:name="com.example.mycustomview.pickers.NextActivity" />
+        
+        <activity android:name="com.example.mycustomview.indicatordialog.IndicatorDialogActivity" />
     </application>
 
 </manifest>

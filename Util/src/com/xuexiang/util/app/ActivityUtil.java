@@ -1,7 +1,11 @@
 package com.xuexiang.util.app;
 
+import java.io.Serializable;
+import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Timer;
 import java.util.TimerTask;
+import java.util.Map.Entry;
 
 import android.app.Activity;
 import android.content.Context;
@@ -78,7 +82,7 @@ public class ActivityUtil {
 		});
 		return mTitleBar;
 	}
-	
+
 	/**
 	 * 动态生成TitleBar
 	 */
@@ -107,6 +111,7 @@ public class ActivityUtil {
 
 	/**
 	 * 获取setContentView的父布局
+	 * 
 	 * @param activity
 	 * @return
 	 */
@@ -139,7 +144,7 @@ public class ActivityUtil {
 	 * @param cls
 	 * @param delay
 	 */
-	public static void delayToActivity(final Context context, final Class<?> cls, long delay) {
+	public static void delayToActivity(final Context context, final Class<? extends Activity> cls, long delay) {
 		Timer timer = new Timer();
 		timer.schedule(new TimerTask() {
 
@@ -156,7 +161,7 @@ public class ActivityUtil {
 	 * @param context
 	 * @param cls
 	 */
-	public static void startActivity(Context context, Class<?> cls) {
+	public static void startActivity(Context context, Class<? extends Activity> cls) {
 		Intent intent = new Intent();
 		intent.setClass(context, cls);
 		context.startActivity(intent);
@@ -168,11 +173,45 @@ public class ActivityUtil {
 	 * @param context
 	 * @param cls
 	 */
-	public static void startActivity(Context context, Class<?> cls, Bundle bundle) {
+	public static void startActivity(Context context, Class<? extends Activity> cls, Bundle bundle) {
 		Intent intent = new Intent();
 		intent.setClass(context, cls);
 		if (bundle != null) {
 			intent.putExtras(bundle);
+		}
+		context.startActivity(intent);
+	}
+
+	/**
+	 * 功能描述：带数据的Activity之间的跳转
+	 * 
+	 * @param activity
+	 * @param cls
+	 * @param hashMap
+	 */
+	public static void startActivity(Context context, Class<? extends Activity> cls, HashMap<String, Object> hashMap) {
+		Intent intent = new Intent(context, cls);
+		Iterator<?> iterator = hashMap.entrySet().iterator();
+		while (iterator.hasNext()) {
+			@SuppressWarnings("unchecked")
+			Entry<String, Object> entry = (Entry<String, Object>) iterator.next();
+			String key = entry.getKey();
+			Object value = entry.getValue();
+			if (value instanceof String) {
+				intent.putExtra(key, (String) value);
+			} else if (value instanceof Boolean) {
+				intent.putExtra(key, (Boolean) value);
+			} else if (value instanceof Integer) {
+				intent.putExtra(key, (Integer) value);
+			} else if (value instanceof Float) {
+				intent.putExtra(key, (Float) value);
+			} else if (value instanceof Double) {
+				intent.putExtra(key, (Double) value);
+			} else if (value instanceof Serializable) {
+				Bundle bundle = new Bundle();
+				bundle.putSerializable(key, (Serializable) value);
+				intent.putExtras(bundle);
+			}
 		}
 		context.startActivity(intent);
 	}
@@ -186,7 +225,7 @@ public class ActivityUtil {
 	 * @param enterAnim
 	 * @param exitAnim
 	 */
-	public static void startActivity(Context context, Class<?> cls, int enterAnim, int exitAnim, Bundle bundle) {
+	public static void startActivity(Context context, Class<? extends Activity> cls, int enterAnim, int exitAnim, Bundle bundle) {
 		Activity activity = (Activity) context;
 		Intent intent = new Intent();
 		intent.setClass(activity, cls);
@@ -201,7 +240,7 @@ public class ActivityUtil {
 	 * @param context
 	 * @param cls
 	 */
-	public static void startActivityFromLeft2Right(Context context, Class<?> cls) {
+	public static void startActivityFromLeft2Right(Context context, Class<? extends Activity> cls) {
 		startActivityFromLeft2Right(context, cls, null);
 	}
 
@@ -211,7 +250,7 @@ public class ActivityUtil {
 	 * @param context
 	 * @param cls
 	 */
-	public static void startActivityFromLeft2Right(Context context, Class<?> cls, Bundle bundle) {
+	public static void startActivityFromLeft2Right(Context context, Class<? extends Activity> cls, Bundle bundle) {
 		Activity activity = (Activity) context;
 		Intent intent = new Intent();
 		intent.setClass(activity, cls);
@@ -228,7 +267,7 @@ public class ActivityUtil {
 	 * @param context
 	 * @param cls
 	 */
-	public static void startActivityFromRight2Left(Context context, Class<?> cls) {
+	public static void startActivityFromRight2Left(Context context, Class<? extends Activity> cls) {
 		startActivityFromRight2Left(context, cls, null);
 	}
 
@@ -238,7 +277,7 @@ public class ActivityUtil {
 	 * @param context
 	 * @param cls
 	 */
-	public static void startActivityFromRight2Left(Context context, Class<?> cls, Bundle bundle) {
+	public static void startActivityFromRight2Left(Context context, Class<? extends Activity> cls, Bundle bundle) {
 		Activity activity = (Activity) context;
 		Intent intent = new Intent();
 		intent.setClass(activity, cls);
@@ -256,7 +295,7 @@ public class ActivityUtil {
 	 * @param cls
 	 * @param bundle
 	 */
-	public static void startActivityFromBottom2Top(Context context, Class<?> cls) {
+	public static void startActivityFromBottom2Top(Context context, Class<? extends Activity> cls) {
 		startActivityFromBottom2Top(context, cls, null);
 	}
 
@@ -267,7 +306,7 @@ public class ActivityUtil {
 	 * @param cls
 	 * @param bundle
 	 */
-	public static void startActivityFromBottom2Top(Context context, Class<?> cls, Bundle bundle) {
+	public static void startActivityFromBottom2Top(Context context, Class<? extends Activity> cls, Bundle bundle) {
 		Activity activity = (Activity) context;
 		Intent intent = new Intent();
 		intent.setClass(activity, cls);
@@ -284,7 +323,7 @@ public class ActivityUtil {
 	 * @param context
 	 * @param cls
 	 */
-	public static void startActivityFromTop2Bottom(Context context, Class<?> cls) {
+	public static void startActivityFromTop2Bottom(Context context, Class<? extends Activity> cls) {
 		startActivityFromTop2Bottom(context, cls, null);
 	}
 
@@ -295,7 +334,7 @@ public class ActivityUtil {
 	 * @param cls
 	 * @param bundle
 	 */
-	public static void startActivityFromTop2Bottom(Context context, Class<?> cls, Bundle bundle) {
+	public static void startActivityFromTop2Bottom(Context context, Class<? extends Activity> cls, Bundle bundle) {
 		Activity activity = (Activity) context;
 		Intent intent = new Intent();
 		intent.setClass(activity, cls);
@@ -317,7 +356,7 @@ public class ActivityUtil {
 	 * @param context
 	 * @param cls
 	 */
-	public static void startActivity(Context context, Class<?> cls, Bundle bundle, StartAnim startAnim) {
+	public static void startActivity(Context context, Class<? extends Activity> cls, Bundle bundle, StartAnim startAnim) {
 		if (startAnim != null) {
 			switch (startAnim) {
 			case Left2Right:
@@ -346,7 +385,7 @@ public class ActivityUtil {
 	 * @param context
 	 * @param cls
 	 */
-	public static void startActivity(Context context, Class<?> cls, StartAnim startAnim) {
+	public static void startActivity(Context context, Class<? extends Activity> cls, StartAnim startAnim) {
 		startActivity(context, cls, null, startAnim);
 	}
 
