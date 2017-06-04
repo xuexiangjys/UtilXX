@@ -95,4 +95,6 @@
     <dimen name="horizontal_corner">10dp</dimen>
     
     <dimen name="normalsize">5dp</dimen>
+    
+    <dimen name="icon_detailed_size">96dp</dimen>
 </resources>

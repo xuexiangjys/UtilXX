@@ -35,7 +35,7 @@ public class FaboptionsActivity extends AppCompatActivity implements
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_faboptions);
 		
-		ActivityUtil.initTitleBar(this, "StateButtonActivity");
+		ActivityUtil.initTitleBar(this, "FaboptionsActivity");
 		FabOptions fabOptions = (FabOptions) findViewById(R.id.fab_options);
 		fabOptions.setOnClickListener(this);
 

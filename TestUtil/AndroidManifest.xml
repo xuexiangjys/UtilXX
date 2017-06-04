@@ -255,6 +255,7 @@
             android:theme="@style/AppTheme.TranslucentActionBar"
             android:screenOrientation="portrait" />
         <activity android:name="com.example.testutil.view.ioniconview.IonIconViewActivity"/>
+        <activity android:name="com.example.testutil.view.MaterialiconsActivity" />
         <activity android:name="com.example.testutil.view.morphingbutton.MorphingButtonActivity"/>
         <activity android:name="com.example.testutil.view.morphingbutton.MorphingButtonIconActivity"/>
         <activity android:name="com.example.testutil.view.morphingbutton.MorphingButtonTextActivity"/>

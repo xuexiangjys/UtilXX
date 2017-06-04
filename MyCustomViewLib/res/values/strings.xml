@@ -35,5 +35,18 @@
     <!-- alert -->
     <string name="msg.alert_cleared">Alert Cleared</string>
     <string name="msg.no_alert_showing">No Alert Showing</string>
+    
+    <!-- StatefulLayout -->
+    <string name="stfErrorMessage">An error occurred please try again later</string>
+    <string name="stfOfflineMessage">Please check your connection</string>
+    <string name="stfLocationOffMessage">Please enable location services</string>
+    <string name="stfEmptyMessage">There are no items</string>
+    <string name="stfLoadingMessage">Loading..</string>
+    <string name="stfButtonText">Retry</string>
 
+    <!-- StateLayout -->
+    <string name="sl_loading">正在加载...</string>
+    <string name="sl_error">出错了</string>
+    <string name="sl_retry">轻触屏幕重试</string>
+    <string name="sl_empty">啥也没有</string>
 </resources>

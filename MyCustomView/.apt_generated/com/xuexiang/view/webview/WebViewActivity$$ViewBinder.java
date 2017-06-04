@@ -8,12 +8,12 @@ import butterknife.ButterKnife.ViewBinder;
 public class WebViewActivity$$ViewBinder<T extends com.xuexiang.view.webview.WebViewActivity> implements ViewBinder<T> {
   @Override public void bind(final Finder finder, final T target, Object source) {
     View view;
-    view = finder.findRequiredView(source, 2131231110, "field 'mProgressBar'");
-    target.mProgressBar = finder.castView(view, 2131231110, "field 'mProgressBar'");
-    view = finder.findRequiredView(source, 2131231109, "field 'webView'");
-    target.webView = finder.castView(view, 2131231109, "field 'webView'");
-    view = finder.findRequiredView(source, 2131231108, "field 'videoFullView'");
-    target.videoFullView = finder.castView(view, 2131231108, "field 'videoFullView'");
+    view = finder.findRequiredView(source, 2131231128, "field 'mProgressBar'");
+    target.mProgressBar = finder.castView(view, 2131231128, "field 'mProgressBar'");
+    view = finder.findRequiredView(source, 2131231127, "field 'webView'");
+    target.webView = finder.castView(view, 2131231127, "field 'webView'");
+    view = finder.findRequiredView(source, 2131231126, "field 'videoFullView'");
+    target.videoFullView = finder.castView(view, 2131231126, "field 'videoFullView'");
   }
 
   @Override public void unbind(T target) {

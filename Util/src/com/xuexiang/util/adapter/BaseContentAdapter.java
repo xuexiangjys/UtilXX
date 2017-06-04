@@ -25,17 +25,6 @@ public abstract class BaseContentAdapter<T> extends BaseAdapter {
 	protected List<T> mDataList;
 	protected LayoutInflater mInflater;
 
-	public List<T> getDataList() {
-		return mDataList;
-	}
-
-	public void setDataList(List<T> dataList) {
-		if (dataList != null) {
-			mDataList = dataList;
-			notifyDataSetChanged();
-		}
-	}
-
 	public BaseContentAdapter(Context context, List<T> list) {
 		mContext = context.getApplicationContext();
 		mInflater = LayoutInflater.from(mContext);
@@ -55,6 +44,17 @@ public abstract class BaseContentAdapter<T> extends BaseAdapter {
 	@Override
 	public long getItemId(int position) {
 		return position;
+	}
+	
+	public List<T> getDataList() {
+		return mDataList;
+	}
+
+	public void setDataList(List<T> dataList) {
+		if (dataList != null && dataList.size() > 0) {
+			mDataList = dataList;
+			notifyDataSetChanged();
+		}
 	}
 	
 	public boolean existsData(){

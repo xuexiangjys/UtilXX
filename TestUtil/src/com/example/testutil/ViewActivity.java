@@ -23,6 +23,7 @@ import com.example.testutil.view.HeaderLayoutActivity;
 import com.example.testutil.view.ImageCycleViewActivity;
 import com.example.testutil.view.LoadingDialogActivity;
 import com.example.testutil.view.MaterialDesignActivity;
+import com.example.testutil.view.MaterialiconsActivity;
 import com.example.testutil.view.MaterialishProgressActivity;
 import com.example.testutil.view.MultipleStatusViewActivity;
 import com.example.testutil.view.NiftyDialogActivity;
@@ -311,6 +312,11 @@ public class ViewActivity extends BaseActivity implements OnClickListener{
 		case R.id.btn_ioniconview:
 			mToastUtil.showToast("点击了IonIconViewActivity");
         	intent.setClass(this, IonIconViewActivity.class);
+            startActivity(intent);			
+			break;
+		case R.id.btn_materialicons:
+			mToastUtil.showToast("点击了MaterialiconsActivity");
+        	intent.setClass(this, MaterialiconsActivity.class);
             startActivity(intent);			
 			break;
 		case R.id.btn_morphingbutton:

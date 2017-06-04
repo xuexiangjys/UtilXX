@@ -147,6 +147,9 @@
         <activity android:name="com.example.mycustomview.pickers.NextActivity" />
         
         <activity android:name="com.example.mycustomview.indicatordialog.IndicatorDialogActivity" />
+        <activity android:name="com.example.mycustomview.custom.StatefulLayoutActivity" />
+        <activity android:name="com.example.mycustomview.custom.StateLayoutActivity"
+            android:theme="@style/AppCompatTheme" />
     </application>
 
 </manifest>

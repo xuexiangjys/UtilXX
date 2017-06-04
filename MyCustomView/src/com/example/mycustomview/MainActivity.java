@@ -33,6 +33,8 @@ import com.example.mycustomview.custom.SignatureActivity;
 import com.example.mycustomview.custom.SlideMenuActivity;
 import com.example.mycustomview.custom.SnowActivity;
 import com.example.mycustomview.custom.StateButtonActivity;
+import com.example.mycustomview.custom.StateLayoutActivity;
+import com.example.mycustomview.custom.StatefulLayoutActivity;
 import com.example.mycustomview.custom.StepViewHorizonalActivity;
 import com.example.mycustomview.custom.StyleabletToastActivity;
 import com.example.mycustomview.custom.SwitchIconActivity;
@@ -245,6 +247,14 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 		case R.id.indicatordialog:
 			mToastUtil.showToast("点击了IndicatorDialogActivity");
 			startActivity(IndicatorDialogActivity.class);
+			break;
+		case R.id.statefullayout:
+			mToastUtil.showToast("点击了StatefulLayoutActivity");
+			startActivity(StatefulLayoutActivity.class);
+			break;
+		case R.id.statelayout:
+			mToastUtil.showToast("点击了StateLayoutActivity");
+			startActivity(StateLayoutActivity.class);
 			break;
 		default:
 			break;

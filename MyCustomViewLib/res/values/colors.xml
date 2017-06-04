@@ -91,4 +91,6 @@
     
     <color name="btn_cancel_color">#999999</color>
     <color name="btn_confirm_color">#303F9F</color>
+    
+    <color name="stfImageColor">#FF4081</color>
 </resources>

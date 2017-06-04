@@ -8,4 +8,6 @@
     <dimen name="navigator_margin">5dp</dimen>
     <dimen name="navigator_common_height">40dp</dimen>
 
+    <dimen name="icon_size">96dp</dimen>
+    <dimen name="icon_detailed_size">192dp</dimen>
 </resources>
