@@ -4,6 +4,7 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 
+import com.example.mycustomview.corepage.CorePageActivity;
 import com.example.mycustomview.custom.AddressPickerActivity;
 import com.example.mycustomview.custom.AddressWheelActivity;
 import com.example.mycustomview.custom.AlerterActivity;
@@ -12,6 +13,7 @@ import com.example.mycustomview.custom.BottomDialogActivity;
 import com.example.mycustomview.custom.CalendarActivity;
 import com.example.mycustomview.custom.CircleMenuActivity;
 import com.example.mycustomview.custom.CityPickerActivity;
+import com.example.mycustomview.custom.CompoundIconTextViewActivity;
 import com.example.mycustomview.custom.CustomDialogActivity;
 import com.example.mycustomview.custom.CustomViewActivity;
 import com.example.mycustomview.custom.DraglayoutExpandActivity;
@@ -26,11 +28,13 @@ import com.example.mycustomview.custom.LoadingLayoutActivity;
 import com.example.mycustomview.custom.MagicindicatorActivity;
 import com.example.mycustomview.custom.MarqueenActivity;
 import com.example.mycustomview.custom.MaterialDialogActivity;
+import com.example.mycustomview.custom.RatingBarActivity;
 import com.example.mycustomview.custom.SVGParseActivity;
 import com.example.mycustomview.custom.SearchBoxDialogActivity;
 import com.example.mycustomview.custom.SettingItemActivity;
 import com.example.mycustomview.custom.SignatureActivity;
 import com.example.mycustomview.custom.SlideMenuActivity;
+import com.example.mycustomview.custom.SmileRatingActivity;
 import com.example.mycustomview.custom.SnowActivity;
 import com.example.mycustomview.custom.StateButtonActivity;
 import com.example.mycustomview.custom.StateLayoutActivity;
@@ -42,6 +46,8 @@ import com.example.mycustomview.custom.TimeLineActivity;
 import com.example.mycustomview.custom.ToastyActivity;
 import com.example.mycustomview.custom.WeatherViewActivity;
 import com.example.mycustomview.custom.WebViewMainActivity;
+import com.example.mycustomview.custom.ZXingActivity;
+import com.example.mycustomview.easyindicator.EasyIndicatorActivity;
 import com.example.mycustomview.indicatordialog.IndicatorDialogActivity;
 import com.example.mycustomview.jptabbar.JpTabbarActivity;
 import com.example.mycustomview.pageslidingtab.ui.activity.PageSlidingTabActivity;
@@ -255,6 +261,30 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 		case R.id.statelayout:
 			mToastUtil.showToast("点击了StateLayoutActivity");
 			startActivity(StateLayoutActivity.class);
+			break;
+		case R.id.zxing:
+			mToastUtil.showToast("点击了ZXingActivity");
+			startActivity(ZXingActivity.class);
+			break;
+		case R.id.corepage:
+			mToastUtil.showToast("点击了CorePageActivity");
+			startActivity(CorePageActivity.class);
+			break;
+		case R.id.ratingbar:
+			mToastUtil.showToast("点击了RatingBarActivity");
+			startActivity(RatingBarActivity.class);
+			break;
+		case R.id.compoundicontextview:
+			mToastUtil.showToast("点击了CompoundIconTextViewActivity");
+			startActivity(CompoundIconTextViewActivity.class);
+			break;
+		case R.id.easyindicator:
+			mToastUtil.showToast("点击了EasyIndicatorActivity");
+			startActivity(EasyIndicatorActivity.class);
+			break;
+		case R.id.smilerating:
+			mToastUtil.showToast("点击了SmileRatingActivity");
+			startActivity(SmileRatingActivity.class);
 			break;
 		default:
 			break;

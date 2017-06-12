@@ -19,8 +19,15 @@
 
     <!-- 在SDCard中创建与删除文件权限 -->
     <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
-    <!-- 相机权限 -->
+    
+    <!-- zxing需要的权限和功能 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+    <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <!-- 需要的权限和功能 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
 
     <application
         android:name="com.example.mycustomview.MyApplication"
@@ -150,6 +157,16 @@
         <activity android:name="com.example.mycustomview.custom.StatefulLayoutActivity" />
         <activity android:name="com.example.mycustomview.custom.StateLayoutActivity"
             android:theme="@style/AppCompatTheme" />
+        <activity android:name="com.example.mycustomview.custom.ZXingActivity" />
+        <activity
+            android:name="com.xuexiang.view.zxing.activity.CaptureActivity"
+            android:label="@string/zxing_bar_name" />
+        
+        <activity android:name="com.example.mycustomview.corepage.CorePageActivity" />
+        <activity android:name="com.example.mycustomview.custom.RatingBarActivity" />
+        <activity android:name="com.example.mycustomview.custom.CompoundIconTextViewActivity" />
+        <activity android:name="com.example.mycustomview.easyindicator.EasyIndicatorActivity" />
+        <activity android:name="com.example.mycustomview.custom.SmileRatingActivity" />
     </application>
 
 </manifest>

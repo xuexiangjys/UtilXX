@@ -1,13 +1,19 @@
 package com.example.mycustomview;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import android.app.Activity;
 import android.net.Uri;
 import android.widget.ImageView;
 
+import com.example.mycustomview.corepage.TestFragment4;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.nostra13.universalimageloader.core.assist.ImageSize;
 import com.xuexiang.app.BaseApplication;
+import com.xuexiang.view.corepage.core.CoreConfig;
+import com.xuexiang.view.corepage.core.PageItem;
 import com.xuexiang.view.imagepicker.ImagePicker;
 import com.xuexiang.view.imagepicker.view.CropImageView;
 
@@ -17,11 +23,16 @@ import com.xuexiang.view.imagepicker.view.CropImageView;
  * @author xuexiang 文件名称：MyApplication.java
  **/
 public class MyApplication extends BaseApplication {
+//	private String pageJson = "[" + "  {" + "    'name': 'test4'," + "    'classPath': 'com.example.mycustomview.corepage.TestFragment4'," + "    'params': ''" + "  }]";
 
 	@Override
 	public void onCreate() {
 		super.onCreate();
 		initImagePicker();
+		Map<String, Object> map = new HashMap<>();
+		map.put("param1", "这是参数1");
+		map.put("param2", "这是参数2");
+		CoreConfig.init(this, new PageItem().setName("test4").setClassPath(TestFragment4.class).setParams(map));
 	}
 
 	/**
@@ -34,12 +45,12 @@ public class MyApplication extends BaseApplication {
 			@Override
 			public void displayImage(Activity activity, String path, ImageView imageView, int width, int height) {
 				ImageSize size = new ImageSize(width, height);
-		        ImageLoader.getInstance().displayImage(Uri.parse("file://" + path).toString(), imageView, size);
+				ImageLoader.getInstance().displayImage(Uri.parse("file://" + path).toString(), imageView, size);
 			}
-			
+
 			@Override
 			public void clearMemoryCache() {
-				
+
 			}
 		}); // 设置图片加载器
 		imagePicker.setShowCamera(true); // 显示拍照按钮

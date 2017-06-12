@@ -49,4 +49,20 @@
     <string name="sl_error">出错了</string>
     <string name="sl_retry">轻触屏幕重试</string>
     <string name="sl_empty">啥也没有</string>
+    
+    <string name="zxing_bar_name">ZxingLib</string>
+    <!-- smile rating -->
+    <string name="smile_rating_terrible">Terrible</string>
+    <string name="smile_rating_bad">Bad</string>
+    <string name="smile_rating_okay">Okay</string>
+    <string name="smile_rating_good">Good</string>
+    <string name="smile_rating_great">Great</string>
+
+    <string-array name="names">
+        <item>@string/smile_rating_terrible</item>
+        <item>@string/smile_rating_bad</item>
+        <item>@string/smile_rating_okay</item>
+        <item>@string/smile_rating_good</item>
+        <item>@string/smile_rating_great</item>
+    </string-array>
 </resources>

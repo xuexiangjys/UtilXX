@@ -13,9 +13,16 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <!-- 从SDCard读取数据权限 -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <!-- 相机权限 -->
-    <uses-permission android:name="android.permission.CAMERA" />
 
+     <!-- zxing需要的权限和功能 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <!-- 需要的权限和功能 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+    
      <application>
         <activity
             android:name="com.xuexiang.view.imagepicker.ui.ImageGridActivity"
@@ -30,6 +37,10 @@
             android:name="com.xuexiang.view.imagepicker.ui.ImagePreviewActivity"
             android:configChanges="orientation|screenSize"
             android:theme="@style/ImagePickerThemeFullScreen"/>
+        
+        <activity
+            android:name="com.xuexiang.view.zxing.activity.CaptureActivity"
+            android:label="@string/zxing_bar_name" />
     </application>
 
 

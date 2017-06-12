@@ -10,4 +10,15 @@
 
     <dimen name="icon_size">96dp</dimen>
     <dimen name="icon_detailed_size">192dp</dimen>
+    
+    <!-- CompoundIconTextView -->
+    <dimen name="text_medium">12sp</dimen>
+    <dimen name="text_large">14sp</dimen>
+
+    <dimen name="ct_icon_size">24dp</dimen>
+
+    <dimen name="margin_small">4dp</dimen>
+    <dimen name="margin_medium">8dp</dimen>
+    <dimen name="margin_large">16dp</dimen>
+    <dimen name="margin_x_large">32dp</dimen>
 </resources>

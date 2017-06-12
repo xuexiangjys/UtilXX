@@ -1,0 +1,25 @@
+[
+  {
+    "name": "main",
+    "classPath": "com.example.mycustomview.corepage.CorePageFragment",
+    "params": ""
+  },
+  {
+    "name": "test1",
+    "classPath": "com.example.mycustomview.corepage.TestFragment1",
+    "params": ""
+  },
+  {
+    "name": "test2",
+    "classPath": "com.example.mycustomview.corepage.TestFragment2",
+    "params": ""
+  },
+  {
+    "name": "test3",
+    "classPath": "com.example.mycustomview.corepage.TestFragment3",
+    "params": {
+      "key1":"这是参数1的值",
+      "key2":"这是参数2的值"
+    }
+  }
+]

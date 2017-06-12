@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <item type="id" name="floating_decor" />
+    <item name="floating_decor" type="id" />
     <item name="tabview_id" type="id" />
     <item name="tabview_fragment_container" type="id" />
+    
+    <!-- zxing -->
+    <item name="decode" type="id"/>
+    <item name="decode_failed" type="id"/>
+    <item name="decode_succeeded" type="id"/>
+    <item name="quit" type="id"/>
+    <item name="restart_preview" type="id"/>
+    <item name="return_scan_result" type="id"/>
+    
+     <!-- corepage -->
+    <item name="fragment_container" type="id"/>
+    
+     <!-- EasyIndicator -->
+    <item name="easy_indicator_viewpaper" type="id"></item>
 </resources>

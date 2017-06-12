@@ -21,6 +21,13 @@ public class FragmentAdapter extends FragmentPagerAdapter {
     public FragmentAdapter(FragmentManager fm) {
         super(fm);
     }
+    
+    public FragmentAdapter(FragmentManager fm, List<Fragment> list) {
+        super(fm);
+        if (list != null) {
+        	mFragmentList = list;
+        }
+    }
 
     public void addFragment(Fragment fragment) {
     	if (fragment != null) {

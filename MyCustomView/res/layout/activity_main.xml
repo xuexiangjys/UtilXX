@@ -250,6 +250,35 @@
                 style="@style/CustomButtonStyle"
                 android:text="StateLayout Demo" />
             
+             <com.xuexiang.view.CustomTextView
+                android:id="@+id/zxing"
+                style="@style/CustomButtonStyle"
+                android:text="ZXing Demo" />
+             
+             <com.xuexiang.view.CustomTextView
+                android:id="@+id/corepage"
+                style="@style/CustomButtonStyle"
+                android:text="CorePage Demo" />
+             
+             <com.xuexiang.view.CustomTextView
+                android:id="@+id/ratingbar"
+                style="@style/CustomButtonStyle"
+                android:text="RatingBar Demo" />
+             
+             <com.xuexiang.view.CustomTextView
+                android:id="@+id/compoundicontextview"
+                style="@style/CustomButtonStyle"
+                android:text="CompoundIconTextView Demo" />
+            
+             <com.xuexiang.view.CustomTextView
+                android:id="@+id/easyindicator"
+                style="@style/CustomButtonStyle"
+                android:text="EasyIndicator Demo" />
+             
+             <com.xuexiang.view.CustomTextView
+                android:id="@+id/smilerating"
+                style="@style/CustomButtonStyle"
+                android:text="SmileRating Demo" />
         </LinearLayout>
     </ScrollView>
 
