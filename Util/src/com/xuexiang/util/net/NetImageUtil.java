@@ -4,9 +4,9 @@ import net.tsz.afinal.FinalBitmap;
 import android.content.Context;
 import android.widget.ImageView;
 
-import com.android.volley.toolbox.ImageLoader;
-import com.android.volley.toolbox.ImageLoader.ImageListener;
-import com.android.volley.toolbox.NetworkImageView;
+import com.thirdparty.volley.toolbox.ImageLoader;
+import com.thirdparty.volley.toolbox.ImageLoader.ImageListener;
+import com.thirdparty.volley.toolbox.NetworkImageView;
 import com.xuexiang.app.BaseApplication;
 import com.xuexiang.app.SampleApplication;
 import com.xuexiang.util.resource.RUtils;

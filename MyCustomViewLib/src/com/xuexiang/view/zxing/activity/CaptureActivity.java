@@ -28,6 +28,8 @@ import android.os.Handler;
 import android.util.Log;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
+import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.Window;
 import android.view.WindowManager;
 import android.view.animation.Animation;
@@ -56,49 +58,67 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
 
 	private static final String TAG = CaptureActivity.class.getSimpleName();
 
-	private CameraManager cameraManager;
-	private CaptureActivityHandler handler;
-	private InactivityTimer inactivityTimer;
-	private BeepManager beepManager;
+	private CameraManager mCameraManager;
+	private CaptureActivityHandler mHandler;
+	private InactivityTimer mInactivityTimer;
+	private BeepManager mBeepManager;
 
-	private SurfaceView scanPreview = null;
-	private RelativeLayout scanContainer;
-	private RelativeLayout scanCropView;
-	private ImageView scanLine;
+	private SurfaceView mScanPreview = null;
+	private RelativeLayout mScanContainer;
+	private RelativeLayout mScanCropView;
+	private ImageView mScanLine;
+
+	private ImageView mFlashSwitch;
+	private boolean mIsFlashOn = false;
 
 	private Rect mCropRect = null;
-	private boolean isHasSurface = false;
+	private boolean mIsHasSurface = false;
 
 	public Handler getHandler() {
-		return handler;
+		return mHandler;
 	}
 
 	public CameraManager getCameraManager() {
-		return cameraManager;
+		return mCameraManager;
 	}
 
 	@Override
 	public void onCreate(Bundle icicle) {
 		super.onCreate(icicle);
-
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		Window window = getWindow();
 		window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 		setContentView(R.layout.activity_capture);
+		
+		mScanPreview = (SurfaceView) findViewById(R.id.capture_preview);
+		mScanContainer = (RelativeLayout) findViewById(R.id.capture_container);
+		mScanCropView = (RelativeLayout) findViewById(R.id.capture_crop_view);
+		mScanLine = (ImageView) findViewById(R.id.capture_scan_line);
 
-		scanPreview = (SurfaceView) findViewById(R.id.capture_preview);
-		scanContainer = (RelativeLayout) findViewById(R.id.capture_container);
-		scanCropView = (RelativeLayout) findViewById(R.id.capture_crop_view);
-		scanLine = (ImageView) findViewById(R.id.capture_scan_line);
+		mFlashSwitch = (ImageView) findViewById(R.id.flash_switch);
+		mFlashSwitch.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				switchLight(!mIsFlashOn);
+			}
+		});
+		
+		findViewById(R.id.iv_back).setOnClickListener(new OnClickListener(){
+			@Override
+			public void onClick(View v) {
+				finish();
+			}
+		});
 
-		inactivityTimer = new InactivityTimer(this);
-		beepManager = new BeepManager(this);
+		mInactivityTimer = new InactivityTimer(this);
+		mBeepManager = new BeepManager(this);
 
 		TranslateAnimation animation = new TranslateAnimation(Animation.RELATIVE_TO_PARENT, 0.0f, Animation.RELATIVE_TO_PARENT, 0.0f, Animation.RELATIVE_TO_PARENT, 0.0f, Animation.RELATIVE_TO_PARENT,
 				0.9f);
 		animation.setDuration(4500);
 		animation.setRepeatCount(-1);
 		animation.setRepeatMode(Animation.RESTART);
-		scanLine.startAnimation(animation);
+		mScanLine.startAnimation(animation);
 	}
 
 	@Override
@@ -112,42 +132,42 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
 		// first launch. That led to bugs where the scanning rectangle was the
 		// wrong size and partially
 		// off screen.
-		cameraManager = new CameraManager(getApplication());
+		mCameraManager = new CameraManager(getApplication());
 
-		handler = null;
+		mHandler = null;
 
-		if (isHasSurface) {
+		if (mIsHasSurface) {
 			// The activity was paused but not stopped, so the surface still
 			// exists. Therefore
 			// surfaceCreated() won't be called, so init the camera here.
-			initCamera(scanPreview.getHolder());
+			initCamera(mScanPreview.getHolder());
 		} else {
 			// Install the callback and wait for surfaceCreated() to init the
 			// camera.
-			scanPreview.getHolder().addCallback(this);
+			mScanPreview.getHolder().addCallback(this);
 		}
 
-		inactivityTimer.onResume();
+		mInactivityTimer.onResume();
 	}
 
 	@Override
 	protected void onPause() {
-		if (handler != null) {
-			handler.quitSynchronously();
-			handler = null;
+		if (mHandler != null) {
+			mHandler.quitSynchronously();
+			mHandler = null;
 		}
-		inactivityTimer.onPause();
-		beepManager.close();
-		cameraManager.closeDriver();
-		if (!isHasSurface) {
-			scanPreview.getHolder().removeCallback(this);
+		mInactivityTimer.onPause();
+		mBeepManager.close();
+		mCameraManager.closeDriver();
+		if (!mIsHasSurface) {
+			mScanPreview.getHolder().removeCallback(this);
 		}
 		super.onPause();
 	}
 
 	@Override
 	protected void onDestroy() {
-		inactivityTimer.shutdown();
+		mInactivityTimer.shutdown();
 		super.onDestroy();
 	}
 
@@ -156,15 +176,15 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
 		if (holder == null) {
 			Log.e(TAG, "*** WARNING *** surfaceCreated() gave us a null surface!");
 		}
-		if (!isHasSurface) {
-			isHasSurface = true;
+		if (!mIsHasSurface) {
+			mIsHasSurface = true;
 			initCamera(holder);
 		}
 	}
 
 	@Override
 	public void surfaceDestroyed(SurfaceHolder holder) {
-		isHasSurface = false;
+		mIsHasSurface = false;
 	}
 
 	@Override
@@ -182,8 +202,8 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
 	 *            The extras
 	 */
 	public void handleDecode(Result rawResult, Bundle bundle) {
-		inactivityTimer.onActivity();
-		beepManager.playBeepSoundAndVibrate();
+		mInactivityTimer.onActivity();
+		mBeepManager.playBeepSoundAndVibrate();
 
 		Intent resultIntent = new Intent();
 		bundle.putInt("width", mCropRect.width());
@@ -198,16 +218,16 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
 		if (surfaceHolder == null) {
 			throw new IllegalStateException("No SurfaceHolder provided");
 		}
-		if (cameraManager.isOpen()) {
+		if (mCameraManager.isOpen()) {
 			Log.w(TAG, "initCamera() while already open -- late SurfaceView callback?");
 			return;
 		}
 		try {
-			cameraManager.openDriver(surfaceHolder);
+			mCameraManager.openDriver(surfaceHolder);
 			// Creating the handler starts the preview, which can also throw a
 			// RuntimeException.
-			if (handler == null) {
-				handler = new CaptureActivityHandler(this, cameraManager, DecodeThread.ALL_MODE);
+			if (mHandler == null) {
+				mHandler = new CaptureActivityHandler(this, mCameraManager, DecodeThread.ALL_MODE);
 			}
 
 			initCrop();
@@ -220,6 +240,21 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
 			Log.w(TAG, "Unexpected error initializing camera", e);
 			displayFrameworkBugMessageAndExit();
 		}
+	}
+
+	/**
+	 * 打开或关闭闪关灯
+	 * 
+	 * @param open
+	 */
+	protected void switchLight(boolean isFlashOn) {
+		mCameraManager.switchLight(isFlashOn);
+		if (isFlashOn) {
+			mFlashSwitch.setImageDrawable(getResources().getDrawable(R.drawable.flash_on));
+		} else {
+			mFlashSwitch.setImageDrawable(getResources().getDrawable(R.drawable.flash_off));
+		}
+		mIsFlashOn = isFlashOn;
 	}
 
 	private void displayFrameworkBugMessageAndExit() {
@@ -246,8 +281,8 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
 	}
 
 	public void restartPreviewAfterDelay(long delayMS) {
-		if (handler != null) {
-			handler.sendEmptyMessageDelayed(R.id.restart_preview, delayMS);
+		if (mHandler != null) {
+			mHandler.sendEmptyMessageDelayed(R.id.restart_preview, delayMS);
 		}
 	}
 
@@ -259,22 +294,22 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
 	 * 初始化截取的矩形区域
 	 */
 	private void initCrop() {
-		int cameraWidth = cameraManager.getCameraResolution().y;
-		int cameraHeight = cameraManager.getCameraResolution().x;
+		int cameraWidth = mCameraManager.getCameraResolution().y;
+		int cameraHeight = mCameraManager.getCameraResolution().x;
 
 		/** 获取布局中扫描框的位置信息 */
 		int[] location = new int[2];
-		scanCropView.getLocationInWindow(location);
+		mScanCropView.getLocationInWindow(location);
 
 		int cropLeft = location[0];
 		int cropTop = location[1] - getStatusBarHeight();
 
-		int cropWidth = scanCropView.getWidth();
-		int cropHeight = scanCropView.getHeight();
+		int cropWidth = mScanCropView.getWidth();
+		int cropHeight = mScanCropView.getHeight();
 
 		/** 获取布局容器的宽高 */
-		int containerWidth = scanContainer.getWidth();
-		int containerHeight = scanContainer.getHeight();
+		int containerWidth = mScanContainer.getWidth();
+		int containerHeight = mScanContainer.getHeight();
 
 		/** 计算最终截取的矩形的左上角顶点x坐标 */
 		int x = cropLeft * cameraWidth / containerWidth;

@@ -9,17 +9,18 @@ import java.util.Map;
 import org.apache.http.protocol.HTTP;
 import org.json.JSONObject;
 
-import com.android.volley.AuthFailureError;
-import com.android.volley.NetworkResponse;
-import com.android.volley.ParseError;
-import com.android.volley.Request;
-import com.android.volley.Response;
-import com.android.volley.Response.ErrorListener;
-import com.android.volley.Response.Listener;
-import com.android.volley.VolleyLog;
-import com.android.volley.toolbox.HttpHeaderParser;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import com.thirdparty.volley.AuthFailureError;
+import com.thirdparty.volley.NetworkResponse;
+import com.thirdparty.volley.ParseError;
+import com.thirdparty.volley.Request;
+import com.thirdparty.volley.Request.Method;
+import com.thirdparty.volley.Response;
+import com.thirdparty.volley.Response.ErrorListener;
+import com.thirdparty.volley.Response.Listener;
+import com.thirdparty.volley.VolleyLog;
+import com.thirdparty.volley.toolbox.HttpHeaderParser;
 
 public class ClassListRequest<T>  extends Request<List<T>> {
 

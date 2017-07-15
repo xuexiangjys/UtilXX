@@ -17,4 +17,11 @@
     
      <!-- EasyIndicator -->
     <item name="easy_indicator_viewpaper" type="id"></item>
+    
+    <!-- LoadingHelper -->
+    <item name="load_empty_id_text" type="id" />
+    <item name="load_empty_id_btn" type="id" />
+    <item name="load_error_id_text" type="id" />
+    <item name="load_error_id_btn" type="id" />
+    <item name="load_ing_id_text" type="id" />
 </resources>

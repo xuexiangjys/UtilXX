@@ -27,10 +27,10 @@ import org.apache.http.params.HttpConnectionParams;
 import org.apache.http.params.HttpParams;
 import org.apache.http.protocol.HTTP;
 
-import com.android.volley.AuthFailureError;
-import com.android.volley.Request;
-import com.android.volley.Request.Method;
-import com.android.volley.toolbox.HurlStack;
+import com.thirdparty.volley.AuthFailureError;
+import com.thirdparty.volley.Request;
+import com.thirdparty.volley.Request.Method;
+import com.thirdparty.volley.toolbox.HurlStack;
 
 /**
  * @author ZhiCheng Guo

@@ -11,10 +11,10 @@ import android.os.Looper;
 import android.text.TextUtils;
 import androidx.pluginmgr.PluginManager;
 
-import com.android.volley.RequestQueue;
-import com.android.volley.toolbox.OkHttpStack;
-import com.android.volley.toolbox.Volley;
-import com.squareup.okhttp.OkHttpClient;
+import com.thirdparty.volley.RequestQueue;
+import com.thirdparty.volley.toolbox.OkHttpStack;
+import com.thirdparty.volley.toolbox.Volley;
+import com.xuexiang.app.crash.BaseCrashHandler;
 import com.xuexiang.util.data.sharedPreferences.SettingSharePreferenceUtil;
 import com.xuexiang.util.log.LogUtils;
 import com.xuexiang.util.net.okhttp.OkHttpUtils;
@@ -24,6 +24,7 @@ import com.xuexiang.util.net.okhttp.persistentcookiejar.ClearableCookieJar;
 import com.xuexiang.util.net.okhttp.persistentcookiejar.PersistentCookieJar;
 import com.xuexiang.util.net.okhttp.persistentcookiejar.cache.SetCookieCache;
 import com.xuexiang.util.net.okhttp.persistentcookiejar.persistence.SharedPrefsCookiePersistor;
+import com.xuexiang.util.net.volleyhttp.HttpClientRequest;
 import com.xuexiang.util.view.FlexibleToast;
 
 public class SampleApplication extends BaseApplication {
@@ -41,8 +42,9 @@ public class SampleApplication extends BaseApplication {
 		super.onCreate();
 		PluginManager.init(this); //插件管理类
 		// Volley+Okhttp
-		mRequestQueue = Volley.newRequestQueue(getApplicationContext(),
-				new OkHttpStack(new OkHttpClient()));
+		mRequestQueue = Volley.newRequestQueue(getApplicationContext(), new OkHttpStack(null));
+		
+		HttpClientRequest.initSSLParams(com.thirdparty.volley.toolbox.HttpsUtils.getSslSocketFactory(null, null, null));
 		// Okhttp
 		ClearableCookieJar cookieJar = new PersistentCookieJar(
 				new SetCookieCache(), new SharedPrefsCookiePersistor(

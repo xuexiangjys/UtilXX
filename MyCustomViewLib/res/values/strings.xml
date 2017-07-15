@@ -65,4 +65,10 @@
         <item>@string/smile_rating_good</item>
         <item>@string/smile_rating_great</item>
     </string-array>
+    
+     <!-- LoadingHelper -->
+    <string name="load_Is_in_loading">正在加载中...</string>
+    <string name="load_retry">重试</string>
+    <string name="load_fail_to_load">加载失败</string>
+    <string name="load_no_data">暂无数据</string>
 </resources>

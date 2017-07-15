@@ -25,15 +25,6 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.android.volley.Request.Method;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.Response.ErrorListener;
-import com.android.volley.Response.Listener;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.NetworkImageView;
-import com.android.volley.toolbox.ProgressListener;
-import com.android.volley.toolbox.Volley;
 import com.example.testutil.R;
 import com.example.testutil.net.model.HttpConsts;
 import com.example.testutil.net.model.HttpConsts.User;
@@ -43,11 +34,21 @@ import com.example.testutil.net.model.Student;
 import com.example.testutil.net.model.UserInfo;
 import com.example.testutil.net.model.VisitInfo;
 import com.google.gson.reflect.TypeToken;
+import com.thirdparty.volley.Request.Method;
+import com.thirdparty.volley.RequestQueue;
+import com.thirdparty.volley.Response;
+import com.thirdparty.volley.Response.ErrorListener;
+import com.thirdparty.volley.Response.Listener;
+import com.thirdparty.volley.VolleyError;
+import com.thirdparty.volley.toolbox.HttpsUtils;
+import com.thirdparty.volley.toolbox.NetworkImageView;
+import com.thirdparty.volley.toolbox.Volley;
 import com.xuexiang.app.SampleApplication;
 import com.xuexiang.app.activity.BaseActivity;
 import com.xuexiang.util.file.FileUtils;
 import com.xuexiang.util.net.JsonUtil;
 import com.xuexiang.util.net.NetImageUtil;
+import com.xuexiang.util.net.uploadfile.HttpClientUtil.ProgressListener;
 import com.xuexiang.util.net.volleyhttp.HttpClientRequest;
 import com.xuexiang.util.net.volleyhttp.MyJsonObjectRequest;
 import com.xuexiang.util.net.volleyhttp.VolleyHttpManager;
@@ -80,6 +81,7 @@ public class VolleyHttpActivity extends BaseActivity implements OnClickListener{
 		mHttpClientRequest = HttpClientRequest.getInstance(this);
 		path = (EditText) findViewById(R.id.filePath);
 		mSingleQueue = Volley.newRequestQueue(this, new MultiPartStack());
+		
 	}
 
 /*******************************************自定义request，返回一个对象****************************************************************************************************************************/	

@@ -21,12 +21,14 @@ import java.io.IOException;
 import android.content.Context;
 import android.graphics.Point;
 import android.hardware.Camera;
+import android.hardware.Camera.Parameters;
 import android.hardware.Camera.Size;
 import android.os.Handler;
 import android.util.Log;
 import android.view.SurfaceHolder;
 
 import com.xuexiang.view.zxing.camera.open.OpenCameraInterface;
+
 
 /**
  * This object wraps the Camera service object and expects to be the only one
@@ -112,8 +114,29 @@ public class CameraManager {
                 }
             }
         }
+        FlashlightManager.enableFlashlight();
 
     }
+    
+  //Lemon add <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+  	private Parameters parameter;
+  	/**开关闪光灯
+  	 * @param open
+  	 * @return
+  	 */
+  	public boolean switchLight(boolean open) {
+  		parameter = camera.getParameters();  
+  		if (open) {
+  			parameter.setFlashMode(Parameters.FLASH_MODE_TORCH); 
+  			camera.setParameters(parameter);
+  			return true;
+  		} else {
+  			parameter.setFlashMode(Parameters.FLASH_MODE_OFF); 
+  			camera.setParameters(parameter);
+  			return false;
+  		}
+  	}
+  	//Lemon add >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
     /**
      * Gets the CameraManager singleton instance.
@@ -133,6 +156,7 @@ public class CameraManager {
      */
     public synchronized void closeDriver() {
         if (camera != null) {
+        	FlashlightManager.disableFlashlight();
             camera.release();
             camera = null;
             // Make sure to clear these each time we close the camera, so that

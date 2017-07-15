@@ -24,6 +24,7 @@ import com.example.mycustomview.custom.FlowlayoutActivity;
 import com.example.mycustomview.custom.HintPopupWindowActivity;
 import com.example.mycustomview.custom.ImagepickerActivity;
 import com.example.mycustomview.custom.LabelActivity;
+import com.example.mycustomview.custom.LoadViewHelperActivity;
 import com.example.mycustomview.custom.LoadingLayoutActivity;
 import com.example.mycustomview.custom.MagicindicatorActivity;
 import com.example.mycustomview.custom.MarqueenActivity;
@@ -44,6 +45,7 @@ import com.example.mycustomview.custom.StyleabletToastActivity;
 import com.example.mycustomview.custom.SwitchIconActivity;
 import com.example.mycustomview.custom.TimeLineActivity;
 import com.example.mycustomview.custom.ToastyActivity;
+import com.example.mycustomview.custom.ViewToolTipActivity;
 import com.example.mycustomview.custom.WeatherViewActivity;
 import com.example.mycustomview.custom.WebViewMainActivity;
 import com.example.mycustomview.custom.ZXingActivity;
@@ -262,6 +264,10 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 			mToastUtil.showToast("点击了StateLayoutActivity");
 			startActivity(StateLayoutActivity.class);
 			break;
+		case R.id.loadviewhelper:
+			mToastUtil.showToast("点击了LoadViewHelperActivity");
+			startActivity(LoadViewHelperActivity.class);
+			break;
 		case R.id.zxing:
 			mToastUtil.showToast("点击了ZXingActivity");
 			startActivity(ZXingActivity.class);
@@ -285,6 +291,10 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 		case R.id.smilerating:
 			mToastUtil.showToast("点击了SmileRatingActivity");
 			startActivity(SmileRatingActivity.class);
+			break;
+		case R.id.viewtooltip:
+			mToastUtil.showToast("点击了ViewToolTipActivity");
+			startActivity(ViewToolTipActivity.class);
 			break;
 		default:
 			break;

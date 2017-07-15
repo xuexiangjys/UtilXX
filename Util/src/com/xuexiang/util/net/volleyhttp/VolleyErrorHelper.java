@@ -5,15 +5,15 @@ import java.util.Map;
 
 import android.content.Context;
 
-import com.android.volley.AuthFailureError;
-import com.android.volley.NetworkError;
-import com.android.volley.NetworkResponse;
-import com.android.volley.NoConnectionError;
-import com.android.volley.ServerError;
-import com.android.volley.TimeoutError;
-import com.android.volley.VolleyError;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import com.thirdparty.volley.AuthFailureError;
+import com.thirdparty.volley.NetworkError;
+import com.thirdparty.volley.NetworkResponse;
+import com.thirdparty.volley.NoConnectionError;
+import com.thirdparty.volley.ServerError;
+import com.thirdparty.volley.TimeoutError;
+import com.thirdparty.volley.VolleyError;
 
 public class VolleyErrorHelper {
 	/**

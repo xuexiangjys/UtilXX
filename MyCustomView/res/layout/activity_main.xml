@@ -250,6 +250,11 @@
                 style="@style/CustomButtonStyle"
                 android:text="StateLayout Demo" />
             
+            <com.xuexiang.view.CustomTextView
+                android:id="@+id/loadviewhelper"
+                style="@style/CustomButtonStyle"
+                android:text="LoadViewHelper Demo" />
+            
              <com.xuexiang.view.CustomTextView
                 android:id="@+id/zxing"
                 style="@style/CustomButtonStyle"
@@ -279,6 +284,11 @@
                 android:id="@+id/smilerating"
                 style="@style/CustomButtonStyle"
                 android:text="SmileRating Demo" />
+             
+             <com.xuexiang.view.CustomTextView
+                android:id="@+id/viewtooltip"
+                style="@style/CustomButtonStyle"
+                android:text="ViewToolTip Demo" />
         </LinearLayout>
     </ScrollView>
 

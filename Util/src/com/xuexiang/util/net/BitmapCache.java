@@ -4,7 +4,7 @@ import android.annotation.SuppressLint;
 import android.graphics.Bitmap;
 import android.util.LruCache;
 
-import com.android.volley.toolbox.ImageLoader.ImageCache;
+import com.thirdparty.volley.toolbox.ImageLoader.ImageCache;
 
 @SuppressLint("NewApi")
 public class BitmapCache implements ImageCache{

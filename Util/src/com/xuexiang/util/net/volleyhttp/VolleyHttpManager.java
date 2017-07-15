@@ -7,11 +7,11 @@ import org.json.JSONObject;
 
 import android.net.Uri;
 
-import com.android.volley.AuthFailureError;
-import com.android.volley.Request.Method;
-import com.android.volley.Response.ErrorListener;
-import com.android.volley.Response.Listener;
-import com.android.volley.toolbox.StringRequest;
+import com.thirdparty.volley.AuthFailureError;
+import com.thirdparty.volley.Request.Method;
+import com.thirdparty.volley.Response.ErrorListener;
+import com.thirdparty.volley.Response.Listener;
+import com.thirdparty.volley.toolbox.StringRequest;
 import com.xuexiang.app.SampleApplication;
 
 

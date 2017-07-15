@@ -7,12 +7,13 @@ import org.json.JSONObject;
 
 import android.content.Context;
 
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.toolbox.OkHttpStack;
-import com.android.volley.toolbox.Volley;
-import com.squareup.okhttp.OkHttpClient;
+import com.thirdparty.volley.Request;
+import com.thirdparty.volley.RequestQueue;
+import com.thirdparty.volley.Response;
+import com.thirdparty.volley.toolbox.HttpsUtils;
+import com.thirdparty.volley.toolbox.OkHttpStack;
+import com.thirdparty.volley.toolbox.Volley;
+
 
 /**
  * DemoApp
@@ -24,7 +25,8 @@ public class HttpClientRequest {
 
     private static Context sContext;
     public RequestQueue mRequestQueue;
-
+    public static HttpsUtils.SSLParams sslParams;
+    
     private HttpClientRequest() {
         mRequestQueue = getRequestQueue();
     }
@@ -36,6 +38,10 @@ public class HttpClientRequest {
     private static class ClientHolder {
         private static final HttpClientRequest CLIENT_REQUEST = new HttpClientRequest();
     }
+    
+    public static void initSSLParams(HttpsUtils.SSLParams sslParams) {
+    	HttpClientRequest.sslParams = sslParams;
+	}
     /**
      * Cancels all the request in the Volley queue for a given tag
      *
@@ -55,7 +61,7 @@ public class HttpClientRequest {
     public RequestQueue getRequestQueue() {
         if (mRequestQueue == null) {
             mRequestQueue = Volley.newRequestQueue(sContext.getApplicationContext(),
-                    new OkHttpStack(new OkHttpClient()));
+                    new OkHttpStack(HttpClientRequest.sslParams));
         }
         return mRequestQueue;
     }

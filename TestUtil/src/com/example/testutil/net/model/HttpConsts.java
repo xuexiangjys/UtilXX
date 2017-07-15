@@ -8,7 +8,8 @@ import com.xuexiang.app.SampleApplication;
  */
 public class HttpConsts {
 	
-	public static final String TEST_URL = "http://www.weather.com.cn/adat/sk/101010100.html";	
+//	public static final String TEST_URL = "http://www.weather.com.cn/adat/sk/101010100.html";	
+	public static final String TEST_URL = "https://kyfw.12306.cn/otn/";	
 	/** 用户信息管理服务的地址*/
 	public static String app_user_url = SampleApplication.app_url + "helper/User";
 	/** 上门服务信息处理请求地址*/

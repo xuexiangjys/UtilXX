@@ -21,13 +21,14 @@ import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.android.volley.NetworkResponse;
-import com.android.volley.Request;
-import com.android.volley.Response;
-import com.android.volley.Response.ErrorListener;
-import com.android.volley.Response.Listener;
-import com.android.volley.toolbox.HttpHeaderParser;
-import com.android.volley.toolbox.ProgressListener;
+import com.thirdparty.volley.NetworkResponse;
+import com.thirdparty.volley.Request;
+import com.thirdparty.volley.Request.Method;
+import com.thirdparty.volley.Response;
+import com.thirdparty.volley.Response.ErrorListener;
+import com.thirdparty.volley.Response.Listener;
+import com.thirdparty.volley.toolbox.HttpHeaderParser;
+import com.xuexiang.util.net.uploadfile.HttpClientUtil.ProgressListener;
 
 /**
  * MultipartRequest - To handle the large file uploads.
@@ -70,7 +71,7 @@ public class MultiPartStringRequest extends Request<String> implements MultiPart
             ErrorListener errorListener) {
         super(method, url, errorListener);
         mListener = listener;
-        mProgressListener = progressListener;
+//        mProgressListener = progressListener;
     }
 
     /**

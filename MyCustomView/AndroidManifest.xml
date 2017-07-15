@@ -157,6 +157,7 @@
         <activity android:name="com.example.mycustomview.custom.StatefulLayoutActivity" />
         <activity android:name="com.example.mycustomview.custom.StateLayoutActivity"
             android:theme="@style/AppCompatTheme" />
+        <activity android:name="com.example.mycustomview.custom.LoadViewHelperActivity" />
         <activity android:name="com.example.mycustomview.custom.ZXingActivity" />
         <activity
             android:name="com.xuexiang.view.zxing.activity.CaptureActivity"
@@ -167,6 +168,7 @@
         <activity android:name="com.example.mycustomview.custom.CompoundIconTextViewActivity" />
         <activity android:name="com.example.mycustomview.easyindicator.EasyIndicatorActivity" />
         <activity android:name="com.example.mycustomview.custom.SmileRatingActivity" />
+        <activity android:name="com.example.mycustomview.custom.ViewToolTipActivity" />
     </application>
 
 </manifest>
