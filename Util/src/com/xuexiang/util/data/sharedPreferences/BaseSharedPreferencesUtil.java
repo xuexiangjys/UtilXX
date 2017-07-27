@@ -2,7 +2,7 @@ package com.xuexiang.util.data.sharedPreferences;
 
 import java.util.Map;
 
-import com.xuexiang.util.common.JavaReflectUtil;
+import com.xuexiang.util.common.reflect.JavaReflectUtil;
 
 import android.content.Context;
 import android.content.SharedPreferences;
