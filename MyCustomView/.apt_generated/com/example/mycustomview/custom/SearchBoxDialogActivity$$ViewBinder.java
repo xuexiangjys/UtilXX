@@ -10,8 +10,8 @@ public class SearchBoxDialogActivity$$ViewBinder<T extends com.example.mycustomv
     View view;
     view = finder.findRequiredView(source, 2131230891, "field 'toolbar'");
     target.toolbar = finder.castView(view, 2131230891, "field 'toolbar'");
-    view = finder.findRequiredView(source, 2131231088, "field 'searchInfo'");
-    target.searchInfo = finder.castView(view, 2131231088, "field 'searchInfo'");
+    view = finder.findRequiredView(source, 2131231097, "field 'searchInfo'");
+    target.searchInfo = finder.castView(view, 2131231097, "field 'searchInfo'");
   }
 
   @Override public void unbind(T target) {

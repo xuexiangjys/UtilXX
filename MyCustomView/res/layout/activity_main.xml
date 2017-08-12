@@ -289,6 +289,11 @@
                 android:id="@+id/viewtooltip"
                 style="@style/CustomButtonStyle"
                 android:text="ViewToolTip Demo" />
+             
+             <com.xuexiang.view.CustomTextView
+                android:id="@+id/easypop"
+                style="@style/CustomButtonStyle"
+                android:text="EasyPop Demo" />
         </LinearLayout>
     </ScrollView>
 

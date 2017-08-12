@@ -4,7 +4,7 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="14"
+        android:minSdkVersion="21"
         android:targetSdkVersion="21" />
 
     <!-- 网络 -->
@@ -169,6 +169,9 @@
         <activity android:name="com.example.mycustomview.easyindicator.EasyIndicatorActivity" />
         <activity android:name="com.example.mycustomview.custom.SmileRatingActivity" />
         <activity android:name="com.example.mycustomview.custom.ViewToolTipActivity" />
+        
+        <activity android:name="com.example.mycustomview.easypop.EasyPopActivity" 
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

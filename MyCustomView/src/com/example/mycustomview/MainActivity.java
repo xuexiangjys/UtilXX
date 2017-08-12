@@ -50,6 +50,7 @@ import com.example.mycustomview.custom.WeatherViewActivity;
 import com.example.mycustomview.custom.WebViewMainActivity;
 import com.example.mycustomview.custom.ZXingActivity;
 import com.example.mycustomview.easyindicator.EasyIndicatorActivity;
+import com.example.mycustomview.easypop.EasyPopActivity;
 import com.example.mycustomview.indicatordialog.IndicatorDialogActivity;
 import com.example.mycustomview.jptabbar.JpTabbarActivity;
 import com.example.mycustomview.pageslidingtab.ui.activity.PageSlidingTabActivity;
@@ -295,6 +296,10 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 		case R.id.viewtooltip:
 			mToastUtil.showToast("点击了ViewToolTipActivity");
 			startActivity(ViewToolTipActivity.class);
+			break;
+		case R.id.easypop:
+			mToastUtil.showToast("点击了EasyPopActivity");
+			startActivity(EasyPopActivity.class);
 			break;
 		default:
 			break;
