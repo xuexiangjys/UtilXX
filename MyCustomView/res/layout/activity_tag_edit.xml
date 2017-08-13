@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:text="编辑(彩色、一行固定4个):"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="2dp"
+                android:background="#dddddd"/>
+
+            <com.xuexiang.view.tag.TagLayout
+                android:id="@+id/tag_layout_1"
+                style="@style/TagLayout.RandomColor.Edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:tag_view_text_color="@android:color/white"
+                app:tag_layout_fit_num="4"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:text="编辑(自定义颜色、按压效果):"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="2dp"
+                android:background="#dddddd"/>
+
+            <com.xuexiang.view.tag.TagLayout
+                android:id="@+id/tag_layout_2"
+                style="@style/TagLayout.Edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:tag_layout_press_feedback="true"
+                app:tag_view_bg_color="@android:color/white"
+                app:tag_view_border_color="@android:color/holo_red_dark"
+                app:tag_view_text_color="@android:color/holo_red_light"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:text="编辑:"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="2dp"
+                android:background="#dddddd"/>
+
+            <com.xuexiang.view.tag.TagLayout
+                android:id="@+id/tag_layout_3"
+                style="@style/TagLayout.Edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#dddddd"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+
+        <com.xuexiang.view.tag.TagView
+            android:id="@+id/tag_del"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            app:tag_text="删除"
+            app:tag_border_color="@android:color/holo_red_light"
+            app:tag_bg_color="@android:color/white"
+            app:tag_bg_color_check="@android:color/holo_red_light"
+            app:tag_border_color_check="@android:color/holo_red_light"
+            app:tag_text_color_check="@android:color/white"
+            app:tag_icon="@drawable/ic_delete"
+            app:tag_press_feedback="true"
+            app:tag_text_color="@android:color/holo_red_light"/>
+
+        <com.xuexiang.view.tag.TagView
+            android:id="@+id/tag_open_edit"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:tag_text="编辑:关"
+            app:tag_mode="check"
+            app:tag_auto_check="true"
+            app:tag_bg_color="#88333333"
+            app:tag_bg_color_check="@android:color/holo_blue_light"
+            app:tag_border_color="#ff333333"
+            app:tag_border_color_check="@android:color/holo_blue_light"
+            app:tag_checked="true"
+            app:tag_press_feedback="true"
+            app:tag_text_check="编辑:开"
+            app:tag_text_color="#f5f5f5"
+            app:tag_text_color_check="@android:color/white"/>
+
+        <com.xuexiang.view.tag.TagView
+            android:id="@+id/tag_add"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="20dp"
+            app:tag_text="添加"
+            app:tag_border_color="@android:color/holo_green_light"
+            app:tag_bg_color="@android:color/white"
+            app:tag_bg_color_check="@android:color/holo_green_light"
+            app:tag_border_color_check="@android:color/holo_green_light"
+            app:tag_text_color_check="@android:color/white"
+            app:tag_icon="@drawable/ic_add"
+            app:tag_press_feedback="true"
+            app:tag_text_color="@android:color/holo_green_light"/>
+    </FrameLayout>
+</LinearLayout>

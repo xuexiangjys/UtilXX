@@ -18,6 +18,7 @@ import com.example.mycustomview.custom.CustomDialogActivity;
 import com.example.mycustomview.custom.CustomViewActivity;
 import com.example.mycustomview.custom.DraglayoutExpandActivity;
 import com.example.mycustomview.custom.FaboptionsActivity;
+import com.example.mycustomview.custom.FilterMenuActivity;
 import com.example.mycustomview.custom.FloatBallActivity;
 import com.example.mycustomview.custom.FloatingViewActivity;
 import com.example.mycustomview.custom.FlowlayoutActivity;
@@ -59,6 +60,7 @@ import com.example.mycustomview.pickers.PickersActivity;
 import com.example.mycustomview.pickerview.PickerviewActivity;
 import com.example.mycustomview.smoothprogressbar.SmoothProgressBarActivity;
 import com.example.mycustomview.tabview.TabViewActivity;
+import com.example.mycustomview.taglayout.TagLayoutActivity;
 import com.xuexiang.app.activity.BaseActivity;
 
 public class MainActivity extends BaseActivity implements OnClickListener {
@@ -113,6 +115,10 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 		case R.id.slidemenu:
 			mToastUtil.showToast("点击了SlideMenuActivity");
 			startActivity(SlideMenuActivity.class);
+			break;
+		case R.id.filtermenu:
+			mToastUtil.showToast("点击了FilterMenuActivity");
+			startActivity(FilterMenuActivity.class);
 			break;
 		case R.id.calendar:
 			mToastUtil.showToast("点击了CalendarActivity");
@@ -300,6 +306,10 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 		case R.id.easypop:
 			mToastUtil.showToast("点击了EasyPopActivity");
 			startActivity(EasyPopActivity.class);
+			break;
+		case R.id.taglayout:
+			mToastUtil.showToast("点击了TagLayoutActivity");
+			startActivity(TagLayoutActivity.class);
 			break;
 		default:
 			break;

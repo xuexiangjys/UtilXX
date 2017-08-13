@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:text="带图标Tag(彩色、按压反馈、固定大小或自适应):"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginBottom="2dp"
+        android:layout_marginTop="2dp"
+        android:background="#dddddd"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+
+        <com.xuexiang.view.tag.TagView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            app:tag_bg_color="@android:color/white"
+            app:tag_bg_color_check="@android:color/holo_red_light"
+            app:tag_border_color="@android:color/holo_red_light"
+            app:tag_border_color_check="@android:color/holo_red_light"
+            app:tag_icon="@drawable/ic_delete"
+            app:tag_press_feedback="true"
+            app:tag_text="删除"
+            app:tag_text_color="@android:color/holo_red_light"
+            app:tag_text_color_check="@android:color/white"/>
+
+        <com.xuexiang.view.tag.TagView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="20dp"
+            app:tag_bg_color="@android:color/white"
+            app:tag_bg_color_check="@android:color/holo_green_light"
+            app:tag_border_color="@android:color/holo_green_light"
+            app:tag_border_color_check="@android:color/holo_green_light"
+            app:tag_icon="@drawable/ic_add"
+            app:tag_press_feedback="true"
+            app:tag_text="添加"
+            app:tag_text_color="@android:color/holo_green_light"
+            app:tag_text_color_check="@android:color/white"/>
+
+        <com.xuexiang.view.tag.TagView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="20dp"
+            app:tag_bg_color="@android:color/white"
+            app:tag_bg_color_check="@android:color/holo_green_light"
+            app:tag_border_color="@android:color/holo_green_light"
+            app:tag_border_color_check="@android:color/holo_green_light"
+            app:tag_icon="@drawable/ic_add"
+            app:tag_press_feedback="true"
+            app:tag_text="添加"
+            app:tag_text_color="@android:color/holo_green_light"
+            app:tag_text_color_check="@android:color/white"/>
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:text="具有选中状态Tag:"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginBottom="2dp"
+        android:layout_marginTop="2dp"
+        android:background="#dddddd"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+
+        <com.xuexiang.view.tag.TagView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            app:tag_bg_color="@android:color/white"
+            app:tag_bg_color_check="@android:color/holo_red_light"
+            app:tag_border_color="@android:color/holo_red_light"
+            app:tag_border_color_check="@android:color/holo_red_light"
+            app:tag_icon="@drawable/ic_delete"
+            app:tag_mode="check"
+            app:tag_press_feedback="true"
+            app:tag_text="删除"
+            app:tag_text_color="@android:color/holo_red_light"
+            app:tag_text_color_check="@android:color/white"/>
+
+        <com.xuexiang.view.tag.TagView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="20dp"
+            app:tag_bg_color="@android:color/white"
+            app:tag_bg_color_check="@android:color/holo_green_light"
+            app:tag_border_color="@android:color/holo_green_light"
+            app:tag_border_color_check="@android:color/holo_green_light"
+            app:tag_icon="@drawable/ic_add"
+            app:tag_mode="check"
+            app:tag_press_feedback="true"
+            app:tag_text="添加"
+            app:tag_text_color="@android:color/holo_green_light"
+            app:tag_text_color_check="@android:color/white"/>
+
+        <com.xuexiang.view.tag.TagView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="20dp"
+            app:tag_bg_color="@android:color/white"
+            app:tag_bg_color_check="@android:color/holo_green_light"
+            app:tag_border_color="@android:color/holo_green_light"
+            app:tag_border_color_check="@android:color/holo_green_light"
+            app:tag_icon="@drawable/ic_add"
+            app:tag_mode="check"
+            app:tag_press_feedback="true"
+            app:tag_text="添加"
+            app:tag_text_color="@android:color/holo_green_light"
+            app:tag_text_color_check="@android:color/white"/>
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:text="选中文字切换Tag:"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginBottom="2dp"
+        android:layout_marginTop="2dp"
+        android:background="#dddddd"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+
+        <com.xuexiang.view.tag.TagView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            app:tag_bg_color="@android:color/white"
+            app:tag_bg_color_check="@android:color/holo_red_light"
+            app:tag_border_color="@android:color/holo_red_light"
+            app:tag_border_color_check="@android:color/holo_red_light"
+            app:tag_icon="@drawable/ic_delete"
+            app:tag_mode="check"
+            app:tag_press_feedback="true"
+            app:tag_text="删除"
+            app:tag_text_check="取消"
+            app:tag_text_color="@android:color/holo_red_light"
+            app:tag_text_color_check="@android:color/white"/>
+
+        <com.xuexiang.view.tag.TagView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="20dp"
+            app:tag_bg_color="@android:color/white"
+            app:tag_bg_color_check="@color/gray_background"
+            app:tag_border_color="@android:color/holo_green_light"
+            app:tag_border_color_check="@color/gray_background"
+            app:tag_icon="@drawable/ic_add"
+            app:tag_mode="check"
+            app:tag_press_feedback="true"
+            app:tag_text="添加"
+            app:tag_text_check="我要取消"
+            app:tag_text_color="@android:color/holo_green_light"
+            app:tag_text_color_check="@android:color/white"/>
+
+        <com.xuexiang.view.tag.TagView
+            android:id="@+id/tagView"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="20dp"
+            app:tag_border_color="@android:color/holo_green_light"
+            app:tag_icon="@drawable/ic_add"
+            app:tag_mode="check"
+            app:tag_press_feedback="true"
+            app:tag_text="添加"
+            app:tag_text_check="我要取消"
+            app:tag_text_color="@android:color/holo_green_light"/>
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:text="选中图标消失Tag:"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginBottom="2dp"
+        android:layout_marginTop="2dp"
+        android:background="#dddddd"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+
+        <com.xuexiang.view.tag.TagView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            app:tag_border_color="@android:color/holo_red_light"
+            app:tag_icon="@drawable/ic_delete"
+            app:tag_mode="icon_check_invisible"
+            app:tag_press_feedback="true"
+            app:tag_text="删除"
+            app:tag_text_color="@android:color/holo_red_light"/>
+
+        <com.xuexiang.view.tag.TagView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="20dp"
+            app:tag_bg_color_check="@color/gray_background"
+            app:tag_border_color="@android:color/holo_green_light"
+            app:tag_border_color_check="@color/gray_background"
+            app:tag_icon="@drawable/ic_add"
+            app:tag_mode="icon_check_invisible"
+            app:tag_press_feedback="true"
+            app:tag_text="添加"
+            app:tag_text_color="@android:color/holo_green_light"
+            app:tag_text_color_check="@android:color/white"/>
+
+        <com.xuexiang.view.tag.TagView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="20dp"
+            app:tag_border_color="@android:color/holo_green_light"
+            app:tag_icon="@drawable/ic_add"
+            app:tag_mode="icon_check_invisible"
+            app:tag_press_feedback="true"
+            app:tag_text="添加"
+            app:tag_text_check="我要取消"
+            app:tag_text_color="@android:color/holo_green_light"/>
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:text="选中图标改变Tag:"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginBottom="2dp"
+        android:layout_marginTop="2dp"
+        android:background="#dddddd"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+
+        <com.xuexiang.view.tag.TagView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            app:tag_border_color="@android:color/holo_red_light"
+            app:tag_icon="@drawable/ic_good"
+            app:tag_icon_change="@drawable/ic_bad"
+            app:tag_mode="icon_check_change"
+            app:tag_press_feedback="true"
+            app:tag_text="Good"
+            app:tag_text_check="Bad"
+            app:tag_text_color="@android:color/holo_red_light"/>
+
+        <com.xuexiang.view.tag.TagView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="20dp"
+            app:tag_bg_color_check="@android:color/white"
+            app:tag_border_color="@android:color/holo_green_light"
+            app:tag_border_color_check="@android:color/holo_red_dark"
+            app:tag_icon="@drawable/ic_right"
+            app:tag_icon_change="@drawable/ic_error"
+            app:tag_mode="icon_check_change"
+            app:tag_press_feedback="true"
+            app:tag_text="正确"
+            app:tag_text_check="错误"
+            app:tag_text_color="@android:color/holo_green_light"
+            app:tag_text_color_check="@android:color/holo_red_light"/>
+
+        <com.xuexiang.view.tag.TagView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="20dp"
+            app:tag_bg_color_check="@android:color/white"
+            app:tag_border_color="@android:color/holo_green_light"
+            app:tag_border_color_check="@color/gray_background"
+            app:tag_icon="@drawable/ic_smile"
+            app:tag_icon_change="@drawable/ic_cry"
+            app:tag_mode="icon_check_change"
+            app:tag_press_feedback="true"
+            app:tag_text="开心"
+            app:tag_text_check="伤心"
+            app:tag_text_color="@android:color/holo_green_light"
+            app:tag_text_color_check="@color/gray_background"/>
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:text="延迟2000ms改变Tag:"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginBottom="2dp"
+        android:layout_marginTop="2dp"
+        android:background="#dddddd"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+
+        <com.xuexiang.view.tag.TagView
+            android:id="@+id/tag_good_or_bad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            app:tag_auto_check="false"
+            app:tag_border_color="@android:color/holo_red_light"
+            app:tag_icon="@drawable/ic_good"
+            app:tag_icon_change="@drawable/ic_bad"
+            app:tag_mode="icon_check_change"
+            app:tag_press_feedback="true"
+            app:tag_text="Good"
+            app:tag_text_check="Bad"
+            app:tag_text_color="@android:color/holo_red_light"/>
+
+        <com.xuexiang.view.tag.TagView
+            android:id="@+id/tag_right_or_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="20dp"
+            app:tag_auto_check="false"
+            app:tag_bg_color_check="@android:color/white"
+            app:tag_border_color="@android:color/holo_green_light"
+            app:tag_border_color_check="@android:color/holo_red_dark"
+            app:tag_icon="@drawable/ic_right"
+            app:tag_icon_change="@drawable/ic_error"
+            app:tag_mode="icon_check_change"
+            app:tag_press_feedback="false"
+            app:tag_text="正确"
+            app:tag_text_check="错误"
+            app:tag_text_color="@android:color/holo_green_light"
+            app:tag_text_color_check="@android:color/holo_red_light"/>
+
+        <com.xuexiang.view.tag.TagView
+            android:id="@+id/tag_smile_or_cry"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="20dp"
+            app:tag_auto_check="false"
+            app:tag_bg_color_check="@android:color/white"
+            app:tag_border_color="@android:color/holo_green_light"
+            app:tag_border_color_check="@color/gray_background"
+            app:tag_icon="@drawable/ic_smile"
+            app:tag_icon_change="@drawable/ic_cry"
+            app:tag_mode="icon_check_change"
+            app:tag_press_feedback="false"
+            app:tag_text="开心"
+            app:tag_text_check="伤心"
+            app:tag_text_color="@android:color/holo_green_light"
+            app:tag_text_color_check="@color/gray_background"/>
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:text="倒计时Tag:"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginBottom="2dp"
+        android:layout_marginTop="2dp"
+        android:background="#dddddd"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+
+        <com.xuexiang.view.tag.TagView
+            android:id="@+id/tag_get_code"
+            android:layout_width="85dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="20dp"
+            app:tag_auto_check="false"
+            app:tag_bg_color="@android:color/holo_red_light"
+            app:tag_bg_color_check="#9e9e9e"
+            app:tag_border_color="@android:color/holo_red_light"
+            app:tag_border_color_check="#9e9e9e"
+            app:tag_mode="check"
+            app:tag_press_feedback="false"
+            app:tag_text="获取验证码"
+            app:tag_text_check="已发送(10s)"
+            app:tag_text_color="@android:color/white"
+            app:tag_text_color_check="@android:color/white"/>
+
+        <com.xuexiang.view.tag.TagView
+            android:id="@+id/tag_skip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginRight="20dp"
+            app:tag_auto_check="false"
+            app:tag_bg_color="#44000000"
+            app:tag_border_color="@android:color/transparent"
+            app:tag_mode="normal"
+            app:tag_press_feedback="false"
+            app:tag_text="3 跳过"
+            app:tag_text_color="@android:color/white"/>
+
+        <com.xuexiang.view.tag.TagView
+            android:id="@+id/tag_skip_2"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="20dp"
+            app:tag_auto_check="false"
+            app:tag_bg_color="@android:color/white"
+            app:tag_bg_color_check="@android:color/holo_red_light"
+            app:tag_border_color="@android:color/holo_red_dark"
+            app:tag_border_color_check="@android:color/holo_red_light"
+            app:tag_mode="normal"
+            app:tag_press_feedback="true"
+            app:tag_shape="arc"
+            app:tag_text="跳过 3"
+            app:tag_text_color="@android:color/holo_red_light"
+            app:tag_text_color_check="@android:color/white"/>
+    </FrameLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:text="设置带动画的Drawable:"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginBottom="2dp"
+        android:layout_marginTop="2dp"
+        android:background="#dddddd"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+
+        <com.xuexiang.view.tag.TagView
+            android:id="@+id/tag_single_circle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            app:tag_bg_color="@android:color/white"
+            app:tag_bg_color_check="@android:color/holo_red_light"
+            app:tag_border_color="@android:color/holo_red_light"
+            app:tag_border_color_check="@android:color/holo_red_light"
+            app:tag_press_feedback="true"
+            app:tag_text="单波纹"
+            app:tag_text_color="@android:color/holo_red_light"
+            app:tag_text_color_check="@android:color/white"
+            app:tag_text_size="20dp"/>
+
+        <com.xuexiang.view.tag.TagView
+            android:id="@+id/tag_multi_circle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="20dp"
+            app:tag_bg_color="@android:color/white"
+            app:tag_bg_color_check="@android:color/holo_green_light"
+            app:tag_border_color="@android:color/holo_green_light"
+            app:tag_border_color_check="@android:color/holo_green_light"
+            app:tag_gravity="right"
+            app:tag_icon_padding="10dp"
+            app:tag_press_feedback="true"
+            app:tag_text="多波纹"
+            app:tag_text_check="我要取消"
+            app:tag_text_color="@android:color/holo_green_light"
+            app:tag_text_color_check="@android:color/white"
+            app:tag_text_size="18sp"/>
+    </FrameLayout>
+
+</LinearLayout>

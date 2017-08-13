@@ -67,6 +67,7 @@
         <activity android:name="com.example.mycustomview.custom.DraglayoutExpandActivity" />
         <activity android:name="com.example.mycustomview.custom.SnowActivity" />
         <activity android:name="com.example.mycustomview.custom.SlideMenuActivity" />
+        <activity android:name="com.example.mycustomview.custom.FilterMenuActivity" />
         <activity
             android:name="com.example.mycustomview.custom.CalendarActivity"
             android:theme="@style/AppCompatTheme" />
@@ -172,6 +173,15 @@
         
         <activity android:name="com.example.mycustomview.easypop.EasyPopActivity" 
             android:theme="@style/AppTheme.NoActionBar" />
+        
+        <activity android:name="com.example.mycustomview.taglayout.TagLayoutActivity" />
+        <activity android:name="com.example.mycustomview.taglayout.TagChangeActivity" />
+        <activity android:name="com.example.mycustomview.taglayout.TagChoiceActivity" />
+        <activity android:name="com.example.mycustomview.taglayout.TagEditActivity" />
+        <activity android:name="com.example.mycustomview.taglayout.TagReverseActivity" />
+        <activity android:name="com.example.mycustomview.taglayout.TagShapeActivity" />
+        <activity android:name="com.example.mycustomview.taglayout.TagViewActivity" />
+        
     </application>
 
 </manifest>

@@ -64,6 +64,11 @@
                 android:id="@+id/slidemenu"
                 style="@style/CustomButtonStyle"
                 android:text="SlideMenu Demo" />
+            
+            <com.xuexiang.view.CustomTextView
+                android:id="@+id/filtermenu"
+                style="@style/CustomButtonStyle"
+                android:text="FilterMenu Demo" />
 
             <com.xuexiang.view.CustomTextView
                 android:id="@+id/calendar"
@@ -294,6 +299,12 @@
                 android:id="@+id/easypop"
                 style="@style/CustomButtonStyle"
                 android:text="EasyPop Demo" />
+             
+             <com.xuexiang.view.CustomTextView
+                android:id="@+id/taglayout"
+                style="@style/CustomButtonStyle"
+                android:text="TagLayout Demo" />
+             
         </LinearLayout>
     </ScrollView>
 

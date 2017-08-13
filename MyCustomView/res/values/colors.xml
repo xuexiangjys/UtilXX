@@ -64,4 +64,9 @@
     <color name="app_color">#ff572e</color>
     <color name="white">#FFFFFF</color>
     <color name="color_f2">#F2F2F2</color>
+    
+    <color name="default_border">#88F44336</color>
+    <color name="default_bg">#33F44336</color>
+    <color name="default_text">#FF666666</color>
+    <color name="gray_background">#66333333</color>
 </resources>
