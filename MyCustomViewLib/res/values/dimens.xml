@@ -121,4 +121,8 @@
      <!-- StateLayout -->
     <dimen name="drawable_size">76dp</dimen>
     <dimen name="info_margin_top">-56dp</dimen>
+    
+    <dimen name="default_padding">16dp</dimen>
+    
+    <dimen name="ui_radius">2dp</dimen>
 </resources>

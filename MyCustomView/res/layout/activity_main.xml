@@ -305,6 +305,32 @@
                 style="@style/CustomButtonStyle"
                 android:text="TagLayout Demo" />
              
+              <com.xuexiang.view.CustomTextView
+                android:id="@+id/jsbridge"
+                style="@style/CustomButtonStyle"
+                android:text="JsBridge Demo" />
+              
+              <com.xuexiang.view.CustomTextView
+                android:id="@+id/dialogbuilder"
+                style="@style/CustomButtonStyle"
+                android:text="DialogBuilder Demo" />
+              
+              <com.xuexiang.view.CustomTextView
+                android:id="@+id/validateui"
+                style="@style/CustomButtonStyle"
+                android:text="ValidateUI Demo" />
+              
+              <com.xuexiang.view.CustomTextView
+                android:id="@+id/cookiebar"
+                style="@style/CustomButtonStyle"
+                android:text="CookieBar Demo" />
+              
+               <com.xuexiang.view.CustomTextView
+                android:id="@+id/uiview"
+                style="@style/CustomButtonStyle"
+                android:text="UIView Demo" />
+             
+             
         </LinearLayout>
     </ScrollView>
 

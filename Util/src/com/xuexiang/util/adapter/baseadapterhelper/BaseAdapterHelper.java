@@ -40,9 +40,7 @@ import com.squareup.picasso.RequestCreator;
  * <p/>
  * 
  * <pre>
- * return BaseAdapterHelper.get(context, convertView, parent, R.layout.item)
- * 		.setText(R.id.tvName, contact.getName())
- * 		.setText(R.id.tvEmails, contact.getEmails().toString())
+ * return BaseAdapterHelper.get(context, convertView, parent, R.layout.item).setText(R.id.tvName, contact.getName()).setText(R.id.tvEmails, contact.getEmails().toString())
  * 		.setText(R.id.tvNumbers, contact.getNumbers().toString()).getView();
  * </pre>
  */
@@ -65,14 +63,12 @@ public class BaseAdapterHelper {
 	 */
 	Object associatedObject;
 
-	protected BaseAdapterHelper(Context context, ViewGroup parent,
-			int layoutId, int position) {
-		this.mContext = context;
-		this.mPosition = position;
-		this.mLayoutId = layoutId;
-		this.mViews = new SparseArray<View>();
-		mConvertView = LayoutInflater.from(context) //
-				.inflate(layoutId, parent, false);
+	protected BaseAdapterHelper(Context context, ViewGroup parent, int layoutId, int position) {
+		mContext = context;
+		mPosition = position;
+		mLayoutId = layoutId;
+		mViews = new SparseArray<View>();
+		mConvertView = LayoutInflater.from(context).inflate(layoutId, parent, false);
 		mConvertView.setTag(this);
 	}
 
@@ -87,21 +83,18 @@ public class BaseAdapterHelper {
 	 *            The parent arg passed to the getView() method.
 	 * @return A BaseAdapterHelper instance.
 	 */
-	public static BaseAdapterHelper get(Context context, View convertView,
-			ViewGroup parent, int layoutId) {
+	public static BaseAdapterHelper get(Context context, View convertView, ViewGroup parent, int layoutId) {
 		return get(context, convertView, parent, layoutId, -1);
 	}
 
 	/** This method is package private and should only be used by QuickAdapter. */
-	static BaseAdapterHelper get(Context context, View convertView,
-			ViewGroup parent, int layoutId, int position) {
+	static BaseAdapterHelper get(Context context, View convertView, ViewGroup parent, int layoutId, int position) {
 		if (convertView == null) {
 			return new BaseAdapterHelper(context, parent, layoutId, position);
 		}
 
 		// Retrieve the existing helper and update its position
-		BaseAdapterHelper existingHelper = (BaseAdapterHelper) convertView
-				.getTag();
+		BaseAdapterHelper existingHelper = (BaseAdapterHelper) convertView.getTag();
 
 		if (existingHelper.mLayoutId != layoutId) {
 			return new BaseAdapterHelper(context, parent, layoutId, position);
@@ -269,8 +262,7 @@ public class BaseAdapterHelper {
 	 *            Picasso.with(context).load(imageUrl))
 	 * @return The BaseAdapterHelper for chaining.
 	 */
-	public BaseAdapterHelper setImageBuilder(int viewId,
-			RequestCreator requestBuilder) {
+	public BaseAdapterHelper setImageBuilder(int viewId, RequestCreator requestBuilder) {
 		ImageView view = retrieveView(viewId);
 		requestBuilder.into(view);
 		return this;
@@ -505,8 +497,7 @@ public class BaseAdapterHelper {
 	 *            The on click listener;
 	 * @return The BaseAdapterHelper for chaining.
 	 */
-	public BaseAdapterHelper setOnClickListener(int viewId,
-			View.OnClickListener listener) {
+	public BaseAdapterHelper setOnClickListener(int viewId, View.OnClickListener listener) {
 		View view = retrieveView(viewId);
 		view.setOnClickListener(listener);
 		return this;
@@ -521,8 +512,7 @@ public class BaseAdapterHelper {
 	 *            The on touch listener;
 	 * @return The BaseAdapterHelper for chaining.
 	 */
-	public BaseAdapterHelper setOnTouchListener(int viewId,
-			View.OnTouchListener listener) {
+	public BaseAdapterHelper setOnTouchListener(int viewId, View.OnTouchListener listener) {
 		View view = retrieveView(viewId);
 		view.setOnTouchListener(listener);
 		return this;
@@ -537,8 +527,7 @@ public class BaseAdapterHelper {
 	 *            The on long click listener;
 	 * @return The BaseAdapterHelper for chaining.
 	 */
-	public BaseAdapterHelper setOnLongClickListener(int viewId,
-			View.OnLongClickListener listener) {
+	public BaseAdapterHelper setOnLongClickListener(int viewId, View.OnLongClickListener listener) {
 		View view = retrieveView(viewId);
 		view.setOnLongClickListener(listener);
 		return this;
@@ -558,9 +547,7 @@ public class BaseAdapterHelper {
 	 */
 	public int getPosition() {
 		if (mPosition == -1)
-			throw new IllegalStateException(
-					"Use BaseAdapterHelper constructor "
-							+ "with position if you need to retrieve the position.");
+			throw new IllegalStateException("Use BaseAdapterHelper constructor " + "with position if you need to retrieve the position.");
 		return mPosition;
 	}
 

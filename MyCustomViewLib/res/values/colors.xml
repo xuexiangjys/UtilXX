@@ -93,4 +93,18 @@
     <color name="btn_confirm_color">#303F9F</color>
     
     <color name="stfImageColor">#FF4081</color>
+    
+    <color name="white_light">#dddddd</color>
+    <color name="white">#ffffff</color>
+    <color name="black_light">#363636</color> <!--黑-->
+    
+    <!-- CookieBar -->
+    <color name="default_bg_color">#BDBDBD</color>
+    <color name="default_title_color">#ffffff</color>
+    <color name="default_message_color">#ffffff</color>
+    <color name="default_action_color">#26a69a</color>
+
+    <!-- UIBaseButton -->
+    <color name="color_pressed">#9c000000</color>
+    <color name="ripple_color">#ffeeeeee</color>
 </resources>

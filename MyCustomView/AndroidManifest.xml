@@ -182,6 +182,13 @@
         <activity android:name="com.example.mycustomview.taglayout.TagShapeActivity" />
         <activity android:name="com.example.mycustomview.taglayout.TagViewActivity" />
         
+        <activity android:name="com.example.mycustomview.custom.JsBridgeActivity" />
+        <activity android:name="com.example.mycustomview.custom.DialogBuilderActivity" />
+        <activity android:name="com.example.mycustomview.custom.ValidateUIActivity" />
+        <activity android:name="com.example.mycustomview.custom.CookieBarActivity" />
+        <activity android:name="com.example.mycustomview.custom.UIViewActivity" />
+        
+        
     </application>
 
 </manifest>

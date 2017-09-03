@@ -34,28 +34,28 @@ public class AnimationController {
 
     private static void setEffect(Animation animation, int interpolatorType, long durationMillis, long delayMillis) {
         switch (interpolatorType) {
-            case 0:
+            case Linear:
                 animation.setInterpolator(new LinearInterpolator());
                 break;
-            case 1:
+            case Accelerate:
                 animation.setInterpolator(new AccelerateInterpolator());
                 break;
-            case 2:
+            case Decelerate:
                 animation.setInterpolator(new DecelerateInterpolator());
                 break;
-            case 3:
+            case AccelerateDecelerate:
                 animation.setInterpolator(new AccelerateDecelerateInterpolator());
                 break;
-            case 4:
+            case Bounce:
                 animation.setInterpolator(new BounceInterpolator());
                 break;
-            case 5:
+            case Overshoot:
                 animation.setInterpolator(new OvershootInterpolator());
                 break;
-            case 6:
+            case Anticipate:
                 animation.setInterpolator(new AnticipateInterpolator());
                 break;
-            case 7:
+            case AnticipateOvershoot:
                 animation.setInterpolator(new AnticipateOvershootInterpolator());
                 break;
             default:

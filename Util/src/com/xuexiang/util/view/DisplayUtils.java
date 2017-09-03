@@ -38,6 +38,14 @@ public final class DisplayUtils {
     }
 
     /**
+     * DisplayMetrics
+     * @return
+     */
+    public static DisplayMetrics getDisplayMetrics(Context context){
+        return context.getResources().getDisplayMetrics();
+    }
+    
+    /**
      * 根据手机的分辨率从 dp 的单位 转成为 px(像素)
      *
      * @param context 上下文

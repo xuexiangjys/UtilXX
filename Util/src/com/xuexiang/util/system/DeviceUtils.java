@@ -3,6 +3,7 @@ package com.xuexiang.util.system;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.os.Build;
@@ -240,5 +241,28 @@ public final class DeviceUtils {
      */
     public static void reboot2Bootloader() {
         ShellUtils.execCommand("reboot bootloader", true);
+    }
+    
+    private static boolean sIsTabletChecked = false;
+    private static boolean sIsTabletValue = false;
+    
+    private static boolean _isTablet(Context context) {
+        return (context.getResources().getConfiguration().screenLayout & Configuration.SCREENLAYOUT_SIZE_MASK) >=
+                Configuration.SCREENLAYOUT_SIZE_LARGE;
+    }
+    
+    /**
+     * 判断是否平板设备
+     *
+     * @param context
+     * @return true:平板,false:手机
+     */
+    public static boolean isTablet(Context context) {
+        if (sIsTabletChecked) {
+            return sIsTabletValue;
+        }
+        sIsTabletValue = _isTablet(context);
+        sIsTabletChecked = true;
+        return sIsTabletValue;
     }
 }

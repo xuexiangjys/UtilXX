@@ -69,7 +69,7 @@ public class ChannelUtil {
      * @param channelKey
      * @return
      */
-    private static String getChannelFromApk(Context context, String channelKey) {
+    public static String getChannelFromApk(Context context, String channelKey) {
         //从apk包中获取
         ApplicationInfo appinfo = context.getApplicationInfo();
         String sourceDir = appinfo.sourceDir;
@@ -113,7 +113,7 @@ public class ChannelUtil {
      * @param context
      * @param channel
      */
-    private static void saveChannelBySharedPreferences(Context context, String channel) {
+    public static void saveChannelBySharedPreferences(Context context, String channel) {
         SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(context);
         Editor editor = sp.edit();
         editor.putString(CHANNEL_KEY, channel);
@@ -127,7 +127,7 @@ public class ChannelUtil {
      * @param context
      * @return 为空表示获取异常、sp中的值已经失效、sp中没有此值
      */
-    private static String getChannelBySharedPreferences(Context context) {
+    public static String getChannelBySharedPreferences(Context context) {
         SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(context);
         int currentVersionCode = getVersionCode(context);
         if (currentVersionCode == -1) {
@@ -152,7 +152,7 @@ public class ChannelUtil {
      * @param context
      * @return
      */
-    private static int getVersionCode(Context context) {
+    public static int getVersionCode(Context context) {
         try {
             return context.getPackageManager().getPackageInfo(context.getPackageName(), 0).versionCode;
         } catch (NameNotFoundException e) {

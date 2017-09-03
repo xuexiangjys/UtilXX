@@ -127,7 +127,8 @@
         <activity android:name="com.example.testutil.AdapterListviewActivity"/>
         <activity android:name="com.example.testutil.adapter.MultiAdapterActivity"/>
         <activity android:name="com.example.testutil.adapter.SimpleAdapterActivity"/>
-        
+        <activity android:name="com.example.testutil.adapter.XSimpleAdapterActivity"/>
+         
         <activity android:name="com.example.testutil.ServiceActivity"/>
         <activity android:name="com.example.testutil.service.FloatServiceActivity"/>
         

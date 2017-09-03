@@ -1,0 +1,143 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:drakeet="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="12dp" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:gravity="center" >
+
+            <com.xuexiang.view.uiview.UIButton
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_margin="16dp"
+                android:background="@drawable/ic_launcher"
+                drakeet:radius="6dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/t1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:gravity="center" >
+
+            <com.xuexiang.view.uiview.UIButton
+                android:layout_width="64dp"
+                android:layout_height="32dp"
+                android:layout_margin="16dp"
+                android:background="@android:color/transparent"
+                android:text="UIButton"
+                android:textSize="10sp"
+                drakeet:UB_alpha_pressed="40"
+                drakeet:UB_color_pressed="#0303ff"
+                drakeet:UB_color_unpressed="#8aacee" />
+            <!-- drakeet:radius="2dp" is default -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/t0" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:gravity="center" >
+
+            <com.xuexiang.view.uiview.UIButton
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_margin="16dp"
+                android:background="@drawable/avatar1"
+                drakeet:UB_shape_type="round" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/t2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:gravity="center" >
+
+            <com.xuexiang.view.uiview.UIImageView
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_margin="16dp"
+                android:src="@drawable/avatar2"
+                drakeet:UB_shape_type="round" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/t3" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:gravity="center" >
+
+            <com.xuexiang.view.uiview.UIRippleButton
+                android:layout_width="64dp"
+                android:layout_height="32dp"
+                android:layout_margin="16dp"
+                android:text="Ripple"
+                android:textSize="10sp"
+                drakeet:UB_color_unpressed="#8aacee"
+                drakeet:UB_ripple_color="#ffffff"
+                drakeet:UB_ripple_duration="500"
+                drakeet:UB_shape_type="rectangle" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/t4" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:gravity="center" >
+
+            <com.xuexiang.view.uiview.UIRippleButton
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_margin="16dp"
+                android:text="Circle UIRippleButton"
+                android:textSize="9sp"
+                drakeet:UB_color_unpressed="#f44336"
+                drakeet:UB_ripple_color="#eeeeee"
+                drakeet:UB_ripple_duration="500"
+                drakeet:UB_shape_type="round" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/t5" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

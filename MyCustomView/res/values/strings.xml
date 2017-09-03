@@ -121,4 +121,25 @@
     <string name="custom_icon_alert">Custom Icon Alert</string>
     <string name="callback_alert">Alert Callbacks</string>
 
+    
+    <string name="cookie_title">这是一个标题</string>
+    <string name="cookie_message">咦？你又变帅了！！！</string>
+    <string name="cookie_action">点击一下</string>
+    
+    
+    <string name="t5">UIRippleButton
+                drakeet:ripple_color=\"#eeeeee\"
+                drakeet:ripple_duration=\"500\"
+                drakeet:shape_type=\"round\"
+                drakeet:color_unpressed=\"#f44336\"
+    </string>
+    <string name="t4">UIRippleButton
+                drakeet:ripple_color=\"#8a87ee\"
+                drakeet:ripple_duration=\"500\"
+                drakeet:shape_type=\"rectangle\"
+                drakeet:color_unpressed=\"#f44336\"</string>
+    <string name="t3">UIImageView\ndrakeet:shape_type=\"round\"</string>
+    <string name="t2">UIButton\ndrakeet:shape_type=\"round\"</string>
+    <string name="t1">UIButton\ndrakeet:radius=\"6dp\"</string>
+    <string name="t0">UIButton\ndrakeet:alpha_pressed=\"40\"\ndrakeet:color_pressed=\"#0303ff\"\ndrakeet:color_unpressed=\"#8aacee\"</string>
 </resources>

@@ -14,8 +14,10 @@ import com.example.mycustomview.custom.CalendarActivity;
 import com.example.mycustomview.custom.CircleMenuActivity;
 import com.example.mycustomview.custom.CityPickerActivity;
 import com.example.mycustomview.custom.CompoundIconTextViewActivity;
+import com.example.mycustomview.custom.CookieBarActivity;
 import com.example.mycustomview.custom.CustomDialogActivity;
 import com.example.mycustomview.custom.CustomViewActivity;
+import com.example.mycustomview.custom.DialogBuilderActivity;
 import com.example.mycustomview.custom.DraglayoutExpandActivity;
 import com.example.mycustomview.custom.FaboptionsActivity;
 import com.example.mycustomview.custom.FilterMenuActivity;
@@ -24,6 +26,7 @@ import com.example.mycustomview.custom.FloatingViewActivity;
 import com.example.mycustomview.custom.FlowlayoutActivity;
 import com.example.mycustomview.custom.HintPopupWindowActivity;
 import com.example.mycustomview.custom.ImagepickerActivity;
+import com.example.mycustomview.custom.JsBridgeActivity;
 import com.example.mycustomview.custom.LabelActivity;
 import com.example.mycustomview.custom.LoadViewHelperActivity;
 import com.example.mycustomview.custom.LoadingLayoutActivity;
@@ -46,6 +49,8 @@ import com.example.mycustomview.custom.StyleabletToastActivity;
 import com.example.mycustomview.custom.SwitchIconActivity;
 import com.example.mycustomview.custom.TimeLineActivity;
 import com.example.mycustomview.custom.ToastyActivity;
+import com.example.mycustomview.custom.UIViewActivity;
+import com.example.mycustomview.custom.ValidateUIActivity;
 import com.example.mycustomview.custom.ViewToolTipActivity;
 import com.example.mycustomview.custom.WeatherViewActivity;
 import com.example.mycustomview.custom.WebViewMainActivity;
@@ -310,6 +315,26 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 		case R.id.taglayout:
 			mToastUtil.showToast("点击了TagLayoutActivity");
 			startActivity(TagLayoutActivity.class);
+			break;
+		case R.id.jsbridge:
+			mToastUtil.showToast("点击了JsBridgeActivity");
+			startActivity(JsBridgeActivity.class);
+			break;
+		case R.id.dialogbuilder:
+			mToastUtil.showToast("点击了DialogBuilderActivity");
+			startActivity(DialogBuilderActivity.class);
+			break;
+		case R.id.validateui:
+			mToastUtil.showToast("点击了ValidateUIActivity");
+			startActivity(ValidateUIActivity.class);
+			break;
+		case R.id.cookiebar:
+			mToastUtil.showToast("点击了CookieBarActivity");
+			startActivity(CookieBarActivity.class);
+			break;
+		case R.id.uiview:
+			mToastUtil.showToast("点击了UIViewActivity");
+			startActivity(UIViewActivity.class);
 			break;
 		default:
 			break;

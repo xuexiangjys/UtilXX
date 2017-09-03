@@ -10,7 +10,7 @@ import com.example.testutil.common.entity.Person;
 import com.thoughtworks.xstream.XStream;
 import com.xuexiang.app.activity.BaseHeadActivity;
 import com.xuexiang.util.common.StringUtil;
-import com.xuexiang.util.common.XmlHelper;
+import com.xuexiang.util.common.convert.XmlHelper;
 import com.xuexiang.util.net.JsonUtil;
 
 /**

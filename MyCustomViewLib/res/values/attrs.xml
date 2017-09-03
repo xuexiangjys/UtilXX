@@ -423,7 +423,7 @@
         <attr name="v_timeMoveTop" format="dimension" />
         <attr name="v_textsize" format="dimension" />
     </declare-styleable>
-    
+
     <!-- Alerter -->
     <declare-styleable name="Alerter">
         <attr name="alertStyle" format="reference" />
@@ -437,39 +437,39 @@
 
     <!-- LSettingView -->
     <declare-styleable name="LSettingView">
-        <attr name="leftText" format="string"/>
-        <attr name="leftIcon" format="integer"/>
-        <attr name="rightIcon" format="integer"/>
-        <attr name="textSize" format="dimension"/>
-        <attr name="textColor" format="color"/>
-        <attr name="isShowUnderLine" format="boolean"/>
+        <attr name="leftText" format="string" />
+        <attr name="leftIcon" format="integer" />
+        <attr name="rightIcon" format="integer" />
+        <attr name="textSize" format="dimension" />
+        <attr name="textColor" format="color" />
+        <attr name="isShowUnderLine" format="boolean" />
         <attr name="rightStyle" format="enum">
-            <enum name="iconShow" value="0"/>
-            <enum name="iconHide" value="1"/>
-            <enum name="iconCheck" value="2"/>
-            <enum name="iconSwitch" value="3"/>
+            <enum name="iconShow" value="0" />
+            <enum name="iconHide" value="1" />
+            <enum name="iconCheck" value="2" />
+            <enum name="iconSwitch" value="3" />
         </attr>
     </declare-styleable>
-    
+
     <!-- LoopView -->
     <declare-styleable name="LoopView">
         <attr name="view_gravity">
-            <enum name="center" value="17"/>
-            <enum name="left" value="3"/>
-            <enum name="right" value="5"/>
+            <enum name="center" value="17" />
+            <enum name="left" value="3" />
+            <enum name="right" value="5" />
         </attr>
-        <attr name="lineColor" format="color"/>
-        <attr name="topBottomTextColor" format="color"/>
-        <attr name="centerTextColor" format="color"/>
-        <attr name="lv_textSize" format="dimension"/>
-        <attr name="canLoop" format="boolean"/>
-        <attr name="initPosition" format="integer"/>
-        <attr name="drawItemCount" format="integer"/>
-        <attr name="lineSpacingMultiplier" format="float"/>
+        <attr name="lineColor" format="color" />
+        <attr name="topBottomTextColor" format="color" />
+        <attr name="centerTextColor" format="color" />
+        <attr name="lv_textSize" format="dimension" />
+        <attr name="canLoop" format="boolean" />
+        <attr name="initPosition" format="integer" />
+        <attr name="drawItemCount" format="integer" />
+        <attr name="lineSpacingMultiplier" format="float" />
 
-        <!--set number of item displayed, default is 3-->
+        <!-- set number of item displayed, default is 3 -->
         <attr name="npv_ShowCount" format="reference|integer" />
-        <!--set if show divider, default is true-->
+        <!-- set if show divider, default is true -->
         <attr name="npv_ShowDivider" format="reference|boolean" />
         <attr name="npv_DividerColor" format="reference|color" />
         <attr name="npv_DividerMarginLeft" format="reference|dimension" />
@@ -495,23 +495,25 @@
         <attr name="npv_RespondChangeInMainThread" format="reference|boolean" />
         <attr name="npv_TextEllipsize" format="reference|string" />
 
-        <!--just used to measure maxWidth for wrap_content without hint,
+        <!--
+            just used to measure maxWidth for wrap_content without hint,
             the string array will never be displayed.
             you can set this attr if you want to keep the wraped numberpickerview
-            width unchanged when alter the content list-->
+            width unchanged when alter the content list
+        -->
         <attr name="npv_AlternativeTextArrayWithMeasureHint" format="reference" />
         <attr name="npv_AlternativeTextArrayWithoutMeasureHint" format="reference" />
-        <!--the max length of hint content-->
+        <!-- the max length of hint content -->
         <attr name="npv_AlternativeHint" format="reference|string" />
     </declare-styleable>
-    
+
     <!-- StatefulLayout -->
     <declare-styleable name="stfStatefulLayout">
         <attr name="stfAnimationEnabled" format="boolean" />
         <attr name="stfInAnimation" format="reference" />
         <attr name="stfOutAnimation" format="reference" />
     </declare-styleable>
-    
+
     <!-- FlexboxLayout -->
     <declare-styleable name="FlexboxLayout">
         <attr name="flexDirection">
@@ -520,7 +522,6 @@
             <enum name="column" value="2" />
             <enum name="column_reverse" value="3" />
         </attr>
-
         <attr name="flexWrap">
             <enum name="nowrap" value="0" />
             <enum name="wrap" value="1" />
@@ -531,7 +532,7 @@
             Omitting flex-flow property since it's reflected in the parent flex container.
             Set the flexDirection and/or flexWrap to the parent flex container explicitly if you
             want to use the flex-flow similar way to the web.
-         -->
+        -->
 
         <attr name="justifyContent">
             <enum name="flex_start" value="0" />
@@ -540,7 +541,6 @@
             <enum name="space_between" value="3" />
             <enum name="space_around" value="4" />
         </attr>
-
         <attr name="alignItems">
             <enum name="flex_start" value="0" />
             <enum name="flex_end" value="1" />
@@ -548,7 +548,6 @@
             <enum name="baseline" value="3" />
             <enum name="stretch" value="4" />
         </attr>
-
         <attr name="alignContent">
             <enum name="flex_start" value="0" />
             <enum name="flex_end" value="1" />
@@ -557,11 +556,9 @@
             <enum name="space_around" value="4" />
             <enum name="stretch" value="5" />
         </attr>
-
         <attr name="dividerDrawable" format="reference" />
         <attr name="dividerDrawableHorizontal" format="reference" />
         <attr name="dividerDrawableVertical" format="reference" />
-
         <attr name="showDivider">
             <flag name="none" value="0" />
             <flag name="beginning" value="1" />
@@ -581,7 +578,6 @@
             <flag name="end" value="4" />
         </attr>
     </declare-styleable>
-
     <declare-styleable name="FlexboxLayout_Layout">
         <attr name="layout_order" format="integer" />
 
@@ -621,7 +617,6 @@
             <enum name="baseline" value="3" />
             <enum name="stretch" value="4" />
         </attr>
-
         <attr name="layout_minWidth" format="dimension" />
         <attr name="layout_minHeight" format="dimension" />
         <attr name="layout_maxWidth" format="dimension" />
@@ -639,26 +634,24 @@
         -->
         <attr name="layout_wrapBefore" format="boolean" />
     </declare-styleable>
-    
-    
+
     <!-- StateLayout -->
     <declare-styleable name="StateLayout">
         <attr name="sl_errorDrawable" format="reference" />
         <attr name="sl_emptyDrawable" format="reference" />
         <attr name="sl_progressView" format="reference" />
     </declare-styleable>
-    
+
     <!-- IconTextView -->
-    <attr name="hacky_preview" format="boolean"/>
+    <attr name="hacky_preview" format="boolean" />
 
     <declare-styleable name="IconTextView">
-        <attr name="hacky_preview"/>
+        <attr name="hacky_preview" />
+    </declare-styleable>
+    <declare-styleable name="IconButton">
+        <attr name="hacky_preview" />
     </declare-styleable>
 
-    <declare-styleable name="IconButton">
-        <attr name="hacky_preview"/>
-    </declare-styleable>
-    
     <!-- RatingBar -->
     <declare-styleable name="RatingBarAttributes">
         <attr name="numStars" format="integer" />
@@ -680,7 +673,7 @@
         <attr name="cit_iconHeight" format="dimension" />
         <attr name="cit_iconColor" format="color" />
     </declare-styleable>
-    
+
     <!-- EasyIndicator -->
     <declare-styleable name="EasyIndicator">
         <attr name="indicator_height" format="dimension" />
@@ -698,9 +691,9 @@
         <attr name="indicator_vertical_line_color" format="color" />
         <attr name="indicator_isBottom_line" format="boolean" />
     </declare-styleable>
-    
-     <!-- SmileRating -->
-     <declare-styleable name="SmileRating">
+
+    <!-- SmileRating -->
+    <declare-styleable name="SmileRating">
         <attr name="sr_angryColor" format="color" />
         <attr name="sr_normalColor" format="color" />
         <attr name="sr_drawingColor" format="color" />
@@ -710,99 +703,129 @@
         <attr name="sr_textSelectionColor" format="color" />
         <attr name="sr_textNonSelectionColor" format="color" />
     </declare-styleable>
-    
-      <!-- FilterMenuLayout -->
-     <declare-styleable name="FilterMenuLayout">
-        <attr name="fm_primaryColor" format="color|reference"/>
-        <attr name="fm_primaryDarkColor" format="color|reference"/>
-        <attr name="fm_expandedRadius" format="dimension"/>
-        <attr name="fm_collapsedRadius" format="dimension"/>
-        <attr name="fm_centerLeft" format="dimension"/>
-        <attr name="fm_centerRight" format="dimension"/>
-        <attr name="fm_centerTop" format="dimension"/>
-        <attr name="fm_centerHorizontal" format="boolean"/>
-        <attr name="fm_centerVertical" format="boolean"/>
-        <attr name="fm_centerBottom" format="dimension"/>
-        <attr name="fm_sweepAngle" format="integer"/>
+
+    <!-- FilterMenuLayout -->
+    <declare-styleable name="FilterMenuLayout">
+        <attr name="fm_primaryColor" format="color|reference" />
+        <attr name="fm_primaryDarkColor" format="color|reference" />
+        <attr name="fm_expandedRadius" format="dimension" />
+        <attr name="fm_collapsedRadius" format="dimension" />
+        <attr name="fm_centerLeft" format="dimension" />
+        <attr name="fm_centerRight" format="dimension" />
+        <attr name="fm_centerTop" format="dimension" />
+        <attr name="fm_centerHorizontal" format="boolean" />
+        <attr name="fm_centerVertical" format="boolean" />
+        <attr name="fm_centerBottom" format="dimension" />
+        <attr name="fm_sweepAngle" format="integer" />
     </declare-styleable>
-    
-     
-      <!-- TagLayout -->
+
+    <!-- TagLayout -->
     <declare-styleable name="TagLayout">
         <attr name="tag_layout_mode" format="enum">
-            <enum name="normal" value="201"/>
-            <enum name="edit" value="202"/>
-            <enum name="change" value="203"/>
-            <enum name="single_choice" value="204"/>
-            <enum name="multi_choice" value="205"/>
+            <enum name="normal" value="201" />
+            <enum name="edit" value="202" />
+            <enum name="change" value="203" />
+            <enum name="single_choice" value="204" />
+            <enum name="multi_choice" value="205" />
         </attr>
         <attr name="tag_layout_shape" format="enum">
-            <enum name="round_rect" value="101"/>
-            <enum name="arc" value="102"/>
-            <enum name="rect" value="103"/>
+            <enum name="round_rect" value="101" />
+            <enum name="arc" value="102" />
+            <enum name="rect" value="103" />
         </attr>
-        <attr name="tag_layout_random_color" format="boolean"/>
-        <attr name="tag_layout_press_feedback" format="boolean"/>
+        <attr name="tag_layout_random_color" format="boolean" />
+        <attr name="tag_layout_press_feedback" format="boolean" />
         <!-- TagLayout -->
-        <attr name="tag_layout_bg_color" format="color"/>
-        <attr name="tag_layout_border_color" format="color"/>
-        <attr name="tag_layout_border_width" format="dimension"/>
-        <attr name="tag_layout_border_radius" format="dimension"/>
-        <attr name="tag_layout_vertical_interval" format="dimension"/>
-        <attr name="tag_layout_horizontal_interval" format="dimension"/>
-        <attr name="tag_layout_fit_num" format="integer"/>
-        <attr name="tag_layout_horizontal_reverse" format="boolean"/>
+        <attr name="tag_layout_bg_color" format="color" />
+        <attr name="tag_layout_border_color" format="color" />
+        <attr name="tag_layout_border_width" format="dimension" />
+        <attr name="tag_layout_border_radius" format="dimension" />
+        <attr name="tag_layout_vertical_interval" format="dimension" />
+        <attr name="tag_layout_horizontal_interval" format="dimension" />
+        <attr name="tag_layout_fit_num" format="integer" />
+        <attr name="tag_layout_horizontal_reverse" format="boolean" />
         <!-- TagView -->
-        <attr name="tag_view_bg_color" format="color"/>
-        <attr name="tag_view_border_color" format="color"/>
-        <attr name="tag_view_text_color" format="color"/>
-        <attr name="tag_view_bg_color_check" format="color"/>
-        <attr name="tag_view_border_color_check" format="color"/>
-        <attr name="tag_view_text_color_check" format="color"/>
-        <attr name="tag_view_border_width" format="dimension"/>
-        <attr name="tag_view_border_radius" format="dimension"/>
-        <attr name="tag_view_text_size" format="dimension"/>
-        <attr name="tag_view_vertical_padding" format="dimension"/>
-        <attr name="tag_view_horizontal_padding" format="dimension"/>
-        <attr name="tag_view_icon_padding" format="dimension"/>
+        <attr name="tag_view_bg_color" format="color" />
+        <attr name="tag_view_border_color" format="color" />
+        <attr name="tag_view_text_color" format="color" />
+        <attr name="tag_view_bg_color_check" format="color" />
+        <attr name="tag_view_border_color_check" format="color" />
+        <attr name="tag_view_text_color_check" format="color" />
+        <attr name="tag_view_border_width" format="dimension" />
+        <attr name="tag_view_border_radius" format="dimension" />
+        <attr name="tag_view_text_size" format="dimension" />
+        <attr name="tag_view_vertical_padding" format="dimension" />
+        <attr name="tag_view_horizontal_padding" format="dimension" />
+        <attr name="tag_view_icon_padding" format="dimension" />
     </declare-styleable>
 
     <!-- TagView -->
     <declare-styleable name="TagView">
         <attr name="tag_mode" format="enum">
-            <enum name="normal" value="201"/>
-            <enum name="check" value="204"/>
-            <enum name="icon_check_invisible" value="206"/>
-            <enum name="icon_check_change" value="207"/>
+            <enum name="normal" value="201" />
+            <enum name="check" value="204" />
+            <enum name="icon_check_invisible" value="206" />
+            <enum name="icon_check_change" value="207" />
         </attr>
         <attr name="tag_shape" format="enum">
-            <enum name="round_rect" value="101"/>
-            <enum name="arc" value="102"/>
-            <enum name="rect" value="103"/>
+            <enum name="round_rect" value="101" />
+            <enum name="arc" value="102" />
+            <enum name="rect" value="103" />
         </attr>
         <!-- 3、5 是Gravity里定义的值 -->
         <attr name="tag_gravity" format="enum">
-            <enum name="left" value="3"/>
-            <enum name="right" value="5"/>
+            <enum name="left" value="3" />
+            <enum name="right" value="5" />
         </attr>
-        <attr name="tag_press_feedback" format="boolean"/>
-        <attr name="tag_auto_check" format="boolean"/>
-        <attr name="tag_checked" format="boolean"/>
-        <attr name="tag_bg_color" format="color"/>
-        <attr name="tag_border_color" format="color"/>
-        <attr name="tag_text_color" format="color"/>
-        <attr name="tag_bg_color_check" format="color"/>
-        <attr name="tag_border_color_check" format="color"/>
-        <attr name="tag_text_color_check" format="color"/>
-        <attr name="tag_text_check" format="string"/>
-        <attr name="tag_border_width" format="dimension"/>
-        <attr name="tag_border_radius" format="dimension"/>
-        <attr name="tag_vertical_padding" format="dimension"/>
-        <attr name="tag_horizontal_padding" format="dimension"/>
-        <attr name="tag_icon_padding" format="dimension"/>
-        <attr name="tag_icon" format="reference"/>
-        <attr name="tag_icon_change" format="reference"/>
-        <attr name="tag_text" format="string"/>
-        <attr name="tag_text_size" format="dimension"/>
+        <attr name="tag_press_feedback" format="boolean" />
+        <attr name="tag_auto_check" format="boolean" />
+        <attr name="tag_checked" format="boolean" />
+        <attr name="tag_bg_color" format="color" />
+        <attr name="tag_border_color" format="color" />
+        <attr name="tag_text_color" format="color" />
+        <attr name="tag_bg_color_check" format="color" />
+        <attr name="tag_border_color_check" format="color" />
+        <attr name="tag_text_color_check" format="color" />
+        <attr name="tag_text_check" format="string" />
+        <attr name="tag_border_width" format="dimension" />
+        <attr name="tag_border_radius" format="dimension" />
+        <attr name="tag_vertical_padding" format="dimension" />
+        <attr name="tag_horizontal_padding" format="dimension" />
+        <attr name="tag_icon_padding" format="dimension" />
+        <attr name="tag_icon" format="reference" />
+        <attr name="tag_icon_change" format="reference" />
+        <attr name="tag_text" format="string" />
+        <attr name="tag_text_size" format="dimension" />
     </declare-styleable>
+
+    <!-- Cookie -->
+    <declare-styleable name="Cookie">
+
+        <!-- TextColor -->
+        <attr name="cookieTitleColor" format="color" />
+        <attr name="cookieMessageColor" format="color" />
+        <attr name="cookieActionColor" format="color" />
+        <attr name="cookieBackgroundColor" format="color" />
+        <!-- TextSize -->
+        <attr name="titleTextSize" format="dimension" />
+        <attr name="messageTextSize" format="dimension" />
+        <attr name="actionTextSize" format="dimension" />
+    </declare-styleable>
+    
+    
+     <!-- UIButton -->
+     <declare-styleable name="UIButton">
+        <attr name="UB_color_pressed" format="color"/>
+        <attr name="UB_color_unpressed" format="color"/>
+        <attr name="UB_ripple_color" format="color"/>
+        <attr name="UB_ripple_alpha" format="integer"/>
+        <attr name="UB_ripple_duration" format="integer"/>
+        <attr name="UB_alpha_pressed" format="integer"/>
+        <attr name="UB_radius" format="dimension"/>
+        <attr name="UB_shape_type" format="enum">
+            <enum name="round" value="0"/>
+            <enum name="rectangle" value="1"/>
+        </attr>
+    </declare-styleable>
+
 </resources>

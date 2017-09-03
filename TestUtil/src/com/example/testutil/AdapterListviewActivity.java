@@ -9,6 +9,7 @@ import android.view.View.OnClickListener;
 
 import com.example.testutil.adapter.MultiAdapterActivity;
 import com.example.testutil.adapter.SimpleAdapterActivity;
+import com.example.testutil.adapter.XSimpleAdapterActivity;
 import com.xuexiang.app.activity.ActivityItem;
 import com.xuexiang.app.activity.ListSampleActivity;
 import com.xuexiang.util.app.ActivityUtil;
@@ -18,6 +19,7 @@ public class AdapterListviewActivity extends ListSampleActivity {
 	protected List<ActivityItem> initSampleActivityData() {
 		List<ActivityItem> list = new ArrayList<ActivityItem>();
 		list.add(new ActivityItem("Simple Adapter Text", SimpleAdapterActivity.class));
+		list.add(new ActivityItem("X Simple Adapter Text", XSimpleAdapterActivity.class));
 		list.add(new ActivityItem("MultiItemStyleText", MultiAdapterActivity.class));
 		return list;
 	}
