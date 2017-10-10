@@ -188,6 +188,18 @@
         <activity android:name="com.example.mycustomview.custom.CookieBarActivity" />
         <activity android:name="com.example.mycustomview.custom.UIViewActivity" />
         
+        <activity android:name="com.example.mycustomview.supertextview.SuperTextViewActivity" />
+        <activity android:name="com.example.mycustomview.supertextview.SuperButtonActivity" />
+        <activity android:name="com.example.mycustomview.supertextview.SuperClickActivity" />
+        <activity android:name="com.example.mycustomview.supertextview.SuperCommonTextViewActivity" />
+        <activity android:name="com.example.mycustomview.supertextview.SuperListActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name="com.example.mycustomview.supertextview.SuperTypeActivity" />
+        
+        <activity android:name="com.example.mycustomview.custom.PasswordEditTextActivity" 
+            android:theme="@style/AppTheme.NoActionBar" />
+        
+        
         
     </application>
 

@@ -107,4 +107,6 @@
     <!-- UIBaseButton -->
     <color name="color_pressed">#9c000000</color>
     <color name="ripple_color">#ffeeeeee</color>
+    
+    <color name="common_pressed">#20000000</color>  <!--白色背景按下去的颜色-->
 </resources>

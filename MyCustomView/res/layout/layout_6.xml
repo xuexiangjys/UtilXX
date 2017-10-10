@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:stv="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.xuexiang.view.supertextview.SuperTextView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        stv:sCenterBottomTextColor="@color/colorAccent"
+        stv:sCenterBottomTextString="中下"
+        stv:sCenterTextColor="@color/colorAccent"
+        stv:sCenterTextString="中"
+        stv:sCenterTopTextColor="@color/colorAccent"
+        stv:sCenterTopTextString="中上"
+        stv:sLeftBottomTextColor="@color/colorAccent"
+        stv:sLeftBottomTextString="左下"
+        stv:sLeftTextColor="@color/colorAccent"
+        stv:sLeftTextString="左中文字"
+        stv:sLeftTopTextColor="@color/colorAccent"
+        stv:sLeftTopTextString="左上"
+        stv:sRightBottomTextColor="@color/colorAccent"
+        stv:sRightBottomTextString="右"
+        stv:sRightTextColor="@color/colorAccent"
+        stv:sRightTextString="右中"
+        stv:sRightTopTextColor="@color/colorAccent"
+        stv:sRightTopTextString="右" />
+
+
+    <com.xuexiang.view.supertextview.SuperTextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        stv:sCenterBottomTextString="测试文字"
+        stv:sCenterTopTextString="测试文字"
+        stv:sCenterViewGravity="center"
+        stv:sLeftBottomTextString="18888888888"
+        stv:sLeftTopTextString="张三"
+        stv:sLeftViewGravity="left_center"
+        stv:sRightBottomTextString="15555555555"
+        stv:sRightTopTextString="李四"
+        stv:sRightViewGravity="right_center" />
+
+
+    <com.xuexiang.view.supertextview.SuperTextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        stv:sCenterTextString="张姐专业广场舞"
+        stv:sCenterViewGravity="left_center"
+        stv:sLeftTextString="领队"
+        stv:sLeftViewGravity="left_center"
+        stv:sLeftViewWidth="80dp" />
+
+    <com.xuexiang.view.supertextview.SuperTextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        stv:sCenterTextString="九眼龙天天广场A座"
+        stv:sCenterViewGravity="left_center"
+        stv:sLeftTextString="活动地点"
+        stv:sLeftViewGravity="left_center"
+        stv:sLeftViewWidth="80dp" />
+
+    <com.xuexiang.view.supertextview.SuperTextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        stv:sCenterTextString="最炫民族风"
+        stv:sCenterViewGravity="left_center"
+        stv:sLeftTextString="舞动歌单"
+        stv:sLeftViewGravity="left_center"
+        stv:sLeftViewWidth="80dp" />
+
+    <com.xuexiang.view.supertextview.SuperTextView
+        android:id="@+id/super_tv4"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:visibility="visible"
+        stv:sCenterLines="3"
+        stv:sCenterMaxEms="40"
+        stv:sCenterTextString="代码设置对齐效果代码设置对齐效果代码设置对齐效果"
+        stv:sCenterViewGravity="left_center"
+        stv:sLeftTextString="换行对齐"
+        stv:sLeftViewGravity="left_center"
+        stv:sLeftViewWidth="80dp" />
+
+</LinearLayout>

@@ -69,4 +69,7 @@
     <color name="default_bg">#33F44336</color>
     <color name="default_text">#FF666666</color>
     <color name="gray_background">#66333333</color>
+    
+    <color name="gray_btn">#9e9e9e</color>
+    <color name="red_btn">#fd5353</color>
 </resources>

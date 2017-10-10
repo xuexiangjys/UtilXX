@@ -444,18 +444,18 @@ public final class BitmapUtil {
 	 * 
 	 * @param bitmap
 	 *            源Bitmap
-	 * @param w
+	 * @param newWidth
 	 *            宽
-	 * @param h
+	 * @param newHeight
 	 *            高
 	 * @return 目标Bitmap
 	 */
-	public static Bitmap zoom(Bitmap bitmap, int w, int h) {
+	public static Bitmap zoom(Bitmap bitmap, int newWidth, int newHeight) {
 		int width = bitmap.getWidth();
 		int height = bitmap.getHeight();
 		Matrix matrix = new Matrix();
-		float scaleWidht = ((float) w / width);
-		float scaleHeight = ((float) h / height);
+		float scaleWidht = ((float) newWidth / width);
+		float scaleHeight = ((float) newHeight / height);
 		matrix.postScale(scaleWidht, scaleHeight);
 		Bitmap newbmp = Bitmap.createBitmap(bitmap, 0, 0, width, height, matrix, true);
 		return newbmp;

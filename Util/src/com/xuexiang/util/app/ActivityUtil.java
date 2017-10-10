@@ -3,9 +3,9 @@ package com.xuexiang.util.app;
 import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.Map.Entry;
 import java.util.Timer;
 import java.util.TimerTask;
-import java.util.Map.Entry;
 
 import android.app.Activity;
 import android.content.Context;
@@ -109,6 +109,28 @@ public class ActivityUtil {
 		return titleBar;
 	}
 
+	/**
+	 * 动态生成TitleBar
+	 * 
+	 * @param activity
+	 * @return
+	 */
+	public static void initTitleBarDynamic(Activity activity) {
+		ViewGroup rootView = getRootView(activity);
+		TitleBar titleBar = initTitleBarDynamic(activity, activity.getClass().getSimpleName());
+		rootView.addView(titleBar, 0);
+	}
+	
+	/**
+	 * 获取setContentView的父布局
+	 * 
+	 * @param activity
+	 * @return
+	 */
+	public static ViewGroup getRootView(Activity activity) {
+		return (ViewGroup) activity.getWindow().getDecorView().findViewById(android.R.id.content);
+	}
+	
 	/**
 	 * 获取setContentView的父布局
 	 * 

@@ -329,6 +329,16 @@
                 android:id="@+id/uiview"
                 style="@style/CustomButtonStyle"
                 android:text="UIView Demo" />
+               
+               <com.xuexiang.view.CustomTextView
+                android:id="@+id/supertextview"
+                style="@style/CustomButtonStyle"
+                android:text="SuperTextView Demo" />
+               
+               <com.xuexiang.view.CustomTextView
+                android:id="@+id/passwordedittext"
+                style="@style/CustomButtonStyle"
+                android:text="PasswordEditText Demo" />
              
              
         </LinearLayout>

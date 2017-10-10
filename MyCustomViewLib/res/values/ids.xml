@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <item name="floating_decor" type="id" />
-    <item name="tabview_id" type="id" />
-    <item name="tabview_fragment_container" type="id" />
-    
+
+    <item name="floating_decor" type="id"/>
+    <item name="tabview_id" type="id"/>
+    <item name="tabview_fragment_container" type="id"/>
+
     <!-- zxing -->
     <item name="decode" type="id"/>
     <item name="decode_failed" type="id"/>
@@ -11,17 +12,39 @@
     <item name="quit" type="id"/>
     <item name="restart_preview" type="id"/>
     <item name="return_scan_result" type="id"/>
-    
-     <!-- corepage -->
+
+    <!-- corepage -->
     <item name="fragment_container" type="id"/>
-    
-     <!-- EasyIndicator -->
+
+    <!-- EasyIndicator -->
     <item name="easy_indicator_viewpaper" type="id"></item>
-    
+
     <!-- LoadingHelper -->
-    <item name="load_empty_id_text" type="id" />
-    <item name="load_empty_id_btn" type="id" />
-    <item name="load_error_id_text" type="id" />
-    <item name="load_error_id_btn" type="id" />
-    <item name="load_ing_id_text" type="id" />
+    <item name="load_empty_id_text" type="id"/>
+    <item name="load_empty_id_btn" type="id"/>
+    <item name="load_error_id_text" type="id"/>
+    <item name="load_error_id_btn" type="id"/>
+    <item name="load_ing_id_text" type="id"/>
+
+    <!-- SuperTextView -->
+    <item name="sLeftViewId" type="id"/>
+    <item name="sCenterViewId" type="id"/>
+    <item name="sRightViewId" type="id"/>
+    <item name="sLeftImgId" type="id"/>
+    <item name="sRightImgId" type="id"/>
+    <item name="sRightCheckBoxId" type="id"/>
+    <item name="sRightSwitchId" type="id"/>
+    <item name="cLeftTextId" type="id"/>
+    <item name="cRightTextId" type="id"/>
+    <item name="cCenterTextId" type="id"/>
+    <item name="cCenterBaseLineId" type="id"/>
+    <item name="cLeftTopTextId" type="id"/>
+    <item name="cLeftBottomTextId" type="id"/>
+    <item name="cCenterTopTextId" type="id"/>
+    <item name="cCenterBottomTextId" type="id"/>
+    <item name="cRightTopTextId" type="id"/>
+    <item name="cRightBottomTextId" type="id"/>
+    <item name="cLeftImageViewId" type="id"/>
+    <item name="cRightImageViewId" type="id"/>
+
 </resources>

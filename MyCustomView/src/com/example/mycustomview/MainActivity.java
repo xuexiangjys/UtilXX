@@ -33,6 +33,7 @@ import com.example.mycustomview.custom.LoadingLayoutActivity;
 import com.example.mycustomview.custom.MagicindicatorActivity;
 import com.example.mycustomview.custom.MarqueenActivity;
 import com.example.mycustomview.custom.MaterialDialogActivity;
+import com.example.mycustomview.custom.PasswordEditTextActivity;
 import com.example.mycustomview.custom.RatingBarActivity;
 import com.example.mycustomview.custom.SVGParseActivity;
 import com.example.mycustomview.custom.SearchBoxDialogActivity;
@@ -64,6 +65,7 @@ import com.example.mycustomview.pathanim.PathAnimActivity;
 import com.example.mycustomview.pickers.PickersActivity;
 import com.example.mycustomview.pickerview.PickerviewActivity;
 import com.example.mycustomview.smoothprogressbar.SmoothProgressBarActivity;
+import com.example.mycustomview.supertextview.SuperTextViewActivity;
 import com.example.mycustomview.tabview.TabViewActivity;
 import com.example.mycustomview.taglayout.TagLayoutActivity;
 import com.xuexiang.app.activity.BaseActivity;
@@ -335,6 +337,14 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 		case R.id.uiview:
 			mToastUtil.showToast("点击了UIViewActivity");
 			startActivity(UIViewActivity.class);
+			break;
+		case R.id.supertextview:
+			mToastUtil.showToast("点击了SuperTextViewActivity");
+			startActivity(SuperTextViewActivity.class);
+			break;
+		case R.id.passwordedittext:
+			mToastUtil.showToast("点击了PasswordEditTextActivity");
+			startActivity(PasswordEditTextActivity.class);
 			break;
 		default:
 			break;
